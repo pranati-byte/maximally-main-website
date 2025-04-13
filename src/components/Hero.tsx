@@ -32,12 +32,12 @@ const Hero = () => {
   ];
   
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-16 overflow-hidden bg-gradient-to-b from-white to-maximally-blue/10 pixel-grid">
+    <div className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-16 overflow-hidden bg-gradient-to-tr from-maximally-blue/20 via-white to-maximally-red/10 pixel-grid">
       {/* Background floating pixel avatars */}
       {avatarPositions.map((pos, index) => (
         <div 
           key={index}
-          className="absolute w-10 h-10 md:w-16 md:h-16 bg-maximally-blue opacity-20 pixel-border"
+          className="absolute w-10 h-10 md:w-16 md:h-16 bg-maximally-blue opacity-20 pixel-border animate-float"
           style={{ 
             top: pos.y, 
             left: pos.x, 

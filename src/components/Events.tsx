@@ -1,123 +1,82 @@
 
-import { useState, useEffect } from "react";
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, Clock, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface EventProps {
-  title: string;
-  date: string;
-  price: string;
-  timeLeft: {
-    days: number;
-    hours: number;
-    minutes: number;
-  };
-}
+const eventsData = [
+  {
+    title: "TeenBiz Bootcamp",
+    description: "Learn to launch your first micro-business.",
+    date: "May 1st, 2025",
+    price: "₹499",
+    daysLeft: 12,
+    color: "bg-maximally-blue"
+  },
+  {
+    title: "Public Speaking Masterclass",
+    description: "Overcome stage fright and captivate audiences.",
+    date: "May 15th, 2025",
+    price: "₹599",
+    daysLeft: 26,
+    color: "bg-maximally-red"
+  },
+  {
+    title: "AI Tools Workshop",
+    description: "Leverage AI to boost your productivity.",
+    date: "June 5th, 2025",
+    price: "₹299",
+    daysLeft: 47,
+    color: "bg-maximally-black"
+  }
+];
 
-const Event = ({ title, date, price, timeLeft }: EventProps) => (
-  <div className="pixel-card">
-    <h3 className="font-press-start text-lg mb-3 text-maximally-black">{title}</h3>
-    
-    <div className="flex items-center mb-2">
-      <Calendar className="h-4 w-4 mr-2 text-maximally-black/70" />
-      <span className="font-jetbrains text-sm text-maximally-black/70">{date}</span>
-    </div>
-    
-    <div className="flex items-center justify-between mb-6">
-      <span className="font-press-start text-sm text-maximally-red">{price}</span>
+const EventCard = ({ event }) => {
+  return (
+    <div className="pixel-card h-full flex flex-col">
+      <div className={`${event.color} text-white p-4 -m-5 mb-6 pixel-border`}>
+        <h3 className="font-press-start text-lg">{event.title}</h3>
+      </div>
       
-      <div className="flex items-center">
-        <Clock className="h-4 w-4 mr-2 text-maximally-blue" />
-        <span className="font-jetbrains text-sm text-maximally-blue">
-          {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m
-        </span>
+      <p className="font-jetbrains text-maximally-black/80 mb-4">{event.description}</p>
+      
+      <div className="flex items-center mb-2 text-maximally-black/70">
+        <Calendar className="h-4 w-4 mr-2" />
+        <span className="font-jetbrains text-sm">{event.date}</span>
+      </div>
+      
+      <div className="flex items-center mb-4 text-maximally-black/70">
+        <Clock className="h-4 w-4 mr-2" />
+        <span className="font-jetbrains text-sm">Starts in {event.daysLeft} days</span>
+      </div>
+      
+      <div className="mt-auto">
+        <div className="flex items-center mb-4 text-maximally-black">
+          <DollarSign className="h-4 w-4 mr-1" />
+          <span className="font-press-start text-lg">{event.price}</span>
+        </div>
+        
+        <Button className="w-full pixel-button bg-maximally-black hover:bg-maximally-black/90">
+          Enroll Now
+        </Button>
       </div>
     </div>
-    
-    <Button className="w-full pixel-button bg-maximally-blue hover:bg-maximally-blue/90 group">
-      Enroll Now
-      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-    </Button>
-  </div>
-);
+  );
+};
 
 const Events = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    teenbiz: { days: 0, hours: 0, minutes: 0 },
-    speechcraft: { days: 0, hours: 0, minutes: 0 },
-    videoediting: { days: 0, hours: 0, minutes: 0 }
-  });
-  
-  useEffect(() => {
-    // Set future dates for each event
-    const teenbizDate = new Date(Date.now() + 18 * 24 * 60 * 60 * 1000); // 18 days from now
-    const speechcraftDate = new Date(Date.now() + 10 * 24 * 60 * 60 * 1000); // 10 days from now
-    const videoeditingDate = new Date(Date.now() + 25 * 24 * 60 * 60 * 1000); // 25 days from now
-    
-    const calculateTimeLeft = () => {
-      const calculateForDate = (targetDate: Date) => {
-        const difference = targetDate.getTime() - new Date().getTime();
-        
-        if (difference <= 0) {
-          return { days: 0, hours: 0, minutes: 0 };
-        }
-        
-        return {
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60)
-        };
-      };
-      
-      setTimeLeft({
-        teenbiz: calculateForDate(teenbizDate),
-        speechcraft: calculateForDate(speechcraftDate),
-        videoediting: calculateForDate(videoeditingDate)
-      });
-    };
-    
-    const timer = setInterval(calculateTimeLeft, 60000); // Update every minute
-    calculateTimeLeft(); // Initial calculation
-    
-    return () => clearInterval(timer);
-  }, []);
-  
-  const events = [
-    {
-      title: "TeenBiz Bootcamp",
-      date: "Starts May 1st",
-      price: "₹499",
-      timeLeft: timeLeft.teenbiz
-    },
-    {
-      title: "SpeechCraft Pro",
-      date: "Starts April 23rd",
-      price: "₹399",
-      timeLeft: timeLeft.speechcraft
-    },
-    {
-      title: "Video Editing Masterclass",
-      date: "Starts May 8th",
-      price: "₹599",
-      timeLeft: timeLeft.videoediting
-    }
-  ];
-  
   return (
-    <section id="events" className="py-20 px-4 bg-maximally-blue/5">
-      <div className="container mx-auto">
-        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-6 text-center terminal">
-          {">> Upcoming Bootcamps_"}
+    <section id="events" className="py-24 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-4 text-center">
+          &gt;&gt; Upcoming Bootcamps_
         </h2>
         
-        <p className="font-jetbrains text-maximally-black/80 mb-12 text-center max-w-2xl mx-auto">
-          Intensive, project-based bootcamps to help you master a skill in weeks, not months. 
-          Limited seats available for each cohort.
+        <p className="text-center font-jetbrains text-maximally-black/80 mb-12 max-w-2xl mx-auto">
+          Intensive, live bootcamps to level up your skills fast.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {events.map((event, index) => (
-            <Event key={index} {...event} />
+          {eventsData.map((event, index) => (
+            <EventCard key={index} event={event} />
           ))}
         </div>
       </div>

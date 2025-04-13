@@ -1,97 +1,80 @@
 
 import { useState } from "react";
-import { Briefcase, Mic2, TrendingUp, Code, Video, RocketIcon } from "lucide-react";
+import { Cpu, Video, Megaphone, Rocket, Database, Briefcase } from "lucide-react";
 
-interface SkillCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
-}
+const skillData = [
+  {
+    title: "Entrepreneurship",
+    description: "Learn to build and scale your first startup.",
+    icon: Rocket,
+    color: "bg-maximally-blue"
+  },
+  {
+    title: "Public Speaking & MUN",
+    description: "Master the art of persuasive communication.",
+    icon: Megaphone,
+    color: "bg-maximally-red"
+  },
+  {
+    title: "Digital Marketing",
+    description: "Grow audiences and build online brands.",
+    icon: Cpu,
+    color: "bg-maximally-black"
+  },
+  {
+    title: "No-Code & AI",
+    description: "Build apps without coding and leverage AI.",
+    icon: Database,
+    color: "bg-maximally-blue"
+  },
+  {
+    title: "Video Editing",
+    description: "Create professional videos that captivate.",
+    icon: Video,
+    color: "bg-maximally-red"
+  },
+  {
+    title: "Career Launchpad",
+    description: "Prepare for college and your dream career.",
+    icon: Briefcase,
+    color: "bg-maximally-black"
+  }
+];
 
-const SkillCard = ({ title, description, icon, color }: SkillCardProps) => {
+const SkillCard = ({ skill, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
     <div 
-      className={`pixel-card group ${isHovered ? "bg-opacity-95 transform -translate-y-1" : ""}`}
+      className={`pixel-card transform transition-all duration-300 ${
+        isHovered ? "translate-y-[-10px]" : ""
+      }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`h-16 w-16 flex items-center justify-center mb-4 pixel-border ${color}`}>
-        {icon}
+      <div className={`w-16 h-16 ${skill.color} pixel-border flex items-center justify-center mb-4 mx-auto`}>
+        <skill.icon className="text-white h-8 w-8" />
       </div>
-      
-      <h3 className="font-press-start text-lg mb-3 group-hover:text-maximally-blue">
-        {title}
-      </h3>
-      
-      <p className="font-jetbrains text-maximally-black/70">
-        {description}
-      </p>
-      
-      {isHovered && (
-        <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-maximally-red"></div>
-      )}
+      <h3 className="font-press-start text-lg mb-2 text-maximally-black">{skill.title}</h3>
+      <p className="font-jetbrains text-maximally-black/70">{skill.description}</p>
+      <button className="mt-4 font-press-start text-sm text-maximally-blue hover:text-maximally-red transition-colors retro-underline">
+        Level Up &gt;
+      </button>
     </div>
   );
 };
 
 const SkillTracks = () => {
-  const skills = [
-    {
-      title: "Entrepreneurship",
-      description: "Learn startup building, from ideation to product launch and customer acquisition.",
-      icon: <Briefcase className="h-8 w-8 text-white" />,
-      color: "bg-maximally-blue"
-    },
-    {
-      title: "Public Speaking & MUN",
-      description: "Master the art of speaking confidently and winning Model UN conferences.",
-      icon: <Mic2 className="h-8 w-8 text-white" />,
-      color: "bg-maximally-red"
-    },
-    {
-      title: "Digital Marketing",
-      description: "Create campaigns that convert using SEO, social media and content marketing.",
-      icon: <TrendingUp className="h-8 w-8 text-white" />,
-      color: "bg-maximally-blue"
-    },
-    {
-      title: "No-Code & AI",
-      description: "Build websites, apps and AI solutions without traditional coding.",
-      icon: <Code className="h-8 w-8 text-white" />,
-      color: "bg-maximally-black"
-    },
-    {
-      title: "Video Editing",
-      description: "Create professional videos for social media, YouTube and marketing.",
-      icon: <Video className="h-8 w-8 text-white" />,
-      color: "bg-maximally-red"
-    },
-    {
-      title: "Career Launchpad",
-      description: "Prep your resume, ace interviews and land your dream internship.",
-      icon: <RocketIcon className="h-8 w-8 text-white" />,
-      color: "bg-maximally-black"
-    }
-  ];
-  
   return (
-    <section id="skills" className="py-20 px-4 bg-white">
-      <div className="container mx-auto">
-        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-3 terminal">
-          {">> Choose your power-ups_"}
+    <section id="skills" className="py-24 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-12 text-center">
+          &gt;&gt; Choose your power-ups_
         </h2>
         
-        <p className="font-jetbrains text-maximally-black/70 mb-12 max-w-2xl">
-          Level up with our skill tracks designed for ambitious teens. Each track comes with projects, 
-          mentorship, and a community of peers.
-        </p>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
-            <SkillCard key={index} {...skill} />
+          {skillData.map((skill, index) => (
+            <SkillCard key={index} skill={skill} index={index} />
           ))}
         </div>
       </div>

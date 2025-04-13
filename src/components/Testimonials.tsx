@@ -2,106 +2,119 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 
-interface TestimonialProps {
-  name: string;
-  handle: string;
-  quote: string;
-  achievement: string;
-  icon: React.ReactNode;
-}
+const testimonialData = [
+  {
+    name: "Shiv",
+    handle: "@shiv_speaksfire",
+    achievement: "🎤 MUN Winner",
+    quote: "Maximally helped me win my first MUN conference! The techniques they taught actually work.",
+    avatar: "1"
+  },
+  {
+    name: "Ananya",
+    handle: "@ananya_codes",
+    achievement: "🧠 Startup Intern",
+    quote: "I landed my dream startup internship using the career skills I learned here. Worth every penny!",
+    avatar: "2"
+  },
+  {
+    name: "Rohan",
+    handle: "@rohan_pixel",
+    achievement: "🎬 Content Creator",
+    quote: "The video editing course taught me skills I use every day for my YouTube channel. Now at 10K subs!",
+    avatar: "3"
+  },
+  {
+    name: "Zara",
+    handle: "@zara_builds",
+    achievement: "⚡ No-Code Founder",
+    quote: "Built my first app with no coding background after taking the no-code track. Now I have paying users!",
+    avatar: "4"
+  }
+];
 
-const Testimonial = ({ name, handle, quote, achievement, icon }: TestimonialProps) => (
-  <div className="pixel-card h-full flex flex-col">
-    <div className="flex items-center mb-4">
-      <div className="h-12 w-12 bg-maximally-blue pixel-border flex items-center justify-center mr-4">
-        {icon}
+const TestimonialCard = ({ testimonial }) => {
+  return (
+    <div className="pixel-card h-full flex flex-col">
+      <div className="flex items-center mb-4">
+        <div className={`w-12 h-12 pixel-border bg-maximally-blue flex items-center justify-center mr-4`}>
+          <span className="font-press-start text-white">{testimonial.avatar}</span>
+        </div>
+        <div>
+          <p className="font-press-start text-sm text-maximally-black">{testimonial.name}</p>
+          <p className="font-jetbrains text-xs text-maximally-black/70">{testimonial.handle}</p>
+        </div>
       </div>
-      <div>
-        <h4 className="font-press-start text-sm">{name}</h4>
-        <p className="font-jetbrains text-maximally-black/70 text-sm">{handle}</p>
-      </div>
-    </div>
-    
-    <div className="flex-1">
-      <p className="font-jetbrains text-maximally-black/80 mb-4">"{quote}"</p>
       
-      <div className="flex items-center mt-auto">
-        <span className="font-press-start text-xs text-maximally-red">
-          {achievement}
-        </span>
+      <div className="flex items-center mb-2">
+        {[...Array(5)].map((_, i) => (
+          <Star key={i} className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+        ))}
+      </div>
+      
+      <p className="font-jetbrains text-maximally-black/80 mb-4 flex-grow">{testimonial.quote}</p>
+      
+      <div className="bg-maximally-black/10 px-3 py-1 rounded font-jetbrains text-xs inline-block self-start">
+        {testimonial.achievement}
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Testimonials = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   
-  const testimonials = [
-    {
-      name: "Shiv Kumar",
-      handle: "@shiv_speaksfire",
-      quote: "Maximally's public speaking track helped me win the national MUN competition. The techniques are practical and the community feedback is gold!",
-      achievement: "🎤 MUN Winner",
-      icon: <Star className="h-6 w-6 text-white" />
-    },
-    {
-      name: "Aanya Patel",
-      handle: "@aanya_builds",
-      quote: "I built my first website through the No-Code track and landed an internship at a startup. The project-based learning made all the difference.",
-      achievement: "🧠 Startup Intern",
-      icon: <Star className="h-6 w-6 text-white" />
-    },
-    {
-      name: "Rohan Mehta",
-      handle: "@rohan_creators",
-      quote: "The video editing track helped me gain 10K followers on Instagram in just 3 months. I'm now creating content for brands as a side hustle!",
-      achievement: "📱 Content Creator",
-      icon: <Star className="h-6 w-6 text-white" />
-    }
-  ];
-  
-  const next = () => {
-    setActiveSlide((prev) => (prev + 1) % testimonials.length);
+  const nextSlide = () => {
+    setActiveSlide((prev) => (prev + 1) % Math.ceil(testimonialData.length / 2));
   };
   
-  const prev = () => {
-    setActiveSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevSlide = () => {
+    setActiveSlide((prev) => (prev - 1 + Math.ceil(testimonialData.length / 2)) % Math.ceil(testimonialData.length / 2));
   };
   
   return (
-    <section className="py-20 px-4 bg-gray-50">
-      <div className="container mx-auto">
-        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-12 text-center terminal">
-          {">> Student Success Stories_"}
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-12 text-center">
+          &gt;&gt; Student Success Stories_
         </h2>
         
-        <div className="relative max-w-4xl mx-auto">
-          {/* Mobile view - single testimonial */}
-          <div className="md:hidden">
-            <Testimonial {...testimonials[activeSlide]} />
-            
-            <div className="flex justify-center mt-6 space-x-4">
-              <button 
-                className="p-2 pixel-border bg-white hover:bg-gray-100"
-                onClick={prev}
-              >
-                <ChevronLeft className="h-5 w-5 text-maximally-black" />
-              </button>
-              <button 
-                className="p-2 pixel-border bg-white hover:bg-gray-100"
-                onClick={next}
-              >
-                <ChevronRight className="h-5 w-5 text-maximally-black" />
-              </button>
-            </div>
+        <div className="relative">
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8">
+            {testimonialData.map((testimonial, index) => (
+              <TestimonialCard key={index} testimonial={testimonial} />
+            ))}
           </div>
           
-          {/* Desktop view - all testimonials */}
-          <div className="hidden md:grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Testimonial key={index} {...testimonial} />
-            ))}
+          {/* Mobile slider */}
+          <div className="md:hidden">
+            <div className="flex overflow-hidden">
+              <div 
+                className="flex transition-transform duration-300 ease-in-out"
+                style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+              >
+                {testimonialData.map((testimonial, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-4">
+                    <TestimonialCard testimonial={testimonial} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="flex justify-center mt-8 gap-4">
+              <button 
+                onClick={prevSlide}
+                className="p-2 bg-maximally-black text-white pixel-border"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button 
+                onClick={nextSlide}
+                className="p-2 bg-maximally-black text-white pixel-border"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

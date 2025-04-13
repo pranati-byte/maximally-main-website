@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, Terminal } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,12 +35,6 @@ const Navbar = () => {
           <a href="#why" className="font-jetbrains text-maximally-black hover:text-maximally-blue retro-underline">Why Us</a>
           <a href="#community" className="font-jetbrains text-maximally-black hover:text-maximally-blue retro-underline">Community</a>
           <a href="#events" className="font-jetbrains text-maximally-black hover:text-maximally-blue retro-underline">Events</a>
-          <Button 
-            className="bg-maximally-red hover:bg-maximally-red/90 text-white pixel-button"
-            onClick={() => console.log("Login clicked")}
-          >
-            Login
-          </Button>
         </div>
         
         {/* Mobile Nav Toggle */}
@@ -89,15 +82,6 @@ const Navbar = () => {
             >
               Events
             </a>
-            <Button 
-              className="bg-maximally-red hover:bg-maximally-red/90 text-white w-full"
-              onClick={() => {
-                console.log("Login clicked");
-                setIsMenuOpen(false);
-              }}
-            >
-              Login
-            </Button>
           </div>
         </div>
       )}
