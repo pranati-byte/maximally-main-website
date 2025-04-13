@@ -10,8 +10,7 @@ const blogPosts = [
     excerpt: "Discover the most impactful summer programs that will transform your skills and boost your college applications. From Maximally's intensive bootcamps to other notable programs...",
     date: "March 15, 2025",
     readTime: "8 min read",
-    category: "Education",
-    path: "/blog/summer-programs-2025"
+    category: "Education"
   },
   {
     title: "How to Make the Most of Your Summer Break (For Students Ages 13–20)",
@@ -80,35 +79,33 @@ const Blog = () => {
 
         <div className="space-y-8">
           {filteredPosts.map((post, index) => (
-            <Link to={post.path || "#"} key={index}>
-              <article className="pixel-border bg-white p-6 hover:transform hover:scale-[1.02] transition-all cursor-pointer">
-                <div className="flex items-center gap-4 mb-3">
-                  <span className="text-xs font-press-start text-maximally-blue bg-maximally-blue/10 px-3 py-1 rounded">
-                    {post.category}
-                  </span>
-                  <div className="flex items-center text-maximally-black/60 text-sm font-jetbrains">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {post.date}
-                  </div>
-                  <span className="text-maximally-black/60 text-sm font-jetbrains">
-                    {post.readTime}
-                  </span>
+            <article key={index} className="pixel-border bg-white p-6 hover:transform hover:scale-[1.02] transition-all cursor-pointer">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="text-xs font-press-start text-maximally-blue bg-maximally-blue/10 px-3 py-1 rounded">
+                  {post.category}
+                </span>
+                <div className="flex items-center text-maximally-black/60 text-sm font-jetbrains">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  {post.date}
                 </div>
-                
-                <h2 className="font-press-start text-xl mb-3 text-maximally-black">
-                  {post.title}
-                </h2>
-                
-                <p className="font-jetbrains text-maximally-black/70 mb-4">
-                  {post.excerpt}
-                </p>
-                
-                <div className="flex items-center gap-2 text-maximally-blue font-press-start text-sm group">
-                  Read More 
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </article>
-            </Link>
+                <span className="text-maximally-black/60 text-sm font-jetbrains">
+                  {post.readTime}
+                </span>
+              </div>
+              
+              <h2 className="font-press-start text-xl mb-3 text-maximally-black">
+                {post.title}
+              </h2>
+              
+              <p className="font-jetbrains text-maximally-black/70 mb-4">
+                {post.excerpt}
+              </p>
+              
+              <button className="flex items-center gap-2 text-maximally-blue font-press-start text-sm group">
+                Read More 
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </article>
           ))}
         </div>
       </div>
