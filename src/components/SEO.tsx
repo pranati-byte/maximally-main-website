@@ -20,7 +20,7 @@ const SEO = ({
   keywords = "entrepreneurship, public speaking, digital marketing, video editing, student skills",
   author = "Maximally"
 }: SEOProps) => {
-  const baseUrl = 'https://maximally.app';
+  const baseUrl = 'https://maximally.in';
   const fullUrl = canonicalUrl ? `${baseUrl}${canonicalUrl}` : baseUrl;
   const imageUrl = ogImage ? `${baseUrl}${ogImage}` : `${baseUrl}/og-default.jpg`;
 
