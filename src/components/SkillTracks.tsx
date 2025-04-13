@@ -64,7 +64,11 @@ const SkillCard = ({ skill, index }) => {
       </div>
       <h3 className="font-press-start text-lg mb-2 text-maximally-black">{skill.title}</h3>
       <p className="font-jetbrains text-maximally-black/70">{skill.description}</p>
-      <Link to={skill.path} className="mt-4 inline-block font-press-start text-sm text-maximally-blue hover:text-maximally-red transition-colors retro-underline">
+      <Link 
+        to={skill.path} 
+        className="mt-4 inline-block font-press-start text-sm text-maximally-blue hover:text-maximally-red transition-colors retro-underline"
+        onClick={() => window.scrollTo(0, 0)}
+      >
         Level Up &gt;
       </Link>
     </div>

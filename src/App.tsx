@@ -25,6 +25,12 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/entrepreneurship" element={<Entrepreneurship />} />
+            <Route path="/public-speaking" element={<PublicSpeaking />} />
+            <Route path="/digital-marketing" element={<DigitalMarketing />} />
+            <Route path="/no-code-ai" element={<NoCodeAI />} />
+            <Route path="/video-editing" element={<VideoEditing />} />
+            <Route path="/career-launch" element={<CareerLaunch />} />
             <Route path="/bootcamps" element={<Bootcamps />} />
             <Route path="/about" element={<About />} />
             <Route path="/team" element={<Team />} />
