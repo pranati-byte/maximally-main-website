@@ -1,4 +1,3 @@
-
 import { Database, Code, Bot, Layers, Rocket, Laptop } from "lucide-react";
 import SkillPageLayout from "@/components/SkillPageLayout";
 import ProgramFeatures from "@/components/ProgramFeatures";
@@ -7,44 +6,26 @@ import SkillTestimonial from "@/components/SkillTestimonial";
 
 const features = [
   {
-    title: "No-Code App Building",
-    description: "Create functional apps without writing code using platforms like Bubble, Webflow, and Adalo."
-  },
-  {
-    title: "Automation Mastery",
-    description: "Build workflows that save time and reduce manual tasks using Zapier and Make."
+    title: "No-Code Fundamentals",
+    description: "Master popular no-code platforms and tools"
   },
   {
     title: "AI Integration",
-    description: "Learn to integrate AI capabilities into your projects and platforms."
+    description: "Learn to leverage AI in your applications"
   },
   {
-    title: "Database Design",
-    description: "Structure data effectively for your applications using Airtable and other visual databases."
-  },
-  {
-    title: "MVP Development",
-    description: "Rapidly prototype and test your app ideas without technical limitations."
-  },
-  {
-    title: "AI Prompt Engineering",
-    description: "Master creating effective prompts for ChatGPT, DALL-E, and other AI tools."
+    title: "Automation",
+    description: "Build automated workflows and systems"
   }
 ];
 
 const events = [
   {
-    title: "No-Code App Building Weekend",
-    date: "May 25-26, 2025",
-    time: "10:00 AM - 5:00 PM",
-    price: "₹2,499",
+    title: "No-Code Bootcamp",
+    date: "May 20, 2025",
+    time: "10:00 AM - 4:00 PM",
+    price: "₹2,999",
     isPopular: true
-  },
-  {
-    title: "AI Tools Masterclass",
-    date: "June 8, 2025",
-    time: "3:00 PM - 6:00 PM",
-    price: "₹999"
   }
 ];
 
@@ -62,17 +43,14 @@ const NoCodeAI = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <ProgramFeatures features={features} />
-          
           <SkillTestimonial
-            quote="I built my first app for my school's event management using no-code tools, and now I'm expanding it into a business! The mentors helped me overcome technical challenges I never thought I could handle."
+            quote="Built my first app without writing a single line of code!"
             author="Vikram Singh"
             handle="@vikram_builds"
-            achievement="Creator of EventsHub app"
+            achievement="Creator of EventsHub"
           />
-          
           <UpcomingEvents events={events} />
         </div>
-        
         <div className="lg:col-span-1">
           <div className="pixel-border p-6 bg-white mb-6">
             <h3 className="font-press-start text-lg mb-4 text-maximally-black">Program Highlights</h3>
@@ -95,11 +73,10 @@ const NoCodeAI = () => {
               </li>
             </ul>
           </div>
-          
           <div className="pixel-border overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1677442135136-760c813a7e63" 
-              alt="AI and no-code tools visualization" 
+            <img
+              src="https://images.unsplash.com/photo-1677442135136-760c813a7e63"
+              alt="AI and no-code tools visualization"
               className="w-full h-auto object-cover"
             />
           </div>

@@ -12,6 +12,12 @@ import Bootcamps from '@/pages/Bootcamps';
 import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
+import Entrepreneurship from "./pages/Entrepreneurship";
+import PublicSpeaking from "./pages/PublicSpeaking";
+import NoCodeAI from "./pages/NoCodeAI";
+import DigitalMarketing from "./pages/DigitalMarketing";
+import VideoEditing from "./pages/VideoEditing";
+import CareerLaunch from "./pages/CareerLaunch";
 
 const queryClient = new QueryClient();
 

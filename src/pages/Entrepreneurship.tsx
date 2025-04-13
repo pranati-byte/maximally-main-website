@@ -1,5 +1,4 @@
-
-import { Rocket, Lightbulb, Presentation, Target, Users } from "lucide-react";
+import { Target } from "lucide-react";
 import SkillPageLayout from "@/components/SkillPageLayout";
 import ProgramFeatures from "@/components/ProgramFeatures";
 import UpcomingEvents from "@/components/UpcomingEvents";
@@ -7,44 +6,26 @@ import SkillTestimonial from "@/components/SkillTestimonial";
 
 const features = [
   {
-    title: "Startup Ideation",
-    description: "Learn how to identify problems worth solving and transform them into business ideas."
+    title: "Business Fundamentals",
+    description: "Learn core business concepts and market analysis"
   },
   {
-    title: "Build an MVP",
-    description: "Create minimum viable products to test your ideas with real users."
+    title: "Startup Strategy",
+    description: "Develop your business model and go-to-market strategy"
   },
   {
-    title: "Pitch Your Vision",
-    description: "Master the art of pitching to investors, customers, and potential team members."
-  },
-  {
-    title: "Growth Strategies",
-    description: "Scale your startup with proven user acquisition and retention strategies."
-  },
-  {
-    title: "Fundraising Essentials",
-    description: "Understand funding options and how to approach investors for capital."
-  },
-  {
-    title: "Founder Mindset",
-    description: "Develop resilience, creative problem-solving, and leadership skills."
+    title: "Product Development",
+    description: "Build and validate your minimum viable product"
   }
 ];
 
 const events = [
   {
-    title: "TeenBiz Bootcamp - Weekend Edition",
+    title: "Startup Weekend",
     date: "May 15-16, 2025",
-    time: "10:00 AM - 4:00 PM",
-    price: "₹1,999",
+    time: "9:00 AM - 6:00 PM",
+    price: "₹4,999",
     isPopular: true
-  },
-  {
-    title: "Startup Pitch Competition",
-    date: "June 5, 2025",
-    time: "2:00 PM - 6:00 PM",
-    price: "₹499"
   }
 ];
 
@@ -52,9 +33,9 @@ const Entrepreneurship = () => {
   return (
     <SkillPageLayout
       title="Entrepreneurship"
-      icon={<Rocket className="h-10 w-10 text-white" />}
+      icon={<Target className="h-10 w-10 text-white" />}
       iconBgColor="bg-maximally-blue"
-      tagline="Built by teen founders, for teen founders"
+      tagline="Build your own startup."
       skillName="Founders"
       communityType="discord"
       communityLink="https://discord.gg/maximally-founders"
@@ -62,47 +43,13 @@ const Entrepreneurship = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <ProgramFeatures features={features} />
-          
           <SkillTestimonial
-            quote="Maximally taught me more about starting a business in 8 weeks than I learned in a whole year of business studies. I launched my first e-commerce store and made ₹25,000 in sales!"
-            author="Aryan Mehta"
-            handle="@aryan_startupguy"
-            achievement="Founder of EcoThreads"
+            quote="The mentorship and community support helped me launch my first successful venture!"
+            author="Rahul Sharma"
+            handle="@rahul_builds"
+            achievement="Founder of TechStart"
           />
-          
           <UpcomingEvents events={events} />
-        </div>
-        
-        <div className="lg:col-span-1">
-          <div className="pixel-border p-6 bg-white mb-6">
-            <h3 className="font-press-start text-lg mb-4 text-maximally-black">Program Highlights</h3>
-            <ul className="space-y-4">
-              <li className="flex">
-                <Lightbulb className="h-5 w-5 text-maximally-blue mr-3 flex-shrink-0" />
-                <span className="font-jetbrains text-maximally-black/80">8-week structured program</span>
-              </li>
-              <li className="flex">
-                <Presentation className="h-5 w-5 text-maximally-blue mr-3 flex-shrink-0" />
-                <span className="font-jetbrains text-maximally-black/80">Weekly workshops with founders</span>
-              </li>
-              <li className="flex">
-                <Target className="h-5 w-5 text-maximally-blue mr-3 flex-shrink-0" />
-                <span className="font-jetbrains text-maximally-black/80">Launch your own micro-startup</span>
-              </li>
-              <li className="flex">
-                <Users className="h-5 w-5 text-maximally-blue mr-3 flex-shrink-0" />
-                <span className="font-jetbrains text-maximally-black/80">Network with teen entrepreneurs</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="pixel-border overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" 
-              alt="Teen entrepreneur working on laptop" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
         </div>
       </div>
     </SkillPageLayout>
