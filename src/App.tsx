@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -23,6 +22,8 @@ import NoCodeAI from "./pages/NoCodeAI";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import VideoEditing from "./pages/VideoEditing";
 import CareerLaunch from "./pages/CareerLaunch";
+import Community from "./pages/Community"; // Import the Community page component
+
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,7 @@ const App = () => {
             <Route path="/support" element={<Support />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/community" element={<Community />} /> {/* Add the Community route */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
