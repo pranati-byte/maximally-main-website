@@ -142,9 +142,6 @@
            border-2 border-black text-white text-center hover:translate-x-[2px] hover:translate-y-[2px]
            active:translate-x-[4px] active:translate-y-[4px] active:shadow-none;
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(8px);
-    background: linear-gradient(135deg, rgba(60, 158, 231, 0.9), rgba(60, 158, 231, 0.8));
-    box-shadow: 0 8px 32px rgba(60, 158, 231, 0.2);
   }
 
   /* Pixel card styling */
@@ -188,6 +185,16 @@
     @apply transform scale-x-100 origin-bottom-left;
   }
 
+  .pixel-button {
+    @apply relative overflow-hidden transition-all duration-300 hover:scale-105;
+    background: linear-gradient(45deg, #3C9EE7, #D94F45);
+    border: 2px solid #1A1A1A;
+    box-shadow: 4px 4px 0 #1A1A1A;
+  }
+
+  .pixel-button:hover {
+    @apply shadow-lg transform -translate-y-1;
+  }
 
   .pixel-card {
     @apply bg-white relative overflow-hidden transition-all duration-300;

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Cpu, Video, Megaphone, Rocket, Database, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -49,10 +50,10 @@ const skillData = [
 
 const SkillCard = ({ skill, index }) => {
   const [isHovered, setIsHovered] = useState(false);
-
+  
   return (
     <div 
-      className={`pixel-card hover:shadow-[8px_8px_0_#1A1A1A] transition-all duration-300 hover:-translate-y-2
+      className={`pixel-card transform transition-all duration-300 backdrop-blur-sm
         ${isHovered ? "translate-y-[-10px] shadow-[0_0_15px_rgba(60,158,231,0.3)]" : ""}
         hover:border-maximally-blue/50 group`}
       onMouseEnter={() => setIsHovered(true)}
@@ -82,7 +83,7 @@ const SkillTracks = () => {
         <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-12 text-center">
           &gt;&gt; Choose your power-ups_
         </h2>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillData.map((skill, index) => (
             <SkillCard key={index} skill={skill} index={index} />

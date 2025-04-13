@@ -29,8 +29,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/10 via-white to-maximally-red/10 animate-gradient" />
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(60,158,231,0.1),transparent)]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/5 to-maximally-red/5 animate-gradient" />
       <div className="pixel-grid-bg" />
       <div className="pixel-cube" style={{ top: '10%', left: '10%', animationDelay: '0s' }} />
       <div className="pixel-cube" style={{ top: '70%', left: '80%', animationDelay: '0.5s' }} />
