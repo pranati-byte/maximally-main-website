@@ -40,32 +40,27 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="min-h-screen flex flex-col"> {/* Added min-h-screen and flexbox */}
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/entrepreneurship" element={<Entrepreneurship />} />
-              <Route path="/public-speaking" element={<PublicSpeaking />} />
-              <Route path="/digital-marketing" element={<DigitalMarketing />} />
-              <Route path="/no-code-ai" element={<NoCodeAI />} />
-              <Route path="/video-editing" element={<VideoEditing />} />
-              <Route path="/career-launch" element={<CareerLaunch />} />
-              <Route path="/bootcamps" element={<Bootcamps />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/team" element={<Team />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/community" element={<Community />} /> {/* Add the Community route */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            <footer className="bg-gray-800 text-white p-4 text-center"> {/* Added basic footer */}
-              &copy; {new Date().getFullYear()} Maximally. All rights reserved.
-            </footer>
-          </div>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/entrepreneurship" element={<Entrepreneurship />} />
+            <Route path="/public-speaking" element={<PublicSpeaking />} />
+            <Route path="/digital-marketing" element={<DigitalMarketing />} />
+            <Route path="/no-code-ai" element={<NoCodeAI />} />
+            <Route path="/video-editing" element={<VideoEditing />} />
+            <Route path="/career-launch" element={<CareerLaunch />} />
+            <Route path="/bootcamps" element={<Bootcamps />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/community" element={<Community />} /> {/* Add the Community route */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
