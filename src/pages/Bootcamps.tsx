@@ -14,38 +14,13 @@ interface Bootcamp {
 
 const bootcamps: Bootcamp[] = [
   {
-    title: "TeenBiz Bootcamp - Weekend Edition",
-    date: "May 15-16, 2025",
-    time: "10:00 AM - 4:00 PM",
-    price: "₹1,999",
-    description: "Learn to launch your first micro-business.",
+    title: "Team-Based Startup Bootcamp",
+    date: "June 1-15, 2025",
+    time: "4:00 PM - 6:00 PM IST",
+    price: "₹2,499",
+    description: "Build a real startup with a team of ambitious teens. Learn entrepreneurship, leadership, and teamwork through hands-on experience.",
     category: "Entrepreneurship",
     isPopular: true
-  },
-  {
-    title: "Public Speaking Intensive",
-    date: "April 28-30, 2025",
-    time: "5:00 PM - 7:00 PM",
-    price: "₹1,499",
-    description: "Master public speaking and presentation skills.",
-    category: "Public Speaking"
-  },
-  {
-    title: "Social Media Growth Bootcamp",
-    date: "May 5-7, 2025",
-    time: "4:00 PM - 6:00 PM",
-    price: "₹1,299",
-    description: "Learn to grow and monetize your social media presence.",
-    category: "Digital Marketing",
-    isPopular: true
-  },
-  {
-    title: "Video Editing Masterclass",
-    date: "May 18-19, 2025",
-    time: "2:00 PM - 5:00 PM",
-    price: "₹1,799",
-    description: "Master video editing for social media and YouTube.",
-    category: "Video Editing"
   }
 ];
 

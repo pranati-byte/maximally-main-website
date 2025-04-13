@@ -53,14 +53,15 @@ const SkillCard = ({ skill, index }) => {
   
   return (
     <div 
-      className={`pixel-card transform transition-all duration-300 ${
-        isHovered ? "translate-y-[-10px]" : ""
-      }`}
+      className={`pixel-card transform transition-all duration-300 backdrop-blur-sm
+        ${isHovered ? "translate-y-[-10px] shadow-[0_0_15px_rgba(60,158,231,0.3)]" : ""}
+        hover:border-maximally-blue/50 group`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={`w-16 h-16 ${skill.color} pixel-border flex items-center justify-center mb-4 mx-auto`}>
-        <skill.icon className="text-white h-8 w-8" />
+      <div className={`w-16 h-16 ${skill.color} pixel-border flex items-center justify-center mb-4 mx-auto
+        transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
+        <skill.icon className="text-white h-8 w-8 transform transition-all duration-300 group-hover:scale-110" />
       </div>
       <h3 className="font-press-start text-lg mb-2 text-maximally-black">{skill.title}</h3>
       <p className="font-jetbrains text-maximally-black/70">{skill.description}</p>

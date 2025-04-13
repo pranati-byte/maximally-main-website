@@ -21,7 +21,6 @@ const Index = () => {
       <WhyMaximally />
       <Testimonials />
       <Community />
-      <Events />
       <Footer />
     </div>
   );
