@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,6 +11,10 @@ import DigitalMarketing from "./pages/DigitalMarketing";
 import NoCodeAI from "./pages/NoCodeAI";
 import VideoEditing from "./pages/VideoEditing";
 import CareerLaunch from "./pages/CareerLaunch";
+import About from "./pages/About";
+import Team from "./pages/Team";
+import Careers from "./pages/Careers";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +32,10 @@ const App = () => (
           <Route path="/no-code-ai" element={<NoCodeAI />} />
           <Route path="/video-editing" element={<VideoEditing />} />
           <Route path="/career-launch" element={<CareerLaunch />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/blog" element={<Blog />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
