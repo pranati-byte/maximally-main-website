@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Users, MessageSquare, Share2 } from 'lucide-react';
 
@@ -53,6 +54,4 @@ export default function Community() {
       </div>
     </div>
   );
-};
-
-export default Community;
+}
