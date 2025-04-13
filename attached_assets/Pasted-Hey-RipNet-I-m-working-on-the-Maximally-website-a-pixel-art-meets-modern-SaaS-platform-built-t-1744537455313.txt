@@ -1,0 +1,52 @@
+Hey RipNet,
+
+I’m working on the Maximally website — a pixel-art meets modern SaaS platform built to teach ambitious teens (13–20) skills like entrepreneurship, public speaking, MUN, digital marketing, AI, etc.
+
+Here are the changes and expansions I want you to make now:
+
+---
+
+### 1. 🚫 Remove All Power-Up Images
+- On the homepage or dashboard, wherever the “Power-Ups” (like Entrepreneurship, Public Speaking, Digital Marketing, AI, etc.) are displayed, **remove the images** associated with each.
+- I want this to be a **clean, text-based layout only** — no icons, thumbnails, or banners for these categories.
+- Use a bold heading, small description, and a CTA button — keep the layout aligned with the pixel/SaaS aesthetic.
+
+---
+
+### 2. 🛠 Build the Following Pages (Keep Routing Clean)
+Create and link the following pages in the navigation bar and footer. Use the existing pixel-style design system (Press Start 2P or VT323, modern grid, sharp corners):
+
+#### `/about`
+- Talk about the mission: helping teens build real-world skills
+- Why Maximally exists, who it’s for, and the pixel-art theme as a metaphor for leveling up
+- Include a CTA to join the community
+
+#### `/team`
+- List of core contributors/founders with fun pixel-style bios
+- Each team member should have:
+  - Name
+  - Role
+  - Fun fact or catchphrase (e.g., "Built my first pitch deck at 13")
+
+#### `/careers`
+- Section for open volunteer/intern roles (content writing, Discord mods, design, etc.)
+- Simple form to apply or an email contact for now
+
+#### `/blog`
+- Minimal layout for blog posts (even dummy placeholders are fine for now)
+- Include search bar or filter tags if possible
+- Posts should follow the pixel/retro theme
+
+---
+
+### Other Notes
+- Keep everything responsive across devices
+- Ensure fast page loads, optimized assets, and smooth routing
+- All nav links should scroll to the **top of each page**, not the bottom
+- Keep everything consistent with our core theme:
+  - Colors: White, Electric Blue (#3C9EE7), Warm Red (#D94F45), Deep Black (#1A1A1A)
+  - Fonts: Press Start 2P, VT323, JetBrains Mono
+
+Let me know if you need a seed layout or more detailed copy — I’ll supply that next.
+
+Thanks!
