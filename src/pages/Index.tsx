@@ -1,6 +1,6 @@
 
 import { useEffect } from "react";
-import Navbar from "@/components/Navbar";
+
 import Hero from "@/components/Hero";
 import SkillTracks from "@/components/SkillTracks";
 import WhyMaximally from "@/components/WhyMaximally";
