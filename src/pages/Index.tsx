@@ -1,33 +1,52 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import Hero from '@/components/Hero';
 import SkillTracks from '@/components/SkillTracks';
 import WhyMaximally from '@/components/WhyMaximally';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const [text, setText] = useState('');
+  const fullText = 'Max out your potential';
+  
   useEffect(() => {
-    window.scrollTo(0, 0);
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= fullText.length) {
+        setText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100);
+
+    return () => clearInterval(timer);
   }, []);
 
+  const scrollToSkills = () => {
+    document.getElementById('skills-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      <div className="animated-bg" />
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/5 to-maximally-red/5 animate-gradient" />
       
-      <main>
+      <main className="relative">
         {/* Hero Section */}
-        <section className="relative py-24 px-4 overflow-hidden">
-          <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-press-start text-maximally-black mb-8 typewriter">
-              Max out your potential
+        <section className="min-h-screen flex items-center justify-center px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-press-start text-maximally-black mb-8 relative">
+              {text}
+              <span className="inline-block w-[3px] h-[1em] bg-maximally-blue ml-1 animate-[cursor-blink_1s_infinite]" />
             </h1>
-            <p className="font-jetbrains text-lg md:text-xl text-maximally-black/80 max-w-2xl mx-auto mb-12 fade-in">
-              Build real-world skills, start learning now, and join a community of like-minded individuals.
+            
+            <p className="font-jetbrains text-lg md:text-xl text-maximally-black/80 max-w-2xl mx-auto mb-12 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
+              Build real-world skills. Start learning. Join the community.
             </p>
+            
             <button 
-              className="pixel-button group flex items-center gap-2 mx-auto hover:scale-105 transition-transform"
-              onClick={() => window.location.href = '/bootcamps'}
+              onClick={scrollToSkills}
+              className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 mx-auto hover:animate-pulse"
             >
               <span>Start Learning</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -35,30 +54,34 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Power-ups Section */}
-        <section className="py-16 px-4 bg-maximally-blue/5">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-press-start text-maximally-black mb-12 text-center slide-up">
+        {/* Skills Section */}
+        <section id="skills-section" className="py-24 px-4 bg-white relative">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-press-start text-maximally-black mb-16 text-center transform translate-y-10 opacity-0 animate-[slideUp_1s_ease-out_forwards]">
               Power up your skills
             </h2>
-            <SkillTracks />
+            
+            <div className="opacity-0 animate-[fadeIn_1s_ease-in_forwards_0.5s]">
+              <SkillTracks />
+            </div>
           </div>
         </section>
 
+        {/* Why Maximally Section */}
         <WhyMaximally />
-        
+
         {/* CTA Section */}
         <section className="py-16 px-4 bg-maximally-black text-white">
-          <div className="container mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-press-start mb-8 glow-text">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-press-start mb-8 animate-glow">
               Ready to maximize your potential?
             </h2>
             <p className="font-jetbrains text-white/80 max-w-2xl mx-auto mb-8">
               Join our community of ambitious teens learning real-world skills.
             </p>
             <button 
-              className="pixel-button bg-maximally-blue group flex items-center gap-2 mx-auto"
               onClick={() => window.location.href = '/bootcamps'}
+              className="pixel-button bg-maximally-blue group flex items-center gap-2 mx-auto hover:animate-pulse"
             >
               <span>Join Now</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
