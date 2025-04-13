@@ -29,6 +29,44 @@
 }
 
 @keyframes cursor-blink {
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-maximally-gold {
+  color: #FFD700;
+}
+
+.text-maximally-purple {
+  color: #9B4DCA;
+}
+
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
