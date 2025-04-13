@@ -8,9 +8,9 @@ import Navbar from "@/components/Navbar";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import Support from "./pages/Support";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import NotFound from "./pages/NotFound";
+import Privacy from "@/pages/Privacy";
+import Terms from "@/pages/Terms";
+import NotFound from "@/pages/NotFound";
 import About from "./pages/About";
 import Bootcamps from '@/pages/Bootcamps';
 import Team from "./pages/Team";
@@ -23,6 +23,7 @@ import DigitalMarketing from "./pages/DigitalMarketing";
 import VideoEditing from "./pages/VideoEditing";
 import CareerLaunch from "./pages/CareerLaunch";
 import Community from "./pages/Community";
+import Sponsor from "@/pages/Sponsor"; // Added import for Sponsor page
 
 
 const queryClient = new QueryClient();
@@ -59,6 +60,7 @@ const App = () => {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/community" element={<Community />} /> {/* Add the Community route */}
+            <Route path="/sponsor" element={<Sponsor />} /> {/* Added Sponsor route */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
