@@ -68,9 +68,7 @@ const CareerLaunch = () => {
             </ul>
           </div>
           
-          <div className="pixel-border overflow-hidden">
-            
-          </div>
+          
         </div>
       </div>
     </SkillPageLayout>;
