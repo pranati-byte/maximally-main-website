@@ -1,10 +1,9 @@
-
 import { Terminal, Twitter, Github, Instagram, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#121212] text-white py-16">
+    <footer className="bg-[#121212] border-t-2 border-maximally-blue/20 text-white py-16 mt-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
@@ -36,7 +35,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-press-start text-sm mb-4 text-gray-100">Programs</h3>
-            <ul className="space-y-3 font-jetbrains">
+            <ul className="space-y-3 font-jetbrains text-gray-300">
               <li><Link to="/entrepreneurship" className="text-gray-300 hover:text-maximally-blue transition-colors block">Entrepreneurship</Link></li>
               <li><Link to="/public-speaking" className="text-gray-300 hover:text-maximally-blue transition-colors block">Public Speaking</Link></li>
               <li><Link to="/digital-marketing" className="text-gray-300 hover:text-maximally-blue transition-colors block">Digital Marketing</Link></li>
@@ -48,7 +47,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-press-start text-sm mb-4 text-gray-100">Company</h3>
-            <ul className="space-y-3 font-jetbrains">
+            <ul className="space-y-3 font-jetbrains text-gray-300">
               <li><Link to="/about" className="text-gray-300 hover:text-maximally-blue transition-colors block">About Us</Link></li>
               <li><Link to="/team" className="text-gray-300 hover:text-maximally-blue transition-colors block">Our Team</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-maximally-blue transition-colors block">Careers</Link></li>
@@ -59,7 +58,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-press-start text-sm mb-4 text-gray-100">Resources</h3>
-            <ul className="space-y-3 font-jetbrains">
+            <ul className="space-y-3 font-jetbrains text-gray-300">
               <li><Link to="/community" className="text-gray-300 hover:text-maximally-blue transition-colors block">Community</Link></li>
               <li><Link to="/support" className="text-gray-300 hover:text-maximally-blue transition-colors block">Support</Link></li>
               <li><Link to="/privacy" className="text-gray-300 hover:text-maximally-blue transition-colors block">Privacy Policy</Link></li>
