@@ -1,16 +1,5 @@
+
 User-agent: *
 Allow: /
 
 Sitemap: https://maximally.in/sitemap.xml
-
-# Block admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-Disallow: /*?*
-
-# Allow static assets
-Allow: /images/
-Allow: /assets/
-Allow: /*.js$
-Allow: /*.css$
