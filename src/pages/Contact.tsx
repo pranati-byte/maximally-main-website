@@ -1,5 +1,6 @@
 
 import { useEffect } from "react";
+import { Mail, Phone, Instagram } from "lucide-react";
 
 const Contact = () => {
   useEffect(() => {
@@ -14,8 +15,38 @@ const Contact = () => {
           <p className="mb-6 text-maximally-black/70">
             Have questions or want to learn more about Maximally? We'd love to hear from you!
           </p>
+          
+          <div className="pixel-card p-6 mb-8">
+            <h2 className="font-press-start text-xl mb-6">Get In Touch</h2>
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <Phone className="h-5 w-5 mr-3 text-maximally-blue" />
+                <a href="tel:+919041260790" className="hover:text-maximally-blue transition-colors">
+                  +91 9041260790
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Mail className="h-5 w-5 mr-3 text-maximally-blue" />
+                <a href="mailto:hello@maximally.in" className="hover:text-maximally-blue transition-colors">
+                  hello@maximally.in
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Instagram className="h-5 w-5 mr-3 text-maximally-blue" />
+                <a 
+                  href="https://instagram.com/maximally.in" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-maximally-blue transition-colors"
+                >
+                  @maximally.in
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div className="pixel-card p-6">
-            <h2 className="font-press-start text-xl mb-4">Get in Touch</h2>
+            <h2 className="font-press-start text-xl mb-4">Send a Message</h2>
             <form className="space-y-4">
               <div>
                 <label className="block mb-2">Name</label>

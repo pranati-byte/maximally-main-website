@@ -26,6 +26,12 @@ import CareerLaunch from "./pages/CareerLaunch";
 const queryClient = new QueryClient();
 
 const App = () => {
+  useEffect(() => {
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://maximally.in');
+    document.title = 'Maximally - Learn Real-World Skills';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Helping ambitious teens learn the real-world skills that schools forgot to teach.');
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
