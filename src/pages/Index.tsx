@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
-import { ArrowRight, Star, Users, Target, Rocket, Sparkles, Crown } from 'lucide-react';
+import { ArrowRight, Star, Users, Target, Rocket, Sparkles, Crown, Code, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SkillTracks from '@/components/SkillTracks';
 import WhyMaximally from '@/components/WhyMaximally';
 import Footer from '@/components/Footer';
@@ -8,9 +9,16 @@ import Testimonials from '@/components/Testimonials';
 
 const Index = () => {
   const [text, setText] = useState('');
-  const fullText = 'Max out your potential';
+  const fullText = 'Level up your future';
   const [isVisible, setIsVisible] = useState(false);
+  const [activeFeature, setActiveFeature] = useState(0);
   
+  const features = [
+    { icon: Code, title: "Learn Real Skills", description: "No more theory. Build real projects." },
+    { icon: Users, title: "Join the Community", description: "Connect with ambitious teens." },
+    { icon: Zap, title: "Grow Faster", description: "Accelerate your learning journey." }
+  ];
+
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -22,6 +30,10 @@ const Index = () => {
       }
     }, 100);
 
+    const featureTimer = setInterval(() => {
+      setActiveFeature(prev => (prev + 1) % features.length);
+    }, 3000);
+
     const handleScroll = () => {
       const scrolled = window.scrollY;
       setIsVisible(scrolled > 100);
@@ -30,140 +42,117 @@ const Index = () => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       clearInterval(timer);
+      clearInterval(featureTimer);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const scrollToSkills = () => {
-    document.getElementById('skills-section')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const stats = [
-    { number: '1000+', label: 'Active Students', icon: Users },
-    { number: '95%', label: 'Success Rate', icon: Star },
-    { number: '50+', label: 'Startups Founded', icon: Rocket },
-    { number: '100+', label: 'Events Hosted', icon: Crown }
-  ];
-
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/10 via-white to-maximally-red/10 animate-gradient" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(60,158,231,0.1),transparent)]" />
-      <div className="pixel-grid-bg" />
-      
-      {/* Floating Pixel Cubes */}
-      {[...Array(6)].map((_, i) => (
-        <div
-          key={i}
-          className="pixel-cube"
-          style={{
-            top: `${Math.random() * 90}%`,
-            left: `${Math.random() * 90}%`,
-            animationDelay: `${i * 0.5}s`
-          }}
-        />
-      ))}
-      
-      <main className="relative">
-        {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 relative">
+      {/* Hero Section */}
+      <section className="min-h-screen relative">
+        {/* Animated Background Grid */}
+        <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/10 via-white to-maximally-red/10" />
+        <div className="absolute inset-0 pixel-grid opacity-50" />
+        
+        {/* Floating Pixels */}
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-4 h-4 bg-maximally-blue/20 pixel-border animate-float"
+            style={{
+              top: `${Math.random() * 90}%`,
+              left: `${Math.random() * 90}%`,
+              animationDelay: `${i * 0.5}s`,
+              animationDuration: `${4 + i}s`
+            }}
+          />
+        ))}
+
+        <div className="relative container mx-auto px-4 pt-32 pb-20">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-4 flex justify-center">
-              <div className="pixel-border bg-maximally-blue p-2 inline-block">
-                <Target className="h-6 w-6 text-white" />
+            <div className="mb-6 inline-block">
+              <div className="pixel-border bg-maximally-blue p-3 animate-pulse">
+                <Target className="h-8 w-8 text-white" />
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-press-start text-maximally-black mb-8 relative">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-press-start text-maximally-black mb-8">
               {text}
               <span className="inline-block w-[3px] h-[1em] bg-maximally-blue ml-1 animate-[cursor-blink_1s_infinite]" />
             </h1>
             
-            <p className="font-jetbrains text-lg md:text-xl text-maximally-black/80 max-w-2xl mx-auto mb-12 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
-              Learn real-world skills. Build amazing projects. Join a community of ambitious teens.
+            <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto mb-12 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
+              Join a community of ambitious teens learning real-world skills through hands-on projects.
             </p>
             
-            <div className="flex gap-4 justify-center">
-              <button 
-                onClick={scrollToSkills}
-                className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 hover:animate-pulse"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto">
                 <span>Start Learning</span>
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
               
-              <button 
-                onClick={() => window.location.href = '/community'}
-                className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2"
-              >
+              <Link to="/community" className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto">
                 <span>Join Community</span>
                 <Users className="h-4 w-4" />
-              </button>
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-white/80 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-maximally-black pixel-border flex items-center justify-center">
-                    <stat.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-2">
-                    {stat.number}
-                  </h3>
-                  <p className="font-jetbrains text-maximally-black/70">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Skills Section */}
-        <section id="skills-section" className="py-24 px-4 bg-white relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="opacity-0 animate-[fadeIn_1s_ease-in_forwards_0.5s]">
-              <SkillTracks />
-            </div>
-          </div>
-        </section>
-
-        {/* Why Maximally Section */}
-        <WhyMaximally />
-
-        {/* Testimonials Section */}
-        <Testimonials />
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-maximally-black text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-6">
-              <Sparkles className="h-12 w-12 text-maximally-blue mx-auto" />
-            </div>
-            <h2 className="text-2xl md:text-3xl font-press-start mb-8 animate-glow">
-              Ready to maximize your potential?
-            </h2>
-            <p className="font-jetbrains text-white/80 max-w-2xl mx-auto mb-8">
-              Join our community of ambitious teens learning real-world skills.
-              Get access to exclusive bootcamps, events, and mentorship.
-            </p>
-            <div className="flex gap-4 justify-center">
-              <button 
-                onClick={() => window.location.href = '/bootcamps'}
-                className="pixel-button bg-maximally-blue group flex items-center gap-2 hover:animate-pulse"
+      {/* Features Grid */}
+      <section className="py-20 bg-white relative">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div 
+                key={index}
+                className={`pixel-border p-8 bg-white transition-all duration-500 ${
+                  activeFeature === index ? 'scale-105 shadow-xl' : 'scale-100'
+                }`}
               >
-                <span>Join Now</span>
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
+                <div className="w-12 h-12 bg-maximally-blue pixel-border flex items-center justify-center mb-6">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-press-start text-lg mb-4">{feature.title}</h3>
+                <p className="font-jetbrains text-maximally-black/70">{feature.description}</p>
+              </div>
+            ))}
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
-      {/* Scroll to Top Button */}
+      {/* Skills Section */}
+      <SkillTracks />
+
+      {/* Why Choose Section */}
+      <WhyMaximally />
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* CTA Section */}
+      <section className="py-20 bg-maximally-black text-white">
+        <div className="container mx-auto px-4 text-center">
+          <Sparkles className="h-12 w-12 text-maximally-blue mx-auto mb-6" />
+          <h2 className="text-3xl font-press-start mb-8 animate-glow">
+            Ready to level up?
+          </h2>
+          <p className="font-jetbrains text-white/80 max-w-2xl mx-auto mb-8">
+            Join our community of ambitious teens and start building your future today.
+          </p>
+          <Link 
+            to="/bootcamps"
+            className="pixel-button bg-maximally-blue inline-flex items-center gap-2 hover:animate-pulse"
+          >
+            <span>Get Started</span>
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Scroll to Top */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className={`fixed bottom-8 right-8 pixel-button bg-maximally-black text-white transition-opacity duration-300 ${
