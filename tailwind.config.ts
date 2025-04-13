@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom colors for Maximally
+				maximally: {
+					blue: '#3C9EE7',
+					red: '#D94F45',
+					black: '#1A1A1A',
+					white: '#FFFFFF',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -63,6 +71,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				'press-start': ['"Press Start 2P"', 'cursive'],
+				'vt323': ['"VT323"', 'monospace'],
+				'jetbrains': ['"JetBrains Mono"', 'monospace'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -70,25 +83,45 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				blink: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				glitch: {
+					'0%, 100%': { transform: 'translate(0)' },
+					'20%': { transform: 'translate(-5px, 5px)' },
+					'40%': { transform: 'translate(-5px, -5px)' },
+					'60%': { transform: 'translate(5px, 5px)' },
+					'80%': { transform: 'translate(5px, -5px)' }
+				},
+				bounce: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-15px)' }
+				},
+				pixel: {
+					'0%': { 'background-position': '0% 0%' },
+					'100%': { 'background-position': '100% 0%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'blink': 'blink 1s infinite',
+				'glitch': 'glitch 0.3s ease-in-out',
+				'bounce': 'bounce 2s infinite',
+				'float': 'float 5s ease-in-out infinite',
+				'pixel': 'pixel 15s linear infinite'
 			}
 		}
 	},
