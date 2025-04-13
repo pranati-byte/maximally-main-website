@@ -69,21 +69,61 @@ const About = () => {
 
         {/* Programs Section */}
         <section className="mb-20">
-          <h2 className="font-press-start text-2xl text-maximally-black mb-8">Our Programs</h2>
+          <h2 className="font-press-start text-2xl text-maximally-black mb-8">&gt;&gt; Choose your power-ups_</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="pixel-border p-6">
+            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
               <h3 className="font-press-start text-lg mb-4">Entrepreneurship</h3>
-              <p className="font-jetbrains text-maximally-black/80">
-                Learn to build and launch your own ventures through hands-on projects
-                and real-world case studies.
+              <p className="font-jetbrains text-maximally-black/80 mb-4">
+                Learn to build and scale your first startup.
               </p>
+              <Link to="/entrepreneurship" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
+                Level Up &gt;
+              </Link>
             </div>
-            <div className="pixel-border p-6">
-              <h3 className="font-press-start text-lg mb-4">Public Speaking</h3>
-              <p className="font-jetbrains text-maximally-black/80">
-                Master the art of communication and presentation through our
-                structured program and live practice sessions.
+            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
+              <h3 className="font-press-start text-lg mb-4">Public Speaking & MUN</h3>
+              <p className="font-jetbrains text-maximally-black/80 mb-4">
+                Master the art of persuasive communication.
               </p>
+              <Link to="/public-speaking" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
+                Level Up &gt;
+              </Link>
+            </div>
+            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
+              <h3 className="font-press-start text-lg mb-4">Digital Marketing</h3>
+              <p className="font-jetbrains text-maximally-black/80 mb-4">
+                Grow audiences and build online brands.
+              </p>
+              <Link to="/digital-marketing" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
+                Level Up &gt;
+              </Link>
+            </div>
+            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
+              <h3 className="font-press-start text-lg mb-4">No-Code & AI</h3>
+              <p className="font-jetbrains text-maximally-black/80 mb-4">
+                Build apps without coding and leverage AI.
+              </p>
+              <Link to="/no-code-ai" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
+                Level Up &gt;
+              </Link>
+            </div>
+            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
+              <h3 className="font-press-start text-lg mb-4">Video Editing</h3>
+              <p className="font-jetbrains text-maximally-black/80 mb-4">
+                Create professional videos that captivate.
+              </p>
+              <Link to="/video-editing" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
+                Level Up &gt;
+              </Link>
+            </div>
+            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
+              <h3 className="font-press-start text-lg mb-4">Career Launchpad</h3>
+              <p className="font-jetbrains text-maximally-black/80 mb-4">
+                Prepare for college and your dream career.
+              </p>
+              <Link to="/career-launch" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
+                Level Up &gt;
+              </Link>
             </div>
           </div>
         </section>
