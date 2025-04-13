@@ -10,7 +10,8 @@ const blogPosts = [
     excerpt: "Discover the most impactful summer programs that will transform your skills and boost your college applications. From Maximally's intensive bootcamps to other notable programs...",
     date: "March 15, 2025",
     readTime: "8 min read",
-    category: "Education"
+    category: "Education",
+    path: "/blog/summer-programs-2025"
   },
   {
     title: "How to Make the Most of Your Summer Break (For Students Ages 13–20)",
@@ -79,7 +80,8 @@ const Blog = () => {
 
         <div className="space-y-8">
           {filteredPosts.map((post, index) => (
-            <article key={index} className="pixel-border bg-white p-6 hover:transform hover:scale-[1.02] transition-all cursor-pointer">
+            <Link to={post.path} key={index}>
+              <article className="pixel-border bg-white p-6 hover:transform hover:scale-[1.02] transition-all cursor-pointer">
               <div className="flex items-center gap-4 mb-3">
                 <span className="text-xs font-press-start text-maximally-blue bg-maximally-blue/10 px-3 py-1 rounded">
                   {post.category}
