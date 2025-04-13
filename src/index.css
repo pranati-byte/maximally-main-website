@@ -89,6 +89,21 @@
   z-index: 0;
 }
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .pixel-button {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .pixel-card {
+    @apply p-4;
+  }
+
+  .font-press-start {
+    @apply text-sm;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
