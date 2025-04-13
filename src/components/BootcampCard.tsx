@@ -1,0 +1,48 @@
+
+import { ArrowRight, Star } from 'lucide-react';
+import { Button } from './ui/button';
+
+interface BootcampCardProps {
+  title: string;
+  description: string;
+  skills: string[];
+  duration: number;
+  price: number;
+  onPreRegister: () => void;
+}
+
+const BootcampCard = ({ title, description, skills, duration, price, onPreRegister }: BootcampCardProps) => {
+  return (
+    <div className="pixel-border bg-white p-6 relative overflow-hidden transition-transform hover:scale-[1.02]">
+      <div className="absolute top-0 right-0 bg-maximally-blue text-white px-3 py-1 text-sm font-jetbrains">
+        {duration} weeks
+      </div>
+      
+      <h3 className="font-press-start text-xl mb-4 text-maximally-black">{title}</h3>
+      <p className="font-jetbrains text-maximally-black/80 mb-4">{description}</p>
+      
+      <div className="mb-4">
+        <div className="text-sm font-jetbrains text-maximally-black/60 mb-2">Skills:</div>
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill, index) => (
+            <span key={index} className="bg-maximally-blue/10 text-maximally-blue px-2 py-1 rounded text-sm font-jetbrains">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+      
+      <div className="flex items-center justify-between mt-6">
+        <div className="font-press-start text-maximally-black">₹{price}</div>
+        <Button 
+          onClick={onPreRegister}
+          className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains"
+        >
+          Pre-register <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export default BootcampCard;
