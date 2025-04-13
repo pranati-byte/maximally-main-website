@@ -22,7 +22,7 @@ import NoCodeAI from "./pages/NoCodeAI";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import VideoEditing from "./pages/VideoEditing";
 import CareerLaunch from "./pages/CareerLaunch";
-import Community from "@/pages/Community";
+import Community from "./pages/Community";
 
 
 const queryClient = new QueryClient();

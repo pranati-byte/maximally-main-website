@@ -73,7 +73,7 @@ const Hero = () => {
 
           <Button 
             className="pixel-button bg-maximally-black hover:bg-maximally-black/90 group"
-            onClick={() => window.open('/community', '_self')}
+            onClick={() => window.location.href = '/community'}
           >
             <Users className="mr-2 h-4 w-4 group-hover:animate-bounce" />
             Join Our Community
