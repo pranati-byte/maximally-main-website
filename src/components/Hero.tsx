@@ -64,7 +64,7 @@ const Hero = () => {
           Learn the real-world skills schools forgot to teach.
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8">
+        <div className="flex justify-center">
           <Button 
             className="pixel-button bg-maximally-blue hover:bg-maximally-blue/90 group"
             onClick={() => window.location.href = '/bootcamps'}
@@ -72,14 +72,20 @@ const Hero = () => {
             <Rocket className="mr-2 h-4 w-4 group-hover:animate-bounce" />
             Start Learning
           </Button>
+        </div>
 
+        <div className="mt-16 text-center">
+          <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-6">
+            Join Our Community
+          </h2>
+          <p className="text-lg text-maximally-black/80 font-jetbrains max-w-2xl mx-auto mb-8">
+            Connect with ambitious teens learning real-world skills. Share experiences, collaborate on projects, and grow together.
+          </p>
           <Link to="/community" className="inline-block">
-            <Button 
-              className="pixel-button bg-maximally-black hover:bg-maximally-black/90 group w-full"
-            >
-              <Users className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-              Join Our Community
-            </Button>
+            <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-maximally-black hover:transform hover:scale-105 transition-transform cursor-pointer">
+              <Users className="h-12 w-12 text-maximally-blue mx-auto mb-4" />
+              <p className="font-press-start text-sm text-maximally-black">1000+ members and growing</p>
+            </div>
           </Link>
         </div>
       </div>
