@@ -5,18 +5,18 @@ import SkillTracks from '@/components/SkillTracks';
 import WhyMaximally from '@/components/WhyMaximally';
 import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet';
 
 
 const SEO = ({ title, description, keywords, canonicalUrl, structuredData }) => {
   return (
-    <Head>
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonicalUrl} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-    </Head>
+    </Helmet>
   );
 };
 
