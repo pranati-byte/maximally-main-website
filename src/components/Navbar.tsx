@@ -37,6 +37,7 @@ const Navbar = () => {
           <a href="/about" className="font-jetbrains text-maximally-black hover:text-maximally-blue retro-underline">About</a>
           <a href="/team" className="font-jetbrains text-maximally-black hover:text-maximally-blue retro-underline">Team</a>
           <a href="/blog" className="font-jetbrains text-maximally-black hover:text-maximally-blue retro-underline">Blog</a>
+          <a href="/bootcamps" className="font-jetbrains text-maximally-black hover:text-maximally-blue retro-underline">Bootcamps</a> {/* Added Bootcamps link */}
         </div>
 
         {/* Mobile Nav Toggle */}
@@ -105,6 +106,7 @@ const Navbar = () => {
             >
               Blog
             </a>
+            <a href="/bootcamps" className="font-jetbrains text-maximally-black py-2 px-4 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>Bootcamps</a> {/* Added Bootcamps link to mobile menu */}
           </div>
         </div>
       )}

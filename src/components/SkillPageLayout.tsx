@@ -1,4 +1,3 @@
-
 import { ReactNode, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, MessageCircle } from "lucide-react";
@@ -40,7 +39,7 @@ const SkillPageLayout = ({
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Homepage
           </Link>
-          
+
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-12">
             <div className={`w-20 h-20 ${iconBgColor} pixel-border flex items-center justify-center flex-shrink-0`}>
               {icon}
@@ -52,9 +51,15 @@ const SkillPageLayout = ({
               <p className="font-jetbrains text-maximally-black/80 italic">{tagline}</p>
             </div>
           </div>
-          
+
           {children}
-          
+
+          <div className="mt-8">
+            <Link to="/bootcamps" className="pixel-button bg-maximally-black text-white inline-block">
+              View All Bootcamps
+            </Link>
+          </div>
+
           <div className="mt-16 pixel-border p-8 bg-white">
             <h2 className="text-xl font-press-start text-maximally-black mb-6">
               Join the {skillName} Squad

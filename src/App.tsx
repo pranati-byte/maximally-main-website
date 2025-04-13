@@ -12,6 +12,7 @@ import NoCodeAI from "./pages/NoCodeAI";
 import VideoEditing from "./pages/VideoEditing";
 import CareerLaunch from "./pages/CareerLaunch";
 import About from "./pages/About";
+import Bootcamps from '@/pages/Bootcamps';
 import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/no-code-ai" element={<NoCodeAI />} />
           <Route path="/video-editing" element={<VideoEditing />} />
           <Route path="/career-launch" element={<CareerLaunch />} />
+          <Route path="/bootcamps" element={<Bootcamps />} />
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Team />} />
           <Route path="/careers" element={<Careers />} />
