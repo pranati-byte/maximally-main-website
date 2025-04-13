@@ -2,5 +2,14 @@
 User-agent: *
 Allow: /
 
+# Block specific directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow all bots to crawl images
+Allow: /images/
+Allow: /assets/
+
 # Sitemap
 Sitemap: https://maximally.app/sitemap.xml

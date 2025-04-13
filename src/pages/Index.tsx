@@ -8,6 +8,24 @@ import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 
 const Index = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Maximally",
+    "description": "Learn real-world skills through project-based learning and expert mentorship",
+    "url": "https://maximally.app",
+    "logo": "https://maximally.app/logo.png",
+    "sameAs": [
+      "https://twitter.com/maximally",
+      "https://linkedin.com/company/maximally",
+      "https://instagram.com/maximally.app"
+    ],
+    "offers": {
+      "@type": "AggregateOffer",
+      "name": "Skill Development Programs",
+      "description": "Professional skill development programs for students"
+    }
+  };
   const [text, setText] = useState('');
   const fullText = 'Level up your future';
   const [isVisible, setIsVisible] = useState(false);
