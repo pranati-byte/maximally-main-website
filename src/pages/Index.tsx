@@ -6,11 +6,7 @@ import WhyMaximally from '@/components/WhyMaximally';
 import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import { Helmet } from 'react-helmet';
-
-
 import SEO from '@/components/SEO';
-
-
 const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -19,23 +15,25 @@ const Index = () => {
     "description": "Premier skill development platform for Indian teenagers - Learn AI, Digital Marketing, Public Speaking & more",
     "url": "https://maximally.in",
     "logo": "https://maximally.in/logo.png",
-    "sameAs": [
-      "https://twitter.com/maximallyHQ",
-      "https://instagram.com/maximallyHQ"
-    ]
+    "sameAs": ["https://twitter.com/maximallyHQ", "https://instagram.com/maximallyHQ"]
   };
-
   const [text, setText] = useState('');
   const fullText = 'Level up your future';
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
-
-  const features = [
-    { icon: Code, title: "Learn Real Skills", description: "No more theory. Build real projects." },
-    { icon: Users, title: "Join the Community", description: "Connect with ambitious teens." },
-    { icon: Zap, title: "Grow Faster", description: "Accelerate your learning journey." }
-  ];
-
+  const features = [{
+    icon: Code,
+    title: "Learn Real Skills",
+    description: "No more theory. Build real projects."
+  }, {
+    icon: Users,
+    title: "Join the Community",
+    description: "Connect with ambitious teens."
+  }, {
+    icon: Zap,
+    title: "Grow Faster",
+    description: "Accelerate your learning journey."
+  }];
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -46,16 +44,13 @@ const Index = () => {
         clearInterval(timer);
       }
     }, 100);
-
     const featureTimer = setInterval(() => {
       setActiveFeature(prev => (prev + 1) % features.length);
     }, 3000);
-
     const handleScroll = () => {
       const scrolled = window.scrollY;
       setIsVisible(scrolled > 100);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       clearInterval(timer);
@@ -63,16 +58,8 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  return (
-    <>
-      <SEO 
-        title="Maximally.in | Skill-building for Indian Teenagers"
-        description="Join India's premier teen education platform. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps designed for Indian students."
-        keywords="skill-building for Indian teenagers, bootcamps for students in India, learn digital marketing AI no-code, teen education India, social impact edtech startup"
-        canonicalUrl="https://maximally.in"
-        structuredData={structuredData}
-      />
+  return <>
+      <SEO title="Maximally.in | Skill-building for Indian Teenagers" description="Join India's premier teen education platform. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps designed for Indian students." keywords="skill-building for Indian teenagers, bootcamps for students in India, learn digital marketing AI no-code, teen education India, social impact edtech startup" canonicalUrl="https://maximally.in" structuredData={structuredData} />
       <div className="min-h-screen bg-white relative overflow-hidden">
         {/* Hero Section */}
         <section className="min-h-screen relative">
@@ -81,18 +68,12 @@ const Index = () => {
           <div className="absolute inset-0 pixel-grid opacity-50" />
 
           {/* Floating Pixels */}
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-4 h-4 bg-maximally-blue/20 pixel-border animate-float"
-              style={{
-                top: `${Math.random() * 90}%`,
-                left: `${Math.random() * 90}%`,
-                animationDelay: `${i * 0.5}s`,
-                animationDuration: `${4 + i}s`
-              }}
-            />
-          ))}
+          {[...Array(8)].map((_, i) => <div key={i} className="absolute w-4 h-4 bg-maximally-blue/20 pixel-border animate-float" style={{
+          top: `${Math.random() * 90}%`,
+          left: `${Math.random() * 90}%`,
+          animationDelay: `${i * 0.5}s`,
+          animationDuration: `${4 + i}s`
+        }} />)}
 
           <div className="relative container mx-auto px-4 pt-32 pb-20">
             <div className="max-w-4xl mx-auto text-center">
@@ -130,20 +111,13 @@ const Index = () => {
         <section className="py-20 bg-white relative">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div 
-                  key={index}
-                  className={`pixel-border p-8 bg-white transition-all duration-500 ${
-                    activeFeature === index ? 'scale-105 shadow-xl' : 'scale-100'
-                  }`}
-                >
+              {features.map((feature, index) => <div key={index} className={`pixel-border p-8 bg-white transition-all duration-500 ${activeFeature === index ? 'scale-105 shadow-xl' : 'scale-100'}`}>
                   <div className="w-12 h-12 bg-maximally-blue pixel-border flex items-center justify-center mb-6">
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-press-start text-lg mb-4">{feature.title}</h3>
                   <p className="font-jetbrains text-maximally-black/70">{feature.description}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -170,10 +144,7 @@ const Index = () => {
             <p className="font-jetbrains text-white/80 max-w-2xl mx-auto mb-8">
               Join our community of ambitious teens and start building your future today.
             </p>
-            <Link 
-              to="/bootcamps"
-              className="pixel-button bg-maximally-blue inline-flex items-center gap-2 hover:animate-pulse"
-            >
+            <Link to="/bootcamps" className="pixel-button bg-maximally-blue inline-flex items-center gap-2 hover:animate-pulse">
               <span>Get Started</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -181,32 +152,18 @@ const Index = () => {
         </section>
 
         {/* Scroll to Top */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className={`fixed bottom-8 right-8 pixel-button bg-maximally-black text-white transition-opacity duration-300 ${
-            isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
-        >
+        <button onClick={() => window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })} className={`fixed bottom-8 right-8 pixel-button bg-maximally-black text-white transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
           ↑
         </button>
 
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default Index;
-
-
 const SummerBootcamps = () => {
-  return (
-    <section className="py-20 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Summer Bootcamp 2025</h2>
-        <p className="text-lg text-gray-600 text-center mb-12">Placeholder for Summer Bootcamp 2025 content.  Add your bootcamp details here!</p>
-        {/* Add your actual bootcamp card components here */}
-      </div>
-    </section>
-  );
+  return;
 };
