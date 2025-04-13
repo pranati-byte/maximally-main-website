@@ -30,6 +30,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/5 to-maximally-red/5 animate-gradient" />
+      <div className="pixel-grid-bg" />
+      <div className="pixel-cube" style={{ top: '10%', left: '10%', animationDelay: '0s' }} />
+      <div className="pixel-cube" style={{ top: '70%', left: '80%', animationDelay: '0.5s' }} />
+      <div className="pixel-cube" style={{ top: '30%', left: '85%', animationDelay: '1s' }} />
+      <div className="pixel-cube" style={{ top: '80%', left: '20%', animationDelay: '1.5s' }} />
+      <div className="pixel-cube" style={{ top: '20%', left: '60%', animationDelay: '2s' }} />
       
       <main className="relative">
         {/* Hero Section */}

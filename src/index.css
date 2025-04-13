@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=JetBrains+Mono:wght@400;700&display=swap');
 
 @tailwind base;
@@ -53,6 +52,41 @@
     text-shadow: 0 0 20px rgba(60, 158, 231, 0.8);
     box-shadow: 0 0 20px rgba(60, 158, 231, 0.8);
   }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float-cube {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+.pixel-cube {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background: linear-gradient(135deg, #3C9EE7 0%, #2a7bb7 100%);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  box-shadow: inset -5px -5px rgba(0, 0, 0, 0.2),
+              inset 5px 5px rgba(255, 255, 255, 0.2);
+  image-rendering: pixelated;
+  animation: float-cube 3s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+.pixel-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(#3C9EE720 1px, transparent 1px),
+    linear-gradient(90deg, #3C9EE720 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 @layer base {
