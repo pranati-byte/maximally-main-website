@@ -1,0 +1,95 @@
+Objective:
+Ensure that the footer is consistent and functional across all pages on the website. The footer should be visibly clear, interactive, and properly positioned.
+
+1. Universal Footer Across All Pages:
+
+Action: Implement a universal footer that appears consistently across all pages (including the homepage, blog, about, etc.).
+
+The footer should have the same structure and content across all pages.
+
+Ensure the footer is placed at the bottom of the page on every page.
+
+Use flexbox or grid to ensure responsiveness, so the footer looks good on all screen sizes.
+
+2. Footer Content:
+
+Action: Verify the content in the footer is correct and is functioning properly.
+
+Ensure all important links (like privacy, terms, contact) are present.
+
+If there are social media links (Instagram, LinkedIn, etc.), make sure they are clickable and lead to the correct URLs.
+
+Example content for the footer:
+
+html
+Copy
+Edit
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Maximally. All rights reserved.</p>
+    <nav>
+      <ul>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/terms">Terms & Conditions</a></li>
+        <li><a href="https://www.instagram.com/maximally.in">Instagram</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+3. Fix Footer Display Issues on Homepage:
+
+Action: Investigate and fix any display issues on the homepage.
+
+If the footer is not visible or is displayed incorrectly, debug the CSS and ensure it's positioned correctly.
+
+Ensure the text in the footer is legible (check for color contrast, font size, etc.).
+
+Test the footer on different screen sizes to ensure it displays properly and is fully readable.
+
+4. Footer Interactivity:
+
+Action: Ensure that the footer is interactive (i.e., links are clickable).
+
+Fix any broken links in the footer.
+
+Make sure all links lead to the correct pages (e.g., "Contact Us" should go to /contact, etc.).
+
+Add hover effects or animations to links for better user interaction.
+
+Example CSS for hover effect:
+
+css
+Copy
+Edit
+footer a:hover {
+  color: #3C9EE7;
+  text-decoration: underline;
+}
+5. Responsiveness and Testing:
+
+Action: Test the footer across multiple devices and screen sizes to ensure it works well on mobile, tablet, and desktop.
+
+Ensure that the footer remains at the bottom of the screen even when there is less content on the page.
+
+Use Tailwind's responsive classes (if applicable) to ensure the footer adapts to different screen sizes.
+
+6. Debugging Any Footer Related Bugs:
+
+Action: If the footer still behaves weirdly (e.g., disappearing or malfunctioning), investigate the following:
+
+CSS issues (check for position: absolute or conflicting styles).
+
+JavaScript issues (check if any JS is affecting the footer visibility or interaction).
+
+HTML structure issues (verify the footer is in the correct place in the HTML hierarchy).
+
+Ensure that there are no overlapping elements causing issues with footer visibility.
+
+Deliverables:
+
+A fully functional universal footer that is visible and interactive on every page.
+
+Fixes for any display and usability issues on the homepage and other pages.
+
+Consistent behavior across all screen sizes, with proper navigation and clear text.
