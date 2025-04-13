@@ -5,18 +5,20 @@ interface SEOProps {
   title: string;
   description: string;
   keywords: string;
-  ogImage?: string;
   canonicalUrl?: string;
+  ogImage?: string;
   structuredData?: object;
+  children?: React.ReactNode;
 }
 
 const SEO = ({
   title,
   description,
   keywords,
-  ogImage = 'https://maximally.in/og-image.jpg',
-  canonicalUrl = 'https://maximally.in',
-  structuredData
+  canonicalUrl = "https://maximally.in",
+  ogImage = "https://maximally.in/og-image.png",
+  structuredData,
+  children
 }: SEOProps) => {
   return (
     <Helmet>
@@ -26,26 +28,32 @@ const SEO = ({
       <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href={canonicalUrl} />
-
-      {/* Open Graph */}
+      
+      {/* OpenGraph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
-
-      {/* Twitter Card */}
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Maximally.in" />
+      
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      
+      {/* Favicons */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-      {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
+      {children}
     </Helmet>
   );
 };

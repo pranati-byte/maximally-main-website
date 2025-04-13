@@ -8,17 +8,7 @@ import Testimonials from '@/components/Testimonials';
 import { Helmet } from 'react-helmet';
 
 
-const SEO = ({ title, description, keywords, canonicalUrl, structuredData }) => {
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonicalUrl} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-    </Helmet>
-  );
-};
+import SEO from '@/components/SEO';
 
 
 const Index = () => {
