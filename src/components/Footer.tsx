@@ -34,35 +34,35 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-press-start text-sm mb-4 text-gray-100">Programs</h3>
-            <ul className="space-y-3 font-jetbrains text-gray-300">
-              <li><Link to="/entrepreneurship" className="text-gray-300 hover:text-maximally-blue transition-colors block">Entrepreneurship</Link></li>
-              <li><Link to="/public-speaking" className="text-gray-300 hover:text-maximally-blue transition-colors block">Public Speaking</Link></li>
-              <li><Link to="/digital-marketing" className="text-gray-300 hover:text-maximally-blue transition-colors block">Digital Marketing</Link></li>
-              <li><Link to="/no-code-ai" className="text-gray-300 hover:text-maximally-blue transition-colors block">No-Code & AI</Link></li>
-              <li><Link to="/video-editing" className="text-gray-300 hover:text-maximally-blue transition-colors block">Video Editing</Link></li>
-              <li><Link to="/career-launch" className="text-gray-300 hover:text-maximally-blue transition-colors block">Career Launch</Link></li>
+            <h3 className="font-press-start text-sm mb-4 text-black">Programs</h3>
+            <ul className="space-y-3 font-jetbrains text-black">
+              <li><Link to="/entrepreneurship" className="text-black hover:text-maximally-blue transition-colors block">Entrepreneurship</Link></li>
+              <li><Link to="/public-speaking" className="text-black hover:text-maximally-blue transition-colors block">Public Speaking</Link></li>
+              <li><Link to="/digital-marketing" className="text-black hover:text-maximally-blue transition-colors block">Digital Marketing</Link></li>
+              <li><Link to="/no-code-ai" className="text-black hover:text-maximally-blue transition-colors block">No-Code & AI</Link></li>
+              <li><Link to="/video-editing" className="text-black hover:text-maximally-blue transition-colors block">Video Editing</Link></li>
+              <li><Link to="/career-launch" className="text-black hover:text-maximally-blue transition-colors block">Career Launch</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-press-start text-sm mb-4 text-gray-100">Company</h3>
-            <ul className="space-y-3 font-jetbrains text-gray-300">
-              <li><Link to="/about" className="text-gray-300 hover:text-maximally-blue transition-colors block">About Us</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-maximally-blue transition-colors block">Our Team</Link></li>
-              <li><Link to="/careers" className="text-gray-300 hover:text-maximally-blue transition-colors block">Careers</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-maximally-blue transition-colors block">Blog</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-maximally-blue transition-colors block">Contact</Link></li>
+            <h3 className="font-press-start text-sm mb-4 text-black">Company</h3>
+            <ul className="space-y-3 font-jetbrains text-black">
+              <li><Link to="/about" className="text-black hover:text-maximally-blue transition-colors block">About Us</Link></li>
+              <li><Link to="/team" className="text-black hover:text-maximally-blue transition-colors block">Our Team</Link></li>
+              <li><Link to="/careers" className="text-black hover:text-maximally-blue transition-colors block">Careers</Link></li>
+              <li><Link to="/blog" className="text-black hover:text-maximally-blue transition-colors block">Blog</Link></li>
+              <li><Link to="/contact" className="text-black hover:text-maximally-blue transition-colors block">Contact</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-press-start text-sm mb-4 text-gray-100">Resources</h3>
-            <ul className="space-y-3 font-jetbrains text-gray-300">
-              <li><Link to="/community" className="text-gray-300 hover:text-maximally-blue transition-colors block">Community</Link></li>
-              <li><Link to="/support" className="text-gray-300 hover:text-maximally-blue transition-colors block">Support</Link></li>
-              <li><Link to="/privacy" className="text-gray-300 hover:text-maximally-blue transition-colors block">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-gray-300 hover:text-maximally-blue transition-colors block">Terms of Service</Link></li>
+            <h3 className="font-press-start text-sm mb-4 text-black">Resources</h3>
+            <ul className="space-y-3 font-jetbrains text-black">
+              <li><Link to="/community" className="text-black hover:text-maximally-blue transition-colors block">Community</Link></li>
+              <li><Link to="/support" className="text-black hover:text-maximally-blue transition-colors block">Support</Link></li>
+              <li><Link to="/privacy" className="text-black hover:text-maximally-blue transition-colors block">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-black hover:text-maximally-blue transition-colors block">Terms of Service</Link></li>
             </ul>
           </div>
         </div>
