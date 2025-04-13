@@ -10,9 +10,19 @@ import Testimonials from '@/components/Testimonials';
 const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "EducationalOrganization"],
     "name": "Maximally",
     "description": "Learn real-world skills through project-based learning and expert mentorship",
+    "additionalType": "Teen Skill Development Platform",
+    "knowsAbout": ["Entrepreneurship", "Digital Marketing", "Public Speaking", "Video Editing", "No-Code Development", "Career Development"],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Teenagers and Young Adults"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
     "url": "https://maximally.app",
     "logo": "https://maximally.app/logo.png",
     "sameAs": [

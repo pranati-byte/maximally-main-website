@@ -28,8 +28,13 @@ const SEO = ({
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      <meta name="keywords" content={`${keywords}, skill development, online learning, student programs, teen education, youth entrepreneurship, digital skills, skill building, career development, personal growth, india education`} />
       <meta name="author" content={author} />
+      {/* Additional SEO tags */}
+      <meta name="language" content="en" />
+      <meta name="robots" content="index, follow, max-image-preview:large" />
+      <meta name="abstract" content="Maximally - The premier platform for teen skill development and career growth in India" />
+      <meta name="rating" content="General" />
       <link rel="canonical" href={fullUrl} />
       
       {/* Open Graph */}

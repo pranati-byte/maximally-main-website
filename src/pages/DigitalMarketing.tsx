@@ -48,8 +48,9 @@ const DigitalMarketing = () => {
   return (
     <>
       <SEO 
-        title="Digital Marketing Course | Maximally"
-        description="Learn digital marketing through hands-on projects. Master social media, content creation, analytics, and campaign management."
+        title="Digital Marketing Course for Teens | Learn Social Media Marketing | Maximally"
+        description="Master digital marketing skills with hands-on projects. Learn social media marketing, content creation, SEO, analytics & campaign management. Join India's leading teen skill development platform."
+        keywords="digital marketing course, social media marketing, content creation, digital marketing for teens, online marketing course india, digital skills training"
         canonicalUrl="/digital-marketing"
         structuredData={structuredData}
       />
