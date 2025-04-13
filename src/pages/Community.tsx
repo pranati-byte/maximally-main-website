@@ -1,96 +1,54 @@
-
-import { Instagram, MessageCircle, MessagesSquare } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Users, MessageSquare, Share2 } from 'lucide-react';
 
 const Community = () => {
   return (
-    <div className="min-h-screen bg-white py-24">
-      <div className="container mx-auto px-4">
-        <h1 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-4 text-center">
-          &gt;&gt; Join Our Community_
-        </h1>
-        
-        <p className="text-center font-jetbrains text-maximally-black/80 mb-12 max-w-2xl mx-auto">
-          Connect with ambitious teens, access exclusive content, and unlock opportunities for growth.
-        </p>
+    <div className="min-h-screen pt-24 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-press-start text-maximally-black mb-6">
+            Join Our Community
+          </h1>
+          <p className="text-lg text-maximally-black/80 font-jetbrains max-w-2xl mx-auto">
+            Connect with fellow learners, share experiences, and grow together in our vibrant community.
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
-            <Instagram className="h-8 w-8 text-maximally-blue mb-4" />
-            <h3 className="font-press-start text-lg mb-2">Instagram</h3>
-            <p className="font-jetbrains text-maximally-black/80 mb-4">
-              Follow our journey and get daily tips on skills that matter.
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-maximally-black">
+            <Users className="h-12 w-12 text-maximally-blue mb-4" />
+            <h3 className="text-xl font-press-start mb-4">Connect</h3>
+            <p className="text-maximally-black/80 font-jetbrains">
+              Network with ambitious peers who share your passion for learning and growth.
             </p>
-            <a 
-              href="https://instagram.com/maximally.in" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="pixel-button bg-maximally-blue text-white hover:bg-maximally-blue/90"
-            >
-              Join on Instagram
-            </a>
           </div>
 
-          <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
-            <MessageCircle className="h-8 w-8 text-maximally-blue mb-4" />
-            <h3 className="font-press-start text-lg mb-2">WhatsApp</h3>
-            <p className="font-jetbrains text-maximally-black/80 mb-4">
-              Get real-time updates and connect with fellow learners.
+          <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-maximally-black">
+            <MessageSquare className="h-12 w-12 text-maximally-red mb-4" />
+            <h3 className="text-xl font-press-start mb-4">Discuss</h3>
+            <p className="text-maximally-black/80 font-jetbrains">
+              Engage in meaningful discussions about skills, projects, and opportunities.
             </p>
-            <a 
-              href="https://chat.whatsapp.com/maximally" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="pixel-button bg-maximally-blue text-white hover:bg-maximally-blue/90"
-            >
-              Join WhatsApp Group
-            </a>
           </div>
 
-          <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
-            <MessagesSquare className="h-8 w-8 text-maximally-blue mb-4" />
-            <h3 className="font-press-start text-lg mb-2">Discord</h3>
-            <p className="font-jetbrains text-maximally-black/80 mb-4">
-              Join our server for discussions and exclusive events.
+          <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-maximally-black">
+            <Share2 className="h-12 w-12 text-maximally-green mb-4" />
+            <h3 className="text-xl font-press-start mb-4">Share</h3>
+            <p className="text-maximally-black/80 font-jetbrains">
+              Share your journey, celebrate wins, and learn from others' experiences.
             </p>
-            <a 
-              href="https://discord.gg/maximally" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="pixel-button bg-maximally-blue text-white hover:bg-maximally-blue/90"
-            >
-              Join Discord Server
-            </a>
           </div>
         </div>
 
-        <div className="pixel-border p-8 bg-maximally-black/5">
-          <h2 className="font-press-start text-xl mb-6 text-center">Community Benefits</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <h3 className="font-press-start text-lg">Free Sessions</h3>
-              <p className="font-jetbrains text-maximally-black/80">
-                Access exclusive workshops and webinars.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-press-start text-lg">Job Opportunities</h3>
-              <p className="font-jetbrains text-maximally-black/80">
-                Get first access to internships and jobs.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-press-start text-lg">Networking</h3>
-              <p className="font-jetbrains text-maximally-black/80">
-                Connect with like-minded peers.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <h3 className="font-press-start text-lg">Event Alerts</h3>
-              <p className="font-jetbrains text-maximally-black/80">
-                Never miss upcoming bootcamps and events.
-              </p>
-            </div>
-          </div>
+        <div className="text-center">
+          <a 
+            href="https://chat.whatsapp.com/maximally" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 bg-maximally-blue text-white font-press-start rounded-lg hover:bg-maximally-blue/90 transition-colors"
+          >
+            Join WhatsApp Community
+          </a>
         </div>
       </div>
     </div>
