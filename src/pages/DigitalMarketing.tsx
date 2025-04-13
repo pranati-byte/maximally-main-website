@@ -31,7 +31,26 @@ const features = [
 ];
 
 const DigitalMarketing = () => {
+  const structuredData = {
+    "@context": "http://schema.org",
+    "@type": "Course",
+    "name": "Digital Marketing",
+    "description": "Master digital marketing with hands-on experience in social media, content creation, and analytics.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Maximally",
+      "url": "https://maximally.in"
+    }
+  };
+
   return (
+    <>
+      <SEO 
+        title="Digital Marketing Course | Maximally"
+        description="Learn digital marketing through hands-on projects. Master social media, content creation, analytics, and campaign management."
+        canonicalUrl="/digital-marketing"
+        structuredData={structuredData}
+      />
     <SkillPageLayout
       title="Digital Marketing"
       icon={<Cpu className="h-10 w-10 text-white" />}
