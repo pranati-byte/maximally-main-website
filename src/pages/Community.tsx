@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Users, MessageSquare, Share2 } from 'lucide-react';
 
-function Community() {
+export default function Community() {
   return (
-    <div className="min-h-screen pt-24 bg-white">
+    <div className="min-h-screen pt-24 bg-white w-full">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-press-start text-maximally-black mb-6">
