@@ -68,7 +68,15 @@ const Hero = () => {
             onClick={() => window.location.href = '/bootcamps'}
           >
             <Rocket className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-            Max Out Your Potential
+            Start Learning
+          </Button>
+
+          <Button 
+            className="pixel-button bg-maximally-black hover:bg-maximally-black/90 group"
+            onClick={() => window.location.href = '/community'}
+          >
+            <Users className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+            Join Our Community
           </Button>
 
           <Button 
