@@ -1,4 +1,3 @@
-
 import { QuoteIcon, Star } from "lucide-react";
 
 interface SkillTestimonialProps {
@@ -10,23 +9,18 @@ interface SkillTestimonialProps {
 
 const SkillTestimonial = ({ quote, author, handle, achievement }: SkillTestimonialProps) => {
   return (
-    <div className="mt-12 mb-8 pixel-border p-6 bg-white relative">
-      <div className="absolute -top-4 -left-4 w-8 h-8 bg-maximally-black flex items-center justify-center">
-        <QuoteIcon className="h-4 w-4 text-white" />
-      </div>
-      <blockquote className="mb-4 font-jetbrains italic text-maximally-black/80">
-        "{quote}"
-      </blockquote>
-      <div className="flex items-center justify-between">
+    <div className="pixel-border p-8 bg-gradient-to-br from-white to-gray-50 mb-12 hover:shadow-lg transition-all">
+      <div className="flex items-start gap-4">
+        <div className="bg-maximally-blue rounded-full p-4 text-white">
+          <span className="text-2xl">❝</span>
+        </div>
         <div>
-          <p className="font-jetbrains font-bold text-maximally-black">{author}</p>
-          <p className="font-jetbrains text-maximally-black/60 text-sm">{handle}</p>
-          {achievement && (
-            <div className="flex items-center mt-1">
-              <Star className="h-4 w-4 text-maximally-red mr-1" />
-              <span className="font-jetbrains text-xs text-maximally-black/70">{achievement}</span>
-            </div>
-          )}
+          <p className="font-jetbrains text-lg mb-6 leading-relaxed italic">"{quote}"</p>
+          <div className="border-t border-gray-200 pt-4">
+            <p className="font-press-start text-sm mb-2">{author}</p>
+            <p className="font-jetbrains text-maximally-black/60 mb-1">{handle}</p>
+            <p className="font-jetbrains text-maximally-blue font-semibold">{achievement}</p>
+          </div>
         </div>
       </div>
     </div>
