@@ -1,43 +1,50 @@
 
 import { useState } from "react";
 import { Cpu, Video, Megaphone, Rocket, Database, Briefcase } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const skillData = [
   {
     title: "Entrepreneurship",
     description: "Learn to build and scale your first startup.",
     icon: Rocket,
-    color: "bg-maximally-blue"
+    color: "bg-maximally-blue",
+    path: "/entrepreneurship"
   },
   {
     title: "Public Speaking & MUN",
     description: "Master the art of persuasive communication.",
     icon: Megaphone,
-    color: "bg-maximally-red"
+    color: "bg-maximally-red",
+    path: "/public-speaking"
   },
   {
     title: "Digital Marketing",
     description: "Grow audiences and build online brands.",
     icon: Cpu,
-    color: "bg-maximally-black"
+    color: "bg-maximally-black",
+    path: "/digital-marketing"
   },
   {
     title: "No-Code & AI",
     description: "Build apps without coding and leverage AI.",
     icon: Database,
-    color: "bg-maximally-blue"
+    color: "bg-maximally-blue",
+    path: "/no-code-ai"
   },
   {
     title: "Video Editing",
     description: "Create professional videos that captivate.",
     icon: Video,
-    color: "bg-maximally-red"
+    color: "bg-maximally-red",
+    path: "/video-editing"
   },
   {
     title: "Career Launchpad",
     description: "Prepare for college and your dream career.",
     icon: Briefcase,
-    color: "bg-maximally-black"
+    color: "bg-maximally-black",
+    path: "/career-launch"
   }
 ];
 
@@ -57,9 +64,9 @@ const SkillCard = ({ skill, index }) => {
       </div>
       <h3 className="font-press-start text-lg mb-2 text-maximally-black">{skill.title}</h3>
       <p className="font-jetbrains text-maximally-black/70">{skill.description}</p>
-      <button className="mt-4 font-press-start text-sm text-maximally-blue hover:text-maximally-red transition-colors retro-underline">
+      <Link to={skill.path} className="mt-4 inline-block font-press-start text-sm text-maximally-blue hover:text-maximally-red transition-colors retro-underline">
         Level Up &gt;
-      </button>
+      </Link>
     </div>
   );
 };
