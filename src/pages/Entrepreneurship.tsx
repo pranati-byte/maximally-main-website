@@ -1,5 +1,5 @@
 
-import { Rocket, Lightbulb, PresentationChart, Target, Users } from "lucide-react";
+import { Rocket, Lightbulb, Presentation, Target, Users } from "lucide-react";
 import SkillPageLayout from "@/components/SkillPageLayout";
 import ProgramFeatures from "@/components/ProgramFeatures";
 import UpcomingEvents from "@/components/UpcomingEvents";
@@ -82,7 +82,7 @@ const Entrepreneurship = () => {
                 <span className="font-jetbrains text-maximally-black/80">8-week structured program</span>
               </li>
               <li className="flex">
-                <PresentationChart className="h-5 w-5 text-maximally-blue mr-3 flex-shrink-0" />
+                <Presentation className="h-5 w-5 text-maximally-blue mr-3 flex-shrink-0" />
                 <span className="font-jetbrains text-maximally-black/80">Weekly workshops with founders</span>
               </li>
               <li className="flex">

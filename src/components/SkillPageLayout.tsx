@@ -1,7 +1,7 @@
 
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Discord, MessageCircle } from "lucide-react";
+import { ArrowLeft, MessageCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -67,11 +67,7 @@ const SkillPageLayout = ({
                   rel="noopener noreferrer"
                   className="pixel-button inline-flex items-center bg-maximally-blue"
                 >
-                  {communityType === "discord" ? (
-                    <Discord className="mr-2 h-5 w-5" />
-                  ) : (
-                    <MessageCircle className="mr-2 h-5 w-5" />
-                  )}
+                  <MessageCircle className="mr-2 h-5 w-5" />
                   Join {communityType === "discord" ? "Discord" : "WhatsApp"}
                 </a>
               </div>
