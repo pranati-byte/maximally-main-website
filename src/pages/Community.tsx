@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Users, MessageSquare, Share2 } from 'lucide-react';
 
-const Community = () => {
+export default function Community() {
   return (
     <div className="min-h-screen pt-24 bg-white">
       <div className="max-w-6xl mx-auto px-4">
