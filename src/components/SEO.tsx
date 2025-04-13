@@ -52,6 +52,23 @@ const SEO = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Structured Data */}
+      {/* Basic structured data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Maximally",
+          "url": "https://maximally.in",
+          "logo": `${baseUrl}/logo.png`,
+          "sameAs": [
+            "https://twitter.com/maximally",
+            "https://instagram.com/maximally.in",
+            "https://linkedin.com/company/maximally"
+          ]
+        })}
+      </script>
+      
+      {/* Additional structured data if provided */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}

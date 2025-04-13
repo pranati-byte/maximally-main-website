@@ -1,15 +1,24 @@
 
 User-agent: *
 Allow: /
+Allow: /blog/
+Allow: /about/
+Allow: /contact/
 
 # Block admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
+Disallow: /*?*
 
 # Allow static assets
 Allow: /images/
 Allow: /assets/
+Allow: /*.js$
+Allow: /*.css$
+
+# Crawl-delay
+Crawl-delay: 10
 
 # Sitemap
 Sitemap: https://maximally.in/sitemap.xml
