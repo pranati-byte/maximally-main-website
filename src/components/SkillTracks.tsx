@@ -1,91 +1,89 @@
-import { useState } from "react";
-import { Cpu, Video, Megaphone, Rocket, Database, Briefcase } from "lucide-react";
-import { Link } from "react-router-dom";
 
-const skillData = [
-  {
-    title: "Entrepreneurship",
-    description: "Learn to build and scale your first startup.",
-    icon: Rocket,
-    color: "bg-maximally-blue",
-    path: "/entrepreneurship"
-  },
+import { Link } from "react-router-dom";
+import { 
+  Megaphone, 
+  Target, 
+  Cpu, 
+  Database, 
+  Video,
+  Briefcase 
+} from "lucide-react";
+
+const tracks = [
   {
     title: "Public Speaking & MUN",
-    description: "Master the art of persuasive communication.",
-    icon: Megaphone,
-    color: "bg-maximally-red",
-    path: "/public-speaking"
+    description: "Master public speaking, debate, and Model UN skills",
+    icon: <Megaphone className="h-6 w-6" />,
+    link: "/public-speaking",
+    bgColor: "bg-maximally-red"
+  },
+  {
+    title: "Entrepreneurship",
+    description: "Learn to build and launch your own startup",
+    icon: <Target className="h-6 w-6" />,
+    link: "/entrepreneurship",
+    bgColor: "bg-maximally-blue"
   },
   {
     title: "Digital Marketing",
-    description: "Grow audiences and build online brands.",
-    icon: Cpu,
-    color: "bg-maximally-black",
-    path: "/digital-marketing"
+    description: "Master social media and digital marketing strategies",
+    icon: <Cpu className="h-6 w-6" />,
+    link: "/digital-marketing",
+    bgColor: "bg-maximally-black"
   },
   {
     title: "No-Code & AI",
-    description: "Build apps without coding and leverage AI.",
-    icon: Database,
-    color: "bg-maximally-blue",
-    path: "/no-code-ai"
+    description: "Build powerful applications without coding",
+    icon: <Database className="h-6 w-6" />,
+    link: "/no-code-ai",
+    bgColor: "bg-maximally-blue"
   },
   {
     title: "Video Editing",
-    description: "Create professional videos that captivate.",
-    icon: Video,
-    color: "bg-maximally-red",
-    path: "/video-editing"
+    description: "Create engaging content for social media",
+    icon: <Video className="h-6 w-6" />,
+    link: "/video-editing",
+    bgColor: "bg-maximally-red"
   },
   {
     title: "Career Launchpad",
-    description: "Prepare for college and your dream career.",
-    icon: Briefcase,
-    color: "bg-maximally-black",
-    path: "/career-launch"
+    description: "Launch your future with expert guidance",
+    icon: <Briefcase className="h-6 w-6" />,
+    link: "/career-launch",
+    bgColor: "bg-maximally-black"
   }
 ];
 
-const SkillCard = ({ skill, index }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <div 
-      className={`pixel-card hover:shadow-[8px_8px_0_#1A1A1A] transition-all duration-300 hover:-translate-y-2
-        ${isHovered ? "translate-y-[-10px] shadow-[0_0_15px_rgba(60,158,231,0.3)]" : ""}
-        hover:border-maximally-blue/50 group`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className={`w-16 h-16 ${skill.color} pixel-border flex items-center justify-center mb-4 mx-auto
-        transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
-        <skill.icon className="text-white h-8 w-8 transform transition-all duration-300 group-hover:scale-110" />
-      </div>
-      <h3 className="font-press-start text-lg mb-2 text-maximally-black">{skill.title}</h3>
-      <p className="font-jetbrains text-maximally-black/70">{skill.description}</p>
-      <Link 
-        to={skill.path} 
-        className="mt-4 inline-block font-press-start text-sm text-maximally-blue hover:text-maximally-red transition-colors retro-underline"
-        onClick={() => window.scrollTo(0, 0)}
-      >
-        Level Up &gt;
-      </Link>
-    </div>
-  );
-};
-
 const SkillTracks = () => {
   return (
-    <section id="skills" className="py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-12 text-center">
-          &gt;&gt; Choose your power-ups_
+    <section className="py-16 px-4">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-press-start text-center text-maximally-black mb-4">
+          Choose Your Power
         </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillData.map((skill, index) => (
-            <SkillCard key={index} skill={skill} index={index} />
+        <p className="text-center font-jetbrains text-maximally-black/70 mb-12">
+          Select your track and begin your journey to excellence
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tracks.map((track, index) => (
+            <Link 
+              key={index}
+              to={track.link}
+              className="block group"
+            >
+              <div className="pixel-border bg-white p-6 h-full transition-transform transform hover:-translate-y-1">
+                <div className={`w-12 h-12 ${track.bgColor} pixel-border flex items-center justify-center mb-4`}>
+                  {track.icon}
+                </div>
+                <h3 className="font-press-start text-lg text-maximally-black mb-2">
+                  {track.title}
+                </h3>
+                <p className="font-jetbrains text-maximally-black/70">
+                  {track.description}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
