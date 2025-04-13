@@ -63,7 +63,7 @@
   /* Pixel card styling */
   .pixel-card {
     @apply bg-white border-2 border-black p-5 relative transition-all
-           hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_rgba(0,0,0,0.9)];
+           hover:translate-x-[-2px] hover:translate-y-[-2px];
     box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.9);
   }
 
@@ -119,38 +119,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-maximally-red;
-}
-
-/* New animations */
-@keyframes shimmer {
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.animate-shimmer {
-  animation: shimmer 1.5s infinite;
-}
-
-/* Add pulse glow effect */
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(60, 158, 231, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 20px 5px rgba(60, 158, 231, 0.4);
-  }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s infinite;
-}
-
-/* Hover scale effect */
-.hover-scale {
-  transition: transform 0.3s ease;
-}
-
-.hover-scale:hover {
-  transform: scale(1.05);
 }

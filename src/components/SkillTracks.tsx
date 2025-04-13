@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Cpu, Video, Megaphone, Rocket, Database, Briefcase, ChevronRight } from "lucide-react";
+import { Cpu, Video, Megaphone, Rocket, Database, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const skillData = [
@@ -9,7 +9,6 @@ const skillData = [
     description: "Learn to build and scale your first startup.",
     icon: Rocket,
     color: "bg-maximally-blue",
-    hoverColor: "hover:bg-maximally-blue hover:text-white",
     path: "/entrepreneurship"
   },
   {
@@ -17,7 +16,6 @@ const skillData = [
     description: "Master the art of persuasive communication.",
     icon: Megaphone,
     color: "bg-maximally-red",
-    hoverColor: "hover:bg-maximally-red hover:text-white",
     path: "/public-speaking"
   },
   {
@@ -25,7 +23,6 @@ const skillData = [
     description: "Grow audiences and build online brands.",
     icon: Cpu,
     color: "bg-maximally-black",
-    hoverColor: "hover:bg-maximally-black hover:text-white",
     path: "/digital-marketing"
   },
   {
@@ -33,7 +30,6 @@ const skillData = [
     description: "Build apps without coding and leverage AI.",
     icon: Database,
     color: "bg-maximally-blue",
-    hoverColor: "hover:bg-maximally-blue hover:text-white",
     path: "/no-code-ai"
   },
   {
@@ -41,7 +37,6 @@ const skillData = [
     description: "Create professional videos that captivate.",
     icon: Video,
     color: "bg-maximally-red",
-    hoverColor: "hover:bg-maximally-red hover:text-white",
     path: "/video-editing"
   },
   {
@@ -49,7 +44,6 @@ const skillData = [
     description: "Prepare for college and your dream career.",
     icon: Briefcase,
     color: "bg-maximally-black",
-    hoverColor: "hover:bg-maximally-black hover:text-white",
     path: "/career-launch"
   }
 ];
@@ -69,13 +63,9 @@ const SkillCard = ({ skill, index }) => {
         <skill.icon className="text-white h-8 w-8" />
       </div>
       <h3 className="font-press-start text-lg mb-2 text-maximally-black">{skill.title}</h3>
-      <p className="font-jetbrains text-maximally-black/70 mb-4">{skill.description}</p>
-      
-      <Link 
-        to={skill.path} 
-        className={`mt-2 inline-flex items-center font-press-start text-sm transition-colors duration-300 border-2 border-transparent px-3 py-1 ${skill.hoverColor}`}
-      >
-        Level Up <ChevronRight className="ml-1 h-4 w-4" />
+      <p className="font-jetbrains text-maximally-black/70">{skill.description}</p>
+      <Link to={skill.path} className="mt-4 inline-block font-press-start text-sm text-maximally-blue hover:text-maximally-red transition-colors retro-underline">
+        Level Up &gt;
       </Link>
     </div>
   );
@@ -83,21 +73,11 @@ const SkillCard = ({ skill, index }) => {
 
 const SkillTracks = () => {
   return (
-    <section id="skills" className="py-24 bg-white relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-maximally-blue/5 rotate-45"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-maximally-red/5 rotate-12"></div>
-        <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-maximally-black/5 -rotate-12"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-4">
-            &gt;&gt; Choose your power-ups_
-          </h2>
-          <div className="w-24 h-1 bg-maximally-blue mx-auto"></div>
-        </div>
+    <section id="skills" className="py-24 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-12 text-center">
+          &gt;&gt; Choose your power-ups_
+        </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillData.map((skill, index) => (
