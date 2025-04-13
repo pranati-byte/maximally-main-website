@@ -1,28 +1,112 @@
-import { useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
+import { Search, Calendar, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const blogPosts = [
+  {
+    title: "Top 10 Summer Programs for Teens in India (2025 Edition)",
+    excerpt: "Discover the most impactful summer programs that will transform your skills and boost your college applications. From Maximally's intensive bootcamps to other notable programs...",
+    date: "March 15, 2025",
+    readTime: "8 min read",
+    category: "Education"
+  },
+  {
+    title: "How to Make the Most of Your Summer Break (For Students Ages 13–20)",
+    excerpt: "Turn your summer break into a launchpad for success! Learn why joining Maximally's skill-focused bootcamps should be your #1 priority this summer...",
+    date: "March 10, 2025",
+    readTime: "6 min read",
+    category: "Career Development"
+  },
+  {
+    title: "Why Real-World Skills Matter More Than Marks in 2025",
+    excerpt: "The truth about marks vs. skills in today's job market. See how 87% of employers now prioritize practical skills over academic scores, and why Maximally's approach works...",
+    date: "March 5, 2025",
+    readTime: "10 min read",
+    category: "Industry Insights"
+  },
+  {
+    title: "Best Online Courses for Teenagers in India (Free + Paid)",
+    excerpt: "A comprehensive guide to the top online learning platforms for teens. Starting with Maximally's innovative bootcamps, explore options that fit your learning style...",
+    date: "March 1, 2025",
+    readTime: "12 min read",
+    category: "Reviews"
+  },
+  {
+    title: "How to Get Internships in High School (Ultimate Guide)",
+    excerpt: "Your step-by-step roadmap to landing amazing internships while in high school. Learn how Maximally's Career Starter Pack bootcamp can give you the edge...",
+    date: "February 25, 2025",
+    readTime: "15 min read",
+    category: "Career Guide"
+  }
+];
 
 const Blog = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    const filtered = blogPosts.filter(post =>
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.category.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredPosts(filtered);
+  }, [searchTerm]);
+
   return (
     <div className="container mx-auto px-4 py-24">
-      <h1 className="font-press-start text-3xl text-maximally-black mb-12 text-center">
-        Blog
+      <h1 className="font-press-start text-3xl text-maximally-black mb-6 text-center">
+        &gt;&gt; Maximally Blog_
       </h1>
-
+      
       <div className="max-w-3xl mx-auto">
-        <div className="mb-8">
+        <div className="relative mb-12">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-maximally-black/50 h-5 w-5" />
           <Input 
             type="search" 
             placeholder="Search posts..." 
-            className="font-jetbrains"
+            className="font-jetbrains pl-12"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
 
-        <div className="text-center text-maximally-black/70 font-jetbrains py-12">
-          New blog posts coming soon!
+        <div className="space-y-8">
+          {filteredPosts.map((post, index) => (
+            <article key={index} className="pixel-border bg-white p-6 hover:transform hover:scale-[1.02] transition-all cursor-pointer">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="text-xs font-press-start text-maximally-blue bg-maximally-blue/10 px-3 py-1 rounded">
+                  {post.category}
+                </span>
+                <div className="flex items-center text-maximally-black/60 text-sm font-jetbrains">
+                  <Calendar className="h-4 w-4 mr-1" />
+                  {post.date}
+                </div>
+                <span className="text-maximally-black/60 text-sm font-jetbrains">
+                  {post.readTime}
+                </span>
+              </div>
+              
+              <h2 className="font-press-start text-xl mb-3 text-maximally-black">
+                {post.title}
+              </h2>
+              
+              <p className="font-jetbrains text-maximally-black/70 mb-4">
+                {post.excerpt}
+              </p>
+              
+              <button className="flex items-center gap-2 text-maximally-blue font-press-start text-sm group">
+                Read More 
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </article>
+          ))}
         </div>
       </div>
     </div>
