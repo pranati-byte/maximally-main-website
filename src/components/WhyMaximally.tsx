@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Zap, Users, BookOpen } from "lucide-react";
 
 const features = [
@@ -36,8 +36,8 @@ const EvolutionStep = ({ number, label, isActive }) => {
 const WhyMaximally = () => {
   const [activeStep, setActiveStep] = useState(1);
   
-  // Auto-advance the steps
-  useState(() => {
+  // Auto-advance the steps - Fixed by changing useState to useEffect
+  useEffect(() => {
     const timer = setInterval(() => {
       setActiveStep((prev) => (prev % 4) + 1);
     }, 2000);
