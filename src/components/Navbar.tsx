@@ -33,6 +33,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-8 items-center">
           <Link to="/" className="font-jetbrains text-maximally-black hover:text-maximally-blue">Home</Link>
           <Link to="/bootcamps" className="font-jetbrains text-maximally-black hover:text-maximally-blue">Bootcamps</Link>
+          <Link to="/community" className="font-jetbrains text-maximally-black hover:text-maximally-blue">Community</Link>
           <Link to="/about" className="font-jetbrains text-maximally-black hover:text-maximally-blue">About</Link>
           <Link to="/team" className="font-jetbrains text-maximally-black hover:text-maximally-blue">Team</Link>
           <Link to="/blog" className="font-jetbrains text-maximally-black hover:text-maximally-blue">Blog</Link>
@@ -58,6 +59,7 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <Link to="/" className="font-jetbrains text-maximally-black py-2 px-4 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>Home</Link>
             <Link to="/bootcamps" className="font-jetbrains text-maximally-black py-2 px-4 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>Bootcamps</Link>
+            <Link to="/community" className="font-jetbrains text-maximally-black py-2 px-4 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>Community</Link>
             <Link to="/about" className="font-jetbrains text-maximally-black py-2 px-4 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>About</Link>
             <Link to="/team" className="font-jetbrains text-maximally-black py-2 px-4 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>Team</Link>
             <Link to="/blog" className="font-jetbrains text-maximally-black py-2 px-4 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>Blog</Link>

@@ -37,7 +37,7 @@ const Community = () => {
               Get real-time updates and connect with fellow learners.
             </p>
             <a 
-              href="https://whatsapp.com/channel/maximally" 
+              href="https://chat.whatsapp.com/maximally" 
               target="_blank" 
               rel="noopener noreferrer"
               className="pixel-button bg-maximally-blue text-white hover:bg-maximally-blue/90"
