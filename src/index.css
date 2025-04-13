@@ -162,6 +162,14 @@
   .float-element {
     animation: float 3s ease-in-out infinite;
   }
+
+  .terminal {
+    border-right: 0.15em solid #3C9EE7;
+    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+  }
 }
 
 /* Scrollbar styling */
