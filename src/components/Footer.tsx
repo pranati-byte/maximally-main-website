@@ -20,30 +20,25 @@ const Footer = () => {
             <div>
               <h3 className="font-press-start text-sm mb-4">Company</h3>
               <ul className="space-y-2 font-jetbrains text-white/70">
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Team</a></li>
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Blog</a></li>
+                <li><Link to="/team" className="hover:text-maximally-blue transition-colors">Team</Link></li>
+                <li><Link to="/careers" className="hover:text-maximally-blue transition-colors">Careers</Link></li>
+                <li><Link to="/blog" className="hover:text-maximally-blue transition-colors">Blog</Link></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-press-start text-sm mb-4">Resources</h3>
+              <h3 className="font-press-start text-sm mb-4">Help</h3>
               <ul className="space-y-2 font-jetbrains text-white/70">
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Guides</a></li>
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Templates</a></li>
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Free Tools</a></li>
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">FAQ</a></li>
+                <li><Link to="/contact" className="hover:text-maximally-blue transition-colors">Contact Us</Link></li>
+                <li><Link to="/support" className="hover:text-maximally-blue transition-colors">Support</Link></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-press-start text-sm mb-4">Contact</h3>
+              <h3 className="font-press-start text-sm mb-4">Legal</h3>
               <ul className="space-y-2 font-jetbrains text-white/70">
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Support</a></li>
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-maximally-blue transition-colors">Terms</a></li>
+                <li><Link to="/privacy" className="hover:text-maximally-blue transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-maximally-blue transition-colors">Terms & Conditions</Link></li>
               </ul>
             </div>
           </div>

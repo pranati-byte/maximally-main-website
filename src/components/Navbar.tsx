@@ -37,6 +37,7 @@ const Navbar = () => {
           <Link to="/team" className="font-jetbrains text-maximally-black hover:text-maximally-blue">Team</Link>
           <Link to="/careers" className="font-jetbrains text-maximally-black hover:text-maximally-blue">Careers</Link>
           <Link to="/blog" className="font-jetbrains text-maximally-black hover:text-maximally-blue">Blog</Link>
+          <Link to="/contact" className="font-jetbrains text-maximally-black hover:text-maximally-blue">Contact</Link>
         </div>
 
         {/* Mobile Nav Toggle */}
