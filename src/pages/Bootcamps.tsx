@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../components/ui/dialog';
 import { Button } from '../components/ui/button';
 import { ArrowRight, Users, Star, Calendar, Clock, Trophy, Rocket } from 'lucide-react';
+import Footer from '../components/Footer';
 
 const summerBootcamps = [
   {
@@ -81,7 +82,8 @@ const Bootcamps = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+    <div className="min-h-screen bg-white pt-20">
       <section className="py-20 bg-maximally-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-grid-white/10" />
@@ -225,6 +227,8 @@ const Bootcamps = () => {
         </DialogContent>
       </Dialog>
     </div>
+    <Footer />
+    </>
   );
 };
 
