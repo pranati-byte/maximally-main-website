@@ -1,29 +1,18 @@
-
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    // Scroll to top when component mounts
-    window.scrollTo(0, 0);
-    
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
-      </div>
+    <div className="min-h-screen flex flex-col items-center justify-center px-4">
+      <h1 className="font-press-start text-4xl text-maximally-black mb-4">404</h1>
+      <p className="font-jetbrains text-maximally-black/70 mb-8 text-center">
+        Oops! This level doesn't exist. Let's get you back on track.
+      </p>
+      <Link 
+        to="/" 
+        className="font-press-start text-maximally-blue hover:text-maximally-red transition-colors"
+      >
+        &lt; Return Home
+      </Link>
     </div>
   );
 };

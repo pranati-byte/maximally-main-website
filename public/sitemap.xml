@@ -1,0 +1,40 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://maximally.app/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://maximally.app/entrepreneurship</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximally.app/public-speaking</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximally.app/digital-marketing</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximally.app/video-editing</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximally.app/no-code-ai</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximally.app/career-launch</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maximally.app/about</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maximally.app/contact</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
