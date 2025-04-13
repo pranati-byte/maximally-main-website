@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Users, Rocket } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -73,13 +73,14 @@ const Hero = () => {
             Start Learning
           </Button>
 
-          <Button 
-            className="pixel-button bg-maximally-black hover:bg-maximally-black/90 group"
-            onClick={() => navigate('/community')}
-          >
-            <Users className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-            Join Our Community
-          </Button>
+          <Link to="/community">
+            <Button 
+              className="pixel-button bg-maximally-black hover:bg-maximally-black/90 group"
+            >
+              <Users className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+              Join Our Community
+            </Button>
+          </Link>
         </div>
       </div>
 
