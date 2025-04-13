@@ -1,0 +1,62 @@
+Hey! Please update the `Flash Bootcamps` section with a new block titled **"Summer Bootcamp 2025"** using the following structure and details:
+
+Each bootcamp should be displayed as a tile/card with:
+
+- **Program Name**
+- One-line Description
+- Skills Covered (as a tag or bullet list)
+- Duration (in weeks)
+- Price in ₹
+- “Pre-register” button (links to waitlist form or modal)
+
+Here are the bootcamps to include:
+
+1. **The Founder Lab**  
+   - Build something real. Learn how to start, validate, and pitch your first startup.  
+   - Skills: Entrepreneurship, MVPs, pitching  
+   - Duration: 3 weeks  
+   - Price: ₹1,299  
+
+2. **Speak for Impact**  
+   - Become a confident communicator. Master public speaking, debate, and persuasion.  
+   - Skills: Speaking, debate, articulation  
+   - Duration: 2 weeks  
+   - Price: ₹999  
+
+3. **Digital Influence 101**  
+   - Build your personal brand and grow on platforms like Instagram, YouTube, LinkedIn.  
+   - Skills: Content creation, social media, branding  
+   - Duration: 2 weeks  
+   - Price: ₹999  
+
+4. **Build with AI & No-Code**  
+   - Use ChatGPT, Notion AI, Bubble and more to build automations & tools.  
+   - Skills: AI tools, no-code apps, automation  
+   - Duration: 2 weeks  
+   - Price: ₹999  
+
+5. **Creative Editing Studio**  
+   - Learn video editing and storytelling to make content that actually gets attention.  
+   - Skills: Editing, visual storytelling, content creation  
+   - Duration: 2 weeks  
+   - Price: ₹999  
+
+6. **Career Starter Pack**  
+   - Build a strong resume, network on LinkedIn, and find real internships.  
+   - Skills: Resume building, LinkedIn, outreach  
+   - Duration: 2 weeks  
+   - Price: ₹799  
+
+Also add a pricing section below the bootcamps that includes:
+
+- Any 2 Bootcamps — ₹1,799  
+- All-Access Pass (all 6 Bootcamps) — ₹3,999  
+- Small note: *Scholarships available for select students*
+
+**Design notes:**  
+- Stick to the Maximally design theme: pixel-art meets modern SaaS  
+- Background: `#1A1A1A`, Headings: `#3C9EE7`, Buttons: `#D94F45`, Font: `Press Start 2P` or `JetBrains Mono`  
+- Add XP-style progress visuals to each card if possible  
+- Include a countdown or date reminder: *Bootcamps start May 2025*
+
+Let me know if you need components or assets from my side.
