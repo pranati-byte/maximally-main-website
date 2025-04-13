@@ -6,6 +6,11 @@ const teamMembers = [
     name: "Rishul Chanana",
     role: "Founder & CEO",
     fact: "Built his first startup at 15"
+  },
+  {
+    name: "Janak Walia",
+    role: "Chief Community Manager",
+    fact: "Heavyweight MMA champion of India with 7+ years in community management"
   }
 ];
 
