@@ -66,16 +66,18 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8">
           <Button 
             className="pixel-button bg-maximally-blue hover:bg-maximally-blue/90 group"
+            onClick={() => window.location.href = '/bootcamps'}
           >
             <Rocket className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-            Start Learning
+            Max Out Your Potential
           </Button>
           
           <Button 
             className="pixel-button bg-maximally-black hover:bg-maximally-black/90 group"
+            onClick={() => window.location.href = '/community'}
           >
             <Users className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-            Join the Community
+            Join Our Community
           </Button>
         </div>
       </div>

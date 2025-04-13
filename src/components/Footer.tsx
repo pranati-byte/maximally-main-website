@@ -1,4 +1,3 @@
-
 import { Terminal, Twitter, Instagram, Youtube, Mail, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -16,7 +15,7 @@ const Footer = () => {
               Helping ambitious teens learn the real-world skills that schools forgot to teach.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div>
               <h3 className="font-press-start text-sm mb-4">Company</h3>
@@ -25,7 +24,7 @@ const Footer = () => {
                 <li><Link to="/blog" className="hover:text-maximally-blue transition-colors">Blog</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h3 className="font-press-start text-sm mb-4">Help</h3>
               <ul className="space-y-2 font-jetbrains text-white/70">
@@ -33,7 +32,7 @@ const Footer = () => {
                 <li><Link to="/support" className="hover:text-maximally-blue transition-colors">Support</Link></li>
               </ul>
             </div>
-            
+
             <div>
               <h3 className="font-press-start text-sm mb-4">Legal</h3>
               <ul className="space-y-2 font-jetbrains text-white/70">
@@ -43,14 +42,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/20">
           <p className="font-jetbrains text-white/50 mb-4 md:mb-0">
             © 2025 Maximally. All rights reserved.
           </p>
-          
+
           <div className="flex space-x-4">
-            <a href="#" className="text-white/70 hover:text-maximally-blue transition-colors">
+            <a href="https://twitter.com/maximally" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-maximally-blue transition-colors">
               <Twitter className="h-5 w-5" />
             </a>
             <a href="#" className="text-white/70 hover:text-maximally-blue transition-colors">
@@ -73,3 +72,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+//This is a partial implementation.  The Hero and main page components, as well as the Community page, require additional code to fully implement the user's request.  Placeholders would need to be filled with actual content and links.

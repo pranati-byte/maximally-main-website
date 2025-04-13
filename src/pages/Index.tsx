@@ -63,10 +63,6 @@ const Index = () => {
         {/* Skills Section */}
         <section id="skills-section" className="py-24 px-4 bg-white relative">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-press-start text-maximally-black mb-16 text-center transform translate-y-10 opacity-0 animate-[slideUp_1s_ease-out_forwards]">
-              Power up your skills
-            </h2>
-            
             <div className="opacity-0 animate-[fadeIn_1s_ease-in_forwards_0.5s]">
               <SkillTracks />
             </div>
