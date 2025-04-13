@@ -1,7 +1,6 @@
 import { Database, Code, Bot, Layers, Rocket, Laptop } from "lucide-react";
 import SkillPageLayout from "@/components/SkillPageLayout";
 import ProgramFeatures from "@/components/ProgramFeatures";
-import UpcomingEvents from "@/components/UpcomingEvents";
 import SkillTestimonial from "@/components/SkillTestimonial";
 
 const features = [
@@ -16,16 +15,6 @@ const features = [
   {
     title: "Automation",
     description: "Build automated workflows and systems"
-  }
-];
-
-const events = [
-  {
-    title: "No-Code Bootcamp",
-    date: "May 20, 2025",
-    time: "10:00 AM - 4:00 PM",
-    price: "₹2,999",
-    isPopular: true
   }
 ];
 
@@ -49,7 +38,6 @@ const NoCodeAI = () => {
             handle="@vikram_builds"
             achievement="Creator of EventsHub"
           />
-          <UpcomingEvents events={events} />
         </div>
         <div className="lg:col-span-1">
           <div className="pixel-border p-6 bg-white mb-6">
@@ -72,13 +60,6 @@ const NoCodeAI = () => {
                 <span className="font-jetbrains text-maximally-black/80">Launch your own product</span>
               </li>
             </ul>
-          </div>
-          <div className="pixel-border overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1677442135136-760c813a7e63"
-              alt="AI and no-code tools visualization"
-              className="w-full h-auto object-cover"
-            />
           </div>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import { Megaphone, Mic, Globe, Award, BookOpen, UserCheck } from "lucide-react";
 import SkillPageLayout from "@/components/SkillPageLayout";
 import ProgramFeatures from "@/components/ProgramFeatures";
-import UpcomingEvents from "@/components/UpcomingEvents";
 import SkillTestimonial from "@/components/SkillTestimonial";
 
 const features = [
@@ -16,16 +15,6 @@ const features = [
   {
     title: "Leadership Skills",
     description: "Develop confidence and presence"
-  }
-];
-
-const events = [
-  {
-    title: "Public Speaking Workshop",
-    date: "June 1, 2025",
-    time: "2:00 PM - 5:00 PM",
-    price: "₹1,999",
-    isPopular: true
   }
 ];
 
@@ -49,9 +38,7 @@ const PublicSpeaking = () => {
             handle="@priya_speaks"
             achievement="Best Delegate - HMUN 2024"
           />
-          <UpcomingEvents events={events} />
         </div>
-
         <div className="lg:col-span-1">
           <div className="pixel-border p-6 bg-white mb-6">
             <h3 className="font-press-start text-lg mb-4 text-maximally-black">Program Highlights</h3>
@@ -73,14 +60,6 @@ const PublicSpeaking = () => {
                 <span className="font-jetbrains text-maximally-black/80">1:1 coaching & personalized feedback</span>
               </li>
             </ul>
-          </div>
-
-          <div className="pixel-border overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-              alt="Teen speaking at podium"
-              className="w-full h-auto object-cover"
-            />
           </div>
         </div>
       </div>
