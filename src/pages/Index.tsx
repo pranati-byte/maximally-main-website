@@ -67,9 +67,9 @@ const Index = () => {
   return (
     <>
       <SEO 
-        title="Maximally.in | Learn Real-World Skills - AI, Digital Marketing, Public Speaking"
-        description="Join India's leading teen education platform. Master AI, Digital Marketing, Public Speaking & more through live bootcamps and hands-on projects."
-        keywords="teen education India, digital skills for students, AI courses for teens, public speaking classes India"
+        title="Maximally.in | Skill-building for Indian Teenagers"
+        description="Join India's premier teen education platform. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps designed for Indian students."
+        keywords="skill-building for Indian teenagers, bootcamps for students in India, learn digital marketing AI no-code, teen education India, social impact edtech startup"
         canonicalUrl="https://maximally.in"
         structuredData={structuredData}
       />
