@@ -1,34 +1,35 @@
 
-import { Briefcase, GraduationCap, FileText, Users, LineChart, Star } from "lucide-react";
+import { Briefcase, GraduationCap, FileText, Users, Star, Target, Award, Rocket } from "lucide-react";
 import SkillPageLayout from "@/components/SkillPageLayout";
 import ProgramFeatures from "@/components/ProgramFeatures";
 import UpcomingEvents from "@/components/UpcomingEvents";
 import SkillTestimonial from "@/components/SkillTestimonial";
+import SEO from "@/components/SEO";
 
 const features = [
   {
-    title: "Standout Applications",
-    description: "Create compelling college and internship applications that get noticed."
+    title: "College Application Strategy",
+    description: "Create standout applications for top universities. Master essays, interviews, and build impressive portfolios."
   },
   {
-    title: "Resume Building",
-    description: "Craft professional resumes that highlight your unique strengths and experiences."
+    title: "Internship Success",
+    description: "Land prestigious internships through targeted resume building, networking, and interview preparation."
   },
   {
-    title: "Interview Preparation",
-    description: "Master interview techniques for college admissions, scholarships, and internships."
+    title: "Professional Development",
+    description: "Develop crucial workplace skills including communication, leadership, and project management."
   },
   {
-    title: "Portfolio Development",
-    description: "Build an impressive portfolio that showcases your skills and projects."
+    title: "Career Discovery",
+    description: "Explore career paths through industry mentorship, job shadowing, and hands-on projects."
   },
   {
-    title: "Networking Skills",
-    description: "Learn to connect with professionals and build relationships that advance your career."
+    title: "Personal Brand Building",
+    description: "Create a compelling personal brand across LinkedIn and professional platforms."
   },
   {
-    title: "Personal Branding",
-    description: "Develop a compelling personal brand that sets you apart in competitive environments."
+    title: "Tech Career Preparation",
+    description: "Master technical interviews, build project portfolios, and prepare for tech industry roles."
   }
 ];
 
@@ -49,63 +50,86 @@ const events = [
 ];
 
 const CareerLaunch = () => {
+  const structuredData = {
+    "@context": "http://schema.org",
+    "@type": "Course",
+    "name": "Career Launchpad",
+    "description": "Comprehensive career preparation program for high school and college students.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Maximally",
+      "url": "https://maximally.in"
+    }
+  };
+
   return (
-    <SkillPageLayout
-      title="Career Launchpad"
-      icon={<Briefcase className="h-10 w-10 text-white" />}
-      iconBgColor="bg-maximally-black"
-      tagline="Launch your future. Land opportunities that matter."
-      skillName="Career Squad"
-      communityType="whatsapp"
-      communityLink="https://chat.whatsapp.com/maximally-careers"
-    >
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2">
-          <ProgramFeatures features={features} />
-          
-          <SkillTestimonial
-            quote="The career program helped me secure an internship at a top tech company as a high school student - something I never thought possible. Their guidance on my resume and interview prep was invaluable!"
-            author="Aditya Nair"
-            handle="@aditya_techie"
-            achievement="Secured internship at Microsoft"
-          />
-          
-          <UpcomingEvents events={events} />
-        </div>
-        
-        <div className="lg:col-span-1">
-          <div className="pixel-border p-6 bg-white mb-6">
-            <h3 className="font-press-start text-lg mb-4 text-maximally-black">Program Highlights</h3>
-            <ul className="space-y-4">
-              <li className="flex">
-                <GraduationCap className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
-                <span className="font-jetbrains text-maximally-black/80">College application strategy</span>
-              </li>
-              <li className="flex">
-                <FileText className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
-                <span className="font-jetbrains text-maximally-black/80">Resume & portfolio reviews</span>
-              </li>
-              <li className="flex">
-                <Users className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
-                <span className="font-jetbrains text-maximally-black/80">Mock interviews with feedback</span>
-              </li>
-              <li className="flex">
-                <LineChart className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
-                <span className="font-jetbrains text-maximally-black/80">Career path exploration</span>
-              </li>
-            </ul>
+    <>
+      <SEO 
+        title="Career Launchpad Program | Maximally"
+        description="Launch your dream career. Master college applications, internships, and professional development."
+        canonicalUrl="/career-launch"
+        structuredData={structuredData}
+      />
+      <SkillPageLayout
+        title="Career Launchpad"
+        icon={<Rocket className="h-10 w-10 text-white" />}
+        iconBgColor="bg-maximally-red"
+        tagline="Launch Your Future. Land Dream Opportunities."
+        skillName="Career Squad"
+        communityType="whatsapp"
+        communityLink="https://chat.whatsapp.com/maximally-careers"
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="lg:col-span-2">
+            <ProgramFeatures features={features} />
+            
+            <div className="mb-12">
+              <h2 className="font-press-start text-2xl mb-6 text-maximally-black">Success Stories</h2>
+              <div className="space-y-6">
+                <SkillTestimonial
+                  quote="Got accepted into my dream college with a full scholarship! The application guidance was invaluable."
+                  author="Aarav Mehta"
+                  handle="@aarav_m"
+                  achievement="Full Scholarship Winner"
+                />
+                <SkillTestimonial
+                  quote="Landed a product management internship at Microsoft as a high school student. The interview prep made all the difference!"
+                  author="Zara Khan"
+                  handle="@zara.tech"
+                  achievement="Microsoft Intern"
+                />
+              </div>
+            </div>
+            
+            <UpcomingEvents events={events} />
           </div>
           
-          <div className="pixel-border overflow-hidden">
-            <img 
-              src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4" 
-              alt="Students collaborating on career planning" 
-              className="w-full h-auto object-cover"
-            />
+          <div className="lg:col-span-1">
+            <div className="pixel-border p-6 bg-white mb-6">
+              <h3 className="font-press-start text-lg mb-4 text-maximally-black">Program Benefits</h3>
+              <ul className="space-y-4">
+                <li className="flex">
+                  <Target className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
+                  <span className="font-jetbrains text-maximally-black/80">Personalized guidance</span>
+                </li>
+                <li className="flex">
+                  <Users className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
+                  <span className="font-jetbrains text-maximally-black/80">Industry mentorship</span>
+                </li>
+                <li className="flex">
+                  <Star className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
+                  <span className="font-jetbrains text-maximally-black/80">Placement support</span>
+                </li>
+                <li className="flex">
+                  <Award className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
+                  <span className="font-jetbrains text-maximally-black/80">Career certifications</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </SkillPageLayout>
+      </SkillPageLayout>
+    </>
   );
 };
 

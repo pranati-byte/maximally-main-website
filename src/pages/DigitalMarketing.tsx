@@ -1,5 +1,5 @@
 
-import { Cpu, TrendingUp, BarChart, Instagram, Zap, Target } from "lucide-react";
+import { Cpu, TrendingUp, BarChart, Instagram, Zap, Target, Globe, Users, Trophy } from "lucide-react";
 import SkillPageLayout from "@/components/SkillPageLayout";
 import ProgramFeatures from "@/components/ProgramFeatures";
 import SkillTestimonial from "@/components/SkillTestimonial";
@@ -7,28 +7,28 @@ import SEO from "@/components/SEO";
 
 const features = [
   {
-    title: "Social Media Strategy",
-    description: "Learn to build effective strategies across Instagram, YouTube, and emerging platforms."
+    title: "Social Media Mastery",
+    description: "Master content creation and strategy across Instagram, YouTube, LinkedIn and emerging platforms. Learn viral content frameworks and engagement techniques."
   },
   {
-    title: "Content Creation",
-    description: "Master creating engaging posts, reels, and stories that capture attention."
+    title: "Performance Marketing",
+    description: "Run high-converting ad campaigns on Meta, Google, and LinkedIn. Track ROI and optimize for maximum results."
+  },
+  {
+    title: "Content Strategy",
+    description: "Create content calendars, develop brand voice, and build content systems that consistently drive engagement and growth."
   },
   {
     title: "Community Building",
-    description: "Develop techniques to grow and nurture online communities around brands."
+    description: "Transform followers into engaged community members. Learn moderation, events, and relationship building at scale."
   },
   {
-    title: "Analytics & Insights",
-    description: "Understand key metrics and use data to optimize your content performance."
+    title: "Analytics & Growth",
+    description: "Master data-driven decision making using Google Analytics, social insights, and growth experimentation frameworks."
   },
   {
-    title: "Influencer Marketing",
-    description: "Learn to collaborate with influencers and build your own personal brand."
-  },
-  {
-    title: "Digital Ad Campaigns",
-    description: "Create and manage effective ad campaigns across social platforms."
+    title: "Personal Branding",
+    description: "Build your personal brand as a thought leader. Create a content engine that positions you as an industry expert."
   }
 ];
 
@@ -48,16 +48,16 @@ const DigitalMarketing = () => {
   return (
     <>
       <SEO 
-        title="Digital Marketing Course | Maximally"
-        description="Learn digital marketing through hands-on projects. Master social media, content creation, analytics, and campaign management."
+        title="Digital Marketing Mastery Program | Maximally"
+        description="Transform into a digital marketing expert. Master social media, content creation, analytics, and campaign management through hands-on projects."
         canonicalUrl="/digital-marketing"
         structuredData={structuredData}
       />
       <SkillPageLayout
         title="Digital Marketing"
-        icon={<Cpu className="h-10 w-10 text-white" />}
-        iconBgColor="bg-maximally-black"
-        tagline="Build your brand. Grow your audience."
+        icon={<Globe className="h-10 w-10 text-white" />}
+        iconBgColor="bg-maximally-blue"
+        tagline="Master Digital. Drive Growth. Build Brands."
         skillName="Marketers"
         communityType="discord"
         communityLink="https://discord.gg/maximally-marketers"
@@ -65,32 +65,45 @@ const DigitalMarketing = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <ProgramFeatures features={features} />
-            <SkillTestimonial
-              quote="The digital marketing program helped me grow my art page from 200 to over 5,000 followers in just 3 months. The strategies they teach actually work!"
-              author="Rohan Kapoor"
-              handle="@rohan_creates"
-              achievement="5K+ followers on Instagram"
-            />
+            
+            <div className="mb-12">
+              <h2 className="font-press-start text-2xl mb-6 text-maximally-black">Success Stories</h2>
+              <div className="space-y-6">
+                <SkillTestimonial
+                  quote="The program helped me grow my art page from 200 to 5,000+ followers in just 3 months. The strategies actually work!"
+                  author="Rohan Kapoor"
+                  handle="@rohan_creates"
+                  achievement="5K+ Instagram Growth"
+                />
+                <SkillTestimonial
+                  quote="Learned how to run profitable ad campaigns. Now managing a monthly budget of ₹1L+ with consistent ROAS."
+                  author="Priya Shah"
+                  handle="@priya.digital"
+                  achievement="Digital Marketing Lead"
+                />
+              </div>
+            </div>
           </div>
+          
           <div className="lg:col-span-1">
             <div className="pixel-border p-6 bg-white mb-6">
-              <h3 className="font-press-start text-lg mb-4 text-maximally-black">Program Highlights</h3>
+              <h3 className="font-press-start text-lg mb-4 text-maximally-black">Program Benefits</h3>
               <ul className="space-y-4">
                 <li className="flex">
                   <Instagram className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
-                  <span className="font-jetbrains text-maximally-black/80">Platform-specific strategies</span>
+                  <span className="font-jetbrains text-maximally-black/80">Platform-specific growth tactics</span>
                 </li>
                 <li className="flex">
                   <TrendingUp className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
-                  <span className="font-jetbrains text-maximally-black/80">Real-time growth experiments</span>
+                  <span className="font-jetbrains text-maximally-black/80">Real account growth projects</span>
                 </li>
                 <li className="flex">
-                  <BarChart className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
-                  <span className="font-jetbrains text-maximally-black/80">Analytics deep dives</span>
+                  <Users className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
+                  <span className="font-jetbrains text-maximally-black/80">Network with industry experts</span>
                 </li>
                 <li className="flex">
-                  <Zap className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
-                  <span className="font-jetbrains text-maximally-black/80">Case studies & success stories</span>
+                  <Trophy className="h-5 w-5 text-maximally-black mr-3 flex-shrink-0" />
+                  <span className="font-jetbrains text-maximally-black/80">Portfolio-ready campaigns</span>
                 </li>
               </ul>
             </div>
