@@ -112,6 +112,17 @@ export default {
 				pixel: {
 					'0%': { 'background-position': '0% 0%' },
 					'100%': { 'background-position': '100% 0%' }
+				},
+				shimmer: {
+					'100%': { transform: 'translateX(100%)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 0 0 rgba(60, 158, 231, 0.4)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 20px 5px rgba(60, 158, 231, 0.4)' 
+					}
 				}
 			},
 			animation: {
@@ -121,7 +132,9 @@ export default {
 				'glitch': 'glitch 0.3s ease-in-out',
 				'bounce': 'bounce 2s infinite',
 				'float': 'float 5s ease-in-out infinite',
-				'pixel': 'pixel 15s linear infinite'
+				'pixel': 'pixel 15s linear infinite',
+				'shimmer': 'shimmer 1.5s infinite',
+				'pulse-glow': 'pulse-glow 2s infinite'
 			}
 		}
 	},

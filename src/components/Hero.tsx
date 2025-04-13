@@ -1,7 +1,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Users, Rocket } from "lucide-react";
+import { ArrowDown, Users, Rocket, Star, Sparkles } from "lucide-react";
 
 const Hero = () => {
   const [text, setText] = useState("");
@@ -24,11 +24,11 @@ const Hero = () => {
   
   // Pixel avatar coordinates for background effect
   const avatarPositions = [
-    { x: "10%", y: "20%", delay: 0 },
-    { x: "85%", y: "15%", delay: 1 },
-    { x: "75%", y: "70%", delay: 2 },
-    { x: "20%", y: "80%", delay: 1.5 },
-    { x: "50%", y: "40%", delay: 0.5 },
+    { x: "10%", y: "20%", delay: 0, icon: Users },
+    { x: "85%", y: "15%", delay: 1, icon: Star },
+    { x: "75%", y: "70%", delay: 2, icon: Rocket },
+    { x: "20%", y: "80%", delay: 1.5, icon: Sparkles },
+    { x: "50%", y: "40%", delay: 0.5, icon: Users },
   ];
   
   return (
@@ -46,27 +46,42 @@ const Hero = () => {
           }}
         >
           <div className="absolute inset-0 flex items-center justify-center">
-            <Users className="text-white h-5 w-5 md:h-8 md:w-8" />
+            <pos.icon className="text-white h-5 w-5 md:h-8 md:w-8" />
           </div>
         </div>
       ))}
+
+      {/* Decorative pixels */}
+      <div className="absolute top-32 left-10 w-4 h-4 bg-maximally-red opacity-30"></div>
+      <div className="absolute bottom-40 right-20 w-6 h-6 bg-maximally-black opacity-20"></div>
+      <div className="absolute top-40 right-40 w-3 h-3 bg-maximally-blue opacity-40"></div>
       
       <div className="z-10 text-center max-w-4xl">
-        <h1 
-          ref={textRef} 
-          className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-black mb-6 terminal"
-        >
-          {text}
-        </h1>
+        <div className="inline-block mb-8 relative">
+          <div className="absolute inset-0 blur-lg bg-gradient-to-r from-maximally-blue/30 via-maximally-red/20 to-maximally-blue/30 animate-pulse"></div>
+          <h1 
+            ref={textRef} 
+            className="relative text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-black mb-6 terminal"
+          >
+            {text}
+          </h1>
+        </div>
         
-        <p className="text-xl md:text-2xl font-jetbrains text-maximally-black/80 mb-12 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl font-jetbrains text-maximally-black/80 mb-8 max-w-2xl mx-auto">
           Learn the real-world skills schools forgot to teach.
         </p>
+
+        <div className="max-w-md mx-auto bg-white/60 backdrop-blur-sm pixel-border p-4 mb-10">
+          <p className="font-jetbrains text-maximally-black/90 text-sm">
+            <span className="font-bold">1000+</span> teens already leveling up their skills
+          </p>
+        </div>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8">
           <Button 
-            className="pixel-button bg-maximally-blue hover:bg-maximally-blue/90 group"
+            className="pixel-button bg-maximally-blue hover:bg-maximally-blue/90 group relative overflow-hidden"
           >
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full animate-shimmer"></span>
             <Rocket className="mr-2 h-4 w-4 group-hover:animate-bounce" />
             Start Learning
           </Button>

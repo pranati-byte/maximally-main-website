@@ -7,6 +7,7 @@ import WhyMaximally from "@/components/WhyMaximally";
 import Testimonials from "@/components/Testimonials";
 import Community from "@/components/Community";
 import Events from "@/components/Events";
+import CtaBanner from "@/components/CtaBanner";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -24,6 +25,7 @@ const Index = () => {
       <Testimonials />
       <Community />
       <Events />
+      <CtaBanner />
       <Footer />
     </div>
   );
