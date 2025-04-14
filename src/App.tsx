@@ -36,11 +36,11 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />
@@ -63,9 +63,9 @@ const App = () => {
             <Route path="/sponsor" element={<Sponsor />} /> {/* Added Sponsor route */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </TooltipProvider>
-      </QueryClientProvider>
-    </BrowserRouter>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 };
 
