@@ -31,9 +31,36 @@ const Team = () => {
         ))}
       </div>
 
-      <div className="text-center max-w-2xl mx-auto pixel-border p-8 bg-white">
-        <p className="font-jetbrains text-lg text-maximally-black mb-4">
-          Want to join our team? Send us your resume/CV at{' '}
+      <div className="max-w-2xl mx-auto pixel-border p-8 bg-white">
+        <h2 className="font-press-start text-xl mb-6 text-center">We're Always Hiring!</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="pixel-border p-4">
+            <h3 className="font-press-start text-sm mb-2">Community Mods</h3>
+            <p className="font-jetbrains text-sm text-maximally-black/70">Manage & grow our community</p>
+          </div>
+          <div className="pixel-border p-4">
+            <h3 className="font-press-start text-sm mb-2">Creatives</h3>
+            <p className="font-jetbrains text-sm text-maximally-black/70">Memes, design, content</p>
+          </div>
+          <div className="pixel-border p-4">
+            <h3 className="font-press-start text-sm mb-2">School Outreach</h3>
+            <p className="font-jetbrains text-sm text-maximally-black/70">Connect with institutions</p>
+          </div>
+          <div className="pixel-border p-4">
+            <h3 className="font-press-start text-sm mb-2">Sponsor Hunters</h3>
+            <p className="font-jetbrains text-sm text-maximally-black/70">Find & connect with sponsors</p>
+          </div>
+          <div className="pixel-border p-4">
+            <h3 className="font-press-start text-sm mb-2">Hackers</h3>
+            <p className="font-jetbrains text-sm text-maximally-black/70">Dev, XP system, console</p>
+          </div>
+          <div className="pixel-border p-4">
+            <h3 className="font-press-start text-sm mb-2">Ambassadors</h3>
+            <p className="font-jetbrains text-sm text-maximally-black/70">Student representatives</p>
+          </div>
+        </div>
+        <p className="font-jetbrains text-center text-lg text-maximally-black mb-4">
+          Interested? Email us at{' '}
           <a 
             href="mailto:hello@maximally.in" 
             className="text-maximally-blue hover:underline font-bold"
