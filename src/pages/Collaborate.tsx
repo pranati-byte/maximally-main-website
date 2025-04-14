@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { School, Users, Briefcase, HeartHandshake, ArrowRight, Rocket, Megaphone, Building2, UserPlus, BookOpen, Target } from 'lucide-react';
