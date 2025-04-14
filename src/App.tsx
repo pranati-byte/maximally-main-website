@@ -57,8 +57,7 @@ const App = () => {
             <Route path="/team" element={<Team />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
-            <Route path="/blog/summer-break-2025" element={<SummerBreak2025 />} />
+            <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} /> {/* Added route for Summer Programs blog post */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
             <Route path="/privacy" element={<Privacy />} />
