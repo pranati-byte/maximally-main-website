@@ -61,7 +61,6 @@ const App = () => {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/community" element={<Community />} /> {/* Add the Community route */}
-            <Route path="/sponsor" element={<Sponsor />} /> {/* Added Sponsor route */}
             <Route path="/collaborate" element={<Collaborate />} /> {/* Added Collaborate route */}
             <Route path="*" element={<NotFound />} />
           </Routes>
