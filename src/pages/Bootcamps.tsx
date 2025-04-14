@@ -192,40 +192,7 @@ const Bootcamps = () => {
         </div>
       </section>
 
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle className="font-press-start text-xl">
-              Pre-register for {selectedBootcamp}
-            </DialogTitle>
-            <DialogDescription className="font-jetbrains">
-              {showThankYou ? (
-                <div className="text-center py-4">
-                  <h3 className="text-xl font-bold mb-2">🎉 Thank you!</h3>
-                  <p>We'll notify you when registration opens.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 mt-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Email</label>
-                    <input
-                      type="email"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-3 py-2 border rounded-md"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                  <Button type="submit" className="w-full bg-maximally-blue text-white">
-                    Join Waitlist
-                  </Button>
-                </form>
-              )}
-            </DialogDescription>
-          </DialogHeader>
-        </DialogContent>
-      </Dialog>
+      <TallyFormDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </div>
     <Footer />
     </>

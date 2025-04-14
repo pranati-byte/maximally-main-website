@@ -117,17 +117,7 @@ const SummerBootcamps = () => {
         </div>
       </div>
 
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Pre-register for {selectedBootcamp}</DialogTitle>
-            <DialogDescription>
-              Join the waitlist to secure your spot in the Summer 2025 cohort.
-            </DialogDescription>
-          </DialogHeader>
-          {/* Add your form component here */}
-        </DialogContent>
-      </Dialog>
+      <TallyFormDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
     </section>
   );
 };
