@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { School, Users, Briefcase, HeartHandshake, ArrowRight, Rocket, Megaphone, Building2, UserPlus, BookOpen, Target, Star, Trophy, Sparkles, Check, Heart, Zap, Globe } from 'lucide-react';
+import { School, Users, Briefcase, HeartHandshake, ArrowRight, Rocket, Megaphone, Building2, UserPlus, BookOpen, Target, Star, Trophy, Sparkles, Check, Heart, Zap, Globe, Mail } from 'lucide-react';
 import TallyFormDialog from '@/components/TallyFormDialog';
 
 const Collaborate = () => {
@@ -62,10 +62,10 @@ const Collaborate = () => {
             Join India's most innovative teen education platform. Together, we can empower the next generation of leaders.
           </p>
           <Button 
-            onClick={() => setIsFormOpen(true)} 
+            onClick={() => window.location.href = 'mailto:hello@maximally.in'} 
             className="bg-maximally-blue hover:bg-maximally-blue/90 transform hover:scale-105 transition-all duration-300"
           >
-            Start a Collaboration <ArrowRight className="ml-2 h-4 w-4 animate-bounce" />
+            Email Us to Collaborate <Mail className="ml-2 h-4 w-4 animate-bounce" />
           </Button>
         </motion.div>
       </section>
@@ -264,8 +264,11 @@ const Collaborate = () => {
       <section className="py-16 px-4 bg-maximally-blue/5">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-press-start text-2xl mb-4">Have an idea? We'd love to hear it.</h2>
-          <Button onClick={() => setIsFormOpen(true)} size="lg" className="bg-maximally-blue hover:bg-maximally-blue/90">
-            Start a Collaboration <ArrowRight className="ml-2 h-4 w-4" />
+          <p className="font-jetbrains text-maximally-black/80 mb-6">
+            Email us at hello@maximally.in to discuss how we can tailor a collaboration that works for you.
+          </p>
+          <Button onClick={() => window.location.href = 'mailto:hello@maximally.in'} size="lg" className="bg-maximally-blue hover:bg-maximally-blue/90">
+            Email Us to Collaborate <Mail className="ml-2 h-4 w-4" />
           </Button>
         </div>
       </section>
