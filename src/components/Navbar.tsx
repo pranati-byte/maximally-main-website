@@ -55,17 +55,20 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Nav Menu */}
-      <div className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-white transform transition-transform duration-300 ease-in-out ${
+      <div className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-white/95 backdrop-blur-sm transform transition-transform duration-300 ease-in-out ${
         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
-        <div className="container mx-auto px-4 py-4 flex flex-col space-y-4 h-full overflow-y-auto">
-          <Link to="/" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-gray-100 rounded-lg active:bg-gray-200" onClick={() => setIsMenuOpen(false)}>Home</Link>
-          <Link to="/bootcamps" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-gray-100 rounded-lg active:bg-gray-200" onClick={() => setIsMenuOpen(false)}>Bootcamps</Link>
-          <Link to="/community" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-gray-100 rounded-lg active:bg-gray-200" onClick={() => setIsMenuOpen(false)}>Community</Link>
-          <Link to="/about" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-gray-100 rounded-lg active:bg-gray-200" onClick={() => setIsMenuOpen(false)}>About</Link>
-          <Link to="/team" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-gray-100 rounded-lg active:bg-gray-200" onClick={() => setIsMenuOpen(false)}>Team</Link>
-          <Link to="/blog" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-gray-100 rounded-lg active:bg-gray-200" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-          <Link to="/contact" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-gray-100 rounded-lg active:bg-gray-200" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+        <div className="container mx-auto px-4 py-4 flex flex-col space-y-2 h-full overflow-y-auto">
+          <div className="grid grid-cols-2 gap-2">
+            <Link to="/" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Home</Link>
+            <Link to="/bootcamps" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Bootcamps</Link>
+            <Link to="/community" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Community</Link>
+            <Link to="/about" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link to="/team" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Team</Link>
+            <Link to="/blog" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+            <Link to="/collaborate" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Collaborate</Link>
+            <Link to="/contact" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Contact</Link>
+          </div>
         </div>
       </div>
     </nav>

@@ -1,8 +1,41 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  #root {
+    padding: 0.5rem;
+  }
+  
+  .font-press-start {
+    font-size: 90%; /* Slightly reduce pixel font size on mobile */
+  }
+  
+  .pixel-border {
+    border-width: 2px; /* Thinner borders on mobile */
+  }
+  
+  /* Improve touch targets */
+  button, 
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Add pull-to-refresh effect */
+  .pull-to-refresh {
+    transform-origin: top;
+    transition: transform 0.2s;
+  }
+  
+  /* Smoother scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .logo {

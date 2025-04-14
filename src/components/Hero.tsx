@@ -8,6 +8,7 @@ const Hero = () => {
   const [text, setText] = useState("");
   const fullText = ">> Max out your potential_";
   const textRef = useRef(null);
+  const isMobile = window.innerWidth <= 768;
 
   useEffect(() => {
     let index = 0;
