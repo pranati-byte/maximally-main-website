@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Button } from '../components/ui/button';
 import { ArrowRight, Users, Star, Calendar, Clock, Trophy, Rocket } from 'lucide-react';
@@ -76,7 +75,7 @@ const Bootcamps = () => {
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-grid-white/10" />
         </div>
-        
+
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-12">
             <h2 className="font-press-start text-4xl text-maximally-blue mb-4 animate-fade-in">
@@ -103,14 +102,14 @@ const Bootcamps = () => {
                     {bootcamp.highlight}
                   </div>
                 )}
-                
+
                 <div className="flex items-center gap-3 mb-4">
                   {bootcamp.icon}
                   <h3 className="font-press-start text-xl text-maximally-black">{bootcamp.title}</h3>
                 </div>
-                
+
                 <p className="font-jetbrains text-maximally-black/80 mb-4">{bootcamp.description}</p>
-                
+
                 <div className="mb-4">
                   <div className="text-sm font-jetbrains text-maximally-black/60 mb-2">Skills:</div>
                   <div className="flex flex-wrap gap-2">
@@ -124,7 +123,7 @@ const Bootcamps = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="flex items-center justify-between mt-6">
                   <div className="space-y-1">
                     <div className="font-press-start text-maximally-black">₹{bootcamp.price}</div>
@@ -134,7 +133,7 @@ const Bootcamps = () => {
                     onClick={handlePreRegister}
                     className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains group"
                   >
-                    Pre-register 
+                    Register 
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
@@ -154,7 +153,7 @@ const Bootcamps = () => {
                   onClick={handlePreRegister}
                   className="bg-maximally-red text-white w-full group"
                 >
-                  Choose Bootcamps
+                  Register Now
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
@@ -168,7 +167,7 @@ const Bootcamps = () => {
                   onClick={handlePreRegister}
                   className="bg-maximally-red text-white w-full group"
                 >
-                  Get All Access
+                  Register All Access
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
