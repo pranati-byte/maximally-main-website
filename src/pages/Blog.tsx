@@ -38,7 +38,8 @@ const blogPosts = [
     excerpt: "Your step-by-step roadmap to landing amazing internships while in high school. Learn how Maximally's Career Starter Pack bootcamp can give you the edge...",
     date: "February 25, 2025",
     readTime: "15 min read",
-    category: "Career Guide"
+    category: "Career Guide",
+    link: "/blog/internships-2025"
   }
 ];
 
