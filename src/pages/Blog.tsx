@@ -79,7 +79,8 @@ const Blog = () => {
 
         <div className="space-y-8">
           {filteredPosts.map((post, index) => (
-            <article key={index} className="pixel-border bg-white p-6 hover:transform hover:scale-[1.02] transition-all cursor-pointer">
+            <Link to={post.title === "Top 10 Summer Programs for Teens in India (2025 Edition)" ? "/blog/summer-programs-2025" : "#"} key={index}>
+              <article className="pixel-border bg-white p-6 hover:transform hover:scale-[1.02] transition-all cursor-pointer">
               <div className="flex items-center gap-4 mb-3">
                 <span className="text-xs font-press-start text-maximally-blue bg-maximally-blue/10 px-3 py-1 rounded">
                   {post.category}
@@ -106,6 +107,7 @@ const Blog = () => {
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </article>
+            </Link>
           ))}
         </div>
       </div>
