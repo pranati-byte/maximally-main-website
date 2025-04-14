@@ -1,63 +1,42 @@
-
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
+import { useLocation } from "react-router-dom";
 
 interface SEOProps {
-  title: string;
-  description: string;
-  keywords: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: object;
-  children?: React.ReactNode;
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
 }
 
-const SEO = ({
-  title,
-  description,
-  keywords,
-  canonicalUrl = "https://maximally.in",
-  ogImage = "https://maximally.in/og-image.png",
-  structuredData,
-  children
-}: SEOProps) => {
+const SEO = ({ title, description, image, article }: SEOProps) => {
+  const { pathname } = useLocation();
+  const seo = {
+    title: title || "Maximally - Learn Real-World Skills for Indian Teenagers",
+    description: description || "Join India's premier skill development platform for teenagers. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps.",
+    image: image || "https://maximally.in/og-image.jpg",
+    url: `https://maximally.in${pathname}`
+  };
+
   return (
     <Helmet>
-      <html lang="en" />
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="author" content="Maximally.in" />
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* OpenGraph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Maximally.in" />
-      
-      {/* Twitter */}
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      {seo.url && <meta property="og:url" content={seo.url} />}
+      {article && <meta property="og:type" content="article" />}
+      {!article && <meta property="og:type" content="website" />}
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Favicons */}
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+      <link rel="canonical" href={seo.url} />
+      {/* Favicons - Added back from original code */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="icon" type="image/png" href="/favicon.png" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-      {children}
     </Helmet>
   );
 };
