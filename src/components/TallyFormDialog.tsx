@@ -32,7 +32,7 @@ const TallyFormDialog = ({ open, onOpenChange }: TallyFormDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[800px] h-[80vh]">
+      <DialogContent className="sm:max-w-[800px] h-[90vh] overflow-y-auto">
         <iframe 
           data-tally-src="https://tally.so/embed/wgOYD4?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
           width="100%" 

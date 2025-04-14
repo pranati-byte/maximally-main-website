@@ -39,6 +39,25 @@
   }
 }
 
+
+/* Dialog scrollbar styling */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  @apply bg-maximally-black bg-opacity-10;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  @apply bg-maximally-blue;
+  border-radius: 4px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  @apply bg-maximally-red;
+}
+
 .animate-spin-slow {
   animation: spin-slow 3s linear infinite;
 }
