@@ -87,7 +87,9 @@ const Blog = () => {
                     ? "/blog/summer-break-2025"
                     : post.title === "Why Real-World Skills Matter More Than Marks in 2025"
                       ? "/blog/real-world-skills-2025"
-                      : "#"
+                      : post.title === "Best Online Courses for Teenagers in India (Free + Paid)"
+                        ? "/blog/online-courses-2025"
+                        : "#"
               } 
               key={index}
             >
