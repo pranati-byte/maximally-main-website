@@ -27,6 +27,7 @@ import Sponsor from "@/pages/Sponsor";
 import Collaborate from "./pages/Collaborate";
 import SummerPrograms2025 from './pages/BlogPost/SummerPrograms2025';
 import SummerBreak2025 from './pages/BlogPost/SummerBreak2025';
+import RealWorldSkills2025 from './pages/BlogPost/RealWorldSkills2025';
 
 
 const queryClient = new QueryClient();
@@ -59,7 +60,8 @@ const App = () => {
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
-          <Route path="/blog/summer-break-2025" element={<SummerBreak2025 />} /> {/* Added route for Summer Programs blog post */}
+          <Route path="/blog/summer-break-2025" element={<SummerBreak2025 />} />
+            <Route path="/blog/real-world-skills-2025" element={<RealWorldSkills2025 />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
             <Route path="/privacy" element={<Privacy />} />

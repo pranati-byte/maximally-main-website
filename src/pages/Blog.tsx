@@ -85,7 +85,9 @@ const Blog = () => {
                   ? "/blog/summer-programs-2025" 
                   : post.title === "How to Make the Most of Your Summer Break (For Students Ages 13–20)"
                     ? "/blog/summer-break-2025"
-                    : "#"
+                    : post.title === "Why Real-World Skills Matter More Than Marks in 2025"
+                      ? "/blog/real-world-skills-2025"
+                      : "#"
               } 
               key={index}
             >
