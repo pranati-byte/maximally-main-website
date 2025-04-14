@@ -26,6 +26,7 @@ import Community from "./pages/Community";
 import Sponsor from "@/pages/Sponsor";
 import Collaborate from "./pages/Collaborate";
 import SummerPrograms2025 from './pages/BlogPost/SummerPrograms2025';
+import SummerBreak2025 from './pages/BlogPost/SummerBreak2025';
 
 
 const queryClient = new QueryClient();
