@@ -1,15 +1,4 @@
 
-# Redirect domain aliases
-http://www.maximally.in/* https://maximally.in/:splat 301!
-https://www.maximally.in/* https://maximally.in/:splat 301!
-
-# Optional: Redirect old URLs to new ones
-/courses/* /bootcamps/:splat 301
-/workshops/* /bootcamps/:splat 301
-/programs/* /bootcamps/:splat 301
-
-# Handle blog URLs consistently
-/blog/* /blog/:splat 200
-
-# SPA fallback
-/* /index.html 200
+/services    /bootcamps    301
+/digital-agency    /    301
+/old-service/*    /bootcamps    301
