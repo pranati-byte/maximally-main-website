@@ -172,6 +172,34 @@ const Index = () => {
         {/* Testimonials */}
         <Testimonials />
 
+        {/* Collaboration Section */}
+        <section className="py-20 bg-maximally-blue/5">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-press-start mb-8">Partner With Us</h2>
+            <p className="font-jetbrains text-maximally-black/80 max-w-2xl mx-auto mb-8">
+              We partner with schools, creators, and changemakers to bring real-world learning to ambitious teens.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
+              <div className="pixel-border bg-white p-6">
+                <h3 className="font-press-start text-xl mb-2">Schools</h3>
+                <p className="font-jetbrains text-maximally-black/80">Partner to bring practical skills to your students</p>
+              </div>
+              <div className="pixel-border bg-white p-6">
+                <h3 className="font-press-start text-xl mb-2">Creators</h3>
+                <p className="font-jetbrains text-maximally-black/80">Share your expertise with ambitious teens</p>
+              </div>
+              <div className="pixel-border bg-white p-6">
+                <h3 className="font-press-start text-xl mb-2">Organizations</h3>
+                <p className="font-jetbrains text-maximally-black/80">Create impact through youth collaboration</p>
+              </div>
+            </div>
+            <Link to="/collaborate" className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2 hover:animate-pulse">
+              Start Collaborating
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-maximally-black text-white">
           <div className="container mx-auto px-4 text-center">
