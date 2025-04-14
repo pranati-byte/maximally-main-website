@@ -30,12 +30,7 @@ const Collaborate = () => {
     { icon: Rocket, title: 'Flexible Formats', desc: 'Remote or live, one-time or long-term', stat: '100+ events hosted' }
   ];
 
-  const impactMetrics = [
-    { icon: Zap, value: '1000+', label: 'Students Impacted' },
-    { icon: Globe, value: '20+', label: 'Cities Reached' },
-    { icon: Users, value: '50+', label: 'Active Partners' },
-    { icon: Star, value: '100+', label: 'Events Hosted' }
-  ];
+  
 
   const ways = [
     { icon: Rocket, title: 'Run a Bootcamp' },
@@ -75,26 +70,7 @@ const Collaborate = () => {
         </motion.div>
       </section>
 
-      {/* Impact Metrics */}
-      <section className="py-12 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {impactMetrics.map((metric, i) => (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                key={i}
-                className="text-center"
-              >
-                <metric.icon className="h-8 w-8 mx-auto mb-4 text-maximally-blue animate-pulse" />
-                <h3 className="font-press-start text-2xl mb-2 text-maximally-black">{metric.value}</h3>
-                <p className="font-jetbrains text-maximally-black/60">{metric.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Who Can Collaborate - Enhanced with gradients and hover effects */}
       <section className="py-12 px-4">
