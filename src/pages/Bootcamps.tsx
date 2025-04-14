@@ -1,10 +1,9 @@
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../components/ui/dialog';
 import { Button } from '../components/ui/button';
 import { ArrowRight, Users, Star, Calendar, Clock, Trophy, Rocket } from 'lucide-react';
 import Footer from '../components/Footer';
+import TallyFormDialog from '../components/TallyFormDialog';
 
 const summerBootcamps = [
   {
@@ -61,24 +60,13 @@ const summerBootcamps = [
 
 const Bootcamps = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedBootcamp, setSelectedBootcamp] = useState<string>('');
-  const [email, setEmail] = useState('');
-  const [showThankYou, setShowThankYou] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handlePreRegister = (bootcampTitle: string) => {
-    setSelectedBootcamp(bootcampTitle);
+  const handlePreRegister = () => {
     setIsDialogOpen(true);
-    setShowThankYou(false);
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setShowThankYou(true);
-    setEmail('');
   };
 
   return (
@@ -143,7 +131,7 @@ const Bootcamps = () => {
                     <div className="text-sm text-maximally-black/60">{bootcamp.duration} weeks</div>
                   </div>
                   <Button 
-                    onClick={() => handlePreRegister(bootcamp.title)}
+                    onClick={handlePreRegister}
                     className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains group"
                   >
                     Pre-register 
@@ -163,7 +151,7 @@ const Bootcamps = () => {
                 <h4 className="font-press-start text-lg mb-2">Any 2 Bootcamps</h4>
                 <p className="font-press-start text-2xl text-maximally-blue mb-4">₹1,799</p>
                 <Button 
-                  onClick={() => handlePreRegister('Bundle - 2 Bootcamps')}
+                  onClick={handlePreRegister}
                   className="bg-maximally-red text-white w-full group"
                 >
                   Choose Bootcamps
@@ -177,7 +165,7 @@ const Bootcamps = () => {
                 <h4 className="font-press-start text-lg mb-2">All-Access Pass</h4>
                 <p className="font-press-start text-2xl text-maximally-blue mb-4">₹3,999</p>
                 <Button 
-                  onClick={() => handlePreRegister('All-Access Pass')}
+                  onClick={handlePreRegister}
                   className="bg-maximally-red text-white w-full group"
                 >
                   Get All Access
