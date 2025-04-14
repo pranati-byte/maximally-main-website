@@ -37,6 +37,15 @@ const Collaborate = () => {
     { icon: Star, value: '100+', label: 'Events Hosted' }
   ];
 
+  const ways = [
+    { icon: Rocket, title: 'Run a Bootcamp' },
+    { icon: Megaphone, title: 'Be a Guest Speaker' },
+    { icon: Building2, title: 'Refer a School' },
+    { icon: Heart, title: 'Sponsor Us' },
+    { icon: UserPlus, title: 'Mentor Teens' },
+    { icon: BookOpen, title: 'Co-create Curriculum' }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Animated Background */}
