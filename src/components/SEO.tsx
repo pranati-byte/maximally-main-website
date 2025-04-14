@@ -27,6 +27,10 @@ const SEO = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="author" content="Maximally.in" />
       <link rel="canonical" href={canonicalUrl} />
       
       {/* OpenGraph */}

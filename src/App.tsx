@@ -37,8 +37,9 @@ const queryClient = new QueryClient();
 const App = () => {
   useEffect(() => {
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://maximally.in');
-    document.title = 'Maximally - Learn Real-World Skills';
-    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Helping ambitious teens learn the real-world skills that schools forgot to teach.');
+    document.title = 'Maximally - Learn Real-World Skills for Indian Teenagers';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Join India\'s premier skill development platform for teenagers. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps.');
+    document.querySelector('meta[name="keywords"]')?.setAttribute('content', 'teen education India, skill development, digital marketing, AI courses, public speaking, entrepreneurship, Indian students');
   }, []);
 
   return (

@@ -2,9 +2,18 @@
 User-agent: *
 Allow: /
 
-# Disallow admin and API routes
+# Disallow admin and private routes
 Disallow: /admin/
 Disallow: /api/
+Disallow: /private/
+Disallow: /dashboard/
+
+# Allow important pages
+Allow: /bootcamps/
+Allow: /blog/
+Allow: /about/
+Allow: /team/
+Allow: /community/
 
 # Sitemap location
 Sitemap: https://maximally.in/sitemap.xml
