@@ -24,6 +24,7 @@ import VideoEditing from "./pages/VideoEditing";
 import CareerLaunch from "./pages/CareerLaunch";
 import Community from "./pages/Community";
 import Sponsor from "@/pages/Sponsor"; // Added import for Sponsor page
+import Collaborate from "./pages/Collaborate"; // Added import for Collaborate page
 
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => {
             <Route path="/terms" element={<Terms />} />
             <Route path="/community" element={<Community />} /> {/* Add the Community route */}
             <Route path="/sponsor" element={<Sponsor />} /> {/* Added Sponsor route */}
+            <Route path="/collaborate" element={<Collaborate />} /> {/* Added Collaborate route */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
