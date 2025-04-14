@@ -90,7 +90,9 @@ const Blog = () => {
                       ? "/blog/real-world-skills-2025"
                       : post.title === "Best Online Courses for Teenagers in India (Free + Paid)"
                         ? "/blog/online-courses-2025"
-                        : "#"
+                        : post.title === "How to Get Internships in High School (Ultimate Guide)"
+                          ? "/blog/internships-2025"
+                          : "#"
               } 
               key={index}
             >
