@@ -1,110 +1,176 @@
 
-import { useEffect } from "react";
-import { ArrowRight, Heart, Star, Sparkles, Trophy } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import SEO from '@/components/SEO';
 
 const Sponsor = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className="min-h-screen pt-24 bg-white relative overflow-hidden">
-      <div className="animated-bg"></div>
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-press-start text-maximally-black mb-8 glow-text">
-            Sponsor the Revolution
-          </h1>
-          <p className="text-xl font-jetbrains text-maximally-black/80 typewriter">
-            Back the Builders of Tomorrow
+    <>
+      <SEO 
+        title="Sponsor Maximally Summer Bootcamp 2025 | Partner With Us"
+        description="Partner with Maximally to empower India's most ambitious teens. Reach 1000+ engaged learners through our Summer Bootcamp 2025. Multiple sponsorship tiers available."
+        keywords="summer bootcamp sponsorship, teen education sponsorship, youth empowerment india, maximally partnership"
+      />
+      
+      <main className="max-w-6xl mx-auto px-4 py-12">
+        {/* Hero */}
+        <section className="text-center mb-16">
+          <h1 className="font-press-start text-3xl mb-4">⚡️ Sponsor Maximally Summer Bootcamp 2025</h1>
+          <p className="font-jetbrains text-xl mb-8">Empowering India's most ambitious teens to learn, build & lead.</p>
+        </section>
+
+        {/* About */}
+        <section className="mb-16 pixel-border p-6">
+          <p className="font-jetbrains text-lg">
+            Maximally is a youth-led platform helping ambitious teens (ages 13–20) across India learn real-world skills through immersive online bootcamps in entrepreneurship, public speaking, AI, marketing & more.
           </p>
-        </div>
+        </section>
 
-        <div className="max-w-3xl mx-auto mb-16">
-          <div className="pixel-border p-8 mb-12 hover:transform hover:scale-105 transition-all duration-300 bg-white/80 backdrop-blur">
-            <p className="font-jetbrains text-lg mb-6 animate-fade-in">
-              At Maximally, we're not just teaching. We're weaponizing ambition.
-            </p>
-            <p className="font-jetbrains mb-6 animate-fade-in" style={{animationDelay: "0.2s"}}>
-              We're building India's first social-edtech startup for teenagers — teaching them real-world skills like entrepreneurship, digital marketing, AI, public speaking, no-code, and the tools that actually matter in 2025 and beyond.
-            </p>
-            <p className="font-jetbrains animate-fade-in" style={{animationDelay: "0.4s"}}>
-              We're a mission-driven venture focused on access, excellence, and impact — and we're inviting partners who believe in a future built by bold, brilliant young minds.
-            </p>
+        {/* Why Sponsor */}
+        <section className="mb-16">
+          <h2 className="font-press-start text-2xl mb-8">Why Sponsor Us?</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="pixel-border p-6">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🎯</span>
+                  <span className="font-jetbrains">Access to 1000+ engaged teen learners</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🚀</span>
+                  <span className="font-jetbrains">Strong social impact & cause-based branding</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">📢</span>
+                  <span className="font-jetbrains">Multi-platform exposure (Discord, Insta, Email)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="pixel-border p-6">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🎙️</span>
+                  <span className="font-jetbrains">Sponsor talks, shoutouts & speaking slots</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🧑‍💼</span>
+                  <span className="font-jetbrains">Early access to top student talent</span>
+                </li>
+              </ul>
+            </div>
           </div>
+        </section>
 
-          <div className="mb-16 animate-fade-in" style={{animationDelay: "0.6s"}}>
-            <h2 className="font-press-start text-2xl mb-6 flex items-center justify-center gap-2">
-              <Heart className="text-maximally-red animate-pulse" /> Why Partner With Us?
-            </h2>
-            <ul className="font-jetbrains space-y-4 text-maximally-black/80">
-              <li className="flex items-center gap-2 pixel-border p-4 hover:bg-maximally-blue/5">
-                <Star className="h-5 w-5 text-maximally-blue animate-spin-slow" />
-                You're not just funding a program. You're fueling a movement.
+        {/* Audience */}
+        <section className="mb-16">
+          <h2 className="font-press-start text-2xl mb-8">Audience Snapshot</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="pixel-border p-6">
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3">
+                  <span className="text-2xl">👥</span>
+                  <span className="font-jetbrains">Age Group: 13–20</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-2xl">🌍</span>
+                  <span className="font-jetbrains">All-India reach (Tier 1–3 cities)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="pixel-border p-6">
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3">
+                  <span className="text-2xl">💬</span>
+                  <span className="font-jetbrains">Active teen community via Discord</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-2xl">📲</span>
+                  <span className="font-jetbrains">Est. 10K+ digital reach across socials</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Sponsorship Tiers */}
+        <section className="mb-16">
+          <h2 className="font-press-start text-2xl mb-8">Sponsorship Tiers</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="pixel-border p-6 bg-yellow-50">
+              <h3 className="font-press-start text-lg mb-4">🟡 Minimum Sponsor</h3>
+              <p className="font-press-start text-xl mb-4">₹25,000</p>
+              <ul className="space-y-2 font-jetbrains">
+                <li>• Logo on website</li>
+                <li>• Insta & story shoutout</li>
+                <li>• Certificate of appreciation</li>
+              </ul>
+            </div>
+            <div className="pixel-border p-6 bg-blue-50">
+              <h3 className="font-press-start text-lg mb-4">🔵 Resolution Partner</h3>
+              <p className="font-press-start text-xl mb-4">₹1,00,000</p>
+              <ul className="space-y-2 font-jetbrains">
+                <li>• All Minimum benefits +</li>
+                <li>• Speaking slot during bootcamp</li>
+                <li>• Branded email shoutout</li>
+                <li>• Discord community badge</li>
+              </ul>
+            </div>
+            <div className="pixel-border p-6 bg-red-50">
+              <h3 className="font-press-start text-lg mb-4">🔴 Infinite Mode</h3>
+              <p className="font-press-start text-xl mb-4">₹5,00,000+</p>
+              <ul className="space-y-2 font-jetbrains">
+                <li>• "Presented by [Your Brand]" tag</li>
+                <li>• Custom collab reel on Instagram</li>
+                <li>• VIP Impact Report post-event</li>
+                <li>• Max visibility across platforms</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-center mt-4 font-jetbrains italic">Custom sponsorships available on request</p>
+        </section>
+
+        {/* Timeline */}
+        <section className="mb-16">
+          <h2 className="font-press-start text-2xl mb-8">Timeline</h2>
+          <div className="pixel-border p-6">
+            <ul className="space-y-4 font-jetbrains">
+              <li className="flex items-center gap-3">
+                <span className="text-2xl">📅</span>
+                <span>Sponsor Outreach: <strong>April–May 2025</strong></span>
               </li>
-              <li className="flex items-center gap-2 pixel-border p-4 hover:bg-maximally-blue/5">
-                <Trophy className="h-5 w-5 text-maximally-gold animate-bounce" />
-                100% of sponsorship funds go toward free access for ambitious teens from underserved backgrounds.
+              <li className="flex items-center gap-3">
+                <span className="text-2xl">🎓</span>
+                <span>Bootcamp Dates: <strong>June–July 2025</strong></span>
               </li>
-              <li className="flex items-center gap-2 pixel-border p-4 hover:bg-maximally-blue/5">
-                <Sparkles className="h-5 w-5 text-maximally-purple animate-pulse" />
-                You'll be part of a visible, high-impact, mission-aligned initiative.
+              <li className="flex items-center gap-3">
+                <span className="text-2xl">⏱️</span>
+                <span>2-week online bootcamps, 6 themes</span>
               </li>
             </ul>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="pixel-border p-6 hover:bg-maximally-blue/5 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in" style={{animationDelay: "0.8s"}}>
-              <h3 className="font-press-start text-lg mb-4">Pixel Patron</h3>
-              <p className="font-jetbrains text-maximally-blue mb-4">INR 25,000+</p>
-              <ul className="font-jetbrains space-y-2 text-sm">
-                <li>• Featured on Sponsor Wall</li>
-                <li>• Social media shoutouts</li>
-                <li>• Quarterly impact updates</li>
-              </ul>
-            </div>
-
-            <div className="pixel-border p-6 hover:bg-maximally-red/5 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in relative" style={{animationDelay: "1s"}}>
-              <div className="absolute -top-2 -right-2 bg-maximally-red text-white px-2 py-1 text-xs font-press-start">Popular</div>
-              <h3 className="font-press-start text-lg mb-4">Resolution Partner</h3>
-              <p className="font-jetbrains text-maximally-red mb-4">INR 1,00,000+</p>
-              <ul className="font-jetbrains space-y-2 text-sm">
-                <li>• All Pixel Patron benefits</li>
-                <li>• Batch sponsorship (20+ students)</li>
-                <li>• Custom badge + certificate</li>
-                <li>• Featured in impact report</li>
-              </ul>
-            </div>
-
-            <div className="pixel-border p-6 hover:bg-maximally-purple/5 hover:transform hover:scale-105 transition-all duration-300 animate-fade-in" style={{animationDelay: "1.2s"}}>
-              <h3 className="font-press-start text-lg mb-4">Infinite Mode</h3>
-              <p className="font-jetbrains text-maximally-purple mb-4">INR 5,00,000+</p>
-              <ul className="font-jetbrains space-y-2 text-sm">
-                <li>• All Resolution Partner benefits</li>
-                <li>• Co-branded events</li>
-                <li>• Strategic Partner Spotlight</li>
-                <li>• Quarterly roundtable access</li>
-              </ul>
+        {/* Contact */}
+        <section className="text-center mb-16">
+          <h2 className="font-press-start text-2xl mb-8">Get In Touch</h2>
+          <div className="pixel-border p-6 inline-block mx-auto">
+            <h3 className="font-press-start mb-4">Rishul Chanana</h3>
+            <p className="font-jetbrains mb-2">Founder, Maximally</p>
+            <div className="space-y-2 font-jetbrains">
+              <p>📧 hello@maximally.in</p>
+              <p>📞 +91 9041260790</p>
+              <p>🌐 maximally.in</p>
             </div>
           </div>
+        </section>
 
-          <div className="text-center animate-fade-in" style={{animationDelay: "1.4s"}}>
-            <h2 className="font-press-start text-2xl mb-6">Let's Build the Future Together</h2>
-            <p className="font-jetbrains mb-8">
-              Want to sponsor a batch, fund a program, or brainstorm a custom partnership?
-            </p>
-            <Link 
-              to="/contact"
-              className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2 hover:transform hover:scale-105 transition-all duration-300"
-            >
-              <span>Get in Touch</span>
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+        <div className="text-center">
+          <Button asChild size="lg" className="font-press-start">
+            <Link to="/contact">Contact Us Now</Link>
+          </Button>
         </div>
-      </div>
-    </div>
+      </main>
+    </>
   );
 };
 
