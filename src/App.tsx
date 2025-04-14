@@ -23,8 +23,9 @@ import DigitalMarketing from "./pages/DigitalMarketing";
 import VideoEditing from "./pages/VideoEditing";
 import CareerLaunch from "./pages/CareerLaunch";
 import Community from "./pages/Community";
-import Sponsor from "@/pages/Sponsor"; // Added import for Sponsor page
-import Collaborate from "./pages/Collaborate"; // Added import for Collaborate page
+import Sponsor from "@/pages/Sponsor";
+import Collaborate from "./pages/Collaborate";
+import SummerPrograms2025 from './pages/BlogPost/SummerPrograms2025';
 
 
 const queryClient = new QueryClient();
@@ -56,12 +57,13 @@ const App = () => {
             <Route path="/team" element={<Team />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} /> {/* Added route for Summer Programs blog post */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
-            <Route path="/community" element={<Community />} /> {/* Add the Community route */}
-            <Route path="/collaborate" element={<Collaborate />} /> {/* Added Collaborate route */}
+            <Route path="/community" element={<Community />} />
+            <Route path="/collaborate" element={<Collaborate />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
