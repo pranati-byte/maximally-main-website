@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { School, Users, Briefcase, HeartHandshake, ArrowRight, Rocket, Megaphone, Building2, UserPlus, BookOpen, Target } from 'lucide-react';
+import { School, Users, Briefcase, HeartHandshake, ArrowRight, Rocket, Megaphone, Building2, UserPlus, BookOpen, Target, Star, Trophy, Sparkles, Check } from 'lucide-react';
 import TallyFormDialog from '@/components/TallyFormDialog';
 
 const Collaborate = () => {
@@ -126,6 +126,101 @@ const Collaborate = () => {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+        </div>
+      </section>
+
+      {/* Sponsorship Section */}
+      <section className="py-16 px-4 bg-gradient-to-br from-maximally-purple/5 to-maximally-blue/5">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-press-start text-2xl text-center mb-6">Become a Sponsor</h2>
+          <p className="font-jetbrains text-center text-maximally-black/80 max-w-2xl mx-auto mb-12">
+            Join us in weaponizing ambition. Back the builders of tomorrow and fuel India's first social-edtech movement.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="h-12 w-12 bg-maximally-blue rounded-lg mb-4 flex items-center justify-center">
+                <Star className="h-6 w-6 text-white animate-spin-slow" />
+              </div>
+              <h3 className="font-press-start text-lg mb-4">Pixel Patron</h3>
+              <p className="font-jetbrains text-maximally-blue mb-4">INR 25,000+</p>
+              <ul className="font-jetbrains space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-blue" />
+                  Featured on Sponsor Wall
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-blue" />
+                  Social media shoutouts
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-blue" />
+                  Quarterly impact updates
+                </li>
+              </ul>
+            </div>
+
+            <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 relative">
+              <div className="absolute -top-2 -right-2 bg-maximally-red text-white px-2 py-1 text-xs font-press-start animate-pulse">
+                Popular
+              </div>
+              <div className="h-12 w-12 bg-maximally-red rounded-lg mb-4 flex items-center justify-center">
+                <Trophy className="h-6 w-6 text-white animate-bounce" />
+              </div>
+              <h3 className="font-press-start text-lg mb-4">Resolution Partner</h3>
+              <p className="font-jetbrains text-maximally-red mb-4">INR 1,00,000+</p>
+              <ul className="font-jetbrains space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-red" />
+                  All Pixel Patron benefits
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-red" />
+                  Batch sponsorship (20+ students)
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-red" />
+                  Custom badge + certificate
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-red" />
+                  Featured in impact report
+                </li>
+              </ul>
+            </div>
+
+            <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300">
+              <div className="h-12 w-12 bg-maximally-purple rounded-lg mb-4 flex items-center justify-center">
+                <Sparkles className="h-6 w-6 text-white animate-pulse" />
+              </div>
+              <h3 className="font-press-start text-lg mb-4">Infinite Mode</h3>
+              <p className="font-jetbrains text-maximally-purple mb-4">INR 5,00,000+</p>
+              <ul className="font-jetbrains space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-purple" />
+                  All Resolution Partner benefits
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-purple" />
+                  Co-branded events
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-purple" />
+                  Strategic Partner Spotlight
+                </li>
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-maximally-purple" />
+                  Quarterly roundtable access
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="font-jetbrains text-maximally-black/60 mb-4">
+              * 100% of sponsorship funds go toward free access for ambitious teens from underserved backgrounds
+            </p>
+          </div>
         </div>
       </section>
 
