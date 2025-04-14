@@ -1,0 +1,97 @@
+🔧 PROMPTS/CHANGES FOR REPLIT (Website End)
+1. ✅ Update Meta Tags (for SEO + Social Previews)
+🔹 File: index.html (if static) or your main layout/head file (like _app.tsx, _document.tsx for Next.js)
+html
+Copy
+Edit
+<title>Maximally | Real-World Bootcamps for Teens</title>
+<meta name="description" content="Maximally is India's first edtech platform teaching real-world skills like entrepreneurship, MUN, and digital marketing to ambitious teens." />
+<meta name="keywords" content="teen bootcamps, startup for teens, public speaking classes, Maximally, edtech India" />
+<meta property="og:title" content="Maximally – Learn. Build. Lead." />
+<meta property="og:description" content="Join our 2-week bootcamps on startup building, MUN, marketing & more." />
+<meta property="og:image" content="https://maximally.in/social-preview.jpg" />
+<meta name="robots" content="index, follow" />
+2. ✅ Create a Sitemap
+If you don’t already have a sitemap, create a simple one.
+
+🔹 File: public/sitemap.xml
+xml
+Copy
+Edit
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://maximally.in/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/bootcamps</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/sponsor</loc>
+    <priority>0.8</priority>
+  </url>
+  <!-- Add all key pages here -->
+</urlset>
+Then in robots.txt (next step), reference it.
+
+3. ✅ Fix robots.txt
+🔹 File: public/robots.txt
+txt
+Copy
+Edit
+User-agent: *
+Disallow: /old-service/
+Sitemap: https://maximally.in/sitemap.xml
+4. ✅ Set Up Redirects for Old Digital Agency Pages
+Use Replit's rewrites or static routing (depending on how you're hosting).
+
+If you're using Netlify-style redirect rules with Replit or a framework that supports vercel.json:
+
+🔹 File: vercel.json or .replit + custom routing logic
+json
+Copy
+Edit
+{
+  "redirects": [
+    { "source": "/services", "destination": "/bootcamps", "permanent": true },
+    { "source": "/digital-agency", "destination": "/", "permanent": true }
+  ]
+}
+If your setup is basic React + React Router, use a <Navigate /> in old routes:
+
+tsx
+Copy
+Edit
+<Route path="/services" element={<Navigate to="/bootcamps" replace />} />
+5. ✅ Update Your manifest.json (If using PWA / favicon / metadata)
+🔹 File: public/manifest.json
+json
+Copy
+Edit
+{
+  "name": "Maximally",
+  "short_name": "Maximally",
+  "description": "Bootcamps for ambitious teens. Learn startup-building, MUN, public speaking, and more.",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
+6. ✅ Update All Page Content and Headings
+Every page should reflect the edtech identity — not agency services.
+
+Example: Replace copy in homepage:
+tsx
+Copy
+Edit
+<h1 className="text-4xl font-bold">India’s First Teen Bootcamp Platform</h1>
+<p className="text-lg">Join 2-week experiences on real-world skills like entrepreneurship, MUN, digital marketing & more.</p>
+<Button href="/bootcamps">Explore Bootcamps</Button>
