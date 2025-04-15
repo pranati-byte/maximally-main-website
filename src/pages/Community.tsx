@@ -97,13 +97,22 @@ const Community = () => {
             </Link>
           </div>
 
-          <Link 
-            to="#"
-            className="pixel-button bg-[#5865F2] text-white inline-flex items-center gap-2 hover:animate-pulse px-8 py-4"
-          >
-            Join Discord Server
-            <Users className="h-5 w-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="#"
+              className="pixel-button bg-[#5865F2] text-white inline-flex items-center gap-2 hover:animate-pulse px-8 py-4"
+            >
+              Join Discord Server
+              <Users className="h-5 w-5" />
+            </Link>
+            <Link 
+              to="#"
+              className="pixel-button bg-[#25D366] text-white inline-flex items-center gap-2 hover:animate-pulse px-8 py-4"
+            >
+              Join WhatsApp Community
+              <MessageSquare className="h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
