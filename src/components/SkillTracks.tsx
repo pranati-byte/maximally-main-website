@@ -32,13 +32,6 @@ const skillData = [
     path: "/no-code-ai"
   },
   {
-    title: "Video Editing",
-    description: "Create professional videos that captivate.",
-    icon: Video,
-    color: "bg-maximally-red",
-    path: "/video-editing"
-  },
-  {
     title: "Career Launchpad",
     description: "Prepare for college and your dream career.",
     icon: Briefcase,
