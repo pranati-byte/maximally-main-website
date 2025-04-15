@@ -180,12 +180,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta Logo" className="h-8 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="https://1000logos.net/wp-content/uploads/2017/02/Harvard-Logo.png" alt="Harvard Logo" className="h-12 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" className="h-8 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg" alt="MIT Logo" className="h-10 object-contain grayscale hover:grayscale-0 transition-all" />
-              </div>
+              
 
               <div className="mt-12">
                 <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group inline-flex items-center gap-2 hover:animate-pulse px-8 py-4">
