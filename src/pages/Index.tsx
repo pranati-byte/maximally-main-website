@@ -123,135 +123,52 @@ const Index = () => {
         </section>
 
         {/* Industry Leaders Section */}
-        <section className="py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/10 via-white to-maximally-purple/10" />
-          <div className="absolute inset-0 pixel-grid opacity-30" />
-          
-          <div className="container mx-auto px-4 relative">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-maximally-blue/20 px-6 py-2 rounded-full mb-6 animate-pulse">
-                <span className="font-jetbrains text-maximally-blue font-bold">
-                  🌟 Learn from the Best
-                </span>
-              </div>
-              
-              <h2 className="font-press-start text-3xl md:text-4xl mb-8 bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red bg-clip-text text-transparent">
-                Learn From Industry Leaders & Top University Students
+        <section className="py-20 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/5 to-maximally-purple/5" />
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="font-press-start text-3xl md:text-4xl mb-6">
+                Learn From The Best
               </h2>
-              
-              <div className="space-y-6 font-jetbrains text-lg">
-                <p className="mb-6">
-                  Learn from industry leaders at Meta, Google, and Apple, alongside brilliant students from Harvard, MIT, and Stanford. Our mentors are shaping the future of technology and innovation.
-                </p>
-                
-                <p>
-                  Master cutting-edge skills directly from tech giants and top university talent. Get real-world knowledge and guidance from those at the forefront of their fields.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📱</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Meta</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
+              <p className="font-jetbrains text-lg text-gray-600 max-w-2xl mx-auto">
+                Get mentored by industry experts and top university students
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {/* Meta Card */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-black">
+                <div className="w-16 h-16 bg-[#0866FF] rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-2xl">📱</span>
                 </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🎓</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Harvard</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
+                <h3 className="font-press-start text-xl mb-2 text-center">Meta</h3>
+                <p className="font-jetbrains text-gray-600 text-center">Industry Expert</p>
+              </div>
+
+              {/* Harvard Card */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-black">
+                <div className="w-16 h-16 bg-[#A41034] rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-2xl">🎓</span>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-[#0866FF] rounded-lg flex items-center justify-center">
-                        <span className="text-xl">📱</span>
-                      </div>
-                      <div>
-                        <div className="font-press-start text-lg text-maximally-black">Meta</div>
-                        <div className="font-jetbrains text-sm text-maximally-black/60">Industry Expert</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-[#A41034] rounded-lg flex items-center justify-center">
-                        <span className="text-xl">🎓</span>
-                      </div>
-                      <div>
-                        <div className="font-press-start text-lg text-maximally-black">Harvard</div>
-                        <div className="font-jetbrains text-sm text-maximally-black/60">Student Mentor</div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-[#34A853] rounded-lg flex items-center justify-center">
-                        <span className="text-xl">🔍</span>
-                      </div>
-                      <div>
-                        <div className="font-press-start text-lg text-maximally-black">Google</div>
-                        <div className="font-jetbrains text-sm text-maximally-black/60">Industry Expert</div>
-                      </div>
-                    </div>
-                  </div>
+                <h3 className="font-press-start text-xl mb-2 text-center">Harvard</h3>
+                <p className="font-jetbrains text-gray-600 text-center">Student Mentor</p>
+              </div>
 
-                  <div className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-[#A31F34] rounded-lg flex items-center justify-center">
-                        <span className="text-xl">🚀</span>
-                      </div>
-                      <div>
-                        <div className="font-press-start text-lg text-maximally-black">MIT</div>
-                        <div className="font-jetbrains text-sm text-maximally-black/60">Student Mentor</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-[#E50914] rounded-lg flex items-center justify-center">
-                        <span className="text-xl">🎬</span>
-                      </div>
-                      <div>
-                        <div className="font-press-start text-lg text-maximally-black">Netflix</div>
-                        <div className="font-jetbrains text-sm text-maximally-black/60">Industry Expert</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-[#00704A] rounded-lg flex items-center justify-center">
-                        <span className="text-xl">☕</span>
-                      </div>
-                      <div>
-                        <div className="font-press-start text-lg text-maximally-black">Starbucks</div>
-                        <div className="font-jetbrains text-sm text-maximally-black/60">Industry Expert</div>
-                      </div>
-                    </div>
-                  </div>
+              {/* Google Card */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-black">
+                <div className="w-16 h-16 bg-[#34A853] rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <span className="text-2xl">🔍</span>
                 </div>
+                <h3 className="font-press-start text-xl mb-2 text-center">Google</h3>
+                <p className="font-jetbrains text-gray-600 text-center">Industry Expert</p>
               </div>
+            </div>
 
-              <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta Logo" className="h-8 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="https://1000logos.net/wp-content/uploads/2017/02/Harvard-Logo.png" alt="Harvard Logo" className="h-12 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" className="h-8 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg" alt="MIT Logo" className="h-10 object-contain grayscale hover:grayscale-0 transition-all" />
-              </div>
-
-              <div className="mt-12">
-                <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group inline-flex items-center gap-2 hover:animate-pulse px-8 py-4">
-                  <span className="text-lg">Join Now & Learn from the Best</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
+            <div className="mt-16 text-center">
+              <Link to="/bootcamps" className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition-all duration-300 font-press-start text-lg">
+                Start Learning
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
         </section>
