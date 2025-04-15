@@ -39,14 +39,7 @@ const summerBootcamps = [
     icon: <Trophy className="h-6 w-6 text-maximally-green" />,
     highlight: "Trending"
   },
-  {
-    title: "Creative Editing Studio",
-    description: "Learn video editing and storytelling to make content that actually gets attention.",
-    skills: ["Editing", "Visual Storytelling", "Content"],
-    duration: 2,
-    price: 999,
-    icon: <Calendar className="h-6 w-6 text-maximally-red" />
-  },
+  
   {
     title: "Career Starter Pack",
     description: "Build a strong resume, network on LinkedIn, and find real internships.",
