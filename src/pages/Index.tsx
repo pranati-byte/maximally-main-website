@@ -178,6 +178,34 @@ const Index = () => {
                   <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">MIT</div>
                   <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
                 </div>
+                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">🎯</span>
+                  </div>
+                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">IIT Delhi</div>
+                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
+                </div>
+                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">⚡</span>
+                  </div>
+                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">IIT Ropar</div>
+                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
+                </div>
+                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">🎬</span>
+                  </div>
+                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Netflix</div>
+                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
+                </div>
+                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">☕</span>
+                  </div>
+                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Starbucks</div>
+                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
+                </div>
               </div>
 
               
