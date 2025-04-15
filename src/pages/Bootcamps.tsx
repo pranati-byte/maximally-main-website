@@ -64,7 +64,8 @@ const Bootcamps = () => {
   return (
     <>
     <div className="min-h-screen bg-white pt-20">
-      <section className="py-20 bg-maximally-black relative overflow-hidden">
+      <section className="py-20 bg-maximally-black relative overflow-hidden animate-gradient-x">
+        <div className="absolute inset-0 bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red opacity-20 animate-pulse"></div>
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-grid-white/10" />
         </div>
@@ -88,7 +89,7 @@ const Bootcamps = () => {
             {summerBootcamps.map((bootcamp) => (
               <div 
                 key={bootcamp.title} 
-                className="pixel-border bg-white p-6 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group"
+                className="pixel-border bg-white p-6 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group animate-fade-in hover:bg-gradient-to-br hover:from-white hover:to-maximally-blue/5"
               >
                 {bootcamp.highlight && (
                   <div className="absolute top-0 right-0 bg-maximally-red text-white px-3 py-1 text-sm font-jetbrains transform translate-x-2 -translate-y-2 rotate-3">
@@ -109,7 +110,7 @@ const Bootcamps = () => {
                     {bootcamp.skills.map((skill, index) => (
                       <span 
                         key={index} 
-                        className="bg-maximally-blue/10 text-maximally-blue px-2 py-1 rounded text-sm font-jetbrains group-hover:bg-maximally-blue group-hover:text-white transition-colors"
+                        className="bg-maximally-blue/10 text-maximally-blue px-2 py-1 rounded text-sm font-jetbrains group-hover:bg-maximally-blue group-hover:text-white transition-all duration-300 hover:scale-110 animate-pulse"
                       >
                         {skill}
                       </span>
@@ -120,7 +121,7 @@ const Bootcamps = () => {
                 <div className="flex items-center justify-between mt-6">
                   <div className="space-y-1">
                     <div className="font-press-start text-maximally-black">₹{bootcamp.price}</div>
-                    <div className="text-sm text-maximally-black/60">{bootcamp.duration} weeks</div>
+                    <div className="text-sm text-maximally-black/60">{bootcamp.duration} week</div>
                   </div>
                   <Button 
                     onClick={handlePreRegister}
