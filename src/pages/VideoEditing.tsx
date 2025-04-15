@@ -38,6 +38,21 @@ const VideoEditing = () => {
   return <SkillPageLayout title="Video Editing" icon={<Video className="h-10 w-10 text-white" />} iconBgColor="bg-maximally-red" tagline="Tell stories that captivate. Create content that converts." skillName="Creators" communityType="discord" communityLink="https://discord.gg/maximally-creators">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+            {[
+              { tool: "Premiere Pro", icon: "🎬", color: "bg-blue-500" },
+              { tool: "After Effects", icon: "✨", color: "bg-purple-500" },
+              { tool: "DaVinci", icon: "🎨", color: "bg-red-500" },
+              { tool: "Final Cut Pro", icon: "🎯", color: "bg-green-500" },
+              { tool: "CapCut", icon: "📱", color: "bg-yellow-500" },
+              { tool: "Canva", icon: "🎨", color: "bg-pink-500" }
+            ].map((item) => (
+              <div className={`${item.color} text-white p-4 rounded-lg text-center transform hover:scale-105 transition-transform cursor-pointer`}>
+                <div className="text-2xl mb-2">{item.icon}</div>
+                <div className="text-sm font-bold">{item.tool}</div>
+              </div>
+            ))}
+          </div>
           <ProgramFeatures features={features} />
 
           <SkillTestimonial quote="My YouTube channel went from 10 to 10,000 subscribers after applying the editing techniques I learned. Their mentors helped me find my style and optimize my workflow." author="Tanvi Desai" handle="@tanvi_creates" achievement="10K YouTube subscribers" />

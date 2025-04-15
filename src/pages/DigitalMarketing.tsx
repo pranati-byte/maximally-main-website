@@ -64,6 +64,23 @@ const DigitalMarketing = () => {
       >
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
+            <div className="mb-8 space-y-4">
+              {[
+                { skill: "Social Media Marketing", level: 90, color: "bg-pink-500" },
+                { skill: "Content Creation", level: 85, color: "bg-purple-500" },
+                { skill: "Analytics", level: 95, color: "bg-blue-500" }
+              ].map((item) => (
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span>{item.skill}</span>
+                    <span>{item.level}%</span>
+                  </div>
+                  <div className="h-2 bg-gray-200 rounded-full">
+                    <div className={`h-full ${item.color} rounded-full transition-all duration-500`} style={{ width: `${item.level}%` }}></div>
+                  </div>
+                </div>
+              ))}
+            </div>
             <ProgramFeatures features={features} />
             <SkillTestimonial
               quote="The digital marketing program helped me grow my art page from 200 to over 5,000 followers in just 3 months. The strategies they teach actually work!"
@@ -96,12 +113,12 @@ const DigitalMarketing = () => {
             </div>
           </div>
         </div>
-      <div className="mt-8 text-center">
-        <a href="https://drive.google.com/your-digital-marketing-link" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-maximally-black text-white font-press-start rounded-lg hover:bg-maximally-black/80 transition-colors">
-          View Full Curriculum
-        </a>
-      </div>
-    </SkillPageLayout>
+        <div className="mt-8 text-center">
+          <a href="https://drive.google.com/your-digital-marketing-link" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-maximally-black text-white font-press-start rounded-lg hover:bg-maximally-black/80 transition-colors">
+            View Full Curriculum
+          </a>
+        </div>
+      </SkillPageLayout>
     </>
   );
 };

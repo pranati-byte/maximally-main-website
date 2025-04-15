@@ -38,6 +38,19 @@ const CareerLaunch = () => {
   return <SkillPageLayout title="Career Launchpad" icon={<Briefcase className="h-10 w-10 text-white" />} iconBgColor="bg-maximally-black" tagline="Launch your future. Land opportunities that matter." skillName="Career Squad" communityType="whatsapp" communityLink="https://chat.whatsapp.com/maximally-careers">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
+          <div className="flex flex-wrap gap-4 mb-8">
+            {[
+              { metric: "98%", label: "Placement Rate", color: "bg-green-500" },
+              { metric: "150+", label: "Partner Companies", color: "bg-blue-500" },
+              { metric: "45L", label: "Highest Package", color: "bg-purple-500" },
+              { metric: "1000+", label: "Success Stories", color: "bg-red-500" }
+            ].map((item) => (
+              <div className={`flex-1 ${item.color} text-white p-6 rounded-lg text-center transform hover:scale-105 transition-transform min-w-[150px]`}>
+                <div className="text-3xl font-bold mb-2">{item.metric}</div>
+                <div className="text-sm">{item.label}</div>
+              </div>
+            ))}
+          </div>
           <ProgramFeatures features={features} />
 
           <SkillTestimonial quote="The career program helped me secure an internship at a top tech company as a high school student - something I never thought possible. Their guidance on my resume and interview prep was invaluable!" author="Aditya Nair" handle="@aditya_techie" achievement="Secured internship at Microsoft" />
