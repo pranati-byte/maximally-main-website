@@ -237,7 +237,7 @@ const Index = () => {
                 Summer Programme 2025
               </h2>
               <p className="font-jetbrains text-white/80 mb-8 max-w-2xl mx-auto">
-                Join India's most innovative summer program for teenagers. Learn real-world skills through hands-on projects and expert mentorship.
+                Join India's most innovative summer program for teenagers from June 1-8, 2025. After intensive bootcamps, participate in exciting hackathons, competitions, and a special 2-day challenge!
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
                 <div className="pixel-border bg-white/10 p-6 text-white">
@@ -245,8 +245,8 @@ const Index = () => {
                   <p className="font-jetbrains text-white/80">From AI to Public Speaking</p>
                 </div>
                 <div className="pixel-border bg-white/10 p-6 text-white">
-                  <h3 className="font-press-start text-xl mb-2">2-3 Weeks</h3>
-                  <p className="font-jetbrains text-white/80">Intensive Learning</p>
+                  <h3 className="font-press-start text-xl mb-2">1 Week</h3>
+                  <p className="font-jetbrains text-white/80">Intensive Learning + Events</p>
                 </div>
                 <div className="pixel-border bg-white/10 p-6 text-white">
                   <h3 className="font-press-start text-xl mb-2">₹799-1299</h3>

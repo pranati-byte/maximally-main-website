@@ -39,7 +39,7 @@ const summerBootcamps = [
     icon: <Trophy className="h-6 w-6 text-maximally-green" />,
     highlight: "Trending"
   },
-  
+
   {
     title: "Career Starter Pack",
     description: "Build a strong resume, network on LinkedIn, and find real internships.",
@@ -75,8 +75,8 @@ const Bootcamps = () => {
               Summer Bootcamp 2025
             </h2>
             <p className="font-jetbrains text-white/80 mb-6 max-w-2xl mx-auto">
-              Level up your skills this summer. Bootcamps start May 2025.
-            </p>
+                Level up your skills this summer. Bootcamps run June 1-8, followed by hackathons, competitions, and a special 2-day challenge!
+              </p>
             <div className="inline-block bg-maximally-blue/20 px-4 py-2 rounded-full animate-pulse">
               <span className="font-jetbrains text-maximally-blue">
                 ⏰ Early bird registration open
