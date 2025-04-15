@@ -9,7 +9,7 @@ const summerBootcamps = [
     title: "The Founder Lab",
     description: "Build something real. Learn how to start, validate, and pitch your first startup.",
     skills: ["Entrepreneurship", "MVPs", "Pitching"],
-    duration: 3,
+    duration: 1,
     price: 1299,
     icon: <Rocket className="h-6 w-6 text-maximally-blue" />,
     highlight: "Most Popular"
@@ -18,7 +18,7 @@ const summerBootcamps = [
     title: "Speak for Impact",
     description: "Become a confident communicator. Master public speaking, debate, and persuasion.",
     skills: ["Speaking", "Debate", "Articulation"],
-    duration: 2,
+    duration: 1,
     price: 999,
     icon: <Star className="h-6 w-6 text-maximally-yellow" />
   },
@@ -26,7 +26,7 @@ const summerBootcamps = [
     title: "Digital Influence 101",
     description: "Build your personal brand and grow on platforms like Instagram, YouTube, LinkedIn.",
     skills: ["Content Creation", "Social Media", "Branding"],
-    duration: 2,
+    duration: 1,
     price: 999,
     icon: <Users className="h-6 w-6 text-maximally-purple" />
   },
@@ -34,7 +34,7 @@ const summerBootcamps = [
     title: "Build with AI & No-Code",
     description: "Use ChatGPT, Notion AI, Bubble and more to build automations & tools.",
     skills: ["AI Tools", "No-Code Apps", "Automation"],
-    duration: 2,
+    duration: 1,
     price: 999,
     icon: <Trophy className="h-6 w-6 text-maximally-green" />,
     highlight: "Trending"
@@ -44,7 +44,7 @@ const summerBootcamps = [
     title: "Career Starter Pack",
     description: "Build a strong resume, network on LinkedIn, and find real internships.",
     skills: ["Resume Building", "LinkedIn", "Outreach"],
-    duration: 2,
+    duration: 1,
     price: 799,
     icon: <Clock className="h-6 w-6 text-maximally-orange" />
   }
