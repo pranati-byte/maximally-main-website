@@ -92,10 +92,6 @@ const Community = () => {
               <span className="font-press-start text-sm">No-code & AI</span>
             </Link>
             <Link to="#" className="pixel-border p-6 bg-white hover:bg-[#5865F2]/5 transition-all">
-              <Share2 className="h-8 w-8 mx-auto mb-3 text-[#5865F2]" />
-              <span className="font-press-start text-sm">Video Editing</span>
-            </Link>
-            <Link to="#" className="pixel-border p-6 bg-white hover:bg-[#5865F2]/5 transition-all">
               <Zap className="h-8 w-8 mx-auto mb-3 text-[#5865F2]" />
               <span className="font-press-start text-sm">Career Launchpad</span>
             </Link>
