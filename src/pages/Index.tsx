@@ -164,19 +164,49 @@ const Index = () => {
                   <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Harvard</div>
                   <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
                 </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🔍</span>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                  <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🌐</span>
+                    </div>
+                    <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Meta</div>
+                    <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
                   </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Google</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🚀</span>
+                  <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🎓</span>
+                    </div>
+                    <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Harvard</div>
+                    <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
                   </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">MIT</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
+                  <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🔍</span>
+                    </div>
+                    <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Google</div>
+                    <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
+                  </div>
+                  <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🚀</span>
+                    </div>
+                    <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">MIT</div>
+                    <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
+                  </div>
+                  <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🎬</span>
+                    </div>
+                    <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Netflix</div>
+                    <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
+                  </div>
+                  <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-700 to-green-800 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">☕</span>
+                    </div>
+                    <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Starbucks</div>
+                    <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
+                  </div>
                 </div>
               </div>
 
