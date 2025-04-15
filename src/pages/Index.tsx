@@ -122,6 +122,50 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Industry Leaders Section */}
+        <section className="py-20 bg-maximally-black/5 relative">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="font-press-start text-3xl mb-8">
+                Learn From Industry Leaders & Top University Students
+              </h2>
+              
+              <div className="space-y-6 font-jetbrains text-lg">
+                <p className="mb-6">
+                  At Maximally, we're not just offering bootcamps — we're offering the chance to learn from the best in the world. Our mentors from Meta, Apple, Google, and more are industry giants who are shaping the future. But that's not all. We also bring in students from the world's top universities — like Harvard, MIT, Stanford, and others — to teach you in their areas of expertise.
+                </p>
+                
+                <p className="mb-6">
+                  Imagine learning AI directly from a student at Harvard who's working on cutting-edge research, mastering digital marketing with a Google expert who's run major global campaigns, or getting startup guidance from entrepreneurs who have built companies while at MIT.
+                </p>
+                
+                <p>
+                  These aren't just teachers — they're leaders who are already at the forefront of innovation and education, and they're here to help you build the skills and mindset you need to succeed. You'll have access to real-world knowledge from those who are currently at the top of their fields — whether they're working at the best companies or studying at the best schools.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                <div className="pixel-border p-4 bg-white">
+                  <div className="font-press-start text-xl mb-2">Meta</div>
+                  <div className="font-jetbrains text-sm">Industry Expert</div>
+                </div>
+                <div className="pixel-border p-4 bg-white">
+                  <div className="font-press-start text-xl mb-2">Harvard</div>
+                  <div className="font-jetbrains text-sm">Student Mentor</div>
+                </div>
+                <div className="pixel-border p-4 bg-white">
+                  <div className="font-press-start text-xl mb-2">Google</div>
+                  <div className="font-jetbrains text-sm">Industry Expert</div>
+                </div>
+                <div className="pixel-border p-4 bg-white">
+                  <div className="font-press-start text-xl mb-2">MIT</div>
+                  <div className="font-jetbrains text-sm">Student Mentor</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Skills Section */}
         <SkillTracks />
 
