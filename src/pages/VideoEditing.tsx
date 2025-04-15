@@ -39,12 +39,12 @@ const VideoEditing = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <ProgramFeatures features={features} />
-          
+
           <SkillTestimonial quote="My YouTube channel went from 10 to 10,000 subscribers after applying the editing techniques I learned. Their mentors helped me find my style and optimize my workflow." author="Tanvi Desai" handle="@tanvi_creates" achievement="10K YouTube subscribers" />
-          
+
           <UpcomingEvents events={events} />
         </div>
-        
+
         <div className="lg:col-span-1">
           <div className="pixel-border p-6 bg-white mb-6">
             <h3 className="font-press-start text-lg mb-4 text-maximally-black">Program Highlights</h3>
@@ -67,9 +67,14 @@ const VideoEditing = () => {
               </li>
             </ul>
           </div>
-          
-          
+
+
         </div>
+      </div>
+      <div className="mt-8 text-center">
+        <a href="https://drive.google.com/your-video-editing-link" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-maximally-red text-white font-press-start rounded-lg hover:bg-maximally-red/80 transition-colors">
+          View Full Curriculum
+        </a>
       </div>
     </SkillPageLayout>;
 };

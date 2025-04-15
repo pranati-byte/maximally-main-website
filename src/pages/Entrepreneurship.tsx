@@ -52,6 +52,11 @@ const Entrepreneurship = () => {
           <UpcomingEvents events={events} />
         </div>
       </div>
+      <div className="mt-8 text-center">
+        <a href="https://drive.google.com/your-entrepreneurship-link" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-maximally-blue text-white font-press-start rounded-lg hover:bg-maximally-blue/80 transition-colors">
+          View Full Curriculum
+        </a>
+      </div>
     </SkillPageLayout>
   );
 };

@@ -63,6 +63,11 @@ const PublicSpeaking = () => {
           </div>
         </div>
       </div>
+      <div className="mt-8 text-center">
+        <a href="https://drive.google.com/your-public-speaking-link" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-maximally-red text-white font-press-start rounded-lg hover:bg-maximally-red/80 transition-colors">
+          View Full Curriculum
+        </a>
+      </div>
     </SkillPageLayout>
   );
 };

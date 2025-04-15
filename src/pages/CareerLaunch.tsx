@@ -39,12 +39,12 @@ const CareerLaunch = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <ProgramFeatures features={features} />
-          
+
           <SkillTestimonial quote="The career program helped me secure an internship at a top tech company as a high school student - something I never thought possible. Their guidance on my resume and interview prep was invaluable!" author="Aditya Nair" handle="@aditya_techie" achievement="Secured internship at Microsoft" />
-          
+
           <UpcomingEvents events={events} />
         </div>
-        
+
         <div className="lg:col-span-1">
           <div className="pixel-border p-6 bg-white mb-6">
             <h3 className="font-press-start text-lg mb-4 text-maximally-black">Program Highlights</h3>
@@ -67,9 +67,14 @@ const CareerLaunch = () => {
               </li>
             </ul>
           </div>
-          
-          
+
+
         </div>
+      </div>
+      <div className="mt-8 text-center">
+        <a href="https://drive.google.com/your-career-launch-link" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-maximally-black text-white font-press-start rounded-lg hover:bg-maximally-black/80 transition-colors">
+          View Full Curriculum
+        </a>
       </div>
     </SkillPageLayout>;
 };
