@@ -141,15 +141,11 @@ const Index = () => {
               
               <div className="space-y-6 font-jetbrains text-lg">
                 <p className="mb-6">
-                  At Maximally, we're not just offering bootcamps — we're offering the chance to learn from the best in the world. Our mentors from Meta, Apple, Google, and more are industry giants who are shaping the future. But that's not all. We also bring in students from the world's top universities — like Harvard, MIT, Stanford, and others — to teach you in their areas of expertise.
-                </p>
-                
-                <p className="mb-6">
-                  Imagine learning AI directly from a student at Harvard who's working on cutting-edge research, mastering digital marketing with a Google expert who's run major global campaigns, or getting startup guidance from entrepreneurs who have built companies while at MIT.
+                  Learn from industry leaders at Meta, Google, and Apple, alongside brilliant students from Harvard, MIT, and Stanford. Our mentors are shaping the future of technology and innovation.
                 </p>
                 
                 <p>
-                  These aren't just teachers — they're leaders who are already at the forefront of innovation and education, and they're here to help you build the skills and mindset you need to succeed. You'll have access to real-world knowledge from those who are currently at the top of their fields — whether they're working at the best companies or studying at the best schools.
+                  Master cutting-edge skills directly from tech giants and top university talent. Get real-world knowledge and guidance from those at the forefront of their fields.
                 </p>
               </div>
               
@@ -186,7 +182,7 @@ const Index = () => {
 
               <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 items-center">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta Logo" className="h-8 object-contain grayscale hover:grayscale-0 transition-all" />
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/29/Harvard_shield_wreath.svg/1200px-Harvard_shield_wreath.svg.png" alt="Harvard Logo" className="h-12 object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="https://1000logos.net/wp-content/uploads/2017/02/Harvard-Logo.png" alt="Harvard Logo" className="h-12 object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" className="h-8 object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg" alt="MIT Logo" className="h-10 object-contain grayscale hover:grayscale-0 transition-all" />
               </div>
