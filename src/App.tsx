@@ -20,7 +20,7 @@ import Entrepreneurship from "./pages/Entrepreneurship";
 import PublicSpeaking from "./pages/PublicSpeaking";
 import NoCodeAI from "./pages/NoCodeAI";
 import DigitalMarketing from "./pages/DigitalMarketing";
-import VideoEditing from "./pages/VideoEditing";
+
 import CareerLaunch from "./pages/CareerLaunch";
 import Community from "./pages/Community";
 import Sponsor from "@/pages/Sponsor";
@@ -55,7 +55,6 @@ const App = () => {
             <Route path="/public-speaking" element={<PublicSpeaking />} />
             <Route path="/digital-marketing" element={<DigitalMarketing />} />
             <Route path="/no-code-ai" element={<NoCodeAI />} />
-            <Route path="/video-editing" element={<VideoEditing />} />
             <Route path="/career-launch" element={<CareerLaunch />} />
             <Route path="/bootcamps" element={<Bootcamps />} />
             <Route path="/about" element={<About />} />
