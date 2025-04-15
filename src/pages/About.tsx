@@ -109,15 +109,6 @@ const About = () => {
               </Link>
             </div>
             <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
-              <h3 className="font-press-start text-lg mb-4">Video Editing</h3>
-              <p className="font-jetbrains text-maximally-black/80 mb-4">
-                Create professional videos that captivate.
-              </p>
-              <Link to="/video-editing" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
-                Level Up &gt;
-              </Link>
-            </div>
-            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
               <h3 className="font-press-start text-lg mb-4">Career Launchpad</h3>
               <p className="font-jetbrains text-maximally-black/80 mb-4">
                 Prepare for college and your dream career.

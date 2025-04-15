@@ -11,6 +11,11 @@ const teamMembers = [
     name: "Janak Walia",
     role: "Chief Community Manager",
     fact: "Heavyweight MMA champion of India with 7+ years in community management"
+  },
+  {
+    name: "Yash Kulkarni",
+    role: "Chief Partnerships Advisor",
+    fact: "3+ years driving strategic partnerships with Fortune 500 companies and leading educational institutions"
   }
 ];
 
