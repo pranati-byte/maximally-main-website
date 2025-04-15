@@ -1,6 +1,5 @@
-
 import { Link } from 'react-router-dom';
-import { Users, MessageSquare, Share2 } from 'lucide-react';
+import { Users, MessageSquare, Share2, Rocket, Zap, Video, Briefcase, Target } from 'lucide-react';
 
 export default function Community() {
   return (
@@ -41,7 +40,7 @@ export default function Community() {
           </div>
         </div>
 
-        <div className="text-center">
+        <div className="text-center space-y-8">
           <a 
             href="https://chat.whatsapp.com/maximally" 
             target="_blank" 
@@ -50,6 +49,57 @@ export default function Community() {
           >
             Join WhatsApp Community
           </a>
+
+          <div className="space-y-4">
+            <p className="text-sm text-maximally-black/60 font-jetbrains">
+              Join topic-specific Discord communities:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <a 
+                href="#" 
+                className="p-4 rounded-2xl border-2 border-maximally-black/10 hover:bg-maximally-black/5 transition-all hover:scale-105 flex items-center gap-2 font-jetbrains"
+              >
+                <Rocket className="h-5 w-5 text-maximally-blue" />
+                Entrepreneurship
+              </a>
+              <a 
+                href="#" 
+                className="p-4 rounded-2xl border-2 border-maximally-black/10 hover:bg-maximally-black/5 transition-all hover:scale-105 flex items-center gap-2 font-jetbrains"
+              >
+                <MessageSquare className="h-5 w-5 text-maximally-red" />
+                Public Speaking & MUN
+              </a>
+              <a 
+                href="#" 
+                className="p-4 rounded-2xl border-2 border-maximally-black/10 hover:bg-maximally-black/5 transition-all hover:scale-105 flex items-center gap-2 font-jetbrains"
+              >
+                <Target className="h-5 w-5 text-maximally-green" />
+                Digital Marketing
+              </a>
+              <a 
+                href="#" 
+                className="p-4 rounded-2xl border-2 border-maximally-black/10 hover:bg-maximally-black/5 transition-all hover:scale-105 flex items-center gap-2 font-jetbrains"
+              >
+                <Zap className="h-5 w-5 text-maximally-purple" />
+                No-code & AI
+              </a>
+              <a 
+                href="#" 
+                className="p-4 rounded-2xl border-2 border-maximally-black/10 hover:bg-maximally-black/5 transition-all hover:scale-105 flex items-center gap-2 font-jetbrains"
+              >
+                <Video className="h-5 w-5 text-maximally-orange" />
+                Video Editing
+              </a>
+              <a 
+                href="#" 
+                className="p-4 rounded-2xl border-2 border-maximally-black/10 hover:bg-maximally-black/5 transition-all hover:scale-105 flex items-center gap-2 font-jetbrains"
+              >
+                <Briefcase className="h-5 w-5 text-maximally-blue" />
+                Career Launchpad
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
