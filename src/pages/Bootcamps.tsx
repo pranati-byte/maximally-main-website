@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from '../components/ui/button';
 import { ArrowRight, Users, Star, Calendar, Clock, Trophy, Rocket } from 'lucide-react';
 import Footer from '../components/Footer';
