@@ -67,8 +67,8 @@ const Index = () => {
         {/* Hero Section */}
         <section className="min-h-screen relative">
           {/* Animated Background Grid */}
-          <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/10 via-white to-maximally-red/10" />
-          <div className="absolute inset-0 pixel-grid opacity-50" />
+          <div className="absolute inset-0 bg-white" />
+          <div className="absolute inset-0 pixel-grid opacity-30" />
 
           {/* Floating Pixels */}
           {[...Array(8)].map((_, i) => <div key={i} className="absolute w-4 h-4 bg-maximally-blue/20 pixel-border animate-float" style={{
@@ -97,19 +97,19 @@ const Index = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link to="/bootcamps" className="pixel-button bg-gradient-to-r from-maximally-blue to-maximally-purple text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto transform transition-all hover:scale-105 hover:shadow-lg hover:shadow-maximally-blue/50">
-                  <span className="neon-text">Start Learning</span>
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-2 transition-transform duration-300" />
+                <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto">
+                  <span>Start Learning</span>
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
-                <button onClick={() => setIsTallyFormOpen(true)} className="pixel-button bg-gradient-to-r from-maximally-red to-maximally-purple text-white group flex items-center gap-2 w-full sm:w-auto transform transition-all hover:scale-105 hover:shadow-lg hover:shadow-maximally-red/50 shimmer-bg">
-                  <span className="neon-text">Register Now</span>
-                  <CalendarCheck className="h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
+                <button onClick={() => setIsTallyFormOpen(true)} className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto">
+                  <span>Register Now</span>
+                  <CalendarCheck className="h-4 w-4" />
                 </button>
 
-                <Link to="/community" className="pixel-button bg-gradient-to-r from-white to-gray-100 text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto transform transition-all hover:scale-105 hover:shadow-lg hover:border-maximally-blue">
+                <Link to="/community" className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto">
                   <span>Join Community</span>
-                  <Users className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+                  <Users className="h-4 w-4" />
                 </Link>
               </div>
             </div>
