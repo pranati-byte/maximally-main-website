@@ -24,7 +24,6 @@ const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
   const [isTallyFormOpen, setIsTallyFormOpen] = useState(false);
-  const [isTallyFormOpen, setIsTallyFormOpen] = useState(false); // Added TallyFormDialog state
   const features = [{
     icon: Code,
     title: "Learn Real Skills",
