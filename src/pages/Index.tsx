@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import { Helmet } from 'react-helmet';
 import SEO from '@/components/SEO';
-import TallyFormDialog from "../components/TallyFormDialog"; // Added import
+import TallyFormDialog from "../components/TallyFormDialog";
 
 const Index = () => {
   const structuredData = {
@@ -272,7 +272,17 @@ const Index = () => {
         </section>
 
         {/* Summer Bootcamps Section */}
-        <SummerBootcamps />
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-press-start mb-8">Summer Bootcamps 2025</h2>
+            <p className="font-jetbrains text-maximally-black/80 max-w-2xl mx-auto mb-8">
+              Join our intensive summer bootcamps and level up your skills.
+            </p>
+            <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2 hover:animate-pulse">
+              View Bootcamps
+            </Link>
+          </div>
+        </section>
 
         {/* Why Choose Section */}
         <WhyMaximally />
@@ -334,11 +344,25 @@ const Index = () => {
         </button>
 
         <Footer />
-        <TallyFormDialog isOpen={isTallyFormOpen} onClose={() => setIsTallyFormOpen(false)} /> {/* Added TallyFormDialog component */}
+        <TallyFormDialog isOpen={isTallyFormOpen} onClose={() => setIsTallyFormOpen(false)} />
       </div>
     </>;
 };
+
 export default Index;
+
 const SummerBootcamps = () => {
-  return;
+  return (
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-3xl font-press-start mb-8">Summer Bootcamps 2025</h2>
+        <p className="font-jetbrains text-maximally-black/80 max-w-2xl mx-auto mb-8">
+          Join our intensive summer bootcamps and level up your skills.
+        </p>
+        <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2 hover:animate-pulse">
+          View Bootcamps
+        </Link>
+      </div>
+    </section>
+  );
 };

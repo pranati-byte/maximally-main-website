@@ -1,3 +1,4 @@
+
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
@@ -10,6 +11,9 @@ interface SkillPageLayoutProps {
   icon?: ReactNode;
   iconBgColor?: string;
   tagline?: string;
+  skillName?: string;
+  communityType?: string;
+  communityLink?: string;
 }
 
 const SkillPageLayout = ({
@@ -18,6 +22,9 @@ const SkillPageLayout = ({
   icon,
   iconBgColor = "bg-sky-500",
   tagline,
+  skillName,
+  communityType,
+  communityLink,
 }: SkillPageLayoutProps) => {
   return (
     <div className="min-h-screen bg-white">
@@ -45,6 +52,22 @@ const SkillPageLayout = ({
             <p className="font-jetbrains text-xl text-maximally-black/80 mb-8 leading-relaxed">
               {tagline}
             </p>
+
+            {skillName && communityType && communityLink && (
+              <div className="flex items-center mt-4">
+                <span className="font-jetbrains text-sm text-maximally-black/60 mr-2">
+                  Join our {skillName} community on {communityType}:
+                </span>
+                <a 
+                  href={communityLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-maximally-blue font-jetbrains text-sm hover:underline"
+                >
+                  Connect Now
+                </a>
+              </div>
+            )}
           </div>
           <div className="bg-white rounded-xl p-8">
             {children}
