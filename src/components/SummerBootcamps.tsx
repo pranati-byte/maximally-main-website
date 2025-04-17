@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import BootcampCard from './BootcampCard';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './ui/dialog';
@@ -38,17 +37,9 @@ const bootcamps = [
     powerUpLink: "/no-code-ai"
   },
   {
-    title: "Creative Editing Studio",
-    description: "Learn video editing and storytelling to make content that actually gets attention.",
-    skills: ["Editing", "Visual Storytelling", "Content"],
-    duration: 2,
-    price: 999,
-    powerUpLink: "/digital-marketing"
-  },
-  {
     title: "Career Starter Pack",
     description: "Build a strong resume, network on LinkedIn, and find real internships.",
-    skills: ["Resume Building", "LinkedIn", "Outreach"],
+    skills: ["Resume", "LinkedIn", "Networking"],
     duration: 2,
     price: 799,
     powerUpLink: "/career-launch"
@@ -123,7 +114,16 @@ const SummerBootcamps = () => {
         </div>
       </div>
 
-      <TallyFormDialog open={isDialogOpen} onOpenChange={setIsDialogOpen} />
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Pre-register for {selectedBootcamp}</DialogTitle>
+            <DialogDescription>
+              Fill out this quick form to pre-register and get early access pricing!
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
