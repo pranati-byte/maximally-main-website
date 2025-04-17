@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import Support from "./pages/Support";
@@ -48,6 +49,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <WhatsAppButton />
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />
