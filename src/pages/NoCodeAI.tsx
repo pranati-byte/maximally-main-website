@@ -15,7 +15,7 @@ const features = [
     title: "Build Without Code",
     description: "Create full-stack apps visually",
     details: "Launch professional apps without writing a single line of code. Master visual development using modern no-code platforms.",
-    icon: <Laptop className="h-6 w-6" />,
+    icon: <Laptop className="h-6 w-6 text-[#3366FF]" />,
     color: "gradient-bg-blue"
   },
   {
