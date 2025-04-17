@@ -1,5 +1,5 @@
 
-import { Database, Bot, Layers, Rocket, Laptop, ArrowRight, Tool, Users, HelpCircle } from "lucide-react";
+import { Database, Bot, Layers, Rocket, Laptop, ArrowRight, Users, HelpCircle, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import {
@@ -103,7 +103,7 @@ const NoCodeAI = () => {
         {/* Tools Section */}
         <div className="space-y-6">
           <div className="flex items-center gap-3">
-            <Tool className="h-6 w-6 text-maximally-blue" />
+            <Wrench className="h-6 w-6 text-maximally-blue" />
             <h2 className="font-press-start text-2xl">What You'll Build With</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-jetbrains">
