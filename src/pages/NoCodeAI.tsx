@@ -1,4 +1,4 @@
-import { Database, Bot, Layers, Rocket, Laptop, ArrowRight, Users, HelpCircle, Wrench, Zap, Brain, Tool } from "lucide-react";
+import { Database, Bot, Layers, Rocket, Laptop, ArrowRight, Users, HelpCircle, Wrench, Zap, Brain, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -81,7 +81,7 @@ const NoCodeAI = () => {
         {/* Tech Stack Section */}
         <div className="space-y-8">
           <div className="flex items-center gap-3">
-            <Tool className="h-6 w-6 text-[#4D89FF]" />
+            <Settings className="h-6 w-6 text-[#4D89FF]" />
             <h2 className="font-press-start text-2xl">Your Tech Arsenal</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
