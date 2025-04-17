@@ -91,11 +91,11 @@ const Bootcamps = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-16">
             {summerBootcamps.map((bootcamp) => (
               <div 
                 key={bootcamp.title} 
-                className="pixel-border bg-white p-6 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group animate-fade-in hover:bg-gradient-to-br hover:from-white hover:to-maximally-blue/5"
+                className="pixel-border bg-white p-4 md:p-6 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group animate-fade-in hover:bg-gradient-to-br hover:from-white hover:to-maximally-blue/5"
               >
                 {bootcamp.highlight && (
                   <div className="absolute top-0 right-0 bg-maximally-red text-white px-3 py-1 text-sm font-jetbrains transform translate-x-2 -translate-y-2 rotate-3">
@@ -129,18 +129,18 @@ const Bootcamps = () => {
                     <div className="font-press-start text-maximally-black">₹{bootcamp.price}</div>
                     <div className="text-sm text-maximally-black/60">{bootcamp.duration} week</div>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-2 w-full">
                     <Button 
                       onClick={handlePreRegister}
-                      className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains group"
+                      className="w-full sm:w-auto bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains group text-sm md:text-base"
                     >
                       Register 
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                    <Link to={bootcamp.learnMoreLink}>
+                    <Link to={bootcamp.learnMoreLink} className="w-full sm:w-auto">
                       <Button 
                         variant="outline"
-                        className="border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains"
+                        className="w-full border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains text-sm md:text-base"
                       >
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
@@ -156,8 +156,8 @@ const Bootcamps = () => {
             <h3 className="font-press-start text-2xl text-maximally-black mb-6">
               Bundle & Save
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-              <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-2xl mx-auto px-4 md:px-0">
+              <div className="pixel-border p-4 md:p-6 hover:bg-maximally-blue/5 transition-colors">
                 <h4 className="font-press-start text-lg mb-2">Any 2 Bootcamps</h4>
                 <p className="font-press-start text-2xl text-maximally-blue mb-4">₹1,799</p>
                 <Button 
