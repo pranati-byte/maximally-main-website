@@ -198,8 +198,12 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --background: 240 15% 7%;  /* #121212 */
+    --foreground: 0 0% 100%;
+    --neon-pink: 320 100% 65%;  /* #ff4ecd */
+    --electric-blue: 208 57% 52%;  /* #3e92cc */
+    --lime-green: 163 100% 74%;  /* #7cffcb */
+    --pixel-yellow: 48 93% 67%;  /* #f6e05e */
 
 
 @keyframes fade-in {
