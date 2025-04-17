@@ -82,7 +82,7 @@ const Hero = () => {
           <p className="text-lg text-maximally-black/80 font-jetbrains max-w-2xl mx-auto mb-8">
             Connect with ambitious teens learning real-world skills. Share experiences, collaborate on projects, and grow together.
           </p>
-          <Link to="/community" className="inline-block">
+          <Link to="/community" className="inline-block register-button"> {/* Added className here */}
             <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-maximally-black hover:transform hover:scale-105 transition-transform cursor-pointer">
               <Users className="h-12 w-12 text-maximally-blue mx-auto mb-4" />
               <p className="font-press-start text-sm text-maximally-black">1000+ members and growing</p>
@@ -99,3 +99,8 @@ const Hero = () => {
 };
 
 export default Hero;
+
+{/* Added CSS rule */}
+.register-button {
+  background-color: red;
+}
