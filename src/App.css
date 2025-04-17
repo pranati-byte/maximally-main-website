@@ -10,12 +10,12 @@
   #root {
     padding: 0.5rem;
   }
-  
+
   .font-press-start {
     font-size: 90%; /* Slightly reduce pixel font size on mobile */
     line-height: 1.3; /* Improve readability */
   }
-  
+
   .pixel-border {
     border-width: 2px; /* Thinner borders on mobile */
     margin: 0.5rem 0; /* Add spacing between elements */
@@ -37,20 +37,20 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
+
   /* Improve touch targets */
   button, 
   a {
     min-height: 44px;
     min-width: 44px;
   }
-  
+
   /* Add pull-to-refresh effect */
   .pull-to-refresh {
     transform-origin: top;
     transition: transform 0.2s;
   }
-  
+
   /* Smoother scrolling */
   * {
     -webkit-overflow-scrolling: touch;
@@ -91,4 +91,50 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.pixel-border {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(240,240,255,0.9) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(66,153,225,0.1) 0%, rgba(129,230,217,0.1) 100%);
+  transform: translateY(100%);
+  transition: transform 0.6s ease-in-out;
+}
+
+.gradient-bg:hover::before {
+  transform: translateY(0);
+}
+
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.glow-effect {
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 30px rgba(66,153,225,0.2);
 }

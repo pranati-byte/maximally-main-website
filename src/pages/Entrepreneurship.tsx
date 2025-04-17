@@ -1,4 +1,3 @@
-
 import { Target, ArrowRight, Check, ChevronDown, Rocket, Brain, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 import SkillPageLayout from "@/components/SkillPageLayout";
@@ -80,7 +79,7 @@ const Entrepreneurship = () => {
         {/* Modules Section */}
         <div className="grid gap-6 mb-16">
           {modules.map((module, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+            <Card key={index} className="p-6 hover-lift glow-effect gradient-bg">
               <div className="flex items-start gap-4">
                 <div className="bg-maximally-blue/10 p-3 rounded-lg">
                   {module.icon}

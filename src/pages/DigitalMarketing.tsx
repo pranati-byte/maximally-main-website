@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Target, ArrowRight, Check, Instagram, Youtube, Users, BarChart, Star, MessageCircle } from "lucide-react";
 import SkillPageLayout from "@/components/SkillPageLayout";
@@ -41,7 +40,7 @@ const DigitalMarketing = () => {
 
         {/* Modules Section */}
         <div className="grid grid-cols-1 gap-6 mb-16">
-          <Card className="p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-6 hover-lift glow-effect gradient-bg">
             <h3 className="font-press-start text-xl mb-3 text-maximally-black flex items-center gap-2">
               <Instagram className="h-5 w-5" /> Social Media Strategy
             </h3>
@@ -50,7 +49,7 @@ const DigitalMarketing = () => {
             </p>
           </Card>
 
-          <Card className="p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-6 hover-lift glow-effect gradient-bg">
             <h3 className="font-press-start text-xl mb-3 text-maximally-black flex items-center gap-2">
               <Youtube className="h-5 w-5" /> Content Creation
             </h3>
@@ -59,7 +58,7 @@ const DigitalMarketing = () => {
             </p>
           </Card>
 
-          <Card className="p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-6 hover-lift glow-effect gradient-bg">
             <h3 className="font-press-start text-xl mb-3 text-maximally-black flex items-center gap-2">
               <Users className="h-5 w-5" /> Community Building
             </h3>
@@ -68,7 +67,7 @@ const DigitalMarketing = () => {
             </p>
           </Card>
 
-          <Card className="p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-6 hover-lift glow-effect gradient-bg">
             <h3 className="font-press-start text-xl mb-3 text-maximally-black flex items-center gap-2">
               <BarChart className="h-5 w-5" /> Analytics & Insights
             </h3>
@@ -77,7 +76,7 @@ const DigitalMarketing = () => {
             </p>
           </Card>
 
-          <Card className="p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-6 hover-lift glow-effect gradient-bg">
             <h3 className="font-press-start text-xl mb-3 text-maximally-black flex items-center gap-2">
               <Star className="h-5 w-5" /> Influencer Marketing
             </h3>
@@ -86,7 +85,7 @@ const DigitalMarketing = () => {
             </p>
           </Card>
 
-          <Card className="p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-6 hover-lift glow-effect gradient-bg">
             <h3 className="font-press-start text-xl mb-3 text-maximally-black flex items-center gap-2">
               <MessageCircle className="h-5 w-5" /> Digital Ad Campaigns
             </h3>

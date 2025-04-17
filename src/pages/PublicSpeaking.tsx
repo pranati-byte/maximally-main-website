@@ -1,4 +1,3 @@
-
 import { Megaphone, Mic, Globe, Award, UserCheck, Check, Target, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import SkillPageLayout from "@/components/SkillPageLayout";
@@ -38,21 +37,21 @@ const PublicSpeaking = () => {
 
         {/* Modules Section */}
         <div className="grid grid-cols-1 gap-6 mb-16">
-          <Card className="p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-6 hover-lift glow-effect gradient-bg">
             <h3 className="font-press-start text-xl mb-3 text-maximally-black">Speech Mastery</h3>
             <p className="font-jetbrains text-maximally-black/80 mb-4">
               Craft compelling stories, master stage presence, and learn pro techniques that turn nervous speakers into confident communicators.
             </p>
           </Card>
 
-          <Card className="p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-6 hover-lift glow-effect gradient-bg">
             <h3 className="font-press-start text-xl mb-3 text-maximally-black">MUN Training</h3>
             <p className="font-jetbrains text-maximally-black/80 mb-4">
               Navigate complex global issues, perfect diplomatic speech, and become a standout delegate at any conference.
             </p>
           </Card>
 
-          <Card className="p-6 hover:shadow-lg transition-shadow">
+          <Card className="p-6 hover-lift glow-effect gradient-bg">
             <h3 className="font-press-start text-xl mb-3 text-maximally-black">Leadership Skills</h3>
             <p className="font-jetbrains text-maximally-black/80 mb-4">
               Develop executive presence, persuasive abilities, and the confidence to lead teams and inspire action.
