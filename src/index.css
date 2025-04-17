@@ -30,6 +30,24 @@
 
 @keyframes cursor-blink {
 
+.gradient-text-career {
+  background: linear-gradient(135deg, #4D89FF, #FFD700, #00CED1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg-gold {
+  background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,215,0,0.05));
+  backdrop-filter: blur(8px);
+}
+
+.gradient-bg-teal {
+  background: linear-gradient(135deg, rgba(0,206,209,0.15), rgba(0,206,209,0.05));
+  backdrop-filter: blur(8px);
+}
+
+
 .gradient-text-blue-red {
   background: linear-gradient(135deg, #4D89FF 0%, #FF5F5F 100%);
   -webkit-background-clip: text;

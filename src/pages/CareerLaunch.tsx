@@ -10,24 +10,34 @@ import {
 
 const CareerLaunch = () => {
   return (
-    <div className="min-h-screen w-full bg-white">
-      {/* Hero Section */}
-      <section className="px-4 py-12 md:py-16 max-w-6xl mx-auto text-center">
-        <h1 className="font-press-start text-4xl md:text-5xl lg:text-6xl text-maximally-black mb-6 leading-tight">
-          Launch Your Future
+    <SkillPageLayout
+      title="Career Launch"
+      icon={<GraduationCap className="h-10 w-10 text-white" />}
+      iconBgColor="bg-[#4D89FF]"
+      tagline="Future-proof your career."
+      skillName="Career Builders"
+      communityType="discord"
+      communityLink="https://discord.gg/maximally-careers"
+    >
+      <div className="max-w-4xl mx-auto space-y-16">
+        {/* Hero Section */}
+        <div className="text-center space-y-6">
+        <h1 className="font-press-start text-4xl md:text-5xl gradient-text-career animate-glow">
+          Build Your Dream Career
         </h1>
-        <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/70 mb-8 max-w-3xl mx-auto">
-          Build the career foundation that gets you noticed. Land opportunities that matter.
+        <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto">
+          Create your <span className="text-[#FFD700] font-bold">future-ready</span> career roadmap. Master the skills that make you <span className="text-[#00CED1] font-bold">stand out</span>.
         </p>
-        <Button onClick={() => window.location.href = '/bootcamps'} className="pixel-button text-lg px-8 py-6">
-          Join Our Bootcamp
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Button>
+        <Link to="/bootcamps">
+          <Button className="bg-[#4D89FF] hover:bg-[#4D89FF]/90 text-white px-8 py-6 text-lg font-jetbrains group shadow-xl transform hover:scale-105 transition-all">
+            Launch Your Career
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </Link>
       </section>
 
-      {/* Modules Grid */}
-      <section className="px-4 py-8 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="pixel-border hover:translate-y-[-4px] transition-transform">
             <CardHeader className="space-y-1 p-4">
               <GraduationCap className="h-6 w-6 text-maximally-blue mb-1" />
