@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, Star, Users, Target, Rocket, Sparkles, Crown, Code, Zap } from 'lucide-react';
+import { ArrowRight, Star, Users, Target, Rocket, Sparkles, Crown, Code, Zap, CalendarCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SkillTracks from '@/components/SkillTracks';
 import WhyMaximally from '@/components/WhyMaximally';
@@ -7,6 +7,8 @@ import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import { Helmet } from 'react-helmet';
 import SEO from '@/components/SEO';
+import TallyFormDialog from "../components/TallyFormDialog"; // Added import
+
 const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -21,6 +23,7 @@ const Index = () => {
   const fullText = 'Level up your future';
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [isTallyFormOpen, setIsTallyFormOpen] = useState(false); // Added TallyFormDialog state
   const features = [{
     icon: Code,
     title: "Learn Real Skills",
@@ -98,6 +101,11 @@ const Index = () => {
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
+                <button onClick={() => setIsTallyFormOpen(true)} className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto"> {/* Added new button */}
+                  <span>Register Now</span>
+                  <CalendarCheck className="h-4 w-4" />
+                </button>
+
                 <Link to="/community" className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto">
                   <span>Join Community</span>
                   <Users className="h-4 w-4" />
@@ -126,7 +134,7 @@ const Index = () => {
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/10 via-white to-maximally-purple/10" />
           <div className="absolute inset-0 pixel-grid opacity-30" />
-          
+
           <div className="container mx-auto px-4 relative">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-block bg-maximally-blue/20 px-6 py-2 rounded-full mb-6 animate-pulse">
@@ -134,21 +142,21 @@ const Index = () => {
                   🌟 Learn from the Best
                 </span>
               </div>
-              
+
               <h2 className="font-press-start text-3xl md:text-4xl mb-8 bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red bg-clip-text text-transparent">
                 Learn From Industry Leaders & Top University Students
               </h2>
-              
+
               <div className="space-y-6 font-jetbrains text-lg">
                 <p className="mb-6">
                   Learn from industry leaders at Meta, Google, and Apple, alongside brilliant students from Harvard, MIT, and Stanford. Our mentors are shaping the future of technology and innovation.
                 </p>
-                
+
                 <p>
                   Master cutting-edge skills directly from tech giants and top university talent. Get real-world knowledge and guidance from those at the forefront of their fields.
                 </p>
               </div>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
                 <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
@@ -208,7 +216,7 @@ const Index = () => {
                 </div>
               </div>
 
-              
+
 
               <div className="mt-12">
                 <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group inline-flex items-center gap-2 hover:animate-pulse px-8 py-4">
@@ -324,6 +332,7 @@ const Index = () => {
         </button>
 
         <Footer />
+        <TallyFormDialog isOpen={isTallyFormOpen} onClose={() => setIsTallyFormOpen(false)} /> {/* Added TallyFormDialog component */}
       </div>
     </>;
 };
