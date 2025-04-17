@@ -68,10 +68,12 @@ const Entrepreneurship = () => {
           <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto">
             India's first intensive bootcamp where teens don't just learn about startups—they build one.
           </p>
-          <Button className="bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-jetbrains group">
-            Join Next Cohort
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/bootcamps">
+            <Button className="bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-jetbrains group">
+              Join Next Cohort
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
 
         {/* Modules Section */}
