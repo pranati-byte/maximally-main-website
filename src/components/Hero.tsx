@@ -53,27 +53,26 @@ const Hero = () => {
         </div>
       ))}
 
-      <div className="z-10 text-center max-w-4xl">
+      <div className="z-10 text-center max-w-4xl px-4">
         <h1 
           ref={textRef} 
-          className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-black mb-6 terminal"
+          className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-black mb-4 sm:mb-6 terminal"
         >
           {text}
         </h1>
 
-        <p className="text-xl md:text-2xl font-jetbrains text-maximally-black/80 mb-12 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl md:text-2xl font-jetbrains text-maximally-black/80 mb-8 sm:mb-12 max-w-2xl mx-auto">
           Learn the real-world skills schools forgot to teach.
         </p>
 
-        <div className="flex justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
-            className="pixel-button bg-maximally-blue hover:bg-maximally-blue/90 group"
+            className="w-full sm:w-auto pixel-button bg-maximally-blue hover:bg-maximally-blue/90 group px-8 py-3"
             onClick={() => window.location.href = '/bootcamps'}
           >
             <Rocket className="mr-2 h-4 w-4 group-hover:animate-bounce" />
             Start Learning
           </Button>
-        </div>
 
         <div className="mt-16 text-center">
           <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-6">
