@@ -106,7 +106,9 @@ const Community = () => {
               <Users className="h-5 w-5" />
             </Link>
             <Link 
-              to="#"
+              to="https://chat.whatsapp.com/Iu4ETGF5EwuDGSnszhrZaV"
+              target="_blank"
+              rel="noopener noreferrer"
               className="pixel-button bg-[#25D366] text-white inline-flex items-center gap-2 hover:animate-pulse px-8 py-4"
             >
               Join WhatsApp Community
