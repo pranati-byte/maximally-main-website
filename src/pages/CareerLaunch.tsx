@@ -1,12 +1,14 @@
 import { GraduationCap, FileText, Users, Briefcase, Network, Star, ArrowRight, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SkillPageLayout from "@/components/SkillPageLayout";
 
 const CareerLaunch = () => {
   return (
@@ -22,30 +24,22 @@ const CareerLaunch = () => {
       <div className="max-w-4xl mx-auto space-y-16">
         {/* Hero Section */}
         <div className="text-center space-y-6">
-        <h1 className="font-press-start text-4xl md:text-5xl gradient-text-career animate-glow">
-          Build Your Dream Career
-        </h1>
-        <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto">
-          Create your <span className="text-[#FFD700] font-bold">future-ready</span> career roadmap. Master the skills that make you <span className="text-[#00CED1] font-bold">stand out</span>.
-        </p>
-        <Link to="/bootcamps">
-          <Button className="bg-[#4D89FF] hover:bg-[#4D89FF]/90 text-white px-8 py-6 text-lg font-jetbrains group shadow-xl transform hover:scale-105 transition-all">
-            Launch Your Career
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </Link>
-      </section>
+          <h1 className="font-press-start text-4xl md:text-5xl gradient-text-career animate-glow">
+            Build Your Dream Career
+          </h1>
+          <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto">
+            Create your <span className="text-[#FFD700] font-bold">future-ready</span> career roadmap. Master the skills that make you <span className="text-[#00CED1] font-bold">stand out</span>.
+          </p>
+          <Link to="/bootcamps">
+            <Button className="bg-[#4D89FF] hover:bg-[#4D89FF]/90 text-white px-8 py-6 text-lg font-jetbrains group shadow-xl transform hover:scale-105 transition-all">
+              Launch Your Career
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+        </div>
 
-      {/* Features Grid */}
+        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="pixel-border hover:translate-y-[-4px] transition-transform">
-            <CardHeader className="space-y-1 p-4">
-              <GraduationCap className="h-6 w-6 text-maximally-blue mb-1" />
-              <CardTitle className="text-xl">Standout Applications</CardTitle>
-              <CardDescription>Craft compelling college and internship applications that showcase your unique story and achievements.</CardDescription>
-            </CardHeader>
-          </Card>
-
           <Card className="pixel-border hover:translate-y-[-4px] transition-transform">
             <CardHeader>
               <FileText className="h-8 w-8 text-maximally-blue mb-2" />
@@ -80,93 +74,33 @@ const CareerLaunch = () => {
 
           <Card className="pixel-border hover:translate-y-[-4px] transition-transform">
             <CardHeader>
+              <Users className="h-8 w-8 text-maximally-blue mb-2" />
+              <CardTitle>Professional Communication</CardTitle>
+              <CardDescription>Master the art of effective communication in professional environments.</CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="pixel-border hover:translate-y-[-4px] transition-transform">
+            <CardHeader>
               <Star className="h-8 w-8 text-maximally-blue mb-2" />
               <CardTitle>Personal Branding</CardTitle>
               <CardDescription>Create a unique personal brand that makes you memorable in competitive environments.</CardDescription>
             </CardHeader>
           </Card>
         </div>
-      </section>
 
-      {/* Where You'll Use This */}
-      <section className="px-4 py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-press-start text-2xl md:text-3xl mb-8">Where You'll Use This</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 font-jetbrains">
-            <div className="p-4 bg-white pixel-border">College Applications</div>
-            <div className="p-4 bg-white pixel-border">Summer Internships</div>
-            <div className="p-4 bg-white pixel-border">Global Fellowships</div>
-            <div className="p-4 bg-white pixel-border">Research Programs</div>
-          </div>
+        {/* CTA Section */}
+        <div className="text-center space-y-6">
+          <h2 className="font-press-start text-2xl gradient-text-career">Ready to Level Up?</h2>
+          <Link to="/bootcamps">
+            <Button className="bg-[#FFD700] hover:bg-[#FFD700]/90 text-black px-8 py-6 text-lg font-jetbrains group shadow-xl transform hover:scale-105 transition-all">
+              Start Your Journey
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
-      </section>
-
-      {/* Who This Is For */}
-      <section className="px-4 py-16 max-w-6xl mx-auto">
-        <h2 className="font-press-start text-2xl md:text-3xl mb-8">Who This Is For</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="pixel-border">
-            <CardContent className="pt-6">
-              <Users className="h-8 w-8 text-maximally-blue mb-4" />
-              <h3 className="font-press-start text-lg mb-2">High School Students</h3>
-              <p className="text-sm text-gray-600">Planning for college and early career moves</p>
-            </CardContent>
-          </Card>
-          <Card className="pixel-border">
-            <CardContent className="pt-6">
-              <Users className="h-8 w-8 text-maximally-blue mb-4" />
-              <h3 className="font-press-start text-lg mb-2">College Freshmen</h3>
-              <p className="text-sm text-gray-600">Building professional foundations early</p>
-            </CardContent>
-          </Card>
-          <Card className="pixel-border">
-            <CardContent className="pt-6">
-              <Users className="h-8 w-8 text-maximally-blue mb-4" />
-              <h3 className="font-press-start text-lg mb-2">Gap Year Students</h3>
-              <p className="text-sm text-gray-600">Making the most of your transition year</p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="px-4 py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-press-start text-2xl md:text-3xl mb-8">Common Questions</h2>
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>When should I start preparing my college applications?</AccordionTrigger>
-              <AccordionContent>
-                Ideally, start in Class 11 to build your profile. We'll help you plan and execute your application strategy well in advance.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>How does career planning help high school students?</AccordionTrigger>
-              <AccordionContent>
-                Early career planning helps you make informed decisions about courses, internships, and skill development opportunities.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>What makes Maximally's approach different?</AccordionTrigger>
-              <AccordionContent>
-                We focus on practical skills and real-world applications, not just theory. You'll build a portfolio of work while learning.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="px-4 py-20 text-center">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-press-start text-3xl mb-6">Ready to Launch Your Career?</h2>
-          <Button onClick={() => window.location.href = '/bootcamps'} className="pixel-button text-lg px-8 py-6">
-            Start Your Journey
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
-      </section>
-    </div>
+      </div>
+    </SkillPageLayout>
   );
 };
 
