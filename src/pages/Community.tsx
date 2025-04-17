@@ -1,4 +1,4 @@
-import { Users, MessageSquare, Share2, Rocket, Star, Target, Zap } from 'lucide-react';
+import { Users, MessageSquare, Share2, Rocket, Star, Target, Zap, Discord } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
