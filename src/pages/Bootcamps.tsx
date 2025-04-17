@@ -13,7 +13,8 @@ const summerBootcamps = [
     duration: 1,
     price: 1299,
     icon: <Rocket className="h-6 w-6 text-maximally-blue" />,
-    highlight: "Most Popular"
+    highlight: "Most Popular",
+    learnMoreLink: "/entrepreneurship"
   },
   {
     title: "Speak for Impact",
@@ -21,7 +22,8 @@ const summerBootcamps = [
     skills: ["Speaking", "Debate", "Articulation"],
     duration: 1,
     price: 999,
-    icon: <Star className="h-6 w-6 text-maximally-yellow" />
+    icon: <Star className="h-6 w-6 text-maximally-yellow" />,
+    learnMoreLink: "/public-speaking"
   },
   {
     title: "Digital Influence 101",
@@ -29,7 +31,8 @@ const summerBootcamps = [
     skills: ["Content Creation", "Social Media", "Branding"],
     duration: 1,
     price: 999,
-    icon: <Users className="h-6 w-6 text-maximally-purple" />
+    icon: <Users className="h-6 w-6 text-maximally-purple" />,
+    learnMoreLink: "/digital-marketing"
   },
   {
     title: "Build with AI & No-Code",
@@ -38,7 +41,8 @@ const summerBootcamps = [
     duration: 1,
     price: 999,
     icon: <Trophy className="h-6 w-6 text-maximally-green" />,
-    highlight: "Trending"
+    highlight: "Trending",
+    learnMoreLink: "/no-code-ai"
   },
 
   {
@@ -47,7 +51,8 @@ const summerBootcamps = [
     skills: ["Resume Building", "LinkedIn", "Outreach"],
     duration: 1,
     price: 799,
-    icon: <Clock className="h-6 w-6 text-maximally-orange" />
+    icon: <Clock className="h-6 w-6 text-maximally-orange" />,
+    learnMoreLink: "/career-launch"
   }
 ];
 
@@ -132,10 +137,7 @@ const Bootcamps = () => {
                       Register 
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                    <Link 
-                      to={`/${bootcamp.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="inline-block"
-                    >
+                    <Link to={bootcamp.learnMoreLink}>
                       <Button 
                         variant="outline"
                         className="border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains"
