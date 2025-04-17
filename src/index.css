@@ -91,8 +91,43 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes neon-pulse {
+  0%, 100% { 
+    text-shadow: 0 0 7px #fff,
+                 0 0 10px #fff,
+                 0 0 21px #fff,
+                 0 0 42px #3C9EE7,
+                 0 0 82px #3C9EE7,
+                 0 0 92px #3C9EE7;
+  }
+  50% { 
+    text-shadow: 0 0 4px #fff,
+                 0 0 7px #fff,
+                 0 0 13px #fff,
+                 0 0 25px #3C9EE7,
+                 0 0 50px #3C9EE7,
+                 0 0 60px #3C9EE7;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, 
+    transparent, rgba(60, 158, 231, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.neon-text {
+  animation: neon-pulse 2s infinite;
 }
 
 @keyframes pulse {

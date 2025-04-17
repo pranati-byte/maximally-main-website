@@ -80,9 +80,10 @@ const Index = () => {
 
           <div className="relative container mx-auto px-4 pt-32 pb-20">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6 inline-block">
-                <div className="pixel-border bg-maximally-blue p-3 animate-pulse">
-                  <Target className="h-8 w-8 text-white" />
+              <div className="mb-6 inline-block group">
+                <div className="pixel-border bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red p-3 animate-pulse relative overflow-hidden shimmer-bg transform transition-transform hover:scale-110">
+                  <Target className="h-8 w-8 text-white animate-spin-slow" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent shimmer-bg"></div>
                 </div>
               </div>
 
@@ -96,19 +97,19 @@ const Index = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto">
-                  <span>Start Learning</span>
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                <Link to="/bootcamps" className="pixel-button bg-gradient-to-r from-maximally-blue to-maximally-purple text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto transform transition-all hover:scale-105 hover:shadow-lg hover:shadow-maximally-blue/50">
+                  <span className="neon-text">Start Learning</span>
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>
 
-                <button onClick={() => setIsTallyFormOpen(true)} className="pixel-button bg-maximally-red text-white hover:bg-maximally-red/90 group flex items-center gap-2 w-full sm:w-auto">
-                  <span>Register Now</span>
-                  <CalendarCheck className="h-4 w-4" />
+                <button onClick={() => setIsTallyFormOpen(true)} className="pixel-button bg-gradient-to-r from-maximally-red to-maximally-purple text-white group flex items-center gap-2 w-full sm:w-auto transform transition-all hover:scale-105 hover:shadow-lg hover:shadow-maximally-red/50 shimmer-bg">
+                  <span className="neon-text">Register Now</span>
+                  <CalendarCheck className="h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
                 </button>
 
-                <Link to="/community" className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto">
+                <Link to="/community" className="pixel-button bg-gradient-to-r from-white to-gray-100 text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto transform transition-all hover:scale-105 hover:shadow-lg hover:border-maximally-blue">
                   <span>Join Community</span>
-                  <Users className="h-4 w-4" />
+                  <Users className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
                 </Link>
               </div>
             </div>
