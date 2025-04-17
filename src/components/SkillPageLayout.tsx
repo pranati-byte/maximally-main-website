@@ -6,24 +6,18 @@ import Footer from "@/components/Footer";
 
 interface SkillPageLayoutProps {
   title: string;
-  description: string;
   children: ReactNode;
   icon?: ReactNode;
   iconBgColor?: string;
   tagline?: string;
-  skillName?: string;
-  communityType?: string;
-  communityLink?: string;
 }
 
 const SkillPageLayout = ({
   children,
   title,
   icon,
-  iconBgColor = "bg-sky-500", // Provide a default
+  iconBgColor = "bg-sky-500",
   tagline,
-  skillName,
-  communityLink,
 }: SkillPageLayoutProps) => {
   return (
     <div className="min-h-screen bg-white">
@@ -51,16 +45,6 @@ const SkillPageLayout = ({
             <p className="font-jetbrains text-xl text-maximally-black/80 mb-8 leading-relaxed">
               {tagline}
             </p>
-            {communityLink && (
-              <div className="flex items-center gap-4">
-                <a
-                  href={communityLink}
-                  className={`inline-flex items-center gap-2 px-6 py-3 font-press-start text-sm text-white ${iconBgColor} rounded-lg hover:opacity-90 transition-opacity`}
-                >
-                  Join {skillName} Community
-                </a>
-              </div>
-            )}
           </div>
           <div className="bg-white rounded-xl p-8">
             {children}
