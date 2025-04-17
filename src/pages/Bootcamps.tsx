@@ -129,18 +129,18 @@ const Bootcamps = () => {
                     <div className="font-press-start text-maximally-black">₹{bootcamp.price}</div>
                     <div className="text-sm text-maximally-black/60">{bootcamp.duration} week</div>
                   </div>
-                  <div className="flex flex-col sm:flex-row gap-2 w-full">
+                  <div className="space-y-2">
                     <Button 
                       onClick={handlePreRegister}
-                      className="w-full sm:w-auto bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains group text-sm md:text-base"
+                      className="w-full bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains group"
                     >
                       Register 
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                    <Link to={bootcamp.learnMoreLink} className="w-full sm:w-auto">
+                    <Link to={bootcamp.learnMoreLink} className="block w-full">
                       <Button 
                         variant="outline"
-                        className="w-full border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains text-sm md:text-base"
+                        className="w-full border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains"
                       >
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
