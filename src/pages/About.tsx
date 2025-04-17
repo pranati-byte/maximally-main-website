@@ -46,27 +46,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Impact Section */}
-        <section className="mb-20">
-          <h2 className="font-press-start text-2xl text-maximally-black mb-8">Our Impact</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="pixel-border p-6 text-center">
-              <Users className="h-12 w-12 mx-auto mb-4 text-maximally-blue" />
-              <h3 className="font-press-start text-lg mb-2">1000+</h3>
-              <p className="font-jetbrains">Active Community Members</p>
-            </div>
-            <div className="pixel-border p-6 text-center">
-              <Award className="h-12 w-12 mx-auto mb-4 text-maximally-red" />
-              <h3 className="font-press-start text-lg mb-2">50+</h3>
-              <p className="font-jetbrains">Success Stories</p>
-            </div>
-            <div className="pixel-border p-6 text-center">
-              <Rocket className="h-12 w-12 mx-auto mb-4 text-maximally-black" />
-              <h3 className="font-press-start text-lg mb-2">10+</h3>
-              <p className="font-jetbrains">Skill Tracks</p>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Programs Section */}
         <section className="mb-20">
