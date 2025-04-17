@@ -35,10 +35,10 @@ const testimonialData = [
 
 const TestimonialCard = ({ testimonial }) => {
   return (
-    <div className="pixel-card h-full flex flex-col">
+    <div className="pixel-card h-full flex flex-col p-4 sm:p-6">
       <div className="flex items-center mb-4">
-        <div className={`w-12 h-12 pixel-border bg-maximally-blue flex items-center justify-center mr-4`}>
-          <span className="font-press-start text-white">{testimonial.avatar}</span>
+        <div className={`w-10 sm:w-12 h-10 sm:h-12 pixel-border bg-maximally-blue flex items-center justify-center mr-4`}>
+          <span className="font-press-start text-white text-sm sm:text-base">{testimonial.avatar}</span>
         </div>
         <div>
           <p className="font-press-start text-sm text-maximally-black">{testimonial.name}</p>
@@ -48,11 +48,11 @@ const TestimonialCard = ({ testimonial }) => {
       
       <div className="flex items-center mb-2">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+          <Star key={i} className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-500 fill-yellow-500" />
         ))}
       </div>
       
-      <p className="font-jetbrains text-maximally-black/80 mb-4 flex-grow">{testimonial.quote}</p>
+      <p className="font-jetbrains text-sm sm:text-base text-maximally-black/80 mb-4 flex-grow">{testimonial.quote}</p>
       
       <div className="bg-maximally-black/10 px-3 py-1 rounded font-jetbrains text-xs inline-block self-start">
         {testimonial.achievement}
@@ -65,22 +65,22 @@ const Testimonials = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   
   const nextSlide = () => {
-    setActiveSlide((prev) => (prev + 1) % Math.ceil(testimonialData.length / 2));
+    setActiveSlide((prev) => (prev + 1) % testimonialData.length);
   };
   
   const prevSlide = () => {
-    setActiveSlide((prev) => (prev - 1 + Math.ceil(testimonialData.length / 2)) % Math.ceil(testimonialData.length / 2));
+    setActiveSlide((prev) => (prev - 1 + testimonialData.length) % testimonialData.length);
   };
   
   return (
-    <section className="py-24 bg-white">
+    <section className="py-12 sm:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-12 text-center">
+        <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-8 sm:mb-12 text-center">
           &gt;&gt; Student Success Stories_
         </h2>
         
         <div className="relative">
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {testimonialData.map((testimonial, index) => (
               <TestimonialCard key={index} testimonial={testimonial} />
             ))}
@@ -88,29 +88,31 @@ const Testimonials = () => {
           
           {/* Mobile slider */}
           <div className="md:hidden">
-            <div className="flex overflow-hidden">
+            <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${activeSlide * 100}%)` }}
               >
                 {testimonialData.map((testimonial, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
+                  <div key={index} className="w-full flex-shrink-0 px-2">
                     <TestimonialCard testimonial={testimonial} />
                   </div>
                 ))}
               </div>
             </div>
             
-            <div className="flex justify-center mt-8 gap-4">
+            <div className="flex justify-center mt-6 gap-4">
               <button 
                 onClick={prevSlide}
-                className="p-2 bg-maximally-black text-white pixel-border"
+                className="p-2 bg-maximally-black text-white pixel-border hover:bg-maximally-black/80 transition-colors"
+                aria-label="Previous testimonial"
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
               <button 
                 onClick={nextSlide}
-                className="p-2 bg-maximally-black text-white pixel-border"
+                className="p-2 bg-maximally-black text-white pixel-border hover:bg-maximally-black/80 transition-colors"
+                aria-label="Next testimonial"
               >
                 <ChevronRight className="h-5 w-5" />
               </button>
