@@ -86,6 +86,21 @@
   }
 }
 
+
+.gradient-text-rainbow {
+  background: linear-gradient(45deg, #FF5F5F, #4D89FF, #FFEA00, #9B4DFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-shift 8s linear infinite;
+}
+
+@keyframes rainbow-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .text-maximally-gold {
   color: #FFD700;
 }
