@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
@@ -19,10 +18,10 @@ const BootcampCard = ({ title, description, skills, duration, price, powerUpLink
       <div className="absolute top-0 right-0 bg-maximally-blue text-white px-3 py-1 text-sm font-jetbrains">
         {duration} weeks
       </div>
-      
+
       <h3 className="font-press-start text-xl mb-4 text-maximally-black">{title}</h3>
       <p className="font-jetbrains text-maximally-black/80 mb-4">{description}</p>
-      
+
       <div className="mb-4">
         <div className="text-sm font-jetbrains text-maximally-black/60 mb-2">Skills:</div>
         <div className="flex flex-wrap gap-2">
@@ -33,7 +32,7 @@ const BootcampCard = ({ title, description, skills, duration, price, powerUpLink
           ))}
         </div>
       </div>
-      
+
       <div className="flex flex-col gap-3 mt-6">
         <div className="flex items-center justify-between">
           <div className="font-press-start text-maximally-black">₹{price}</div>
