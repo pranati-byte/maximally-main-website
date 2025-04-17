@@ -62,7 +62,7 @@ const Entrepreneurship = () => {
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16 space-y-6">
-          <h1 className="font-press-start text-4xl md:text-5xl text-maximally-black">
+          <h1 className="font-press-start text-4xl md:text-5xl gradient-text-purple">
             Turn Your Idea Into a Real Startup
           </h1>
           <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto">

@@ -33,7 +33,7 @@ const SkillPageLayout = ({
         </Link>
 
         <div className="max-w-4xl mx-auto">
-          <div className="gradient-bg rounded-xl p-8 mb-12 pixel-border glow-effect">
+          <div className="gradient-bg rounded-xl p-8 mb-12 pixel-border glow-effect rainbow-border">
             <div className="flex items-center gap-4 mb-6">
               <div className={`p-3 rounded-lg ${iconBgColor} transform hover:scale-110 transition-transform`}>
                 {icon}
