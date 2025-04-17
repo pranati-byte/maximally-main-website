@@ -1,3 +1,4 @@
+
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
@@ -14,9 +15,9 @@ interface BootcampCardProps {
 
 const BootcampCard = ({ title, description, skills, duration, price, powerUpLink, onPreRegister }: BootcampCardProps) => {
   return (
-    <div className="pixel-border bg-white p-6 relative overflow-hidden transition-transform hover:scale-[1.02]">
+    <div className="pixel-border bg-white p-6 relative overflow-hidden">
       <div className="absolute top-0 right-0 bg-maximally-blue text-white px-3 py-1 text-sm font-jetbrains">
-        {duration} weeks
+        {duration} week
       </div>
 
       <h3 className="font-press-start text-xl mb-4 text-maximally-black">{title}</h3>
@@ -43,7 +44,7 @@ const BootcampCard = ({ title, description, skills, duration, price, powerUpLink
             Pre-register <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
-        <Link to={powerUpLink} className="w-full mt-2">
+        <Link to={powerUpLink} className="block w-full">
           <Button 
             variant="outline"
             className="w-full border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains"
