@@ -1,6 +1,7 @@
 
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { Link } from 'react-router-dom';
 
 interface BootcampCardProps {
   title: string;
@@ -8,10 +9,11 @@ interface BootcampCardProps {
   skills: string[];
   duration: number;
   price: number;
+  powerUpLink: string;
   onPreRegister: () => void;
 }
 
-const BootcampCard = ({ title, description, skills, duration, price, onPreRegister }: BootcampCardProps) => {
+const BootcampCard = ({ title, description, skills, duration, price, powerUpLink, onPreRegister }: BootcampCardProps) => {
   return (
     <div className="pixel-border bg-white p-6 relative overflow-hidden transition-transform hover:scale-[1.02]">
       <div className="absolute top-0 right-0 bg-maximally-blue text-white px-3 py-1 text-sm font-jetbrains">
@@ -32,14 +34,23 @@ const BootcampCard = ({ title, description, skills, duration, price, onPreRegist
         </div>
       </div>
       
-      <div className="flex items-center justify-between mt-6">
-        <div className="font-press-start text-maximally-black">₹{price}</div>
-        <Button 
-          onClick={onPreRegister}
-          className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains"
-        >
-          Pre-register <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+      <div className="flex flex-col gap-3 mt-6">
+        <div className="flex items-center justify-between">
+          <div className="font-press-start text-maximally-black">₹{price}</div>
+          <Button 
+            onClick={onPreRegister}
+            className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains"
+          >
+            Pre-register <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </div>
+        <Link to={powerUpLink} className="w-full">
+          <Button 
+            className="w-full bg-maximally-blue text-white hover:bg-maximally-blue/90 font-jetbrains"
+          >
+            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </div>
     </div>
   );

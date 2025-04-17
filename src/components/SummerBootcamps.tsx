@@ -11,6 +11,7 @@ const bootcamps = [
     skills: ["Entrepreneurship", "MVPs", "Pitching"],
     duration: 3,
     price: 1299,
+    powerUpLink: "/entrepreneurship"
   },
   {
     title: "Speak for Impact",
@@ -18,6 +19,7 @@ const bootcamps = [
     skills: ["Speaking", "Debate", "Articulation"],
     duration: 2,
     price: 999,
+    powerUpLink: "/public-speaking"
   },
   {
     title: "Digital Influence 101",
@@ -25,6 +27,7 @@ const bootcamps = [
     skills: ["Content Creation", "Social Media", "Branding"],
     duration: 2,
     price: 999,
+    powerUpLink: "/digital-marketing"
   },
   {
     title: "Build with AI & No-Code",
@@ -32,6 +35,7 @@ const bootcamps = [
     skills: ["AI Tools", "No-Code Apps", "Automation"],
     duration: 2,
     price: 999,
+    powerUpLink: "/no-code-ai"
   },
   {
     title: "Creative Editing Studio",
@@ -39,6 +43,7 @@ const bootcamps = [
     skills: ["Editing", "Visual Storytelling", "Content"],
     duration: 2,
     price: 999,
+    powerUpLink: "/digital-marketing"
   },
   {
     title: "Career Starter Pack",
@@ -46,6 +51,7 @@ const bootcamps = [
     skills: ["Resume Building", "LinkedIn", "Outreach"],
     duration: 2,
     price: 799,
+    powerUpLink: "/career-launch"
   }
 ];
 
