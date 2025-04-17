@@ -52,8 +52,8 @@ const Entrepreneurship = () => {
   return (
     <SkillPageLayout
       title="Founder Lab"
-      icon={<Target className="h-10 w-10 text-[#f6e05e] animate-pulse" />}
-      iconBgColor="bg-[#1e1e2e]"
+      icon={<Target className="h-10 w-10 text-white" />}
+      iconBgColor="bg-maximally-blue"
       tagline="Build something real."
       skillName="Founders"
       communityType="discord"
@@ -79,9 +79,9 @@ const Entrepreneurship = () => {
         {/* Modules Section */}
         <div className="grid gap-6 mb-16">
           {modules.map((module, index) => (
-            <Card key={index} className="p-6 hover-lift glow-effect bg-[#1e1e2e] border-[#3e92cc] border-2 hover:border-[#ff4ecd] transition-all duration-300">
+            <Card key={index} className="p-6 hover-lift glow-effect gradient-bg">
               <div className="flex items-start gap-4">
-                <div className="bg-[#3e92cc]/10 p-3 rounded-lg hover:bg-[#ff4ecd]/10 transition-colors">
+                <div className="bg-maximally-blue/10 p-3 rounded-lg">
                   {module.icon}
                 </div>
                 <div>
@@ -150,7 +150,7 @@ const Entrepreneurship = () => {
             href="https://drive.google.com/your-entrepreneurship-link" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center px-8 py-4 bg-[#ff4ecd] text-white font-press-start rounded-lg hover:bg-[#ff4ecd]/90 hover:scale-105 transition-all duration-300 group shadow-[0_0_15px_rgba(255,78,205,0.3)]"
+            className="inline-flex items-center px-8 py-4 bg-maximally-blue text-white font-press-start rounded-lg hover:bg-maximally-blue/90 transition-colors group"
           >
             View Full Curriculum
             <ChevronDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
