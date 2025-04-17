@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, Star, Users, Target, Rocket, Sparkles, Crown, Code, Zap, CalendarCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SkillTracks from '@/components/SkillTracks';
@@ -344,7 +344,6 @@ const Index = () => {
         </button>
 
         <Footer />
-        <TallyFormDialog isOpen={isTallyFormOpen} onClose={() => setIsTallyFormOpen(false)} />
       </div>
     </>;
 };
