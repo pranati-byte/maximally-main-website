@@ -1,5 +1,6 @@
 
 import { Target, ArrowRight, Check, ChevronDown, Rocket, Brain, Code } from "lucide-react";
+import { Link } from "react-router-dom";
 import SkillPageLayout from "@/components/SkillPageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
