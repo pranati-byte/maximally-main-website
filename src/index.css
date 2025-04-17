@@ -88,7 +88,7 @@
 
 
 .gradient-text-rainbow {
-  background: linear-gradient(45deg, #FF5F5F, #4D89FF, #FFEA00, #9B4DFF);
+  background: linear-gradient(45deg, #FF5F5F, #4D89FF, #39FF14, #B400FF);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -518,4 +518,12 @@
 
 .gradient-bg-orange {
   background: linear-gradient(135deg, rgba(255,165,0,0.1), rgba(255,165,0,0.05));
+}
+
+.gradient-bg-purple {
+  background: linear-gradient(135deg, rgba(180,0,255,0.1), rgba(180,0,255,0.05));
+}
+
+.gradient-bg-green {
+  background: linear-gradient(135deg, rgba(57,255,20,0.1), rgba(57,255,20,0.05));
 }
