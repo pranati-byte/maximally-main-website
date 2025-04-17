@@ -13,7 +13,7 @@ const CareerLaunch = () => {
   return (
     <div className="min-h-screen w-full bg-white">
       {/* Hero Section */}
-      <section className="px-4 py-20 md:py-32 max-w-6xl mx-auto text-center">
+      <section className="px-4 py-12 md:py-16 max-w-6xl mx-auto text-center">
         <h1 className="font-press-start text-4xl md:text-5xl lg:text-6xl text-maximally-black mb-6 leading-tight">
           Launch Your Future
         </h1>
@@ -27,12 +27,12 @@ const CareerLaunch = () => {
       </section>
 
       {/* Modules Grid */}
-      <section className="px-4 py-16 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="px-4 py-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Card className="pixel-border hover:translate-y-[-4px] transition-transform">
-            <CardHeader>
-              <GraduationCap className="h-8 w-8 text-maximally-blue mb-2" />
-              <CardTitle>Standout Applications</CardTitle>
+            <CardHeader className="space-y-1 p-4">
+              <GraduationCap className="h-6 w-6 text-maximally-blue mb-1" />
+              <CardTitle className="text-xl">Standout Applications</CardTitle>
               <CardDescription>Craft compelling college and internship applications that showcase your unique story and achievements.</CardDescription>
             </CardHeader>
           </Card>
