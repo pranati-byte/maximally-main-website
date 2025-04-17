@@ -26,7 +26,7 @@ const SEO = ({ title, description, image, article }: SEOProps) => {
       {article && <meta property="og:type" content="article" />}
       {!article && <meta property="og:type" content="website" />}
       <meta property="og:title" content={seo.title} />
-      <meta property="og:description" content="Join Maximally's one-week bootcamps to master entrepreneurship, public speaking, and digital marketing. Build real-world skills for your future." />
+      <meta property="og:description" content="Join our 1-week bootcamps to master entrepreneurship, public speaking, and digital marketing. Build real-world skills for your future." />
       <meta property="og:image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
