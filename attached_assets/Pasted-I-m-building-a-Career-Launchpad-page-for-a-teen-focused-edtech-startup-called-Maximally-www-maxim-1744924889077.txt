@@ -1,0 +1,59 @@
+I'm building a “Career Launchpad” page for a teen-focused edtech startup called Maximally (www.maximally.in). Here's the raw content structure:
+
+pgsql
+Copy
+Edit
+Career Launchpad  
+Launch your future. Land opportunities that matter.
+
+Standout Applications  
+Create compelling college and internship applications that get noticed.  
+Level Up >
+
+Resume Building  
+Craft professional resumes that highlight your unique strengths and experiences.  
+Level Up >
+
+Interview Preparation  
+Master interview techniques for college admissions, scholarships, and internships.  
+Level Up >
+
+Portfolio Development  
+Build an impressive portfolio that showcases your skills and projects.  
+Level Up >
+
+Networking Skills  
+Learn to connect with professionals and build relationships that advance your career.  
+Level Up >
+
+Personal Branding  
+Develop a compelling personal brand that sets you apart in competitive environments.  
+Level Up >
+
+Program Highlights  
+- College application strategy  
+- Resume & portfolio reviews  
+- Mock interviews with feedback  
+- Career path exploration  
+View Full Curriculum
+Please turn this into a modern, high-converting landing page targeted at ambitious teens in India. The vibe should be bold, aspirational, yet accessible—not corporate or boring.
+
+✅ Please include:
+
+Hero section with a bold headline, subheading, and a primary CTA (e.g. “Kickstart Your Future”)
+
+Each module should be turned into a Card with an expanded value-based description
+
+Add a “Where You’ll Use This” section (college apps, internships, fellowships, summer schools, etc.)
+
+Add a “Who This Is For” (high schoolers, college students, gap year teens, etc.)
+
+Add a mini FAQ with 3–4 questions about college apps, career planning, relevance, etc.
+
+Use React + Tailwind CSS + shadcn/ui components (Cards, Buttons, Accordions, etc.)
+
+Keep the layout 100% text-based, clean, with generous spacing and sharp typography
+
+The tone should feel energetic, future-focused, and teen-friendly (avoid jargon or fluff)
+
+Output a complete React component styled appropriately.
