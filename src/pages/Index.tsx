@@ -23,6 +23,7 @@ const Index = () => {
   const fullText = 'Level up your future';
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [isTallyFormOpen, setIsTallyFormOpen] = useState(false);
   const [isTallyFormOpen, setIsTallyFormOpen] = useState(false); // Added TallyFormDialog state
   const features = [{
     icon: Code,
@@ -106,6 +107,7 @@ const Index = () => {
                   <span>Register Now</span>
                   <CalendarCheck className="h-4 w-4" />
                 </button>
+                <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
 
                 <Link to="/community" className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto">
                   <span>Join Community</span>
