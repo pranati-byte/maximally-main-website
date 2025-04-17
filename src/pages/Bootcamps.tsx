@@ -123,13 +123,27 @@ const Bootcamps = () => {
                     <div className="font-press-start text-maximally-black">₹{bootcamp.price}</div>
                     <div className="text-sm text-maximally-black/60">{bootcamp.duration} week</div>
                   </div>
-                  <Button 
-                    onClick={handlePreRegister}
-                    className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains group"
-                  >
-                    Register 
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <div className="flex gap-2">
+                    <Button 
+                      onClick={handlePreRegister}
+                      className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains group"
+                    >
+                      Register 
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                    <Link 
+                      to={`/${bootcamp.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="inline-block"
+                    >
+                      <Button 
+                        variant="outline"
+                        className="border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains"
+                      >
+                        Learn More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
