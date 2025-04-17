@@ -30,6 +30,14 @@
 
 @keyframes cursor-blink {
 
+.gradient-text-blue-red {
+  background: linear-gradient(135deg, #4D89FF 0%, #FF5F5F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
