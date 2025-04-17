@@ -101,7 +101,7 @@ const Index = () => {
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
-                <button onClick={() => setIsTallyFormOpen(true)} className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto"> {/* Added new button */}
+                <button onClick={() => setIsTallyFormOpen(true)} className="pixel-button bg-maximally-red text-white hover:bg-maximally-red/90 group flex items-center gap-2 w-full sm:w-auto">
                   <span>Register Now</span>
                   <CalendarCheck className="h-4 w-4" />
                 </button>
