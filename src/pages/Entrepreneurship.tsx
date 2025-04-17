@@ -10,6 +10,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+const idealStudent = [
+  "You have a business idea but don't know where to start",
+  "You want to learn by building, not just theory",
+  "You're ready to commit 10-15 hours/week",
+  "You dream of starting up but fear failing",
+  "You want to meet other teen founders"
+];
+
 const modules = [
   {
     title: "Business Fundamentals",
@@ -40,125 +48,72 @@ const deliverables = [
   "Competitor Analysis"
 ];
 
-const idealStudent = [
-  "You have a business idea but don't know where to start",
-  "You want to learn by building, not just theory",
-  "You're ready to commit 10-15 hours/week",
-  "You dream of starting up but fear failing",
-  "You want to meet other teen founders"
-];
-
-const Entrepreneurship = () => {
+export default function Entrepreneurship() {
   return (
     <SkillPageLayout
-      title="Founder Lab"
-      icon={<Target className="h-10 w-10 text-white" />}
-      iconBgColor="bg-maximally-blue"
-      tagline="Build something real."
-      skillName="Founders"
-      communityType="discord"
-      communityLink="https://discord.gg/maximally-founders"
+      title="Entrepreneurship Bootcamp"
+      subtitle="Launch your startup like a pro"
+      description="Transform your ideas into a real business through hands-on learning and expert guidance."
+      className="bg-gradient-to-b from-maximally-red/5"
     >
-      <div className="max-w-4xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16 space-y-6">
-          <h1 className="font-press-start text-4xl md:text-5xl gradient-text-purple">
-            Turn Your Idea Into a Real Startup
-          </h1>
-          <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto">
-            India's first intensive bootcamp where teens don't just learn about startups—they build one.
-          </p>
-          <Link to="/bootcamps">
-            <Button className="bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-jetbrains group">
-              Join Next Cohort
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </Link>
-        </div>
-
-        {/* Modules Section */}
-        <div className="grid gap-6 mb-16">
-          {modules.map((module, index) => (
-            <Card key={index} className="p-6 hover-lift glow-effect gradient-bg">
-              <div className="flex items-start gap-4">
-                <div className="bg-maximally-blue/10 p-3 rounded-lg">
-                  {module.icon}
+      {/* Main Content */}
+      <div className="container max-w-6xl mx-auto px-4 py-12">
+        {/* Who Is This For */}
+        <section className="mb-16">
+          <h2 className="font-press-start text-2xl mb-8">Perfect For You If...</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {idealStudent.map((trait, index) => (
+              <Card key={index} className="p-6 pixel-border">
+                <div className="flex items-start gap-4">
+                  <Target className="h-6 w-6 text-maximally-red flex-shrink-0" />
+                  <p className="font-jetbrains">{trait}</p>
                 </div>
-                <div>
-                  <h3 className="font-press-start text-lg mb-2">{module.title}</h3>
-                  <p className="font-jetbrains text-maximally-black/60 mb-2">{module.description}</p>
-                  <p className="font-jetbrains text-maximally-blue">{module.teaser}</p>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* What You'll Build Section */}
-        <div className="mb-16">
-          <h2 className="font-press-start text-2xl mb-6 text-center">What You'll Build</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {deliverables.map((item, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg border-2 border-maximally-black/10 text-center font-jetbrains hover:border-maximally-blue transition-colors">
-                {item}
-              </div>
+              </Card>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* Who This Is For Section */}
-        <div className="mb-16">
-          <h2 className="font-press-start text-2xl mb-6 text-center">Who This Is For</h2>
-          <div className="space-y-3">
-            {idealStudent.map((item, index) => (
+        {/* Modules */}
+        <section className="mb-16">
+          <h2 className="font-press-start text-2xl mb-8">What You'll Learn</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {modules.map((module, index) => (
+              <Card key={index} className="p-6 pixel-border">
+                <div className="flex flex-col gap-4">
+                  <div className="bg-maximally-red/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                    {module.icon}
+                  </div>
+                  <h3 className="font-press-start text-lg">{module.title}</h3>
+                  <p className="text-maximally-black/70">{module.description}</p>
+                  <p className="text-sm italic">{module.teaser}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Deliverables */}
+        <section className="mb-16">
+          <h2 className="font-press-start text-2xl mb-8">What You'll Build</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {deliverables.map((item, index) => (
               <div key={index} className="flex items-center gap-3 font-jetbrains">
-                <Check className="h-5 w-5 text-maximally-blue flex-shrink-0" />
+                <Check className="h-5 w-5 text-maximally-green flex-shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
           </div>
-        </div>
+        </section>
 
-        {/* FAQ Section */}
-        <div className="mb-16">
-          <h2 className="font-press-start text-2xl mb-6 text-center">FAQ</h2>
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="font-jetbrains">Do I need coding skills?</AccordionTrigger>
-              <AccordionContent>
-                No! We teach you to use no-code tools to build your MVP fast. Focus on your business, not technical complexity.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="font-jetbrains">What if I don't have an idea yet?</AccordionTrigger>
-              <AccordionContent>
-                We help you find and validate startup ideas in Week 1. Many successful founders started our program without an idea!
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="font-jetbrains">How much time do I need?</AccordionTrigger>
-              <AccordionContent>
-                Plan for 10-15 hours per week including live sessions, building time, and community interactions.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <a 
-            href="https://drive.google.com/your-entrepreneurship-link" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-flex items-center px-8 py-4 bg-maximally-blue text-white font-press-start rounded-lg hover:bg-maximally-blue/90 transition-colors group"
-          >
-            View Full Curriculum
-            <ChevronDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-          </a>
-        </div>
+        {/* CTA */}
+        <section className="text-center">
+          <Button asChild size="lg" className="font-press-start">
+            <Link to="/contact">
+              Join Waitlist <ArrowRight className="ml-2" />
+            </Link>
+          </Button>
+        </section>
       </div>
     </SkillPageLayout>
   );
-};
-
-export default Entrepreneurship;
+}
