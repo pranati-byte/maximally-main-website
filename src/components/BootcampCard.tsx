@@ -45,7 +45,8 @@ const BootcampCard = ({ title, description, skills, duration, price, powerUpLink
         </div>
         <Link to={powerUpLink} className="w-full mt-2">
           <Button 
-            className="w-full bg-maximally-blue text-white hover:bg-maximally-blue/90 font-jetbrains"
+            variant="outline"
+            className="w-full border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains"
           >
             Learn More <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
