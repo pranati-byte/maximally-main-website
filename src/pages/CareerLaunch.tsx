@@ -1,4 +1,3 @@
-
 import { GraduationCap, FileText, Users, Briefcase, Network, Star, ArrowRight, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
@@ -20,8 +19,8 @@ const CareerLaunch = () => {
         <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/70 mb-8 max-w-3xl mx-auto">
           Build the career foundation that gets you noticed. Land opportunities that matter.
         </p>
-        <Button className="pixel-button text-lg px-8 py-6">
-          Kickstart Your Future
+        <Button onClick={() => window.location.href = '/bootcamps'} className="pixel-button text-lg px-8 py-6">
+          Join Our Bootcamp
           <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </section>
@@ -151,7 +150,7 @@ const CareerLaunch = () => {
       <section className="px-4 py-20 text-center">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-press-start text-3xl mb-6">Ready to Launch Your Career?</h2>
-          <Button className="pixel-button text-lg px-8 py-6">
+          <Button onClick={() => window.location.href = '/bootcamps'} className="pixel-button text-lg px-8 py-6">
             Start Your Journey
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

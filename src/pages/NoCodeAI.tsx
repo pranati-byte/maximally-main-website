@@ -1,4 +1,3 @@
-
 import { Database, Bot, Layers, Rocket, Laptop, ArrowRight, Users, HelpCircle, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
@@ -79,8 +78,8 @@ const NoCodeAI = () => {
           <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto">
             Master the tools used by successful founders to build million-dollar products—no coding required.
           </p>
-          <Button className="bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-jetbrains group">
-            Launch Without Code
+          <Button onClick={() => window.location.href = '/bootcamps'} className="bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-jetbrains group">
+            Join Our Bootcamp
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
