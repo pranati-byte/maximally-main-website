@@ -25,12 +25,12 @@ const Collaborate = () => {
   ];
 
   const benefits = [
-    { icon: Target, title: 'Real-world Impact', desc: 'Shape the future of teen education in India', stat: '1000+ teens impacted' },
-    { icon: Users, title: 'Recognition', desc: 'Connect with our growing community', stat: '50+ active partners' },
-    { icon: Rocket, title: 'Flexible Formats', desc: 'Remote or live, one-time or long-term', stat: '100+ events hosted' }
+    { icon: Target, title: 'Real-world Impact', desc: 'Shape the future of teen education in India' },
+    { icon: Users, title: 'Recognition', desc: 'Connect with our growing community' },
+    { icon: Rocket, title: 'Flexible Formats', desc: 'Remote or live, one-time or long-term' }
   ];
 
-  
+
 
   const ways = [
     { icon: Rocket, title: 'Run a Bootcamp' },
@@ -70,7 +70,7 @@ const Collaborate = () => {
         </motion.div>
       </section>
 
-      
+
 
       {/* Who Can Collaborate - Enhanced with gradients and hover effects */}
       <section className="py-12 px-4">
@@ -110,7 +110,7 @@ const Collaborate = () => {
                 <item.icon className="h-12 w-12 text-maximally-blue mb-4 animate-bounce" />
                 <h3 className="font-press-start text-lg mb-2">{item.title}</h3>
                 <p className="font-jetbrains text-maximally-black/70 mb-4">{item.desc}</p>
-                <div className="font-press-start text-sm text-maximally-blue">{item.stat}</div>
+                {/*Removed stat here*/}
               </motion.div>
             ))}
           </div>
