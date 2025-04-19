@@ -2,7 +2,7 @@ import {
   ArrowRight, 
   CalendarCheck, 
   CheckCircle, 
-  Star, 
+  Star,
   Rocket,
   BrainCircuit,
   Users,
@@ -17,6 +17,7 @@ import {
   Bot as BotIcon
 } from 'lucide-react';
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Button } from '../components/ui/button';
 import { Link } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -175,98 +176,108 @@ const Bootcamps = () => {
     }
   ];
 
+  const benefits = [
+    {
+      title: "Certificate of Excellence",
+      description: "Recognized credential for college applications.",
+      icon: <GraduationCap className="h-5 w-5 text-maximally-green flex-shrink-0 mt-1" />
+    },
+    {
+      title: "Verified alumni badge",
+      description: "Use on LinkedIn and other social platforms.",
+      icon: <Award className="h-5 w-5 text-maximally-green flex-shrink-0 mt-1" />
+    },
+    {
+      title: "Private Discord with mentors & founders",
+      description: "Network with successful entrepreneurs and industry experts.",
+      icon: <MessageCircle className="h-5 w-5 text-maximally-green flex-shrink-0 mt-1" />
+    },
+    {
+      title: "Access to internships & collaborations",
+      description: "Exclusive opportunities with partner companies.",
+      icon: <Users className="h-5 w-5 text-maximally-green flex-shrink-0 mt-1" />
+    },
+    {
+      title: "Letters of recommendation",
+      description: "Top 10 performers receive personalized recommendation letters.",
+      icon: <Trophy className="h-5 w-5 text-maximally-green flex-shrink-0 mt-1" />
+    },
+    {
+      title: "Early access to future programs",
+      description: "First to know about new Maximally opportunities.",
+      icon: <CalendarCheck className="h-5 w-5 text-maximally-green flex-shrink-0 mt-1" />
+    }
+  ];
+
   return (
     <>
       <SEO {...seoData} />
       <div className="min-h-screen bg-white pt-20">
-        <section className="py-20 bg-maximally-black relative overflow-hidden animate-gradient-x">
-          <div className="absolute inset-0 bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red opacity-20 animate-pulse"></div>
+        <motion.section 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="min-h-[90vh] py-20 bg-maximally-black relative overflow-hidden flex items-center justify-center"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-maximally-blue/20 via-maximally-purple/20 to-maximally-red/20 animate-gradient-x"></div>
           <div className="absolute inset-0 opacity-30">
             <div className="absolute inset-0 bg-grid-white/10" />
           </div>
 
-          <div className="container mx-auto px-4 relative">
-            <div className="text-center mb-12">
-              <h1 className="font-press-start text-4xl md:text-5xl text-maximally-blue mb-4 animate-fade-in">
-                Maximally Summer Bootcamp 2025
-              </h1>
-              <p className="font-jetbrains text-white/80 mb-6 max-w-3xl mx-auto">
-                India's Premier Program for the Next Generation of Founders, Creators, and Leaders
-              </p>
-              <div className="inline-block bg-maximally-blue/20 px-4 py-2 rounded-full animate-pulse mb-6">
-                <span className="font-jetbrains text-maximally-blue">
-                  🧠 Invite-only | Ages 13–20 | 200 Selected Students | ₹2,500 (only if selected)
-                </span>
-              </div>
-              
-              <blockquote className="border-l-4 border-maximally-red pl-4 my-8 max-w-2xl mx-auto text-left">
-                <p className="font-jetbrains italic text-white text-lg">
-                  "Don't enroll. Apply. Because we don't hand out potential. We select it."
-                </p>
-              </blockquote>
-              
-              <Button 
-                onClick={handleApplyNow}
-                className="mt-6 bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains text-lg px-8 py-6 group"
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center max-w-4xl mx-auto">
+              <motion.h1 
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                className="font-press-start text-4xl md:text-5xl lg:text-6xl text-maximally-blue mb-6 leading-tight"
               >
-                Apply to Join 
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                The most ambitious teens in India will be here this summer.
+                <span className="text-maximally-red block mt-4">Will you?</span>
+              </motion.h1>
+              
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className="space-y-6 mt-8"
+              >
+                <div className="inline-block bg-maximally-blue/20 px-6 py-3 rounded-full animate-pulse">
+                  <span className="font-jetbrains text-maximally-blue">
+                    🎯 Only 200 spots available | Application deadline: April 30
+                  </span>
+                </div>
+                
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button 
+                    onClick={handleApplyNow}
+                    className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains text-lg px-8 py-6 group animate-bounce"
+                  >
+                    🔥 Apply Now
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-maximally-blue/5 to-transparent"></div>
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="font-press-start text-3xl text-maximally-black mb-8 text-center">
-                Why Maximally?
-              </h2>
-              
-              <p className="font-jetbrains text-xl mb-6 text-maximally-black/80">
-                This is not a course. It's a <span className="font-bold text-maximally-blue">career-altering inflection point</span>.
-                We select 200 of India's most driven young minds and challenge them to operate at the highest level.
-              </p>
-              
-              <h3 className="font-jetbrains font-bold text-lg mb-4 text-maximally-black">
-                What you'll get:
-              </h3>
-              
-              <ul className="space-y-3 mb-10">
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-maximally-green mr-2 flex-shrink-0 mt-1" />
-                  <span className="font-jetbrains">High-stakes problem-solving</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-maximally-green mr-2 flex-shrink-0 mt-1" />
-                  <span className="font-jetbrains">Expert-led workshops</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-maximally-green mr-2 flex-shrink-0 mt-1" />
-                  <span className="font-jetbrains">Real-world creation</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-maximally-green mr-2 flex-shrink-0 mt-1" />
-                  <span className="font-jetbrains">Deep network of ambitious peers</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-16 bg-maximally-black/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="font-press-start text-3xl text-maximally-black mb-4">
-                📚 Curriculum: 7 Days. No Filler.
-              </h2>
-            </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {curriculumDays.map((day, index) => (
-                <div 
-                  key={index} 
-                  className="pixel-border bg-white p-6 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl animate-fade-in"
+                <motion.div
+                  key={index}
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                  className="pixel-border bg-white p-6 relative overflow-hidden transition-all duration-300"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     {day.icon}
@@ -284,12 +295,52 @@ const Bootcamps = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
-        
+
+        <motion.section 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="py-16 bg-maximally-black/5"
+        >
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="text-center mb-8"
+              >
+                <h2 className="font-press-start text-3xl text-maximally-black">
+                  Accepted? <span className="text-maximally-red">You're in for life.</span>
+                </h2>
+              </motion.div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ x: index % 2 === 0 ? -20 : 20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.03 }}
+                    className="flex items-start gap-3 px-5 py-4 bg-white rounded-lg shadow-sm pixel-border"
+                  >
+                    {benefit.icon}
+                    <div>
+                      <h3 className="font-jetbrains font-bold text-maximally-black">{benefit.title}</h3>
+                      <p className="font-jetbrains text-sm text-maximally-black/70">{benefit.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
