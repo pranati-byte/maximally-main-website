@@ -8,6 +8,7 @@ const Hero = () => {
   const [text, setText] = useState("");
   const fullText = ">> Max out your potential_";
   const textRef = useRef(null);
+  const [showCursor, setShowCursor] = useState(true);
   const isMobile = window.innerWidth <= 768;
 
   useEffect(() => {
@@ -21,7 +22,14 @@ const Hero = () => {
       }
     }, 100);
 
-    return () => clearInterval(timer);
+    const cursorTimer = setInterval(() => {
+      setShowCursor(!showCursor);
+    }, 500);
+
+    return () => {
+      clearInterval(timer);
+      clearInterval(cursorTimer);
+    };
   }, []);
 
   // Pixel avatar coordinates for background effect
@@ -56,9 +64,9 @@ const Hero = () => {
       <div className="z-10 text-center max-w-4xl px-4">
         <h1 
           ref={textRef} 
-          className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-black mb-4 sm:mb-6 terminal"
+          className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-black mb-4 sm:mb-6 glow-text"
         >
-          {text}
+          {text}{showCursor ? '|' : ''}
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl font-jetbrains text-maximally-black/80 mb-8 sm:mb-12 max-w-2xl mx-auto">
