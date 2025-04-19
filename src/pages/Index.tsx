@@ -79,17 +79,19 @@ const Index = () => {
         }} />)}
 
           <div className="relative container mx-auto px-4 pt-32 pb-20">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6 inline-block group">
-                <div className="pixel-border bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red p-3 animate-pulse relative overflow-hidden shimmer-bg transform transition-transform hover:scale-110">
-                  <Target className="h-8 w-8 text-white animate-spin-slow" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent shimmer-bg"></div>
+            <div className="max-w-4xl mx-auto text-center relative">
+              <div className="absolute inset-0 pixel-grid-bg opacity-20"></div>
+              <div className="mb-6 inline-block group relative">
+                <div className="minecraft-block bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red p-3 relative overflow-hidden">
+                  <Target className="h-8 w-8 text-white animate-float" />
+                  <div className="absolute inset-0 bg-grid-white opacity-30"></div>
                 </div>
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-press-start text-maximally-black mb-8">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-press-start text-maximally-black mb-8 relative minecraft-text">
                 {text}
                 <span className="inline-block w-[3px] h-[1em] bg-maximally-blue ml-1 animate-[cursor-blink_1s_infinite]" />
+                <div className="absolute inset-0 minecraft-glow"></div>
               </h1>
 
               <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto mb-12 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
