@@ -33,11 +33,11 @@ const Bootcamps = () => {
       {/* Hero Section */}
       <section className="bg-white py-16 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="font-press-start text-4xl md:text-5xl mb-6">
+          <h1 className="font-press-start text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 md:mb-6 px-2">
             Our <span className="bg-[#39FF14]/20">most ambitious</span> teens join us{" "}
             <span className="bg-[#FF5F5F]/20">this summer</span>. Will you?
           </h1>
-          <p className="font-jetbrains text-xl mb-8">
+          <p className="font-jetbrains text-lg md:text-xl mb-6 md:mb-8 px-4 md:px-0">
             Only <span className="bg-yellow-200">200 students</span> get{" "}
             <span className="bg-blue-100">accepted</span> into our{" "}
             <span className="bg-green-100">certificate of excellence</span> program.
@@ -57,10 +57,10 @@ const Bootcamps = () => {
 
       {/* Countdown Timer (Fixed) */}
       <div className="fixed bottom-0 left-0 right-0 bg-black text-white py-3 text-center z-50">
-        <p className="font-press-start">
-          ⏳ Applications close on May 30 | {timeLeft}
+        <p className="font-press-start text-sm md:text-base">
+          🎉 Applications are open! | {timeLeft}
         </p>
-        <p className="font-jetbrains text-sm">
+        <p className="font-jetbrains text-xs md:text-sm">
           Only 200 students will be selected. First come, first served.
         </p>
       </div>
@@ -69,7 +69,7 @@ const Bootcamps = () => {
       <section className="py-12 px-4 bg-gray-50">
         <div className="container mx-auto text-center">
           <h2 className="font-press-start text-3xl mb-8">🏆 Accepted? You're In for Life</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 px-4 md:px-0">
             <Card className="border-2 border-[#39FF14]/30 hover:border-[#39FF14] transition-all">
               <CardContent className="p-6">
                 <h3 className="font-press-start text-xl mb-4">🎓 Certificate of Excellence</h3>
