@@ -6,12 +6,12 @@ import React from 'react';
 const Bootcamps = () => {
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-20 md:pt-24"> {/* Added padding top for navbar */}
       {/* Hero Section */}
-      <section className="bg-white py-8 sm:py-16 px-3 sm:px-4">
+      <section className="bg-white py-6 sm:py-16 px-3 sm:px-4">
         <div className="container mx-auto text-center">
-          <h1 className="font-press-start text-xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 md:mb-6 px-2">
-            Our <span className="bg-[#39FF14]/20">most ambitious</span> teens join us{" "}
+          <h1 className="font-press-start text-xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 md:mb-8 px-2">
+            India's <span className="bg-[#39FF14]/20">most ambitious</span> teens join us{" "}
             <span className="bg-[#FF5F5F]/20">this summer</span>. Will you?
           </h1>
           <p className="font-jetbrains text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4 md:px-0">
