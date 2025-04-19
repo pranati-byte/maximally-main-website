@@ -551,6 +551,44 @@
     content: '';
     @apply absolute bottom-0 left-0 w-full h-3 bg-maximally-blue/20 -z-10;
   }
+
+  .minecraft-button {
+    @apply font-press-start relative transform transition-all duration-200 border-2 border-black;
+    background: linear-gradient(45deg, #4D89FF, #3C9EE7);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8),
+                inset -2px -2px 0 rgba(0, 0, 0, 0.3),
+                inset 2px 2px 0 rgba(255, 255, 255, 0.3);
+    animation: pulse 2s infinite;
+  }
+
+  .minecraft-button:hover {
+    @apply transform -translate-y-1;
+    background: linear-gradient(45deg, #3C9EE7, #4D89FF);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.8),
+                inset -2px -2px 0 rgba(0, 0, 0, 0.3),
+                inset 2px 2px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .minecraft-button:active {
+    @apply transform translate-y-1;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+  }
+
+  .minecraft-gradient {
+    background: linear-gradient(135deg, rgba(77, 137, 255, 0.2), rgba(60, 158, 231, 0.1));
+    animation: gradientShift 8s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
 }
 
 /* Scrollbar styling */
