@@ -12,19 +12,32 @@ const SummerPrograms2025 = () => {
         <h2 className="font-press-start text-2xl mb-4">🌟 1. Maximally Summer Bootcamp (All-India, Virtual)</h2>
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div><strong>Age Group:</strong> 13–20</div>
-          <div><strong>Cost:</strong> ₹799–₹4000</div>
-          <div><strong>Duration:</strong> 2 weeks per bootcamp</div>
-          <div><strong>Period:</strong> May–July 2025</div>
+          <div><strong>Cost:</strong> ₹2,500 (only if selected)</div>
+          <div><strong>Duration:</strong> 7 days of intensive training</div>
+          <div><strong>Selection:</strong> Only 200 students</div>
         </div>
-        <p className="mb-4">Maximally is India's answer to Leangap—a high-intensity, high-impact summer experience where teens don't just learn, they build.</p>
-        <ul className="list-disc pl-6 mb-4">
-          <li>Entrepreneurship (Founder Lab)</li>
-          <li>Public Speaking & Debate</li>
-          <li>Digital Marketing</li>
-          <li>AI + No-Code Tools</li>
-          <li>MUN & Global Citizenship</li>
-          <li>Video Editing & Storytelling</li>
+        <p className="mb-4">Maximally isn't just another summer program—it's a career-altering inflection point where India's most driven young minds come together to operate at the highest level.</p>
+        
+        <h3 className="font-press-start text-xl mb-3">Curriculum Highlights:</h3>
+        <ul className="list-disc pl-6 mb-4 space-y-2">
+          <li>Day 1: Orientation & Mindset Reset</li>
+          <li>Day 2: Entrepreneurship Fundamentals</li>
+          <li>Day 3: Digital Marketing & Distribution</li>
+          <li>Day 4: AI & No-Code Execution</li>
+          <li>Day 5: Public Speaking & Influence</li>
+          <li>Day 6: Personal Branding</li>
+          <li>Day 7: Demo Day with Industry Leaders</li>
         </ul>
+
+        <div className="bg-white/80 p-4 rounded-lg mt-6">
+          <h4 className="font-press-start text-lg mb-2">🎯 Who Should Apply:</h4>
+          <ul className="list-none space-y-2">
+            <li>• Teen founders ready to build their first ₹1CR startup</li>
+            <li>• Ambitious teens who want to lead the future</li>
+            <li>• Students who love challenges, ideas, and energy</li>
+            <li>• Communicators, creatives, hackers, and builders</li>
+          </ul>
+        </div>
       </section>
 
       <section className="my-8">
@@ -47,36 +60,34 @@ const SummerPrograms2025 = () => {
         <p className="mb-4">Get University of London affiliated pre-college experience in economics, business, and finance.</p>
       </section>
 
-      <section className="my-8">
-        <h2 className="font-press-start text-2xl mb-4">6. NIAS Summer School</h2>
-        <p className="mb-4">Dive into research, science, policy, and philosophy at the National Institute of Advanced Studies, Bengaluru.</p>
-      </section>
-
-      <section className="my-8">
-        <h2 className="font-press-start text-2xl mb-4">7. Kritsnam Summer Research Program</h2>
-        <p className="mb-4">Engage in project-based learning focused on environmental science and engineering.</p>
-      </section>
-
-      <section className="my-8">
-        <h2 className="font-press-start text-2xl mb-4">8. Camp K12 Virtual Bootcamps</h2>
-        <p className="mb-4">Learn coding, design, and entrepreneurship in beginner-friendly virtual sessions.</p>
-      </section>
-
-      <section className="my-8">
-        <h2 className="font-press-start text-2xl mb-4">9. MUN World India</h2>
-        <p className="mb-4">Experience diplomacy and develop leadership skills through their Summer Diplomacy Program.</p>
-      </section>
-
       <section className="pixel-border p-6 bg-maximally-red/5 my-8">
-        <h2 className="font-press-start text-2xl mb-4">Final Thoughts</h2>
-        <p className="mb-4">
-          Whether you're trying to <strong>boost your college applications</strong>, 
-          <strong>explore your passions</strong>, or <strong>just build something epic this summer</strong>, 
-          these programs offer more than just knowledge—they offer transformation.
-        </p>
-        <div className="mt-4 text-center">
-          <p className="font-press-start text-lg">
-            🎯 Ready to level up this summer? Start with Maximally's Summer Bootcamp!
+        <h2 className="font-press-start text-2xl mb-4">Why Choose Maximally?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div className="bg-white/80 p-4 rounded-lg">
+            <h3 className="font-press-start text-lg mb-2">🎓 Certificate of Excellence</h3>
+            <p>Recognized proof of your skill and execution</p>
+          </div>
+          <div className="bg-white/80 p-4 rounded-lg">
+            <h3 className="font-press-start text-lg mb-2">🤝 Alumni-Only Privileges</h3>
+            <p>Access to exclusive future opportunities</p>
+          </div>
+          <div className="bg-white/80 p-4 rounded-lg">
+            <h3 className="font-press-start text-lg mb-2">🌐 Lifetime Network</h3>
+            <p>Connect with India's future leaders</p>
+          </div>
+          <div className="bg-white/80 p-4 rounded-lg">
+            <h3 className="font-press-start text-lg mb-2">🎯 Future Access</h3>
+            <p>Your badge of honor in the digital age</p>
+          </div>
+        </div>
+        
+        <div className="mt-6 text-center">
+          <p className="font-press-start text-lg mb-4">
+            🎯 Don't just attend. Get selected.
+          </p>
+          <p className="font-jetbrains">
+            Only 200 students get accepted into our certificate of excellence program.
+            Once you're in, you're in for life.
           </p>
         </div>
       </section>
@@ -85,7 +96,7 @@ const SummerPrograms2025 = () => {
 
   return (
     <BlogPost
-      title="Top 10 Summer Programs for Teens in India (2025 Edition)"
+      title="Top Summer Programs for Teens in India (2025 Edition)"
       date="March 15, 2025"
       readTime="8 min read"
       content={content}
