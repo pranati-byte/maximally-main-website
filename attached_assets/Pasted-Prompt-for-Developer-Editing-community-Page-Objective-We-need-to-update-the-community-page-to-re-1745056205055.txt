@@ -1,0 +1,142 @@
+Prompt for Developer: Editing /community Page
+Objective:
+We need to update the /community page to reflect the exclusive, invite-only nature of Maximally’s private community. The page should communicate that entry into the community is by application only, with participation in our bootcamps being the best way to gain access. The page should be designed to feel premium and exclusive.
+
+Content Structure & Sections:
+Headline & Introduction
+
+Title: "Maximally Inner Circle_"
+
+Subtitle: "The most ambitious teens in India. One private community. Zero fluff."
+
+Text:
+"This isn’t your average Discord server. To join the Maximally Inner Circle, you’ll need to apply, interview, and prove your spark. We’re looking for:
+
+Self-starters building cool stuff
+
+Teens with bold ideas and bigger dreams
+
+Bootcamp alums who crushed it
+
+Curious minds who actually do"
+
+How to Join
+
+Title: "Access by Application Only"
+
+Text:
+"This is an exclusive space. To become part of Maximally's community, you'll need to apply, go through an interview process, and prove you’re ready to take the next step in your journey. If you’re looking to join, you’ll need to show us your passion, vision, and ambition."
+
+Best Pathway to Join
+
+Title: "Easiest Way In? Do the Bootcamp."
+
+Text:
+"Complete one of our bootcamps and stand out as a Maximally alumnus. If you perform well, you'll have the best chance of securing a spot in the community. This is the best way to prove you’re Maximally material."
+
+What You Get
+
+Title: "What You Get"
+
+Text:
+"Once you’re in, you unlock:
+
+Access to our private Discord
+
+Invite-only WhatsApp circles
+
+Curated job & internship drops
+
+Alumni mentorship & collab spaces
+
+IRL meetups & partner events"
+
+Ensure these items are listed clearly with short bullet points for readability.
+
+What It’s About
+
+Title: "Not Just a Chatroom"
+
+Text:
+"This is a launchpad disguised as a community — a place to test ideas, build real stuff, get feedback, and find your tribe."
+
+Access Rules
+
+Title: "No Public Invites. No Exceptions."
+
+Text:
+"We don’t drop open links. Ever. If you’re serious, [apply here]."
+
+CTA (Call-to-Action)
+
+Text:
+
+Add a button or link saying "Apply Here" that leads to an application form (Google Form, Notion, or another platform for collecting applications).
+
+Bonus Suggestions:
+Community Index (Inside the Server)
+
+Add a “Community Index” section within the Discord server that highlights:
+
+Top projects created by members
+
+Collaborations that are happening within the community
+
+Member milestones (e.g., graduation from bootcamp, job placements, etc.)
+
+This will help showcase the talent and progress of the community.
+
+Community Tiers (Roles in Discord)
+
+Create roles within the Discord server such as:
+
+Builder — for those working on startup projects
+
+Speaker — for those focusing on public speaking or MUN
+
+Hacker — for tech-focused individuals
+
+Marketer — for those in digital marketing or content creation
+
+These roles should be awarded based on bootcamp performance or expertise.
+
+The roles could be displayed in member profiles to add an extra layer of exclusivity and pride.
+
+Alumni Lounge
+
+Create a hidden channel in Discord exclusively for bootcamp graduates.
+
+This channel can be for mentorship, advanced opportunities, and exclusive content for those who have completed bootcamps.
+
+Referral Pathway for Applications
+
+Allow existing members or alumni to nominate others to apply. This gives a sense of “gatekeeping” while also maintaining the exclusivity.
+
+If a member nominates someone, it could unlock priority status in the application process.
+
+Technical Notes:
+Remove Public Links to Discord & WhatsApp:
+
+Ensure that any links to the Discord or WhatsApp community are not visible to non-members. These links will only be shared with approved members after their application is successful.
+
+Design Requirements:
+
+Ensure the design is energetic, clean, and exclusive. It should feel like an elite club where only the top teens get access.
+
+Use Maximally’s brand colors (white, red, blue) and keep the style minimalist but maximalist in energy — it should pop.
+
+Integrate Application Flow (Optional):
+
+If possible, integrate an application form directly on the page (Google Form, Typeform, etc.) for potential members to apply right away. The form should collect:
+
+Name
+
+Age
+
+Brief personal bio
+
+What they hope to achieve by joining the community
+
+Why they believe they belong in the Maximally community
+
+Let me know if you need any further clarifications or adjustments. Thank you!
