@@ -33,8 +33,8 @@ const Bootcamps = () => {
       </section>
 
       {/* Countdown Timer (Fixed) */}
-      <div className="fixed bottom-0 left-0 right-0 bg-black text-white py-2 sm:py-3 text-center z-50">
-        <p className="font-press-start text-xs sm:text-sm md:text-base">
+      <div className="fixed bottom-0 left-0 right-0 bg-black text-white py-2 sm:py-3 text-center z-40">
+        <p className="font-press-start text-xs sm:text-sm md:text-base mb-12 sm:mb-0">
           🎉 Applications are open!
         </p>
         <p className="font-jetbrains text-[10px] sm:text-xs md:text-sm">
