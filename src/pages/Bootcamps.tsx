@@ -12,7 +12,9 @@ import {
   PenTool,
   GraduationCap,
   Award,
-  MessageCircle
+  MessageCircle,
+  ShoppingBag,
+  Bot as BotIcon
 } from 'lucide-react';
 import { useState, useEffect } from "react";
 import { Button } from '../components/ui/button';
@@ -106,7 +108,7 @@ const Bootcamps = () => {
         "Growth hacking 101",
         "Building a content engine"
       ],
-      icon: <Store className="h-6 w-6 text-maximally-green" />
+      icon: <ShoppingBag className="h-6 w-6 text-maximally-green" />
     },
     {
       day: "Day 4",
@@ -116,7 +118,7 @@ const Bootcamps = () => {
         "Building fast prototypes",
         "Automating workflows"
       ],
-      icon: <Bot className="h-6 w-6 text-maximally-purple" />
+      icon: <BotIcon className="h-6 w-6 text-maximally-purple" />
     },
     {
       day: "Day 5",
