@@ -31,6 +31,7 @@ import SummerBreak2025 from './pages/BlogPost/SummerBreak2025';
 import RealWorldSkills2025 from './pages/BlogPost/RealWorldSkills2025';
 import OnlineCourses2025 from './pages/BlogPost/OnlineCourses2025';
 import Internships2025 from './pages/BlogPost/Internships2025';
+import ThankYou from './pages/ThankYou';
 
 
 const queryClient = new QueryClient();
@@ -68,6 +69,7 @@ const App = () => {
             <Route path="/blog/real-world-skills-2025" element={<RealWorldSkills2025 />} />
             <Route path="/blog/online-courses-2025" element={<OnlineCourses2025 />} />
             <Route path="/blog/internships-2025" element={<Internships2025 />} />
+            <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
             <Route path="/privacy" element={<Privacy />} />
