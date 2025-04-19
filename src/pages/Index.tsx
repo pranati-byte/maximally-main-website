@@ -102,7 +102,10 @@ const Index = () => {
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
-                <button onClick={() => setIsTallyFormOpen(true)} className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto">
+                <button 
+                  onClick={() => window.location.href = 'https://tally.so/r/wQEGEA'} 
+                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto"
+                >
                   <span>Register Now</span>
                   <CalendarCheck className="h-4 w-4" />
                 </button>
