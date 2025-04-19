@@ -268,9 +268,6 @@ const Index = () => {
         {/* Why Choose Section */}
         <WhyMaximally />
 
-        {/* Testimonials */}
-        <Testimonials />
-
         {/* Collaboration Section */}
         <section className="py-20 bg-maximally-blue/5">
           <div className="container mx-auto px-4 text-center">
