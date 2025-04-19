@@ -30,50 +30,6 @@
 
 @keyframes cursor-blink {
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes float-delayed {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: float-delayed 6s ease-in-out infinite;
-  animation-delay: 3s;
-}
-
-.pixel-border {
-  position: relative;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
-
-.pixel-border::before {
-  content: '';
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  bottom: -4px;
-  left: -4px;
-  z-index: -1;
-  background: linear-gradient(45deg, #39FF14, #FF5F5F, #B400FF);
-  border-radius: inherit;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.pixel-border:hover::before {
-  opacity: 1;
-}
-
-
 .gradient-text-career {
   background: linear-gradient(135deg, #4D89FF, #FFD700, #00CED1);
   -webkit-background-clip: text;
