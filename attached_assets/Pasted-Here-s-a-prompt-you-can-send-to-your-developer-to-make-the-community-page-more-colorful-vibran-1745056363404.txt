@@ -1,0 +1,65 @@
+Here’s a prompt you can send to your developer to make the `/community` page more **colorful, vibrant**, and visually attractive while keeping the **text intact**:
+
+---
+
+### **Prompt for Developer: Make /community Page Colorful & Attractive**
+
+---
+
+**Objective:**  
+We want to make the `/community` page more visually engaging and dynamic, using **multiple colors** while keeping the text intact. The goal is to make the page feel vibrant, youthful, and exciting, aligning with Maximally’s energetic, ambitious brand. Please ensure the design is colorful but doesn’t overwhelm the content.
+
+---
+
+### **Key Instructions:**
+
+1. **Keep the Text Intact**  
+   - The **text** from the previous prompt should remain unchanged. Focus only on enhancing the page’s **visual appeal** with colors, layout, and design elements.
+
+2. **Use Maximally's Brand Colors**  
+   - Make use of **Maximally's brand colors**: white, red, and blue, and add complementary **vibrant accents** to make the page feel more dynamic.  
+   - You can experiment with **gradients**, background textures, and subtle variations of the brand colors to add depth and variety.
+
+3. **Colorful Backgrounds for Sections**  
+   - Assign **distinct background colors** to each section (e.g., “How to Join”, “What You Get”, “What It’s About”), making them stand out while keeping the text readable.
+   - Use **gradient backgrounds** or **soft color overlays** to create contrast while ensuring the page doesn't look too chaotic.
+
+4. **Highlighted Text & Key Points**  
+   - Use **bold color highlights** for important points or key phrases (e.g., "Easiest Way In? Do the Bootcamp.") to draw attention.
+   - Experiment with **colored text** for specific section headers or key phrases to create a sense of flow and engagement.
+
+5. **CTA Buttons**  
+   - Make the **call-to-action buttons** (e.g., "**Apply Here**") stand out by using a **contrasting color** like bright red or blue.  
+   - Consider using **hover effects** (e.g., buttons change shade when hovered over) to make them feel interactive and engaging.
+
+6. **Icons/Graphics**  
+   - You can introduce **small icons or illustrations** in the design to enhance visual appeal (e.g., a graduation cap for “Bootcamp,” a handshake for “Mentorship”).  
+   - **Subtle animations** or transitions when the user scrolls through sections could be an interesting touch.
+
+7. **Ensure Readability**  
+   - Ensure the text is always **legible** despite the colorful design. Prioritize readability by ensuring **sufficient contrast** between the text and background colors.
+   - Stick to clean typography that matches Maximally’s aesthetic.
+
+8. **Balance Color Usage**  
+   - Use colors in a **balanced way** — the page should feel **vibrant**, but not **over-saturated** or chaotic. Make sure the sections are clearly separated and easy to navigate.
+
+9. **Page Flow and Structure**  
+   - Keep the **layout clear and structured**. Use different color blocks or sections to **define** each area of the page. For example:
+     - Section 1: Introduction — Red background
+     - Section 2: How to Join — Blue background
+     - Section 3: Benefits/What You Get — White background with colorful accents
+
+---
+
+### **Additional Design Notes:**
+
+- Please keep the **Maximally vibe** in mind: the page should feel **exclusive**, **energetic**, and **aspirational**. It needs to reflect a community of **ambitious teens** who want to be part of something big.
+- Use design techniques that **draw attention** to important details but make sure the design doesn’t detract from the **core message** of the page.
+
+---
+
+### **Let me know** if you need any further clarifications or adjustments. Looking forward to seeing the page come alive with colors!
+
+---
+
+This should guide your developer in making the page **colorful, dynamic**, and visually striking while ensuring the design enhances the message of exclusivity and ambition. Let me know if you'd like to add anything more!
