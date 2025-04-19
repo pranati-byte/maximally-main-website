@@ -2,11 +2,29 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import TallyFormDialog from "@/components/TallyFormDialog";
-import VideoPitchDialog from '../components/VideoPitchDialog'; // Added this import
+import VideoPitchDialog from '../components/VideoPitchDialog';
+import React from 'react'; // Added React import
 
 
 const Bootcamps = () => {
-  //State variables are removed because they are not used in the edited code.
+  // Calculate countdown to May 29, 11:59 PM IST
+  const targetDate = new Date('2025-05-29T23:59:00+05:30').getTime();
+  const [timeLeft, setTimeLeft] = React.useState('');
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      setTimeLeft(`${days}d ${hours}h ${minutes}m`);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -23,7 +41,16 @@ const Bootcamps = () => {
             <span className="bg-green-100">certificate of excellence</span> program.
             Once <span className="bg-purple-100">you're in for life</span>.
           </p>
-          <TallyFormDialog /> {/* Kept the TallyFormDialog */}
+          <p>Application Deadline: {timeLeft}</p> {/* Added Countdown Timer */}
+          <TallyFormDialog />
+        </div>
+      </section>
+
+      {/* Application Timeline Section */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="container mx-auto text-center">
+          <h2 className="font-press-start text-3xl mb-8">Application Timeline</h2>
+          <p className="font-jetbrains">Placeholder for application timeline details.</p>
         </div>
       </section>
 
@@ -79,8 +106,23 @@ const Bootcamps = () => {
         </div>
       </section>
 
-      {/* Who Should Apply Section */}
+
+      {/* FAQ Section */}
       <section className="py-12 px-4 bg-gray-50">
+        <div className="container mx-auto text-center">
+          <h2 className="font-press-start text-3xl mb-8">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            {/* Add FAQ items here */}
+            <AccordionItem value="faq1">
+              <AccordionTrigger className="font-press-start">What is the application process?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">Placeholder for FAQ 1 answer.</AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      {/* Who Should Apply Section */}
+      <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <h2 className="font-press-start text-3xl mb-8">👥 Who Should Apply</h2>
           <div className="space-y-4">
@@ -97,7 +139,7 @@ const Bootcamps = () => {
       </section>
 
       {/* Curriculum Section */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-gray-50">
         <div className="container mx-auto">
           <h2 className="font-press-start text-3xl mb-8 text-center">📚 Curriculum</h2>
           <Accordion type="single" collapsible className="w-full">
@@ -159,7 +201,7 @@ const Bootcamps = () => {
           </Accordion>
         </div>
       </section>
-      <VideoPitchDialog open={false} onOpenChange={()=> {}} onSubmitSuccess={()=> {}}/> {/*Kept the VideoPitchDialog */}
+      <VideoPitchDialog open={false} onOpenChange={()=> {}} onSubmitSuccess={()=> {}}/>
     </div>
   );
 };
