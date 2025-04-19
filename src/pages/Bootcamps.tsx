@@ -15,15 +15,10 @@ const Bootcamps = () => {
             <span className="bg-[#FF5F5F]/20">this summer</span>. Will you?
           </h1>
           <p className="font-jetbrains text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4 md:px-0">
-            🚨 The Summer of a Lifetime Starts Here
-          </p>
-          <p className="font-jetbrains text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4 md:px-0">
-            Maximally Summer Bootcamp 2025 — India's most ambitious teen program is now live.
-            Only 200 get in. Once you're in, you're in for life.
-          </p>
-          <p className="font-jetbrains text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4 md:px-0">
-            Startup builders. Public speakers. AI explorers. Future leaders.
-            This isn't your average Zoom class — this is the launchpad.
+            Only <span className="bg-yellow-200">200 students</span> get{" "}
+            <span className="bg-blue-100">accepted</span> into our{" "}
+            <span className="bg-green-100">certificate of excellence</span> program.
+            Once <span className="bg-purple-100">you're in for life</span>.
           </p>
           <TallyFormDialog />
           <div className="mt-8">
@@ -31,7 +26,7 @@ const Bootcamps = () => {
               onClick={() => window.location.href = "#apply"}
               className="pixel-button bg-[#39FF14] text-black px-12 py-6 text-xl font-press-start hover:scale-105 transform transition-all shadow-xl"
             >
-              Apply Now →
+              APPLY NOW 🚀
             </button>
           </div>
         </div>
