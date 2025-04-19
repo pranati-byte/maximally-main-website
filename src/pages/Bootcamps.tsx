@@ -5,11 +5,29 @@ import TallyFormDialog from "@/components/TallyFormDialog";
 import React from 'react';
 
 const Bootcamps = () => {
-  // Calculate countdown to June 1, 12:00 PM IST
-  const targetDate = new Date('2024-06-01T12:00:00+05:30').getTime();
+  // Calculate countdown to May 25, 11:59 PM IST
+  const targetDate = new Date('2024-05-25T23:59:00+05:30').getTime();
   const [timeLeft, setTimeLeft] = React.useState('');
 
   React.useEffect(() => {
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        setTimeLeft('Applications are now closed');
+        clearInterval(timer);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      setTimeLeft(`${days}d ${hours}h ${minutes}m`);
+    }, 1000);
+
+    return () => clearInterval(timer);
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate - now;
