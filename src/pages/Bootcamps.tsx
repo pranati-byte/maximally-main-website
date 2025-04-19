@@ -5,8 +5,8 @@ import TallyFormDialog from "@/components/TallyFormDialog";
 import React from 'react';
 
 const Bootcamps = () => {
-  // Calculate countdown to May 29, 11:59 PM IST
-  const targetDate = new Date('2024-05-29T23:59:00+05:30').getTime();
+  // Calculate countdown to June 1, 12:00 PM IST
+  const targetDate = new Date('2024-06-01T12:00:00+05:30').getTime();
   const [timeLeft, setTimeLeft] = React.useState('');
 
   React.useEffect(() => {
@@ -40,6 +40,14 @@ const Bootcamps = () => {
             Once <span className="bg-purple-100">you're in for life</span>.
           </p>
           <TallyFormDialog />
+          <div className="mt-8">
+            <button 
+              onClick={() => window.location.href = "#apply"}
+              className="pixel-button bg-[#39FF14] text-black px-12 py-6 text-xl font-press-start hover:scale-105 transform transition-all shadow-xl"
+            >
+              APPLY NOW 🚀
+            </button>
+          </div>
         </div>
       </section>
 
