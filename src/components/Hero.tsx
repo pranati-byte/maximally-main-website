@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Users, Rocket } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -71,8 +71,9 @@ const Hero = () => {
             onClick={() => window.location.href = '/bootcamps'}
           >
             <Rocket className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-            Start Learning
+            Apply for Summer 2025
           </Button>
+        </div>
 
         <div className="mt-16 text-center">
           <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-6">
@@ -81,7 +82,7 @@ const Hero = () => {
           <p className="text-lg text-maximally-black/80 font-jetbrains max-w-2xl mx-auto mb-8">
             Connect with ambitious teens learning real-world skills. Share experiences, collaborate on projects, and grow together.
           </p>
-          <Link to="/community" className="inline-block register-button"> {/* Added className here */}
+          <Link to="/community" className="inline-block">
             <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-maximally-black hover:transform hover:scale-105 transition-transform cursor-pointer">
               <Users className="h-12 w-12 text-maximally-blue mx-auto mb-4" />
               <p className="font-press-start text-sm text-maximally-black">1000+ members and growing</p>
@@ -98,8 +99,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-{/* Added CSS rule */}
-.register-button {
-  background-color: red;
-}

@@ -271,8 +271,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Summer Bootcamps Section */}
-        <SummerBootcamps />
+        {/* Summer Bootcamps Section - Commented out as per changes.md */}
+        {/* We've replaced this with the new Bootcamps page */}
 
         {/* Why Choose Section */}
         <WhyMaximally />
@@ -334,7 +334,7 @@ const Index = () => {
         </button>
 
         <Footer />
-        <TallyFormDialog isOpen={isTallyFormOpen} onClose={() => setIsTallyFormOpen(false)} /> {/* Added TallyFormDialog component */}
+        <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} /> {/* Added TallyFormDialog component */}
       </div>
     </>;
 };

@@ -10,6 +10,9 @@ interface SkillPageLayoutProps {
   icon?: ReactNode;
   iconBgColor?: string;
   tagline?: string;
+  skillName?: string;
+  communityType?: string;
+  communityLink?: string;
 }
 
 const SkillPageLayout = ({
@@ -18,6 +21,9 @@ const SkillPageLayout = ({
   icon,
   iconBgColor = "bg-sky-500",
   tagline,
+  skillName,
+  communityType,
+  communityLink,
 }: SkillPageLayoutProps) => {
   return (
     <div className="min-h-screen bg-white">
