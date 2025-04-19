@@ -1,0 +1,192 @@
+Absolutely — here's your **extremely detailed, dev-ready prompt** for the `/bootcamps` page revamp, written with clear structure, content, order, and dev-level clarity. Just copy-paste this into a doc or Slack message for your dev.
+
+---
+
+## 🔧 `/bootcamps` Page Revamp — FINAL PROMPT FOR DEV
+
+Hey! Here's a full breakdown of all the changes we want on the `/bootcamps` page. Please **don’t remove any core structure** unless specified. Focus on **reordering, adding sections, enhancing visuals**, and making the text look super attractive (Gen-Z/Minecraft/SaaS aesthetic).
+
+---
+
+### ✅ **1. Reorder Sections (Final Flow)**
+
+Please re-arrange sections of the page as follows:
+
+**New Section Order:**
+
+1. Hero Banner (retain existing but change background to solid white)
+2. ✅ “Accepted? You're In For Life” (move this **just below the Apply button**)
+3. 🎁 Perks & Alumni Privileges
+4. 👥 Who Should Apply
+5. 📍 Application Roadmap (New)
+6. 📚 Curriculum (make this dropdown-style)
+7. ❓ FAQs (New)
+8. ⏳ Countdown Timer (floating or fixed on page)
+9. Apply Now button (can repeat somewhere mid-page too)
+
+---
+
+### 🎨 **2. Hero Banner Enhancements**
+
+**Background:** Make the hero section background **solid white** (no gradient or dynamic image).
+
+**Text Styling:** Make it pop. Add color highlights to important phrases using Maximally brand colors (red, blue, black). Example:  
+- Highlight **"Our most ambitious teens"**, **"Only 200 students"**, **"Certificate of Excellence"**, and **"You're in for life"** with bold color styling.
+
+**Text content (unchanged, but styled better):**
+```
+Our most ambitious teens join us this summer. Will you?
+
+Only 200 students get accepted into our certificate of excellence program. Once you're in for life.
+```
+
+---
+
+### 🏆 **3. Accepted? You're In For Life Section (MOVE UP)**
+
+**Move this entire block to just after the Hero section and Apply button.**
+
+Use a clean block format with each benefit clearly broken out with an icon or emoji.
+
+Text to display:
+```
+🏆 Accepted? You're In for Life  
+Your badge of honor in the digital age  
+
+🎓 Certificate of Excellence  
+Recognized proof of your skill and execution
+
+🤝 Alumni-Only Privileges  
+Access to exclusive future opportunities
+
+🌐 Lifetime Network  
+Connect with India’s most ambitious future leaders
+```
+
+---
+
+### 🎁 **4. Perks & Alumni Privileges (VISUAL + ICONS)**
+
+Use cards or columns to display each perk with a cool icon and clean formatting.
+
+Text:
+```
+🎁 Perks & Alumni Privileges
+
+💼 Professional Network  
+Private Discord with mentors & founders
+
+🚀 Career Growth  
+Access to internships and collaborations
+
+📜 Recognition  
+Letters of recommendation for top performers
+
+🌟 Exclusive Events  
+Priority access to future Maximally events
+```
+
+---
+
+### 👥 **5. Who Should Apply (Keep same text, improve layout)**
+
+Use icon bullets or styled text blocks:
+```
+👥 Who Should Apply
+
+🧠 Teen founders ready to build their first ₹1CR startup  
+🚀 Ambitious teens who want to lead the future  
+🔥 Students who love challenges, ideas, and energy  
+🎤 Communicators, creatives, hackers, and builders
+```
+
+---
+
+### 🗺 **6. Application Roadmap (NEW SECTION)**
+
+Add this as a **visual roadmap** (you can use numbered blocks, a horizontal flowchart, or icons per step). Preferably place it right **after Who Should Apply**.
+
+```
+📍 Application Timeline / Roadmap
+
+1. 🚀 Applications Open (April 20)
+2. 🎥 Submit your application + 1-minute intro video
+3. 🔍 Reviewed by the Maximally Team
+4. 📩 Acceptance emails sent by May 30
+5. 💳 Pay ₹2,500 to confirm your spot (only if selected)
+6. 🎉 Bootcamp begins June 1
+
+⏰ Final Deadline to Apply: May 29, 11:59 PM IST
+```
+
+---
+
+### 📚 **7. Curriculum — Convert to Dropdown (NEW UI)**
+
+Convert the following list into a collapsible **accordion/dropdown UI**, titled “📚 Curriculum”:
+
+Each day should be one dropdown item:
+```
+Day 1: Orientation & Mindset Reset  
+Day 2: Entrepreneurship Fundamentals  
+Day 3: Digital Marketing & Distribution  
+Day 4: AI & No-Code Execution  
+Day 5: Public Speaking & Influence  
+Day 6: Personal Branding  
+Day 7: Demo Day
+```
+
+Put this **below Application Roadmap.**
+
+---
+
+### ❓ **8. FAQ Section (NEW)**
+
+Add a new accordion-style FAQ block toward the bottom of the page, before the final Apply button.
+
+```
+❓ Frequently Asked Questions
+
+Q: Do I need to know how to code?  
+A: Nope! We cover AI & no-code tools that anyone can use.
+
+Q: What if I’m shy or introverted?  
+A: You’re welcome here. We help you build confidence, not just skills.
+
+Q: Is this only for kids from big cities?  
+A: Not at all. We’ve got students from small towns across India. All that matters is ambition.
+
+Q: Will I get personal feedback or help?  
+A: Yes. You’ll have mentors, peers, and our team to guide you.
+
+Q: What happens after the bootcamp?  
+A: You join a lifelong alumni network with exclusive access to events, internships, and more.
+```
+
+---
+
+### ⏳ **9. Countdown Timer (NEW Sticky Block)**
+
+Add a visible countdown to May 29 (application deadline). You can place it:
+- Fixed bar at the top or bottom of screen, OR
+- Floating sticky element
+
+**Text:**
+```
+⏳ Applications close in: [Live Countdown to May 29, 11:59 PM IST]  
+Only 200 students will be selected. First come, first served.
+```
+
+---
+
+### 🪄 FINAL STYLE NOTES
+
+- Stick to **solid colors** — no gradients or blurred/floating backgrounds. White/light backgrounds preferred for clarity.
+- Use **Maximally brand colors**: red, blue, black.
+- Keep everything **Gen-Z friendly**: big headings, emojis/icons, bold text, interactive components.
+- Don't change any text content without approval. Just style and position better.
+- Prioritize legibility and clean spacing over cramming.
+
+---
+
+Let me know if you need this in Notion, Markdown, Figma handoff style, or React/Tailwind snippet format!
