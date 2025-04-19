@@ -167,7 +167,7 @@ const Bootcamps = () => {
       {/* Curriculum Section */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="container mx-auto">
-          <h2 className="font-press-start text-3xl mb-8 text-center">📚 Curriculum</h2>
+          <h2 className="font-press-start text-3xl mb-8 text-center">📚 Bootcamp Program</h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="day1">
               <AccordionTrigger className="font-press-start">Day 1: Orientation & Mindset Reset</AccordionTrigger>
