@@ -58,7 +58,7 @@ const Bootcamps = () => {
       {/* Countdown Timer (Fixed) */}
       <div className="fixed bottom-0 left-0 right-0 bg-black text-white py-3 text-center z-50">
         <p className="font-press-start">
-          ⏳ Applications close in: {timeLeft}
+          ⏳ Applications close on May 30 | {timeLeft}
         </p>
         <p className="font-jetbrains text-sm">
           Only 200 students will be selected. First come, first served.
