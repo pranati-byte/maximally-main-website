@@ -8,35 +8,35 @@ const blogPosts = [
   {
     title: "Top 10 Summer Programs for Teens in India (2025 Edition)",
     excerpt: "Discover the most impactful summer programs that will transform your skills and boost your college applications. From Maximally's intensive bootcamps to other notable programs...",
-    date: "March 15, 2025",
+    date: "April 10, 2025",
     readTime: "8 min read",
     category: "Education"
   },
   {
     title: "How to Make the Most of Your Summer Break (For Students Ages 13–20)",
     excerpt: "Turn your summer break into a launchpad for success! Learn why joining Maximally's skill-focused bootcamps should be your #1 priority this summer...",
-    date: "March 10, 2025",
+    date: "April 10, 2025",
     readTime: "6 min read",
     category: "Career Development"
   },
   {
     title: "Why Real-World Skills Matter More Than Marks in 2025",
     excerpt: "The truth about marks vs. skills in today's job market. See how 87% of employers now prioritize practical skills over academic scores, and why Maximally's approach works...",
-    date: "March 5, 2025",
+    date: "April 10, 2025",
     readTime: "10 min read",
     category: "Industry Insights"
   },
   {
     title: "Best Online Courses for Teenagers in India (Free + Paid)",
     excerpt: "A comprehensive guide to the top online learning platforms for teens. Starting with Maximally's innovative bootcamps, explore options that fit your learning style...",
-    date: "March 1, 2025",
+    date: "April 10, 2025",
     readTime: "12 min read",
     category: "Reviews"
   },
   {
     title: "How to Get Internships in High School (Ultimate Guide)",
     excerpt: "Your step-by-step roadmap to landing amazing internships while in high school. Learn how Maximally's Career Starter Pack bootcamp can give you the edge...",
-    date: "February 25, 2025",
+    date: "April 10, 2025",
     readTime: "15 min read",
     category: "Career Guide",
     link: "/blog/internships-2025"
