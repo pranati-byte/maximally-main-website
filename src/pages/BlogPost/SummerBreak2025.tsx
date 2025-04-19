@@ -46,52 +46,60 @@ const SummerBreak2025 = () => {
       </section>
 
       <section id="bootcamps" className="pixel-border p-6 bg-maximally-blue/5 my-8">
-        <h2 className="font-press-start text-2xl mb-4">🔥 Summer Bootcamps 2025</h2>
-        <p className="mb-4">Maximally is offering <strong>6 high-impact bootcamps this summer</strong> (May–July 2025):</p>
-        
-        <div className="space-y-6">
-          <div>
-            <h3 className="font-press-start text-xl mb-2">🧠 Founder Lab (Entrepreneurship Bootcamp)</h3>
-            <p>Build your first business or startup idea from scratch. No MBA required.</p>
+        <h2 className="font-press-start text-2xl mb-4">🔥 Maximally Summer Bootcamp 2025</h2>
+        <div className="mb-6">
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div><strong>Selection:</strong> Only 200 students</div>
+            <div><strong>Cost:</strong> ₹2,500 (only if selected)</div>
+            <div><strong>Duration:</strong> 7 days of intensive training</div>
+            <div><strong>Ages:</strong> 13–20</div>
           </div>
-          
-          <div>
-            <h3 className="font-press-start text-xl mb-2">🎤 Speak Mode (Public Speaking + Debate)</h3>
-            <p>Command any stage, ace interviews, and win debates like a pro.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-press-start text-xl mb-2">📱 Digital Arsenal (Marketing & Branding)</h3>
-            <p>Learn how to build your own brand and sell ideas like a Gen Z Don Draper.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-press-start text-xl mb-2">🧠 AI + No-Code Tools</h3>
-            <p>Master tools that let you automate like a wizard, no coding needed.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-press-start text-xl mb-2">🎬 Story Studio (Video Editing & Storytelling)</h3>
-            <p>Craft videos, reels, and stories that actually engage people.</p>
-          </div>
-          
-          <div>
-            <h3 className="font-press-start text-xl mb-2">🌍 MUN + Global Citizenship</h3>
-            <p>Diplomacy, global issues, policy. Think MUN, but actually useful.</p>
-          </div>
+        </div>
+
+        <p className="mb-6">This isn't just another summer program—it's a <strong>career-altering inflection point</strong> where India's most driven young minds come together to operate at the highest level.</p>
+
+        <h3 className="font-press-start text-xl mb-3">7-Day Intensive Journey:</h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Day 1: Orientation & Mindset Reset</li>
+          <li>Day 2: Entrepreneurship Fundamentals</li>
+          <li>Day 3: Digital Marketing & Distribution</li>
+          <li>Day 4: AI & No-Code Execution</li>
+          <li>Day 5: Public Speaking & Influence</li>
+          <li>Day 6: Personal Branding</li>
+          <li>Day 7: Demo Day with Industry Leaders</li>
+        </ul>
+
+        <div className="bg-white/10 p-4 rounded-lg mt-6">
+          <h4 className="font-press-start text-lg mb-2">🎯 Who Should Apply:</h4>
+          <ul className="list-none space-y-2">
+            <li>• Teen founders ready to build their first ₹1CR startup</li>
+            <li>• Ambitious teens who want to lead the future</li>
+            <li>• Students who love challenges, ideas, and energy</li>
+            <li>• Communicators, creatives, hackers, and builders</li>
+          </ul>
         </div>
       </section>
 
       <section className="pixel-border p-6 bg-maximally-red/5 my-8">
-        <h2 className="font-press-start text-2xl mb-4">💸 Pricing That Works for Students</h2>
-        <div className="space-y-2 mb-4">
-          <p>• Individual bootcamps from <strong>₹799 to ₹1300</strong></p>
-          <p>• <strong>All-access pass</strong>: ₹4000 (Join all 6 bootcamps!)</p>
-          <p>• Bundle offers available too (like 2-for-₹1799)</p>
+        <h2 className="font-press-start text-2xl mb-4">🏆 What You Get</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white/10 p-4 rounded-lg">
+            <h3 className="font-press-start text-lg mb-2">🎓 Certificate of Excellence</h3>
+            <p>Recognized proof of your skill and execution</p>
+          </div>
+          <div className="bg-white/10 p-4 rounded-lg">
+            <h3 className="font-press-start text-lg mb-2">🤝 Alumni-Only Privileges</h3>
+            <p>Access to exclusive future opportunities</p>
+          </div>
+          <div className="bg-white/10 p-4 rounded-lg">
+            <h3 className="font-press-start text-lg mb-2">🌐 Lifetime Network</h3>
+            <p>Connect with India's future leaders</p>
+          </div>
+          <div className="bg-white/10 p-4 rounded-lg">
+            <h3 className="font-press-start text-lg mb-2">🎯 Future Access</h3>
+            <p>Your badge of honor in the digital age</p>
+          </div>
         </div>
-        <p className="font-press-start text-sm mt-4">
-          🧠 Bonus: Every participant gets a certificate, live sessions, community access, and lifelong bragging rights.
-        </p>
       </section>
 
       <section className="my-8">
