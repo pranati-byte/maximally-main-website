@@ -147,6 +147,60 @@
                  0 0 10px #fff,
                  0 0 21px #fff,
                  0 0 42px #3C9EE7,
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.minecraft-block {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.minecraft-block::before,
+.minecraft-block::after {
+  content: '';
+  position: absolute;
+  background: inherit;
+  transition: transform 0.3s ease;
+}
+
+.minecraft-block::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+
+.minecraft-block::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  transform-origin: right;
+  transform: rotateY(90deg);
+}
+
+.minecraft-block:hover {
+  transform: translateZ(10px);
+}
+
+.minecraft-block:hover::before {
+  transform: rotateX(-45deg) translateY(-50%);
+}
+
+.minecraft-block:hover::after {
+  transform: rotateY(45deg) translateX(50%);
+}
+
                  0 0 82px #3C9EE7,
                  0 0 92px #3C9EE7;
   }
@@ -300,34 +354,65 @@
     box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.9);
   }
 
+  /* Minecraft-themed styles */
+  .minecraft-bg {
+    background-image: linear-gradient(45deg, #1a1c2e 25%, #242736 25%, #242736 50%, #1a1c2e 50%, #1a1c2e 75%, #242736 75%, #242736 100%);
+    background-size: 20px 20px;
+    image-rendering: pixelated;
+  }
+
+  .minecraft-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px rgba(77, 137, 255, 0.5), 0 0 20px rgba(60, 158, 231, 0.3); }
+    to { text-shadow: 0 0 20px rgba(77, 137, 255, 0.8), 0 0 30px rgba(60, 158, 231, 0.5); }
+  }
+
   /* Pixel button styling */
   .pixel-button {
     @apply px-6 py-3 font-press-start text-sm md:text-base transition-all relative 
-           border-2 border-black text-white text-center;
+           border-2 border-black text-white text-center cursor-pointer;
     background: linear-gradient(135deg, rgba(60, 158, 231, 0.9), rgba(60, 158, 231, 0.8));
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8),
               inset -2px -2px 0 rgba(0, 0, 0, 0.3),
               inset 2px 2px 0 rgba(255, 255, 255, 0.3);
     image-rendering: pixelated;
     transform-style: preserve-3d;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+
+  .pixel-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    transform: translateZ(-1px);
+    transition: transform 0.2s;
+  }
+
+  .pixel-button:hover {
+    transform: translate3d(-2px, -2px, 0) scale(1.05);
+  }
+
+  .pixel-button:hover::before {
+    transform: translateZ(-2px) scale(0.95);
+  }
+
+  .pixel-button:active {
+    transform: translate3d(2px, 2px, -5px) scale(0.95);
   }
 
   .pixel-button.register-button {
     background: linear-gradient(135deg, rgba(231, 60, 60, 0.9), rgba(231, 60, 60, 0.8));
-    box-shadow: 0 8px 32px rgba(231, 60, 60, 0.2);
+    animation: pulse 2s infinite;
   }
 
-  .pixel-button:hover {
-    transform: translate3d(-2px, -2px, 5px);
-    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.8),
-                inset -2px -2px 0 rgba(0, 0, 0, 0.3),
-                inset 2px 2px 0 rgba(255, 255, 255, 0.3);
-  }
-
-  .pixel-button:active {
-    transform: translate3d(2px, 2px, -5px);
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
   }
 
 
