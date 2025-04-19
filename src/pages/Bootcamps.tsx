@@ -1,7 +1,21 @@
-
+import { 
+  ArrowRight, 
+  CalendarCheck, 
+  CheckCircle, 
+  Star, 
+  Rocket,
+  BrainCircuit,
+  Users,
+  Mic,
+  Trophy,
+  DollarSign,
+  PenTool,
+  GraduationCap,
+  Award,
+  MessageCircle
+} from 'lucide-react';
 import { useState, useEffect } from "react";
 import { Button } from '../components/ui/button';
-import { ArrowRight, CalendarCheck, CheckCircle, Star, Rocket, BrainCircuit, Users, Mic, Store, Bot, PenTool } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Footer from '../components/Footer';
@@ -33,7 +47,6 @@ const Bootcamps = () => {
     setApplicationStep(3);
   };
 
-  // SEO data
   const seoData = {
     title: "Maximally Summer Bootcamp 2025 | Apply Now",
     description: "Apply to join India's premier summer bootcamp for ambitious teens. 7-day intensive program focused on entrepreneurship, AI, marketing, and public speaking.",
@@ -65,7 +78,6 @@ const Bootcamps = () => {
     }
   };
 
-  // Daily curriculum
   const curriculumDays = [
     {
       day: "Day 1",
@@ -138,7 +150,6 @@ const Bootcamps = () => {
     }
   ];
 
-  // FAQ items
   const faqItems = [
     {
       question: "What is the application process?",
@@ -166,7 +177,6 @@ const Bootcamps = () => {
     <>
       <SEO {...seoData} />
       <div className="min-h-screen bg-white pt-20">
-        {/* Hero Section */}
         <section className="py-20 bg-maximally-black relative overflow-hidden animate-gradient-x">
           <div className="absolute inset-0 bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red opacity-20 animate-pulse"></div>
           <div className="absolute inset-0 opacity-30">
@@ -204,7 +214,6 @@ const Bootcamps = () => {
           </div>
         </section>
 
-        {/* Why Maximally Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -243,7 +252,6 @@ const Bootcamps = () => {
           </div>
         </section>
         
-        {/* Curriculum Section */}
         <section className="py-16 bg-maximally-black/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -280,7 +288,6 @@ const Bootcamps = () => {
           </div>
         </section>
         
-        {/* Admissions Process */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -349,7 +356,6 @@ const Bootcamps = () => {
           </div>
         </section>
         
-        {/* Perks Section */}
         <section className="py-16 bg-maximally-black/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -410,7 +416,6 @@ const Bootcamps = () => {
           </div>
         </section>
         
-        {/* Who Should Apply */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -454,7 +459,6 @@ const Bootcamps = () => {
           </div>
         </section>
         
-        {/* FAQ Section */}
         <section className="py-16 bg-maximally-black/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -479,13 +483,11 @@ const Bootcamps = () => {
         </section>
       </div>
       
-      {/* Application Form Dialog */}
       <TallyFormDialog open={isApplicationFormOpen} onOpenChange={(open) => {
         setIsApplicationFormOpen(open);
         if (!open && applicationStep === 1) setApplicationStep(1);
       }} />
       
-      {/* Video Pitch Dialog */}
       <VideoPitchDialog 
         open={isVideoPitchOpen} 
         onOpenChange={setIsVideoPitchOpen}
