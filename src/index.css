@@ -147,6 +147,10 @@
                  0 0 10px #fff,
                  0 0 21px #fff,
                  0 0 42px #3C9EE7,
+                 0 0 82px #3C9EE7,
+                 0 0 92px #3C9EE7;
+  }
+}
 
 @keyframes shimmer {
   0% { transform: translateX(-100%); }
