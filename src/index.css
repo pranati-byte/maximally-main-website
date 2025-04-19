@@ -150,6 +150,14 @@
                  0 0 82px #3C9EE7,
                  0 0 92px #3C9EE7;
   }
+  50% { 
+    text-shadow: 0 0 4px #fff,
+                 0 0 7px #fff,
+                 0 0 13px #fff,
+                 0 0 25px #3C9EE7,
+                 0 0 50px #3C9EE7,
+                 0 0 60px #3C9EE7;
+  }
 }
 
 @keyframes shimmer {
