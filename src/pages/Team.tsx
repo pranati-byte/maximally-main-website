@@ -16,6 +16,16 @@ const teamMembers = [
     name: "Yash Kulkarni",
     role: "Chief Partnerships Advisor",
     fact: "3+ years driving strategic partnerships with Fortune 500 companies and leading educational institutions"
+  },
+  {
+    name: "Harsimar Singh Bhalla",
+    role: "Head of Public Speaking Department",
+    fact: "Leading our Public Speaking Department, bringing a wealth of experience and passion for teaching effective communication"
+  },
+  {
+    name: "Anshika Bhatia",
+    role: "Chief Marketing Officer",
+    fact: "Founder of Coexist, one of the largest NGOs in India, and now drives our marketing strategy, focusing on growth and outreach"
   }
 ];
 
