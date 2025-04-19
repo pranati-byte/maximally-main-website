@@ -238,34 +238,25 @@ const Index = () => {
           <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
           <div className="container mx-auto px-4 relative">
             <div className="text-center mb-12">
-              <div className="inline-block bg-maximally-blue/20 px-4 py-2 rounded-full mb-6 animate-pulse">
-                <span className="font-jetbrains text-maximally-blue">
-                  🎯 Only 200 Students Selected
+              <div className="inline-block bg-maximally-red/20 px-4 py-2 rounded-full mb-6 animate-pulse">
+                <span className="font-jetbrains text-maximally-red font-bold">
+                  🚨 The Summer of a Lifetime Starts Here
                 </span>
               </div>
-              <h2 className="font-press-start text-4xl text-maximally-blue mb-4">
-                Summer Bootcamp 2025
+              <h2 className="font-press-start text-3xl md:text-4xl text-maximally-blue mb-4">
+                Maximally Summer Bootcamp 2025
               </h2>
-              <p className="font-jetbrains text-white/80 mb-8 max-w-2xl mx-auto">
-                Don't enroll. Apply. Because we don't hand out potential. We select it.
+              <p className="font-jetbrains text-white/90 text-xl mb-6 max-w-3xl mx-auto">
+                India's most ambitious teen program is now live.
+                <br />Only 200 get in. Once you're in, you're in for life.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
-                <div className="pixel-border bg-white/10 p-6 text-white">
-                  <h3 className="font-press-start text-xl mb-2">🎯 Exclusive</h3>
-                  <p className="font-jetbrains text-white/80">Only 200 Selected Students</p>
-                </div>
-                <div className="pixel-border bg-white/10 p-6 text-white">
-                  <h3 className="font-press-start text-xl mb-2">🚀 All-Access</h3>
-                  <p className="font-jetbrains text-white/80">₹2,500 if Selected</p>
-                </div>
-                <div className="pixel-border bg-white/10 p-6 text-white">
-                  <h3 className="font-press-start text-xl mb-2">💎 For Life</h3>
-                  <p className="font-jetbrains text-white/80">Lifetime Alumni Network</p>
-                </div>
-              </div>
-              <Link to="/bootcamps" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse">
+              <p className="font-jetbrains text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+                Startup builders. Public speakers. AI explorers. Future leaders.
+                <br />This isn't your average Zoom class — this is the launchpad.
+              </p>
+              <Link to="/bootcamps" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse text-lg px-8 py-4">
                 <span>Apply Now</span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
           </div>
