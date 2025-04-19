@@ -4,29 +4,6 @@ import TallyFormDialog from "@/components/TallyFormDialog";
 import React from 'react';
 
 const Bootcamps = () => {
-  const targetDate = new Date('2024-05-25T23:59:00+05:30').getTime();
-  const [timeLeft, setTimeLeft] = React.useState('');
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance < 0) {
-        setTimeLeft('Applications are now closed');
-        clearInterval(timer);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-      setTimeLeft(`${days}d ${hours}h ${minutes}m`);
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [targetDate]);
 
   return (
     <div className="min-h-screen">
@@ -58,7 +35,7 @@ const Bootcamps = () => {
       {/* Countdown Timer (Fixed) */}
       <div className="fixed bottom-0 left-0 right-0 bg-black text-white py-3 text-center z-50">
         <p className="font-press-start text-sm md:text-base">
-          🎉 Applications are open! | {timeLeft}
+          🎉 Applications are open!
         </p>
         <p className="font-jetbrains text-xs md:text-sm">
           Only 200 students will be selected. First come, first served.
