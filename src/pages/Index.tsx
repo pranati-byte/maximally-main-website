@@ -240,31 +240,31 @@ const Index = () => {
             <div className="text-center mb-12">
               <div className="inline-block bg-maximally-blue/20 px-4 py-2 rounded-full mb-6 animate-pulse">
                 <span className="font-jetbrains text-maximally-blue">
-                  ⭐ Limited Spots Available
+                  🎯 Only 200 Students Selected
                 </span>
               </div>
               <h2 className="font-press-start text-4xl text-maximally-blue mb-4">
-                Summer Programme 2025
+                Summer Bootcamp 2025
               </h2>
               <p className="font-jetbrains text-white/80 mb-8 max-w-2xl mx-auto">
-                Join India's most innovative summer program for teenagers from June 1-8, 2025. After intensive bootcamps, participate in exciting hackathons, competitions, and a special 2-day challenge!
+                Don't enroll. Apply. Because we don't hand out potential. We select it.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
                 <div className="pixel-border bg-white/10 p-6 text-white">
-                  <h3 className="font-press-start text-xl mb-2">6+ Programs</h3>
-                  <p className="font-jetbrains text-white/80">From AI to Public Speaking</p>
+                  <h3 className="font-press-start text-xl mb-2">🎯 Exclusive</h3>
+                  <p className="font-jetbrains text-white/80">Only 200 Selected Students</p>
                 </div>
                 <div className="pixel-border bg-white/10 p-6 text-white">
-                  <h3 className="font-press-start text-xl mb-2">1 Week</h3>
-                  <p className="font-jetbrains text-white/80">Intensive Learning + Events</p>
+                  <h3 className="font-press-start text-xl mb-2">🚀 All-Access</h3>
+                  <p className="font-jetbrains text-white/80">₹2,500 if Selected</p>
                 </div>
                 <div className="pixel-border bg-white/10 p-6 text-white">
-                  <h3 className="font-press-start text-xl mb-2">₹799-1299</h3>
-                  <p className="font-jetbrains text-white/80">Early Bird Pricing</p>
+                  <h3 className="font-press-start text-xl mb-2">💎 For Life</h3>
+                  <p className="font-jetbrains text-white/80">Lifetime Alumni Network</p>
                 </div>
               </div>
               <Link to="/bootcamps" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse">
-                <span>View All Bootcamps</span>
+                <span>Apply Now</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
