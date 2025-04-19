@@ -1,11 +1,9 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import TallyFormDialog from "@/components/TallyFormDialog";
 import React from 'react';
 
 const Bootcamps = () => {
-  // Calculate countdown to May 25, 11:59 PM IST
   const targetDate = new Date('2024-05-25T23:59:00+05:30').getTime();
   const [timeLeft, setTimeLeft] = React.useState('');
 
@@ -28,16 +26,7 @@ const Bootcamps = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-      setTimeLeft(`${days}d ${hours}h ${minutes}m`);
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
 
   return (
     <div className="min-h-screen">
