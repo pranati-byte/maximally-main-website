@@ -1,118 +1,143 @@
 
-import { Terminal, Award, Users, Rocket } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import TallyFormDialog from "@/components/TallyFormDialog";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <main className="container mx-auto px-4 py-24">
-        {/* Hero Section */}
-        <section className="text-center mb-20">
-          <h1 className="font-press-start text-4xl md:text-5xl text-maximally-black mb-6">
-            About Maximally
+    <div className="min-h-screen pt-20">
+      <SEO 
+        title="About Maximally | Where Young Innovators Are Born"
+        description="Join India's exclusive community for ambitious teens. Learn entrepreneurship, AI, and innovation through our transformative bootcamps."
+      />
+
+      {/* Hero Section */}
+      <section className="py-20 bg-maximally-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
+        <div className="container mx-auto px-4 text-center relative">
+          <h1 className="font-press-start text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+            <span className="bg-[#39FF14]/20 px-2">Maximally:</span> Where Young{" "}
+            <span className="bg-[#FF5F5F]/20 px-2">Innovators</span> Are Born
           </h1>
-          <p className="font-jetbrains text-lg text-maximally-black/80 max-w-2xl mx-auto">
-            Empowering teens with real-world skills that schools forgot to teach
+          <p className="font-jetbrains text-white/80 text-xl md:text-2xl mb-8">
+            Ready to change the world?
           </p>
-        </section>
+          <TallyFormDialog />
+        </div>
+      </section>
 
-        {/* Mission Section */}
-        <section className="grid md:grid-cols-2 gap-12 mb-20">
-          <div className="space-y-6">
-            <h2 className="font-press-start text-2xl text-maximally-black">Our Mission</h2>
-            <p className="font-jetbrains text-maximally-black/80">
-              Maximally was founded with a clear vision: to bridge the gap between traditional education
-              and real-world success. We believe that every teen deserves access to practical skills
-              that will shape their future.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="pixel-border bg-maximally-blue/10 p-6">
-              <h3 className="font-press-start text-sm mb-2">Innovation</h3>
-              <p className="font-jetbrains text-sm">Leading edge learning.</p>
-            </div>
-            <div className="pixel-border bg-maximally-red/10 p-6">
-              <h3 className="font-press-start text-sm mb-2">Growth</h3>
-              <p className="font-jetbrains text-sm">Continuous improvement.</p>
-            </div>
-            <div className="pixel-border bg-maximally-black/10 p-6">
-              <h3 className="font-press-start text-sm mb-2">Community</h3>
-              <p className="font-jetbrains text-sm">Strong together.</p>
-            </div>
-            <div className="pixel-border bg-maximally-blue/10 p-6">
-              <h3 className="font-press-start text-sm mb-2">Ambition</h3>
-              <p className="font-jetbrains text-sm">Dream big, achieve big.</p>
-            </div>
-          </div>
-        </section>
+      {/* Mission Statement */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-press-start text-3xl mb-8">Our Mission</h2>
+          <p className="font-jetbrains text-xl max-w-3xl mx-auto">
+            Maximally isn't just an{" "}
+            <span className="bg-[#39FF14]/20 px-2">educational platform</span>;
+            it's a{" "}
+            <span className="bg-[#FF5F5F]/20 px-2">launchpad</span> for the next
+            generation of leaders.
+          </p>
+        </div>
+      </section>
 
-        
-
-        {/* Programs Section */}
-        <section className="mb-20">
-          <h2 className="font-press-start text-2xl text-maximally-black mb-8">&gt;&gt; Choose your power-ups_</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
-              <h3 className="font-press-start text-lg mb-4">Entrepreneurship</h3>
-              <p className="font-jetbrains text-maximally-black/80 mb-4">
-                Learn to build and scale your first startup.
-              </p>
-              <Link to="/entrepreneurship" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
-                Level Up &gt;
-              </Link>
+      {/* Bootcamp Experience */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="font-press-start text-3xl mb-12 text-center">The Bootcamp Experience</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+              <div className="text-4xl mb-4">🎓</div>
+              <h3 className="font-press-start text-lg mb-3">Expert-Led Sessions</h3>
+              <p className="font-jetbrains">Learn from industry leaders and successful founders</p>
             </div>
-            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
-              <h3 className="font-press-start text-lg mb-4">Public Speaking & MUN</h3>
-              <p className="font-jetbrains text-maximally-black/80 mb-4">
-                Master the art of persuasive communication.
-              </p>
-              <Link to="/public-speaking" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
-                Level Up &gt;
-              </Link>
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+              <div className="text-4xl mb-4">🤝</div>
+              <h3 className="font-press-start text-lg mb-3">IRL Meetups</h3>
+              <p className="font-jetbrains">Connect with peers in exclusive networking events</p>
             </div>
-            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
-              <h3 className="font-press-start text-lg mb-4">Digital Marketing</h3>
-              <p className="font-jetbrains text-maximally-black/80 mb-4">
-                Grow audiences and build online brands.
-              </p>
-              <Link to="/digital-marketing" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
-                Level Up &gt;
-              </Link>
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="font-press-start text-lg mb-3">1:1 Mentorship</h3>
+              <p className="font-jetbrains">Personal guidance from industry veterans</p>
             </div>
-            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
-              <h3 className="font-press-start text-lg mb-4">No-Code & AI</h3>
-              <p className="font-jetbrains text-maximally-black/80 mb-4">
-                Build apps without coding and leverage AI.
-              </p>
-              <Link to="/no-code-ai" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
-                Level Up &gt;
-              </Link>
-            </div>
-            <div className="pixel-border p-6 hover:bg-maximally-blue/5 transition-colors">
-              <h3 className="font-press-start text-lg mb-4">Career Launchpad</h3>
-              <p className="font-jetbrains text-maximally-black/80 mb-4">
-                Prepare for college and your dream career.
-              </p>
-              <Link to="/career-launch" className="font-press-start text-sm text-maximally-blue hover:text-maximally-blue/80">
-                Level Up &gt;
-              </Link>
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="font-press-start text-lg mb-3">Project Building</h3>
+              <p className="font-jetbrains">Create real products with cutting-edge tech</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="text-center">
-          <h2 className="font-press-start text-2xl text-maximally-black mb-6">
-            Ready to Max Out Your Potential?
-          </h2>
-          <button 
-            onClick={() => window.location.href = '/community'}
-            className="pixel-button bg-maximally-blue text-white hover:bg-maximally-blue/90"
-          >
-            Join Our Community
-          </button>
-        </section>
-      </main>
+      {/* How It Works */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="font-press-start text-3xl mb-12 text-center">How It Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-6xl mb-6">1️⃣</div>
+              <h3 className="font-press-start text-xl mb-4">Apply</h3>
+              <p className="font-jetbrains">Submit your application and show us your potential</p>
+            </div>
+            <div className="text-center">
+              <div className="text-6xl mb-6">2️⃣</div>
+              <h3 className="font-press-start text-xl mb-4">Learn</h3>
+              <p className="font-jetbrains">Master real-world skills through intensive training</p>
+            </div>
+            <div className="text-center">
+              <div className="text-6xl mb-6">3️⃣</div>
+              <h3 className="font-press-start text-xl mb-4">Succeed</h3>
+              <p className="font-jetbrains">Join our alumni network and access lifetime opportunities</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Inner Circle */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="font-press-start text-3xl mb-12 text-center">The Inner Circle</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-[#39FF14]/10 p-6 rounded-lg">
+              <h3 className="font-press-start text-xl mb-4">🏆 Certificate of Excellence</h3>
+              <p className="font-jetbrains">Your badge of honor in the digital age</p>
+            </div>
+            <div className="bg-[#FF5F5F]/10 p-6 rounded-lg">
+              <h3 className="font-press-start text-xl mb-4">🌐 Lifetime Network</h3>
+              <p className="font-jetbrains">Connect with India's future leaders</p>
+            </div>
+            <div className="bg-[#B400FF]/10 p-6 rounded-lg">
+              <h3 className="font-press-start text-xl mb-4">💼 Career Growth</h3>
+              <p className="font-jetbrains">Access to internships and collaborations</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Vision */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-press-start text-3xl mb-8">Our Vision</h2>
+          <p className="font-jetbrains text-xl max-w-3xl mx-auto mb-12">
+            We're building India's most powerful network of young{" "}
+            <span className="bg-[#39FF14]/20 px-2">innovators</span>,{" "}
+            <span className="bg-[#FF5F5F]/20 px-2">entrepreneurs</span>, and{" "}
+            <span className="bg-[#B400FF]/20 px-2">changemakers</span>. Our mission
+            is to foster ambition, drive change, and create the next generation of
+            world-class founders.
+          </p>
+          <div className="flex justify-center">
+            <Link
+              to="/bootcamps"
+              className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
+            >
+              <span>Ready to Maximize Your Potential?</span>
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
