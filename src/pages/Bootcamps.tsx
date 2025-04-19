@@ -23,10 +23,10 @@ const Bootcamps = () => {
           <TallyFormDialog />
           <div className="mt-8">
             <button 
-              onClick={() => window.location.href = "#apply"}
+              onClick={() => window.location.href = "https://tally.so/r/wQEGEA"}
               className="pixel-button bg-[#39FF14] text-black px-12 py-6 text-xl font-press-start hover:scale-105 transform transition-all shadow-xl"
             >
-              APPLY NOW 🚀
+              Apply Now →
             </button>
           </div>
         </div>
