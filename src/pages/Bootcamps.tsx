@@ -1,14 +1,12 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import TallyFormDialog from "@/components/TallyFormDialog";
-import VideoPitchDialog from '../components/VideoPitchDialog';
-import React from 'react'; // Added React import
-
+import React from 'react';
 
 const Bootcamps = () => {
   // Calculate countdown to May 29, 11:59 PM IST
-  const targetDate = new Date('2025-05-29T23:59:00+05:30').getTime();
+  const targetDate = new Date('2024-05-29T23:59:00+05:30').getTime();
   const [timeLeft, setTimeLeft] = React.useState('');
 
   React.useEffect(() => {
@@ -41,40 +39,47 @@ const Bootcamps = () => {
             <span className="bg-green-100">certificate of excellence</span> program.
             Once <span className="bg-purple-100">you're in for life</span>.
           </p>
-          <p>Application Deadline: {timeLeft}</p> {/* Added Countdown Timer */}
           <TallyFormDialog />
         </div>
       </section>
 
-      {/* Application Timeline Section */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="container mx-auto text-center">
-          <h2 className="font-press-start text-3xl mb-8">Application Timeline</h2>
-          <p className="font-jetbrains">Placeholder for application timeline details.</p>
-        </div>
-      </section>
+      {/* Countdown Timer (Fixed) */}
+      <div className="fixed bottom-0 left-0 right-0 bg-black text-white py-3 text-center z-50">
+        <p className="font-press-start">
+          ⏳ Applications close in: {timeLeft}
+        </p>
+        <p className="font-jetbrains text-sm">
+          Only 200 students will be selected. First come, first served.
+        </p>
+      </div>
 
       {/* Accepted Section */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="container mx-auto text-center">
           <h2 className="font-press-start text-3xl mb-8">🏆 Accepted? You're In for Life</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="border-2 border-[#39FF14]/30 hover:border-[#39FF14] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">Certificate of Excellence</h3>
-                <p className="font-jetbrains">Your badge of honor in the digital age</p>
+                <h3 className="font-press-start text-xl mb-4">🎓 Certificate of Excellence</h3>
+                <p className="font-jetbrains">Recognized proof of your skill and execution</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#FF5F5F]/30 hover:border-[#FF5F5F] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">Alumni-Only Privileges</h3>
-                <p className="font-jetbrains">Exclusive access to future opportunities</p>
+                <h3 className="font-press-start text-xl mb-4">🤝 Alumni-Only Privileges</h3>
+                <p className="font-jetbrains">Access to exclusive future opportunities</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#B400FF]/30 hover:border-[#B400FF] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">Lifetime Network</h3>
+                <h3 className="font-press-start text-xl mb-4">🌐 Lifetime Network</h3>
                 <p className="font-jetbrains">Connect with India's future leaders</p>
+              </CardContent>
+            </Card>
+            <Card className="border-2 border-[#3C9EE7]/30 hover:border-[#3C9EE7] transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-press-start text-xl mb-4">🎯 Future Access</h3>
+                <p className="font-jetbrains">Your badge of honor in the digital age</p>
               </CardContent>
             </Card>
           </div>
@@ -106,34 +111,66 @@ const Bootcamps = () => {
         </div>
       </section>
 
-
-      {/* FAQ Section */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="container mx-auto text-center">
-          <h2 className="font-press-start text-3xl mb-8">Frequently Asked Questions</h2>
-          <Accordion type="single" collapsible className="w-full">
-            {/* Add FAQ items here */}
-            <AccordionItem value="faq1">
-              <AccordionTrigger className="font-press-start">What is the application process?</AccordionTrigger>
-              <AccordionContent className="font-jetbrains">Placeholder for FAQ 1 answer.</AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </section>
-
       {/* Who Should Apply Section */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-gray-50">
         <div className="container mx-auto text-center">
           <h2 className="font-press-start text-3xl mb-8">👥 Who Should Apply</h2>
           <div className="space-y-4">
             <p className="font-jetbrains text-xl">
-              <span className="bg-[#39FF14]/20 px-2">Teen founders</span> ready to{" "}
-              <span className="bg-[#FF5F5F]/20 px-2">build their first ₹1CR</span> startup
+              <span className="bg-[#39FF14]/20 px-2">🧠 Teen founders</span> ready to{" "}
+              <span className="bg-[#FF5F5F]/20 px-2">build their first ₹1CR startup</span>
             </p>
             <p className="font-jetbrains text-xl">
-              <span className="bg-[#B400FF]/20 px-2">Ambitious teens</span> who want to{" "}
+              <span className="bg-[#B400FF]/20 px-2">🚀 Ambitious teens</span> who want to{" "}
               <span className="bg-[#3C9EE7]/20 px-2">lead the future</span>
             </p>
+            <p className="font-jetbrains text-xl">
+              <span className="bg-[#39FF14]/20 px-2">🔥 Students</span> who love{" "}
+              <span className="bg-[#FF5F5F]/20 px-2">challenges, ideas, and energy</span>
+            </p>
+            <p className="font-jetbrains text-xl">
+              <span className="bg-[#B400FF]/20 px-2">🎤 Communicators</span>,{" "}
+              <span className="bg-[#3C9EE7]/20 px-2">creatives, hackers, and builders</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Application Timeline */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto text-center">
+          <h2 className="font-press-start text-3xl mb-8">📍 Application Timeline</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-3xl mb-4">1️⃣</div>
+              <h3 className="font-press-start text-lg mb-2">🚀 Applications Open</h3>
+              <p className="font-jetbrains">April 20</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-3xl mb-4">2️⃣</div>
+              <h3 className="font-press-start text-lg mb-2">🎥 Submit Application</h3>
+              <p className="font-jetbrains">Application + 1-minute intro video</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-3xl mb-4">3️⃣</div>
+              <h3 className="font-press-start text-lg mb-2">🔍 Review Process</h3>
+              <p className="font-jetbrains">Reviewed by Maximally Team</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-3xl mb-4">4️⃣</div>
+              <h3 className="font-press-start text-lg mb-2">📩 Acceptance</h3>
+              <p className="font-jetbrains">Emails sent by May 30</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-3xl mb-4">5️⃣</div>
+              <h3 className="font-press-start text-lg mb-2">💳 Confirm Spot</h3>
+              <p className="font-jetbrains">Pay ₹2,500 if selected</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="text-3xl mb-4">6️⃣</div>
+              <h3 className="font-press-start text-lg mb-2">🎉 Begin Journey</h3>
+              <p className="font-jetbrains">Bootcamp begins June 1</p>
+            </div>
           </div>
         </div>
       </section>
@@ -201,7 +238,53 @@ const Bootcamps = () => {
           </Accordion>
         </div>
       </section>
-      <VideoPitchDialog open={false} onOpenChange={()=> {}} onSubmitSuccess={()=> {}}/>
+
+      {/* FAQ Section */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto">
+          <h2 className="font-press-start text-3xl mb-8 text-center">❓ Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="faq1">
+              <AccordionTrigger className="font-press-start">Do I need to know how to code?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                Nope! We cover AI & no-code tools that anyone can use.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq2">
+              <AccordionTrigger className="font-press-start">What if I'm shy or introverted?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                You're welcome here. We help you build confidence, not just skills.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq3">
+              <AccordionTrigger className="font-press-start">Is this only for kids from big cities?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                Not at all. We've got students from small towns across India. All that matters is ambition.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq4">
+              <AccordionTrigger className="font-press-start">Will I get personal feedback or help?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                Yes. You'll have mentors, peers, and our team to guide you.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq5">
+              <AccordionTrigger className="font-press-start">What happens after the bootcamp?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                You join a lifelong alumni network with exclusive access to events, internships, and more.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="container mx-auto text-center">
+          <h2 className="font-press-start text-3xl mb-6">Ready to Level Up?</h2>
+          <TallyFormDialog />
+        </div>
+      </section>
     </div>
   );
 };
