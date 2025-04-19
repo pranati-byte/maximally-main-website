@@ -1,335 +1,159 @@
-import { useEffect, useState } from 'react';
-import { ArrowRight, Star, Users, Target, Rocket, Sparkles, Crown, Code, Zap, CalendarCheck } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import SkillTracks from '@/components/SkillTracks';
-import WhyMaximally from '@/components/WhyMaximally';
-import Footer from '@/components/Footer';
-import Testimonials from '@/components/Testimonials';
-import { Helmet } from 'react-helmet';
-import SEO from '@/components/SEO';
-import TallyFormDialog from "../components/TallyFormDialog"; // Added import
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowRight, Users, Rocket, Brain, Book, Trophy, Star } from "lucide-react";
+import Hero from "@/components/Hero";
+import WhyMaximally from "@/components/WhyMaximally";
+import Events from "@/components/Events";
+import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Helmet } from 'react-helmet'; //Import from original
 
 const Index = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Maximally.in",
-    "description": "Premier skill development platform for Indian teenagers - Learn AI, Digital Marketing, Public Speaking & more",
-    "url": "https://maximally.in",
-    "logo": "https://maximally.in/logo.png",
-    "sameAs": ["https://twitter.com/maximallyHQ", "https://instagram.com/maximallyHQ"]
-  };
-  const [text, setText] = useState('');
-  const fullText = 'Level up your future';
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeFeature, setActiveFeature] = useState(0);
-  const [isTallyFormOpen, setIsTallyFormOpen] = useState(false);
-  const features = [{
-    icon: Code,
-    title: "Learn Real Skills",
-    description: "No more theory. Build real projects."
-  }, {
-    icon: Users,
-    title: "Join the Community",
-    description: "Connect with ambitious teens."
-  }, {
-    icon: Zap,
-    title: "Grow Faster",
-    description: "Accelerate your learning journey."
-  }];
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index <= fullText.length) {
-        setText(fullText.slice(0, index));
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 100);
-    const featureTimer = setInterval(() => {
-      setActiveFeature(prev => (prev + 1) % features.length);
-    }, 3000);
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      setIsVisible(scrolled > 100);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      clearInterval(timer);
-      clearInterval(featureTimer);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-  return <>
-      <SEO title="Maximally.in | Skill-building for Indian Teenagers" description="Join India's premier teen education platform. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps designed for Indian students." keywords="skill-building for Indian teenagers, bootcamps for students in India, learn digital marketing AI no-code, teen education India, social impact edtech startup" canonicalUrl="https://maximally.in" structuredData={structuredData} />
-      <div className="min-h-screen bg-white relative overflow-hidden">
-        {/* Hero Section */}
-        <section className="min-h-screen relative">
-          {/* Animated Background Grid */}
-          <div className="absolute inset-0 bg-white" />
-          <div className="absolute inset-0 pixel-grid opacity-30" />
+  return (
+    <div className="min-h-screen">
+      <SEO 
+        title="Maximally | India's Premier Community for Young Innovators"
+        description="Join Maximally to unlock your future in tech, entrepreneurship, and innovation. Learn from industry experts and build real-world skills."
+      />
 
-          {/* Floating Pixels */}
-          {[...Array(8)].map((_, i) => <div key={i} className="absolute w-4 h-4 bg-maximally-blue/20 pixel-border animate-float" style={{
-          top: `${Math.random() * 90}%`,
-          left: `${Math.random() * 90}%`,
-          animationDelay: `${i * 0.5}s`,
-          animationDuration: `${4 + i}s`
-        }} />)}
+      {/* Hero Section with Minecraft-style background */}
+      <section className="relative overflow-hidden pt-20 pb-16">
+        <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow">
+          {/* Pixelated clouds animation */}
+          <div className="absolute w-32 h-32 bg-maximally-blue/20 blur-xl animate-float top-10 left-10"></div>
+          <div className="absolute w-32 h-32 bg-maximally-purple/20 blur-xl animate-float-delayed top-40 right-20"></div>
+        </div>
 
-          <div className="relative container mx-auto px-4 pt-32 pb-20">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6 inline-block group">
-                <div className="pixel-border bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red p-3 animate-pulse relative overflow-hidden shimmer-bg transform transition-transform hover:scale-110">
-                  <Target className="h-8 w-8 text-white animate-spin-slow" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent shimmer-bg"></div>
-                </div>
-              </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="container mx-auto px-4 text-center relative z-10"
+        >
+          <h1 className="font-press-start text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+            Unlock Your Future: Join India's Premier Community for
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-maximally-blue to-maximally-purple block mt-2">
+              Young Innovators
+            </span>
+          </h1>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-press-start text-maximally-black mb-8">
-                {text}
-                <span className="inline-block w-[3px] h-[1em] bg-maximally-blue ml-1 animate-[cursor-blink_1s_infinite]" />
-              </h1>
+          <p className="font-jetbrains text-xl text-maximally-black/80 max-w-3xl mx-auto mb-8">
+            Level up your skills, connect with industry mentors, and build your future in tech and entrepreneurship.
+          </p>
 
-              <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto mb-12 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
-                Join a community of ambitious teens learning real-world skills through hands-on projects.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto">
-                  <span>Start Learning</span>
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-
-                <button 
-                  onClick={() => window.location.href = 'https://tally.so/r/wQEGEA'} 
-                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto"
-                >
-                  <span>Register Now</span>
-                  <CalendarCheck className="h-4 w-4" />
-                </button>
-                <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
-
-                <Link to="/community" className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto">
-                  <span>Join Community</span>
-                  <Users className="h-4 w-4" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Grid */}
-        <section className="py-20 bg-white relative">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => <div key={index} className={`pixel-border p-8 bg-white transition-all duration-500 ${activeFeature === index ? 'scale-105 shadow-xl' : 'scale-100'}`}>
-                  <div className="w-12 h-12 bg-maximally-blue pixel-border flex items-center justify-center mb-6">
-                    <feature.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <h3 className="font-press-start text-lg mb-4">{feature.title}</h3>
-                  <p className="font-jetbrains text-maximally-black/70">{feature.description}</p>
-                </div>)}
-            </div>
-          </div>
-        </section>
-
-        {/* Industry Leaders Section */}
-        <section className="py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/10 via-white to-maximally-purple/10" />
-          <div className="absolute inset-0 pixel-grid opacity-30" />
-
-          <div className="container mx-auto px-4 relative">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-maximally-blue/20 px-6 py-2 rounded-full mb-6 animate-pulse">
-                <span className="font-jetbrains text-maximally-blue font-bold">
-                  🌟 Learn from the Best
-                </span>
-              </div>
-
-              <h2 className="font-press-start text-3xl md:text-4xl mb-8 bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red bg-clip-text text-transparent">
-                Learn From Industry Leaders & Top University Students
-              </h2>
-
-              <div className="space-y-6 font-jetbrains text-lg">
-                <p className="mb-6">
-                  Learn from industry leaders at Meta, Google, and Apple, alongside brilliant students from Harvard, MIT, and Stanford. Our mentors are shaping the future of technology and innovation.
-                </p>
-
-                <p>
-                  Master cutting-edge skills directly from tech giants and top university talent. Get real-world knowledge and guidance from those at the forefront of their fields.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📱</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Meta</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🎓</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Harvard</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🔍</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Google</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🚀</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">MIT</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🎯</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">IIT Delhi</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">⚡</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">IIT Ropar</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🎬</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Netflix</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">☕</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Starbucks</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
-                </div>
-              </div>
-
-
-
-              <div className="mt-12">
-                <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group inline-flex items-center gap-2 hover:animate-pulse px-8 py-4">
-                  <span className="text-lg">Join Now & Learn from the Best</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Skills Section */}
-        <SkillTracks />
-
-        {/* Summer 2025 Section */}
-        <section className="py-20 bg-maximally-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
-          <div className="container mx-auto px-4 relative">
-            <div className="text-center mb-12">
-              <div className="inline-block bg-maximally-red/20 px-4 py-2 rounded-full mb-6 animate-pulse">
-                <span className="font-jetbrains text-maximally-red font-bold">
-                  🚨 The Summer of a Lifetime Starts Here
-                </span>
-              </div>
-              <h2 className="font-press-start text-3xl md:text-4xl text-maximally-blue mb-4">
-                Maximally Summer Bootcamp 2025
-              </h2>
-              <p className="font-jetbrains text-white/90 text-xl mb-6 max-w-3xl mx-auto">
-                India's most ambitious teen program is now live.
-                <br />Only 200 get in. Once you're in, you're in for life.
-              </p>
-              <p className="font-jetbrains text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-                Startup builders. Public speakers. AI explorers. Future leaders.
-                <br />This isn't your average Zoom class — this is the launchpad.
-              </p>
-              <Link to="/bootcamps" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse text-lg px-8 py-4">
-                <span>Apply Now</span>
-                <ArrowRight className="h-5 w-5" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              asChild
+              className="pixel-button bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-jetbrains group transform hover:scale-105 transition-all"
+            >
+              <Link to="/bootcamps">
+                Start Your Journey
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-            </div>
+            </Button>
+
+            <Button 
+              asChild
+              variant="outline"
+              className="pixel-button bg-white hover:bg-gray-50 px-8 py-6 text-lg font-jetbrains group transform hover:scale-105 transition-all"
+            >
+              <Link to="/community">
+                Join Community
+                <Users className="ml-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+              </Link>
+            </Button>
           </div>
-        </section>
+        </motion.div>
+      </section>
 
-        {/* Summer Bootcamps Section - Commented out as per changes.md */}
-        {/* We've replaced this with the new Bootcamps page */}
+      {/* Power-Ups (Courses) Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="font-press-start text-3xl text-center mb-12">Power Up Your Skills</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Rocket,
+                title: "Entrepreneurship",
+                description: "Launch your first startup",
+                color: "bg-[#39FF14]"
+              },
+              {
+                icon: Brain,
+                title: "AI & No-Code",
+                description: "Build with cutting-edge tech",
+                color: "bg-[#FF5F5F]"
+              },
+              {
+                icon: Trophy,
+                title: "Public Speaking",
+                description: "Become a confident leader",
+                color: "bg-[#B400FF]"
+              }
+            ].map((course, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                className="pixel-border bg-white p-6 rounded-lg shadow-lg group"
+              >
+                <course.icon className={`h-12 w-12 ${course.color} text-white mb-4 transform group-hover:rotate-12 transition-transform`} />
+                <h3 className="font-press-start text-xl mb-3">{course.title}</h3>
+                <p className="font-jetbrains">{course.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Why Choose Section */}
-        <WhyMaximally />
+      {/* Your Growth Journey */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="font-press-start text-3xl text-center mb-12">Your Growth Journey</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              { level: "Noob", icon: Book, color: "bg-gray-500" },
+              { level: "Builder", icon: Brain, color: "bg-blue-500" },
+              { level: "Creator", icon: Star, color: "bg-purple-500" },
+              { level: "Founder", icon: Trophy, color: "bg-green-500" }
+            ].map((stage, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                className="pixel-border bg-white p-6 rounded-lg shadow-lg group"
+              >
+                <stage.icon className={`h-10 w-10 ${stage.color} text-white mb-4`} />
+                <h3 className="font-press-start text-lg mb-2">{stage.level}</h3>
+                <div className="h-2 bg-gray-200 rounded-full">
+                  <div className={`h-2 ${stage.color} rounded-full`} style={{ width: `${(index + 1) * 25}%` }}></div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        {/* Collaboration Section */}
-        <section className="py-20 bg-maximally-blue/5">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-press-start mb-8">Partner With Us</h2>
-            <p className="font-jetbrains text-maximally-black/80 max-w-2xl mx-auto mb-8">
-              We partner with schools, creators, and changemakers to bring real-world learning to ambitious teens.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-10">
-              <div className="pixel-border bg-white p-6">
-                <h3 className="font-press-start text-xl mb-2">Schools</h3>
-                <p className="font-jetbrains text-maximally-black/80">Partner to bring practical skills to your students</p>
-              </div>
-              <div className="pixel-border bg-white p-6">
-                <h3 className="font-press-start text-xl mb-2">Creators</h3>
-                <p className="font-jetbrains text-maximally-black/80">Share your expertise with ambitious teens</p>
-              </div>
-              <div className="pixel-border bg-white p-6">
-                <h3 className="font-press-start text-xl mb-2">Organizations</h3>
-                <p className="font-jetbrains text-maximally-black/80">Create impact through youth collaboration</p>
-              </div>
-            </div>
-            <Link to="/collaborate" className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2 hover:animate-pulse">
-              Start Collaborating
-              <ArrowRight className="h-4 w-4" />
+      <WhyMaximally />
+      <Events />
+
+      {/* Final CTA */}
+      <section className="py-16 bg-gradient-to-br from-maximally-blue/5 to-maximally-purple/5">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-press-start text-3xl mb-6">Ready to Shape the Future?</h2>
+          <p className="font-jetbrains text-lg mb-8 max-w-2xl mx-auto">
+            Join India's most ambitious community of teen innovators and start building your future today.
+          </p>
+          <Button 
+            asChild
+            className="pixel-button bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-jetbrains group transform hover:scale-105 transition-all"
+          >
+            <Link to="/bootcamps">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-maximally-black text-white">
-          <div className="container mx-auto px-4 text-center">
-            <Sparkles className="h-12 w-12 text-maximally-blue mx-auto mb-6" />
-            <h2 className="text-3xl font-press-start mb-8 animate-glow">
-              Ready to level up?
-            </h2>
-            <p className="font-jetbrains text-white/80 max-w-2xl mx-auto mb-8">
-              Join our community of ambitious teens and start building your future today.
-            </p>
-            <Link to="/bootcamps" className="pixel-button bg-maximally-blue inline-flex items-center gap-2 hover:animate-pulse">
-              <span>Get Started</span>
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </section>
-
-        {/* Scroll to Top */}
-        <button onClick={() => window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })} className={`fixed bottom-8 right-8 pixel-button bg-maximally-black text-white transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-          ↑
-        </button>
-
-        <Footer />
-        <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} /> {/* Added TallyFormDialog component */}
-      </div>
-    </>;
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
 };
+
 export default Index;
-const SummerBootcamps = () => {
-  return;
-};
