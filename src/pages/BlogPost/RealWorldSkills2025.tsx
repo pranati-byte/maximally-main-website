@@ -81,7 +81,7 @@ const RealWorldSkills2025 = () => {
   return (
     <BlogPost
       title="Why Real-World Skills Matter More Than Marks in 2025"
-      date="March 5, 2025"
+      date="April 10, 2025"
       readTime="10 min read"
       content={content}
     />

@@ -80,7 +80,7 @@ const Internships2025 = () => {
   return (
     <BlogPost
       title="How to Get Internships in High School (Ultimate Guide)"
-      date="February 25, 2025"
+      date="April 10, 2025"
       readTime="15 min read"
       content={content}
     />

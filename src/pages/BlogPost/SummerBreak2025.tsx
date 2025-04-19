@@ -123,7 +123,7 @@ const SummerBreak2025 = () => {
   return (
     <BlogPost
       title="How to Make the Most of Your Summer Break (For Students Ages 13–20)"
-      date="March 10, 2025"
+      date="April 10, 2025"
       readTime="6 min read"
       content={content}
     />

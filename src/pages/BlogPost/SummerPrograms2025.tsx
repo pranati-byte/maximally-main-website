@@ -97,7 +97,7 @@ const SummerPrograms2025 = () => {
   return (
     <BlogPost
       title="Top Summer Programs for Teens in India (2025 Edition)"
-      date="March 15, 2025"
+      date="April 10, 2025"
       readTime="8 min read"
       content={content}
     />

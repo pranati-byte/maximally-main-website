@@ -77,7 +77,7 @@ const OnlineCourses2025 = () => {
   return (
     <BlogPost
       title="Best Online Courses for Teenagers in India (Free + Paid)"
-      date="March 1, 2025"
+      date="April 10, 2025"
       readTime="12 min read"
       content={content}
     />
