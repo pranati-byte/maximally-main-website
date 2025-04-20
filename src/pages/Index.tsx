@@ -294,7 +294,7 @@ const Index = () => {
         <button onClick={() => window.scrollTo({
         top: 0,
         behavior: 'smooth'
-      })} className={`fixed bottom-8 right-8 pixel-button bg-maximally-black text-white transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      })} className={`fixed bottom-24 right-8 pixel-button bg-maximally-black text-white transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
           ↑
         </button>
 
