@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -36,13 +36,15 @@ import ThankYou from './pages/ThankYou';
 
 const queryClient = new QueryClient();
 
-const App = () => {
+const ScrollToTop = () => {
   const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+  return null;
+}
 
+const App = () => {
   useEffect(() => {
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://maximally.in');
     document.title = 'Maximally - Learn Real-World Skills for Indian Teenagers';
@@ -56,6 +58,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <WhatsAppButton />
           <Navbar />
           <Routes>
