@@ -88,13 +88,13 @@ const Index = () => {
                 </div>
               </div>
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-press-start text-maximally-black mb-8 relative minecraft-text">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-press-start text-maximally-black mb-6 sm:mb-8 relative minecraft-text">
                 {text}
                 <span className="inline-block w-[3px] h-[1em] bg-maximally-blue ml-1 animate-[cursor-blink_1s_infinite]" />
                 <div className="absolute inset-0 minecraft-glow"></div>
               </h1>
 
-              <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto mb-12 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
+              <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
                 Join a community of ambitious teens learning real-world skills through hands-on projects.
               </p>
 
@@ -125,8 +125,8 @@ const Index = () => {
         {/* Features Grid */}
         <section className="py-20 bg-white relative">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => <div key={index} className={`pixel-border p-8 bg-white transition-all duration-500 ${activeFeature === index ? 'scale-105 shadow-xl' : 'scale-100'}`}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 px-4 sm:px-0">
+              {features.map((feature, index) => <div key={index} className={`pixel-border p-6 sm:p-8 bg-white transition-all duration-500 ${activeFeature === index ? 'scale-105 shadow-xl' : 'scale-100'}`}>
                   <div className="w-12 h-12 bg-maximally-blue pixel-border flex items-center justify-center mb-6">
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
@@ -150,11 +150,11 @@ const Index = () => {
                 </span>
               </div>
 
-              <h2 className="font-press-start text-3xl md:text-4xl mb-8 bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red bg-clip-text text-transparent">
+              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red bg-clip-text text-transparent px-4">
                 Learn From Industry Leaders & Top University Students
               </h2>
 
-              <div className="space-y-6 font-jetbrains text-lg">
+              <div className="space-y-4 sm:space-y-6 font-jetbrains text-base sm:text-lg px-4">
                 <p className="mb-6">
                   Learn from industry leaders at Meta, Google, and Apple, alongside brilliant students from Harvard, and Stanford. Our mentors are shaping the future of technology and innovation.
                 </p>
@@ -164,7 +164,7 @@ const Index = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mt-8 sm:mt-12 px-2 sm:px-0">
                 <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                     <span className="text-2xl">📱</span>
