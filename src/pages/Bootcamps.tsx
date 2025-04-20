@@ -248,33 +248,33 @@ const Bootcamps = () => {
           <div className="mb-12">
             <h3 className="font-press-start text-2xl mb-6">🚀 The Format</h3>
             <div className="space-y-6 relative">
-              <div className="bg-white/10 p-6 rounded-lg border border-[#39FF14]/30 hover:border-[#39FF14] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] backdrop-blur-sm">
-                <h4 className="font-press-start text-lg mb-2">🧠 7 days. Zero lectures.</h4>
-                <p className="font-jetbrains">Each afternoon kicks off with a challenge, a guest founder, or a mind-bending activity.</p>
+              <div className="bg-black/40 p-6 rounded-lg border-2 border-[#39FF14] hover:border-[#39FF14] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+                <h4 className="font-press-start text-lg mb-2 text-[#39FF14]">🧠 7 days. Zero lectures.</h4>
+                <p className="font-jetbrains text-white">Each afternoon kicks off with a challenge, a guest founder, or a mind-bending activity.</p>
               </div>
               <div className="bg-black/40 p-6 rounded-lg border-2 border-[#00FFFF] hover:border-[#00FFFF] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
                 <h4 className="font-press-start text-lg mb-2 text-[#00FFFF]">🎤 Daily guest speakers.</h4>
                 <p className="font-jetbrains text-white">Founders, creators, VCs, and domain experts drop in daily. No fluff — just real stories and execution playbooks.</p>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg border border-[#FF00FF]/30 hover:border-[#FF00FF] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(255,0,255,0.3)] backdrop-blur-sm">
+              <div className="bg-black/40 p-6 rounded-lg border-2 border-[#FF00FF] hover:border-[#FF00FF] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(255,0,255,0.5)]">
                 <h4 className="font-press-start text-lg mb-2 text-[#FF00FF]">👥 Guilds, not groups.</h4>
                 <p className="font-jetbrains text-white">You'll be sorted into a guild of 4–5 teens. Think startup team meets secret society. You'll build together, debate together, and ship real things — every day.</p>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg">
-                <h4 className="font-press-start text-lg mb-2">📦 Daily deliverables.</h4>
-                <p className="font-jetbrains">You don't just learn — you <i>do</i>. Build ideas. Design MVPs. Craft pitches. Get feedback. Repeat.</p>
+              <div className="bg-black/40 p-6 rounded-lg border-2 border-[#FFA500] hover:border-[#FFA500] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(255,165,0,0.5)]">
+                <h4 className="font-press-start text-lg mb-2 text-[#FFA500]">📦 Daily deliverables.</h4>
+                <p className="font-jetbrains text-white">You don't just learn — you <i>do</i>. Build ideas. Design MVPs. Craft pitches. Get feedback. Repeat.</p>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg">
-                <h4 className="font-press-start text-lg mb-2">🧰 Books + Tools + Videos.</h4>
-                <p className="font-jetbrains">You'll get curated mini-reads and videos from legends — stuff you won't find in textbooks. (<i>Think Naval Ravikant, Ali Abdaal, Sahil Bloom, Notion, Figma, ChatGPT.</i>)</p>
+              <div className="bg-black/40 p-6 rounded-lg border-2 border-[#FF3366] hover:border-[#FF3366] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(255,51,102,0.5)]">
+                <h4 className="font-press-start text-lg mb-2 text-[#FF3366]">🧰 Books + Tools + Videos.</h4>
+                <p className="font-jetbrains text-white">You'll get curated mini-reads and videos from legends — stuff you won't find in textbooks. (<i>Think Naval Ravikant, Ali Abdaal, Sahil Bloom, Notion, Figma, ChatGPT.</i>)</p>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg">
-                <h4 className="font-press-start text-lg mb-2">🧠 Gamified XP + Leaderboard.</h4>
-                <p className="font-jetbrains">Complete challenges, win debates, impress mentors — earn XP and badges. Top builders unlock real perks and recognition.</p>
+              <div className="bg-black/40 p-6 rounded-lg border-2 border-[#9966FF] hover:border-[#9966FF] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(153,102,255,0.5)]">
+                <h4 className="font-press-start text-lg mb-2 text-[#9966FF]">🧠 Gamified XP + Leaderboard.</h4>
+                <p className="font-jetbrains text-white">Complete challenges, win debates, impress mentors — earn XP and badges. Top builders unlock real perks and recognition.</p>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg">
-                <h4 className="font-press-start text-lg mb-2">🎓 Demo Day Finale.</h4>
-                <p className="font-jetbrains">On Day 7, your guild will pitch in front of a live panel. No pressure. Just your first real founder moment.</p>
+              <div className="bg-black/40 p-6 rounded-lg border-2 border-[#00FF99] hover:border-[#00FF99] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(0,255,153,0.5)]">
+                <h4 className="font-press-start text-lg mb-2 text-[#00FF99]">🎓 Demo Day Finale.</h4>
+                <p className="font-jetbrains text-white">On Day 7, your guild will pitch in front of a live panel. No pressure. Just your first real founder moment.</p>
               </div>
             </div>
           </div>
@@ -285,23 +285,23 @@ const Bootcamps = () => {
               🛠️ What You'll Leave With
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white/10 p-4 rounded-lg border border-[#FF5F5F]/30 hover:border-[#FF5F5F] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,95,95,0.3)] backdrop-blur-sm">
-                <p className="font-jetbrains">✅ A real project (not just theory)</p>
+              <div className="bg-black/40 p-4 rounded-lg border-2 border-[#FF5F5F] hover:border-[#FF5F5F] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(255,95,95,0.5)]">
+                <p className="font-jetbrains text-[#FF5F5F]">✅ A real project (not just theory)</p>
               </div>
-              <div className="bg-white/10 p-4 rounded-lg">
-                <p className="font-jetbrains">✅ A guild of friends for life</p>
+              <div className="bg-black/40 p-4 rounded-lg border-2 border-[#00FFFF] hover:border-[#00FFFF] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
+                <p className="font-jetbrains text-[#00FFFF]">✅ A guild of friends for life</p>
               </div>
-              <div className="bg-white/10 p-4 rounded-lg">
-                <p className="font-jetbrains">✅ A digital identity you're proud of</p>
+              <div className="bg-black/40 p-4 rounded-lg border-2 border-[#FF00FF] hover:border-[#FF00FF] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(255,0,255,0.5)]">
+                <p className="font-jetbrains text-[#FF00FF]">✅ A digital identity you're proud of</p>
               </div>
-              <div className="bg-white/10 p-4 rounded-lg">
-                <p className="font-jetbrains">✅ Access to the alumni network</p>
+              <div className="bg-black/40 p-4 rounded-lg border-2 border-[#FFA500] hover:border-[#FFA500] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(255,165,0,0.5)]">
+                <p className="font-jetbrains text-[#FFA500]">✅ Access to the alumni network</p>
               </div>
-              <div className="bg-white/10 p-4 rounded-lg">
-                <p className="font-jetbrains">✅ Certificate + LOR (for top performers)</p>
+              <div className="bg-black/40 p-4 rounded-lg border-2 border-[#39FF14] hover:border-[#39FF14] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+                <p className="font-jetbrains text-[#39FF14]">✅ Certificate + LOR (for top performers)</p>
               </div>
-              <div className="bg-white/10 p-4 rounded-lg">
-                <p className="font-jetbrains">✅ Confidence that sticks</p>
+              <div className="bg-black/40 p-4 rounded-lg border-2 border-[#9966FF] hover:border-[#9966FF] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(153,102,255,0.5)]">
+                <p className="font-jetbrains text-[#9966FF]">✅ Confidence that sticks</p>
               </div>
             </div>
           </div>
