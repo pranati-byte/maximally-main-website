@@ -65,6 +65,71 @@ const JoinUs = () => {
                 This is not a chill internship — it's chaos, creativity, and real impact.
               </p>
 
+              <div className="mb-8">
+                <h2 className="font-press-start text-xl mb-6 gradient-text-rainbow">Open Roles</h2>
+                <div className="space-y-4">
+                  <details className="pixel-border bg-white p-4">
+                    <summary className="font-press-start text-lg cursor-pointer">🛠️ Tech & Operations</summary>
+                    <div className="mt-4 font-jetbrains space-y-2">
+                      <p className="font-bold">Tech & Ops Head (1)</p>
+                      <ul className="list-disc pl-6">
+                        <li>Builds and maintains Notion systems & automations</li>
+                        <li>Sets up Zoom/Discord infrastructure</li>
+                        <li>Handles technical troubleshooting</li>
+                      </ul>
+                    </div>
+                  </details>
+
+                  <details className="pixel-border bg-white p-4">
+                    <summary className="font-press-start text-lg cursor-pointer">📣 Content & Communication</summary>
+                    <div className="mt-4 font-jetbrains space-y-2">
+                      <p className="font-bold">Content & Comms Lead (1)</p>
+                      <ul className="list-disc pl-6">
+                        <li>Manages daily communications and schedules</li>
+                        <li>Coordinates student submissions</li>
+                        <li>Maintains brand voice and engagement</li>
+                      </ul>
+                    </div>
+                  </details>
+
+                  <details className="pixel-border bg-white p-4">
+                    <summary className="font-press-start text-lg cursor-pointer">🎙️ Speaker Management</summary>
+                    <div className="mt-4 font-jetbrains space-y-2">
+                      <p className="font-bold">Speaker & Guest Manager (1)</p>
+                      <ul className="list-disc pl-6">
+                        <li>Coordinates guest speakers and sessions</li>
+                        <li>Manages event calendar and logistics</li>
+                        <li>Hosts speaker sessions</li>
+                      </ul>
+                    </div>
+                  </details>
+
+                  <details className="pixel-border bg-white p-4">
+                    <summary className="font-press-start text-lg cursor-pointer">🎨 Creative & Design</summary>
+                    <div className="mt-4 font-jetbrains space-y-2">
+                      <p className="font-bold">Creative Support / Designer (1)</p>
+                      <ul className="list-disc pl-6">
+                        <li>Creates templates and presentation assets</li>
+                        <li>Supports students with design tools</li>
+                        <li>Helps polish final submissions</li>
+                      </ul>
+                    </div>
+                  </details>
+
+                  <details className="pixel-border bg-white p-4">
+                    <summary className="font-press-start text-lg cursor-pointer">🧑‍🏫 Mentorship</summary>
+                    <div className="mt-4 font-jetbrains space-y-2">
+                      <p className="font-bold">Guild Mentors (15-20)</p>
+                      <ul className="list-disc pl-6">
+                        <li>Guide student guilds through challenges</li>
+                        <li>Provide feedback and support</li>
+                        <li>Help maintain student engagement</li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+              </div>
+
               <div className="text-center">
                 <a
                   href="https://forms.gle/AsU4XQkfwWvxsAqT7"
