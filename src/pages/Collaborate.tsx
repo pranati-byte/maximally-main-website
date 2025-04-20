@@ -133,6 +133,7 @@ const Collaborate = () => {
             >
               <Star className="h-12 w-12 text-[#4D89FF] mb-4" />
               <h3 className="font-press-start text-xl mb-4">Pixel Patron</h3>
+              <p className="font-press-start text-lg mb-4 text-[#4D89FF]">₹25,000</p>
               <ul className="space-y-3 font-jetbrains mb-6">
                 <li>• Logo on website</li>
                 <li>• Social media mentions</li>
@@ -148,6 +149,7 @@ const Collaborate = () => {
             >
               <Rocket className="h-12 w-12 text-[#B400FF] mb-4" />
               <h3 className="font-press-start text-xl mb-4">Resolution Partner</h3>
+              <p className="font-press-start text-lg mb-4 text-[#B400FF]">₹1,00,000</p>
               <ul className="space-y-3 font-jetbrains mb-6">
                 <li>• All Pixel Patron benefits</li>
                 <li>• Speaking opportunities</li>
@@ -163,6 +165,7 @@ const Collaborate = () => {
             >
               <Brain className="h-12 w-12 text-[#39FF14] mb-4" />
               <h3 className="font-press-start text-xl mb-4">Infinite Mode</h3>
+              <p className="font-press-start text-lg mb-4 text-[#39FF14]">₹5,00,000+</p>
               <ul className="space-y-3 font-jetbrains mb-6">
                 <li>• All Resolution Partner benefits</li>
                 <li>• Custom collaboration options</li>
