@@ -37,6 +37,12 @@ import ThankYou from './pages/ThankYou';
 const queryClient = new QueryClient();
 
 const App = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   useEffect(() => {
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://maximally.in');
     document.title = 'Maximally - Learn Real-World Skills for Indian Teenagers';
