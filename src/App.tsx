@@ -32,6 +32,7 @@ import RealWorldSkills2025 from './pages/BlogPost/RealWorldSkills2025';
 import OnlineCourses2025 from './pages/BlogPost/OnlineCourses2025';
 import Internships2025 from './pages/BlogPost/Internships2025';
 import ThankYou from './pages/ThankYou';
+import JoinUs from './pages/JoinUs';
 
 
 const queryClient = new QueryClient();
