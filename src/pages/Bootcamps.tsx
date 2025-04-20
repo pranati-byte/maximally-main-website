@@ -228,6 +228,74 @@ const Bootcamps = () => {
         </div>
       </section>
 
+      {/* How the Bootcamp Works Section */}
+      <section className="py-12 px-4">
+        <div className="container mx-auto">
+          <h2 className="font-press-start text-3xl mb-8 text-center">🧩 How the Bootcamp <i>Actually</i> Works</h2>
+          <p className="font-jetbrains text-xl mb-8 text-center">Maximally is not a class. It's an experience. Here's how you'll learn, build, and grow:</p>
+          
+          {/* Format Section */}
+          <div className="mb-12">
+            <h3 className="font-press-start text-2xl mb-6">🚀 The Format</h3>
+            <div className="space-y-6">
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="font-press-start text-lg mb-2">🧠 7 days. Zero lectures.</h4>
+                <p className="font-jetbrains">Each afternoon kicks off with a challenge, a guest founder, or a mind-bending activity.</p>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="font-press-start text-lg mb-2">👥 Guilds, not groups.</h4>
+                <p className="font-jetbrains">You'll be sorted into a guild of 4–5 teens. Think startup team meets secret society. You'll build together, debate together, and ship real things — every day.</p>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="font-press-start text-lg mb-2">🎤 Daily guest speakers.</h4>
+                <p className="font-jetbrains">Founders, creators, VCs, and domain experts drop in daily. No fluff — just real stories and execution playbooks.</p>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="font-press-start text-lg mb-2">📦 Daily deliverables.</h4>
+                <p className="font-jetbrains">You don't just learn — you <i>do</i>. Build ideas. Design MVPs. Craft pitches. Get feedback. Repeat.</p>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="font-press-start text-lg mb-2">🧰 Books + Tools + Videos.</h4>
+                <p className="font-jetbrains">You'll get curated mini-reads and videos from legends — stuff you won't find in textbooks. (<i>Think Naval Ravikant, Ali Abdaal, Sahil Bloom, Notion, Figma, ChatGPT.</i>)</p>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="font-press-start text-lg mb-2">🧠 Gamified XP + Leaderboard.</h4>
+                <p className="font-jetbrains">Complete challenges, win debates, impress mentors — earn XP and badges. Top builders unlock real perks and recognition.</p>
+              </div>
+              <div className="bg-white/10 p-6 rounded-lg">
+                <h4 className="font-press-start text-lg mb-2">🎓 Demo Day Finale.</h4>
+                <p className="font-jetbrains">On Day 7, your guild will pitch in front of a live panel. No pressure. Just your first real founder moment.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* What You'll Leave With Section */}
+          <div className="mb-12">
+            <h3 className="font-press-start text-2xl mb-6">🛠️ What You'll Leave With</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white/10 p-4 rounded-lg">
+                <p className="font-jetbrains">✅ A real project (not just theory)</p>
+              </div>
+              <div className="bg-white/10 p-4 rounded-lg">
+                <p className="font-jetbrains">✅ A guild of friends for life</p>
+              </div>
+              <div className="bg-white/10 p-4 rounded-lg">
+                <p className="font-jetbrains">✅ A digital identity you're proud of</p>
+              </div>
+              <div className="bg-white/10 p-4 rounded-lg">
+                <p className="font-jetbrains">✅ Access to the alumni network</p>
+              </div>
+              <div className="bg-white/10 p-4 rounded-lg">
+                <p className="font-jetbrains">✅ Certificate + LOR (for top performers)</p>
+              </div>
+              <div className="bg-white/10 p-4 rounded-lg">
+                <p className="font-jetbrains">✅ Confidence that sticks</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-12 px-4">
         <div className="container mx-auto">
@@ -249,6 +317,36 @@ const Bootcamps = () => {
               <AccordionTrigger className="font-press-start">Is this only for kids from big cities?</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 Not at all. We've got students from small towns across India. All that matters is ambition.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq4">
+              <AccordionTrigger className="font-press-start">What if I've never built anything before?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                Perfect — we'll show you how. No experience needed. Just curiosity and willingness to try.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq5">
+              <AccordionTrigger className="font-press-start">What's a "guild"?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                A guild is your team of 4–5 students who you'll work with every day. You'll brainstorm, debate, and build together — just like a real startup team.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq6">
+              <AccordionTrigger className="font-press-start">Will there be homework or assignments?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                Yes — but fun ones. Every day ends with a challenge or deliverable to build and share with your guild.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq7">
+              <AccordionTrigger className="font-press-start">Will I get to meet speakers and mentors?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                Yes — all speaker sessions are live and interactive. You'll be able to ask questions, join AMAs, and even get shoutouts for good work.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq8">
+              <AccordionTrigger className="font-press-start">What happens after the bootcamp ends?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                You become part of the Maximally alumni network. That means access to future sessions, internships, mentors, and events — for life.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq4">
