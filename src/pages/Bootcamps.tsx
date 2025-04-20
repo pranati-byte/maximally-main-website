@@ -229,16 +229,26 @@ const Bootcamps = () => {
       </section>
 
       {/* How the Bootcamp Works Section */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto">
-          <h2 className="font-press-start text-3xl mb-8 text-center">🧩 How the Bootcamp <i>Actually</i> Works</h2>
-          <p className="font-jetbrains text-xl mb-8 text-center">Maximally is not a class. It's an experience. Here's how you'll learn, build, and grow:</p>
+      <section className="py-12 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="container mx-auto relative">
+          <div className="animate-float">
+            <h2 className="font-press-start text-3xl mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#39FF14] via-[#00ff99] to-[#00ffcc]">
+              🧩 How the Bootcamp <i>Actually</i> Works
+            </h2>
+          </div>
+          <p className="font-jetbrains text-xl mb-8 text-center text-white/90 animate-fade-in">
+            Maximally is not a class. It's an <span className="text-[#39FF14]">experience</span>. 
+            Here's how you'll <span className="text-[#00ff99]">learn</span>, 
+            <span className="text-[#00ffcc]">build</span>, and 
+            <span className="text-[#39FF14]">grow</span>:
+          </p>
           
           {/* Format Section */}
           <div className="mb-12">
             <h3 className="font-press-start text-2xl mb-6">🚀 The Format</h3>
-            <div className="space-y-6">
-              <div className="bg-white/10 p-6 rounded-lg">
+            <div className="space-y-6 relative">
+              <div className="bg-white/10 p-6 rounded-lg border border-[#39FF14]/30 hover:border-[#39FF14] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(57,255,20,0.3)] backdrop-blur-sm">
                 <h4 className="font-press-start text-lg mb-2">🧠 7 days. Zero lectures.</h4>
                 <p className="font-jetbrains">Each afternoon kicks off with a challenge, a guest founder, or a mind-bending activity.</p>
               </div>
@@ -271,9 +281,11 @@ const Bootcamps = () => {
 
           {/* What You'll Leave With Section */}
           <div className="mb-12">
-            <h3 className="font-press-start text-2xl mb-6">🛠️ What You'll Leave With</h3>
+            <h3 className="font-press-start text-2xl mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#FF5F5F] via-[#FF9671] to-[#FFC75F] animate-pulse">
+              🛠️ What You'll Leave With
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-white/10 p-4 rounded-lg">
+              <div className="bg-white/10 p-4 rounded-lg border border-[#FF5F5F]/30 hover:border-[#FF5F5F] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(255,95,95,0.3)] backdrop-blur-sm">
                 <p className="font-jetbrains">✅ A real project (not just theory)</p>
               </div>
               <div className="bg-white/10 p-4 rounded-lg">
