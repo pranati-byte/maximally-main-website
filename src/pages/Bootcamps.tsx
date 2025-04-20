@@ -243,7 +243,7 @@ const Bootcamps = () => {
             <span className="text-[#00ffcc]">build</span>, and 
             <span className="text-[#39FF14]">grow</span>:
           </p>
-          
+
           {/* Format Section */}
           <div className="mb-12">
             <h3 className="font-press-start text-2xl mb-6">🚀 The Format</h3>
@@ -252,13 +252,13 @@ const Bootcamps = () => {
                 <h4 className="font-press-start text-lg mb-2">🧠 7 days. Zero lectures.</h4>
                 <p className="font-jetbrains">Each afternoon kicks off with a challenge, a guest founder, or a mind-bending activity.</p>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg">
-                <h4 className="font-press-start text-lg mb-2">👥 Guilds, not groups.</h4>
-                <p className="font-jetbrains">You'll be sorted into a guild of 4–5 teens. Think startup team meets secret society. You'll build together, debate together, and ship real things — every day.</p>
+              <div className="bg-black/40 p-6 rounded-lg border-2 border-[#00FFFF] hover:border-[#00FFFF] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
+                <h4 className="font-press-start text-lg mb-2 text-[#00FFFF]">🎤 Daily guest speakers.</h4>
+                <p className="font-jetbrains text-white">Founders, creators, VCs, and domain experts drop in daily. No fluff — just real stories and execution playbooks.</p>
               </div>
-              <div className="bg-white/10 p-6 rounded-lg">
-                <h4 className="font-press-start text-lg mb-2">🎤 Daily guest speakers.</h4>
-                <p className="font-jetbrains">Founders, creators, VCs, and domain experts drop in daily. No fluff — just real stories and execution playbooks.</p>
+              <div className="bg-white/10 p-6 rounded-lg border border-[#FF00FF]/30 hover:border-[#FF00FF] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(255,0,255,0.3)] backdrop-blur-sm">
+                <h4 className="font-press-start text-lg mb-2 text-[#FF00FF]">👥 Guilds, not groups.</h4>
+                <p className="font-jetbrains text-white">You'll be sorted into a guild of 4–5 teens. Think startup team meets secret society. You'll build together, debate together, and ship real things — every day.</p>
               </div>
               <div className="bg-white/10 p-6 rounded-lg">
                 <h4 className="font-press-start text-lg mb-2">📦 Daily deliverables.</h4>
