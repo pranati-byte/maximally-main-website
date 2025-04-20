@@ -1,0 +1,112 @@
+**Message for Developer — Update to /bootcamps Page**
+
+Hey [dev's name],
+
+We’re updating the `/bootcamps` page to better explain what students can expect without revealing too much. Here's a breakdown of what to change and where:
+
+---
+
+### ✅ **SECTION: After “📚 Bootcamp Program”**
+
+**Add a new section titled** `🧩 How the Bootcamp *Actually* Works`
+
+Place it *right after the Bootcamp Program (Day 1–7)* and *before the FAQ section*. This section gives a clear picture of how the bootcamp is structured internally.
+
+**Add this full block of text:**
+
+---
+
+### 🧩 How the Bootcamp *Actually* Works
+
+Maximally is not a class. It’s an experience. Here’s how you’ll learn, build, and grow:
+
+### 🚀 The Format
+
+- 🧠 **7 days. Zero lectures.**
+    
+    Each afternoon kicks off with a challenge, a guest founder, or a mind-bending activity.
+    
+- 👥 **Guilds, not groups.**
+    
+    You’ll be sorted into a guild of 4–5 teens. Think startup team meets secret society. You’ll build together, debate together, and ship real things — every day.
+    
+- 🎤 **Daily guest speakers.**
+    
+    Founders, creators, VCs, and domain experts drop in daily. No fluff — just real stories and execution playbooks.
+    
+- 📦 **Daily deliverables.**
+    
+    You don’t just learn — you *do*. Build ideas. Design MVPs. Craft pitches. Get feedback. Repeat.
+    
+- 🧰 **Books + Tools + Videos.**
+    
+    You’ll get curated mini-reads and videos from legends — stuff you won’t find in textbooks.
+    
+    (*Think Naval Ravikant, Ali Abdaal, Sahil Bloom, Notion, Figma, ChatGPT.*)
+    
+- 🧠 **Gamified XP + Leaderboard.**
+    
+    Complete challenges, win debates, impress mentors — earn XP and badges. Top builders unlock real perks and recognition.
+    
+- 🎓 **Demo Day Finale.**
+    
+    On Day 7, your guild will pitch in front of a live panel. No pressure. Just your first real founder moment.
+    
+
+---
+
+### 🛠️ What You’ll Leave With
+
+✅ A real project (not just theory)
+
+✅ A guild of friends for life
+
+✅ A digital identity you're proud of
+
+✅ Access to the alumni network
+
+✅ Certificate + LOR (for top performers)
+
+✅ Confidence that sticks
+
+---
+
+### 📝 FAQs: Add These New Questions to Existing FAQ Section
+
+Add the following questions and answers to the current FAQ block:
+
+**Q: What if I’ve never built anything before?**
+
+A: Perfect — we’ll show you how. No experience needed. Just curiosity and willingness to try.
+
+**Q: What’s a “guild”?**
+
+A: A guild is your team of 4–5 students who you’ll work with every day. You’ll brainstorm, debate, and build together — just like a real startup team.
+
+**Q: Will there be homework or assignments?**
+
+A: Yes — but fun ones. Every day ends with a challenge or deliverable to build and share with your guild.
+
+**Q: Will I get to meet speakers and mentors?**
+
+A: Yes — all speaker sessions are live and interactive. You’ll be able to ask questions, join AMAs, and even get shoutouts for good work.
+
+**Q: What happens after the bootcamp ends?**
+
+A: You become part of the Maximally alumni network. That means access to future sessions, internships, mentors, and events — for life.
+
+---
+
+### 🔧 Other Small Enhancements
+
+1. **Improve spacing and scannability**
+    
+    Make sure each section has enough padding/margin. Keep emoji bullets consistent (🧠, 🚀, ✅, etc.). Ensure mobile readability.
+    
+2. **Make “Apply Now” CTA fixed on scroll**
+    
+    Optional, but consider having a sticky `Apply Now →` button on scroll, especially for mobile.
+    
+3. **Highlight timeline visually**
+    
+    Consider turning the “📍 Application Timeline” into a horizontal scroll or stepper format with visual icons if possible (for future UI update).
