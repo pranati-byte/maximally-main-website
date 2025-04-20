@@ -85,6 +85,7 @@ const App = () => {
             <Route path="/terms" element={<Terms />} />
             <Route path="/community" element={<Community />} />
             <Route path="/collaborate" element={<Collaborate />} />
+            <Route path="/join-us" element={<JoinUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
