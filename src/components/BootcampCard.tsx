@@ -1,46 +1,58 @@
 
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { ArrowRight } from 'lucide-react';
+import { Button } from './ui/button';
+import { Link } from 'react-router-dom';
 
-const BootcampCard = () => {
-  const bootcamps = [
-    {
-      title: "Summer Bootcamp 2025",
-      description: "Join India's most ambitious teens for 7 days of project building, skill development, and unforgettable experiences.",
-      dates: "May - June 2025",
-      location: "Mumbai & Bangalore",
-      price: "₹24,999",
-      link: "/bootcamps"
-    }
-  ];
+interface BootcampCardProps {
+  title: string;
+  description: string;
+  skills: string[];
+  duration: number;
+  price: number;
+  powerUpLink: string;
+  onPreRegister: () => void;
+}
 
+const BootcampCard = ({ title, description, skills, duration, price, powerUpLink, onPreRegister }: BootcampCardProps) => {
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
-      {bootcamps.map((bootcamp, index) => (
-        <div key={index} className="pixel-border bg-white p-6 md:p-8">
-          <h3 className="font-press-start text-xl md:text-2xl mb-4">{bootcamp.title}</h3>
-          <p className="font-jetbrains text-lg mb-4">{bootcamp.description}</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div>
-              <span className="font-press-start text-sm">📅 When</span>
-              <p className="font-jetbrains">{bootcamp.dates}</p>
-            </div>
-            <div>
-              <span className="font-press-start text-sm">📍 Where</span>
-              <p className="font-jetbrains">{bootcamp.location}</p>
-            </div>
-            <div>
-              <span className="font-press-start text-sm">💰 Investment</span>
-              <p className="font-jetbrains">{bootcamp.price}</p>
-            </div>
-          </div>
-          <Link to={bootcamp.link}>
-            <Button className="bg-maximally-green hover:bg-maximally-green/90 text-white font-press-start px-8 py-6 text-lg">
-              Apply Now →
-            </Button>
-          </Link>
+    <div className="pixel-border bg-white p-6 relative overflow-hidden">
+      <div className="absolute top-0 right-0 bg-maximally-blue text-white px-3 py-1 text-sm font-jetbrains">
+        {duration} week
+      </div>
+
+      <h3 className="font-press-start text-xl mb-4 text-maximally-black">{title}</h3>
+      <p className="font-jetbrains text-maximally-black/80 mb-4">{description}</p>
+
+      <div className="mb-4">
+        <div className="text-sm font-jetbrains text-maximally-black/60 mb-2">Skills:</div>
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill, index) => (
+            <span key={index} className="bg-maximally-blue/10 text-maximally-blue px-2 py-1 rounded text-sm font-jetbrains">
+              {skill}
+            </span>
+          ))}
         </div>
-      ))}
+      </div>
+
+      <div className="flex flex-col gap-3 mt-6">
+        <div className="flex items-center justify-between">
+          <div className="font-press-start text-maximally-black">₹{price}</div>
+          <Button 
+            onClick={onPreRegister}
+            className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains"
+          >
+            Pre-register <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </div>
+        <Link to={powerUpLink} className="block w-full">
+          <Button 
+            variant="outline"
+            className="w-full border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains"
+          >
+            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
