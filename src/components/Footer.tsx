@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -28,7 +29,11 @@ const Footer = () => {
         <div>
           <h3 className="font-press-start text-sm mb-4">Programs</h3>
           <ul className="space-y-3 font-jetbrains text-gray-300">
-            <li><Link to="/bootcamps" className="hover:text-maximally-blue transition-colors block">Summer Bootcamp 2025</Link></li>
+            <li><Link to="/bootcamps" className="hover:text-maximally-blue transition-colors block">Bootcamps</Link></li>
+            <li><Link to="/digital-marketing" className="hover:text-maximally-blue transition-colors block">Digital Marketing</Link></li>
+            <li><Link to="/entrepreneurship" className="hover:text-maximally-blue transition-colors block">Entrepreneurship</Link></li>
+            <li><Link to="/public-speaking" className="hover:text-maximally-blue transition-colors block">Public Speaking</Link></li>
+            <li><Link to="/no-code-ai" className="hover:text-maximally-blue transition-colors block">No-Code AI</Link></li>
           </ul>
         </div>
 
@@ -37,8 +42,10 @@ const Footer = () => {
           <ul className="space-y-3 font-jetbrains text-gray-300">
             <li><Link to="/about" className="hover:text-maximally-blue transition-colors block">About Us</Link></li>
             <li><Link to="/blog" className="hover:text-maximally-blue transition-colors block">Blog</Link></li>
+            <li><Link to="/careers" className="hover:text-maximally-blue transition-colors block">Careers</Link></li>
             <li><Link to="/collaborate" className="hover:text-maximally-blue transition-colors block">Collaborate</Link></li>
             <li><Link to="/contact" className="hover:text-maximally-blue transition-colors block">Contact</Link></li>
+            <li><Link to="/join-us" className="hover:text-maximally-blue transition-colors block">Join Us</Link></li>
           </ul>
         </div>
 
@@ -49,6 +56,7 @@ const Footer = () => {
             <li><Link to="/support" className="hover:text-maximally-blue transition-colors block">Support</Link></li>
             <li><Link to="/privacy" className="hover:text-maximally-blue transition-colors block">Privacy Policy</Link></li>
             <li><Link to="/terms" className="hover:text-maximally-blue transition-colors block">Terms of Service</Link></li>
+            <li><Link to="/sponsor" className="hover:text-maximally-blue transition-colors block">Sponsor</Link></li>
           </ul>
         </div>
       </div>
