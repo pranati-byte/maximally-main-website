@@ -60,11 +60,13 @@ const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-2 h-full overflow-y-auto">
           <div className="grid grid-cols-2 gap-2">
-            <Link to="/" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link to="/bootcamps" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Bootcamps</Link>
-            <Link to="/community" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Community</Link>
-            <Link to="/about" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <Link to="/blog" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+            <Link to="/" className="font-jetbrains text-white py-3 px-4 bg-[#FF5F5F] hover:bg-[#FF5F5F]/90 rounded-lg active:bg-[#FF5F5F]/80 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Home</Link>
+            <Link to="/bootcamps" className="font-jetbrains text-white py-3 px-4 bg-[#39FF14] hover:bg-[#39FF14]/90 rounded-lg active:bg-[#39FF14]/80 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Bootcamps</Link>
+            <Link to="/community" className="font-jetbrains text-white py-3 px-4 bg-[#B400FF] hover:bg-[#B400FF]/90 rounded-lg active:bg-[#B400FF]/80 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Community</Link>
+            <Link to="/about" className="font-jetbrains text-white py-3 px-4 bg-[#00D1FF] hover:bg-[#00D1FF]/90 rounded-lg active:bg-[#00D1FF]/80 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link to="/blog" className="font-jetbrains text-white py-3 px-4 bg-[#FFD700] hover:bg-[#FFD700]/90 rounded-lg active:bg-[#FFD700]/80 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Blog</Link>
+            <Link to="/join-us" className="font-jetbrains text-white py-3 px-4 bg-[#FF1493] hover:bg-[#FF1493]/90 rounded-lg active:bg-[#FF1493]/80 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Join Us</Link>
+            <Link to="/collaborate" className="font-jetbrains text-white py-3 px-4 bg-[#FF8C00] hover:bg-[#FF8C00]/90 rounded-lg active:bg-[#FF8C00]/80 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Collaborate</Link>
             <Link to="/career-launch" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Career Launch</Link>
             <Link to="/digital-marketing" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Digital Marketing</Link>
             <Link to="/entrepreneurship" className="font-jetbrains text-maximally-black py-3 px-4 hover:bg-maximally-blue/10 rounded-lg active:bg-maximally-blue/20 text-sm pixel-border" onClick={() => setIsMenuOpen(false)}>Entrepreneurship</Link>
