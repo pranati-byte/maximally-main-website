@@ -48,7 +48,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="font-jetbrains text-maximally-black hover:text-[${item.color}] transition-colors duration-200"
+                className="font-jetbrains text-maximally-black hover:text-maximally-blue transition-colors duration-200"
               >
                 {item.label}
               </Link>
@@ -61,11 +61,21 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="font-jetbrains text-sm text-maximally-black hover:text-[${item.color}] transition-colors duration-200"
+                className="font-jetbrains text-sm text-maximally-black hover:text-maximally-blue transition-colors duration-200"
               >
                 {item.label}
               </Link>
             ))}
+          </div>
+
+          {/* Join Us Button (Desktop & Tablet) */}
+          <div className="hidden md:block">
+            <Link
+              to="/join-us"
+              className="bg-maximally-green hover:bg-maximally-green/90 text-white px-4 py-2 rounded-lg font-jetbrains text-sm"
+            >
+              Join Us
+            </Link>
           </div>
 
           {/* Mobile Menu Button and Join Button */}
