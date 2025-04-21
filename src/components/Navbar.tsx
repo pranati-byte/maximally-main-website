@@ -29,10 +29,6 @@ const Navbar = () => {
     { path: "/join-us", label: "Join Us", color: "#FF1493" },
     { path: "/collaborate", label: "Collaborate", color: "#FF8C00" },
     { path: "/career-launch", label: "Career Launch", color: "#4B0082" },
-    { path: "/digital-marketing", label: "Digital Marketing", color: "#32CD32" },
-    { path: "/entrepreneurship", label: "Entrepreneurship", color: "#FF4500" },
-    { path: "/no-code-ai", label: "No-Code AI", color: "#8A2BE2" },
-    { path: "/public-speaking", label: "Public Speaking", color: "#20B2AA" },
     { path: "/contact", label: "Contact", color: "#FF6347" }
   ];
 
