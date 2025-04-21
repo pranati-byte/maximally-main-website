@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X, Terminal } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -32,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "py-2 bg-white shadow-md" : "py-3 bg-transparent"
+      isScrolled ? "py-3 sm:py-2 bg-white shadow-md" : "py-4 sm:py-4 bg-transparent"
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
@@ -47,7 +48,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="font-jetbrains text-maximally-black hover:text-maximally-blue transition-colors duration-200"
+                className="font-jetbrains text-maximally-black hover:text-[${item.color}] transition-colors duration-200"
               >
                 {item.label}
               </Link>
@@ -60,28 +61,18 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="font-jetbrains text-sm text-maximally-black hover:text-maximally-blue transition-colors duration-200"
+                className="font-jetbrains text-sm text-maximally-black hover:text-[${item.color}] transition-colors duration-200"
               >
                 {item.label}
               </Link>
             ))}
           </div>
 
-          {/* Join Us Button (Desktop & Tablet) */}
-          <div className="hidden md:block">
-            <Link
-              to="/join-us"
-              className="bg-maximally-green hover:bg-maximally-green/90 text-maximally-black px-4 py-2 rounded-lg font-jetbrains text-sm"
-            >
-              Join Us
-            </Link>
-          </div>
-
           {/* Mobile Menu Button and Join Button */}
           <div className="flex items-center gap-3 md:hidden">
             <Link
               to="/join-us"
-              className="bg-maximally-green hover:bg-maximally-green/90 text-maximally-black px-4 py-2 rounded-lg font-jetbrains text-sm"
+              className="bg-maximally-green hover:bg-maximally-green/90 text-white px-4 py-2 rounded-lg font-jetbrains text-sm"
             >
               Join Us
             </Link>

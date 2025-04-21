@@ -1,71 +1,58 @@
 
+import { ArrowRight } from 'lucide-react';
+import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
 
-interface Bootcamp {
+interface BootcampCardProps {
   title: string;
   description: string;
-  path: string;
-  color: string;
-  date?: string;
+  skills: string[];
+  duration: number;
+  price: number;
+  powerUpLink: string;
+  onPreRegister: () => void;
 }
 
-const bootcamps: Bootcamp[] = [
-  {
-    title: "Digital Marketing",
-    description: "Master social media, content creation, and digital strategy",
-    path: "/digital-marketing",
-    color: "#FF5F5F"
-  },
-  {
-    title: "No-Code & AI",
-    description: "Build apps and automate with AI - no coding required",
-    path: "/no-code-ai",
-    color: "#39FF14"
-  },
-  {
-    title: "Public Speaking",
-    description: "Develop confidence and presentation mastery",
-    path: "/public-speaking",
-    color: "#00D1FF"
-  },
-  {
-    title: "Entrepreneurship",
-    description: "Launch and grow your own business ventures",
-    path: "/entrepreneurship",
-    color: "#FFD700"
-  }
-];
-
-const BootcampCard = () => {
+const BootcampCard = ({ title, description, skills, duration, price, powerUpLink, onPreRegister }: BootcampCardProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-      {bootcamps.map((bootcamp, index) => (
-        <Link
-          key={index}
-          to={bootcamp.path}
-          className="block group"
-        >
-          <div
-            className="rounded-lg p-6 transition-all duration-300 hover:scale-105"
-            style={{
-              backgroundColor: bootcamp.color,
-              boxShadow: `0 4px 14px ${bootcamp.color}40`
-            }}
+    <div className="pixel-border bg-white p-6 relative overflow-hidden">
+      <div className="absolute top-0 right-0 bg-maximally-blue text-white px-3 py-1 text-sm font-jetbrains">
+        {duration} week
+      </div>
+
+      <h3 className="font-press-start text-xl mb-4 text-maximally-black">{title}</h3>
+      <p className="font-jetbrains text-maximally-black/80 mb-4">{description}</p>
+
+      <div className="mb-4">
+        <div className="text-sm font-jetbrains text-maximally-black/60 mb-2">Skills:</div>
+        <div className="flex flex-wrap gap-2">
+          {skills.map((skill, index) => (
+            <span key={index} className="bg-maximally-blue/10 text-maximally-blue px-2 py-1 rounded text-sm font-jetbrains">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-3 mt-6">
+        <div className="flex items-center justify-between">
+          <div className="font-press-start text-maximally-black">₹{price}</div>
+          <Button 
+            onClick={onPreRegister}
+            className="bg-maximally-red text-white hover:bg-maximally-red/90 font-jetbrains"
           >
-            <h3 className="text-white font-press-start text-lg mb-2">
-              {bootcamp.title}
-            </h3>
-            <p className="text-white/90 font-jetbrains text-sm">
-              {bootcamp.description}
-            </p>
-            {bootcamp.date && (
-              <p className="text-white/80 font-jetbrains text-xs mt-2">
-                {bootcamp.date}
-              </p>
-            )}
-          </div>
+            Pre-register <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </div>
+        <Link to={powerUpLink} className="block w-full">
+          <Button 
+            variant="outline"
+            className="w-full border-maximally-blue text-maximally-blue hover:bg-maximally-blue hover:text-white font-jetbrains"
+          >
+            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
         </Link>
-      ))}
+      </div>
     </div>
   );
 };

@@ -65,18 +65,6 @@ const JoinUs = () => {
                 This is not a chill internship — it's chaos, creativity, and real impact.
               </p>
 
-              <div className="text-center mb-8">
-                <a
-                  href="https://forms.gle/AsU4XQkfwWvxsAqT7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto minecraft-button px-6 py-3 sm:px-8 sm:py-4 text-white inline-flex items-center gap-2 animate-bounce"
-                >
-                  Apply Now
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
-
               <div className="mb-8">
                 <h2 className="font-press-start text-xl mb-6 gradient-text-rainbow">Open Roles</h2>
                 <div className="space-y-4">
@@ -142,7 +130,17 @@ const JoinUs = () => {
                 </div>
               </div>
 
-              
+              <div className="text-center">
+                <a
+                  href="https://forms.gle/AsU4XQkfwWvxsAqT7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto minecraft-button px-6 py-3 sm:px-8 sm:py-4 text-white inline-flex items-center gap-2 animate-bounce"
+                >
+                  Apply Now
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
