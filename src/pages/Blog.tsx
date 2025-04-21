@@ -6,6 +6,13 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "Why School Doesn't Teach You Real Life (And What We're Doing About It)",
+    excerpt: "From straight A's to real-world confusion - discover how Maximally is bridging the gap between academic excellence and practical life skills that schools don't teach...",
+    date: "April 17, 2025",
+    readTime: "5 min read",
+    category: "Education"
+  },
+  {
     title: "Top 10 Summer Programs for Teens in India (2025 Edition)",
     excerpt: "Discover the most impactful summer programs that will transform your skills and boost your college applications. From Maximally's intensive bootcamps to other notable programs...",
     date: "April 10, 2025",

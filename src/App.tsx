@@ -29,6 +29,7 @@ import Collaborate from "./pages/Collaborate";
 import SummerPrograms2025 from './pages/BlogPost/SummerPrograms2025';
 import SummerBreak2025 from './pages/BlogPost/SummerBreak2025';
 import RealWorldSkills2025 from './pages/BlogPost/RealWorldSkills2025';
+import SchoolVsLife2025 from './pages/BlogPost/SchoolVsLife2025';
 import OnlineCourses2025 from './pages/BlogPost/OnlineCourses2025';
 import Internships2025 from './pages/BlogPost/Internships2025';
 import ThankYou from './pages/ThankYou';
@@ -76,6 +77,7 @@ const App = () => {
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
           <Route path="/blog/summer-break-2025" element={<SummerBreak2025 />} />
             <Route path="/blog/real-world-skills-2025" element={<RealWorldSkills2025 />} />
+          <Route path="/blog/school-vs-life-2025" element={<SchoolVsLife2025 />} />
             <Route path="/blog/online-courses-2025" element={<OnlineCourses2025 />} />
             <Route path="/blog/internships-2025" element={<Internships2025 />} />
             <Route path="/thank-you" element={<ThankYou />} />
