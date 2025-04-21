@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X, Terminal } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -72,7 +71,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <Link
               to="/join-us"
-              className="bg-maximally-green hover:bg-maximally-green/90 text-white px-4 py-2 rounded-lg font-jetbrains text-sm"
+              className="bg-maximally-green hover:bg-maximally-green/90 text-maximally-black px-4 py-2 rounded-lg font-jetbrains text-sm"
             >
               Join Us
             </Link>
@@ -82,7 +81,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3 md:hidden">
             <Link
               to="/join-us"
-              className="bg-maximally-green hover:bg-maximally-green/90 text-white px-4 py-2 rounded-lg font-jetbrains text-sm"
+              className="bg-maximally-green hover:bg-maximally-green/90 text-maximally-black px-4 py-2 rounded-lg font-jetbrains text-sm"
             >
               Join Us
             </Link>
