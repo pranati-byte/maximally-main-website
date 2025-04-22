@@ -113,6 +113,25 @@ const Hackathon = () => {
                   Got questions? Email team@maximally.in
                 </p>
               </div>
+
+              {/* Related Programs */}
+              <div className="mt-16 pt-8 border-t-2 border-dashed border-maximally-blue/20">
+                <h2 className="font-press-start text-2xl mb-6 text-center gradient-text-rainbow">More Ways to Level Up</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <Link to="/bootcamps" className="pixel-border p-4 hover:bg-maximally-blue/5 transition-colors">
+                    <h3 className="font-press-start text-lg mb-2">🚀 Summer Bootcamps</h3>
+                    <p className="font-jetbrains text-sm">Join our intensive summer programs for hands-on learning.</p>
+                  </Link>
+                  <Link to="/community" className="pixel-border p-4 hover:bg-maximally-blue/5 transition-colors">
+                    <h3 className="font-press-start text-lg mb-2">👥 Community</h3>
+                    <p className="font-jetbrains text-sm">Connect with other ambitious teens in our Discord.</p>
+                  </Link>
+                  <Link to="/join-us" className="pixel-border p-4 hover:bg-maximally-blue/5 transition-colors">
+                    <h3 className="font-press-start text-lg mb-2">💼 Intern with Us</h3>
+                    <p className="font-jetbrains text-sm">Work on real projects with our founding team.</p>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
