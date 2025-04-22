@@ -14,7 +14,7 @@ import Terms from "@/pages/Terms";
 import NotFound from "@/pages/NotFound";
 import About from "./pages/About";
 import Bootcamps from '@/pages/Bootcamps';
-import Team from "./pages/Team";
+// Team page removed
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
 import Entrepreneurship from "./pages/Entrepreneurship";
@@ -73,6 +73,7 @@ const App = () => {
             <Route path="/career-launch" element={<CareerLaunch />} />
             <Route path="/bootcamps" element={<Bootcamps />} />
             <Route path="/about" element={<About />} />
+            {/* Team route removed */}
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />

@@ -1,9 +1,11 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import TallyFormDialog from "@/components/TallyFormDialog";
-import React from 'react';
+import React, { useState } from 'react';
 
 const Bootcamps = () => {
+  const [isTallyFormOpen, setIsTallyFormOpen] = useState(false);
 
   return (
     <div className="min-h-screen pt-20 md:pt-24"> {/* Added padding top for navbar */}
@@ -20,7 +22,7 @@ const Bootcamps = () => {
             <span className="bg-green-100">certificate of excellence</span> program.
             Once <span className="bg-purple-100">you're in for life</span>.
           </p>
-          <TallyFormDialog />
+          <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
           <div className="mt-8">
             <button 
               onClick={() => window.location.href = "https://tally.so/r/wQEGEA"}
@@ -331,31 +333,31 @@ const Bootcamps = () => {
                 Not at all. We've got students from small towns across India. All that matters is ambition.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="faq4">
+            <AccordionItem value="faq9">
               <AccordionTrigger className="font-press-start">What if I've never built anything before?</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 Perfect — we'll show you how. No experience needed. Just curiosity and willingness to try.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="faq5">
+            <AccordionItem value="faq10">
               <AccordionTrigger className="font-press-start">What's a "guild"?</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 A guild is your team of 4–5 students who you'll work with every day. You'll brainstorm, debate, and build together — just like a real startup team.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="faq6">
+            <AccordionItem value="faq11">
               <AccordionTrigger className="font-press-start">Will there be homework or assignments?</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 Yes — but fun ones. Every day ends with a challenge or deliverable to build and share with your guild.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="faq7">
+            <AccordionItem value="faq12">
               <AccordionTrigger className="font-press-start">Will I get to meet speakers and mentors?</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 Yes — all speaker sessions are live and interactive. You'll be able to ask questions, join AMAs, and even get shoutouts for good work.
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="faq8">
+            <AccordionItem value="faq13">
               <AccordionTrigger className="font-press-start">What happens after the bootcamp ends?</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 You become part of the Maximally alumni network. That means access to future sessions, internships, mentors, and events — for life.
@@ -381,7 +383,7 @@ const Bootcamps = () => {
       <section className="py-12 px-4 bg-gray-50">
         <div className="container mx-auto text-center">
           <h2 className="font-press-start text-3xl mb-6">Ready to Level Up?</h2>
-          <TallyFormDialog />
+          <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
         </div>
       </section>
     </div>

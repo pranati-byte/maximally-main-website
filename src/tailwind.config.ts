@@ -112,6 +112,10 @@ export default {
 				pixel: {
 					'0%': { 'background-position': '0% 0%' },
 					'100%': { 'background-position': '100% 0%' }
+				},
+				shimmer: {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' }
 				}
 			},
 			animation: {

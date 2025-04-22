@@ -3,8 +3,10 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import TallyFormDialog from "@/components/TallyFormDialog";
+import { useState } from "react";
 
 const About = () => {
+  const [isTallyFormOpen, setIsTallyFormOpen] = useState(false);
   return (
     <div className="min-h-screen pt-20">
       <SEO 
@@ -23,7 +25,7 @@ const About = () => {
           <p className="font-jetbrains text-white/80 text-xl md:text-2xl mb-8">
             Ready to change the world?
           </p>
-          <TallyFormDialog />
+          <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
         </div>
       </section>
 

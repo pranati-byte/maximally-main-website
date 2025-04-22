@@ -78,7 +78,8 @@
 
 .golden-ticket::before {
   content: '';
-  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer;
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent;
+  animation: shimmer 2s linear infinite;
 }
 
 @keyframes stars {
@@ -89,10 +90,6 @@
 @keyframes shimmer {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
-}
-
-.animate-shimmer {
-  animation: shimmer 2s linear infinite;
 }
 
       transform: translateY(0);
