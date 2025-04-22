@@ -29,6 +29,68 @@
     }
     to {
       opacity: 1;
+
+/* Hackathon Page Styles */
+.stars {
+  background: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
+  background-size: 200px 200px;
+  animation: stars 4s linear infinite;
+  height: 100vh;
+  opacity: 0.3;
+}
+
+.floating-pixel {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+.pixel-rocket {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 2L30 16L16 30L2 16L16 2Z' fill='%23FF5F5F'/%3E%3C/svg%3E");
+  top: 20%;
+  right: 15%;
+}
+
+.pixel-wand {
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 2L30 16L16 30L2 16L16 2Z' fill='%2339FF14'/%3E%3C/svg%3E");
+  bottom: 25%;
+  left: 10%;
+}
+
+.quest-scroll-card {
+  @apply flex items-center p-4 bg-black/30 backdrop-blur border-2 border-maximally-blue/30 rounded-lg font-press-start text-white cursor-pointer;
+}
+
+.golden-ticket-container {
+  @apply relative mx-auto max-w-2xl;
+}
+
+.golden-ticket {
+  @apply bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-300 p-8 rounded-lg text-center text-black relative overflow-hidden shadow-xl;
+}
+
+.golden-ticket::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer;
+}
+
+@keyframes stars {
+  0% { background-position: 0 0; }
+  100% { background-position: 200px 200px; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
       transform: translateY(0);
     }
   }

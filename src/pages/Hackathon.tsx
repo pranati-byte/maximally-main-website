@@ -88,7 +88,7 @@ const Hackathon = () => {
                 className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.4, staggerChildren: 0.1 }}
+                transition={{ delay: 0.4 }}
               >
                 {[
                   { title: "Guild Points", icon: "🏆", points: "2500 XP" },
@@ -107,7 +107,7 @@ const Hackathon = () => {
                 ))}
               </motion.div>
 
-              {/* Tracks as Quest Scrolls */}
+              {/* Tracks */}
               <div>
                 <h2 className="font-press-start text-2xl mb-6 text-center gradient-text-rainbow">Available Quests</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -151,7 +151,7 @@ const Hackathon = () => {
               >
                 <Link to="/bootcamps">
                   <Button className="pixel-button-glow bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-press-start group">
-                    >> ENTER THE QUEST <<
+                    {'>> ENTER THE QUEST <<'}
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
