@@ -34,6 +34,7 @@ import OnlineCourses2025 from './pages/BlogPost/OnlineCourses2025';
 import Internships2025 from './pages/BlogPost/Internships2025';
 import ThankYou from './pages/ThankYou';
 import JoinUs from './pages/JoinUs';
+import Hackathon from '@/pages/Hackathon';
 
 
 const queryClient = new QueryClient();
@@ -88,6 +89,7 @@ const App = () => {
             <Route path="/community" element={<Community />} />
             <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/join-us" element={<JoinUs />} />
+            <Route path="/hackathon" element={<Hackathon />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
