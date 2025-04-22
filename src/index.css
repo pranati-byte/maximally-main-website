@@ -195,6 +195,93 @@
     transparent, rgba(60, 158, 231, 0.2), transparent);
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
+
+/* Hackathon Page Styles */
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: stars 4s linear infinite;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.pixel-border-glow {
+  border: 2px solid #4D89FF;
+  box-shadow: 0 0 20px rgba(77, 137, 255, 0.3);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.pixel-card-glow {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #4D89FF, #FF5F5F) 1;
+  transition: all 0.3s ease;
+}
+
+.quest-scroll-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #FFD700;
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.golden-ticket-container {
+  perspective: 1000px;
+}
+
+.golden-ticket {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: black;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.pixel-button-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.pixel-button-glow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: rotate(45deg);
+  animation: glow 2s linear infinite;
+}
+
+@keyframes glow {
+  0% { transform: rotate(45deg) translateX(-100%); }
+  100% { transform: rotate(45deg) translateX(100%); }
+}
+
+@keyframes stars {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-200px); }
+}
+
 }
 
 .neon-text {
