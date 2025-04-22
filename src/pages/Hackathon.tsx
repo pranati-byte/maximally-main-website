@@ -56,10 +56,10 @@ const Hackathon = () => {
               <h1 className="font-press-start text-3xl sm:text-4xl md:text-5xl mb-6 gradient-text-rainbow animate-pulse">
                 Maximally Hack: Future Founders Quest
               </h1>
-              <p className="font-jetbrains text-xl text-white/80 mb-4">
+              <p className="font-jetbrains text-xl text-white mb-4">
                 June 8–10, 2025 | Virtual | Open to Teens Across India
               </p>
-              <p className="text-white/60 italic">
+              <p className="text-white/90 italic">
                 (Registration Closed)
               </p>
             </motion.div>
