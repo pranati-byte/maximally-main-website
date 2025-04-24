@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
@@ -53,7 +52,7 @@ const Hackathon = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 className="font-press-start text-3xl sm:text-4xl md:text-5xl mb-6 gradient-text-rainbow animate-pulse">
+              <h1 className="font-press-start text-3xl sm:text-4xl md:text-5xl mb-6 text-white">
                 Maximally Hack: Future Founders Quest
               </h1>
               <p className="font-jetbrains text-xl text-white mb-4">
@@ -71,9 +70,9 @@ const Hackathon = () => {
                 rel="noopener noreferrer"
                 className="block mb-8"
               >
-                <Button className="w-full md:w-auto bg-[#00FFFF] hover:bg-[#00FFFF]/90 text-black font-press-start px-8 py-4">
+                <Button className="w-full md:w-auto bg-[#00FFFF] hover:bg-[#00FFFF]/90 text-white font-press-start px-8 py-4">
                   View on Devpost
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5 text-white" />
                 </Button>
               </Link>
 
@@ -88,7 +87,7 @@ const Hackathon = () => {
                 <p className="font-jetbrains text-lg mb-4 text-white">
                   Welcome to Maximally Hack — a 48-hour innovation sprint where India's boldest teen minds come together to imagine, build, and launch the future.
                 </p>
-                <p className="font-press-start text-lg text-center my-6 gradient-text-rainbow">
+                <p className="font-press-start text-lg text-center my-6 text-white">
                   This isn't your typical hackathon.
                   <br />
                   It's a Quest. A Game. A Portal to Your Founder Era.
@@ -112,16 +111,16 @@ const Hackathon = () => {
                     className="pixel-card-glow p-4 bg-black/30 backdrop-blur hover:scale-105 transition-transform"
                     whileHover={{ y: -5 }}
                   >
-                    <div className="text-4xl mb-2">{item.icon}</div>
+                    <div className="text-4xl mb-2 text-white">{item.icon}</div>
                     <h3 className="font-press-start text-lg mb-2 text-white">{item.title}</h3>
-                    <p className="font-jetbrains text-maximally-blue">{item.points}</p>
+                    <p className="font-jetbrains text-white">{item.points}</p>
                   </motion.div>
                 ))}
               </motion.div>
 
               {/* Tracks */}
               <div>
-                <h2 className="font-press-start text-2xl mb-6 text-center gradient-text-rainbow">Available Quests</h2>
+                <h2 className="font-press-start text-2xl mb-6 text-center text-white">Available Quests</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[
                     { name: "AI & No-Code Magic", icon: "🤖" },
@@ -136,8 +135,8 @@ const Hackathon = () => {
                       whileHover={{ scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <span className="text-2xl mr-2">{track.icon}</span>
-                      <span className="font-jetbrains">{track.name}</span>
+                      <span className="text-2xl mr-2 text-white">{track.icon}</span>
+                      <span className="font-jetbrains text-white">{track.name}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -150,8 +149,8 @@ const Hackathon = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="golden-ticket">
-                  <h3 className="font-press-start text-2xl mb-4">🎫 Golden Ticket</h3>
-                  <p className="font-jetbrains">Fast-track access to Maximally Bootcamp 2025</p>
+                  <h3 className="font-press-start text-2xl mb-4 text-white">🎫 Golden Ticket</h3>
+                  <p className="font-jetbrains text-white">Fast-track access to Maximally Bootcamp 2025</p>
                 </div>
               </motion.div>
 
@@ -164,7 +163,7 @@ const Hackathon = () => {
                 <Link to="/bootcamps">
                   <Button className="pixel-button-glow bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-press-start group">
                     {'>> ENTER THE QUEST <<'}
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
                 <p className="font-jetbrains text-sm text-white/60">
