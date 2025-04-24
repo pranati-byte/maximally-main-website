@@ -48,7 +48,11 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="font-jetbrains text-white hover:text-[${item.color}] transition-colors duration-200"
+                className={`font-jetbrains ${
+                  window.location.pathname === '/hackathon' 
+                  ? 'text-white' 
+                  : 'text-maximally-black'
+                } hover:text-[${item.color}] transition-colors duration-200`}
               >
                 {item.label}
               </Link>
@@ -96,7 +100,11 @@ const Navbar = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className="font-jetbrains text-white py-3 px-4 text-center rounded-lg text-sm transition-transform active:scale-95"
+                  className={`font-jetbrains ${
+                    window.location.pathname === '/hackathon' 
+                    ? 'text-white' 
+                    : 'text-maximally-black'
+                  } py-3 px-4 text-center rounded-lg text-sm transition-transform active:scale-95`}
                   style={{ backgroundColor: item.color }}
                 >
                   {item.label}
