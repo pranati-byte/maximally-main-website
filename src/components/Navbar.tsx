@@ -48,7 +48,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="font-jetbrains text-maximally-black hover:text-[${item.color}] transition-colors duration-200"
+                className="font-jetbrains text-white hover:text-[${item.color}] transition-colors duration-200"
               >
                 {item.label}
               </Link>

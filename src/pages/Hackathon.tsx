@@ -64,17 +64,18 @@ const Hackathon = () => {
             </motion.div>
 
             {/* Main Content */}
-            <Link 
+            <div className="flex justify-center mb-8">
+              <Link 
                 to="https://maximally-makeathon-2025.devpost.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mb-8"
               >
                 <Button className="w-full md:w-auto bg-[#00FFFF] hover:bg-[#00FFFF]/90 text-white font-press-start px-8 py-4">
                   View on Devpost
                   <ArrowRight className="ml-2 h-5 w-5 text-white" />
                 </Button>
               </Link>
+            </div>
 
               <div className="space-y-12">
               {/* Intro */}
@@ -167,7 +168,7 @@ const Hackathon = () => {
                   </Button>
                 </Link>
                 <p className="font-jetbrains text-sm text-white/60">
-                  Got questions? Email team@maximally.in
+                  Got questions? Email hello@maximally.in
                 </p>
               </motion.div>
             </div>
