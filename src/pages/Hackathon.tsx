@@ -65,7 +65,19 @@ const Hackathon = () => {
             </motion.div>
 
             {/* Main Content */}
-            <div className="space-y-12">
+            <Link 
+                to="https://maximally-makeathon-2025.devpost.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block mb-8"
+              >
+                <Button className="w-full md:w-auto bg-[#00FFFF] hover:bg-[#00FFFF]/90 text-black font-press-start px-8 py-4">
+                  View on Devpost
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+
+              <div className="space-y-12">
               {/* Intro */}
               <motion.div 
                 className="pixel-border-glow p-6 bg-black/50 backdrop-blur"
@@ -73,7 +85,7 @@ const Hackathon = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                <p className="font-jetbrains text-lg mb-4 text-white/90">
+                <p className="font-jetbrains text-lg mb-4 text-white">
                   Welcome to Maximally Hack — a 48-hour innovation sprint where India's boldest teen minds come together to imagine, build, and launch the future.
                 </p>
                 <p className="font-press-start text-lg text-center my-6 gradient-text-rainbow">
@@ -120,7 +132,7 @@ const Hackathon = () => {
                   ].map((track) => (
                     <motion.div
                       key={track.name}
-                      className="quest-scroll-card"
+                      className="quest-scroll-card hover:bg-[#90EE90]/20"
                       whileHover={{ scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
@@ -133,7 +145,7 @@ const Hackathon = () => {
 
               {/* Golden Ticket */}
               <motion.div 
-                className="golden-ticket-container"
+                className="golden-ticket-container bg-[#FFD700]/10 border border-[#FFD700]/50"
                 whileHover={{ rotate: [0, -1, 1, 0] }}
                 transition={{ duration: 0.3 }}
               >
