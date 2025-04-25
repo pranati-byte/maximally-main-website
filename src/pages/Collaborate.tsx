@@ -19,8 +19,8 @@ const SponsorTier = ({ title, price, forText, slots, color, icon: Icon, benefits
       <h3 className="font-press-start text-lg text-white">{title}</h3>
     </div>
     <div className="mb-4">
-      <p className="text-2xl font-bold">₹{price.toLocaleString()}</p>
-      <p className="text-sm opacity-80">For: {forText}</p>
+      <p className="text-2xl font-bold text-white">₹{price.toLocaleString()}</p>
+      <p className="text-sm text-white opacity-80">For: {forText}</p>
       {slots && <p className="text-sm mt-1 text-maximally-blue">{slots}</p>}
     </div>
     <ul className="space-y-2 mb-6">
