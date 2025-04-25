@@ -155,7 +155,7 @@ const Bootcamps = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-4">5️⃣</div>
               <h3 className="font-press-start text-lg mb-2">💳 Confirm Spot</h3>
-              <p className="font-jetbrains">Pay ₹2,500 if selected</p>
+              <p className="font-jetbrains">Secure your place in the program</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-4">6️⃣</div>
