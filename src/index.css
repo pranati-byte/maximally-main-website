@@ -8,11 +8,11 @@
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 1s ease-out forwards;
   }
-  
+
   @keyframes float {
     0%, 100% {
       transform: translateY(0);
@@ -21,7 +21,7 @@
       transform: translateY(-20px);
     }
   }
-  
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -849,4 +849,26 @@
 .animate-gradient-x {
   animation: gradient-x 15s ease infinite;
   background-size: 400% 400%;
+}
+
+/* Add custom styles below */
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.9),
+                 0 0 30px rgba(0, 255, 255, 0.7);
+  }
+}
+
+.sponsor-text {
+  color: white;
+  font-weight: bold;
+}
 }

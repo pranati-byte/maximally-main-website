@@ -129,13 +129,13 @@ const Collaborate = () => {
         <section className="py-16 px-4 bg-gradient-to-b from-black to-maximally-black">
           <div className="container mx-auto max-w-5xl">
             <div className="text-center mb-16">
-              <h1 className="font-press-start text-3xl md:text-4xl text-white mb-6">
+              <h1 className="font-press-start text-3xl md:text-4xl text-white mb-6 glow-text">
                 🌟 Sponsor the Maximally Bootcamp 2025
               </h1>
-              <p className="font-jetbrains text-xl text-white/80">
+              <p className="font-jetbrains text-xl text-[#00FFFF] font-bold">
                 Back India's boldest teenage founders, creators, and leaders.
               </p>
-              <p className="font-jetbrains text-lg text-white/60 mt-2">
+              <p className="font-jetbrains text-lg text-[#90EE90] mt-4 tracking-wide">
                 1,000+ students | 100+ schools | Real-world projects | Massive brand visibility
               </p>
             </div>
