@@ -9,7 +9,6 @@ interface TallyFormDialogProps {
 
 const TallyFormDialog = ({ open, onOpenChange }: TallyFormDialogProps) => {
   useEffect(() => {
-    // Load Tally embed script
     if (open) {
       const script = document.createElement('script');
       script.src = 'https://tally.so/widgets/embed.js';
@@ -32,7 +31,7 @@ const TallyFormDialog = ({ open, onOpenChange }: TallyFormDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[800px] h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-full w-screen h-screen p-0 mt-0">
         <iframe 
           data-tally-src="https://tally.so/embed/wAa61N?transparentBackground=1"
           width="100%" 
@@ -41,6 +40,7 @@ const TallyFormDialog = ({ open, onOpenChange }: TallyFormDialogProps) => {
           marginHeight={0} 
           marginWidth={0} 
           title="Maximally 2025 Sponsor Registration"
+          style={{ minHeight: '100vh' }}
         />
       </DialogContent>
     </Dialog>
