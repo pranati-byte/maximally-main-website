@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import SEO from '@/components/SEO';
 
 const Sponsor = () => {
+  const [isTallyFormOpen, setIsTallyFormOpen] = useState(false);
   return (
     <>
       <SEO 
@@ -96,7 +97,7 @@ const Sponsor = () => {
         <section className="mb-16">
           <h2 className="font-press-start text-2xl mb-8">Sponsorship Tiers</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="pixel-border p-6 bg-yellow-50">
+            <div className="pixel-border p-6 bg-yellow-50 cursor-pointer hover:transform hover:scale-105 transition-all" onClick={() => setIsTallyFormOpen(true)}>
               <h3 className="font-press-start text-lg mb-4">🟡 Minimum Sponsor</h3>
               <p className="font-press-start text-xl mb-4">₹25,000</p>
               <ul className="space-y-2 font-jetbrains">
@@ -105,7 +106,7 @@ const Sponsor = () => {
                 <li>• Certificate of appreciation</li>
               </ul>
             </div>
-            <div className="pixel-border p-6 bg-blue-50">
+            <div className="pixel-border p-6 bg-blue-50 cursor-pointer hover:transform hover:scale-105 transition-all" onClick={() => setIsTallyFormOpen(true)}>
               <h3 className="font-press-start text-lg mb-4">🔵 Resolution Partner</h3>
               <p className="font-press-start text-xl mb-4">₹1,00,000</p>
               <ul className="space-y-2 font-jetbrains">
@@ -115,7 +116,7 @@ const Sponsor = () => {
                 <li>• Discord community badge</li>
               </ul>
             </div>
-            <div className="pixel-border p-6 bg-red-50">
+            <div className="pixel-border p-6 bg-red-50 cursor-pointer hover:transform hover:scale-105 transition-all" onClick={() => setIsTallyFormOpen(true)}>
               <h3 className="font-press-start text-lg mb-4">🔴 Infinite Mode</h3>
               <p className="font-press-start text-xl mb-4">₹5,00,000+</p>
               <ul className="space-y-2 font-jetbrains">
@@ -125,6 +126,7 @@ const Sponsor = () => {
                 <li>• Max visibility across platforms</li>
               </ul>
             </div>
+            <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
           </div>
           <p className="text-center mt-4 font-jetbrains italic">Custom sponsorships available on request</p>
         </section>

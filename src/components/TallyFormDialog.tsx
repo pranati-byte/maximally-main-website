@@ -34,13 +34,13 @@ const TallyFormDialog = ({ open, onOpenChange }: TallyFormDialogProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[800px] h-[90vh] overflow-y-auto">
         <iframe 
-          data-tally-src="https://tally.so/embed/wgOYD4?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          data-tally-src="https://tally.so/embed/wAa61N?transparentBackground=1"
           width="100%" 
           height="100%" 
           frameBorder="0" 
           marginHeight={0} 
           marginWidth={0} 
-          title="Maximally Summer Bootcamp Pre-Registration"
+          title="Maximally 2025 Sponsor Registration"
         />
       </DialogContent>
     </Dialog>
