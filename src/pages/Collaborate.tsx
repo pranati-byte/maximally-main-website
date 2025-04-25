@@ -9,7 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Link } from "react-router-dom";
 import { BadgeCheck, Trophy, Medal, Heart } from "lucide-react";
 
-const SponsorTier = ({ title, price, forText, slots, color, icon: Icon, benefits, ctaText }) => (
+const SponsorTier = ({ title, price, forText, slots, color, icon: Icon, benefits, ctaText, setIsFormOpen }) => (
   <motion.div 
     whileHover={{ scale: 1.02 }}
     className={`p-6 rounded-lg border-2 ${color} backdrop-blur-sm hover:shadow-xl transition-all`}
@@ -31,7 +31,7 @@ const SponsorTier = ({ title, price, forText, slots, color, icon: Icon, benefits
           </li>
         ))}
       </ul>
-    <Button className="w-full bg-black hover:bg-black/80 text-white">
+    <Button className="w-full bg-black hover:bg-black/80 text-white" onClick={() => setIsFormOpen(true)}>
       {ctaText}
     </Button>
   </motion.div>
@@ -64,7 +64,8 @@ const Collaborate = () => {
         { icon: "📰", text: "Inclusion in press outreach" },
         { icon: "📣", text: "Priority social shoutouts" }
       ],
-      ctaText: "Become a Platinum Sponsor"
+      ctaText: "Become a Platinum Sponsor",
+      setIsFormOpen
     },
     {
       title: "GOLD SPONSOR",
@@ -82,7 +83,8 @@ const Collaborate = () => {
         { icon: "📬", text: "Newsletter feature" },
         { icon: "🤝", text: "Sampling opportunity during bootcamp" }
       ],
-      ctaText: "Become a Gold Sponsor"
+      ctaText: "Become a Gold Sponsor",
+      setIsFormOpen
     },
     {
       title: "SILVER SPONSOR",
@@ -142,7 +144,7 @@ const Collaborate = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {sponsorTiers.map((tier) => (
-                <SponsorTier key={tier.title} {...tier} />
+                <SponsorTier key={tier.title} {...tier} setIsFormOpen={setIsFormOpen} />
               ))}
             </div>
           </div>
