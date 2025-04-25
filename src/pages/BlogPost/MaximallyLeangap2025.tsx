@@ -1,6 +1,7 @@
 
 import BlogPost from '@/components/BlogPost';
 import { Button } from '@/components/ui/button';
+import { Twitter, Linkedin, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const MaximallyLeangap2025 = () => {
@@ -84,6 +85,45 @@ const MaximallyLeangap2025 = () => {
           If you believe that teenagers can be founders, innovators, and leaders — not someday, but today — then Maximally is your tribe.
         </p>
       </section>
+
+      <div className="mt-8 space-y-4">
+        <h3 className="font-press-start text-xl mb-4">Related Posts</h3>
+        <ul className="space-y-2">
+          <li>
+            <Link to="/blog/school-vs-life-2025" className="text-maximally-blue hover:underline">👉 Why School Doesn't Teach You Real Life</Link>
+          </li>
+          <li>
+            <Link to="/blog/real-world-skills-2025" className="text-maximally-blue hover:underline">👉 Why Real-World Skills Matter More Than Marks</Link>
+          </li>
+          <li>
+            <Link to="/blog/summer-programs-2025" className="text-maximally-blue hover:underline">👉 Top Summer Programs for Teens</Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="flex justify-center gap-4 mt-8">
+        <Button
+          variant="outline"
+          onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent('How Maximally is Building the Leangap of India - A must-read for every ambitious teen!')}&url=${encodeURIComponent(window.location.href)}`, '_blank')}
+        >
+          <Twitter className="w-4 h-4 mr-2" />
+          Share on Twitter
+        </Button>
+        <Button
+          variant="outline"
+          onClick={() => window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`, '_blank')}
+        >
+          <Linkedin className="w-4 h-4 mr-2" />
+          Share on LinkedIn
+        </Button>
+        <Button
+          variant="outline"
+          onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent('Check out how Maximally is becoming India\'s Leangap: ' + window.location.href)}`, '_blank')}
+        >
+          <MessageSquare className="w-4 h-4 mr-2" />
+          Share on WhatsApp
+        </Button>
+      </div>
     </>
   );
 

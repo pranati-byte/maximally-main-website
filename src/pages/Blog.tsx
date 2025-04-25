@@ -7,10 +7,11 @@ import { Link } from "react-router-dom";
 const blogPosts = [
   {
     title: "How Maximally is Building the Leangap of India",
+    excerpt: "Discover how Maximally is becoming India's answer to Leangap, empowering teens to start companies and build real projects. From mentorship to real outcomes, see how we're revolutionizing teen entrepreneurship...",
     date: "April 17, 2025",
-    description: "Discover how Maximally is becoming India's answer to Leangap, empowering teens to start companies and build real projects.",
-    link: "/blog/maximally-leangap-2025",
-    readTime: "5 min read"
+    readTime: "5 min read",
+    category: "Entrepreneurship",
+    link: "/blog/maximally-leangap-2025"
   },
   {
     title: "Why School Doesn't Teach You Real Life (And What We're Doing About It)",
