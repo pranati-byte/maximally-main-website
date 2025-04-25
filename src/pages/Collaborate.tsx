@@ -16,7 +16,7 @@ const SponsorTier = ({ title, price, forText, slots, color, icon: Icon, benefits
   >
     <div className="flex items-center gap-2 mb-4">
       <Icon className="h-6 w-6" />
-      <h3 className="font-press-start text-lg">{title}</h3>
+      <h3 className="font-press-start text-lg text-white">{title}</h3>
     </div>
     <div className="mb-4">
       <p className="text-2xl font-bold">₹{price.toLocaleString()}</p>
