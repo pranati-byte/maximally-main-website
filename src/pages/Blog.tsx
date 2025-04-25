@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Search, Calendar, ArrowRight } from "lucide-react";
@@ -80,7 +79,7 @@ const Blog = () => {
       <h1 className="font-press-start text-3xl text-maximally-black mb-6 text-center">
         &gt;&gt; Maximally Blog_
       </h1>
-      
+
       <div className="max-w-3xl mx-auto">
         <div className="relative mb-12">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-maximally-black/50 h-5 w-5" />
@@ -99,6 +98,8 @@ const Blog = () => {
               to={
                 post.title === "Why School Doesn't Teach You Real Life (And What We're Doing About It)"
                   ? "/blog/school-vs-life-2025"
+                  : post.title === "How Maximally is Building the Leangap of India"
+                    ? "/blog/maximally-leangap-2025"
                   : post.title === "Top 10 Summer Programs for Teens in India (2025 Edition)" 
                     ? "/blog/summer-programs-2025" 
                     : post.title === "How to Make the Most of Your Summer Break (For Students Ages 13–20)"
@@ -109,7 +110,7 @@ const Blog = () => {
                           ? "/blog/online-courses-2025"
                           : post.title === "How to Get Internships in High School (Ultimate Guide)"
                             ? "/blog/internships-2025"
-                            : "#"
+                            : post.link || "#"
               } 
               key={index}
             >
@@ -126,15 +127,15 @@ const Blog = () => {
                   {post.readTime}
                 </span>
               </div>
-              
+
               <h2 className="font-press-start text-xl mb-3 text-maximally-black">
                 {post.title}
               </h2>
-              
+
               <p className="font-jetbrains text-maximally-black/70 mb-4">
                 {post.excerpt}
               </p>
-              
+
               <button className="flex items-center gap-2 text-maximally-blue font-press-start text-sm group">
                 Read More 
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
