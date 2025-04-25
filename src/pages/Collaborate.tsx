@@ -24,13 +24,13 @@ const SponsorTier = ({ title, price, forText, slots, color, icon: Icon, benefits
       {slots && <p className="text-sm mt-1 text-maximally-blue">{slots}</p>}
     </div>
     <ul className="space-y-2 mb-6">
-      {benefits.map((benefit, index) => (
-        <li key={index} className="flex items-start gap-2">
-          <span className="text-lg">{benefit.icon}</span>
-          <span className="text-sm">{benefit.text}</span>
-        </li>
-      ))}
-    </ul>
+        {benefits.map((benefit, index) => (
+          <li key={index} className="flex items-start gap-2 text-white">
+            <span className="text-lg">{benefit.icon}</span>
+            <span className="text-sm font-medium">{benefit.text}</span>
+          </li>
+        ))}
+      </ul>
     <Button className="w-full bg-black hover:bg-black/80 text-white">
       {ctaText}
     </Button>
