@@ -1,0 +1,109 @@
+✅ Developer Prompt for /collaborate Page — Sponsor Section (Minimum Tier Pricing)
+Hey! Please add this sponsor section at the top of the /collaborate page. Use a modern grid or tiered card layout with color-coded styles, icons, and clear CTA buttons for each tier. Make it visually bold and scroll-stopping.
+
+🌟 Sponsor the Maximally Bootcamp 2025
+Back India’s boldest teenage founders, creators, and leaders.
+1,000+ students | 100+ schools | Real-world projects | Massive brand visibility.
+
+🏔️ PLATINUM SPONSOR — ₹1,00,000
+For: Big Edtech / VC-backed Startups
+Only 2 spots available
+
+Incentives:
+
+🎤 Title Sponsor on all bootcamp communications
+
+🎙️ Keynote slot at our Grand Demo Day
+
+🏢 Premium booth at offline finale
+
+🤝 Full co-branding on website, merch, posters, socials
+
+📨 Newsletter feature (10K+ readers)
+
+📸 Instagram/YouTube collab (Reels, mentions)
+
+🧠 High-res photo & video bundle
+
+📊 Dedicated Impact Report section
+
+📰 Inclusion in press outreach
+
+📣 Priority social shoutouts
+
+👉 Become a Platinum Sponsor
+
+🌟 GOLD SPONSOR — ₹50,000
+For: Youth Brands (Red Bull, boAt, Paytm, etc.)
+Max 4 brands
+
+Incentives:
+
+🌟 Gold Partner tag on branding
+
+📸 IG Reels + student content collab
+
+📢 Session shoutouts + story tags
+
+🏷️ Logo on website & posters
+
+📝 Blog + Impact Report mention
+
+📬 Newsletter feature
+
+🤝 Sampling opportunity during bootcamp
+
+👉 Become a Gold Sponsor
+
+🧲 SILVER SPONSOR — ₹25,000
+For: Local Businesses / MSMEs / Alumni
+Unlimited
+
+Incentives:
+
+🖼️ Logo on website, event posters
+
+📣 Instagram gratitude post
+
+🎤 Acknowledged during opening & closing
+
+📝 Mention in our final blog + Impact Report
+
+💌 End-of-camp email update with results
+
+👉 Become a Silver Sponsor
+
+💬 MICRO SPONSOR — ₹5,000
+For: Parents, School Owners, Alumni & Community Supporters
+Open to all
+
+Incentives:
+
+💖 “Community Patron” listing on website
+
+📊 Named in our final Impact Report
+
+📢 Shoutout on Instagram
+
+🙌 Back the next gen with pride
+
+👉 Support as a Micro Sponsor
+
+🎨 Design / Layout Guidelines
+Layout: 2x2 grid on desktop, stacked on mobile
+
+Use bright hover effects for CTA buttons
+
+Tier color scheme:
+
+Platinum: deep violet
+
+Gold: gold/yellow
+
+Silver: cool gray
+
+Micro: soft red or coral
+
+Make this section stick visually — badges, icons, minimal animations welcome
+
+Place this above any existing /collaborate content
