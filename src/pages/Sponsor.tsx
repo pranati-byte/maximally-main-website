@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 import SEO from '@/components/SEO';
 
 const Sponsor = () => {
