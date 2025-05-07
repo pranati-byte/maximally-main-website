@@ -225,7 +225,7 @@ const Index = () => {
               </h2>
               <p className="font-jetbrains text-white/90 text-xl mb-6 max-w-3xl mx-auto">
                 India's most ambitious teen program is now live.
-                <br />Only 200 get in. Once you're in, you're in for life.
+                <br />First 500 get in free. Once you're in, you're in for life.
               </p>
               <p className="font-jetbrains text-white/80 text-lg mb-8 max-w-2xl mx-auto">
                 Startup builders. Public speakers. AI explorers. Future leaders.

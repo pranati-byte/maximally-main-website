@@ -62,7 +62,7 @@ const JoinUs = () => {
               </ul>
 
               <p className="font-press-start text-base sm:text-lg gradient-text-rainbow mb-6 md:mb-8 animate-pulse">
-                This is not a chill internship — it's chaos, creativity, and real impact.
+                This is an open program — first 500 students get in free, and once you're in, you're in for life.
               </p>
 
               <div className="mb-8">

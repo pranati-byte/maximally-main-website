@@ -49,7 +49,7 @@ const SummerBreak2025 = () => {
         <h2 className="font-press-start text-2xl mb-4">🔥 Maximally Summer Bootcamp 2025</h2>
         <div className="mb-6">
           <div className="grid grid-cols-2 gap-4 mb-4">
-            <div><strong>Selection:</strong> Only 200 students</div>
+            <div><strong>Selection:</strong> First 500 students get in free</div>
             <div><strong>Cost:</strong> ₹2,500 (only if selected)</div>
             <div><strong>Duration:</strong> 7 days of intensive training</div>
             <div><strong>Ages:</strong> 13–20</div>
