@@ -36,6 +36,7 @@ import OnlineCourses2025 from './pages/BlogPost/OnlineCourses2025';
 import Internships2025 from './pages/BlogPost/Internships2025';
 import JoinUs from './pages/JoinUs';
 import Hackathon from '@/pages/Hackathon';
+import NotFound from '@/pages/NotFound';
 
 
 const queryClient = new QueryClient();
