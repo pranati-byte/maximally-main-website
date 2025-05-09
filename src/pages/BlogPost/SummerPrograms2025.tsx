@@ -1,4 +1,3 @@
-
 import BlogPost from '@/components/BlogPost';
 
 const SummerPrograms2025 = () => {
@@ -17,7 +16,7 @@ const SummerPrograms2025 = () => {
           <div><strong>Selection:</strong> Only 200 students</div>
         </div>
         <p className="mb-4">Maximally isn't just another summer program—it's a career-altering inflection point where India's most driven young minds come together to operate at the highest level.</p>
-        
+
         <h3 className="font-press-start text-xl mb-3">Curriculum Highlights:</h3>
         <ul className="list-disc pl-6 mb-4 space-y-2">
           <li>Day 1: Orientation & Mindset Reset</li>
@@ -80,13 +79,14 @@ const SummerPrograms2025 = () => {
             <p>Your badge of honor in the digital age</p>
           </div>
         </div>
-        
+
         <div className="mt-6 text-center">
           <p className="font-press-start text-lg mb-4">
             🎯 Don't just attend. Get selected.
           </p>
           <p className="font-jetbrains">
             Join our community of ambitious teens and start your journey today.
+            Your success story begins here.
           </p>
         </div>
       </section>
