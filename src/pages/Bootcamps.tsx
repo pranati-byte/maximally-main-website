@@ -40,7 +40,7 @@ const Bootcamps = () => {
           🎉 Applications are open!
         </p>
         <p className="font-jetbrains text-[10px] sm:text-xs md:text-sm">
-          Only 200 students will be selected. First come, first served.
+          Join us and start your journey towards success.
         </p>
       </div>
 

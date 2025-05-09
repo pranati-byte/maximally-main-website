@@ -86,8 +86,7 @@ const SummerPrograms2025 = () => {
             🎯 Don't just attend. Get selected.
           </p>
           <p className="font-jetbrains">
-            Only 200 students get accepted into our certificate of excellence program.
-            Once you're in, you're in for life.
+            Join our community of ambitious teens and start your journey today.
           </p>
         </div>
       </section>
