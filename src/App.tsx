@@ -9,9 +9,10 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import Support from "./pages/Support";
+import Terms from "./pages/Terms";
+import ThankYou from "./pages/ThankYou";
+import Featured from "./pages/Featured";
 import Privacy from "@/pages/Privacy";
-import Terms from "@/pages/Terms";
-import NotFound from "@/pages/NotFound";
 import About from "./pages/About";
 import Bootcamps from '@/pages/Bootcamps';
 // Team page removed
@@ -33,7 +34,6 @@ import RealWorldSkills2025 from './pages/BlogPost/RealWorldSkills2025';
 import SchoolVsLife2025 from './pages/BlogPost/SchoolVsLife2025';
 import OnlineCourses2025 from './pages/BlogPost/OnlineCourses2025';
 import Internships2025 from './pages/BlogPost/Internships2025';
-import ThankYou from './pages/ThankYou';
 import JoinUs from './pages/JoinUs';
 import Hackathon from '@/pages/Hackathon';
 
@@ -93,6 +93,7 @@ const App = () => {
             <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/join-us" element={<JoinUs />} />
             <Route path="/hackathon" element={<Hackathon />} />
+            <Route path="/featured" element={<Featured />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
