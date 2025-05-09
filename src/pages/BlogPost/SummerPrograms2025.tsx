@@ -13,7 +13,7 @@ const SummerPrograms2025 = () => {
           <div><strong>Age Group:</strong> 13–20</div>
           <div><strong>Cost:</strong> ₹2,500 (only if selected)</div>
           <div><strong>Duration:</strong> 7 days of intensive training</div>
-          <div><strong>Selection:</strong> Only 200 students</div>
+          <div><strong>Selection:</strong> Limited spots available</div>
         </div>
         <p className="mb-4">Maximally isn't just another summer program—it's a career-altering inflection point where India's most driven young minds come together to operate at the highest level.</p>
 
