@@ -110,22 +110,26 @@ const Blog = () => {
         <div className="space-y-8">
           {filteredPosts.map((post, index) => (
             <Link 
-              to={
-                post.title === "Why School Doesn't Teach You Real Life (And What We're Doing About It)"
+              to={post.link || 
+                (post.title === "Why School Doesn't Teach You Real Life (And What We're Doing About It)"
                   ? "/blog/school-vs-life-2025"
                   : post.title === "How Maximally is Building the Leangap of India"
                     ? "/blog/maximally-leangap-2025"
                   : post.title === "Top 10 Summer Programs for Teens in India (2025 Edition)" 
                     ? "/blog/summer-programs-2025" 
-                    : post.title === "How to Make the Most of Your Summer Break (For Students Ages 13–20)"
-                      ? "/blog/summer-break-2025"
-                      : post.title === "Why Real-World Skills Matter More Than Marks in 2025"
-                        ? "/blog/real-world-skills-2025"
-                        : post.title === "Best Online Courses for Teenagers in India (Free + Paid)"
-                          ? "/blog/online-courses-2025"
-                          : post.title === "How to Get Internships in High School (Ultimate Guide)"
-                            ? "/blog/internships-2025"
-                            : post.link || "#"
+                  : post.title === "How to Make the Most of Your Summer Break (For Students Ages 13–20)"
+                    ? "/blog/summer-break-2025"
+                  : post.title === "Why Real-World Skills Matter More Than Marks in 2025"
+                    ? "/blog/real-world-skills-2025"
+                  : post.title === "Best Online Courses for Teenagers in India (Free + Paid)"
+                    ? "/blog/online-courses-2025"
+                  : post.title === "How to Get Internships in High School (Ultimate Guide)"
+                    ? "/blog/internships-2025"
+                  : post.title === "How to Build Your Teen's Confidence Without Tutors or Tuitions"
+                    ? "/blog/build-teen-confidence"
+                  : post.title === "How to Start a Business Before You Turn 18 (No Code, No Problem!)"
+                    ? "/blog/teen-business"
+                  : "#")
               } 
               key={index}
             >
