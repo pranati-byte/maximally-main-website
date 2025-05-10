@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
@@ -87,6 +88,76 @@ const Hackathon = () => {
               </div>
             </div>
 
+            {/* Tracks Section */}
+            <motion.div 
+              className="mb-16"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              <h2 className="font-press-start text-2xl text-white text-center mb-8">🎮 Quest Tracks</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { name: "AI & No-Code Innovation", description: "Build the future without writing code", icon: "🤖" },
+                  { name: "Social Impact", description: "Solve real problems for real people", icon: "🌍" },
+                  { name: "Gaming & Web3", description: "Create immersive digital experiences", icon: "🎮" },
+                  { name: "Open Innovation", description: "Your wild card to build anything", icon: "💫" }
+                ].map((track) => (
+                  <div key={track.name} className="pixel-border-glow p-6 bg-black/50 backdrop-blur text-white hover:transform hover:scale-105 transition-all">
+                    <div className="text-3xl mb-2">{track.icon}</div>
+                    <h3 className="font-press-start text-lg mb-2">{track.name}</h3>
+                    <p className="font-jetbrains text-white/80">{track.description}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Rewards & Perks */}
+            <motion.div 
+              className="mb-16 pixel-border-glow p-8 bg-black/50 backdrop-blur"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              <h2 className="font-press-start text-2xl text-white text-center mb-8">🎁 Epic Rewards</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">💎</div>
+                  <h3 className="font-press-start text-lg mb-2">Cash Prizes</h3>
+                  <p className="font-jetbrains">Win up to $500 for your innovation</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🎯</div>
+                  <h3 className="font-press-start text-lg mb-2">Mentorship</h3>
+                  <p className="font-jetbrains">1:1 guidance from industry experts</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🚀</div>
+                  <h3 className="font-press-start text-lg mb-2">Launch Support</h3>
+                  <p className="font-jetbrains">Help taking your project live</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Rules & Guidelines */}
+            <motion.div 
+              className="mb-16 pixel-border-glow p-8 bg-black/50 backdrop-blur text-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+            >
+              <h2 className="font-press-start text-2xl text-center mb-8">📜 Quest Rules</h2>
+              <div className="space-y-4 font-jetbrains">
+                <p>• Open to all Indian teens aged 13-19</p>
+                <p>• Build something new during the hackathon</p>
+                <p>• Teams of 1-4 players allowed</p>
+                <p>• All code must be your own or openly licensed</p>
+                <p>• AI tools and no-code platforms are welcome</p>
+                <p>• Projects must solve a real problem</p>
+              </div>
+            </motion.div>
+
+            {/* CTA Section */}
             <div className="text-center space-y-6">
               <Link 
                 to="https://maximally-makeathon-2025.devpost.com/"
@@ -94,7 +165,7 @@ const Hackathon = () => {
                 rel="noopener noreferrer"
               >
                 <Button className="w-full md:w-auto bg-[#00FFFF] hover:bg-[#00FFFF]/90 text-white font-press-start px-8 py-4">
-                  View on Devpost
+                  Join the Quest
                   <ArrowRight className="ml-2 h-5 w-5 text-white" />
                 </Button>
               </Link>
