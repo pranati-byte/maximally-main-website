@@ -98,31 +98,40 @@ const Index = () => {
                 Join a community of ambitious teens learning real-world skills through hands-on projects.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                <Link 
+                  to="/bootcamps" 
+                  className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-blue w-full"
+                >
                   <span>Start Learning</span>
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
                 <button 
                   onClick={() => window.location.href = 'https://tally.so/r/wQEGEA'} 
-                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto"
+                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
                 >
                   <span>Register Now</span>
-                  <CalendarCheck className="h-4 w-4" />
+                  <CalendarCheck className="h-4 w-4 animate-bounce" />
                 </button>
 
-                <Link to="/hackathon" className="pixel-button bg-maximally-purple text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto">
+                <Link 
+                  to="/hackathon" 
+                  className="pixel-button bg-maximally-purple text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-purple w-full"
+                >
                   <span>Check out Hackathon</span>
-                  <Code className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Code className="h-4 w-4 group-hover:rotate-12 transition-transform" />
                 </Link>
-                <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
 
-                <Link to="/community" className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto">
+                <Link 
+                  to="/community" 
+                  className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 hover:scale-105 transform transition-all hover:bg-black hover:text-white w-full"
+                >
                   <span>Join Community</span>
-                  <Users className="h-4 w-4" />
+                  <Users className="h-4 w-4 group-hover:scale-110 transition-transform" />
                 </Link>
               </div>
+              <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
             </div>
           </div>
         </section>
