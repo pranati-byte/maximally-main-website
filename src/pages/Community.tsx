@@ -88,7 +88,7 @@ const Community = () => {
                 </div>
               </div>
               <button
-                onClick={() => window.location.href = 'https://discord.gg/maximally'}
+                onClick={() => window.location.href = 'https://discord.gg/S2YyGtBWKa'}
                 className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2"
               >
                 <span>Join Discord</span>
