@@ -1,0 +1,117 @@
+Maximally Makeathon 2025
+Teen innovators, assemble. Build real-world tech for real-world impact
+Find teammates
+Who can participate
+Above legal age of majority in country of residence
+All countries/territories, excluding standard exceptions 
+View full rules
+Submissions open soon
+View schedule
+
+Jul 1 – 3, 2025
+Online
+Public
+$1,000 in cash	49 participants
+Maximally.in/hackathon
+Beginner Friendly IoT Machine Learning/AI
+🚀 Maximally Makeathon 2025
+June 1–2 | For India’s most ambitious teen builders
+
+Maximally Makeathon is a 48-hour sprint where high schoolers from across India come together to build, launch, and show off real-world tech projects. Whether you're a code wizard, a design thinker, or just have big ideas — this is your launchpad.
+
+ 
+
+What makes it different? This isn’t just a hackathon — it’s a movement of teen founders, creators, and change-makers. Powered by the Maximally Bootcamp, you’ll be mentored by startup pros, use the same tools real builders use, and end up with something you’re proud to show off.
+
+💥 What to Expect
+💡 Theme reveal + kickoff on June 1
+
+🔧 Build solo or with a team — no-code, low-code, full-code all welcome
+
+🚀 Tools like ChatGPT, Glide, Canva, Figma, Replit, and more
+
+🔥 Mentorship & feedback throughout
+
+🎤 Submit by June 2 at 11:59 PM IST
+
+🏆 Prizes, shoutouts, and a place on Maximally’s Hall of Fame
+
+ 
+
+No experience? No problem.
+Come curious, leave legendary.
+
+Requirements
+📦 Submission Requirements
+To be eligible for judging, your Devpost submission must include:
+
+A working prototype
+
+This could be a website, app, no-code tool, design mockup, or any tech-powered solution related to the hackathon theme.
+
+You can use tools like Glide, Replit, Figma, Canva, Wix, Framer, Bubble, or custom code — up to you!
+
+A 1–2 minute demo video
+
+Explain what your project does, why it matters, and show it in action.
+
+Upload the video to YouTube or Vimeo and include the link in your submission.
+
+A short write-up (on Devpost):
+
+What problem does your project solve?
+
+How did you build it?
+
+What tools/technologies did you use?
+
+What makes it innovative or impactful?
+
+Team info (if applicable):
+
+List your team members and who did what. Max 4 per team.
+
+Bonus points for:
+✨ Creativity
+⚡ Real-world relevance
+💬 Clear storytelling
+🎨 Aesthetically clean or fun design
+
+Prizes
+$1,000 in prizes
+Maker of the Year
+$500 in cash
+1 winner
+Best No-Code Project
+$250 in cash
+1 winner
+Social Impact Award
+$250 in cash
+1 winner
+Devpost Achievements
+Submitting to this hackathon could earn you:
+
+
+First online hackathon
+
+X Hackathons
+ level 1
+
+Hackathon Winner
+ level 1
+
+Generalist
+Judges
+Rahul Chandra
+Rahul Chandra
+Software Engineer @Deepmind
+
+Judging Criteria
+Creativity & Originality (25%)
+Did the project bring a fresh idea or unique spin? Did you try something ambitious or unexpected?
+Execution & Functionality (25%)
+Does the project work? Is it polished and thoughtfully built, even if it’s just a prototype?
+Relevance to Theme (25%)
+How well does the solution align with the hackathon’s core theme or challenge?
+Communication & Presentation (25%)
+Is the video/demo clear and engaging? Does the write-up explain the what, why, and how?
