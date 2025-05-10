@@ -1,3 +1,4 @@
+
 import { ArrowRight, Lock, Star, Users, Zap } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { Card, CardContent } from '@/components/ui/card';
@@ -38,7 +39,7 @@ const Community = () => {
                 </span>
               </div>
               <h2 className="font-press-start text-2xl mb-4">Inner Circle_</h2>
-              <p className="font-jetbrains mb-6">The most ambitious teens in India. One private community. Zero fluff.</p>
+              <p className="font-jetbrains mb-6">An exclusive community of India's most ambitious teen builders and entrepreneurs.</p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-2">
                   <Star className="h-5 w-5 text-maximally-blue" />
@@ -71,7 +72,7 @@ const Community = () => {
                 </span>
               </div>
               <h2 className="font-press-start text-2xl mb-4">Outer Circle_</h2>
-              <p className="font-jetbrains mb-6">India's largest teen entrepreneurship community. Open to all dreamers & builders.</p>
+              <p className="font-jetbrains mb-6">Join India's largest teen entrepreneurship community. A place to learn, share, and grow together.</p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-2">
                   <Users className="h-5 w-5 text-maximally-red" />
@@ -98,27 +99,27 @@ const Community = () => {
         </div>
       </section>
 
-      {/* Common Benefits */}
+      {/* Benefits Section */}
       <section className="py-16 bg-maximally-black text-white">
         <div className="container mx-auto px-4">
           <h2 className="font-press-start text-2xl mb-12 text-center">Why Join Maximally?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <Card className="border-2 border-maximally-blue/30 bg-black/50">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-lg mb-2">🚀 Real Projects</h3>
-                <p className="font-jetbrains">Build stuff that matters</p>
+                <h3 className="font-press-start text-lg mb-2 text-white">🚀 Real Projects</h3>
+                <p className="font-jetbrains text-white">Build real products that solve real problems. No fake assignments.</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-maximally-red/30 bg-black/50">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-lg mb-2">💡 Learn by Doing</h3>
-                <p className="font-jetbrains">No theory, pure execution</p>
+                <h3 className="font-press-start text-lg mb-2 text-white">💡 Learn by Doing</h3>
+                <p className="font-jetbrains text-white">Hands-on experience over theoretical knowledge. Pure execution.</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-maximally-purple/30 bg-black/50">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-lg mb-2">🌐 Network Growth</h3>
-                <p className="font-jetbrains">Connect with the best</p>
+                <h3 className="font-press-start text-lg mb-2 text-white">🌐 Network Growth</h3>
+                <p className="font-jetbrains text-white">Connect with India's most ambitious teens and industry experts.</p>
               </CardContent>
             </Card>
           </div>
