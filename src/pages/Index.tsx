@@ -111,6 +111,11 @@ const Index = () => {
                   <span>Register Now</span>
                   <CalendarCheck className="h-4 w-4" />
                 </button>
+
+                <Link to="/hackathon" className="pixel-button bg-maximally-purple text-white group flex items-center gap-2 hover:animate-pulse w-full sm:w-auto">
+                  <span>Check out Hackathon</span>
+                  <Code className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
                 <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
 
                 <Link to="/community" className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 w-full sm:w-auto">
