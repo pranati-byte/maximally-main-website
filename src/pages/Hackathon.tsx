@@ -56,15 +56,38 @@ const Hackathon = () => {
                 Maximally Hack: Future Founders Quest
               </h1>
               <p className="font-jetbrains text-xl text-white mb-4">
-                June 8–10, 2025 | Virtual | Open to Teens Across India
+                July 1–3, 2025 | Virtual | Open to Teens Across India
               </p>
-              <p className="text-white/90 italic">
-                (Registration Closed)
+              <p className="text-white/90">
+                $1,000 in Prizes | Beginner Friendly | AI & No-Code Welcome
               </p>
             </motion.div>
 
             {/* Main Content */}
-            <div className="flex justify-center mb-8">
+            <div className="grid gap-8 md:grid-cols-2 mb-16">
+              <div className="pixel-border-glow p-6 bg-black/50 backdrop-blur text-white">
+                <h2 className="font-press-start text-xl mb-4">🚀 What to Expect</h2>
+                <ul className="space-y-3 font-jetbrains">
+                  <li>💡 Theme reveal + kickoff on July 1st</li>
+                  <li>🔧 Build solo or with a team (max 4)</li>
+                  <li>🚀 Use any tools: AI, no-code, or full-code</li>
+                  <li>🔥 Get mentorship throughout</li>
+                  <li>🎤 Submit by July 3rd at 11:59 PM IST</li>
+                </ul>
+              </div>
+              <div className="pixel-border-glow p-6 bg-black/50 backdrop-blur text-white">
+                <h2 className="font-press-start text-xl mb-4">🏆 Prizes</h2>
+                <ul className="space-y-3 font-jetbrains">
+                  <li>🥇 Maker of the Year: $500</li>
+                  <li>🌟 Best No-Code Project: $250</li>
+                  <li>💫 Social Impact Award: $250</li>
+                  <li>✨ Special mentions & swag</li>
+                  <li>🎯 Featured on Maximally's Hall of Fame</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center space-y-6">
               <Link 
                 to="https://maximally-makeathon-2025.devpost.com/"
                 target="_blank"
@@ -75,102 +98,9 @@ const Hackathon = () => {
                   <ArrowRight className="ml-2 h-5 w-5 text-white" />
                 </Button>
               </Link>
-            </div>
-
-              <div className="space-y-12">
-              {/* Intro */}
-              <motion.div 
-                className="pixel-border-glow p-6 bg-black/50 backdrop-blur"
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-              >
-                <p className="font-jetbrains text-lg mb-4 text-white">
-                  Welcome to Maximally Hack — a 48-hour innovation sprint where India's boldest teen minds come together to imagine, build, and launch the future.
-                </p>
-                <p className="font-press-start text-lg text-center my-6 text-white">
-                  This isn't your typical hackathon.
-                  <br />
-                  It's a Quest. A Game. A Portal to Your Founder Era.
-                </p>
-              </motion.div>
-
-              {/* Guild Points System */}
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-6"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-              >
-                {[
-                  { title: "Guild Points", icon: "🏆", points: "2500 XP" },
-                  { title: "Quest Level", icon: "⚔️", points: "Level 42" },
-                  { title: "Power Rank", icon: "⭐", points: "#1 Guild" }
-                ].map((item) => (
-                  <motion.div
-                    key={item.title}
-                    className="pixel-card-glow p-4 bg-black/30 backdrop-blur hover:scale-105 transition-transform"
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="text-4xl mb-2 text-white">{item.icon}</div>
-                    <h3 className="font-press-start text-lg mb-2 text-white">{item.title}</h3>
-                    <p className="font-jetbrains text-white">{item.points}</p>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              {/* Tracks */}
-              <div>
-                <h2 className="font-press-start text-2xl mb-6 text-center text-white">Available Quests</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[
-                    { name: "AI & No-Code Magic", icon: "🤖" },
-                    { name: "Digital Creators & Storytelling", icon: "📚" },
-                    { name: "Social Impact & Youth Mental Health", icon: "💖" },
-                    { name: "Fintech for Teens", icon: "💰" },
-                    { name: "Open Quest", icon: "🎯" }
-                  ].map((track) => (
-                    <motion.div
-                      key={track.name}
-                      className="quest-scroll-card hover:bg-[#90EE90]/20"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <span className="text-2xl mr-2 text-white">{track.icon}</span>
-                      <span className="font-jetbrains text-white">{track.name}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Golden Ticket */}
-              <motion.div 
-                className="golden-ticket-container bg-[#FFD700]/10 border border-[#FFD700]/50"
-                whileHover={{ rotate: [0, -1, 1, 0] }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="golden-ticket">
-                  <h3 className="font-press-start text-2xl mb-4 text-white">🎫 Golden Ticket</h3>
-                  <p className="font-jetbrains text-white">Fast-track access to Maximally Bootcamp 2025</p>
-                </div>
-              </motion.div>
-
-              {/* CTA Section */}
-              <motion.div 
-                className="text-center space-y-6"
-                whileInView={{ opacity: [0, 1], y: [20, 0] }}
-                transition={{ duration: 0.6 }}
-              >
-                <Link to="/bootcamps">
-                  <Button className="pixel-button-glow bg-maximally-blue hover:bg-maximally-blue/90 text-white px-8 py-6 text-lg font-press-start group">
-                    {'>> ENTER THE QUEST <<'}
-                    <ArrowRight className="ml-2 h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-                <p className="font-jetbrains text-sm text-white/60">
-                  Got questions? Email hello@maximally.in
-                </p>
-              </motion.div>
+              <p className="font-jetbrains text-sm text-white/60">
+                Questions? Email hack@maximally.in
+              </p>
             </div>
           </div>
         </div>
