@@ -15,14 +15,12 @@ import Featured from "./pages/Featured";
 import Privacy from "@/pages/Privacy";
 import About from "./pages/About";
 import Bootcamps from '@/pages/Bootcamps';
-// Team page removed
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
 import Entrepreneurship from "./pages/Entrepreneurship";
 import PublicSpeaking from "./pages/PublicSpeaking";
 import NoCodeAI from "./pages/NoCodeAI";
 import DigitalMarketing from "./pages/DigitalMarketing";
-
 import CareerLaunch from "./pages/CareerLaunch";
 import Community from "./pages/Community";
 import Sponsor from "@/pages/Sponsor";
@@ -35,9 +33,7 @@ import SchoolVsLife2025 from './pages/BlogPost/SchoolVsLife2025';
 import OnlineCourses2025 from './pages/BlogPost/OnlineCourses2025';
 import Internships2025 from './pages/BlogPost/Internships2025';
 import JoinUs from './pages/JoinUs';
-import Hackathon from '@/pages/Hackathon';
 import NotFound from '@/pages/NotFound';
-
 
 const queryClient = new QueryClient();
 
@@ -93,7 +89,6 @@ const App = () => {
             <Route path="/community" element={<Community />} />
             <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/join-us" element={<JoinUs />} />
-            <Route path="/hackathon" element={<Hackathon />} />
             <Route path="/featured" element={<Featured />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
