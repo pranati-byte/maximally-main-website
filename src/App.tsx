@@ -56,12 +56,24 @@ const ScrollToTop = () => {
 }
 
 const App = () => {
+  const location = useLocation();
+
   useEffect(() => {
-    document.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://maximally.in');
+    // Set default meta tags
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', `https://maximally.in${location.pathname}`);
     document.title = 'Maximally - Learn Real-World Skills for Indian Teenagers';
     document.querySelector('meta[name="description"]')?.setAttribute('content', 'Join India\'s premier skill development platform for teenagers. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps.');
     document.querySelector('meta[name="keywords"]')?.setAttribute('content', 'teen education India, skill development, digital marketing, AI courses, public speaking, entrepreneurship, Indian students');
-  }, []);
+    
+    // Add robots meta tag
+    let robotsTag = document.querySelector('meta[name="robots"]');
+    if (!robotsTag) {
+      robotsTag = document.createElement('meta');
+      robotsTag.setAttribute('name', 'robots');
+      document.head.appendChild(robotsTag);
+    }
+    robotsTag.setAttribute('content', 'index, follow');
+  }, [location]);
 
   return (
     <QueryClientProvider client={queryClient}>

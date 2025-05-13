@@ -1,7 +1,15 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 const NotFound = () => {
+  useEffect(() => {
+    // Set page title and meta description
+    document.title = "404 - Page Not Found | Maximally";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Sorry, the page you are looking for does not exist. Return to Maximally homepage.');
+  }, []);
+
   return (
     <main className="min-h-screen flex items-center justify-center pt-24 pb-16 px-4">
       <div className="text-center space-y-6">
