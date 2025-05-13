@@ -153,7 +153,54 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Industry Leaders Section */}
+        {/* 24-Hour Startup Challenge Section */}
+      <section className="py-20 relative overflow-hidden bg-maximally-black">
+        <div className="absolute inset-0 stars" />
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block bg-maximally-purple/20 px-6 py-2 rounded-full mb-6 animate-pulse">
+              <span className="font-jetbrains text-maximally-purple font-bold">
+                🚀 24-Hour Challenge
+              </span>
+            </div>
+
+            <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 text-white">
+              India's Fastest Teen Startup Challenge
+            </h2>
+
+            <p className="font-jetbrains text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+              Build a real startup in 24 hours using AI + no-code tools. Team up, get mentored, and pitch to judges.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <div className="pixel-border bg-white/10 p-6 text-white">
+                <h3 className="font-press-start text-lg mb-2">💡 Build</h3>
+                <p className="font-jetbrains text-sm">MVP + Pitch Deck</p>
+              </div>
+              <div className="pixel-border bg-white/10 p-6 text-white">
+                <h3 className="font-press-start text-lg mb-2">🎯 Launch</h3>
+                <p className="font-jetbrains text-sm">Get Real Users</p>
+              </div>
+              <div className="pixel-border bg-white/10 p-6 text-white">
+                <h3 className="font-press-start text-lg mb-2">🏆 Win</h3>
+                <p className="font-jetbrains text-sm">Prizes + Recognition</p>
+              </div>
+            </div>
+
+            <a 
+              href="https://tally.so/r/mZgxYe"
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="pixel-button bg-maximally-purple text-white group inline-flex items-center gap-2 hover:scale-105 transform transition-all px-8 py-4"
+            >
+              <span>Join Now</span>
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Leaders Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/10 via-white to-maximally-purple/10" />
           <div className="absolute inset-0 pixel-grid opacity-30" />
