@@ -115,13 +115,15 @@ const Index = () => {
                   <CalendarCheck className="h-4 w-4 animate-bounce" />
                 </button>
 
-                <Link 
-                  to="/hackathon" 
+                <a 
+                  href="https://hackathon.maximally.in" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="pixel-button bg-maximally-purple text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-purple w-full"
                 >
                   <span>Check out Hackathon</span>
                   <Code className="h-4 w-4 group-hover:rotate-12 transition-transform" />
-                </Link>
+                </a>
 
                 <Link 
                   to="/community" 
