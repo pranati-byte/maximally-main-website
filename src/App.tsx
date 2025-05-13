@@ -39,6 +39,7 @@ import SummerBootcamps2025 from './pages/BlogPost/SummerBootcamps2025';
 import AIforTeens from './pages/BlogPost/AIforTeens';
 import TeenStartupJourney from './pages/BlogPost/TeenStartupJourney';
 import NoCodeTools from './pages/BlogPost/NoCodeTools';
+import DigitalMarketingGuide from './pages/BlogPost/DigitalMarketingGuide';
 
 const queryClient = new QueryClient();
 
