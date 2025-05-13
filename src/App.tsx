@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -33,7 +32,6 @@ import RealWorldSkills2025 from './pages/BlogPost/RealWorldSkills2025';
 import SchoolVsLife2025 from './pages/BlogPost/SchoolVsLife2025';
 import OnlineCourses2025 from './pages/BlogPost/OnlineCourses2025';
 import Internships2025 from './pages/BlogPost/Internships2025';
-import TeenBusiness2025 from './pages/BlogPost/TeenBusiness2025';
 import JoinUs from './pages/JoinUs';
 import NotFound from '@/pages/NotFound';
 
@@ -77,13 +75,12 @@ const App = () => {
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
-            <Route path="/blog/maximally-leangap-2025" element={<MaximallyLeangap2025 />} />
-            <Route path="/blog/summer-break-2025" element={<SummerBreak2025 />} />
+        <Route path="/blog/maximally-leangap-2025" element={<MaximallyLeangap2025 />} />
+          <Route path="/blog/summer-break-2025" element={<SummerBreak2025 />} />
             <Route path="/blog/real-world-skills-2025" element={<RealWorldSkills2025 />} />
-            <Route path="/blog/school-vs-life-2025" element={<SchoolVsLife2025 />} />
+          <Route path="/blog/school-vs-life-2025" element={<SchoolVsLife2025 />} />
             <Route path="/blog/online-courses-2025" element={<OnlineCourses2025 />} />
             <Route path="/blog/internships-2025" element={<Internships2025 />} />
-            <Route path="/blog/teen-business-2025" element={<TeenBusiness2025 />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
@@ -93,7 +90,6 @@ const App = () => {
             <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/join-us" element={<JoinUs />} />
             <Route path="/featured" element={<Featured />} />
-            <Route path="/sponsor" element={<Sponsor />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
