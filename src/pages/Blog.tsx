@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "10 Real-World Skills Schools Never Taught You (But We Will)",
+    excerpt: "Discover essential real-world skills every teen should know before turning 18. From financial literacy to entrepreneurship—learn what school doesn't teach...",
+    date: "April 17, 2025",
+    readTime: "8 min read",
+    category: "Life Skills",
+    link: "/blog/real-world-skills-for-teens"
+  },
+  {
     title: "Why Every Teen Should Learn Public Speaking (Even If You're Shy)",
     excerpt: "Discover how public speaking builds confidence, leadership, and communication—even for shy students. Learn practical steps to overcome fear and speak with impact...",
     date: "April 17, 2025",

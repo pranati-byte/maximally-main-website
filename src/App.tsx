@@ -95,6 +95,7 @@ const App = () => {
             <Route path="/blog/no-code-tools-for-teen-creators" element={<NoCodeTools />} />
             <Route path="/blog/digital-marketing-for-high-schoolers" element={<DigitalMarketingGuide />} />
             <Route path="/blog/public-speaking-for-teens-guide" element={<PublicSpeakingGuide />} />
+            <Route path="/blog/real-world-skills-for-teens" element={<RealWorldSkillsForTeens />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
