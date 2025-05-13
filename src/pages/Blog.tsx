@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "How I Built My First Startup as a Student (And How You Can TOO)",
+    excerpt: "A real teen founder shares how he built his first startup while still in school. Get inspired and start yours. From school project to successful launch...",
+    date: "April 17, 2025",
+    readTime: "10 min read",
+    category: "Entrepreneurship",
+    link: "/blog/teen-startup-journey-student-story"
+  },
+  {
     title: "AI for Teenagers: Learn the Future Without Coding",
     excerpt: "Explore how teenagers can start learning AI without coding—using no-code tools, real-world projects, and beginner-friendly platforms. Start building with AI today...",
     date: "April 17, 2025",
