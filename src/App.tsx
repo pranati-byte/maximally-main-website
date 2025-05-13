@@ -35,6 +35,7 @@ import Internships2025 from './pages/BlogPost/Internships2025';
 import JoinUs from './pages/JoinUs';
 import NotFound from '@/pages/NotFound';
 import TeenBusiness from './pages/BlogPost/TeenBusiness';
+import SummerBootcamps2025 from './pages/BlogPost/SummerBootcamps2025';
 
 const queryClient = new QueryClient();
 
@@ -76,6 +77,7 @@ const App = () => {
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
+            <Route path="/blog/summer-bootcamps-2025" element={<SummerBootcamps2025 />} />
         <Route path="/blog/maximally-leangap-2025" element={<MaximallyLeangap2025 />} />
           <Route path="/blog/summer-break-2025" element={<SummerBreak2025 />} />
             <Route path="/blog/real-world-skills-2025" element={<RealWorldSkills2025 />} />

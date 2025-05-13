@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "Top 5 Summer Bootcamps for Teenagers in India (2025 Edition)",
+    excerpt: "Discover the best summer bootcamps where Indian teens can learn AI, coding, entrepreneurship & digital skills. Find the perfect program to kickstart your tech journey...",
+    date: "April 17, 2025",
+    readTime: "8 min read",
+    category: "Education",
+    link: "/blog/summer-bootcamps-2025"
+  },
+  {
     title: "How to Start a Business Before You Turn 18 (No Code, No Problem!)",
     excerpt: "Learn how to start a business before 18 using no-code tools. Build real products, grow your brand, and become a teen entrepreneur without writing a single line of code...",
     date: "April 17, 2025",
