@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "The Ultimate Guide to Digital Marketing for High School Students",
+    excerpt: "Learn digital marketing as a teen! How to build brands, earn online, and grow real-world skills. Perfect for high school students looking to start their digital journey...",
+    date: "April 17, 2025",
+    readTime: "10 min read",
+    category: "Digital Marketing",
+    link: "/blog/digital-marketing-for-high-schoolers"
+  },
+  {
     title: "No-Code Tools Every Teen Creator Should Try This Summer",
     excerpt: "Create apps, websites, and businesses without coding—perfect for teen creators this summer. Discover the best no-code tools and start building today...",
     date: "April 17, 2025",
