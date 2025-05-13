@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "How to Start a Business Before You Turn 18 (No Code, No Problem!)",
+    excerpt: "Learn how to start a business before 18 using no-code tools. Build real products, grow your brand, and become a teen entrepreneur without writing a single line of code...",
+    date: "April 17, 2025",
+    readTime: "8 min read",
+    category: "Entrepreneurship",
+    link: "/blog/teen-business"
+  },
+  {
     title: "How Maximally is Building the Leangap of India",
     excerpt: "Discover how Maximally is becoming India's answer to Leangap, empowering teens to start companies and build real projects. From mentorship to real outcomes, see how we're revolutionizing teen entrepreneurship...",
     date: "April 17, 2025",
