@@ -1,73 +1,107 @@
-# Welcome to your Lovable project
 
-## Project info
+# Maximally Website
 
-**URL**: https://lovable.dev/projects/7ad330fb-3a4a-4ce9-ac63-334317d1e944
+A modern, pixel-art inspired educational platform built with React and Vite. The website combines retro gaming aesthetics with modern web technologies to create an engaging experience for teens learning tech and entrepreneurship skills.
 
-## How can I edit this code?
+## 🚀 Tech Stack
 
-There are several ways of editing your application.
+- **Frontend Framework**: React with TypeScript
+- **Build Tool**: Vite
+- **Styling**: TailwindCSS with custom animations
+- **UI Components**: shadcn/ui
+- **Routing**: React Router DOM
+- **Animations**: Framer Motion
+- **Form Handling**: React Hook Form
+- **Icons**: Lucide React
+- **Charts**: Recharts
+- **Deployment**: Replit
 
-**Use Lovable**
+## 📁 Project Structure
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7ad330fb-3a4a-4ce9-ac63-334317d1e944) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/         # Reusable UI components
+│   ├── ui/            # shadcn/ui components
+│   └── ...            # Custom components (Navbar, Footer, etc.)
+├── hooks/             # Custom React hooks
+├── lib/               # Utility functions
+├── pages/             # Page components
+│   ├── BlogPost/      # Blog post pages
+│   └── ...            # Main site pages
+└── styles/            # Global styles and Tailwind config
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Key Features
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Pixel Art Theme**: Custom animations and UI elements inspired by retro gaming
+- **Responsive Design**: Mobile-first approach with fluid layouts
+- **Interactive Elements**: Animated components using Framer Motion
+- **Modern UI**: shadcn/ui components with custom styling
+- **Blog System**: Dynamic blog posts with SEO optimization
+- **Form Integration**: Tally.so forms integration
 
-**Use GitHub Codespaces**
+## 🔧 Main Components
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `components/Navbar.tsx`: Main navigation with responsive menu
+- `components/Footer.tsx`: Site-wide footer with links and social media
+- `components/Hero.tsx`: Landing page hero section
+- `components/SkillTracks.tsx`: Educational tracks display
+- `pages/Index.tsx`: Homepage with main content sections
+- `pages/BlogPost/*.tsx`: Individual blog post components
 
-## What technologies are used for this project?
+## 🎯 Special Features
 
-This project is built with:
+- Custom pixel borders and retro-style buttons
+- Interactive hover effects and animations
+- Responsive grid layouts for different screen sizes
+- SEO optimization with meta tags
+- WhatsApp integration for communication
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🚀 Running the Project
 
-## How can I deploy this project?
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
+4. Access the site at `http://localhost:8081`
 
-Simply open [Lovable](https://lovable.dev/projects/7ad330fb-3a4a-4ce9-ac63-334317d1e944) and click on Share -> Publish.
+## 🛠️ Development Commands
 
-## Can I connect a custom domain to my Lovable project?
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run preview`: Preview production build
 
-Yes, you can!
+## 🎨 Styling System
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The project uses a combination of:
+- Tailwind CSS for utility classes
+- Custom CSS animations
+- shadcn/ui for component styling
+- Custom pixel art inspired designs
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Breakpoints:
+  - sm: 640px
+  - md: 768px
+  - lg: 1024px
+  - xl: 1280px
+  - 2xl: 1400px
+
+## 🔒 Environment Variables
+
+The project uses environment variables for:
+- API endpoints
+- External service configurations
+- Feature flags
+
+## 📦 Dependencies
+
+Key dependencies include:
+- react-router-dom for routing
+- framer-motion for animations
+- lucide-react for icons
+- recharts for data visualization
+- react-hook-form for form handling
+
+For a complete list, check `package.json`.
