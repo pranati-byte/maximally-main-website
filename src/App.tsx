@@ -40,6 +40,7 @@ import AIforTeens from './pages/BlogPost/AIforTeens';
 import TeenStartupJourney from './pages/BlogPost/TeenStartupJourney';
 import NoCodeTools from './pages/BlogPost/NoCodeTools';
 import DigitalMarketingGuide from './pages/BlogPost/DigitalMarketingGuide';
+import PublicSpeakingGuide from './pages/BlogPost/PublicSpeakingGuide';
 
 const queryClient = new QueryClient();
 
@@ -93,6 +94,7 @@ const App = () => {
             <Route path="/blog/teen-startup-journey-student-story" element={<TeenStartupJourney />} />
             <Route path="/blog/no-code-tools-for-teen-creators" element={<NoCodeTools />} />
             <Route path="/blog/digital-marketing-for-high-schoolers" element={<DigitalMarketingGuide />} />
+            <Route path="/blog/public-speaking-for-teens-guide" element={<PublicSpeakingGuide />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />

@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "Why Every Teen Should Learn Public Speaking (Even If You're Shy)",
+    excerpt: "Discover how public speaking builds confidence, leadership, and communication—even for shy students. Learn practical steps to overcome fear and speak with impact...",
+    date: "April 17, 2025",
+    readTime: "8 min read",
+    category: "Skills Development",
+    link: "/blog/public-speaking-for-teens-guide"
+  },
+  {
     title: "The Ultimate Guide to Digital Marketing for High School Students",
     excerpt: "Learn digital marketing as a teen! How to build brands, earn online, and grow real-world skills. Perfect for high school students looking to start their digital journey...",
     date: "April 17, 2025",
