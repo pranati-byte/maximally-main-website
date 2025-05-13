@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "No-Code Tools Every Teen Creator Should Try This Summer",
+    excerpt: "Create apps, websites, and businesses without coding—perfect for teen creators this summer. Discover the best no-code tools and start building today...",
+    date: "April 17, 2025",
+    readTime: "8 min read",
+    category: "Technology",
+    link: "/blog/no-code-tools-for-teen-creators"
+  },
+  {
     title: "How I Built My First Startup as a Student (And How You Can TOO)",
     excerpt: "A real teen founder shares how he built his first startup while still in school. Get inspired and start yours. From school project to successful launch...",
     date: "April 17, 2025",
