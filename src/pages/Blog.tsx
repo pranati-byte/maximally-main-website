@@ -22,6 +22,14 @@ const blogPosts = [
     link: "/blog/school-vs-life-2025"
   },
   {
+    title: "How to Start a Business Before You Turn 18 (No Code, No Problem!)",
+    excerpt: "Learn how to start a business before 18 using no-code tools. Build real products, grow your brand, and become a teen entrepreneur in India without learning to code...",
+    date: "May 10, 2025",
+    readTime: "10 min read",
+    category: "Entrepreneurship",
+    link: "/blog/teen-business-2025"
+  },
+  {
     title: "Top 10 Summer Programs for Teens in India (2025 Edition)",
     excerpt: "Discover the most impactful summer programs that will transform your skills and boost your college applications. From Maximally's intensive bootcamps to other notable programs...",
     date: "April 10, 2025",
