@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "AI for Teenagers: Learn the Future Without Coding",
+    excerpt: "Explore how teenagers can start learning AI without coding—using no-code tools, real-world projects, and beginner-friendly platforms. Start building with AI today...",
+    date: "April 17, 2025",
+    readTime: "8 min read",
+    category: "Technology",
+    link: "/blog/ai-for-teenagers-no-code"
+  },
+  {
     title: "Top 5 Summer Bootcamps for Teenagers in India (2025 Edition)",
     excerpt: "Discover the best summer bootcamps where Indian teens can learn AI, coding, entrepreneurship & digital skills. Find the perfect program to kickstart your tech journey...",
     date: "April 17, 2025",
