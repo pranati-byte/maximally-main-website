@@ -41,6 +41,7 @@ import TeenStartupJourney from './pages/BlogPost/TeenStartupJourney';
 import NoCodeTools from './pages/BlogPost/NoCodeTools';
 import DigitalMarketingGuide from './pages/BlogPost/DigitalMarketingGuide';
 import PublicSpeakingGuide from './pages/BlogPost/PublicSpeakingGuide';
+import RealWorldSkillsForTeens from './pages/BlogPost/RealWorldSkillsForTeens';
 
 const queryClient = new QueryClient();
 
