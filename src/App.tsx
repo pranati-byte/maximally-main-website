@@ -43,6 +43,7 @@ import DigitalMarketingGuide from './pages/BlogPost/DigitalMarketingGuide';
 import PublicSpeakingGuide from './pages/BlogPost/PublicSpeakingGuide';
 import RealWorldSkillsForTeens from './pages/BlogPost/RealWorldSkillsForTeens';
 import InstagramPersonalBranding from './pages/BlogPost/InstagramPersonalBranding';
+import PitchingTipsForTeens from './pages/BlogPost/PitchingTipsForTeens';
 
 const queryClient = new QueryClient();
 
@@ -99,6 +100,7 @@ const App = () => {
             <Route path="/blog/public-speaking-for-teens-guide" element={<PublicSpeakingGuide />} />
             <Route path="/blog/real-world-skills-for-teens" element={<RealWorldSkillsForTeens />} />
             <Route path="/blog/instagram-personal-brand-teens-2025" element={<InstagramPersonalBranding />} />
+            <Route path="/blog/first-pitch-tips-for-teens" element={<PitchingTipsForTeens />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
