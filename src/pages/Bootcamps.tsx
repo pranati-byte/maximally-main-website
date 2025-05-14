@@ -180,28 +180,28 @@ const Bootcamps = () => {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-4">2️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">🎥 Submit Application</h3>
+              <h3 className="font-press-start text-lg mb-2">🎥 Submit Your Application</h3>
               <p className="font-jetbrains">Application + 1-minute intro video</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-4">3️⃣</div>
               <h3 className="font-press-start text-lg mb-2">🔍 Review Process</h3>
-              <p className="font-jetbrains">Reviewed by Maximally Team</p>
+              <p className="font-jetbrains">Maximally Team will evaluate applications</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-4">4️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">📩 Acceptance</h3>
-              <p className="font-jetbrains">Emails sent by May 30</p>
+              <h3 className="font-press-start text-lg mb-2">📩 Results Announced</h3>
+              <p className="font-jetbrains">June 25</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-4">5️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">💳 Confirm Spot</h3>
-              <p className="font-jetbrains">Secure your place in the program</p>
+              <h3 className="font-press-start text-lg mb-2">💳 Confirm Your Spot</h3>
+              <p className="font-jetbrains">Pay and secure your place</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-4">6️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">🎉 Begin Journey</h3>
-              <p className="font-jetbrains">Bootcamp begins June 1</p>
+              <h3 className="font-press-start text-lg mb-2">🎉 Bootcamp Begins</h3>
+              <p className="font-jetbrains">July 1</p>
             </div>
           </div>
         </div>
