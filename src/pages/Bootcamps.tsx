@@ -281,11 +281,25 @@ const Bootcamps = () => {
             </h2>
           </div>
           <p className="font-jetbrains text-xl mb-8 text-center text-white/90 animate-fade-in">
-            Maximally is not a class. It's an <span className="text-[#39FF14]">experience</span>. 
-            Here's how you'll <span className="text-[#00ff99]">learn</span>, 
-            <span className="text-[#00ffcc]">build</span>, and 
-            <span className="text-[#39FF14]">grow</span>:
+            Maximally is more than a bootcamp. It's a <span className="text-[#39FF14]">7-day journey</span> where you work on <span className="text-[#00ff99]">real-world problems</span>, collaborate with others, and <span className="text-[#00ffcc]">build the startup of your dreams</span>. No lectures — just <span className="text-[#39FF14]">challenges</span>, <span className="text-[#00ff99]">mentors</span>, and <span className="text-[#00ffcc]">hands-on experience</span>.
           </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-black/40 p-6 rounded-lg border-2 border-[#39FF14] hover:scale-105 transform transition-all duration-300">
+              <h4 className="font-press-start text-lg mb-4 text-[#39FF14]">🎯 Daily Impact</h4>
+              <p className="font-jetbrains text-white">Real-life challenges and lessons from top founders, creators, and VCs who drop by to share their journeys.</p>
+            </div>
+            
+            <div className="bg-black/40 p-6 rounded-lg border-2 border-[#00ff99] hover:scale-105 transform transition-all duration-300">
+              <h4 className="font-press-start text-lg mb-4 text-[#00ff99]">🚀 Guild System</h4>
+              <p className="font-jetbrains text-white">Work in small, dynamic startup teams to build and iterate your ideas with fellow ambitious teens.</p>
+            </div>
+            
+            <div className="bg-black/40 p-6 rounded-lg border-2 border-[#00ffcc] hover:scale-105 transform transition-all duration-300">
+              <h4 className="font-press-start text-lg mb-4 text-[#00ffcc]">🎤 Demo Day</h4>
+              <p className="font-jetbrains text-white">Pitch your project to secure potential internships and funding to continue your growth journey.</p>
+            </div>
+          </div>
 
           {/* Format Section */}
           <div className="mb-12">
