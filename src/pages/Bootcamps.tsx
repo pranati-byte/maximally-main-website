@@ -17,7 +17,7 @@ const Bootcamps = () => {
             <span className="bg-[#FF5F5F]/20">this summer</span>. Will you?
           </h1>
           <p className="font-jetbrains text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4 md:px-0">
-            Join our community of ambitious teens and start your journey today.
+            Maximally Bootcamp: A transformative 7-day experience where teens dive into entrepreneurship, digital marketing, AI, public speaking, personal branding, and more. Build a startup from the ground up, network with industry leaders, and gain real-world experience that sets you apart.
           </p>
           <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
           <div className="mt-8">
