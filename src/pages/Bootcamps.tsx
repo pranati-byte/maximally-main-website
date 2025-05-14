@@ -16,9 +16,33 @@ const Bootcamps = () => {
             India's <span className="bg-[#39FF14]/20">most ambitious</span> teens join us{" "}
             <span className="bg-[#FF5F5F]/20">this summer</span>. Will you?
           </h1>
-          <p className="font-jetbrains text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8 px-2 sm:px-4 md:px-0">
-            Maximally Bootcamp: A transformative 7-day experience where teens dive into entrepreneurship, digital marketing, AI, public speaking, personal branding, and more. Build a startup from the ground up, network with industry leaders, and gain real-world experience that sets you apart.
-          </p>
+          <div className="max-w-4xl mx-auto space-y-6">
+            <p className="font-jetbrains text-xl sm:text-2xl md:text-3xl mb-4 leading-relaxed">
+              <span className="bg-gradient-to-r from-[#39FF14] to-[#00ff99] bg-clip-text text-transparent font-bold">Maximally Bootcamp:</span> A transformative{" "}
+              <span className="bg-[#FF5F5F]/20 px-2 font-bold">7-day experience</span> where teens dive into:
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg sm:text-xl">
+              <div className="bg-[#39FF14]/10 p-4 rounded-lg hover:scale-105 transform transition-all duration-300">
+                <span className="text-[#39FF14] font-bold">⚡️ Entrepreneurship</span>
+              </div>
+              <div className="bg-[#FF5F5F]/10 p-4 rounded-lg hover:scale-105 transform transition-all duration-300">
+                <span className="text-[#FF5F5F] font-bold">🎯 Digital Marketing</span>
+              </div>
+              <div className="bg-[#B400FF]/10 p-4 rounded-lg hover:scale-105 transform transition-all duration-300">
+                <span className="text-[#B400FF] font-bold">🤖 AI & No-Code</span>
+              </div>
+              <div className="bg-[#3C9EE7]/10 p-4 rounded-lg hover:scale-105 transform transition-all duration-300">
+                <span className="text-[#3C9EE7] font-bold">🎤 Public Speaking</span>
+              </div>
+            </div>
+
+            <p className="font-jetbrains text-lg sm:text-xl">
+              <span className="bg-[#39FF14]/20 px-2">Build a startup</span> from the ground up,{" "}
+              <span className="bg-[#FF5F5F]/20 px-2">network with industry leaders</span>, and{" "}
+              <span className="bg-[#B400FF]/20 px-2">gain real-world experience</span> that sets you apart.
+            </p>
+          </div>
           <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
           <div className="mt-8">
             <button 
