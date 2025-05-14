@@ -121,22 +121,24 @@ const Bootcamps = () => {
       <section className="py-12 px-4 bg-gray-50">
         <div className="container mx-auto text-center">
           <h2 className="font-press-start text-3xl mb-8">👥 Who Should Apply</h2>
+          <p className="font-jetbrains text-xl mb-6">
+            Maximally is for teens who are ready to take the next step toward success.
+          </p>
           <div className="space-y-4">
             <p className="font-jetbrains text-xl">
-              <span className="bg-[#39FF14]/20 px-2">🧠 Teen founders</span> ready to{" "}
-              <span className="bg-[#FF5F5F]/20 px-2">build their first ₹1CR startup</span>
+              <span className="bg-[#39FF14]/20 px-2">👉 Teens interested in building startups</span>
             </p>
             <p className="font-jetbrains text-xl">
-              <span className="bg-[#B400FF]/20 px-2">🚀 Ambitious teens</span> who want to{" "}
-              <span className="bg-[#3C9EE7]/20 px-2">lead the future</span>
+              <span className="bg-[#FF5F5F]/20 px-2">👉 Those passionate about tech, marketing, and AI</span>
             </p>
             <p className="font-jetbrains text-xl">
-              <span className="bg-[#39FF14]/20 px-2">🔥 Students</span> who love{" "}
-              <span className="bg-[#FF5F5F]/20 px-2">challenges, ideas, and energy</span>
+              <span className="bg-[#B400FF]/20 px-2">👉 Future leaders who want to make an impact</span>
             </p>
             <p className="font-jetbrains text-xl">
-              <span className="bg-[#B400FF]/20 px-2">🎤 Communicators</span>,{" "}
-              <span className="bg-[#3C9EE7]/20 px-2">creatives, hackers, and builders</span>
+              <span className="bg-[#3C9EE7]/20 px-2">👉 Creators, designers, developers, and communicators ready to work in teams</span>
+            </p>
+            <p className="font-jetbrains text-xl">
+              <span className="bg-[#39FF14]/20 px-2">👉 Anyone who wants to build, learn, and grow with the best in the industry!</span>
             </p>
           </div>
         </div>
