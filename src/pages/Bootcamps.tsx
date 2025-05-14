@@ -341,24 +341,21 @@ const Bootcamps = () => {
             <h3 className="font-press-start text-2xl mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#FF5F5F] via-[#FF9671] to-[#FFC75F] animate-pulse">
               🛠️ What You'll Leave With
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               <div className="bg-black/40 p-4 rounded-lg border-2 border-[#FF5F5F] hover:border-[#FF5F5F] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(255,95,95,0.5)]">
-                <p className="font-jetbrains text-[#FF5F5F]">✅ A real project (not just theory)</p>
+                <p className="font-jetbrains text-[#FF5F5F]">✅ A real-world project to showcase</p>
               </div>
               <div className="bg-black/40 p-4 rounded-lg border-2 border-[#00FFFF] hover:border-[#00FFFF] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
-                <p className="font-jetbrains text-[#00FFFF]">✅ A guild of friends for life</p>
+                <p className="font-jetbrains text-[#00FFFF]">✅ Internship and funding opportunities if you have a viable idea</p>
               </div>
               <div className="bg-black/40 p-4 rounded-lg border-2 border-[#FF00FF] hover:border-[#FF00FF] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(255,0,255,0.5)]">
-                <p className="font-jetbrains text-[#FF00FF]">✅ A digital identity you're proud of</p>
+                <p className="font-jetbrains text-[#FF00FF]">✅ A lasting digital identity, including recognition on our platform</p>
               </div>
               <div className="bg-black/40 p-4 rounded-lg border-2 border-[#FFA500] hover:border-[#FFA500] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(255,165,0,0.5)]">
-                <p className="font-jetbrains text-[#FFA500]">✅ Access to the alumni network</p>
+                <p className="font-jetbrains text-[#FFA500]">✅ Connections to top mentors, creators, and founders</p>
               </div>
               <div className="bg-black/40 p-4 rounded-lg border-2 border-[#39FF14] hover:border-[#39FF14] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(57,255,20,0.5)]">
-                <p className="font-jetbrains text-[#39FF14]">✅ Certificate + LOR (for top performers)</p>
-              </div>
-              <div className="bg-black/40 p-4 rounded-lg border-2 border-[#9966FF] hover:border-[#9966FF] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(153,102,255,0.5)]">
-                <p className="font-jetbrains text-[#9966FF]">✅ Confidence that sticks</p>
+                <p className="font-jetbrains text-[#39FF14]">✅ Confidence that stays with you as you move forward in your career</p>
               </div>
             </div>
           </div>
