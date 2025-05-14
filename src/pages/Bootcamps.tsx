@@ -48,26 +48,44 @@ const Bootcamps = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 px-2 sm:px-4 md:px-0">
             <Card className="border-2 border-[#39FF14]/30 hover:border-[#39FF14] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">🎓 Certificate of Excellence</h3>
-                <p className="font-jetbrains">Recognized proof of your skill and execution</p>
+                <h3 className="font-press-start text-xl mb-4">✅ Real-World Project</h3>
+                <p className="font-jetbrains">Build something real — not just theory</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#FF5F5F]/30 hover:border-[#FF5F5F] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">🤝 Alumni-Only Privileges</h3>
-                <p className="font-jetbrains">Access to exclusive future opportunities</p>
+                <h3 className="font-press-start text-xl mb-4">✅ Internship Support</h3>
+                <p className="font-jetbrains">Top performers get placed in real startups</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#B400FF]/30 hover:border-[#B400FF] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">🌐 Lifetime Network</h3>
-                <p className="font-jetbrains">Connect with India's future leaders</p>
+                <h3 className="font-press-start text-xl mb-4">✅ Launchpad Grant</h3>
+                <p className="font-jetbrains">₹5K-₹10K to help you continue building</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#3C9EE7]/30 hover:border-[#3C9EE7] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">🎯 Future Access</h3>
-                <p className="font-jetbrains">Your badge of honor in the digital age</p>
+                <h3 className="font-press-start text-xl mb-4">✅ Alumni Network</h3>
+                <p className="font-jetbrains">Professional network & lifetime access</p>
+              </CardContent>
+            </Card>
+            <Card className="border-2 border-[#39FF14]/30 hover:border-[#39FF14] transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-press-start text-xl mb-4">✅ LOR</h3>
+                <p className="font-jetbrains">Letters of Recommendation for top performers</p>
+              </CardContent>
+            </Card>
+            <Card className="border-2 border-[#FF5F5F]/30 hover:border-[#FF5F5F] transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-press-start text-xl mb-4">✅ Career Mentorship</h3>
+                <p className="font-jetbrains">Guidance through your next steps</p>
+              </CardContent>
+            </Card>
+            <Card className="border-2 border-[#B400FF]/30 hover:border-[#B400FF] transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-press-start text-xl mb-4">✅ Exclusive Events</h3>
+                <p className="font-jetbrains">Alumni-only events and perks</p>
               </CardContent>
             </Card>
           </div>
