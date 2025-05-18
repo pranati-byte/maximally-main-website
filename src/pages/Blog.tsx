@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "Top Career Paths for Teen Innovators (That Don't Need a Degree Yet)",
+    excerpt: "Explore exciting career options that let you innovate, create, and succeed, without waiting for a degree. From entrepreneurship to content creation, discover paths that fit your passion...",
+    date: "January 17, 2025",
+    readTime: "8 min read",
+    category: "Career Guide",
+    link: "/blog/top-careers-for-teen-innovators"
+  },
+  {
     title: "Should You Start a YouTube Channel or a Startup First?",
     excerpt: "Deciding between content creation and entrepreneurship? Discover which path aligns best with your goals as a teen innovator, plus real success stories and expert guidance...",
     date: "January 17, 2025",
