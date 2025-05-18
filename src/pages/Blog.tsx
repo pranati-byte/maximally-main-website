@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "How to Get Noticed Online: Student Branding Tips That Work",
+    excerpt: "Learn how to build your authentic online presence and get noticed as a student! From choosing the right platforms to crafting compelling content...",
+    date: "January 17, 2025",
+    readTime: "10 min read",
+    category: "Personal Branding",
+    link: "/blog/online-branding-tips-for-students"
+  },
+  {
     title: "Can Teenagers Really Learn AI in 7 Days? Here's How.",
     excerpt: "Discover how teens can grasp AI fundamentals in just one week! From machine learning to neural networks, we break down complex concepts into fun, digestible lessons...",
     date: "January 17, 2025",

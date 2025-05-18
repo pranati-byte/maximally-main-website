@@ -49,6 +49,7 @@ import GenZInfluencer from "@/pages/BlogPost/GenZInfluencer";
 import TeenEntrepreneurshipBootcamp from "@/pages/BlogPost/TeenEntrepreneurshipBootcamp";
 import PassionProjectToBusiness from "@/pages/BlogPost/PassionProjectToBusiness";
 import LearnAIInSevenDays from "@/pages/BlogPost/LearnAIInSevenDays";
+import OnlineBrandingTips from "@/pages/BlogPost/OnlineBrandingTips";
 
 const queryClient = new QueryClient();
 
@@ -120,6 +121,7 @@ const App = () => {
             <Route path="/blog/teen-entrepreneurship-bootcamp-experience" element={<TeenEntrepreneurshipBootcamp />} />
             <Route path="/blog/passion-project-to-business" element={<PassionProjectToBusiness />} />
             <Route path="/blog/learn-ai-in-7-days-teens" element={<LearnAIInSevenDays />} />
+            <Route path="/blog/online-branding-tips-for-students" element={<OnlineBrandingTips />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
