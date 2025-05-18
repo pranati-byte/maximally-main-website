@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "Can Teenagers Really Learn AI in 7 Days? Here's How.",
+    excerpt: "Discover how teens can grasp AI fundamentals in just one week! From machine learning to neural networks, we break down complex concepts into fun, digestible lessons...",
+    date: "January 17, 2025",
+    readTime: "8 min read",
+    category: "Technology",
+    link: "/blog/learn-ai-in-7-days-teens"
+  },
+  {
     title: "How to Turn Your Passion Project Into a Real Business",
     excerpt: "Transform your hobby into a thriving business! Learn how to validate your idea, create a business plan, and start making money doing what you love...",
     date: "January 17, 2025",
