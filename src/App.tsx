@@ -44,6 +44,7 @@ import PublicSpeakingGuide from './pages/BlogPost/PublicSpeakingGuide';
 import RealWorldSkillsForTeens from './pages/BlogPost/RealWorldSkillsForTeens';
 import InstagramPersonalBranding from './pages/BlogPost/InstagramPersonalBranding';
 import PitchingTipsForTeens from './pages/BlogPost/PitchingTipsForTeens';
+import SideHustleToStartup from './pages/BlogPost/SideHustleToStartup';
 
 const queryClient = new QueryClient();
 
@@ -61,7 +62,7 @@ const App = () => {
     document.title = 'Maximally - Learn Real-World Skills for Indian Teenagers';
     document.querySelector('meta[name="description"]')?.setAttribute('content', 'Join India\'s premier skill development platform for teenagers. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps.');
     document.querySelector('meta[name="keywords"]')?.setAttribute('content', 'teen education India, skill development, digital marketing, AI courses, public speaking, entrepreneurship, Indian students');
-    
+
     // Add robots meta tag
     let robotsTag = document.querySelector('meta[name="robots"]');
     if (!robotsTag) {
@@ -110,6 +111,7 @@ const App = () => {
             <Route path="/blog/real-world-skills-for-teens" element={<RealWorldSkillsForTeens />} />
             <Route path="/blog/instagram-personal-brand-teens-2025" element={<InstagramPersonalBranding />} />
             <Route path="/blog/first-pitch-tips-for-teens" element={<PitchingTipsForTeens />} />
+            <Route path="/blog/side-hustle-to-startup-teen-success" element={<SideHustleToStartup />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
