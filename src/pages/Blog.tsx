@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "Why Teen Entrepreneurs Are the Future of India",
+    excerpt: "Discover how India's teen entrepreneurs are revolutionizing business and technology. From AI prodigies to app developers, learn how young innovators are shaping the nation's future...",
+    date: "January 17, 2025",
+    readTime: "8 min read",
+    category: "Entrepreneurship",
+    link: "/blog/teen-entrepreneurs-india-future"
+  },
+  {
     title: "How to Get Noticed Online: Student Branding Tips That Work",
     excerpt: "Learn how to build your authentic online presence and get noticed as a student! From choosing the right platforms to crafting compelling content...",
     date: "January 17, 2025",

@@ -50,6 +50,7 @@ import TeenEntrepreneurshipBootcamp from "@/pages/BlogPost/TeenEntrepreneurshipB
 import PassionProjectToBusiness from "@/pages/BlogPost/PassionProjectToBusiness";
 import LearnAIInSevenDays from "@/pages/BlogPost/LearnAIInSevenDays";
 import OnlineBrandingTips from "@/pages/BlogPost/OnlineBrandingTips";
+import TeenEntrepreneursIndia from "@/pages/BlogPost/TeenEntrepreneursIndia";
 
 const queryClient = new QueryClient();
 
@@ -122,6 +123,7 @@ const App = () => {
             <Route path="/blog/passion-project-to-business" element={<PassionProjectToBusiness />} />
             <Route path="/blog/learn-ai-in-7-days-teens" element={<LearnAIInSevenDays />} />
             <Route path="/blog/online-branding-tips-for-students" element={<OnlineBrandingTips />} />
+            <Route path="/blog/teen-entrepreneurs-india-future" element={<TeenEntrepreneursIndia />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
