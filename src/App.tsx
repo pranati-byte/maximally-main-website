@@ -47,6 +47,7 @@ import PitchingTipsForTeens from './pages/BlogPost/PitchingTipsForTeens';
 import SideHustleToStartup from "@/pages/BlogPost/SideHustleToStartup";
 import GenZInfluencer from "@/pages/BlogPost/GenZInfluencer";
 import TeenEntrepreneurshipBootcamp from "@/pages/BlogPost/TeenEntrepreneurshipBootcamp";
+import PassionProjectToBusiness from "@/pages/BlogPost/PassionProjectToBusiness";
 
 const queryClient = new QueryClient();
 
@@ -116,6 +117,7 @@ const App = () => {
             <Route path="/blog/side-hustle-to-startup-teen-success" element={<SideHustleToStartup />} />
             <Route path="/blog/gen-z-influencer-guide" element={<GenZInfluencer />} />
             <Route path="/blog/teen-entrepreneurship-bootcamp-experience" element={<TeenEntrepreneurshipBootcamp />} />
+            <Route path="/blog/passion-project-to-business" element={<PassionProjectToBusiness />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />

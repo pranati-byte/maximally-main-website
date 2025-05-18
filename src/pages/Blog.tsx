@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "How to Turn Your Passion Project Into a Real Business",
+    excerpt: "Transform your hobby into a thriving business! Learn how to validate your idea, create a business plan, and start making money doing what you love...",
+    date: "January 17, 2025",
+    readTime: "8 min read",
+    category: "Entrepreneurship",
+    link: "/blog/passion-project-to-business"
+  },
+  {
     title: "What It's Really Like Inside a Teen Entrepreneurship Bootcamp",
     excerpt: "Discover what it's like inside a teen startup bootcamp and how it can help you turn your business ideas into reality with Maximally Bootcamp...",
     date: "January 17, 2025",
