@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "What It's Really Like Inside a Teen Entrepreneurship Bootcamp",
+    excerpt: "Discover what it's like inside a teen startup bootcamp and how it can help you turn your business ideas into reality with Maximally Bootcamp...",
+    date: "January 17, 2025",
+    readTime: "8 min read",
+    category: "Entrepreneurship",
+    link: "/blog/teen-entrepreneurship-bootcamp-experience"
+  },
+  {
     title: "The Gen Z Guide to Becoming a Young Influencer",
     excerpt: "Discover how to become a Gen Z influencer in 2025! Learn creating content, growing your following, and building your personal brand as a teen...",
     date: "January 17, 2025",
