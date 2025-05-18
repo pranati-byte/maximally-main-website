@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "The Gen Z Guide to Becoming a Young Influencer",
+    excerpt: "Discover how to become a Gen Z influencer in 2025! Learn creating content, growing your following, and building your personal brand as a teen...",
+    date: "January 17, 2025",
+    readTime: "8 min read",
+    category: "Social Media",
+    link: "/blog/gen-z-influencer-guide-teens"
+  },
+  {
     title: "From Side Hustle to Startup: Teen Founders Who Made It Big",
     excerpt: "Discover how teens turn their side hustles into successful startups. From weekend hobbies to real businesses—learn the path to teen entrepreneurship...",
     date: "April 17, 2025",

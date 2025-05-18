@@ -120,4 +120,8 @@
     <loc>https://maximally.in/support</loc>
     <priority>0.6</priority>
   </url>
+ <url>
+    <loc>https://maximally.in/blog/gen-z-influencer-guide-teens</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>

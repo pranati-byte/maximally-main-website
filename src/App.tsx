@@ -44,7 +44,8 @@ import PublicSpeakingGuide from './pages/BlogPost/PublicSpeakingGuide';
 import RealWorldSkillsForTeens from './pages/BlogPost/RealWorldSkillsForTeens';
 import InstagramPersonalBranding from './pages/BlogPost/InstagramPersonalBranding';
 import PitchingTipsForTeens from './pages/BlogPost/PitchingTipsForTeens';
-import SideHustleToStartup from './pages/BlogPost/SideHustleToStartup';
+import SideHustleToStartup from "@/pages/BlogPost/SideHustleToStartup";
+import GenZInfluencer from "@/pages/BlogPost/GenZInfluencer";
 
 const queryClient = new QueryClient();
 
@@ -112,6 +113,7 @@ const App = () => {
             <Route path="/blog/instagram-personal-brand-teens-2025" element={<InstagramPersonalBranding />} />
             <Route path="/blog/first-pitch-tips-for-teens" element={<PitchingTipsForTeens />} />
             <Route path="/blog/side-hustle-to-startup-teen-success" element={<SideHustleToStartup />} />
+            <Route path="/blog/gen-z-influencer-guide" element={<GenZInfluencer />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
