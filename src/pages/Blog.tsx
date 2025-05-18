@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "Should You Start a YouTube Channel or a Startup First?",
+    excerpt: "Deciding between content creation and entrepreneurship? Discover which path aligns best with your goals as a teen innovator, plus real success stories and expert guidance...",
+    date: "January 17, 2025",
+    readTime: "8 min read",
+    category: "Career Guide",
+    link: "/blog/youtube-vs-startup-for-teens"
+  },
+  {
     title: "Why Teen Entrepreneurs Are the Future of India",
     excerpt: "Discover how India's teen entrepreneurs are revolutionizing business and technology. From AI prodigies to app developers, learn how young innovators are shaping the nation's future...",
     date: "January 17, 2025",
