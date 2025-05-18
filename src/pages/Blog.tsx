@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "From Side Hustle to Startup: Teen Founders Who Made It Big",
+    excerpt: "Discover how teens turn their side hustles into successful startups. From weekend hobbies to real businesses—learn the path to teen entrepreneurship...",
+    date: "April 17, 2025",
+    readTime: "8 min read",
+    category: "Entrepreneurship",
+    link: "/blog/side-hustle-to-startup-teen-success"
+  },
+  {
     title: "10 Real-World Skills Schools Never Taught You (But We Will)",
     excerpt: "Discover essential real-world skills every teen should know before turning 18. From financial literacy to entrepreneurship—learn what school doesn't teach...",
     date: "April 17, 2025",
