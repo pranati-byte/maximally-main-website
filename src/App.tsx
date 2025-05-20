@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Support from "./pages/Support";
 import Terms from "./pages/Terms";
 import ThankYou from "./pages/ThankYou";
+import Featured from "./pages/Featured";
 import Privacy from "@/pages/Privacy";
 import About from "./pages/About";
 import Bootcamps from '@/pages/Bootcamps';
@@ -137,6 +138,7 @@ const App = () => {
             <Route path="/community" element={<Community />} />
             <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/join-us" element={<JoinUs />} />
+            <Route path="/featured" element={<Featured />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
