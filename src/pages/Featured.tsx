@@ -7,15 +7,15 @@ const Featured = () => {
     {
       tier: "Infinite Mode",
       companies: [
-        { name: "TechCorp India", role: "Title Sponsor" },
-        { name: "FutureStack", role: "Innovation Partner" }
+        { name: "TechCorp India", role: "Title Sponsor", description: "Leading technology solutions provider" },
+        { name: "FutureStack", role: "Innovation Partner", description: "Next-gen cloud infrastructure" }
       ]
     },
     {
       tier: "Resolution Partner",
       companies: [
-        { name: "LearnHub", role: "Education Partner" },
-        { name: "StartupX", role: "Ecosystem Partner" }
+        { name: "LearnHub", role: "Education Partner", description: "EdTech pioneer in India" },
+        { name: "StartupX", role: "Ecosystem Partner", description: "Startup accelerator & community" }
       ]
     }
   ];
@@ -24,12 +24,16 @@ const Featured = () => {
     {
       name: "Priya Sharma",
       role: "Startup Founder & Angel Investor",
-      company: "GrowthLabs India"
+      company: "GrowthLabs India",
+      linkedin: "https://linkedin.com/in/priyasharma",
+      bio: "Serial entrepreneur with 3 successful exits. Angel investor in 20+ edtech startups."
     },
     {
       name: "Raj Mehta",
       role: "Tech Lead",
-      company: "Google India"
+      company: "Google India",
+      linkedin: "https://linkedin.com/in/rajmehta",
+      bio: "15+ years in tech leadership. Passionate about youth mentorship."
     }
   ];
 
@@ -37,12 +41,16 @@ const Featured = () => {
     {
       name: "Arun Kumar",
       expertise: "Product Strategy",
-      company: "ProductFirst"
+      company: "ProductFirst",
+      linkedin: "https://linkedin.com/in/arunkumar",
+      bio: "Product leader helping teens build better solutions."
     },
     {
       name: "Sarah Singh",
       expertise: "Growth Marketing",
-      company: "ScaleUp Ventures"
+      company: "ScaleUp Ventures",
+      linkedin: "https://linkedin.com/in/sarahsingh",
+      bio: "Growth expert specializing in Gen Z marketing strategies."
     }
   ];
 
@@ -73,13 +81,14 @@ const Featured = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {sponsors.map((tier) => (
-                <div key={tier.tier} className="pixel-border p-6 bg-white/50 hover:transform hover:scale-105 transition-all">
+                <div key={tier.tier} className="pixel-border p-6 bg-gradient-to-br from-gray-50 to-gray-100 hover:transform hover:scale-105 transition-all">
                   <h3 className="font-press-start text-xl mb-4">{tier.tier}</h3>
                   <div className="space-y-4">
                     {tier.companies.map((company) => (
-                      <div key={company.name} className="font-jetbrains">
-                        <p className="text-lg font-bold">{company.name}</p>
+                      <div key={company.name} className="font-jetbrains p-4 bg-white rounded-lg shadow-sm">
+                        <p className="text-lg font-bold text-maximally-blue">{company.name}</p>
                         <p className="text-maximally-black/70">{company.role}</p>
+                        <p className="text-sm mt-2 text-gray-600">{company.description}</p>
                       </div>
                     ))}
                   </div>
@@ -96,10 +105,19 @@ const Featured = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {judges.map((judge) => (
-                <div key={judge.name} className="pixel-border p-6 bg-white/50 hover:transform hover:scale-105 transition-all">
+                <div key={judge.name} className="pixel-border p-6 bg-gradient-to-br from-gray-50 to-gray-100 hover:transform hover:scale-105 transition-all">
                   <h3 className="font-press-start text-lg mb-2">{judge.name}</h3>
                   <p className="font-jetbrains text-maximally-black/70">{judge.role}</p>
-                  <p className="font-jetbrains text-maximally-black/90 font-bold">{judge.company}</p>
+                  <p className="font-jetbrains text-maximally-black/90 font-bold mb-3">{judge.company}</p>
+                  <p className="text-sm mb-3 text-gray-600">{judge.bio}</p>
+                  <a
+                    href={judge.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:underline"
+                  >
+                    LinkedIn Profile
+                  </a>
                 </div>
               ))}
             </div>
@@ -113,10 +131,19 @@ const Featured = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {mentors.map((mentor) => (
-                <div key={mentor.name} className="pixel-border p-6 bg-white/50 hover:transform hover:scale-105 transition-all">
+                <div key={mentor.name} className="pixel-border p-6 bg-gradient-to-br from-gray-50 to-gray-100 hover:transform hover:scale-105 transition-all">
                   <h3 className="font-press-start text-lg mb-2">{mentor.name}</h3>
                   <p className="font-jetbrains text-maximally-black/70">{mentor.expertise}</p>
-                  <p className="font-jetbrains text-maximally-black/90 font-bold">{mentor.company}</p>
+                  <p className="font-jetbrains text-maximally-black/90 font-bold mb-3">{mentor.company}</p>
+                  <p className="text-sm mb-3 text-gray-600">{mentor.bio}</p>
+                  <a
+                    href={mentor.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:underline"
+                  >
+                    LinkedIn Profile
+                  </a>
                 </div>
               ))}
             </div>
