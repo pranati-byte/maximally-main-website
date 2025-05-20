@@ -86,9 +86,38 @@ const Featured = () => {
           title="Coming Soon | Maximally Featured"
           description="Something amazing is coming to Maximally. Our featured heroes will be revealed soon!"
         />
+        
+        <div className="relative min-h-screen">
+          {/* Blurred Background Content */}
+          <div className="blur-md opacity-30">
+            <main className="min-h-screen pt-24 pb-16 px-4">
+              <div className="max-w-6xl mx-auto space-y-16">
+                <section>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    {sponsors.map((tier) => (
+                      <div key={tier.tier} className="pixel-border p-6 bg-gradient-to-br from-gray-50 to-gray-100">
+                        <h3 className="font-press-start text-xl mb-4">{tier.tier}</h3>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+                <section>
+                  <div className="grid md:grid-cols-3 gap-6">
+                    {judges.map((judge) => (
+                      <div key={judge.name} className="pixel-border p-6 bg-gradient-to-br from-gray-50 to-gray-100">
+                        <h3 className="font-press-start text-lg mb-2">{judge.name}</h3>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
+            </main>
+          </div>
 
-        <main className="min-h-screen pt-24 pb-16 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* Overlay Content */}
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm">
+            <div className="h-full flex items-center justify-center">
+              <div className="max-w-4xl mx-auto text-center space-y-8 px-4">
             <div className="relative">
               <Lock className="h-24 w-24 mx-auto text-maximally-green animate-pulse" />
               <div className="absolute -inset-2 bg-maximally-green/20 blur-xl animate-pulse rounded-full" />
@@ -119,8 +148,9 @@ const Featured = () => {
                 Join as Mentor/Sponsor
               </a>
             </div>
+            </div>
           </div>
-        </main>
+        </div>
       </>
     );
   }
