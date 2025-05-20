@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Star, Award, Users, Lock } from "lucide-react";
 import SEO from "@/components/SEO";
@@ -78,17 +79,15 @@ const Featured = () => {
     }
   ];
 
-
   if (!isRevealed) {
     return (
-      <>
+      <div>
         <SEO
           title="Coming Soon | Maximally Featured"
           description="Something amazing is coming to Maximally. Our featured heroes will be revealed soon!"
         />
         
         <div className="relative min-h-screen">
-          {/* Blurred Background Content */}
           <div className="blur-md opacity-30">
             <main className="min-h-screen pt-24 pb-16 px-4">
               <div className="max-w-6xl mx-auto space-y-16">
@@ -114,49 +113,49 @@ const Featured = () => {
             </main>
           </div>
 
-          {/* Overlay Content */}
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm">
             <div className="h-full flex items-center justify-center">
               <div className="max-w-4xl mx-auto text-center space-y-8 px-4">
-            <div className="relative">
-              <Lock className="h-24 w-24 mx-auto text-maximally-green animate-pulse" />
-              <div className="absolute -inset-2 bg-maximally-green/20 blur-xl animate-pulse rounded-full" />
-            </div>
+                <div className="relative">
+                  <Lock className="h-24 w-24 mx-auto text-maximally-green animate-pulse" />
+                  <div className="absolute -inset-2 bg-maximally-green/20 blur-xl animate-pulse rounded-full" />
+                </div>
 
-            <h1 className="font-press-start text-4xl md:text-5xl text-white mb-6 gradient-text-rainbow animate-glow">
-              🤫 It's a Surprise!
-            </h1>
+                <h1 className="font-press-start text-4xl md:text-5xl text-white mb-6 gradient-text-rainbow animate-glow">
+                  🤫 It's a Surprise!
+                </h1>
 
-            <p className="font-jetbrains text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              Our incredible lineup of sponsors, judges, and mentors will be revealed on June 15th.
-              Get ready to meet the heroes powering India's most ambitious teen program!
-            </p>
+                <p className="font-jetbrains text-xl text-white/80 max-w-2xl mx-auto mb-8">
+                  Our incredible lineup of sponsors, judges, and mentors will be revealed on June 15th.
+                  Get ready to meet the heroes powering India's most ambitious teen program!
+                </p>
 
-            <div className="pixel-border p-8 bg-black/50 backdrop-blur-sm max-w-lg mx-auto">
-              <p className="font-press-start text-2xl text-maximally-green mb-2">Time Left</p>
-              <p className="font-jetbrains text-3xl text-white">{timeLeft}</p>
-            </div>
+                <div className="pixel-border p-8 bg-black/50 backdrop-blur-sm max-w-lg mx-auto">
+                  <p className="font-press-start text-2xl text-maximally-green mb-2">Time Left</p>
+                  <p className="font-jetbrains text-3xl text-white">{timeLeft}</p>
+                </div>
 
-            <div className="mt-12 space-y-4">
-              <p className="font-jetbrains text-white/60">
-                Want to be featured here?
-              </p>
-              <a
-                href="/collaborate"
-                className="pixel-button bg-maximally-blue inline-block px-8 py-4 text-white hover:scale-105 transform transition-all"
-              >
-                Join as Mentor/Sponsor
-              </a>
-            </div>
+                <div className="mt-12 space-y-4">
+                  <p className="font-jetbrains text-white/60">
+                    Want to be featured here?
+                  </p>
+                  <a
+                    href="/collaborate"
+                    className="pixel-button bg-maximally-blue inline-block px-8 py-4 text-white hover:scale-105 transform transition-all"
+                  >
+                    Join as Mentor/Sponsor
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 
   return (
-    <>
+    <div>
       <SEO
         title="Featured Partners & Mentors | Maximally"
         description="Meet the amazing sponsors, judges, and mentors powering India's most ambitious teen program."
@@ -164,7 +163,6 @@ const Featured = () => {
 
       <main className="min-h-screen pt-24 pb-16 px-4">
         <div className="max-w-6xl mx-auto space-y-16">
-          {/* Hero Section */}
           <section className="text-center">
             <h1 className="font-press-start text-4xl md:text-5xl mb-6 gradient-text-rainbow animate-glow">
               Featured Heroes
@@ -174,7 +172,6 @@ const Featured = () => {
             </p>
           </section>
 
-          {/* Sponsors Section */}
           <section>
             <div className="flex items-center gap-3 mb-8">
               <Star className="h-8 w-8 text-[#FFD700]" />
@@ -198,7 +195,6 @@ const Featured = () => {
             </div>
           </section>
 
-          {/* Judges Section */}
           <section>
             <div className="flex items-center gap-3 mb-8">
               <Award className="h-8 w-8 text-[#FF5F5F]" />
@@ -224,7 +220,6 @@ const Featured = () => {
             </div>
           </section>
 
-          {/* Mentors Section */}
           <section>
             <div className="flex items-center gap-3 mb-8">
               <Users className="h-8 w-8 text-[#4D89FF]" />
@@ -251,7 +246,7 @@ const Featured = () => {
           </section>
         </div>
       </main>
-    </>
+    </div>
   );
 };
 
