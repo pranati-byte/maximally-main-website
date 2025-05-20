@@ -140,6 +140,24 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Progressive Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="font-press-start text-3xl mb-8">🏫 Progressive Schools Wall</h2>
+          <p className="font-jetbrains text-xl mb-8">
+            Discover India's most innovative schools that are reshaping education.
+            These institutions share our vision for future-ready learning.
+          </p>
+          <Link
+            to="/wall-of-progressive-schools"
+            className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
+          >
+            <span>View Progressive Schools</span>
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

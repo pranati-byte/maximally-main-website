@@ -438,6 +438,25 @@ const Bootcamps = () => {
           <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
         </div>
       </section>
+
+      {/* Progressive Schools */}
+      <section className="py-12 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="container mx-auto text-center relative">
+          <h2 className="font-press-start text-3xl mb-8 text-white">🏫 Meet Our Partner Schools</h2>
+          <p className="font-jetbrains text-xl mb-8 text-white/80">
+            Discover progressive schools across India that are partnering with Maximally
+            to bring cutting-edge education to their students.
+          </p>
+          <Link
+            to="/wall-of-progressive-schools"
+            className="pixel-button bg-[#39FF14] text-black inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
+          >
+            <span>Explore Progressive Schools</span>
+            <ArrowRight className="h-5 w-5" />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

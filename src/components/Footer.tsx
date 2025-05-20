@@ -57,6 +57,7 @@ const Footer = () => {
             <li><Link to="/privacy" className="hover:text-maximally-blue transition-colors block">Privacy Policy</Link></li>
             <li><Link to="/terms" className="hover:text-maximally-blue transition-colors block">Terms of Service</Link></li>
             <li><Link to="/sponsor" className="hover:text-maximally-blue transition-colors block">Sponsor</Link></li>
+            <li><Link to="/wall-of-progressive-schools" className="hover:text-maximally-blue transition-colors block">Progressive Schools</Link></li>
           </ul>
         </div>
       </div>
