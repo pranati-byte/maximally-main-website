@@ -53,6 +53,7 @@ import OnlineBrandingTips from "@/pages/BlogPost/OnlineBrandingTips";
 import TeenEntrepreneursIndia from "@/pages/BlogPost/TeenEntrepreneursIndia";
 import YoutubeVsStartup from "@/pages/BlogPost/YoutubeVsStartup";
 import TopCareersForTeens from "@/pages/BlogPost/TopCareersForTeens";
+import WallOfProgressiveSchools from "@/pages/WallOfProgressiveSchools";
 
 const queryClient = new QueryClient();
 
@@ -128,6 +129,7 @@ const App = () => {
             <Route path="/blog/teen-entrepreneurs-india-future" element={<TeenEntrepreneursIndia />} />
             <Route path="/blog/youtube-vs-startup-for-teens" element={<YoutubeVsStartup />} />
             <Route path="/blog/top-careers-for-teen-innovators" element={<TopCareersForTeens />} />
+            <Route path="/wall-of-progressive-schools" element={<WallOfProgressiveSchools />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
