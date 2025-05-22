@@ -95,7 +95,7 @@ const Index = () => {
               </h1>
 
               <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
-                Join a community of ambitious teens learning real-world skills through hands-on projects.
+                Build a startup from the ground up, network with industry leaders, and gain real-world experience that sets you apart.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
