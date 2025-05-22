@@ -54,14 +54,6 @@ const Bootcamps = () => {
             </p>
           </div>
           <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
-          <div className="mt-8">
-            <button 
-              onClick={() => window.location.href = "https://tally.so/r/wQEGEA"}
-              className="pixel-button bg-[#39FF14] text-black px-12 py-6 text-xl font-press-start hover:scale-105 transform transition-all shadow-xl"
-            >
-              Apply Now →
-            </button>
-          </div>
         </div>
       </section>
 
