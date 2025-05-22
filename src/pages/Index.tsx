@@ -153,69 +153,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* 24-Hour Startup Challenge Section */}
-      <section className="py-20 relative overflow-hidden bg-maximally-black">
-        <div className="absolute inset-0 stars" />
-        {/* Floating elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(6)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-4 h-4 bg-gradient-to-br from-maximally-purple via-maximally-blue to-maximally-red rounded-full animate-float"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${i * 0.5}s`,
-                animationDuration: `${4 + i}s`,
-              }}
-            />
-          ))}
-        </div>
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-gradient-to-r from-maximally-purple via-maximally-blue to-maximally-red p-[2px] rounded-full mb-6 animate-pulse">
-              <div className="bg-maximally-black px-6 py-2 rounded-full">
-                <span className="font-jetbrains text-white font-bold bg-gradient-to-r from-maximally-purple via-maximally-blue to-maximally-red bg-clip-text">
-                  🚀 24-Hour Challenge
-                </span>
-              </div>
-            </div>
-
-            <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 text-white">
-              India's Fastest Teen Startup Challenge
-            </h2>
-
-            <p className="font-jetbrains text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-              Build a real startup in 24 hours using AI + no-code tools. Team up, get mentored, and pitch to judges.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-              <div className="pixel-border bg-gradient-to-br from-maximally-purple/20 to-maximally-blue/20 p-6 text-white backdrop-blur-sm hover:scale-105 transform transition-all duration-300">
-                <h3 className="font-press-start text-lg mb-2">💡 Build</h3>
-                <p className="font-jetbrains text-sm">MVP + Pitch Deck</p>
-              </div>
-              <div className="pixel-border bg-gradient-to-br from-maximally-blue/20 to-maximally-red/20 p-6 text-white backdrop-blur-sm hover:scale-105 transform transition-all duration-300">
-                <h3 className="font-press-start text-lg mb-2">🎯 Launch</h3>
-                <p className="font-jetbrains text-sm">Get Real Users</p>
-              </div>
-              <div className="pixel-border bg-gradient-to-br from-maximally-red/20 to-maximally-purple/20 p-6 text-white backdrop-blur-sm hover:scale-105 transform transition-all duration-300 sm:col-span-2 md:col-span-1">
-                <h3 className="font-press-start text-lg mb-2">🏆 Win</h3>
-                <p className="font-jetbrains text-sm">Prizes + Recognition</p>
-              </div>
-            </div>
-
-            <a 
-              href="https://tally.so/r/mZgxYe"
-              target="_blank"
-              rel="noopener noreferrer" 
-              className="pixel-button bg-maximally-purple text-white group inline-flex items-center gap-2 hover:scale-105 transform transition-all px-8 py-4"
-            >
-              <span>Join Now</span>
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
-        </div>
-      </section>
+        
 
       {/* Industry Leaders Section */}
         <section className="py-20 relative overflow-hidden">
