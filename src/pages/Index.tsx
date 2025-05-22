@@ -215,13 +215,7 @@ const Index = () => {
 
 
 
-              <div className="mt-12">
-                <Link to="/bootcamps" className="pixel-button bg-maximally-blue text-white group inline-flex items-center gap-2 hover:animate-pulse px-8 py-4">
-                  <span className="text-lg">Join Now & Learn from the Best</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
               </div>
-            </div>
           </div>
         </section>
 
