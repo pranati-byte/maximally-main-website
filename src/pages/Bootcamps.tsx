@@ -18,6 +18,14 @@ const Bootcamps = () => {
             India's <span className="bg-[#39FF14]/20">most ambitious</span> teens join us{" "}
             <span className="bg-[#FF5F5F]/20">this summer</span>. Will you?
           </h1>
+          <div className="mt-8 mb-12">
+            <button 
+              onClick={() => window.location.href = "https://tally.so/r/wQEGEA"}
+              className="pixel-button bg-[#39FF14] text-black px-12 py-6 text-xl font-press-start hover:scale-105 transform transition-all shadow-xl"
+            >
+              Apply Now →
+            </button>
+          </div>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="font-jetbrains text-xl sm:text-2xl md:text-3xl mb-4 leading-relaxed">
               <span className="bg-gradient-to-r from-[#39FF14] to-[#00ff99] bg-clip-text text-transparent font-bold">Maximally Bootcamp:</span> A transformative{" "}
