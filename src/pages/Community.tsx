@@ -1,5 +1,5 @@
 
-import { ArrowRight, Lock, Star, Users, Zap, WhatsApp, MessageSquare } from 'lucide-react';
+import { ArrowRight, Lock, Star, Users, Zap, MessageCircle, MessagesSquare } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -25,7 +25,7 @@ const Community = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
               <div className="pixel-border p-6 bg-gradient-to-br from-green-500/20 to-green-600/20 hover:from-green-500/30 hover:to-green-600/30 transition-all group">
                 <div className="mb-4">
-                  <WhatsApp className="h-12 w-12 mx-auto text-green-400 group-hover:scale-110 transition-transform" />
+                  <MessageCircle className="h-12 w-12 mx-auto text-green-400 group-hover:scale-110 transition-transform" />
                 </div>
                 <h3 className="font-press-start text-xl mb-3">WhatsApp Group</h3>
                 <p className="font-jetbrains mb-4 text-white/70">Quick updates & daily interactions with the community</p>
@@ -39,7 +39,7 @@ const Community = () => {
               
               <div className="pixel-border p-6 bg-gradient-to-br from-[#5865F2]/20 to-[#7289DA]/20 hover:from-[#5865F2]/30 hover:to-[#7289DA]/30 transition-all group">
                 <div className="mb-4">
-                  <MessageSquare className="h-12 w-12 mx-auto text-[#5865F2] group-hover:scale-110 transition-transform" />
+                  <MessagesSquare className="h-12 w-12 mx-auto text-[#5865F2] group-hover:scale-110 transition-transform" />
                 </div>
                 <h3 className="font-press-start text-xl mb-3">Discord Server</h3>
                 <p className="font-jetbrains mb-4 text-white/70">Deeper discussions & structured learning channels</p>
