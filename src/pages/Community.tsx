@@ -1,5 +1,5 @@
 
-import { ArrowRight, Lock, Star, Users, Zap } from 'lucide-react';
+import { ArrowRight, Lock, Star, Users, Zap, WhatsApp, MessageSquare } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -10,6 +10,56 @@ const Community = () => {
         title="Join Maximally Community | India's Largest Teen Entrepreneurship Network"
         description="Join India's most vibrant teen entrepreneurship community. Choose between our exclusive Inner Circle or our open Outer Circle community."
       />
+
+      {/* Community Entry Points */}
+      <section className="pt-24 pb-12 bg-maximally-black text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="font-press-start text-2xl md:text-3xl mb-6">
+              Choose Your Platform_
+            </h1>
+            <p className="font-jetbrains text-lg md:text-xl mb-8 text-white/80">
+              Join 1000+ ambitious teens building the future of India
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+              <div className="pixel-border p-6 bg-gradient-to-br from-green-500/20 to-green-600/20 hover:from-green-500/30 hover:to-green-600/30 transition-all group">
+                <div className="mb-4">
+                  <WhatsApp className="h-12 w-12 mx-auto text-green-400 group-hover:scale-110 transition-transform" />
+                </div>
+                <h3 className="font-press-start text-xl mb-3">WhatsApp Group</h3>
+                <p className="font-jetbrains mb-4 text-white/70">Quick updates & daily interactions with the community</p>
+                <button 
+                  onClick={() => window.location.href = 'https://chat.whatsapp.com/maximally'}
+                  className="pixel-button bg-green-500 text-white w-full group-hover:scale-105 transition-transform"
+                >
+                  Join WhatsApp →
+                </button>
+              </div>
+              
+              <div className="pixel-border p-6 bg-gradient-to-br from-[#5865F2]/20 to-[#7289DA]/20 hover:from-[#5865F2]/30 hover:to-[#7289DA]/30 transition-all group">
+                <div className="mb-4">
+                  <MessageSquare className="h-12 w-12 mx-auto text-[#5865F2] group-hover:scale-110 transition-transform" />
+                </div>
+                <h3 className="font-press-start text-xl mb-3">Discord Server</h3>
+                <p className="font-jetbrains mb-4 text-white/70">Deeper discussions & structured learning channels</p>
+                <button 
+                  onClick={() => window.location.href = 'https://discord.gg/S2YyGtBWKa'}
+                  className="pixel-button bg-[#5865F2] text-white w-full group-hover:scale-105 transition-transform"
+                >
+                  Join Discord →
+                </button>
+              </div>
+            </div>
+            
+            <div className="mt-12 text-center">
+              <p className="font-jetbrains text-white/60 text-sm">
+                🚀 Already 1000+ members | 🎯 Daily challenges | 💡 Exclusive resources
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-maximally-blue/5 to-maximally-red/5 relative overflow-hidden">
