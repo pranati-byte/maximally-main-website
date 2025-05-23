@@ -52,11 +52,7 @@ const Community = () => {
               </div>
             </div>
             
-            <div className="mt-12 text-center">
-              <p className="font-jetbrains text-white/60 text-sm">
-                🚀 Already 1000+ members | 🎯 Daily challenges | 💡 Exclusive resources
-              </p>
-            </div>
+            
           </div>
         </div>
       </section>
