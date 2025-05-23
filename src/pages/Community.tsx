@@ -30,7 +30,7 @@ const Community = () => {
                 <h3 className="font-press-start text-xl mb-3">WhatsApp Group</h3>
                 <p className="font-jetbrains mb-4 text-white/70">Quick updates & daily interactions with the community</p>
                 <button 
-                  onClick={() => window.location.href = 'https://chat.whatsapp.com/maximally'}
+                  onClick={() => window.location.href = 'https://chat.whatsapp.com/HUHLmjbQCMRJAMtdpdgKgt'}
                   className="pixel-button bg-green-500 text-white w-full group-hover:scale-105 transition-transform"
                 >
                   Join WhatsApp →
