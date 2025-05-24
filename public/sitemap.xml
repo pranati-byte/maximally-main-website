@@ -176,4 +176,16 @@
     <loc>https://maximally.in/support</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://maximally.in/blog/learn-ai-in-7-days-teens</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/online-branding-tips-for-students</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/build-teen-confidence</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
