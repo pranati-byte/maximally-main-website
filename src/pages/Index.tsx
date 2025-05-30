@@ -20,7 +20,7 @@ const Index = () => {
     "sameAs": ["https://twitter.com/maximallyHQ", "https://instagram.com/maximallyHQ"]
   };
   const [text, setText] = useState('');
-  const fullText = 'Be maximally';
+  const fullText = 'Be Better, Be Maximally';
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
   const [isTallyFormOpen, setIsTallyFormOpen] = useState(false);
