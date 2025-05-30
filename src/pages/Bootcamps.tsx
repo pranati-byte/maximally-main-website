@@ -200,7 +200,7 @@ const Bootcamps = () => {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="text-3xl mb-4">6️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">🎉 Bootcamp Begins</h3>
+              <h3 className="font-press-start text-lg mb-2">🎉 Makeathon Begins</h3>
               <p className="font-jetbrains">July 1</p>
             </div>
           </div>
@@ -210,57 +210,58 @@ const Bootcamps = () => {
       {/* Curriculum Section */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="container mx-auto">
-          <h2 className="font-press-start text-3xl mb-8 text-center">📚 Bootcamp Program</h2>
+          <h2 className="font-press-start text-3xl mb-8 text-center">📚 7-Day Builder Journey</h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="day1">
-              <AccordionTrigger className="font-press-start">Day 1: Orientation & Mindset Reset</AccordionTrigger>
+              <AccordionTrigger className="font-press-start">Day 1: Kickoff + Team Formation</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 • Future of work, AI, and careers<br />
-                • Defining your ambition and edge
+                • Defining your ambition and edge<br />
+                • Form your startup teams (guilds)
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="day2">
-              <AccordionTrigger className="font-press-start">Day 2: Entrepreneurship Fundamentals</AccordionTrigger>
+              <AccordionTrigger className="font-press-start">Day 2: Problem Discovery + Research</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 • Identifying problems worth solving<br />
-                • MVP design using no-code<br />
-                • Storytelling and startup pitching
+                • Market research and validation<br />
+                • Customer interviews and insights
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="day3">
-              <AccordionTrigger className="font-press-start">Day 3: Digital Marketing & Distribution</AccordionTrigger>
+              <AccordionTrigger className="font-press-start">Day 3: MVP Tooling (Figma, AI, No-code)</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
-                • Audience psychology<br />
-                • Growth hacking 101<br />
-                • Building a content engine
+                • Tools like ChatGPT, Midjourney, Figma, Glide<br />
+                • Design thinking and wireframing<br />
+                • No-code development basics
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="day4">
-              <AccordionTrigger className="font-press-start">Day 4: AI & No-Code Execution</AccordionTrigger>
+              <AccordionTrigger className="font-press-start">Day 4: Prototyping + Mentorship Sprints</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
-                • Tools like ChatGPT, Midjourney, Glide<br />
                 • Building fast prototypes<br />
-                • Automating workflows
+                • 1:1 mentorship sessions<br />
+                • Iterating based on feedback
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="day5">
-              <AccordionTrigger className="font-press-start">Day 5: Public Speaking & Influence</AccordionTrigger>
+              <AccordionTrigger className="font-press-start">Day 5: Demo Feedback + Product Polish</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
-                • Speaking under pressure<br />
-                • Debate + MUN simulation<br />
-                • Owning the room
+                • Present early demos to mentors<br />
+                • Receive feedback and iterate<br />
+                • Polish your MVP for demo day
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="day6">
-              <AccordionTrigger className="font-press-start">Day 6: Personal Branding</AccordionTrigger>
+              <AccordionTrigger className="font-press-start">Day 6: Public Speaking + Pitch Building</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
-                • Portfolio and personal site building<br />
-                • Networking strategy<br />
-                • Digital identity for teens
+                • Speaking under pressure<br />
+                • Storytelling and startup pitching<br />
+                • Craft your final demo day presentation
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="day7">
-              <AccordionTrigger className="font-press-start">Day 7: Demo Day</AccordionTrigger>
+              <AccordionTrigger className="font-press-start">Day 7: Demo Day (Public Pitch)</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 • Present to guests from top universities and startups<br />
                 • Live feedback from a high-stakes panel<br />
@@ -277,7 +278,7 @@ const Bootcamps = () => {
         <div className="container mx-auto relative">
           <div className="animate-float">
             <h2 className="font-press-start text-3xl mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-[#39FF14] via-[#00ff99] to-[#00ffcc]">
-              🧩 How the Bootcamp <i>Actually</i> Works
+              🧩 How the Startup Makeathon Works
             </h2>
           </div>
           <p className="font-jetbrains text-xl mb-8 text-center text-white/90 animate-fade-in">
@@ -292,12 +293,12 @@ const Bootcamps = () => {
 
             <div className="bg-black/40 p-6 rounded-lg border-2 border-[#00ff99] hover:scale-105 transform transition-all duration-300">
               <h4 className="font-press-start text-lg mb-4 text-[#00ff99]">🚀 Guild System</h4>
-              <p className="font-jetbrains text-white">Work in small, dynamic startup teams to build and iterate your ideas with fellow ambitious teens.</p>
+              <p className="font-jetbrains text-white">Work in small, dynamic startup teams to build and iterate your ideas with fellow ambitious teens. Teams work like real startups. You brainstorm, build, and ship daily.</p>
             </div>
 
             <div className="bg-black/40 p-6 rounded-lg border-2 border-[#00ffcc] hover:scale-105 transform transition-all duration-300">
               <h4 className="font-press-start text-lg mb-4 text-[#00ffcc]">🎤 Demo Day</h4>
-              <p className="font-jetbrains text-white">Pitch your project to secure potential internships and funding to continue your growth journey.</p>
+              <p className="font-jetbrains text-white">Pitch your project to secure potential internships and funding to continue your growth journey. Pitch to founders, creators, and VCs — live.</p>
             </div>
           </div>
 
@@ -343,7 +344,7 @@ const Bootcamps = () => {
             </h3>
             <div className="grid grid-cols-1 gap-4">
               <div className="bg-black/40 p-4 rounded-lg border-2 border-[#FF5F5F] hover:border-[#FF5F5F] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(255,95,95,0.5)]">
-                <p className="font-jetbrains text-[#FF5F5F]">✅ A real-world project to showcase</p>
+                <p className="font-jetbrains text-[#FF5F5F]">✅ A working MVP or prototype to showcase</p>
               </div>
               <div className="bg-black/40 p-4 rounded-lg border-2 border-[#00FFFF] hover:border-[#00FFFF] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
                 <p className="font-jetbrains text-[#00FFFF]">✅ Internship and funding opportunities if you have a viable idea</p>
