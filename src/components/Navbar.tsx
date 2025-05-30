@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X, Terminal } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -21,7 +22,7 @@ const Navbar = () => {
 
   const menuItems = [
     { path: "/", label: "Home", color: "#FF5F5F" },
-    { path: "/makeathon", label: "Startup Makeathon", color: "#39FF14" },
+    { path: "/bootcamps", label: "Startup Makeathon", color: "#39FF14" },
     { path: "/community", label: "Community", color: "#B400FF" },
     { path: "/about", label: "About", color: "#00D1FF" },
     { path: "/blog", label: "Blog", color: "#FFD700" },

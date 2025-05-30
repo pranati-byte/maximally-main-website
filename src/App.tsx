@@ -14,8 +14,7 @@ import ThankYou from "./pages/ThankYou";
 import Featured from "./pages/Featured";
 import Privacy from "@/pages/Privacy";
 import About from "./pages/About";
-import Bootcamps from "./pages/Bootcamps";
-import Makeathon from "./pages/Makeathon";
+import Bootcamps from '@/pages/Bootcamps';
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
 import Entrepreneurship from "./pages/Entrepreneurship";
@@ -99,8 +98,7 @@ const App = () => {
             <Route path="/digital-marketing" element={<DigitalMarketing />} />
             <Route path="/no-code-ai" element={<NoCodeAI />} />
             <Route path="/career-launch" element={<CareerLaunch />} />
-            <Route path="/makeathon" element={<Makeathon />} />
-            <Route path="/bootcamps" element={<Navigate to="/makeathon" replace={true} />} />
+            <Route path="/bootcamps" element={<Bootcamps />} />
             <Route path="/about" element={<About />} />
             {/* Team route removed */}
             <Route path="/careers" element={<Careers />} />

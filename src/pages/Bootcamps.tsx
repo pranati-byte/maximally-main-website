@@ -411,15 +411,9 @@ const Bootcamps = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq13">
-              <AccordionTrigger className="font-press-start">What happens after the Makeathon ends?</AccordionTrigger>
+              <AccordionTrigger className="font-press-start">What happens after the bootcamp ends?</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 You become part of the Maximally alumni network. That means access to future sessions, internships, mentors, and events — for life.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="faq14">
-              <AccordionTrigger className="font-press-start">Is this a hackathon or a bootcamp?</AccordionTrigger>
-              <AccordionContent className="font-jetbrains">
-                Nope — it's both. A startup simulation where you build fast, ship real things, and pitch like founders.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq4">
