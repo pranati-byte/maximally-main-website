@@ -29,7 +29,7 @@ const Footer = () => {
         <div>
           <h3 className="font-press-start text-sm mb-4">Programs</h3>
           <ul className="space-y-3 font-jetbrains text-gray-300">
-            <li><Link to="/bootcamps" className="hover:text-maximally-blue transition-colors block">Bootcamps</Link></li>
+            <li><Link to="/bootcamps" className="hover:text-maximally-blue transition-colors block">Startup Makeathon</Link></li>
             <li><Link to="/digital-marketing" className="hover:text-maximally-blue transition-colors block">Digital Marketing</Link></li>
             <li><Link to="/entrepreneurship" className="hover:text-maximally-blue transition-colors block">Entrepreneurship</Link></li>
             <li><Link to="/public-speaking" className="hover:text-maximally-blue transition-colors block">Public Speaking</Link></li>
