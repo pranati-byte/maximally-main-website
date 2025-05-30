@@ -61,7 +61,8 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  return <>
+  return (
+    <>
       <SEO title="Maximally.in | Skill-building for Indian Teenagers" description="Join India's premier teen education platform. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps designed for Indian students." keywords="skill-building for Indian teenagers, bootcamps for students in India, learn digital marketing AI no-code, teen education India, social impact edtech startup" canonicalUrl="https://maximally.in" structuredData={structuredData} />
       <div className="min-h-screen bg-white relative overflow-hidden">
         {/* Hero Section */}
@@ -313,7 +314,8 @@ const Index = () => {
         <Footer />
         <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} /> {/* Added TallyFormDialog component */}
       </div>
-    </>;
+    </>
+  );
 };
 export default Index;
 const SummerBootcamps = () => {
