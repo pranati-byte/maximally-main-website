@@ -1,4 +1,3 @@
-
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import TallyFormDialog from "@/components/TallyFormDialog";
@@ -28,10 +27,9 @@ const Bootcamps = () => {
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="font-jetbrains text-xl sm:text-2xl md:text-3xl mb-4 leading-relaxed">
-              <span className="bg-gradient-to-r from-[#39FF14] to-[#00ff99] bg-clip-text text-transparent font-bold">Maximally Bootcamp:</span> A transformative{" "}
-              <span className="bg-[#FF5F5F]/20 px-2 font-bold">7-day experience</span> where teens dive into:
+              <span className="bg-gradient-to-r from-[#39FF14] to-[#00ff99] bg-clip-text text-transparent font-bold">Maximally Startup Makeathon:</span> India’s #1 startup simulation for teens — 7 days of idea validation, MVP building, and public pitching with real mentors.
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg sm:text-xl">
               <div className="bg-[#39FF14]/10 p-4 rounded-lg hover:scale-105 transform transition-all duration-300">
                 <span className="text-[#39FF14] font-bold">⚡️ Entrepreneurship</span>
@@ -40,7 +38,7 @@ const Bootcamps = () => {
                 <span className="text-[#FF5F5F] font-bold">🎯 Digital Marketing</span>
               </div>
               <div className="bg-[#B400FF]/10 p-4 rounded-lg hover:scale-105 transform transition-all duration-300">
-                <span className="text-[#B400FF] font-bold">🤖 AI & No-Code</span>
+                <span className="text-[#B400FF] font-bold">⚙️ AI Tools & No-Code MVPs</span>
               </div>
               <div className="bg-[#3C9EE7]/10 p-4 rounded-lg hover:scale-105 transform transition-all duration-300">
                 <span className="text-[#3C9EE7] font-bold">🎤 Public Speaking</span>
@@ -70,17 +68,17 @@ const Bootcamps = () => {
       {/* Accepted Section */}
       <section className="py-8 sm:py-12 px-3 sm:px-4 bg-gray-50">
         <div className="container mx-auto text-center">
-          <h2 className="font-press-start text-2xl sm:text-3xl mb-6 sm:mb-8">🏆 Accepted? You're In for Life</h2>
+          <h2 className="font-press-start text-2xl sm:text-3xl mb-6 sm:mb-8">🏆 What You'll Get</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 px-2 sm:px-4 md:px-0">
             <Card className="border-2 border-[#39FF14]/30 hover:border-[#39FF14] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">✅ Real-World Project</h3>
+                <h3 className="font-press-start text-xl mb-4">✅ A real MVP or working prototype</h3>
                 <p className="font-jetbrains">Build something real — not just theory</p>
               </CardContent>
             </Card>
             <Card className="border-2 border-[#FF5F5F]/30 hover:border-[#FF5F5F] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">✅ Internship Support</h3>
+                <h3 className="font-press-start text-xl mb-4">✅ Startup & internship opportunities</h3>
                 <p className="font-jetbrains">Top performers get placed in real startups</p>
               </CardContent>
             </Card>
@@ -148,7 +146,7 @@ const Bootcamps = () => {
         <div className="container mx-auto text-center">
           <h2 className="font-press-start text-3xl mb-8">👥 Who Should Apply</h2>
           <p className="font-jetbrains text-xl mb-6">
-            Maximally is for teens who are ready to take the next step toward success.
+            The Startup Makeathon is for teen builders, creators, and first-time founders.
           </p>
           <div className="space-y-4">
             <p className="font-jetbrains text-xl">
@@ -291,12 +289,12 @@ const Bootcamps = () => {
               <h4 className="font-press-start text-lg mb-4 text-[#39FF14]">🎯 Daily Impact</h4>
               <p className="font-jetbrains text-white">Real-life challenges and lessons from top founders, creators, and VCs who drop by to share their journeys.</p>
             </div>
-            
+
             <div className="bg-black/40 p-6 rounded-lg border-2 border-[#00ff99] hover:scale-105 transform transition-all duration-300">
               <h4 className="font-press-start text-lg mb-4 text-[#00ff99]">🚀 Guild System</h4>
               <p className="font-jetbrains text-white">Work in small, dynamic startup teams to build and iterate your ideas with fellow ambitious teens.</p>
             </div>
-            
+
             <div className="bg-black/40 p-6 rounded-lg border-2 border-[#00ffcc] hover:scale-105 transform transition-all duration-300">
               <h4 className="font-press-start text-lg mb-4 text-[#00ffcc]">🎤 Demo Day</h4>
               <p className="font-jetbrains text-white">Pitch your project to secure potential internships and funding to continue your growth journey.</p>
