@@ -1,3 +1,4 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import TallyFormDialog from "@/components/TallyFormDialog";
@@ -5,7 +6,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-const Bootcamps = () => {
+const Makeathon = () => {
   const [isTallyFormOpen, setIsTallyFormOpen] = useState(false);
 
   return (
@@ -27,12 +28,12 @@ const Bootcamps = () => {
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="font-jetbrains text-xl sm:text-2xl md:text-3xl mb-4 leading-relaxed">
-              <span className="bg-gradient-to-r from-[#39FF14] to-[#00ff99] bg-clip-text text-transparent font-bold">Maximally Startup Makeathon:</span> India’s #1 startup simulation for teens — 7 days of idea validation, MVP building, and public pitching with real mentors.
+              <span className="bg-gradient-to-r from-[#39FF14] to-[#00ff99] bg-clip-text text-transparent font-bold">Maximally Startup Makeathon:</span> India's #1 startup simulation for teens — 7 days of idea validation, MVP building, and public pitching with real mentors.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg sm:text-xl">
               <div className="bg-[#39FF14]/10 p-4 rounded-lg hover:scale-105 transform transition-all duration-300">
-                <span className="text-[#39FF14] font-bold">⚡️ Entrepreneurship</span>
+                <span className="text-[#39FF14] font-bold">💡 Startup Prototyping</span>
               </div>
               <div className="bg-[#FF5F5F]/10 p-4 rounded-lg hover:scale-105 transform transition-all duration-300">
                 <span className="text-[#FF5F5F] font-bold">🎯 Digital Marketing</span>
@@ -72,7 +73,7 @@ const Bootcamps = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 px-2 sm:px-4 md:px-0">
             <Card className="border-2 border-[#39FF14]/30 hover:border-[#39FF14] transition-all">
               <CardContent className="p-6">
-                <h3 className="font-press-start text-xl mb-4">✅ A real MVP or working prototype</h3>
+                <h3 className="font-press-start text-xl mb-4">✅ A working MVP or prototype to showcase</h3>
                 <p className="font-jetbrains">Build something real — not just theory</p>
               </CardContent>
             </Card>
@@ -163,6 +164,12 @@ const Bootcamps = () => {
             </p>
             <p className="font-jetbrains text-xl">
               <span className="bg-[#39FF14]/20 px-2">👉 Anyone who wants to build, learn, and grow with the best in the industry!</span>
+            </p>
+            <p className="font-jetbrains text-xl">
+              <span className="bg-[#B400FF]/20 px-2">👉 Teens who want to pitch their ideas publicly</span>
+            </p>
+            <p className="font-jetbrains text-xl">
+              <span className="bg-[#FF5F5F]/20 px-2">👉 First-time founders looking to prototype with AI and no-code</span>
             </p>
           </div>
         </div>
@@ -468,4 +475,4 @@ const Bootcamps = () => {
   );
 };
 
-export default Bootcamps;
+export default Makeathon;
