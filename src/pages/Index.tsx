@@ -247,16 +247,18 @@ const Index = () => {
 
         {/* Why Choose Section */}
         {/* Why Maximally Section */}
-      <section className="py-24 bg-maximally-blue text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-press-start text-center mb-8">
-            &gt;&gt; Why Maximally_
-          </h2>
-          <p className="text-center font-jetbrains text-lg mb-16 opacity-90">
-            The Startup Makeathon is built on this promise:
-          </p>
-          
-          <WhyMaximally />
+        <section className="py-24 bg-maximally-blue text-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-press-start text-center mb-8">
+              &gt;&gt; Why Maximally_
+            </h2>
+            <p className="text-center font-jetbrains text-lg mb-16 opacity-90">
+              The Startup Makeathon is built on this promise:
+            </p>
+            
+            <WhyMaximally />
+          </div>
+        </section>
 
         {/* Collaboration Section */}
         <section className="py-20 bg-maximally-blue/5">
