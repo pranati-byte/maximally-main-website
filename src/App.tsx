@@ -14,7 +14,6 @@ import Terms from "./pages/Terms";
 import ThankYou from "./pages/ThankYou";
 import Featured from "./pages/Featured";
 import Privacy from "@/pages/Privacy";
-import About from "./pages/About";
 import Bootcamps from '@/pages/Bootcamps';
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
@@ -101,7 +100,6 @@ const App = () => {
             <Route path="/digital-marketing" element={<DigitalMarketing />} />
             <Route path="/no-code-ai" element={<NoCodeAI />} />
             <Route path="/career-launch" element={<CareerLaunch />} />
-            <Route path="/about" element={<About />} />
             {/* Team route removed */}
             <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />

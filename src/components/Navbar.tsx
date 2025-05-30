@@ -23,7 +23,6 @@ const Navbar = () => {
     { path: "/", label: "Home", color: "#FF5F5F" },
     { path: "/bootcamps", label: "Startup Makeathon", color: "#39FF14" },
     { path: "/community", label: "Community", color: "#B400FF" },
-    { path: "/about", label: "About", color: "#00D1FF" },
     { path: "/blog", label: "Blog", color: "#FFD700" },
     { path: "/collaborate", label: "Collaborate", color: "#FF8C00" },
     { path: "/join-us", label: "Join Us", color: "#FF1493" },
