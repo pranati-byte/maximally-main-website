@@ -95,7 +95,7 @@ const Index = () => {
               </h1>
 
               <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
-                Build a startup from the ground up, network with industry leaders, and gain real-world experience that sets you apart.
+                Join India's #1 teen builder sprint. 7 days. One startup. Real outcomes.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
@@ -111,19 +111,9 @@ const Index = () => {
                   onClick={() => window.location.href = 'https://tally.so/r/wQEGEA'} 
                   className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
                 >
-                  <span>Register Now</span>
+                  <span>Apply for Makeathon</span>
                   <CalendarCheck className="h-4 w-4 animate-bounce" />
                 </button>
-
-                <a 
-                  href="https://hackathon.maximally.in" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="pixel-button bg-maximally-purple text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-purple w-full"
-                >
-                  <span>Check out Hackathon</span>
-                  <Code className="h-4 w-4 group-hover:rotate-12 transition-transform" />
-                </a>
 
                 <Link 
                   to="/community" 
