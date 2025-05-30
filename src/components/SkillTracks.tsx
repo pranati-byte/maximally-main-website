@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const skillData = [
   {
     title: "Entrepreneurship",
+    subtitle: "(Part of the Startup Makeathon tracks)",
     description: "Learn to build and scale your first startup.",
     icon: Rocket,
     color: "bg-maximally-blue",
@@ -12,6 +13,7 @@ const skillData = [
   },
   {
     title: "Public Speaking & MUN",
+    subtitle: "(Part of the Startup Makeathon tracks)",
     description: "Master the art of persuasive communication.",
     icon: Megaphone,
     color: "bg-maximally-red",
@@ -19,6 +21,7 @@ const skillData = [
   },
   {
     title: "Digital Marketing",
+    subtitle: "(Part of the Startup Makeathon tracks)",
     description: "Grow audiences and build online brands.",
     icon: Cpu,
     color: "bg-maximally-black",
@@ -26,6 +29,7 @@ const skillData = [
   },
   {
     title: "No-Code & AI",
+    subtitle: "(Part of the Startup Makeathon tracks)",
     description: "Build apps without coding and leverage AI.",
     icon: Database,
     color: "bg-maximally-blue",
@@ -56,6 +60,11 @@ const SkillCard = ({ skill, index }) => {
         <skill.icon className="text-white h-8 w-8 transform transition-all duration-300 group-hover:scale-110" />
       </div>
       <h3 className="font-press-start text-lg mb-2 text-maximally-black">{skill.title}</h3>
+      {skill.subtitle && (
+            <p className="font-jetbrains text-maximally-black/60 text-xs mb-3 italic">
+              {skill.subtitle}
+            </p>
+          )}
       <p className="font-jetbrains text-maximally-black/70">{skill.description}</p>
       <Link 
         to={skill.path} 
@@ -73,7 +82,7 @@ const SkillTracks = () => {
     <section id="skills" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-12 text-center">
-          &gt;&gt; Choose your power-ups_
+          &gt;&gt; What you'll learn while building_
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -81,6 +90,9 @@ const SkillTracks = () => {
             <SkillCard key={index} skill={skill} index={index} />
           ))}
         </div>
+        <p className="mt-8 text-sm text-gray-500 text-center">
+          These aren’t separate courses. You’ll learn them while building your own startup in the Makeathon.
+        </p>
       </div>
     </section>
   );
