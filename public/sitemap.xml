@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -41,6 +42,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://maximally.in/makeathon</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://maximally.in/digital-marketing</loc>
     <priority>0.8</priority>
   </url>
@@ -60,6 +65,35 @@
     <loc>https://maximally.in/career-launch</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://maximally.in/join-us</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/featured</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/wall-of-progressive-schools</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/thank-you</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/privacy</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/terms</loc>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://maximally.in/support</loc>
+    <priority>0.6</priority>
+  </url>
+  <!-- Blog Posts -->
   <url>
     <loc>https://maximally.in/blog/top-careers-for-teen-innovators</loc>
     <priority>0.7</priority>
@@ -162,62 +196,6 @@
   </url>
   <url>
     <loc>https://maximally.in/blog/first-pitch-tips-for-teens</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/privacy</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/terms</loc>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/support</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/learn-ai-in-7-days-teens</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/online-branding-tips-for-students</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/build-teen-confidence</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/online-courses-2025</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/teen-entrepreneurs-india-future</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/top-careers-for-teen-innovators</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/youtube-vs-startup-for-teens</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/maximally-leangap-2025</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/school-vs-life-2025</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/summer-programs-2025</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/summer-break-2025</loc>
     <priority>0.7</priority>
   </url>
   <url>
