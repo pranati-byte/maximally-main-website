@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X, Terminal } from "lucide-react";
 import { Link } from "react-router-dom";

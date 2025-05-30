@@ -101,7 +101,7 @@ const Index = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
                 <Link 
-                  to="/bootcamps" 
+                  to="/makeathon" 
                   className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-blue w-full"
                 >
                   <span>Start Learning</span>
@@ -234,7 +234,7 @@ const Index = () => {
                 Builders. Dreamers. Designers. Coders. Marketers. If you're a teen who builds, this is your league.
                 <br />This isn't your average Zoom class — this is the launchpad.
               </p>
-              <Link to="/bootcamps" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse text-lg px-8 py-4">
+              <Link to="/makeathon" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse text-lg px-8 py-4">
                 <span>Apply for Makeathon</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>

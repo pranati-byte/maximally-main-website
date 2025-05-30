@@ -344,7 +344,7 @@ const Bootcamps = () => {
             </h3>
             <div className="grid grid-cols-1 gap-4">
               <div className="bg-black/40 p-4 rounded-lg border-2 border-[#FF5F5F] hover:border-[#FF5F5F] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(255,95,95,0.5)]">
-                <p className="font-jetbrains text-[#FF5F5F]">✅ A working MVP or prototype to showcase</p>
+                <p className="font-jetbrains text-[#FF5F5F]">✅ A real-world project to showcase</p>
               </div>
               <div className="bg-black/40 p-4 rounded-lg border-2 border-[#00FFFF] hover:border-[#00FFFF] transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]">
                 <p className="font-jetbrains text-[#00FFFF]">✅ Internship and funding opportunities if you have a viable idea</p>
@@ -423,9 +423,15 @@ const Bootcamps = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq5">
-              <AccordionTrigger className="font-press-start">What happens after the bootcamp?</AccordionTrigger>
+              <AccordionTrigger className="font-press-start">What happens after the Makeathon ends?</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
                 You join a lifelong alumni network with exclusive access to events, internships, and more.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="faq14">
+              <AccordionTrigger className="font-press-start">Is this a hackathon or a bootcamp?</AccordionTrigger>
+              <AccordionContent className="font-jetbrains">
+                Nope — it's both. A startup simulation where you build fast, ship real things, and pitch like founders.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

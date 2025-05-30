@@ -2,11 +2,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Index from "./pages/Index";
+import Makeathon from "./pages/Makeathon";
 import Contact from "./pages/Contact";
 import Support from "./pages/Support";
 import Terms from "./pages/Terms";
@@ -87,18 +88,19 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <Router>
           <ScrollToTop />
           <WhatsAppButton />
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/bootcamps" element={<Navigate to="/makeathon" replace />} />
+            <Route path="/makeathon" element={<Makeathon />} />
             <Route path="/entrepreneurship" element={<Entrepreneurship />} />
             <Route path="/public-speaking" element={<PublicSpeaking />} />
             <Route path="/digital-marketing" element={<DigitalMarketing />} />
             <Route path="/no-code-ai" element={<NoCodeAI />} />
             <Route path="/career-launch" element={<CareerLaunch />} />
-            <Route path="/bootcamps" element={<Bootcamps />} />
             <Route path="/about" element={<About />} />
             {/* Team route removed */}
             <Route path="/careers" element={<Careers />} />
@@ -141,7 +143,7 @@ const App = () => {
             <Route path="/featured" element={<Featured />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+        </Router>
       </TooltipProvider>
     </QueryClientProvider>
   );
