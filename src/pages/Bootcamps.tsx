@@ -168,44 +168,7 @@ const Bootcamps = () => {
         </div>
       </section>
 
-      {/* Application Timeline */}
-      <section className="py-12 px-4">
-        <div className="container mx-auto text-center">
-          <h2 className="font-press-start text-3xl mb-8">📍 Application Timeline</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl mb-4">1️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">🚀 Applications Open</h3>
-              <p className="font-jetbrains">April 20</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl mb-4">2️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">🎥 Submit Your Application</h3>
-              <p className="font-jetbrains">Application + 1-minute intro video</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl mb-4">3️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">🔍 Review Process</h3>
-              <p className="font-jetbrains">Maximally Team will evaluate applications</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl mb-4">4️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">📩 Results Announced</h3>
-              <p className="font-jetbrains">June 25</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl mb-4">5️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">💳 Confirm Your Spot</h3>
-              <p className="font-jetbrains">Pay and secure your place</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl mb-4">6️⃣</div>
-              <h3 className="font-press-start text-lg mb-2">🎉 Makeathon Begins</h3>
-              <p className="font-jetbrains">July 1</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Curriculum Section */}
       <section className="py-12 px-4 bg-gray-50">
