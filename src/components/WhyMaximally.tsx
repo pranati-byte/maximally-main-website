@@ -24,7 +24,7 @@ const EvolutionStep = ({ number, label, isActive }) => {
   return (
     <div className={`flex flex-col items-center ${isActive ? "opacity-100" : "opacity-50"}`}>
       <div className={`w-12 h-12 pixel-border flex items-center justify-center ${
-        isActive ? "bg-maximally-blue" : "bg-gray-300"
+        isActive ? "bg-maximally-red" : "bg-gray-300"
       }`}>
         <span className="font-press-start text-white text-sm">{number}</span>
       </div>
@@ -46,7 +46,7 @@ const WhyMaximally = () => {
   }, []);
   
   return (
-    <section id="why" className="py-24 bg-gradient-to-b from-white to-maximally-blue/10 pixel-grid">
+    <section id="why" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-press-start text-maximally-black mb-16 text-center">
@@ -56,7 +56,7 @@ const WhyMaximally = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-maximally-black pixel-border flex items-center justify-center mb-4 mx-auto">
+                <div className="w-16 h-16 bg-maximally-red pixel-border flex items-center justify-center mb-4 mx-auto">
                   <feature.icon className="text-white h-8 w-8" />
                 </div>
                 <h3 className="font-press-start text-xl mb-2 text-maximally-black">{feature.title}</h3>
