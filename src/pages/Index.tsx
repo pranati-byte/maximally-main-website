@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
 import { Helmet } from 'react-helmet';
 import SEO from '@/components/SEO';
-import TallyFormDialog from "../components/TallyFormDialog"; // Added import
+import TallyFormDialog from "../components/TallyFormDialog";
 
 const Index = () => {
   const structuredData = {
@@ -37,6 +37,7 @@ const Index = () => {
     title: "Grow Faster",
     description: "Accelerate your learning journey."
   }];
+  
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -61,6 +62,7 @@ const Index = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <>
       <SEO title="Maximally.in | Skill-building for Indian Teenagers" description="Join India's premier teen education platform. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps designed for Indian students." keywords="skill-building for Indian teenagers, bootcamps for students in India, learn digital marketing AI no-code, teen education India, social impact edtech startup" canonicalUrl="https://maximally.in" structuredData={structuredData} />
@@ -72,7 +74,7 @@ const Index = () => {
           <div className="absolute inset-0 pixel-grid opacity-30" />
 
           {/* Floating Pixels */}
-          {[...Array(8)].map((_, i) => <div key={i} className="absolute w-4 h-4 bg-maximally-blue/20 pixel-border animate-float" style={{
+          {[...Array(8)].map((_, i) => <div key={i} className="absolute w-4 h-4 bg-maximally-red/20 pixel-border animate-float" style={{
           top: `${Math.random() * 90}%`,
           left: `${Math.random() * 90}%`,
           animationDelay: `${i * 0.5}s`,
@@ -83,7 +85,7 @@ const Index = () => {
             <div className="max-w-4xl mx-auto text-center relative">
               <div className="absolute inset-0 pixel-grid-bg opacity-20"></div>
               <div className="mb-6 inline-block group relative">
-                <div className="minecraft-block bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red p-3 relative overflow-hidden">
+                <div className="minecraft-block bg-gradient-to-r from-maximally-red via-maximally-yellow to-maximally-red-light p-3 relative overflow-hidden">
                   <Target className="h-8 w-8 text-white animate-float" />
                   <div className="absolute inset-0 bg-grid-white opacity-30"></div>
                 </div>
@@ -91,7 +93,7 @@ const Index = () => {
 
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-press-start text-maximally-black mb-6 sm:mb-8 relative minecraft-text">
                 {text}
-                <span className="inline-block w-[3px] h-[1em] bg-maximally-blue ml-1 animate-[cursor-blink_1s_infinite]" />
+                <span className="inline-block w-[3px] h-[1em] bg-maximally-red ml-1 animate-[cursor-blink_1s_infinite]" />
                 <div className="absolute inset-0 minecraft-glow"></div>
               </h1>
 
@@ -102,7 +104,7 @@ const Index = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
                 <Link 
                   to="/makeathon" 
-                  className="pixel-button bg-maximally-blue text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-blue w-full"
+                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
                 >
                   <span>Start Learning</span>
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -110,7 +112,7 @@ const Index = () => {
 
                 <button 
                   onClick={() => window.location.href = 'https://tally.so/r/wQEGEA'} 
-                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
+                  className="pixel-button bg-maximally-yellow text-black group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow w-full"
                 >
                   <span>Apply for Makeathon</span>
                   <CalendarCheck className="h-4 w-4 animate-bounce" />
@@ -118,7 +120,7 @@ const Index = () => {
 
                 <Link 
                   to="/community" 
-                  className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 hover:scale-105 transform transition-all hover:bg-black hover:text-white w-full"
+                  className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 hover:scale-105 transform transition-all hover:bg-maximally-red hover:text-white w-full"
                 >
                   <span>Join Community</span>
                   <Users className="h-4 w-4 group-hover:scale-110 transition-transform" />
@@ -134,7 +136,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 px-4 sm:px-0">
               {features.map((feature, index) => <div key={index} className={`pixel-border p-6 sm:p-8 bg-white transition-all duration-500 ${activeFeature === index ? 'scale-105 shadow-xl' : 'scale-100'}`}>
-                  <div className="w-12 h-12 bg-maximally-blue pixel-border flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 bg-maximally-red pixel-border flex items-center justify-center mb-6">
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="font-press-start text-lg mb-4">{feature.title}</h3>
@@ -144,22 +146,20 @@ const Index = () => {
           </div>
         </section>
 
-
-
-      {/* Industry Leaders Section */}
+        {/* Industry Leaders Section */}
         <section className="py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-maximally-blue/10 via-white to-maximally-purple/10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-maximally-red/10 via-white to-maximally-yellow/10" />
           <div className="absolute inset-0 pixel-grid opacity-30" />
 
           <div className="container mx-auto px-4 relative">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-maximally-blue/20 px-6 py-2 rounded-full mb-6 animate-pulse">
-                <span className="font-jetbrains text-maximally-blue font-bold">
+              <div className="inline-block bg-maximally-red/20 px-6 py-2 rounded-full mb-6 animate-pulse">
+                <span className="font-jetbrains text-maximally-red font-bold">
                   🌟 Learn from the Best
                 </span>
               </div>
 
-              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 bg-gradient-to-r from-maximally-blue via-maximally-purple to-maximally-red bg-clip-text text-transparent px-4">
+              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 bg-gradient-to-r from-maximally-red via-maximally-yellow to-maximally-red-light bg-clip-text text-transparent px-4">
                 Learn From Industry Leaders & Top University Students
               </h2>
 
@@ -175,38 +175,35 @@ const Index = () => {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mt-8 sm:mt-12 px-2 sm:px-0">
                 <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
                     <span className="text-2xl">📱</span>
                   </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Meta</div>
+                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-red transition-colors">Meta</div>
                   <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
                 </div>
                 <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center">
                     <span className="text-2xl">🎓</span>
                   </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Harvard</div>
+                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-red transition-colors">Harvard</div>
                   <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
                 </div>
                 <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
                     <span className="text-2xl">🔍</span>
                   </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">Google</div>
+                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-red transition-colors">Google</div>
                   <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
                 </div>
                 <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
                     <span className="text-2xl">🎯</span>
                   </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-blue transition-colors">IIT Delhi</div>
+                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-red transition-colors">IIT Delhi</div>
                   <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
                 </div>
               </div>
-
-
-
-              </div>
+            </div>
           </div>
         </section>
 
@@ -223,7 +220,7 @@ const Index = () => {
                   🚨 The Summer of a Lifetime Starts Here
                 </span>
               </div>
-              <h2 className="font-press-start text-3xl md:text-4xl text-maximally-blue mb-4">
+              <h2 className="font-press-start text-3xl md:text-4xl text-maximally-red mb-4">
                 Maximally Startup Makeathon 2025
               </h2>
               <p className="font-jetbrains text-white/90 text-xl mb-6 max-w-3xl mx-auto">
@@ -242,12 +239,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Summer Bootcamps Section - Commented out as per changes.md */}
-        {/* We've replaced this with the new Bootcamps page */}
-
-        {/* Why Choose Section */}
         {/* Why Maximally Section */}
-        <section className="py-24 bg-maximally-blue text-white">
+        <section className="py-24 bg-maximally-red text-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-press-start text-center mb-8">
               &gt;&gt; Why Maximally_
@@ -261,7 +254,7 @@ const Index = () => {
         </section>
 
         {/* Collaboration Section */}
-        <section className="py-20 bg-maximally-blue/5">
+        <section className="py-20 bg-maximally-red/5">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-press-start mb-8">Partner With Us</h2>
             <p className="font-jetbrains text-maximally-black/80 max-w-2xl mx-auto mb-8">
@@ -281,7 +274,7 @@ const Index = () => {
                 <p className="font-jetbrains text-maximally-black/80">Create impact through youth collaboration</p>
               </div>
             </div>
-            <Link to="/collaborate" className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2 hover:animate-pulse">
+            <Link to="/collaborate" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse">
               Start Collaborating
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -291,14 +284,14 @@ const Index = () => {
         {/* CTA Section */}
         <section className="py-20 bg-maximally-black text-white">
           <div className="container mx-auto px-4 text-center">
-            <Sparkles className="h-12 w-12 text-maximally-blue mx-auto mb-6" />
+            <Sparkles className="h-12 w-12 text-maximally-yellow mx-auto mb-6" />
             <h2 className="text-3xl font-press-start mb-8 animate-glow">
               Ready to level up?
             </h2>
             <p className="font-jetbrains text-white/80 max-w-2xl mx-auto mb-8">
               Join our community of ambitious teens and start building your future today.
             </p>
-            <Link to="/bootcamps" className="pixel-button bg-maximally-blue inline-flex items-center gap-2 hover:animate-pulse">
+            <Link to="/bootcamps" className="pixel-button bg-maximally-red inline-flex items-center gap-2 hover:animate-pulse">
               <span>Get Started</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -314,7 +307,7 @@ const Index = () => {
         </button>
 
         <Footer />
-        <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} /> {/* Added TallyFormDialog component */}
+        <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
       </div>
     </>
   );

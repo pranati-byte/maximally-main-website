@@ -8,9 +8,10 @@ const pixelButtonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-maximally-red text-white hover:bg-maximally-red/80 hover:shadow-[3px_3px_8px_rgba(217,79,69,0.3)]",
+        default: "bg-maximally-red text-white hover:bg-maximally-yellow hover:text-black hover:shadow-[3px_3px_8px_rgba(255,215,0,0.3)]",
         secondary: "bg-maximally-blue text-white hover:bg-maximally-blue/80 hover:shadow-[3px_3px_8px_rgba(60,158,231,0.3)]",
         outline: "bg-white text-maximally-black hover:bg-gray-50 hover:shadow-[3px_3px_8px_rgba(0,0,0,0.2)]",
+        yellow: "bg-maximally-yellow text-black hover:bg-maximally-red hover:text-white hover:shadow-[3px_3px_8px_rgba(229,9,20,0.3)]",
       },
       size: {
         default: "h-12 px-6 py-3 text-sm shadow-[3px_3px_0_0_#000000] gap-2",

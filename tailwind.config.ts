@@ -55,8 +55,11 @@ export default {
 				},
 				// Custom colors for Maximally
 				maximally: {
+					red: '#E50914',
+					'red-light': '#FF2B2B',
+					yellow: '#FFD700',
+					'yellow-light': '#FFCB47',
 					blue: '#3C9EE7',
-					red: '#D94F45',
 					black: '#1A1A1A',
 					white: '#FFFFFF',
 				},

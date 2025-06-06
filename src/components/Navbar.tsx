@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X, Terminal } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -20,13 +21,13 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { path: "/", label: "Home", color: "#FF5F5F" },
-    { path: "/bootcamps", label: "Startup Makeathon", color: "#39FF14" },
-    { path: "/community", label: "Community", color: "#B400FF" },
-    { path: "/blog", label: "Blog", color: "#FFD700" },
-    { path: "/collaborate", label: "Collaborate", color: "#FF8C00" },
-    { path: "/join-us", label: "Join Us", color: "#FF1493" },
-    { path: "/contact", label: "Contact", color: "#FF6347" }
+    { path: "/", label: "Home", color: "#E50914" },
+    { path: "/bootcamps", label: "Startup Makeathon", color: "#FFD700" },
+    { path: "/community", label: "Community", color: "#FF2B2B" },
+    { path: "/blog", label: "Blog", color: "#FFCB47" },
+    { path: "/collaborate", label: "Collaborate", color: "#E50914" },
+    { path: "/join-us", label: "Join Us", color: "#FFD700" },
+    { path: "/contact", label: "Contact", color: "#FF2B2B" }
   ];
 
   return (
@@ -35,9 +36,9 @@ const Navbar = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center">
-            <Terminal className="h-8 w-8 text-maximally-black mr-2" />
-            <span className="font-press-start text-maximally-black text-lg">Maximally</span>
+          <Link to="/" className="flex items-center group">
+            <Terminal className="h-8 w-8 text-maximally-red mr-2 group-hover:text-maximally-yellow transition-colors" />
+            <span className="font-press-start text-maximally-black text-lg group-hover:text-maximally-red transition-colors">Maximally</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -46,13 +47,10 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-jetbrains ${
-                  window.location.pathname === '/hackathon' 
-                  ? 'text-white' 
-                  : 'text-maximally-black'
-                } hover:text-[${item.color}] transition-colors duration-200`}
+                className="font-jetbrains text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-maximally-yellow transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
@@ -63,9 +61,10 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="font-jetbrains text-sm text-maximally-black hover:text-[${item.color}] transition-colors duration-200"
+                className="font-jetbrains text-sm text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-maximally-yellow transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
@@ -74,12 +73,12 @@ const Navbar = () => {
           <div className="flex items-center gap-3 md:hidden">
             <Link
               to="/join-us"
-              className="bg-maximally-green hover:bg-maximally-green/90 text-white px-4 py-2 rounded-lg font-jetbrains text-sm"
+              className="bg-maximally-red hover:bg-maximally-yellow hover:text-black text-white px-4 py-2 rounded-lg font-jetbrains text-sm transition-all duration-200"
             >
               Join Us
             </Link>
             <button 
-              className="text-maximally-black"
+              className="text-maximally-black hover:text-maximally-red transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -98,11 +97,7 @@ const Navbar = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`font-jetbrains ${
-                    window.location.pathname === '/hackathon' 
-                    ? 'text-white' 
-                    : 'text-maximally-black'
-                  } py-3 px-4 text-center rounded-lg text-sm transition-transform active:scale-95`}
+                  className="font-jetbrains text-white py-3 px-4 text-center rounded-lg text-sm transition-transform active:scale-95 hover:scale-105"
                   style={{ backgroundColor: item.color }}
                 >
                   {item.label}
