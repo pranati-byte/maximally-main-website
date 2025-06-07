@@ -132,7 +132,7 @@ const Index = () => {
         </section>
 
         {/* Features Grid */}
-        <section className="py-20 bg-white relative">
+        <section className="py-16 bg-white relative">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 px-4 sm:px-0">
               {features.map((feature, index) => <div key={index} className={`pixel-border p-6 sm:p-8 bg-white transition-all duration-500 ${activeFeature === index ? 'scale-105 shadow-xl' : 'scale-100'}`}>
@@ -149,17 +149,17 @@ const Index = () => {
         
 
         {/* Underground Events Teaser Section */}
-        <section className="py-12 bg-maximally-black relative overflow-hidden">
+        <section className="py-16 bg-maximally-black relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-white/5" />
           
-          {/* Subtle Glitch Overlays */}
+          {/* Repositioned Glitch Overlays */}
           {[...Array(4)].map((_, i) => (
             <div 
               key={i} 
               className="absolute w-3 h-3 bg-maximally-red/20 pixel-border animate-float" 
               style={{
-                top: `${Math.random() * 80}%`,
-                left: `${Math.random() * 80}%`,
+                top: `${20 + Math.random() * 60}%`,
+                left: `${10 + Math.random() * 80}%`,
                 animationDelay: `${i * 1}s`,
                 animationDuration: `${4 + i}s`
               }} 
@@ -192,10 +192,26 @@ const Index = () => {
           </div>
         </section>
 
-        
+        {/* Pixel Divider */}
+        <div className="relative bg-maximally-black">
+          <div className="absolute inset-0 bg-grid-white/10" />
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-center py-4">
+              <div className="flex space-x-2">
+                {[...Array(5)].map((_, i) => (
+                  <div 
+                    key={i} 
+                    className="w-2 h-2 bg-maximally-red pixel-border animate-pulse" 
+                    style={{ animationDelay: `${i * 0.2}s` }}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Summer 2025 Section */}
-        <section className="py-20 bg-maximally-black relative overflow-hidden">
+        <section className="py-16 bg-maximally-black relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
           <div className="container mx-auto px-4 relative">
             <div className="text-center mb-12">
@@ -224,12 +240,12 @@ const Index = () => {
         </section>
 
         {/* Why Maximally Section */}
-        <section className="py-24 bg-maximally-red text-white">
+        <section className="py-16 bg-maximally-red text-white">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-press-start text-center mb-8">
               &gt;&gt; Why Maximally_
             </h2>
-            <p className="text-center font-jetbrains text-lg mb-16 opacity-90">
+            <p className="text-center font-jetbrains text-lg mb-12 opacity-90">
               The Startup Makeathon is built on this promise:
             </p>
             
@@ -238,7 +254,7 @@ const Index = () => {
         </section>
 
         {/* Collaboration Section */}
-        <section className="py-20 bg-maximally-red/5">
+        <section className="py-16 bg-maximally-red/5">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-press-start mb-8">Partner With Us</h2>
             <p className="font-jetbrains text-maximally-black/80 max-w-2xl mx-auto mb-8">
@@ -266,7 +282,7 @@ const Index = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-maximally-black text-white">
+        <section className="py-16 bg-maximally-black text-white">
           <div className="container mx-auto px-4 text-center">
             <Sparkles className="h-12 w-12 text-maximally-yellow mx-auto mb-6" />
             <h2 className="text-3xl font-press-start mb-8 animate-glow">
