@@ -148,6 +148,35 @@ const Index = () => {
 
         
 
+        {/* Summer 2025 Section */}
+        <section className="py-16 bg-maximally-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
+          <div className="container mx-auto px-4 relative">
+            <div className="text-center mb-12">
+              <div className="inline-block bg-maximally-red/20 px-4 py-2 rounded-full mb-6 animate-pulse">
+                <span className="font-jetbrains text-maximally-red font-bold">
+                  🚨 The Summer of a Lifetime Starts Here
+                </span>
+              </div>
+              <h2 className="font-press-start text-3xl md:text-4xl text-maximally-red mb-4">
+                Maximally Startup Makeathon 2025
+              </h2>
+              <p className="font-jetbrains text-white/90 text-xl mb-6 max-w-3xl mx-auto">
+                India's wildest startup sprint for teens is now live. 7 days. Idea to MVP to pitch.
+                <br />First 500 get in free. Once you're in, you're in for life.
+              </p>
+              <p className="font-jetbrains text-white/80 text-lg mb-8 max-w-2xl mx-auto">
+                Builders. Dreamers. Designers. Coders. Marketers. If you're a teen who builds, this is your league.
+                <br />This isn't your average Zoom class — this is the launchpad.
+              </p>
+              <Link to="/makeathon" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse text-lg px-8 py-4">
+                <span>Apply for Makeathon</span>
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Maximally Studios Section */}
         <section className="py-20 bg-gradient-to-br from-maximally-red/5 via-white to-maximally-yellow/10 relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-white/20" />
@@ -271,35 +300,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-
-        {/* Summer 2025 Section */}
-        <section className="py-16 bg-maximally-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
-          <div className="container mx-auto px-4 relative">
-            <div className="text-center mb-12">
-              <div className="inline-block bg-maximally-red/20 px-4 py-2 rounded-full mb-6 animate-pulse">
-                <span className="font-jetbrains text-maximally-red font-bold">
-                  🚨 The Summer of a Lifetime Starts Here
-                </span>
-              </div>
-              <h2 className="font-press-start text-3xl md:text-4xl text-maximally-red mb-4">
-                Maximally Startup Makeathon 2025
-              </h2>
-              <p className="font-jetbrains text-white/90 text-xl mb-6 max-w-3xl mx-auto">
-                India's wildest startup sprint for teens is now live. 7 days. Idea to MVP to pitch.
-                <br />First 500 get in free. Once you're in, you're in for life.
-              </p>
-              <p className="font-jetbrains text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-                Builders. Dreamers. Designers. Coders. Marketers. If you're a teen who builds, this is your league.
-                <br />This isn't your average Zoom class — this is the launchpad.
-              </p>
-              <Link to="/makeathon" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse text-lg px-8 py-4">
-                <span>Apply for Makeathon</span>
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
 
         {/* Why Maximally Section */}
         <section className="py-16 bg-maximally-red text-white">
