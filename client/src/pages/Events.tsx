@@ -150,19 +150,19 @@ const Events = () => {
     }
   ];
 
-  const EventCard = ({ event, bgColor = "bg-white", textColor = "text-black" }) => (
+  const EventCard = ({ event, bgColor = "bg-white", textColor = "text-black" }: { event: any, bgColor?: string, textColor?: string }) => (
     <motion.div
-      className={`pixel-border p-6 ${bgColor} ${textColor} hover:transform hover:scale-105 transition-all duration-300 group cursor-pointer`}
+      className={`pixel-border p-4 sm:p-6 ${bgColor} ${textColor} hover:transform hover:scale-105 transition-all duration-300 group cursor-pointer`}
       whileHover={{ scale: 1.05 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="text-4xl mb-4">{event.icon}</div>
-      <h3 className="font-press-start text-lg mb-3 group-hover:text-[#E50914] transition-colors">
+      <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{event.icon}</div>
+      <h3 className="font-press-start text-sm sm:text-lg mb-2 sm:mb-3 group-hover:text-[#E50914] transition-colors leading-tight">
         {event.name}
       </h3>
-      <p className="font-jetbrains text-sm opacity-80 leading-relaxed">
+      <p className="font-jetbrains text-xs sm:text-sm opacity-80 leading-relaxed">
         {event.description}
       </p>
     </motion.div>
@@ -193,21 +193,21 @@ const Events = () => {
           ))}
         </div>
 
-        <div className="container mx-auto px-4 pt-24 md:pt-32 pb-16 relative z-10">
+        <div className="container mx-auto px-4 pt-16 sm:pt-20 md:pt-24 lg:pt-32 pb-16 relative z-10">
           {/* Hero Section */}
           <motion.div 
-            className="max-w-5xl mx-auto text-center mb-20"
+            className="max-w-5xl mx-auto text-center mb-12 sm:mb-16 lg:mb-20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-press-start text-4xl sm:text-5xl md:text-7xl mb-8 text-[#E50914] leading-tight">
+            <h1 className="font-press-start text-2xl sm:text-3xl md:text-5xl lg:text-7xl mb-4 sm:mb-6 lg:mb-8 text-[#E50914] leading-tight px-2">
               We don't run events.
             </h1>
-            <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-8 text-black">
+            <h2 className="font-press-start text-lg sm:text-xl md:text-2xl lg:text-4xl mb-4 sm:mb-6 lg:mb-8 text-black leading-tight px-2">
               We throw startup wars, code battles, and creator faceoffs for India's youngest builders.
             </h2>
-            <p className="font-jetbrains text-xl text-black/80 max-w-4xl mx-auto mb-8 leading-relaxed">
+            <p className="font-jetbrains text-base sm:text-lg md:text-xl text-black/80 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
               From virtual hackathons to physical startup makeathons, Maximally is India's fastest-growing ecosystem for teen innovation.
             </p>
           </motion.div>
