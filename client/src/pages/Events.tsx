@@ -150,7 +150,13 @@ const Events = () => {
     }
   ];
 
-  const EventCard = ({ event, bgColor = "bg-white", textColor = "text-black" }: { event: any, bgColor?: string, textColor?: string }) => (
+  interface EventType {
+    name: string;
+    description: string;
+    icon: string;
+  }
+
+  const EventCard = ({ event, bgColor = "bg-white", textColor = "text-black" }: { event: EventType, bgColor?: string, textColor?: string }) => (
     <motion.div
       className={`pixel-border p-4 sm:p-6 ${bgColor} ${textColor} hover:transform hover:scale-105 transition-all duration-300 group cursor-pointer`}
       whileHover={{ scale: 1.05 }}
@@ -214,16 +220,16 @@ const Events = () => {
 
           {/* Flagships Section */}
           <motion.section 
-            className="mb-20"
+            className="mb-12 sm:mb-16 lg:mb-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <div className="text-center mb-12">
-              <h2 className="font-press-start text-4xl mb-4 text-[#E50914]">🧱 FLAGSHIPS</h2>
-              <p className="font-jetbrains text-lg text-black/80">The main events. The big leagues. Where legends are born.</p>
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 text-[#E50914] px-2">🧱 FLAGSHIPS</h2>
+              <p className="font-jetbrains text-sm sm:text-base md:text-lg text-black/80 px-2">The main events. The big leagues. Where legends are born.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {flagshipEvents.map((event, index) => (
                 <EventCard key={index} event={event} />
               ))}
@@ -232,16 +238,16 @@ const Events = () => {
 
           {/* Chaos Formats Section */}
           <motion.section 
-            className="mb-20"
+            className="mb-12 sm:mb-16 lg:mb-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <div className="text-center mb-12">
-              <h2 className="font-press-start text-4xl mb-4 text-[#FFD700]">⚔️ CHAOS FORMATS</h2>
-              <p className="font-jetbrains text-lg text-black/80">Unhinged. Unpredictable. Unforgettable.</p>
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 text-[#FFD700] px-2">⚔️ CHAOS FORMATS</h2>
+              <p className="font-jetbrains text-sm sm:text-base md:text-lg text-black/80 px-2">Unhinged. Unpredictable. Unforgettable.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {chaosFormats.map((event, index) => (
                 <EventCard 
                   key={index} 
@@ -255,16 +261,16 @@ const Events = () => {
 
           {/* Wildcard Sprints Section */}
           <motion.section 
-            className="mb-20"
+            className="mb-12 sm:mb-16 lg:mb-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <div className="text-center mb-12">
-              <h2 className="font-press-start text-4xl mb-4 text-[#E50914]">🎯 WILDCARD SPRINTS</h2>
-              <p className="font-jetbrains text-lg text-black/80">Quick hits. Wild concepts. Maximum chaos in minimum time.</p>
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 text-[#E50914] px-2">🎯 WILDCARD SPRINTS</h2>
+              <p className="font-jetbrains text-sm sm:text-base md:text-lg text-black/80 px-2">Quick hits. Wild concepts. Maximum chaos in minimum time.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {wildcardSprints.map((event, index) => (
                 <EventCard 
                   key={index} 
@@ -277,21 +283,21 @@ const Events = () => {
 
           {/* CTA Section */}
           <motion.section 
-            className="text-center pixel-border p-12 bg-gradient-to-r from-[#E50914]/10 via-black/5 to-[#FFD700]/10"
+            className="text-center pixel-border p-6 sm:p-8 md:p-12 bg-gradient-to-r from-[#E50914]/10 via-black/5 to-[#FFD700]/10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
-            <h2 className="font-press-start text-3xl mb-6 text-[#E50914]">
+            <h2 className="font-press-start text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6 text-[#E50914] leading-tight px-2">
               Want to host an event with us?
             </h2>
-            <p className="font-jetbrains text-xl text-black/80 mb-8 max-w-3xl mx-auto">
+            <p className="font-jetbrains text-base sm:text-lg md:text-xl text-black/80 mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
               Partner with Maximally, or let us run the whole thing for you.
             </p>
-            <a href="mailto:hello@maximally.in" className="pixel-button bg-[#E50914] text-white inline-flex items-center gap-3 hover:scale-105 transform transition-all text-lg px-8 py-4">
-              <Mail className="h-6 w-6" />
+            <a href="mailto:hello@maximally.in" className="pixel-button bg-[#E50914] text-white inline-flex items-center gap-2 sm:gap-3 hover:scale-105 transform transition-all text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 min-h-[48px]">
+              <Mail className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
               <span className="font-press-start">hello@maximally.in</span>
-              <ArrowRight className="h-5 w-5" />
+              <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
             </a>
           </motion.section>
         </div>
