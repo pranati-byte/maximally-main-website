@@ -92,9 +92,12 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/bootcamps" element={<Navigate to="/makeathon" replace />} />
             <Route path="/makeathon" element={<Makeathon />} />
+            {/* Team route removed */}
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
             <Route path="/blog/summer-bootcamps-2025" element={<SummerBootcamps2025 />} />
-        <Route path="/blog/maximally-leangap-2025" element={<MaximallyLeangap2025 />} />
+            <Route path="/blog/maximally-leangap-2025" element={<MaximallyLeangap2025 />} />
           <Route path="/blog/summer-break-2025" element={<SummerBreak2025 />} />
             <Route path="/blog/real-world-skills-2025" element={<RealWorldSkills2025 />} />
           <Route path="/blog/school-vs-life-2025" element={<SchoolVsLife2025 />} />

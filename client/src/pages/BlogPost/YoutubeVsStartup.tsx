@@ -67,7 +67,7 @@ const YoutubeVsStartup = () => {
         </ul>
         <div className="text-center">
           <Button asChild size="lg" className="bg-black hover:bg-black/80">
-            <Link to="/entrepreneurship">Join Entrepreneurship Bootcamp</Link>
+            <Link to="/makeathon">Join Startup Makeathon</Link>
           </Button>
         </div>
       </div>
