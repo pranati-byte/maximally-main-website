@@ -11,9 +11,10 @@ import Makeathon from "./pages/Makeathon";
 import Contact from "./pages/Contact";
 import Support from "./pages/Support";
 import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Studios from './pages/Studios';
 import ThankYou from "./pages/ThankYou";
 import Featured from "./pages/Featured";
-import Privacy from "@/pages/Privacy";
 import Bootcamps from '@/pages/Bootcamps';
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
@@ -125,8 +126,9 @@ const App = () => {
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/support" element={<Support />} />
-            <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/studios" element={<Studios />} />
             <Route path="/community" element={<Community />} />
             <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/join-us" element={<JoinUs />} />
