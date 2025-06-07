@@ -149,52 +149,44 @@ const Index = () => {
         
 
         {/* Underground Events Teaser Section */}
-        <section className="py-20 bg-maximally-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
+        <section className="py-12 bg-maximally-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-white/5" />
           
-          {/* Glitch Overlays */}
-          {[...Array(6)].map((_, i) => (
+          {/* Subtle Glitch Overlays */}
+          {[...Array(4)].map((_, i) => (
             <div 
               key={i} 
-              className="absolute w-8 h-8 bg-maximally-red/30 pixel-border animate-float" 
+              className="absolute w-3 h-3 bg-maximally-red/20 pixel-border animate-float" 
               style={{
-                top: `${Math.random() * 90}%`,
-                left: `${Math.random() * 90}%`,
-                animationDelay: `${i * 0.7}s`,
-                animationDuration: `${3 + i}s`
+                top: `${Math.random() * 80}%`,
+                left: `${Math.random() * 80}%`,
+                animationDelay: `${i * 1}s`,
+                animationDuration: `${4 + i}s`
               }} 
             />
           ))}
 
           <div className="container mx-auto px-4 relative">
-            <div className="text-center mb-12">
-              <div className="inline-block bg-maximally-red/20 px-4 py-2 rounded-full mb-6 animate-pulse">
-                <span className="font-jetbrains text-maximally-red font-bold">
-                  🔥 UNDERGROUND INNOVATION ARENA
-                </span>
-              </div>
-              
-              <h2 className="font-press-start text-4xl md:text-6xl text-white mb-6 leading-tight animate-glow">
-                we don't host events.
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="font-press-start text-2xl md:text-3xl text-white mb-4 leading-tight group">
+                <span className="text-maximally-red group-hover:animate-pulse">maximally events</span>
                 <br />
-                <span className="text-maximally-red">we build battlegrounds.</span>
+                <span className="text-white/90">india's underground innovation league</span>
               </h2>
               
-              <p className="font-jetbrains text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
-                from <span className="text-maximally-yellow font-bold">stealth hackathons</span> to 
-                <span className="text-maximally-yellow font-bold"> ₹99 hustle wars</span>, maximally events is 
-                <span className="text-maximally-red font-bold"> india's gen z olympics</span>.
+              <p className="font-jetbrains text-lg text-white/80 mb-6 leading-relaxed">
+                from <span className="text-maximally-yellow">stealth hackathons</span> to 
+                <span className="text-maximally-yellow"> ₹99 hustle wars</span> —
                 <br />
-                startup meets chaos. debate meets design. founder vs founder.
+                this isn't a school competition. this is startup warfare.
               </p>
               
               <Link 
                 to="/events" 
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-maximally-red via-maximally-yellow to-maximally-red text-white font-press-start text-xl px-12 py-6 pixel-border hover:scale-110 transform transition-all duration-300 hover:shadow-glow-red group relative overflow-hidden"
+                className="inline-flex items-center gap-2 bg-maximally-red text-white font-press-start text-sm px-6 py-3 pixel-border hover:scale-105 transform transition-all duration-300 hover:shadow-glow-red group"
               >
-                <div className="absolute inset-0 bg-grid-white opacity-20"></div>
-                <span className="relative z-10">see all formats</span>
-                <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform relative z-10" />
+                <span>see all formats</span>
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
