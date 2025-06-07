@@ -202,15 +202,13 @@ const Events = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="font-press-start text-4xl sm:text-5xl md:text-7xl mb-8 text-[#E50914] leading-tight">
-              BATTLE ARENA
+              We don't run events.
             </h1>
             <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-8 text-black">
-              Where Ideas Go to War
+              We throw startup wars, code battles, and creator faceoffs for India's youngest builders.
             </h2>
             <p className="font-jetbrains text-xl text-black/80 max-w-4xl mx-auto mb-8 leading-relaxed">
-              High-stakes innovation challenges. Real pressure. Real rewards. Real chaos.
-              <br />
-              Pick your battle. Prove your worth.
+              From virtual hackathons to physical startup makeathons, Maximally is India's fastest-growing ecosystem for teen innovation.
             </p>
           </motion.div>
 
