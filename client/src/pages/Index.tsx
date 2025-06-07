@@ -146,66 +146,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Industry Leaders Section */}
-        <section className="py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-maximally-red/10 via-white to-maximally-yellow/10" />
-          <div className="absolute inset-0 pixel-grid opacity-30" />
-
-          <div className="container mx-auto px-4 relative">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block bg-maximally-red/20 px-6 py-2 rounded-full mb-6 animate-pulse">
-                <span className="font-jetbrains text-maximally-red font-bold">
-                  🌟 Learn from the Best
-                </span>
-              </div>
-
-              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 bg-gradient-to-r from-maximally-red via-maximally-yellow to-maximally-red-light bg-clip-text text-transparent px-4">
-                Learn From Industry Leaders & Top University Students
-              </h2>
-
-              <div className="space-y-4 sm:space-y-6 font-jetbrains text-base sm:text-lg px-4">
-                <p className="mb-6">
-                  Learn from industry leaders at Meta, Google, and Apple, alongside brilliant students from Harvard, and Stanford. Our mentors are shaping the future of technology and innovation.
-                </p>
-
-                <p>
-                  Master cutting-edge skills directly from tech giants and top university talent. Get real-world knowledge and guidance from those at the forefront of their fields.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mt-8 sm:mt-12 px-2 sm:px-0">
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📱</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-red transition-colors">Meta</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🎓</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-red transition-colors">Harvard</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🔍</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-red transition-colors">Google</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Industry Expert</div>
-                </div>
-                <div className="pixel-border p-6 bg-white hover:transform hover:scale-105 transition-all duration-300 group">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🎯</span>
-                  </div>
-                  <div className="font-press-start text-xl mb-2 group-hover:text-maximally-red transition-colors">IIT Delhi</div>
-                  <div className="font-jetbrains text-sm text-maximally-black/70">Student Mentor</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Underground Events Teaser Section */}
         <section className="py-20 bg-maximally-black relative overflow-hidden">
