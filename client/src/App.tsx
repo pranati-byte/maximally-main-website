@@ -54,6 +54,8 @@ import TeenEntrepreneursIndia from "@/pages/BlogPost/TeenEntrepreneursIndia";
 import YoutubeVsStartup from "@/pages/BlogPost/YoutubeVsStartup";
 import TopCareersForTeens from "@/pages/BlogPost/TopCareersForTeens";
 import WallOfProgressiveSchools from "@/pages/WallOfProgressiveSchools";
+import Hackathon from "./pages/Hackathon";
+import Events from "./pages/Events";
 
 const queryClient = new QueryClient();
 
@@ -139,6 +141,8 @@ const App = () => {
             <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/join-us" element={<JoinUs />} />
             <Route path="/featured" element={<Featured />} />
+            <Route path="/hackathon" element={<Hackathon />} />
+            <Route path="/events" element={<Events />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>

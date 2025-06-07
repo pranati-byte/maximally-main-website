@@ -23,6 +23,7 @@ const Navbar = () => {
   const menuItems = [
     { path: "/", label: "Home", color: "#E50914" },
     { path: "/bootcamps", label: "Startup Makeathon", color: "#FFD700" },
+    { path: "/events", label: "Events", color: "#E50914" },
     { path: "/community", label: "Community", color: "#FF2B2B" },
     { path: "/blog", label: "Blog", color: "#FFCB47" },
     { path: "/collaborate", label: "Collaborate", color: "#E50914" },
