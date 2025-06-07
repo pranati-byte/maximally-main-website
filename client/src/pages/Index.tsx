@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Star, Users, Target, Rocket, Sparkles, Crown, Code, Zap, CalendarCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SkillTracks from '@/components/SkillTracks';
+
 import WhyMaximally from '@/components/WhyMaximally';
 import Footer from '@/components/Footer';
 import Testimonials from '@/components/Testimonials';
@@ -192,8 +192,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Skills Section */}
-        <SkillTracks />
+        
 
         {/* Summer 2025 Section */}
         <section className="py-20 bg-maximally-black relative overflow-hidden">

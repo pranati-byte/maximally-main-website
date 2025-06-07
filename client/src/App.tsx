@@ -17,11 +17,6 @@ import Privacy from "@/pages/Privacy";
 import Bootcamps from '@/pages/Bootcamps';
 import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
-import Entrepreneurship from "./pages/Entrepreneurship";
-import PublicSpeaking from "./pages/PublicSpeaking";
-import NoCodeAI from "./pages/NoCodeAI";
-import DigitalMarketing from "./pages/DigitalMarketing";
-import CareerLaunch from "./pages/CareerLaunch";
 import Community from "./pages/Community";
 import Sponsor from "@/pages/Sponsor";
 import Collaborate from "./pages/Collaborate";
@@ -97,14 +92,6 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/bootcamps" element={<Navigate to="/makeathon" replace />} />
             <Route path="/makeathon" element={<Makeathon />} />
-            <Route path="/entrepreneurship" element={<Entrepreneurship />} />
-            <Route path="/public-speaking" element={<PublicSpeaking />} />
-            <Route path="/digital-marketing" element={<DigitalMarketing />} />
-            <Route path="/no-code-ai" element={<NoCodeAI />} />
-            <Route path="/career-launch" element={<CareerLaunch />} />
-            {/* Team route removed */}
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/blog" element={<Blog />} />
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
             <Route path="/blog/summer-bootcamps-2025" element={<SummerBootcamps2025 />} />
         <Route path="/blog/maximally-leangap-2025" element={<MaximallyLeangap2025 />} />
