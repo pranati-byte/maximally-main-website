@@ -405,6 +405,35 @@
     box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
   }
 
+  /* Enhanced 2x2 grid button styles */
+  .pixel-button {
+    @apply relative overflow-hidden;
+    border: 3px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8),
+                inset -1px -1px 0 rgba(0, 0, 0, 0.2),
+                inset 1px 1px 0 rgba(255, 255, 255, 0.2);
+    image-rendering: pixelated;
+    min-height: 64px;
+  }
+
+  .pixel-button::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .pixel-button:hover::before {
+    @apply opacity-100;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+  }
+
   /* Pixel card styling */
   .pixel-card {
     @apply bg-white border-2 border-black p-5 relative transition-all

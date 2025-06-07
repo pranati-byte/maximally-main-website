@@ -101,38 +101,59 @@ const Index = () => {
                 Join India's #1 teen builder sprint. 7 days. One startup. Real outcomes.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                <Link 
-                  to="/makeathon" 
-                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
-                >
-                  <span>Start Learning</span>
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+              {/* Floating pixel elements behind buttons */}
+              <div className="absolute inset-0 pointer-events-none">
+                {[...Array(6)].map((_, i) => (
+                  <div 
+                    key={i} 
+                    className="absolute w-2 h-2 bg-maximally-red/20 pixel-border animate-float" 
+                    style={{
+                      top: `${30 + Math.random() * 40}%`,
+                      left: `${10 + Math.random() * 80}%`,
+                      animationDelay: `${i * 0.8}s`,
+                      animationDuration: `${3 + i * 0.5}s`
+                    }} 
+                  />
+                ))}
+              </div>
 
-                <button 
-                  onClick={() => window.location.href = 'https://tally.so/r/wQEGEA'} 
-                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
-                >
-                  <span>Apply for Makeathon</span>
-                  <CalendarCheck className="h-4 w-4 animate-bounce" />
-                </button>
+              {/* 2x2 Button Grid */}
+              <div className="relative max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {/* Top Row */}
+                  <Link 
+                    to="/makeathon" 
+                    className="pixel-button bg-maximally-red text-white group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red h-16 px-6 font-press-start text-sm"
+                  >
+                    <span>Start Learning</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
 
-                <Link 
-                  to="/events" 
-                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
-                >
-                  <span>Explore Events</span>
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
+                  <button 
+                    onClick={() => window.location.href = 'https://tally.so/r/wQEGEA'} 
+                    className="pixel-button bg-maximally-yellow text-maximally-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-16 px-6 font-press-start text-sm"
+                  >
+                    <span>Apply for Makeathon</span>
+                    <CalendarCheck className="h-4 w-4 animate-bounce" />
+                  </button>
 
-                <Link 
-                  to="/community" 
-                  className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 hover:scale-105 transform transition-all hover:bg-maximally-red hover:text-white w-full sm:col-span-2 lg:col-span-1"
-                >
-                  <span>Join Community</span>
-                  <Users className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                </Link>
+                  {/* Bottom Row */}
+                  <Link 
+                    to="/events" 
+                    className="pixel-button bg-maximally-red text-white group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red h-16 px-6 font-press-start text-sm"
+                  >
+                    <span>Explore Events</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+
+                  <Link 
+                    to="/community" 
+                    className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:bg-maximally-red hover:text-white h-16 px-6 font-press-start text-sm"
+                  >
+                    <span>Join Community</span>
+                    <Users className="h-4 w-4 group-hover:scale-110 transition-transform" />
+                  </Link>
+                </div>
               </div>
               <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
             </div>
