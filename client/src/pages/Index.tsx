@@ -101,7 +101,7 @@ const Index = () => {
                 Join India's #1 teen builder sprint. 7 days. One startup. Real outcomes.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
                 <Link 
                   to="/makeathon" 
                   className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
@@ -112,15 +112,23 @@ const Index = () => {
 
                 <button 
                   onClick={() => window.location.href = 'https://tally.so/r/wQEGEA'} 
-                  className="pixel-button bg-maximally-yellow text-black group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow w-full"
+                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
                 >
                   <span>Apply for Makeathon</span>
                   <CalendarCheck className="h-4 w-4 animate-bounce" />
                 </button>
 
                 <Link 
+                  to="/events" 
+                  className="pixel-button bg-maximally-red text-white group flex items-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red w-full"
+                >
+                  <span>Explore Events</span>
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+
+                <Link 
                   to="/community" 
-                  className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 hover:scale-105 transform transition-all hover:bg-maximally-red hover:text-white w-full"
+                  className="pixel-button bg-white text-maximally-black border-2 border-maximally-black group flex items-center gap-2 hover:scale-105 transform transition-all hover:bg-maximally-red hover:text-white w-full sm:col-span-2 lg:col-span-1"
                 >
                   <span>Join Community</span>
                   <Users className="h-4 w-4 group-hover:scale-110 transition-transform" />
