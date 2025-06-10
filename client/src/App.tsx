@@ -60,6 +60,17 @@ import TransformingEducationWithMaximally from './pages/BlogPost/TransformingEdu
 import CanTeensLaunchStartups from './pages/BlogPost/CanTeensLaunchStartups';
 import DormToStartup2025 from './pages/BlogPost/DormToStartup2025';
 import SchoolInnovationROI from './pages/BlogPost/SchoolInnovationROI';
+import TechMentoringBenefits from './pages/BlogPost/TechMentoringBenefits';
+import NoCodingNoProblem from './pages/BlogPost/NoCodingNoProblem';
+import CareerChangeThroughMakeathons from './pages/BlogPost/CareerChangeThroughMakeathons';
+import PowerOfMentorship from './pages/BlogPost/PowerOfMentorship';
+import MakeathonsFutureEducation from './pages/BlogPost/MakeathonsFutureEducation';
+import GirlsBreakingBarriersSTEM from './pages/BlogPost/GirlsBreakingBarriersSTEM';
+import TopLifeSkillsTeens from './pages/BlogPost/TopLifeSkillsTeens';
+import MaximallyTeachesTools from './pages/BlogPost/MaximallyTeachesTools';
+import ParentsSupport from './pages/BlogPost/ParentsSupport';
+import MakeathonFAQ from './pages/BlogPost/MakeathonFAQ';
+import BuildingTeamworkLeadership from './pages/BlogPost/BuildingTeamworkLeadership';
 
 const queryClient = new QueryClient();
 
@@ -151,6 +162,17 @@ const App = () => {
           <Route path="/blog/can-teens-launch-startups" element={<CanTeensLaunchStartups />} />
           <Route path="/blog/dorm-to-startup-2025" element={<DormToStartup2025 />} />
           <Route path="/blog/school-innovation-roi" element={<SchoolInnovationROI />} />
+          <Route path="/blog/senior-dev-as-mentors" element={<TechMentoringBenefits />} />
+          <Route path="/blog/no-code-future" element={<NoCodingNoProblem />} />
+          <Route path="/blog/makeathon-for-career" element={<CareerChangeThroughMakeathons />} />
+          <Route path="/blog/power-of-mentorship" element={<PowerOfMentorship />} />
+          <Route path="/blog/makeathons-future-education" element={<MakeathonsFutureEducation />} />
+          <Route path="/blog/girls-breaking-barriers-stem" element={<GirlsBreakingBarriersSTEM />} />
+          <Route path="/blog/top-life-skills-teens" element={<TopLifeSkillsTeens />} />
+          <Route path="/blog/maximally-teaches-tools" element={<MaximallyTeachesTools />} />
+          <Route path="/blog/parents-support-makeathon" element={<ParentsSupport />} />
+          <Route path="/blog/makeathon-faq-maximally" element={<MakeathonFAQ />} />
+          <Route path="/blog/teamwork-leadership-maximally" element={<BuildingTeamworkLeadership />} />
 
           {/* Catch all route for 404 */}
           <Route path="*" element={<NotFound />} />
