@@ -53,7 +53,7 @@ import WallOfProgressiveSchools from "@/pages/WallOfProgressiveSchools";
 import Hackathon from "./pages/Hackathon";
 import Events from "./pages/Events";
 import MakeathonForFuture from './pages/BlogPost/MakeathonForFuture';
-import StartupsThroughMaximally from './pages/BlogPost/StartupsThroughMaximally';
+
 import MaximallyMakeathonsForTeachers from './pages/BlogPost/MaximallyMakeathonsForTeachers';
 import LevelUpYourGameWithMaximally from './pages/BlogPost/LevelUpYourGameWithMaximally';
 import TransformingEducationWithMaximally from './pages/BlogPost/TransformingEducationWithMaximally';

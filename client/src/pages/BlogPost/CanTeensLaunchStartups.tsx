@@ -28,7 +28,7 @@ const CanTeensLaunchStartups = () => {
         What they need is the environment to nurture that spark into a startup.
       </p>
 
-      <h2 className="text-2xl font-press-start text-maximally-black mt-8 mb-4">Skills > Age</h2>
+      <h2 className="text-2xl font-press-start text-maximally-black mt-8 mb-4">Skills &gt; Age</h2>
       
       <p>
         Building a startup doesn't require an MBA or a fancy office. It requires:
