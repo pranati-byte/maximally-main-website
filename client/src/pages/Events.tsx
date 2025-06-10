@@ -27,11 +27,7 @@ const Events = () => {
       description: "No boring slides. Real-world problem statements, fast-paced formats, and competitive analysis under fire.",
       icon: "⚔️"
     },
-    {
-      name: "Pitch Arena",
-      description: "Shark Tank meets battle arena. Build hype, face real judges, win real-world outcomes.",
-      icon: "🏟️"
-    }
+    
   ];
 
   const chaosFormats = [
@@ -72,83 +68,7 @@ const Events = () => {
     }
   ];
 
-  const wildcardSprints = [
-    {
-      name: "The Mic Drop",
-      description: "Convince a room to believe in your wildest idea. No slides. Just storytelling fire.",
-      icon: "🎤"
-    },
-    {
-      name: "Ideological Deathmatch",
-      description: "One-on-one debate. AI vs Artists. Hustle vs Peace. Win the room, win the round.",
-      icon: "⚡"
-    },
-    {
-      name: "Clout Court",
-      description: "Defend your startup like you're in court. The audience is your judge. If you lose, you're roasted.",
-      icon: "⚖️"
-    },
-    {
-      name: "Founder Roast",
-      description: "Pitch your startup — then get publicly roasted by your peers. Can you survive the heat?",
-      icon: "🔥"
-    },
-    {
-      name: "Hype War",
-      description: "You're selling a potato. Make it look like an Apple product launch.",
-      icon: "📱"
-    },
-    {
-      name: "Cold Street",
-      description: "Go outside. Sell something. Get a stranger to pay you. Document the win.",
-      icon: "🏪"
-    },
-    {
-      name: "The ₹99 Offer",
-      description: "Turn a skill into a ₹99 service. Package, sell, and prove it worked.",
-      icon: "💸"
-    },
-    {
-      name: "The DM Derby",
-      description: "Slide into 50 DMs with a pitch. First to get 5 replies wins. Screenshots = proof.",
-      icon: "📩"
-    },
-    {
-      name: "Unreal Reels",
-      description: "Create a 30-sec video that explains your idea so well your grandma gets it.",
-      icon: "🎬"
-    },
-    {
-      name: "The Thread Lab",
-      description: "Write a viral tweet/thread that breaks down a concept, startup, or story. Leaderboard = likes/views.",
-      icon: "🧵"
-    },
-    {
-      name: "The Pivot Game",
-      description: "Your startup gets a rule change every 3 hours. Pivot fast or die trying.",
-      icon: "🔄"
-    },
-    {
-      name: "Burn the Deck",
-      description: "No slides. No visuals. Just you, your voice, and one object. Can you pitch it?",
-      icon: "🔥"
-    },
-    {
-      name: "Life Design Jam",
-      description: "Map your dream life in Notion or Figma. Reverse engineer the path. Share it with the world.",
-      icon: "🗺️"
-    },
-    {
-      name: "Persona Switch",
-      description: "Build like Kanye. Pitch like a villain. Design like a monk. You're not you anymore.",
-      icon: "🎭"
-    },
-    {
-      name: "Hustle Royale",
-      description: "48hr leaderboard. As many mini-challenges as possible. Each one earns XP. Screenshots or it didn't happen.",
-      icon: "👑"
-    }
-  ];
+  
 
   interface EventType {
     name: string;
@@ -259,27 +179,7 @@ const Events = () => {
             </div>
           </motion.section>
 
-          {/* Wildcard Sprints Section */}
-          <motion.section 
-            className="mb-12 sm:mb-16 lg:mb-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-          >
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 text-[#E50914] px-2">🎯 WILDCARD SPRINTS</h2>
-              <p className="font-jetbrains text-sm sm:text-base md:text-lg text-black/80 px-2">Quick hits. Wild concepts. Maximum chaos in minimum time.</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {wildcardSprints.map((event, index) => (
-                <EventCard 
-                  key={index} 
-                  event={event} 
-                  bgColor={index % 2 === 0 ? "bg-[#FFD700]/20" : "bg-[#E50914]/10"}
-                />
-              ))}
-            </div>
-          </motion.section>
+          
 
           {/* CTA Section */}
           <motion.section 
