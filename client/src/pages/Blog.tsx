@@ -5,6 +5,94 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "Tech Mentoring Benefits: Why Developers Should Join Makeathons",
+    excerpt: "Discover how senior developers can accelerate their careers by mentoring at makeathons. Learn the leadership skills, networking opportunities, and professional growth that comes from guiding young innovators...",
+    date: "January 11, 2025",
+    readTime: "8 min read",
+    category: "Professional Development",
+    link: "/blog/senior-dev-as-mentors"
+  },
+  {
+    title: "No Coding? No Problem! How Maximally Makeathons Welcome Beginners and Non-Tech Teens",
+    excerpt: "Over 60% of successful participants arrive with zero coding experience. Discover how no-code tools and collaborative learning empower non-technical teens to build functional startups...",
+    date: "January 11, 2025",
+    readTime: "10 min read",
+    category: "No-Code",
+    link: "/blog/no-code-future"
+  },
+  {
+    title: "Career Change Through Makeathons | Weekend Skill Building for Professionals",
+    excerpt: "Discover how working professionals use makeathons to transition careers, learn new skills, and build portfolios while maintaining full-time employment...",
+    date: "January 11, 2025",
+    readTime: "9 min read",
+    category: "Career Transition",
+    link: "/blog/makeathon-for-career"
+  },
+  {
+    title: "The Power of Mentorship: How Maximally Connects Teens with Startup Experts",
+    excerpt: "Learn how expert mentorship accelerates teenage entrepreneurs from idea to successful startup launch. 70% of participants continue building post-event thanks to quality mentorship...",
+    date: "January 11, 2025",
+    readTime: "12 min read",
+    category: "Mentorship",
+    link: "/blog/power-of-mentorship"
+  },
+  {
+    title: "Why Makeathons Like Maximally's Are the Future of Teen Education and Career Readiness",
+    excerpt: "Discover how makeathons revolutionize education by teaching real-world skills that traditional classrooms can't provide. Project-based learning for the AI economy...",
+    date: "January 11, 2025",
+    readTime: "14 min read",
+    category: "Education Future",
+    link: "/blog/makeathons-future-education"
+  },
+  {
+    title: "How Girls Are Breaking Barriers in STEM with Maximally's Inclusive Makeathon Programs",
+    excerpt: "Discover how Maximally empowers girls in STEM through inclusive makeathons that break traditional barriers and build confidence. Real success stories from female teen entrepreneurs...",
+    date: "January 11, 2025",
+    readTime: "12 min read",
+    category: "Girls in STEM",
+    link: "/blog/girls-breaking-barriers-stem"
+  },
+  {
+    title: "Top 5 Life Skills Teens Gain by Participating in Maximally's Startup Makeathon",
+    excerpt: "Discover the top 5 life-changing skills teens develop at makeathons—from leadership and creativity to resilience and real-world problem solving...",
+    date: "January 11, 2025",
+    readTime: "11 min read",
+    category: "Life Skills",
+    link: "/blog/top-life-skills-teens"
+  },
+  {
+    title: "Maximally Makeathon Teaches Teens Figma, ChatGPT, and More",
+    excerpt: "Learn how Maximally's Makeathon equips teens with real-world startup tools like Figma, ChatGPT, Notion, and no-code builders to turn ideas into reality...",
+    date: "January 11, 2025",
+    readTime: "10 min read",
+    category: "Professional Tools",
+    link: "/blog/maximally-teaches-tools"
+  },
+  {
+    title: "How Parents Can Support Their Teens During Maximally's Makeathon Without Taking Over",
+    excerpt: "Discover practical ways parents can support their teens through makeathons—while empowering independence, creativity, and confidence...",
+    date: "January 11, 2025",
+    readTime: "13 min read",
+    category: "Parent Guide",
+    link: "/blog/parents-support-makeathon"
+  },
+  {
+    title: "Maximally Makeathon FAQ: Everything Teens and Parents Need to Know Before Signing Up",
+    excerpt: "Have questions about Maximally's Makeathon? This FAQ covers everything from eligibility and safety to project outcomes and judging criteria...",
+    date: "January 11, 2025",
+    readTime: "8 min read",
+    category: "FAQ",
+    link: "/blog/makeathon-faq-maximally"
+  },
+  {
+    title: "Building Teamwork and Leadership Skills Through Maximally's Startup Makeathon Experience",
+    excerpt: "Discover how Maximally's Makeathon helps teens build vital skills like communication, collaboration, and leadership—while creating real startup projects...",
+    date: "January 11, 2025",
+    readTime: "9 min read",
+    category: "Leadership Development",
+    link: "/blog/teamwork-leadership-maximally"
+  },
+  {
     title: "Why Every Teen Should Join Maximally's Startup Makeathon to Kickstart Their Entrepreneurial Journey",
     excerpt: "Learn skills, build networks, and launch real startups in just 7 days. Discover how teenagers can transform ideas into reality through Maximally's intensive makeathon experience...",
     date: "January 17, 2025",
