@@ -87,36 +87,42 @@
     <priority>0.3</priority>
   </url>
   
-  <!-- New Blog Posts -->
+  <!-- All Blog Posts -->
   <url>
-    <loc>https://maximally.in/blog/senior-dev-as-mentors</loc>
+    <loc>https://maximally.in/blog/ai-for-teenagers-no-code</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-04-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/no-code-future</loc>
+    <loc>https://maximally.in/blog/build-teen-confidence</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-04-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/makeathon-for-career</loc>
+    <loc>https://maximally.in/blog/can-teens-launch-startups</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/power-of-mentorship</loc>
+    <loc>https://maximally.in/blog/digital-marketing-for-high-schoolers</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-04-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/makeathons-future-education</loc>
+    <loc>https://maximally.in/blog/dorm-to-startup-2025</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/gen-z-influencer-guide-teens</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-17</lastmod>
   </url>
   <url>
     <loc>https://maximally.in/blog/girls-breaking-barriers-stem</loc>
@@ -125,51 +131,13 @@
     <lastmod>2025-01-11</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/top-life-skills-teens</loc>
+    <loc>https://maximally.in/blog/internships-2025</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-04-10</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/maximally-teaches-tools</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/parents-support-makeathon</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/makeathon-faq-maximally</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/teamwork-leadership-maximally</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-11</lastmod>
-  </url>
-  
-  <!-- Existing Blog Posts -->
-  <url>
-    <loc>https://maximally.in/blog/makeathon-for-future</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/startups-through-maximally</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/maximally-makeathons-for-teachers</loc>
+    <loc>https://maximally.in/blog/learn-ai-in-7-days-teens</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2025-01-17</lastmod>
@@ -181,22 +149,106 @@
     <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/transforming-education-with-maximally</loc>
+    <loc>https://maximally.in/blog/makeathon-faq-maximally</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/makeathon-for-career</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/makeathon-for-future</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/can-teens-launch-startups</loc>
+    <loc>https://maximally.in/blog/makeathons-future-education</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/maximally-leangap-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/maximally-makeathons-for-teachers</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/dorm-to-startup-2025</loc>
+    <loc>https://maximally.in/blog/maximally-teaches-tools</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/no-code-future</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/no-code-tools-for-teen-creators</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/online-branding-tips-for-students</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2025-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/online-courses-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-10</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/parents-support-makeathon</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/passion-project-to-business</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/power-of-mentorship</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/public-speaking-for-teens-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/real-world-skills-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-10</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/real-world-skills-for-teens</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-17</lastmod>
   </url>
   <url>
     <loc>https://maximally.in/blog/school-innovation-roi</loc>
@@ -205,13 +257,61 @@
     <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/top-careers-for-teen-innovators</loc>
+    <loc>https://maximally.in/blog/school-vs-life-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/senior-dev-as-mentors</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/side-hustle-to-startup-teen-success</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/startups-through-maximally</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/youtube-vs-startup-for-teens</loc>
+    <loc>https://maximally.in/blog/summer-bootcamps-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/summer-break-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-10</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/summer-programs-2025</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-10</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/teamwork-leadership-maximally</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-01-11</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/teen-business</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-17</lastmod>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/teen-entrepreneurship-bootcamp-experience</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2025-01-17</lastmod>
@@ -223,130 +323,34 @@
     <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/online-branding-tips-for-students</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/learn-ai-in-7-days-teens</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/passion-project-to-business</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/teen-entrepreneurship-bootcamp-experience</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/gen-z-influencer-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-01-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/side-hustle-to-startup-teen-success</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/real-world-skills-for-teens</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/public-speaking-for-teens-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/digital-marketing-for-high-schoolers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/no-code-tools-for-teen-creators</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
-  </url>
-  <url>
     <loc>https://maximally.in/blog/teen-startup-journey-student-story</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <lastmod>2025-04-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/ai-for-teenagers-no-code</loc>
+    <loc>https://maximally.in/blog/top-careers-for-teen-innovators</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
+    <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/summer-bootcamps-2025</loc>
+    <loc>https://maximally.in/blog/top-life-skills-teens</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
+    <lastmod>2025-01-11</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/teen-business</loc>
+    <loc>https://maximally.in/blog/transforming-education-with-maximally</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
+    <lastmod>2025-01-17</lastmod>
   </url>
   <url>
-    <loc>https://maximally.in/blog/maximally-leangap-2025</loc>
+    <loc>https://maximally.in/blog/youtube-vs-startup-for-teens</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/school-vs-life-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/summer-programs-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-10</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/summer-break-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-10</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/real-world-skills-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-10</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/online-courses-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-10</lastmod>
-  </url>
-  <url>
-    <loc>https://maximally.in/blog/internships-2025</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2025-01-17</lastmod>
   </url>
   <url>
     <loc>https://maximally.in/blog/instagram-personal-brand-teens-2025</loc>
