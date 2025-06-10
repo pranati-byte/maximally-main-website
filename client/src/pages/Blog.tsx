@@ -5,6 +5,70 @@ import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
+    title: "Why Every Teen Should Join Maximally's Startup Makeathon to Kickstart Their Entrepreneurial Journey",
+    excerpt: "Learn skills, build networks, and launch real startups in just 7 days. Discover how teenagers can transform ideas into reality through Maximally's intensive makeathon experience...",
+    date: "January 17, 2025",
+    readTime: "10 min read",
+    category: "Entrepreneurship",
+    link: "/blog/makeathon-for-future"
+  },
+  {
+    title: "A Parent's Guide: How Maximally Makeathons Empower Teens to Build Real Startups",
+    excerpt: "A comprehensive parent's guide to youth entrepreneurship programs. Understand how makeathons provide structured, safe environments for teens to develop business skills...",
+    date: "January 17, 2025",
+    readTime: "12 min read",
+    category: "Parents Guide",
+    link: "/blog/startups-through-maximally"
+  },
+  {
+    title: "Teachers Guide: Using Makeathons for Classroom Innovation",
+    excerpt: "Discover how educators can integrate Maximally's makeathon methodologies into classroom teaching to boost student engagement and innovation skills...",
+    date: "January 17, 2025",
+    readTime: "15 min read",
+    category: "Education",
+    link: "/blog/maximally-makeathons-for-teachers"
+  },
+  {
+    title: "Level Up Your College Applications: How Makeathons Give You the Edge",
+    excerpt: "Transform your college applications with meaningful makeathon projects. Stand out to admissions officers with real innovation and impact...",
+    date: "January 17, 2025",
+    readTime: "12 min read",
+    category: "College Guide",
+    link: "/blog/level-up-your-game-with-maximally"
+  },
+  {
+    title: "Transforming STEM Education: How to Integrate Makeathons into Your Curriculum",
+    excerpt: "Discover how teachers can use makeathons to enhance STEM learning. Practical strategies for implementing project-based innovation in your classroom...",
+    date: "January 17, 2025",
+    readTime: "18 min read",
+    category: "STEM Education",
+    link: "/blog/transforming-education-with-maximally"
+  },
+  {
+    title: "Can Teenagers Really Launch Startups? Why the Answer Is a Confident Yes",
+    excerpt: "Wondering if teenagers can actually build startups? With the right tools, mindset, and mentorship, the answer is yes—and Maximally's Makeathon proves it...",
+    date: "January 17, 2025",
+    readTime: "8 min read",
+    category: "Entrepreneurship",
+    link: "/blog/can-teens-launch-startups"
+  },
+  {
+    title: "From Dorm Room to Startup: How Makeathons Launch Real Careers",
+    excerpt: "Discover how college students are launching successful startups and careers through Maximally's makeathons. Real stories, practical advice, and networking opportunities...",
+    date: "January 17, 2025",
+    readTime: "15 min read",
+    category: "Career Development",
+    link: "/blog/dorm-to-startup-2025"
+  },
+  {
+    title: "ROI of Innovation: How Makeathons Transform School Culture and Student Outcomes",
+    excerpt: "Discover how school administrators can implement makeathons to improve student outcomes, boost engagement, and create innovation culture...",
+    date: "January 17, 2025",
+    readTime: "20 min read",
+    category: "School Leadership",
+    link: "/blog/school-innovation-roi"
+  },
+  {
     title: "Top Career Paths for Teen Innovators (That Don't Need a Degree Yet)",
     excerpt: "Explore exciting career options that let you innovate, create, and succeed, without waiting for a degree. From entrepreneurship to content creation, discover paths that fit your passion...",
     date: "January 17, 2025",

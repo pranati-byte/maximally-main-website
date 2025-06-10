@@ -52,6 +52,14 @@ import TopCareersForTeens from "@/pages/BlogPost/TopCareersForTeens";
 import WallOfProgressiveSchools from "@/pages/WallOfProgressiveSchools";
 import Hackathon from "./pages/Hackathon";
 import Events from "./pages/Events";
+import MakeathonForFuture from './pages/BlogPost/MakeathonForFuture';
+import StartupsThroughMaximally from './pages/BlogPost/StartupsThroughMaximally';
+import MaximallyMakeathonsForTeachers from './pages/BlogPost/MaximallyMakeathonsForTeachers';
+import LevelUpYourGameWithMaximally from './pages/BlogPost/LevelUpYourGameWithMaximally';
+import TransformingEducationWithMaximally from './pages/BlogPost/TransformingEducationWithMaximally';
+import CanTeensLaunchStartups from './pages/BlogPost/CanTeensLaunchStartups';
+import DormToStartup2025 from './pages/BlogPost/DormToStartup2025';
+import SchoolInnovationROI from './pages/BlogPost/SchoolInnovationROI';
 
 const queryClient = new QueryClient();
 
@@ -135,8 +143,18 @@ const App = () => {
             <Route path="/featured" element={<Featured />} />
             <Route path="/hackathon" element={<Hackathon />} />
             <Route path="/events" element={<Events />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Route path="/blog/makeathon-for-future" element={<MakeathonForFuture />} />
+          <Route path="/blog/startups-through-maximally" element={<StartupsThroughMaximally />} />
+          <Route path="/blog/maximally-makeathons-for-teachers" element={<MaximallyMakeathonsForTeachers />} />
+          <Route path="/blog/level-up-your-game-with-maximally" element={<LevelUpYourGameWithMaximally />} />
+          <Route path="/blog/transforming-education-with-maximally" element={<TransformingEducationWithMaximally />} />
+          <Route path="/blog/can-teens-launch-startups" element={<CanTeensLaunchStartups />} />
+          <Route path="/blog/dorm-to-startup-2025" element={<DormToStartup2025 />} />
+          <Route path="/blog/school-innovation-roi" element={<SchoolInnovationROI />} />
+
+          {/* Catch all route for 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
         </Router>
       </TooltipProvider>
     </QueryClientProvider>
