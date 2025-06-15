@@ -22,47 +22,89 @@ const Featured = () => {
 
   const judges = [
     {
-      name: "Industry Expert 1",
-      role: "Startup Founder & Angel Investor",
-      company: "Leading Investment Firm"
+      name: "Milankumar Rana",
+      role: "Software Engineer Advisor",
+      company: "FedEx"
     },
     {
-      name: "Industry Expert 2",
-      role: "Tech Lead",
-      company: "Global Tech Company"
+      name: "Krishna Ganeriwal",
+      role: "Senior Software Engineer",
+      company: "Meta Platforms Inc"
     },
     {
-      name: "Industry Expert 3",
-      role: "Venture Capitalist",
-      company: "Premier VC Fund"
+      name: "Harpreet Kaur Chawla",
+      role: "Tech Lead; Senior Software Engineer",
+      company: "Amazon"
     },
     {
-      name: "Industry Expert 4",
-      role: "Innovation Consultant",
-      company: "Strategy Consulting Firm"
+      name: "Nancy Al Kalach",
+      role: "Senior Salesforce Developer",
+      company: "Freelance"
+    },
+    {
+      name: "Prashanthi Matam",
+      role: "Senior MLOPS Engineer",
+      company: "Enterprise"
+    },
+    {
+      name: "Nidhi Mahajan",
+      role: "Director",
+      company: "Technology Leader"
+    },
+    {
+      name: "Rama Mallika Kadali",
+      role: "Lead QA Engineer",
+      company: "Quality Engineering"
+    }
+  ];
+
+  const coreAdvisors = [
+    {
+      name: "Thilakavathi Sankaran",
+      role: "Data & Analytics Professional",
+      company: "15+ Years Experience",
+      quote: "Great ideas need more than vision — they need data, direction, and people who believe in both."
+    },
+    {
+      name: "Priyanshu Sharma",
+      role: "Founder & CEO",
+      company: "ByteBrain",
+      quote: "Maximally is doing what the world needs more of — empowering young minds to build boldly, think independently, and lead with purpose."
+    },
+    {
+      name: "Anusha Ravi",
+      role: "Product Leader",
+      company: "Intuit",
+      quote: "Big fan of starting small and growing fast!"
+    },
+    {
+      name: "Hatim Kagalwala",
+      role: "Applied Scientist",
+      company: "Amazon",
+      quote: "Maximally empowers individuals and organizations to think boldly, solve creatively, and build solutions that truly make an impact."
     }
   ];
 
   const mentors = [
     {
-      name: "Mentor 1",
-      expertise: "Product Strategy",
-      company: "Product Consulting"
+      name: "Expert Mentors",
+      expertise: "Startup & Product Strategy",
+      company: "Industry Leaders"
     },
     {
-      name: "Mentor 2",
-      expertise: "Growth Marketing",
-      company: "Marketing Agency"
+      name: "Tech Leaders",
+      expertise: "Software Engineering & AI",
+      company: "FAANG Companies"
     },
     {
-      name: "Mentor 3",
-      expertise: "Financial Planning",
-      company: "Finance Solutions"
+      name: "Innovation Guides",
+      expertise: "Business Development",
+      company: "Enterprise & Startups"
     },
     {
-      name: "Mentor 4",
-      expertise: "Legal & Compliance",
-      company: "Legal Services"
+      name: "Industry Veterans",
+      expertise: "Quality & Operations",
+      company: "Global Organizations"
     }
   ];
 
@@ -108,18 +150,40 @@ const Featured = () => {
             </div>
           </section>
 
+          {/* Core Advisors Section */}
+          <section>
+            <div className="flex items-center gap-3 mb-8">
+              <Star className="h-8 w-8 text-[#FFD700]" />
+              <h2 className="font-press-start text-2xl">Core Advisors</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {coreAdvisors.map((advisor) => (
+                <div key={advisor.name} className="pixel-border p-6 bg-gradient-to-br from-yellow-50 to-orange-50 hover:transform hover:scale-105 transition-all">
+                  <h3 className="font-press-start text-lg mb-2">{advisor.name}</h3>
+                  <p className="font-jetbrains text-maximally-black/70">{advisor.role}</p>
+                  <p className="font-jetbrains text-maximally-black/90 font-bold mb-3">{advisor.company}</p>
+                  {advisor.quote && (
+                    <blockquote className="font-jetbrains text-sm italic text-maximally-black/80 border-l-4 border-yellow-400 pl-3">
+                      "{advisor.quote}"
+                    </blockquote>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* Judges Section */}
           <section>
             <div className="flex items-center gap-3 mb-8">
               <Award className="h-8 w-8 text-[#FF5F5F]" />
               <h2 className="font-press-start text-2xl">Expert Judges</h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {judges.map((judge) => (
                 <div key={judge.name} className="pixel-border p-6 bg-white/50 hover:transform hover:scale-105 transition-all">
-                  <h3 className="font-press-start text-lg mb-2">{judge.name}</h3>
-                  <p className="font-jetbrains text-maximally-black/70">{judge.role}</p>
-                  <p className="font-jetbrains text-maximally-black/90 font-bold">{judge.company}</p>
+                  <h3 className="font-press-start text-base mb-2">{judge.name}</h3>
+                  <p className="font-jetbrains text-maximally-black/70 text-sm">{judge.role}</p>
+                  <p className="font-jetbrains text-maximally-black/90 font-bold text-sm">{judge.company}</p>
                 </div>
               ))}
             </div>
