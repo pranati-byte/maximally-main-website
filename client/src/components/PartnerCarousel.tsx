@@ -18,6 +18,7 @@ const partnerLogos: PartnerLogo[] = [
   { id: '4', name: 'Hack Club' },
   { id: '5', name: 'Content Collective' },
   { id: '6', name: 'Student Startup Network' },
+  { id: '7', name: 'Hack the Gujarat' },
 ];
 
 const PartnerCarousel: React.FC = () => {
