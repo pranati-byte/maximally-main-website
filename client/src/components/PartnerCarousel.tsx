@@ -14,11 +14,9 @@ const partnerLogos: PartnerLogo[] = [
   { id: '1', name: 'NexFellow' },
   { id: '2', name: 'Not Building Alone' },
   { id: '3', name: 'Serentia.org' },
-  { id: '4', name: 'E-Cell IIT Delhi' },
-  { id: '5', name: 'Hack Club' },
-  { id: '6', name: 'Model UN Society' },
-  { id: '7', name: 'Content Collective' },
-  { id: '8', name: 'Student Startup Network' },
+  { id: '4', name: 'Hack Club' },
+  { id: '5', name: 'Content Collective' },
+  { id: '6', name: 'Student Startup Network' },
 ];
 
 // Duplicate logos for infinite scroll effect
