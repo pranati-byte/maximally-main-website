@@ -62,8 +62,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl font-jetbrains text-maximally-black/80 mb-8 sm:mb-12 max-w-2xl mx-auto">
-          💻 Zero to One K<br />
-          Build your first ₹1,000 with code. No startup capital. No experience required. Just APIs, apps, and algorithms.
+          Learn the real-world skills schools forgot to teach.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

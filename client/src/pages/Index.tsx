@@ -98,8 +98,7 @@ const Index = () => {
               </h1>
 
               <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
-                💻 Zero to One K<br />
-                Build your first ₹1,000 with code. No startup capital. No experience required. Just APIs, apps, and algorithms.
+                Join India's #1 teen builder sprint. 7 days. One startup. Real outcomes.
               </p>
 
               {/* Floating pixel elements behind buttons */}

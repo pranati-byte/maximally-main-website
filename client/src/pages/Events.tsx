@@ -39,8 +39,8 @@ const Events = () => {
     },
     {
       name: "Zero to One K",
-      description: "Earn your first ₹1,000 online. No rules. No capital. Just hustle and proof.",
-      icon: "💰"
+      description: "Build your first ₹1,000 with code. No startup capital. No experience required. Just APIs, apps, and algorithms.",
+      icon: "💻"
     },
     {
       name: "Shipwreck",
