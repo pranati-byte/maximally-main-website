@@ -110,9 +110,6 @@ const Featured = () => {
             <h1 className="font-press-start text-4xl md:text-5xl mb-6 gradient-text-rainbow animate-glow">
               Featured Heroes
             </h1>
-            <p className="font-jetbrains text-xl text-maximally-black/80 max-w-2xl mx-auto">
-              Meet the incredible partners and mentors powering India's most ambitious teen program.
-            </p>
           </section>
 
           {/* Partners Section */}
