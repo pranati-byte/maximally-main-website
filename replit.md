@@ -1,0 +1,100 @@
+# Maximally - India's Premier Teen Startup Platform
+
+## Overview
+
+Maximally is a comprehensive platform designed for ambitious teenagers (ages 13-19) to learn real-world skills including entrepreneurship, AI, digital marketing, and public speaking through immersive bootcamps and makeathons. The platform combines educational content delivery with community building and hands-on project experiences.
+
+## System Architecture
+
+### Full-Stack Monolith Architecture
+The application follows a modern full-stack monolith approach with clear separation between client and server components:
+
+- **Frontend**: React 18 with TypeScript, using Vite as the build tool
+- **Backend**: Node.js with Express server
+- **Database**: PostgreSQL with Drizzle ORM
+- **Deployment**: Replit with autoscale configuration
+
+### Technology Stack Rationale
+- **Vite over Create React App**: Chosen for faster development builds and better performance
+- **Drizzle ORM**: Type-safe database interactions with excellent TypeScript integration
+- **Neon Database**: Serverless PostgreSQL for scalability without infrastructure management
+- **ESM Modules**: Modern JavaScript module system for better tree-shaking and performance
+
+## Key Components
+
+### Frontend Architecture
+- **Component Library**: Radix UI with shadcn/ui for accessible, unstyled components
+- **Styling**: Tailwind CSS with custom design system featuring "maximally" brand colors
+- **State Management**: TanStack Query for server state management
+- **Routing**: React Router for client-side navigation
+- **Forms**: React Hook Form with Zod validation
+- **SEO**: React Helmet for dynamic meta tags and structured data
+
+### Backend Architecture
+- **API Design**: RESTful endpoints with `/api` prefix
+- **Storage Layer**: Abstracted storage interface supporting both memory and database implementations
+- **Session Management**: Express sessions with PostgreSQL store
+- **Development Mode**: Vite middleware integration for hot reloading
+- **Production Build**: ESBuild for server bundling with external packages
+
+### Design System
+- **Typography**: Custom pixel fonts (Press Start 2P, VT323, JetBrains Mono)
+- **Color Palette**: Brand colors including maximally-red, maximally-blue, maximally-green
+- **Animations**: Custom CSS animations for floating elements and glowing effects
+- **Responsive Design**: Mobile-first approach with touch-friendly interfaces
+
+## Data Flow
+
+### User Journey
+1. **Discovery**: Landing page with SEO-optimized content and clear value proposition
+2. **Application**: Tally form integration for bootcamp applications
+3. **Community**: WhatsApp and Discord integration for ongoing engagement
+4. **Content**: Blog system with detailed guides and success stories
+
+### Content Management
+- **Static Content**: React components for pages and blog posts
+- **Dynamic Forms**: Tally integration for applications and contact forms
+- **Media Assets**: Optimized images and custom graphics for brand consistency
+
+## External Dependencies
+
+### Third-Party Integrations
+- **Tally Forms**: Application and contact form handling
+- **WhatsApp API**: Community group integration
+- **Discord**: Community server access
+- **Email Services**: Contact and sponsorship inquiries
+- **Social Media**: Instagram, Twitter integration for content promotion
+
+### Development Tools
+- **TypeScript**: Type safety across the full stack
+- **ESLint**: Code quality and consistency
+- **Prettier**: Code formatting
+- **Replit Extensions**: Development environment enhancements
+
+## Deployment Strategy
+
+### Production Environment
+- **Platform**: Replit with autoscale deployment
+- **Build Process**: 
+  - Frontend: Vite build outputs to `dist/public`
+  - Backend: ESBuild bundles server to `dist/index.js`
+- **Environment Variables**: Database URL and other secrets managed through Replit secrets
+- **Port Configuration**: Internal port 5000 mapped to external port 80
+
+### Development Workflow
+- **Hot Reloading**: Vite middleware integration for instant updates
+- **Database Migrations**: Drizzle Kit for schema management
+- **Development Server**: tsx for TypeScript execution without compilation
+
+### Scalability Considerations
+- **Database**: Neon serverless PostgreSQL scales automatically
+- **Static Assets**: Served efficiently through Vite's optimized build process
+- **Session Storage**: PostgreSQL-backed sessions for horizontal scaling
+
+## Changelog
+
+- June 15, 2025. Initial setup
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
