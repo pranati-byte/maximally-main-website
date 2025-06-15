@@ -72,7 +72,7 @@ const Allies = () => {
         description="Join the official Maximally Allies network. Partner with India's boldest student organizations and unlock micro-funding, content collabs, and exclusive perks."
         keywords="student partnerships, college clubs, startup ecosystem, teen entrepreneurs, student funding"
       />
-      
+
       <div className="min-h-screen bg-black text-white">
         {/* Hero Section */}
         <section className="relative px-4 py-20 text-center">
@@ -144,26 +144,6 @@ const Allies = () => {
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Wall of Allies */}
-        <section className="px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Wall of Allies</h2>
-            <p className="text-center text-gray-300 mb-12">150+ clubs and communities are already in. You?</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {allyLogos.map((org, index) => (
-                <Card key={index} className="bg-gray-800 border-gray-700 hover:border-maximally-blue transition-colors">
-                  <CardContent className="p-4 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-maximally-red to-maximally-blue rounded-lg mx-auto mb-3 flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">{org.charAt(0)}</span>
-                    </div>
-                    <p className="text-sm text-gray-300 font-medium">{org}</p>
-                  </CardContent>
-                </Card>
-              ))}
             </div>
           </div>
         </section>
