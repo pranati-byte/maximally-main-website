@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Award, DollarSign, Camera, Ticket, Brain, Megaphone, CheckCircle, ArrowRight } from "lucide-react";
 import SEO from "@/components/SEO";
+import PartnerCarousel from "@/components/PartnerCarousel";
 
 const Allies = () => {
   const benefits = [
@@ -92,6 +93,9 @@ const Allies = () => {
             </Button>
           </div>
         </section>
+
+        {/* Partner Carousel */}
+        <PartnerCarousel />
 
         {/* What You Get Section */}
         <section className="px-4 py-16">
