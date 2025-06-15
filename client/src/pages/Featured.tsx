@@ -138,11 +138,11 @@ const Featured = () => {
             </div>
           </section>
 
-          {/* Core Advisors Section */}
+          {/* Industry Expert Judges and Core Advisors Section */}
           <section>
             <div className="flex items-center gap-3 mb-8">
               <Star className="h-8 w-8 text-[#FFD700]" />
-              <h2 className="font-press-start text-2xl">Core Advisors</h2>
+              <h2 className="font-press-start text-2xl">Industry Expert Judges and Core Advisors</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {coreAdvisors.map((advisor) => (
@@ -173,11 +173,11 @@ const Featured = () => {
             </div>
           </section>
 
-          {/* Industry Judges Section */}
+          {/* Competition Mentors and Judges Section */}
           <section>
             <div className="flex items-center gap-3 mb-8">
               <Award className="h-8 w-8 text-[#FF5F5F]" />
-              <h2 className="font-press-start text-2xl">Industry Judges</h2>
+              <h2 className="font-press-start text-2xl">Competition Mentors and Judges</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {industryJudges.map((judge) => (
