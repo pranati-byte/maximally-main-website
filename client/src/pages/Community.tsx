@@ -2,6 +2,7 @@
 import { ArrowRight, Lock, Star, Users, Zap, MessageCircle, MessagesSquare } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { Card, CardContent } from '@/components/ui/card';
+import Footer from '@/components/Footer';
 
 const Community = () => {
   return (

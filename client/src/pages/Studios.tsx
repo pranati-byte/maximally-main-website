@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import SEO from '@/components/SEO';
+import Footer from '@/components/Footer';
 
 const Studios = () => {
   return (
@@ -233,6 +234,8 @@ const Studios = () => {
             </div>
           </div>
         </section>
+        
+        <Footer />
       </div>
     </>
   );

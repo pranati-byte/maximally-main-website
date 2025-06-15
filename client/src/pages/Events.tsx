@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 
 const Events = () => {
   const flagshipEvents = [
@@ -201,6 +202,8 @@ const Events = () => {
             </a>
           </motion.section>
         </div>
+        
+        <Footer />
       </div>
     </>
   );
