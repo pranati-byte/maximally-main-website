@@ -3,19 +3,19 @@ import { Star, Award, ExternalLink } from "lucide-react";
 import SEO from "@/components/SEO";
 
 const Featured = () => {
-  const sponsors = [
+  const partners = [
     {
-      tier: "Infinite Mode",
+      tier: "Education Partners",
       companies: [
-        { name: "TechCorp India", role: "Title Sponsor" },
-        { name: "FutureStack", role: "Innovation Partner" }
+        { name: "Masters Union", role: "Education Partner" },
+        { name: "NexFellow", role: "Fellowship Partner" }
       ]
     },
     {
-      tier: "Resolution Partner",
+      tier: "Technology Partners",
       companies: [
-        { name: "LearnHub", role: "Education Partner" },
-        { name: "StartupX", role: "Ecosystem Partner" }
+        { name: "XYZ Domains", role: "Domain Partner" },
+        { name: "CertifyMe", role: "Certification Partner" }
       ]
     }
   ];
@@ -115,14 +115,14 @@ const Featured = () => {
             </p>
           </section>
 
-          {/* Sponsors Section */}
+          {/* Partners Section */}
           <section>
             <div className="flex items-center gap-3 mb-8">
               <Star className="h-8 w-8 text-[#FFD700]" />
-              <h2 className="font-press-start text-2xl">Our Sponsors</h2>
+              <h2 className="font-press-start text-2xl">Our Partners</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {sponsors.map((tier) => (
+              {partners.map((tier) => (
                 <div key={tier.tier} className="pixel-border p-6 bg-white/50 hover:transform hover:scale-105 transition-all">
                   <h3 className="font-press-start text-xl mb-4">{tier.tier}</h3>
                   <div className="space-y-4">
