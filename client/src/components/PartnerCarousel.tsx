@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
@@ -76,7 +75,7 @@ const PartnerCarousel: React.FC = () => {
         <div className="relative">
           <div 
             className={cn(
-              "flex gap-6 sm:gap-8 justify-center",
+              "flex justify-center",
               isMobile ? "overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4" : "overflow-hidden"
             )}
             onMouseEnter={() => setIsPaused(true)}
@@ -108,7 +107,7 @@ const PartnerCarousel: React.FC = () => {
                   <span className="font-jetbrains text-white text-sm sm:text-base font-medium whitespace-nowrap">
                     {partner.name}
                   </span>
-                  
+
                   {/* Glitch effect overlay */}
                   <div className={cn(
                     "absolute inset-0 rounded-lg",
