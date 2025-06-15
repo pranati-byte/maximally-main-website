@@ -27,10 +27,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Programs Section */}
           <div className="pixel-card bg-gradient-to-br from-red-600/20 to-red-800/20 border-red-400">
-            <h3 className="font-press-start text-sm mb-6 text-red-400 flex items-center gap-2">
+            <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
               <span>🚀</span> PROGRAMS
             </h3>
-            <ul className="space-y-4 font-jetbrains text-gray-300">
+            <ul className="space-y-4 font-jetbrains text-black">
               <li><Link to="/makeathon" className="hover:text-red-400 transition-colors block retro-underline">Startup Makeathon</Link></li>
               <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Live Events</Link></li>
               <li><Link to="/studios" className="hover:text-red-400 transition-colors block retro-underline">Studios Content</Link></li>
@@ -41,10 +41,10 @@ const Footer = () => {
 
           {/* Partnership & Community */}
           <div className="pixel-card bg-gradient-to-br from-yellow-600/20 to-yellow-800/20 border-yellow-400">
-            <h3 className="font-press-start text-sm mb-6 text-yellow-400 flex items-center gap-2">
+            <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
               <span>🤝</span> COMMUNITY
             </h3>
-            <ul className="space-y-4 font-jetbrains text-gray-300">
+            <ul className="space-y-4 font-jetbrains text-black">
               <li><Link to="/partnership" className="hover:text-yellow-400 transition-colors block retro-underline">Join Partnership</Link></li>
               <li><Link to="/community" className="hover:text-yellow-400 transition-colors block retro-underline">Student Community</Link></li>
               <li><Link to="/allies" className="hover:text-yellow-400 transition-colors block retro-underline">Our Allies</Link></li>
@@ -55,10 +55,10 @@ const Footer = () => {
 
           {/* Company */}
           <div className="pixel-card bg-gradient-to-br from-blue-600/20 to-blue-800/20 border-blue-400">
-            <h3 className="font-press-start text-sm mb-6 text-blue-400 flex items-center gap-2">
+            <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
               <span>🏢</span> COMPANY
             </h3>
-            <ul className="space-y-4 font-jetbrains text-gray-300">
+            <ul className="space-y-4 font-jetbrains text-black">
               <li><Link to="/blog" className="hover:text-blue-400 transition-colors block retro-underline">Blog & Stories</Link></li>
               <li><Link to="/careers" className="hover:text-blue-400 transition-colors block retro-underline">Join Our Team</Link></li>
               <li><Link to="/featured" className="hover:text-blue-400 transition-colors block retro-underline">Featured</Link></li>
@@ -69,10 +69,10 @@ const Footer = () => {
 
           {/* Support & Legal */}
           <div className="pixel-card bg-gradient-to-br from-purple-600/20 to-purple-800/20 border-purple-400">
-            <h3 className="font-press-start text-sm mb-6 text-purple-400 flex items-center gap-2">
+            <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
               <span>⚖️</span> SUPPORT
             </h3>
-            <ul className="space-y-4 font-jetbrains text-gray-300">
+            <ul className="space-y-4 font-jetbrains text-black">
               <li><Link to="/support" className="hover:text-purple-400 transition-colors block retro-underline">Help Center</Link></li>
               <li><Link to="/sponsor" className="hover:text-purple-400 transition-colors block retro-underline">Sponsor Program</Link></li>
               <li><Link to="/privacy" className="hover:text-purple-400 transition-colors block retro-underline">Privacy Policy</Link></li>
@@ -81,12 +81,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Social Media & Newsletter Section */}
+        {/* Social Media Section */}
         <div className="mt-16 text-center">
           <h3 className="font-press-start text-lg mb-6 text-white">
             STAY CONNECTED
           </h3>
-          <div className="flex justify-center space-x-6 mb-8">
+          <div className="flex justify-center space-x-6">
             <a href="https://www.instagram.com/maximally.in/" className="group" target="_blank" rel="noopener noreferrer">
               <div className="pixel-card bg-gradient-to-br from-pink-500 to-purple-600 hover:scale-110 transition-transform p-3">
                 <svg className="h-8 w-8 text-white group-hover:animate-pulse" fill="currentColor" viewBox="0 0 24 24">
@@ -109,33 +109,6 @@ const Footer = () => {
               </div>
             </a>
           </div>
-          
-          {/* Newsletter signup */}
-          <div className="max-w-md mx-auto">
-            <p className="font-jetbrains text-gray-300 mb-4">
-              Get updates on new programs and events
-            </p>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Enter your email..."
-                className="flex-1 px-4 py-2 bg-gray-800 border-2 border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none transition-colors"
-              />
-              <button className="pixel-button bg-yellow-500 text-black hover:bg-yellow-400 px-6 py-2">
-                SUBSCRIBE
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom section */}
-        <div className="mt-12 pt-8 border-t border-gray-700 text-center">
-          <p className="font-jetbrains text-gray-400 text-sm">
-            © 2025 Maximally. Building the future, one teen at a time.
-          </p>
-          <p className="font-jetbrains text-gray-500 text-xs mt-2">
-            Made with ❤️ for the next generation of innovators
-          </p>
         </div>
       </div>
     </footer>
