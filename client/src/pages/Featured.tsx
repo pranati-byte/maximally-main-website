@@ -22,27 +22,47 @@ const Featured = () => {
 
   const judges = [
     {
-      name: "Priya Sharma",
+      name: "Industry Expert 1",
       role: "Startup Founder & Angel Investor",
-      company: "GrowthLabs India"
+      company: "Leading Investment Firm"
     },
     {
-      name: "Raj Mehta",
+      name: "Industry Expert 2",
       role: "Tech Lead",
-      company: "Google India"
+      company: "Global Tech Company"
+    },
+    {
+      name: "Industry Expert 3",
+      role: "Venture Capitalist",
+      company: "Premier VC Fund"
+    },
+    {
+      name: "Industry Expert 4",
+      role: "Innovation Consultant",
+      company: "Strategy Consulting Firm"
     }
   ];
 
   const mentors = [
     {
-      name: "Arun Kumar",
+      name: "Mentor 1",
       expertise: "Product Strategy",
-      company: "ProductFirst"
+      company: "Product Consulting"
     },
     {
-      name: "Sarah Singh",
+      name: "Mentor 2",
       expertise: "Growth Marketing",
-      company: "ScaleUp Ventures"
+      company: "Marketing Agency"
+    },
+    {
+      name: "Mentor 3",
+      expertise: "Financial Planning",
+      company: "Finance Solutions"
+    },
+    {
+      name: "Mentor 4",
+      expertise: "Legal & Compliance",
+      company: "Legal Services"
     }
   ];
 
@@ -94,7 +114,7 @@ const Featured = () => {
               <Award className="h-8 w-8 text-[#FF5F5F]" />
               <h2 className="font-press-start text-2xl">Expert Judges</h2>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {judges.map((judge) => (
                 <div key={judge.name} className="pixel-border p-6 bg-white/50 hover:transform hover:scale-105 transition-all">
                   <h3 className="font-press-start text-lg mb-2">{judge.name}</h3>
@@ -111,7 +131,7 @@ const Featured = () => {
               <Users className="h-8 w-8 text-[#4D89FF]" />
               <h2 className="font-press-start text-2xl">Mentor Network</h2>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {mentors.map((mentor) => (
                 <div key={mentor.name} className="pixel-border p-6 bg-white/50 hover:transform hover:scale-105 transition-all">
                   <h3 className="font-press-start text-lg mb-2">{mentor.name}</h3>
