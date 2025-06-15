@@ -11,9 +11,14 @@ interface PartnerLogo {
 }
 
 const partnerLogos: PartnerLogo[] = [
-  { id: '1', name: 'NexFellow', logoUrl: '/nexfellow-logo.png' },
-  { id: '2', name: 'Not Building Alone', logoUrl: '/not-building-alone-logo.png' },
-  { id: '3', name: 'Serentia.org', logoUrl: '/serentia-logo.png' },
+  { id: '1', name: 'NexFellow' },
+  { id: '2', name: 'Not Building Alone' },
+  { id: '3', name: 'Serentia.org' },
+  { id: '4', name: 'E-Cell IIT Delhi' },
+  { id: '5', name: 'Hack Club' },
+  { id: '6', name: 'Model UN Society' },
+  { id: '7', name: 'Content Collective' },
+  { id: '8', name: 'Student Startup Network' },
 ];
 
 // Duplicate logos for infinite scroll effect
@@ -92,35 +97,31 @@ const PartnerCarousel: React.FC = () => {
                 )}
               >
                 {/* Text-based organization name */}
-                <div className="relative">
+                <div className={cn(
+                  "px-4 py-3 rounded-lg border-2 border-white/20",
+                  "bg-gradient-to-br from-red-900/50 to-black/50",
+                  "backdrop-blur-sm",
+                  "transform transition-all duration-300",
+                  "shadow-[4px_4px_0_0_rgba(0,0,0,0.3)]",
+                  "group-hover:shadow-[6px_6px_0_0_rgba(0,0,0,0.5)]",
+                  "group-hover:-translate-y-1 group-hover:scale-105",
+                  "group-hover:border-maximally-red/50"
+                )}>
+                  <span className="font-jetbrains text-white text-sm sm:text-base font-medium whitespace-nowrap">
+                    {partner.name}
+                  </span>
+                  
+                  {/* Glitch effect overlay */}
                   <div className={cn(
-                    "px-4 py-3 rounded-lg border-2 border-white/20",
-                    "bg-gradient-to-br from-red-900/50 to-black/50",
-                    "backdrop-blur-sm",
-                    "transform transition-all duration-300",
-                    "shadow-[4px_4px_0_0_rgba(0,0,0,0.3)]",
-                    "group-hover:shadow-[6px_6px_0_0_rgba(0,0,0,0.5)]",
-                    "group-hover:-translate-y-1 group-hover:scale-105",
-                    "group-hover:border-maximally-red/50"
-                  )}>
-                    <span className="font-jetbrains text-white text-sm sm:text-base font-medium whitespace-nowrap">
-                      {partner.name}
-                    </span>
-                    
-                    {/* Glitch effect overlay */}
-                    <div className={cn(
-                      "absolute inset-0 rounded-lg",
-                      "bg-gradient-to-r from-cyan-500/10 to-purple-500/10",
-                      "opacity-0 group-hover:opacity-100 transition-opacity duration-300",
-                      "mix-blend-overlay"
-                    )} />
-                  </div>
+                    "absolute inset-0 rounded-lg",
+                    "bg-gradient-to-r from-cyan-500/10 to-purple-500/10",
+                    "opacity-0 group-hover:opacity-100 transition-opacity duration-300",
+                    "mix-blend-overlay"
+                  )} />
                 </div>
               </div>
             ))}
           </div>
-
-          
         </div>
 
         {/* Gradient fade edges for desktop */}
