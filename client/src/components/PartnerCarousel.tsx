@@ -6,25 +6,29 @@ import { cn } from '@/lib/utils';
 interface PartnerLogo {
   id: string;
   name: string;
-  initials: string;
+  initials?: string;
+  logoUrl?: string;
 }
 
 const partnerLogos: PartnerLogo[] = [
-  { id: '1', name: 'E-Cell IIT Delhi', initials: 'ED' },
-  { id: '2', name: 'MUN Society SRCC', initials: 'MS' },
-  { id: '3', name: 'Entrepreneurship Cell BITS', initials: 'EB' },
-  { id: '4', name: 'Content Creators Club DU', initials: 'CC' },
-  { id: '5', name: 'Youth NGO Mumbai', initials: 'YM' },
-  { id: '6', name: 'Startup Society NIT', initials: 'SN' },
-  { id: '7', name: 'Innovation Hub IIIT', initials: 'IH' },
-  { id: '8', name: 'Tech Club VIT', initials: 'TV' },
-  { id: '9', name: 'Business Society NMIMS', initials: 'BN' },
-  { id: '10', name: 'Creative Collective NIFT', initials: 'CN' },
-  { id: '11', name: 'Debate Society LSR', initials: 'DL' },
-  { id: '12', name: 'Coding Club DTU', initials: 'CD' },
-  { id: '13', name: 'Design Think IIT-B', initials: 'DT' },
-  { id: '14', name: 'Maker Space IISC', initials: 'MI' },
-  { id: '15', name: 'AI Club BITS Goa', initials: 'AB' },
+  { id: '1', name: 'NexFellow', logoUrl: '/nexfellow-logo.png' },
+  { id: '2', name: 'Not Building Alone', logoUrl: '/not-building-alone-logo.png' },
+  { id: '3', name: 'Serentia.org', logoUrl: '/serentia-logo.png' },
+  { id: '4', name: 'E-Cell IIT Delhi', initials: 'ED' },
+  { id: '5', name: 'MUN Society SRCC', initials: 'MS' },
+  { id: '6', name: 'Entrepreneurship Cell BITS', initials: 'EB' },
+  { id: '7', name: 'Content Creators Club DU', initials: 'CC' },
+  { id: '8', name: 'Youth NGO Mumbai', initials: 'YM' },
+  { id: '9', name: 'Startup Society NIT', initials: 'SN' },
+  { id: '10', name: 'Innovation Hub IIIT', initials: 'IH' },
+  { id: '11', name: 'Tech Club VIT', initials: 'TV' },
+  { id: '12', name: 'Business Society NMIMS', initials: 'BN' },
+  { id: '13', name: 'Creative Collective NIFT', initials: 'CN' },
+  { id: '14', name: 'Debate Society LSR', initials: 'DL' },
+  { id: '15', name: 'Coding Club DTU', initials: 'CD' },
+  { id: '16', name: 'Design Think IIT-B', initials: 'DT' },
+  { id: '17', name: 'Maker Space IISC', initials: 'MI' },
+  { id: '18', name: 'AI Club BITS Goa', initials: 'AB' },
 ];
 
 // Duplicate logos for infinite scroll effect
@@ -107,18 +111,27 @@ const PartnerCarousel: React.FC = () => {
                   {/* Pixelated logo container */}
                   <div className={cn(
                     "w-full h-full rounded-lg border-2 border-white/20",
-                    "bg-gradient-to-br from-maximally-red via-red-600 to-red-800",
+                    partner.logoUrl ? "bg-white" : "bg-gradient-to-br from-maximally-red via-red-600 to-red-800",
                     "flex items-center justify-center",
                     "transform transition-all duration-300",
                     "shadow-[4px_4px_0_0_rgba(0,0,0,0.3)]",
                     "group-hover:shadow-[6px_6px_0_0_rgba(0,0,0,0.5)]",
                     "group-hover:-translate-y-1 group-hover:scale-105",
-                    "pixel-border"
+                    "pixel-border overflow-hidden"
                   )}>
-                    {/* Initials */}
-                    <span className="font-press-start text-white text-xs sm:text-sm font-bold">
-                      {partner.initials}
-                    </span>
+                    {partner.logoUrl ? (
+                      /* Logo Image */
+                      <img 
+                        src={partner.logoUrl} 
+                        alt={partner.name}
+                        className="w-full h-full object-contain p-2"
+                      />
+                    ) : (
+                      /* Initials */
+                      <span className="font-press-start text-white text-xs sm:text-sm font-bold">
+                        {partner.initials}
+                      </span>
+                    )}
                     
                     {/* Glitch effect overlay */}
                     <div className={cn(
