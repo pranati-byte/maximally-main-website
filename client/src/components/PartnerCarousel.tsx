@@ -14,21 +14,6 @@ const partnerLogos: PartnerLogo[] = [
   { id: '1', name: 'NexFellow', logoUrl: '/nexfellow-logo.png' },
   { id: '2', name: 'Not Building Alone', logoUrl: '/not-building-alone-logo.png' },
   { id: '3', name: 'Serentia.org', logoUrl: '/serentia-logo.png' },
-  { id: '4', name: 'E-Cell IIT Delhi', initials: 'ED' },
-  { id: '5', name: 'MUN Society SRCC', initials: 'MS' },
-  { id: '6', name: 'Entrepreneurship Cell BITS', initials: 'EB' },
-  { id: '7', name: 'Content Creators Club DU', initials: 'CC' },
-  { id: '8', name: 'Youth NGO Mumbai', initials: 'YM' },
-  { id: '9', name: 'Startup Society NIT', initials: 'SN' },
-  { id: '10', name: 'Innovation Hub IIIT', initials: 'IH' },
-  { id: '11', name: 'Tech Club VIT', initials: 'TV' },
-  { id: '12', name: 'Business Society NMIMS', initials: 'BN' },
-  { id: '13', name: 'Creative Collective NIFT', initials: 'CN' },
-  { id: '14', name: 'Debate Society LSR', initials: 'DL' },
-  { id: '15', name: 'Coding Club DTU', initials: 'CD' },
-  { id: '16', name: 'Design Think IIT-B', initials: 'DT' },
-  { id: '17', name: 'Maker Space IISC', initials: 'MI' },
-  { id: '18', name: 'AI Club BITS Goa', initials: 'AB' },
 ];
 
 // Duplicate logos for infinite scroll effect
@@ -88,7 +73,7 @@ const PartnerCarousel: React.FC = () => {
         <div className="relative">
           <div 
             className={cn(
-              "flex gap-6 sm:gap-8",
+              "flex gap-6 sm:gap-8 justify-center",
               isMobile ? "overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4" : "overflow-hidden"
             )}
             onMouseEnter={() => setIsPaused(true)}
@@ -135,17 +120,7 @@ const PartnerCarousel: React.FC = () => {
             ))}
           </div>
 
-          {/* Mobile scroll indicators */}
-          {isMobile && (
-            <div className="flex justify-center mt-6 gap-1">
-              {Array.from({ length: Math.min(partnerLogos.length, 8) }).map((_, index) => (
-                <div
-                  key={index}
-                  className="w-2 h-2 rounded-full bg-white/30"
-                />
-              ))}
-            </div>
-          )}
+          
         </div>
 
         {/* Gradient fade edges for desktop */}
