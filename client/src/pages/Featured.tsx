@@ -1,5 +1,5 @@
 
-import { Star, Award, Users } from "lucide-react";
+import { Star, Award, ExternalLink } from "lucide-react";
 import SEO from "@/components/SEO";
 
 const Featured = () => {
@@ -20,91 +20,76 @@ const Featured = () => {
     }
   ];
 
-  const judges = [
-    {
-      name: "Milankumar Rana",
-      role: "Software Engineer Advisor",
-      company: "FedEx"
-    },
-    {
-      name: "Krishna Ganeriwal",
-      role: "Senior Software Engineer",
-      company: "Meta Platforms Inc"
-    },
-    {
-      name: "Harpreet Kaur Chawla",
-      role: "Tech Lead; Senior Software Engineer",
-      company: "Amazon"
-    },
-    {
-      name: "Nancy Al Kalach",
-      role: "Senior Salesforce Developer",
-      company: "Freelance"
-    },
-    {
-      name: "Prashanthi Matam",
-      role: "Senior MLOPS Engineer",
-      company: "Enterprise"
-    },
-    {
-      name: "Nidhi Mahajan",
-      role: "Director",
-      company: "Technology Leader"
-    },
-    {
-      name: "Rama Mallika Kadali",
-      role: "Lead QA Engineer",
-      company: "Quality Engineering"
-    }
-  ];
-
-  const coreAdvisors = [
+  const industryExpertJudges = [
     {
       name: "Thilakavathi Sankaran",
       role: "Data & Analytics Professional",
       company: "15+ Years Experience",
+      linkedin: "https://linkedin.com/in/thilakavathi-sankaran",
       quote: "Great ideas need more than vision — they need data, direction, and people who believe in both."
     },
     {
       name: "Priyanshu Sharma",
       role: "Founder & CEO",
       company: "ByteBrain",
+      linkedin: "https://linkedin.com/in/priyanshu-sharma",
       quote: "Maximally is doing what the world needs more of — empowering young minds to build boldly, think independently, and lead with purpose."
     },
     {
       name: "Anusha Ravi",
       role: "Product Leader",
       company: "Intuit",
+      linkedin: "https://linkedin.com/in/anusha-ravi",
       quote: "Big fan of starting small and growing fast!"
     },
     {
       name: "Hatim Kagalwala",
       role: "Applied Scientist",
       company: "Amazon",
+      linkedin: "https://linkedin.com/in/hatim-kagalwala",
       quote: "Maximally empowers individuals and organizations to think boldly, solve creatively, and build solutions that truly make an impact."
-    }
-  ];
-
-  const mentors = [
-    {
-      name: "Expert Mentors",
-      expertise: "Startup & Product Strategy",
-      company: "Industry Leaders"
     },
     {
-      name: "Tech Leaders",
-      expertise: "Software Engineering & AI",
-      company: "FAANG Companies"
+      name: "Milankumar Rana",
+      role: "Software Engineer Advisor",
+      company: "FedEx",
+      linkedin: "https://linkedin.com/in/milankumar-rana"
     },
     {
-      name: "Innovation Guides",
-      expertise: "Business Development",
-      company: "Enterprise & Startups"
+      name: "Krishna Ganeriwal",
+      role: "Senior Software Engineer",
+      company: "Meta Platforms Inc",
+      linkedin: "https://linkedin.com/in/krishna-ganeriwal"
     },
     {
-      name: "Industry Veterans",
-      expertise: "Quality & Operations",
-      company: "Global Organizations"
+      name: "Harpreet Kaur Chawla",
+      role: "Tech Lead; Senior Software Engineer",
+      company: "Amazon",
+      linkedin: "https://linkedin.com/in/harpreet-kaur-chawla"
+    },
+    {
+      name: "Nancy Al Kalach",
+      role: "Senior Salesforce Developer",
+      company: "Freelance",
+      linkedin: "https://linkedin.com/in/nancy-al-kalach"
+    },
+    {
+      name: "Prashanthi Matam",
+      role: "Senior MLOPS Engineer",
+      company: "Enterprise",
+      linkedin: "https://linkedin.com/in/prashanthi-matam"
+    },
+    {
+      name: "Nidhi Mahajan",
+      role: "Director",
+      company: "Technology Leader",
+      linkedin: "https://linkedin.com/in/nidhi-mahajan"
+    },
+    {
+      name: "Rama Mallika Kadali",
+      role: "Lead QA Engineer",
+      company: "Quality Engineering",
+      linkedin: "https://linkedin.com/in/rama-mallika-kadali"
     }
   ];
 
@@ -150,57 +135,36 @@ const Featured = () => {
             </div>
           </section>
 
-          {/* Core Advisors Section */}
-          <section>
-            <div className="flex items-center gap-3 mb-8">
-              <Star className="h-8 w-8 text-[#FFD700]" />
-              <h2 className="font-press-start text-2xl">Core Advisors</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {coreAdvisors.map((advisor) => (
-                <div key={advisor.name} className="pixel-border p-6 bg-gradient-to-br from-yellow-50 to-orange-50 hover:transform hover:scale-105 transition-all">
-                  <h3 className="font-press-start text-lg mb-2">{advisor.name}</h3>
-                  <p className="font-jetbrains text-maximally-black/70">{advisor.role}</p>
-                  <p className="font-jetbrains text-maximally-black/90 font-bold mb-3">{advisor.company}</p>
-                  {advisor.quote && (
-                    <blockquote className="font-jetbrains text-sm italic text-maximally-black/80 border-l-4 border-yellow-400 pl-3">
-                      "{advisor.quote}"
-                    </blockquote>
-                  )}
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Judges Section */}
+          {/* Industry Expert Judges Section */}
           <section>
             <div className="flex items-center gap-3 mb-8">
               <Award className="h-8 w-8 text-[#FF5F5F]" />
-              <h2 className="font-press-start text-2xl">Expert Judges</h2>
+              <h2 className="font-press-start text-2xl">Industry Expert Judges</h2>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {judges.map((judge) => (
-                <div key={judge.name} className="pixel-border p-6 bg-white/50 hover:transform hover:scale-105 transition-all">
-                  <h3 className="font-press-start text-base mb-2">{judge.name}</h3>
-                  <p className="font-jetbrains text-maximally-black/70 text-sm">{judge.role}</p>
-                  <p className="font-jetbrains text-maximally-black/90 font-bold text-sm">{judge.company}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Mentors Section */}
-          <section>
-            <div className="flex items-center gap-3 mb-8">
-              <Users className="h-8 w-8 text-[#4D89FF]" />
-              <h2 className="font-press-start text-2xl">Mentor Network</h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {mentors.map((mentor) => (
-                <div key={mentor.name} className="pixel-border p-6 bg-white/50 hover:transform hover:scale-105 transition-all">
-                  <h3 className="font-press-start text-lg mb-2">{mentor.name}</h3>
-                  <p className="font-jetbrains text-maximally-black/70">{mentor.expertise}</p>
-                  <p className="font-jetbrains text-maximally-black/90 font-bold">{mentor.company}</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {industryExpertJudges.map((expert) => (
+                <div key={expert.name} className="pixel-border p-6 bg-gradient-to-br from-blue-50 to-purple-50 hover:transform hover:scale-105 transition-all">
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="font-press-start text-base mb-2">{expert.name}</h3>
+                    {expert.linkedin && (
+                      <a
+                        href={expert.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#0077B5] hover:text-[#005885] transition-colors"
+                        aria-label={`${expert.name}'s LinkedIn profile`}
+                      >
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    )}
+                  </div>
+                  <p className="font-jetbrains text-maximally-black/70 text-sm mb-1">{expert.role}</p>
+                  <p className="font-jetbrains text-maximally-black/90 font-bold text-sm mb-3">{expert.company}</p>
+                  {expert.quote && (
+                    <blockquote className="font-jetbrains text-xs italic text-maximally-black/80 border-l-4 border-purple-400 pl-3">
+                      "{expert.quote}"
+                    </blockquote>
+                  )}
                 </div>
               ))}
             </div>
