@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+
+import React, { useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface PartnerLogo {
   id: string;
@@ -18,31 +20,46 @@ const partnerLogos: PartnerLogo[] = [
   { id: '6', name: 'Student Startup Network' },
 ];
 
-// Duplicate logos for infinite scroll effect
-const extendedLogos = [...partnerLogos, ...partnerLogos, ...partnerLogos];
-
 const PartnerCarousel: React.FC = () => {
   const isMobile = useIsMobile();
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
-  // Auto-scroll for desktop
-  useEffect(() => {
-    if (isMobile || isPaused) return;
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % partnerLogos.length);
+  };
 
-    const interval = setInterval(() => {
-      setScrollPosition(prev => prev + 1);
-    }, 30); // Smooth scrolling speed
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + partnerLogos.length) % partnerLogos.length);
+  };
 
-    return () => clearInterval(interval);
-  }, [isMobile, isPaused]);
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
 
-  // Reset scroll position for infinite loop
-  useEffect(() => {
-    if (scrollPosition >= (partnerLogos.length * 140)) {
-      setScrollPosition(0);
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
     }
-  }, [scrollPosition]);
+    if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
 
   return (
     <section className="py-12 sm:py-16 bg-gradient-to-br from-red-950 to-black relative overflow-hidden">
@@ -72,40 +89,31 @@ const PartnerCarousel: React.FC = () => {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative">
+        <div className="relative max-w-md mx-auto">
+          {/* Main carousel */}
           <div 
-            className={cn(
-              "flex justify-center",
-              isMobile ? "overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4" : "overflow-hidden"
-            )}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            style={!isMobile ? {
-              transform: `translateX(-${scrollPosition}px)`,
-              transition: 'transform 0.1s linear'
-            } : {}}
+            className="flex justify-center items-center min-h-[80px] relative"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
-            {(isMobile ? partnerLogos : extendedLogos).map((partner, index) => (
-              <div
-                key={`${partner.id}-${index}`}
-                className={cn(
-                  "flex-shrink-0 snap-center group cursor-pointer",
-                  "min-w-fit"
-                )}
-              >
-                {/* Text-based organization name */}
+            <div className="w-full flex justify-center">
+              <div className={cn(
+                "group cursor-pointer transition-all duration-300",
+                "transform hover:scale-105"
+              )}>
                 <div className={cn(
-                  "px-4 py-3 rounded-lg border-2 border-white/20",
+                  "px-6 py-4 rounded-lg border-2 border-white/20",
                   "bg-gradient-to-br from-red-900/50 to-black/50",
                   "backdrop-blur-sm",
-                  "transform transition-all duration-300",
                   "shadow-[4px_4px_0_0_rgba(0,0,0,0.3)]",
                   "group-hover:shadow-[6px_6px_0_0_rgba(0,0,0,0.5)]",
-                  "group-hover:-translate-y-1 group-hover:scale-105",
-                  "group-hover:border-maximally-red/50"
+                  "group-hover:-translate-y-1",
+                  "group-hover:border-maximally-red/50",
+                  "relative overflow-hidden"
                 )}>
-                  <span className="font-jetbrains text-white text-sm sm:text-base font-medium whitespace-nowrap">
-                    {partner.name}
+                  <span className="font-jetbrains text-white text-base sm:text-lg font-medium whitespace-nowrap block text-center">
+                    {partnerLogos[currentIndex].name}
                   </span>
 
                   {/* Glitch effect overlay */}
@@ -117,17 +125,53 @@ const PartnerCarousel: React.FC = () => {
                   )} />
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Navigation buttons - desktop only */}
+          {!isMobile && (
+            <>
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 p-2 rounded-full bg-red-900/50 border border-white/20 text-white hover:bg-red-800/50 transition-all"
+                aria-label="Previous partner"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 p-2 rounded-full bg-red-900/50 border border-white/20 text-white hover:bg-red-800/50 transition-all"
+                aria-label="Next partner"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </>
+          )}
+
+          {/* Dots indicator */}
+          <div className="flex justify-center mt-6 gap-2">
+            {partnerLogos.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={cn(
+                  "w-3 h-3 rounded-full transition-all duration-300",
+                  currentIndex === index 
+                    ? "bg-maximally-red scale-110" 
+                    : "bg-white/30 hover:bg-white/50"
+                )}
+                aria-label={`Go to partner ${index + 1}`}
+              />
             ))}
           </div>
-        </div>
 
-        {/* Gradient fade edges for desktop */}
-        {!isMobile && (
-          <>
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-red-950 to-transparent z-20 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-red-950 to-transparent z-20 pointer-events-none" />
-          </>
-        )}
+          {/* Swipe instruction for mobile */}
+          {isMobile && (
+            <p className="text-center text-gray-400 text-sm mt-4 font-jetbrains">
+              Swipe left or right to navigate
+            </p>
+          )}
+        </div>
       </div>
     </section>
   );
