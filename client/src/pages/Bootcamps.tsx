@@ -169,7 +169,7 @@ const Bootcamps = () => {
         </div>
       </section>
 
-      
+
 
       {/* Curriculum Section */}
       <section className="py-12 px-4 bg-gray-50">
@@ -428,7 +428,7 @@ const Bootcamps = () => {
           </Link>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
