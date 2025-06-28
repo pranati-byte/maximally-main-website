@@ -86,19 +86,26 @@ const Community = () => {
                 </span>
               </div>
               <h2 className="font-press-start text-2xl mb-4">Inner Circle_</h2>
-              <p className="font-jetbrains mb-6">An exclusive community of India's most ambitious teen builders and entrepreneurs.</p>
+              <p className="font-jetbrains mb-6">An invite-only merit network for top global builders.</p>
               <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-2">
-                  <Star className="h-5 w-5 text-maximally-blue" />
-                  <span>Curated network of proven builders</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Zap className="h-5 w-5 text-maximally-red" />
-                  <span>Direct access to opportunities</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Users className="h-5 w-5 text-maximally-purple" />
-                  <span>Exclusive events & meetups</span>
+                <p className="font-jetbrains font-semibold mb-2">Access to:</p>
+                <div className="space-y-2 ml-4">
+                  <div className="flex items-start gap-2">
+                    <span className="text-maximally-blue">-</span>
+                    <span>Private micro-guilds (AI, Product, Design)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-maximally-red">-</span>
+                    <span>Mentorship from global operators</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-maximally-purple">-</span>
+                    <span>Collab network, IRL + online drops</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-maximally-blue">-</span>
+                    <span>Hidden opportunities: internships, podcast invites, and team collabs</span>
+                  </div>
                 </div>
               </div>
               <button
@@ -119,11 +126,11 @@ const Community = () => {
                 </span>
               </div>
               <h2 className="font-press-start text-2xl mb-4">Outer Circle_</h2>
-              <p className="font-jetbrains mb-6">Join India's largest teen entrepreneurship community. A place to learn, share, and grow together.</p>
+              <p className="font-jetbrains mb-6">A place to learn, share, and grow together.</p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-2">
                   <Users className="h-5 w-5 text-maximally-red" />
-                  <span>1000+ active teen entrepreneurs</span>
+                  <span>1000+ active entrepreneurs</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Star className="h-5 w-5 text-maximally-blue" />
@@ -166,7 +173,7 @@ const Community = () => {
             <Card className="border-2 border-maximally-purple/30 bg-black/50">
               <CardContent className="p-6">
                 <h3 className="font-press-start text-lg mb-2 text-white">🌐 Network Growth</h3>
-                <p className="font-jetbrains text-white">Connect with India's most ambitious teens and industry experts.</p>
+                <p className="font-jetbrains text-white">Connect with the world's most ambitious people and industry experts.</p>
               </CardContent>
             </Card>
           </div>

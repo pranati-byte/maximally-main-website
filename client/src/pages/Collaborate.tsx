@@ -123,7 +123,7 @@ const Collaborate = () => {
     <>
       <SEO
         title="Sponsor Maximally Bootcamp 2025 | Partner with India's Most Ambitious Teen Program"
-        description="Back India's boldest teenage founders, creators, and leaders. Join as a Platinum, Gold, Silver, or Micro sponsor. 1,000+ students, 100+ schools, massive brand visibility."
+        description="Back the world's boldest founders, creators, and leaders. Join as a Platinum, Gold, Silver, or Micro sponsor. 1,000+ students, 100+ schools, massive brand visibility."
       />
 
       <div className="min-h-screen pt-24">
@@ -135,7 +135,7 @@ const Collaborate = () => {
                 🌟 Sponsor the Maximally Bootcamp 2025
               </h1>
               <p className="font-jetbrains text-xl text-[#00FFFF] font-bold">
-                Back India's boldest teenage founders, creators, and leaders.
+                Back the world's boldest founders, creators, and leaders.
               </p>
               <p className="font-jetbrains text-lg text-[#90EE90] mt-4 tracking-wide">
                 1,000+ students | 100+ schools | Real-world projects | Massive brand visibility
