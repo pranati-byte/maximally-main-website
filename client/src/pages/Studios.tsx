@@ -30,7 +30,7 @@ const Studios = () => {
             </p>
             <Button 
               className="font-press-start bg-maximally-red hover:bg-maximally-red/80 text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 text-sm sm:text-base md:text-lg min-h-[48px] w-full sm:w-auto max-w-sm sm:max-w-none"
-              onClick={() => window.location.href = 'mailto:studios@maximally.in'}
+              onClick={() => window.open('https://tally.so/r/wAOaKe?fbclid=PAZXh0bgNhZW0CMTEAAadrDCYCa-uEe-NNfPWnlwRZFxBO67bRbOCv34ugo7bbuhZI_vNTgyZFAGkodQ_aem_SnIleM7qc-Xq9yAhIicsqw', '_blank')}
             >
               📩 get featured / collab with us
             </Button>
