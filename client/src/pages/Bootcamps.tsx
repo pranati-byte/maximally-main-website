@@ -25,6 +25,24 @@ const Bootcamps = () => {
             >
               Apply Now →
             </button>
+            
+            {/* YouTube Video Embed */}
+            <div className="mt-8 max-w-2xl mx-auto">
+              <div className="pixel-border bg-white p-4">
+                <div className="aspect-video">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/wMgcao2H75g"
+                    title="Startup Makeathon Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="font-jetbrains text-xl sm:text-2xl md:text-3xl mb-4 leading-relaxed">

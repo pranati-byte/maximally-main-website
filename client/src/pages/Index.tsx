@@ -137,24 +137,6 @@ const Index = () => {
                     <CalendarCheck className="h-4 w-4 animate-bounce" />
                   </button>
 
-                  {/* YouTube Video Embed */}
-                  <div className="mt-8 max-w-2xl mx-auto">
-                    <div className="pixel-border bg-white p-4">
-                      <div className="aspect-video">
-                        <iframe
-                          width="100%"
-                          height="100%"
-                          src="https://www.youtube.com/embed/wMgcao2H75g"
-                          title="Startup Makeathon Video"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                          className="rounded-lg"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </div>
-
                   {/* Bottom Row */}
                   <Link 
                     to="/events" 
