@@ -31,7 +31,7 @@ const Index = () => {
   }, {
     icon: Users,
     title: "Join the Community",
-    description: "Connect with ambitious teens."
+    description: "Connect with ambitious builders."
   }, {
     icon: Zap,
     title: "Grow Faster",
@@ -98,7 +98,7 @@ const Index = () => {
               </h1>
 
               <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
-                Join India's #1 teen builder sprint. 7 days. One startup. Real outcomes.
+                A global league for innovation, proof-of-work, and public launches. Join the world's boldest builders.
               </p>
 
               {/* Floating pixel elements behind buttons */}
@@ -191,11 +191,11 @@ const Index = () => {
                 Maximally Startup Makeathon 2025
               </h2>
               <p className="font-jetbrains text-white/90 text-xl mb-6 max-w-3xl mx-auto">
-                India's wildest startup sprint for teens is now live. 7 days. Idea to MVP to pitch.
+                The world's boldest startup sprint is now open. 7 days. Idea to MVP to pitch.
                 <br />First 500 get in free. Once you're in, you're in for life.
               </p>
               <p className="font-jetbrains text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-                Builders. Dreamers. Designers. Coders. Marketers. If you're a teen who builds, this is your league.
+                Builders. Dreamers. Designers. Coders. Marketers. If you're someone who builds, this is your league.
                 <br />This isn't your average Zoom class — this is the launchpad.
               </p>
               <Link to="/makeathon" className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:animate-pulse text-lg px-8 py-4">
@@ -239,13 +239,13 @@ const Index = () => {
                 <span className="inline-block animate-pulse">maximally studios</span>
                 <br />
                 <span className="text-maximally-black/90 text-xl md:text-2xl mt-2 block">
-                  where gen z builders go viral
+                  where bold builders go viral
                 </span>
                 <div className="absolute inset-0 bg-maximally-red/5 blur-xl -z-10 animate-pulse" />
               </h2>
               
               <p className="font-jetbrains text-lg md:text-xl text-maximally-black/80 mb-8 leading-relaxed max-w-3xl mx-auto">
-                founder reels, mini-docs, podcasts, storytelling sprints — we help young builders create content that slaps.
+                founder reels, mini-docs, podcasts, storytelling sprints — we help creators and startups craft content that connects.
                 <br />
                 <span className="text-maximally-red font-semibold">get featured or collab with our media squad</span> and showcase your startup to the world.
               </p>
@@ -291,14 +291,14 @@ const Index = () => {
               <h2 className="font-press-start text-2xl md:text-3xl text-white mb-4 leading-tight group">
                 <span className="text-maximally-red group-hover:animate-pulse">maximally events</span>
                 <br />
-                <span className="text-white/90">india's underground innovation league</span>
+                <span className="text-white/90">The underground league for rogue innovators</span>
               </h2>
               
               <p className="font-jetbrains text-lg text-white/80 mb-6 leading-relaxed">
                 from <span className="text-maximally-yellow">stealth hackathons</span> to 
-                <span className="text-maximally-yellow"> ₹99 hustle wars</span> —
+                <span className="text-maximally-yellow"> $1 hustle wars</span> —
                 <br />
-                this isn't a school competition. this is startup warfare.
+                this isn't a silly contest. this is startup warfare.
               </p>
               
               <Link 
@@ -380,7 +380,7 @@ const Index = () => {
               Ready to level up?
             </h2>
             <p className="font-jetbrains text-white/80 max-w-2xl mx-auto mb-8">
-              Join our community of ambitious teens and start building your future today.
+              Join our community of ambitious builders and start building your future today.
             </p>
             <Link to="/bootcamps" className="pixel-button bg-maximally-red inline-flex items-center gap-2 hover:animate-pulse">
               <span>Get Started</span>
