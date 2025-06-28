@@ -17,7 +17,7 @@ const Footer = () => {
             MAXIMALLY
           </h2>
           <p className="font-jetbrains text-gray-300 max-w-2xl mx-auto text-lg">
-            Empowering teens with real-world skills for tomorrow's challenges through innovative programs and partnerships.
+            Empowering builders with real-world skills to solve tomorrow's challenges through bold programs and global partnerships.
           </p>
         </div>
 

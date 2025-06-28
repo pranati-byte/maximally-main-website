@@ -132,7 +132,7 @@ const Events = () => {
               We don't run events.
             </h1>
             <h2 className="font-press-start text-lg sm:text-xl md:text-2xl lg:text-4xl mb-4 sm:mb-6 lg:mb-8 text-black leading-tight px-2">
-              We throw startup wars, code battles, and creator faceoffs for India's youngest builders.
+              We throw startup wars, code battles, and creator faceoffs for anyone building wild things.
             </h2>
             <p className="font-jetbrains text-base sm:text-lg md:text-xl text-black/80 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
               From virtual hackathons to physical startup makeathons, Maximally is India's fastest-growing ecosystem for teen innovation.

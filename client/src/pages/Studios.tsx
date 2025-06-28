@@ -22,10 +22,10 @@ const Studios = () => {
               maximally studios
             </h1>
             <p className="font-press-start text-sm sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 text-[#FFD700] leading-relaxed">
-              india's media engine for gen z founders & creators
+              the global media engine for internet-native builders & creators
             </p>
             <p className="font-jetbrains text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed px-2">
-              we turn teen projects into public movements.<br className="hidden sm:block" />
+              we turn breakout ideas into public movements.<br className="hidden sm:block" />
               <span className="block sm:inline"> podcasts, reels, founder docs, creative chaos — welcome to the hype machine.</span>
             </p>
             <Button 
@@ -98,14 +98,14 @@ const Studios = () => {
             </h2>
             
             <p className="font-press-start text-sm sm:text-lg md:text-xl mb-6 sm:mb-8 text-center leading-relaxed px-2">
-              📌 if you're a young founder, creator, or just someone doing cool sh*t — we want you here.
+              📌 if you're a new founder, creator, or just someone doing cool sh*t — we want you here.
             </p>
             
             <div className="max-w-3xl mx-auto">
               <ul className="space-y-3 sm:space-y-4 font-jetbrains text-sm sm:text-base md:text-lg">
                 <li className="flex items-start">
                   <span className="text-maximally-red mr-3 mt-1 flex-shrink-0">•</span>
-                  <span className="leading-relaxed">building a product in your hostel dorm</span>
+                  <span className="leading-relaxed">grinding out late-night builds from a makeshift workspace</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-maximally-red mr-3 mt-1 flex-shrink-0">•</span>
@@ -131,7 +131,7 @@ const Studios = () => {
                 it's all free — unless you want pro-level creative help.
               </p>
               <p className="font-jetbrains text-gray-400 text-sm sm:text-base leading-relaxed">
-                we offer content services too (at super affordable Gen Z prices).
+                we offer content services too (at builder-friendly prices).
               </p>
             </div>
           </div>
@@ -199,7 +199,7 @@ const Studios = () => {
             </h2>
             
             <p className="font-press-start text-sm sm:text-lg md:text-xl mb-4 sm:mb-6 leading-relaxed px-2">
-              we want maximally studios to become the home of gen z founders and creative rebels.
+              we want maximally studios to become the home of founders and creative rebels.
             </p>
             
             <p className="font-jetbrains text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed px-2">

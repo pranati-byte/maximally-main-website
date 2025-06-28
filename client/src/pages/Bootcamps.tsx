@@ -15,7 +15,7 @@ const Bootcamps = () => {
       <section className="bg-white py-6 sm:py-16 px-3 sm:px-4">
         <div className="container mx-auto text-center">
           <h1 className="font-press-start text-xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 md:mb-8 px-2">
-            India's <span className="bg-[#39FF14]/20">most ambitious</span> teens join us{" "}
+            The world's <span className="bg-[#39FF14]/20">boldest</span> builders are joining{" "}
             <span className="bg-[#FF5F5F]/20">this summer</span>. Will you?
           </h1>
           <div className="mt-8 mb-12">
@@ -151,7 +151,7 @@ const Bootcamps = () => {
           </p>
           <div className="space-y-4">
             <p className="font-jetbrains text-xl">
-              <span className="bg-[#39FF14]/20 px-2">👉 Teens interested in building startups</span>
+              <span className="bg-[#39FF14]/20 px-2">👉 Bold dreamers interested in building startups</span>
             </p>
             <p className="font-jetbrains text-xl">
               <span className="bg-[#FF5F5F]/20 px-2">👉 Those passionate about tech, marketing, and AI</span>
