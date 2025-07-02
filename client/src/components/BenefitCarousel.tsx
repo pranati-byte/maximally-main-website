@@ -16,7 +16,7 @@ const benefits: BenefitCard[] = [
   {
     emoji: '📸',
     title: 'Content Creation Support',
-    subtitle: 'Professional studios content & marketing assets for your events'
+    subtitle: 'Professional content & marketing assets for your events'
   },
   {
     emoji: '💸',

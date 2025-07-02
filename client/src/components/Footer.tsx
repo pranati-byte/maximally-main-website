@@ -33,7 +33,7 @@ const Footer = () => {
             <ul className="space-y-4 font-jetbrains text-black">
               <li><Link to="/makeathon" className="hover:text-red-400 transition-colors block retro-underline">Startup Makeathon</Link></li>
               <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Live Events</Link></li>
-              <li><Link to="/studios" className="hover:text-red-400 transition-colors block retro-underline">Studios Content</Link></li>
+
               <li><Link to="/hackathon" className="hover:text-red-400 transition-colors block retro-underline">Hackathons</Link></li>
               <li><Link to="/bootcamps" className="hover:text-red-400 transition-colors block retro-underline">Skill Bootcamps</Link></li>
             </ul>

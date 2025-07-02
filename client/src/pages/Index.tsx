@@ -206,67 +206,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Maximally Studios Section */}
-        <section className="py-20 bg-gradient-to-br from-maximally-red/5 via-white to-maximally-yellow/10 relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-white/20" />
-          
-          {/* Floating Media Elements */}
-          {[
-            { icon: '🎙️', delay: '0s', duration: '4s' },
-            { icon: '🎬', delay: '1s', duration: '5s' },
-            { icon: '📹', delay: '2s', duration: '6s' },
-            { icon: '🎵', delay: '0.5s', duration: '4.5s' },
-            { icon: '🎞️', delay: '1.5s', duration: '5.5s' },
-            { icon: '📱', delay: '2.5s', duration: '4.2s' }
-          ].map((media, i) => (
-            <div 
-              key={i} 
-              className="absolute text-2xl opacity-30 animate-float select-none pointer-events-none" 
-              style={{
-                top: `${15 + Math.random() * 70}%`,
-                left: `${5 + Math.random() * 90}%`,
-                animationDelay: media.delay,
-                animationDuration: media.duration
-              }}
-            >
-              {media.icon}
-            </div>
-          ))}
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-4xl mx-auto">
-              <h2 className="font-press-start text-3xl md:text-5xl text-maximally-red mb-6 leading-tight relative">
-                <span className="inline-block animate-pulse">maximally studios</span>
-                <br />
-                <span className="text-maximally-black/90 text-xl md:text-2xl mt-2 block">
-                  where bold builders go viral
-                </span>
-                <div className="absolute inset-0 bg-maximally-red/5 blur-xl -z-10 animate-pulse" />
-              </h2>
-              
-              <p className="font-jetbrains text-lg md:text-xl text-maximally-black/80 mb-8 leading-relaxed max-w-3xl mx-auto">
-                founder reels, mini-docs, podcasts, storytelling sprints — we help creators and startups craft content that connects.
-                <br />
-                <span className="text-maximally-red font-semibold">get featured or collab with our media squad</span> and showcase your startup to the world.
-              </p>
-              
-              <div className="relative inline-block">
-                <Link 
-                  to="/studios" 
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-maximally-red to-maximally-red/90 text-white font-press-start text-lg px-8 py-4 pixel-border hover:scale-105 transform transition-all duration-300 group relative overflow-hidden"
-                  style={{
-                    boxShadow: '0 0 20px rgba(229, 9, 20, 0.3), 4px 4px 0 rgba(0, 0, 0, 0.8)',
-                    animation: 'studio-flicker 8s infinite'
-                  }}
-                >
-                  <span className="relative z-10">explore studios</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform relative z-10" />
-                  <div className="absolute inset-0 bg-maximally-yellow/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Underground Events Teaser Section */}
         <section className="py-16 bg-maximally-black relative overflow-hidden">

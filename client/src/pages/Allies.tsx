@@ -19,7 +19,7 @@ const Allies = () => {
     },
     {
       icon: <Camera className="w-8 h-8 text-maximally-blue" />,
-      title: "Collabs with Maximally Studios",
+      title: "Featured Collaborations",
       description: "Reels, content drops, design kits, or founder features — let's build together."
     },
     {
@@ -53,7 +53,7 @@ const Allies = () => {
       to: "Let us host 1 mini-challenge"
     },
     {
-      from: "Studios collabs",
+    from: "Content collabs",
       to: "Refer 2 other quality orgs"
     }
   ];
@@ -152,7 +152,7 @@ const Allies = () => {
         <section className="px-4 py-16 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center">
             <blockquote className="text-xl md:text-2xl italic text-gray-300 mb-6">
-              "We got ₹5K funding, Insta collabs, and our president featured on Maximally Studios. 
+              "We got ₹5K funding, Insta collabs, and our president featured by Maximally. 
               This isn't a partnership — it's a revolution."
             </blockquote>
             <p className="text-maximally-blue font-semibold">— Team Radiant, E-Cell Partner</p>

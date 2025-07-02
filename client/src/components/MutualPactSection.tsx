@@ -25,7 +25,7 @@ const whatWeOffer: PactItem[] = [
   },
   {
     icon: '🎬',
-    title: 'Studios Content Support',
+    title: 'Content Support',
     description: 'Professional marketing assets'
   }
 ];

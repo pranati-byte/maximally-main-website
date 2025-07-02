@@ -12,7 +12,7 @@ import Contact from "./pages/Contact";
 import Support from "./pages/Support";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
-import Studios from './pages/Studios';
+
 import ThankYou from "./pages/ThankYou";
 import Featured from "./pages/Featured";
 import Bootcamps from '@/pages/Bootcamps';
@@ -149,7 +149,7 @@ const App = () => {
             <Route path="/support" element={<Support />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
-            <Route path="/studios" element={<Studios />} />
+
             <Route path="/community" element={<Community />} />
             <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/join-us" element={<JoinUs />} />
