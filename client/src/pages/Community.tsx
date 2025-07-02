@@ -1,4 +1,3 @@
-
 import { ArrowRight, Lock, Star, Users, Zap, MessageCircle, MessagesSquare } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { Card, CardContent } from '@/components/ui/card';
@@ -37,7 +36,7 @@ const Community = () => {
                   Join WhatsApp →
                 </button>
               </div>
-              
+
               <div className="pixel-border p-6 bg-gradient-to-br from-[#5865F2]/20 to-[#7289DA]/20 hover:from-[#5865F2]/30 hover:to-[#7289DA]/30 transition-all group">
                 <div className="mb-4">
                   <MessagesSquare className="h-12 w-12 mx-auto text-[#5865F2] group-hover:scale-110 transition-transform" />
@@ -52,8 +51,8 @@ const Community = () => {
                 </button>
               </div>
             </div>
-            
-            
+
+
           </div>
         </div>
       </section>
@@ -76,48 +75,8 @@ const Community = () => {
       {/* Community Options */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Inner Circle */}
-            <div className="pixel-border p-8 bg-gradient-to-br from-maximally-blue/10 to-maximally-purple/10">
-              <div className="inline-block bg-maximally-red/20 px-4 py-2 rounded-full mb-6">
-                <span className="font-jetbrains text-maximally-red">
-                  <Lock className="h-4 w-4 inline-block mr-2" />
-                  Application Only
-                </span>
-              </div>
-              <h2 className="font-press-start text-2xl mb-4">Inner Circle_</h2>
-              <p className="font-jetbrains mb-6">An invite-only merit network for top global builders.</p>
-              <div className="space-y-4 mb-8">
-                <p className="font-jetbrains font-semibold mb-2">Access to:</p>
-                <div className="space-y-2 ml-4">
-                  <div className="flex items-start gap-2">
-                    <span className="text-maximally-blue">-</span>
-                    <span>Private micro-guilds (AI, Product, Design)</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-maximally-red">-</span>
-                    <span>Mentorship from global operators</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-maximally-purple">-</span>
-                    <span>Collab network, IRL + online drops</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-maximally-blue">-</span>
-                    <span>Hidden opportunities: internships, podcast invites, and team collabs</span>
-                  </div>
-                </div>
-              </div>
-              <button
-                onClick={() => window.location.href = 'https://tally.so/r/wQEGEA'}
-                className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2"
-              >
-                <span>Apply Now</span>
-                <ArrowRight className="h-4 w-4" />
-              </button>
-            </div>
-
-            {/* Outer Circle */}
+          <div className="max-w-3xl mx-auto">
+            {/* Maximally Club */}
             <div className="pixel-border p-8 bg-gradient-to-br from-maximally-red/10 to-maximally-blue/10">
               <div className="inline-block bg-maximally-blue/20 px-4 py-2 rounded-full mb-6">
                 <span className="font-jetbrains text-maximally-blue">
@@ -125,7 +84,7 @@ const Community = () => {
                   Open Community
                 </span>
               </div>
-              <h2 className="font-press-start text-2xl mb-4">Outer Circle_</h2>
+              <h2 className="font-press-start text-2xl mb-4">Maximally Club_</h2>
               <p className="font-jetbrains mb-6">A place to learn, share, and grow together.</p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-2">
@@ -143,10 +102,10 @@ const Community = () => {
               </div>
               <button
                 onClick={() => window.location.href = 'https://discord.gg/S2YyGtBWKa'}
-                className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2"
+                className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:scale-105 transition-transform"
               >
-                <span>Join Discord</span>
-                <ArrowRight className="h-4 w-4" />
+                <MessageCircle className="h-4 w-4" />
+                Join Maximally Club
               </button>
             </div>
           </div>
