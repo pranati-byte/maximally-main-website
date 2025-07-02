@@ -1,6 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 
 const schools = [
   {
@@ -104,6 +105,7 @@ const WallOfProgressiveSchools = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

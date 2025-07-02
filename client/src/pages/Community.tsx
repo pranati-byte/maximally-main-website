@@ -138,6 +138,7 @@ const Community = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

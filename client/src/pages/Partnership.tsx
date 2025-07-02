@@ -1,6 +1,7 @@
 import SEO from '@/components/SEO';
 import BenefitCarousel from '@/components/BenefitCarousel';
 import MutualPactSection from '@/components/MutualPactSection';
+import Footer from '@/components/Footer';
 
 export default function Partnership() {
   return (
@@ -53,6 +54,7 @@ export default function Partnership() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -8,6 +8,7 @@ import TallyFormDialog from '@/components/TallyFormDialog';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Link } from "react-router-dom";
 import { BadgeCheck, Trophy, Medal, Heart } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const SponsorTier = ({ title, price, forText, slots, color, icon: Icon, benefits, ctaText, setIsFormOpen }) => (
   <motion.div 
@@ -236,6 +237,7 @@ const Collaborate = () => {
           </div>
         </section>
         <TallyFormDialog open={isFormOpen} onOpenChange={setIsFormOpen} />
+        <Footer />
       </div>
     </>
   );

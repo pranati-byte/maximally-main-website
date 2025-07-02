@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
 
 const Careers = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Careers = () => {
           </p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

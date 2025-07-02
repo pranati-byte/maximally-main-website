@@ -1,5 +1,6 @@
 
 import { useEffect } from "react";
+import Footer from "@/components/Footer";
 
 const Privacy = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Privacy = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

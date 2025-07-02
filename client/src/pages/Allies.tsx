@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Award, DollarSign, Camera, Ticket, Brain, Megaphone, CheckCircle, ArrowRight } from "lucide-react";
 import SEO from "@/components/SEO";
 import PartnerCarousel from "@/components/PartnerCarousel";
+import Footer from "@/components/Footer";
 
 const Allies = () => {
   const benefits = [
@@ -178,6 +179,7 @@ const Allies = () => {
             </Button>
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );

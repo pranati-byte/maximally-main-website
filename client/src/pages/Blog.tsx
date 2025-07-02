@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Search, Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 
 const blogPosts = [
   {
@@ -436,6 +437,7 @@ const Blog = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

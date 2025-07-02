@@ -1,5 +1,6 @@
 
 import { useEffect } from "react";
+import Footer from "@/components/Footer";
 
 const Support = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Support = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

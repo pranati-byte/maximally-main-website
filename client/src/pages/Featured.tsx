@@ -1,6 +1,7 @@
 
 import { Star, Award, ExternalLink } from "lucide-react";
 import SEO from "@/components/SEO";
+import Footer from "@/components/Footer";
 
 const Featured = () => {
   const partners = [
@@ -201,6 +202,7 @@ const Featured = () => {
           </section>
         </div>
       </main>
+      <Footer />
     </>
   );
 };
