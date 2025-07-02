@@ -23,11 +23,7 @@ const Events = () => {
       description: "Flip iconic brands into new verticals. You get ₹15K, 3 days, and full creative freedom.",
       icon: "🎨"
     },
-    {
-      name: "Case Raid",
-      description: "No boring slides. Real-world problem statements, fast-paced formats, and competitive analysis under fire.",
-      icon: "⚔️"
-    },
+    
     
   ];
 
@@ -38,29 +34,14 @@ const Events = () => {
       icon: "🔧"
     },
     {
-      name: "Zero to One K",
-      description: "Build your first ₹1,000 with code. No startup capital. No experience required. Just APIs, apps, and algorithms.",
-      icon: "💻"
-    },
-    {
       name: "Shipwreck",
       description: "Build something broken, weird, or ugly — but make it functional. Glitches welcome.",
       icon: "🚢"
     },
     {
-      name: "Startup Lab Rats",
-      description: "Test a bizarre startup concept publicly. If it flops, pivot. If it works, scale.",
-      icon: "🧪"
-    },
-    {
       name: "Viral or Die",
       description: "Keep posting until one piece of content hits a goal (e.g. 10K views). Prove your virality.",
       icon: "📈"
-    },
-    {
-      name: "The Click War",
-      description: "Create an ad + landing page. Track clicks, conversions, and win on performance.",
-      icon: "🎯"
     },
     {
       name: "CTRL + ALT + BUILD",
