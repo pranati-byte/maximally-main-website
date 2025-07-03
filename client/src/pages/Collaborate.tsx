@@ -10,6 +10,8 @@ const Collaborate = () => {
   const [openCommunityItems, setOpenCommunityItems] = useState<string[]>([]);
   const [openCreatorItems, setOpenCreatorItems] = useState<string[]>([]);
   const [openEducationalItems, setOpenEducationalItems] = useState<string[]>([]);
+  const [openInternationalItems, setOpenInternationalItems] = useState<string[]>([]);
+  const [openB2bItems, setOpenB2bItems] = useState<string[]>([]);
 
   const toggleSection = (sectionId: string) => {
     setOpenSections(prev => 
@@ -53,6 +55,22 @@ const Collaborate = () => {
 
   const toggleEducationalItem = (itemId: string) => {
     setOpenEducationalItems(prev => 
+      prev.includes(itemId) 
+        ? prev.filter(id => id !== itemId)
+        : [...prev, itemId]
+    );
+  };
+
+  const toggleInternationalItem = (itemId: string) => {
+    setOpenInternationalItems(prev => 
+      prev.includes(itemId) 
+        ? prev.filter(id => id !== itemId)
+        : [...prev, itemId]
+    );
+  };
+
+  const toggleB2bItem = (itemId: string) => {
+    setOpenB2bItems(prev => 
       prev.includes(itemId) 
         ? prev.filter(id => id !== itemId)
         : [...prev, itemId]
@@ -434,6 +452,127 @@ Ideal for: Edtech products, learning tools, R&D teams, accelerators.`,
     }
   ];
 
+  const internationalItems = [
+    {
+      id: 'global-hack',
+      title: '🌏 Global Hack Exchanges',
+      description: `Team up with Maximally to host cross-border hackathons, where builders from India and your country collaborate or compete.
+
+We can co-run:
+
+• "India vs [X]" hack sprints
+• Dual-hosted global makeathons
+• Multi-country team formations
+
+We provide the structure, pressure, and storytelling — you bring your crew.
+
+Ideal for: International youth orgs, student clubs abroad, startup societies, innovation campuses.`,
+      idealFor: 'International youth orgs, student clubs abroad, startup societies, innovation campuses'
+    },
+    {
+      id: 'talent-pools',
+      title: '🤝 Shared Talent Pools',
+      description: `Let your top students or builders participate in Maximally's events — and we'll send our best back to yours.
+
+We'll also share:
+
+• Internships and gig openings
+• Builder referrals across orgs
+• Exchange-based shoutouts and team-ups
+
+This builds a reputation graph across continents.
+
+Ideal for: Global student orgs, cross-university alliances, accelerators, talent platforms.`,
+      idealFor: 'Global student orgs, cross-university alliances, accelerators, talent platforms'
+    },
+    {
+      id: 'podcast-docu',
+      title: '🎬 Podcast / Docu Co-productions',
+      description: `Let's produce global-first stories on youth builders and startup rebels.
+
+We co-create:
+
+• Short films or spotlight reels
+• Builder podcast episodes
+• "Startup Scenes" in your country
+
+We take care of scripts, editing, distribution. You share the spotlight and vibe.
+
+Ideal for: Media-first youth orgs, cultural accelerators, international builders.`,
+      idealFor: 'Media-first youth orgs, cultural accelerators, international builders'
+    }
+  ];
+
+  const b2bItems = [
+    {
+      id: 'product-testing',
+      title: '🧪 Gen Z Product Testing Tracks',
+      description: `We plug your product directly into a hackathon track — teen teams use it, break it, remix it, and tell you what works.
+
+You get:
+
+• First-time user feedback
+• MVP use cases
+• Real screenshots and quotes
+• Builder testimonials + beta interest
+
+We'll structure the challenge to match your vision.
+
+Ideal for: AI tools, SaaS platforms, early-stage products, apps targeting 16–25.`,
+      idealFor: 'AI tools, SaaS platforms, early-stage products, apps targeting 16–25'
+    },
+    {
+      id: 'lead-gen',
+      title: '📊 Lead Gen + Beta User Campaigns',
+      description: `Maximally can run campaign-style drops where your product becomes the center of attention.
+
+We help you:
+
+• Launch to thousands of teen innovators
+• Get real signups, followers, and DMs
+• Host a "Build with [Your Tool]" sprint
+
+You bring the tool, we bring the tribe.
+
+Ideal for: Startups with self-serve products, platforms seeking usage, solo founders testing traction.`,
+      idealFor: 'Startups with self-serve products, platforms seeking usage, solo founders testing traction'
+    },
+    {
+      id: 'track-sponsor',
+      title: '🎯 Startup-as-a-Track Sponsor',
+      description: `Sponsor your own track in our hackathon.
+
+You get:
+
+• A prompt tailored to your startup or space
+• A dedicated reel and branding inside the event
+• Access to top team ideas
+• Judge or mentor seat to engage directly
+
+Think YC demo day meets Shark Tank meets Gen Z speed.
+
+Ideal for: Startups hiring interns, building community, or launching new features.`,
+      idealFor: 'Startups hiring interns, building community, or launching new features'
+    },
+    {
+      id: 'brand-content',
+      title: '📹 Brand Feature Content',
+      description: `Let our storytelling arm, Maximally Studios, turn your journey into a reel, breakdown, or creative challenge.
+
+Options include:
+
+• Founder journey docs
+• Reel-based brand explainers
+• Meme remix campaigns
+• Collab posts on Instagram/LinkedIn
+
+We make you visible inside youth culture — not just above it.
+
+Ideal for: Early-stage startups, founder-led brands, VC-backed tools, product-driven companies.`,
+      idealFor: 'Early-stage startups, founder-led brands, VC-backed tools, product-driven companies'
+    }
+  ];
+
   const collaborationCategories = [
     {
       id: 'sponsorship',
@@ -475,23 +614,14 @@ Ideal for: Edtech products, learning tools, R&D teams, accelerators.`,
       title: '🌍 International Ecosystem Builders',
       bgColor: 'bg-[#3498DB]/10',
       borderColor: 'border-[#3498DB]',
-      items: [
-        'Global Hack Exchanges',
-        'Shared Talent Pools',
-        'Podcast/Docu Co-productions'
-      ]
+      items: internationalItems.map(item => item.title)
     },
     {
       id: 'b2b',
       title: '💼 B2B + Startup Brand Collaborations',
       bgColor: 'bg-[#F39C12]/10',
       borderColor: 'border-[#F39C12]',
-      items: [
-        'Gen Z Product Testing Tracks',
-        'Lead Gen + Beta User Campaigns',
-        'Startup-as-a-Track Sponsor',
-        'Brand Feature Content'
-      ]
+      items: b2bItems.map(item => item.title)
     }
   ];
 
@@ -801,6 +931,110 @@ Ideal for: Edtech products, learning tools, R&D teams, accelerators.`,
                               </div>
                               <p className="font-jetbrains text-black/70 mt-3 text-sm">
                                 We're building the JEE alternative — and we'd love to build it with you.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ) : category.id === 'international' ? (
+                        <div className="space-y-4 mt-4">
+                          {internationalItems.map((item) => (
+                            <div key={item.id} className="pixel-border bg-white/50 border-gray-300">
+                              <button
+                                onClick={() => toggleInternationalItem(item.id)}
+                                className="w-full p-4 text-left flex items-center justify-between hover:bg-black/5 transition-colors"
+                              >
+                                <span className="font-jetbrains text-lg text-black/90 font-medium">
+                                  {item.title}
+                                </span>
+                                {openInternationalItems.includes(item.id) ? (
+                                  <ChevronUp className="h-5 w-5 text-black/70" />
+                                ) : (
+                                  <ChevronDown className="h-5 w-5 text-black/70" />
+                                )}
+                              </button>
+                              
+                              {openInternationalItems.includes(item.id) && (
+                                <div className="px-4 pb-4 border-t border-gray-200">
+                                  <div className="mt-3 space-y-3">
+                                    <div className="font-jetbrains text-base text-black/80 whitespace-pre-line leading-relaxed">
+                                      {item.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                          
+                          {/* International CTA */}
+                          <div className="mt-6 p-4 pixel-border bg-gradient-to-r from-[#3498DB]/10 to-[#FFD700]/10 border-[#3498DB]">
+                            <div className="text-center">
+                              <h3 className="font-press-start text-lg mb-3 text-black">
+                                📣 From Dubai to Dublin, Seoul to São Paulo — let's build globally.
+                              </h3>
+                              <div className="space-y-2 font-jetbrains text-base">
+                                <div className="flex items-center justify-center gap-2">
+                                  <Mail className="h-4 w-4 text-[#3498DB]" />
+                                  <span>💬 Email <a href="mailto:hello@maximally.in" className="text-[#3498DB] hover:text-[#FFD700] transition-colors underline font-medium">hello@maximally.in</a></span>
+                                </div>
+                                <div className="flex items-center justify-center gap-2">
+                                  <MessageSquare className="h-4 w-4 text-[#3498DB]" />
+                                  <span>🌍 DM <a href="https://instagram.com/maximally.in" target="_blank" rel="noopener noreferrer" className="text-[#3498DB] hover:text-[#FFD700] transition-colors underline font-medium">@maximally.in</a></span>
+                                </div>
+                              </div>
+                              <p className="font-jetbrains text-black/70 mt-3 text-sm">
+                                We're already global in energy. Let's make it real in action.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ) : category.id === 'b2b' ? (
+                        <div className="space-y-4 mt-4">
+                          {b2bItems.map((item) => (
+                            <div key={item.id} className="pixel-border bg-white/50 border-gray-300">
+                              <button
+                                onClick={() => toggleB2bItem(item.id)}
+                                className="w-full p-4 text-left flex items-center justify-between hover:bg-black/5 transition-colors"
+                              >
+                                <span className="font-jetbrains text-lg text-black/90 font-medium">
+                                  {item.title}
+                                </span>
+                                {openB2bItems.includes(item.id) ? (
+                                  <ChevronUp className="h-5 w-5 text-black/70" />
+                                ) : (
+                                  <ChevronDown className="h-5 w-5 text-black/70" />
+                                )}
+                              </button>
+                              
+                              {openB2bItems.includes(item.id) && (
+                                <div className="px-4 pb-4 border-t border-gray-200">
+                                  <div className="mt-3 space-y-3">
+                                    <div className="font-jetbrains text-base text-black/80 whitespace-pre-line leading-relaxed">
+                                      {item.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                          
+                          {/* B2B CTA */}
+                          <div className="mt-6 p-4 pixel-border bg-gradient-to-r from-[#F39C12]/10 to-[#FFD700]/10 border-[#F39C12]">
+                            <div className="text-center">
+                              <h3 className="font-press-start text-lg mb-3 text-black">
+                                📣 Your product. Our playground. Let's collide.
+                              </h3>
+                              <div className="space-y-2 font-jetbrains text-base">
+                                <div className="flex items-center justify-center gap-2">
+                                  <Mail className="h-4 w-4 text-[#F39C12]" />
+                                  <span>💬 Email <a href="mailto:hello@maximally.in" className="text-[#F39C12] hover:text-[#FFD700] transition-colors underline font-medium">hello@maximally.in</a></span>
+                                </div>
+                                <div className="flex items-center justify-center gap-2">
+                                  <MessageSquare className="h-4 w-4 text-[#F39C12]" />
+                                  <span>💼 DM <a href="https://instagram.com/maximally.in" target="_blank" rel="noopener noreferrer" className="text-[#F39C12] hover:text-[#FFD700] transition-colors underline font-medium">@maximally.in</a></span>
+                                </div>
+                              </div>
+                              <p className="font-jetbrains text-black/70 mt-3 text-sm">
+                                We'll help you go from invisible to undeniable in Gen Z circles.
                               </p>
                             </div>
                           </div>
