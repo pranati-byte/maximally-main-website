@@ -7,8 +7,8 @@ const Community = () => {
   return (
     <div className="min-h-screen pt-20">
       <SEO 
-        title="Join Maximally Community | India's Largest Teen Entrepreneurship Network"
-        description="Join India's most vibrant teen entrepreneurship community. Choose between our exclusive Inner Circle or our open Outer Circle community."
+        title="Join Maximally Community | Global Teen Innovation League"
+        description="Join the world's most vibrant teen innovation community. Connect with builders, creators, and hackers from around the globe."
       />
 
       {/* Community Entry Points */}
@@ -20,7 +20,7 @@ const Community = () => {
               Choose Your Platform_
             </h1>
             <p className="font-jetbrains text-lg md:text-xl mb-8 text-white/80">
-              Join 1000+ ambitious teens building the future of India
+              Join 1000+ ambitious teens building the future, worldwide
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
               <div className="pixel-border p-6 bg-gradient-to-br from-green-500/20 to-green-600/20 hover:from-green-500/30 hover:to-green-600/30 transition-all group">
@@ -66,7 +66,7 @@ const Community = () => {
               Choose Your Circle_
             </h1>
             <p className="font-jetbrains text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-              Two communities. One mission. Build the future of India.
+              Two communities. One mission. Build the future, globally.
             </p>
           </div>
         </div>

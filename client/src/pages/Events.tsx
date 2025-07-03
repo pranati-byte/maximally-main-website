@@ -80,7 +80,7 @@ const Events = () => {
     <>
       <SEO
         title="Maximally Events | High-Energy Innovation Battles"
-        description="We don't run events. We throw startup wars, code battles, and creator faceoffs for India's youngest builders. Join the chaos."
+        description="We don't run events. We throw startup wars, code battles, and creator faceoffs for the world's youngest builders. Join the chaos."
         keywords="teen events, hackathons, startup makeathons, innovation battles, chaos formats, wildcard sprints"
       />
       <div className="min-h-screen bg-white overflow-hidden relative">
@@ -116,7 +116,7 @@ const Events = () => {
               We throw startup wars, code battles, and creator faceoffs for anyone building wild things.
             </h2>
             <p className="font-jetbrains text-base sm:text-lg md:text-xl text-black/80 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
-              From virtual hackathons to physical startup makeathons, Maximally is India's fastest-growing ecosystem for teen innovation.
+              From virtual hackathons to physical startup makeathons, Maximally is the fastest-growing global ecosystem for teen innovation.
             </p>
           </motion.div>
 

@@ -1,8 +1,8 @@
-# Maximally - India's Premier Teen Startup Platform
+# Maximally - Global Hackathon League for Teen Builders
 
 ## Overview
 
-Maximally is a comprehensive platform designed for ambitious teenagers (ages 13-19) to learn real-world skills including entrepreneurship, AI, digital marketing, and public speaking through immersive bootcamps and makeathons. The platform combines educational content delivery with community building and hands-on project experiences.
+Maximally is the boldest hackathon ecosystem for teen founders, coders, and creators worldwide. Born in India but built for the world, we host high-stakes innovation events, chaos sprints, and public launch challenges designed for ambitious teenagers (ages 13-19). The platform focuses exclusively on hackathons and innovation competitions - no lectures, no theory, just real proof-of-work events.
 
 ## System Architecture
 
@@ -93,7 +93,12 @@ The application follows a modern full-stack monolith approach with clear separat
 
 ## Changelog
 
-- July 3, 2025. Archived the Makeathon page for Summer 2025 edition - removed from navigation, added archive banners, updated CTAs to redirect to homepage, changed copy to past tense
+- July 3, 2025. **MAJOR TRANSFORMATION**: Converted Maximally from bootcamp platform to global hackathon league
+  - Completely rebuilt homepage with new "Welcome to the Maximally League" branding
+  - Removed all India-specific references, now global-first approach
+  - Updated all pages to reflect hackathon-only focus (no more bootcamps/courses)
+  - Updated Footer navigation and SEO to align with new positioning
+  - Archived Summer 2025 Makeathon page with proper banners and redirects
 - June 15, 2025. Initial setup
 
 ## User Preferences

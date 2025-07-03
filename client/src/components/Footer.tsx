@@ -17,7 +17,7 @@ const Footer = () => {
             MAXIMALLY
           </h2>
           <p className="font-jetbrains text-gray-300 max-w-2xl mx-auto text-lg">
-            Empowering builders with real-world skills to solve tomorrow's challenges through bold programs and global partnerships.
+            The global hackathon league for teen builders, creators, and innovators. High-stakes events for ambitious youth worldwide.
           </p>
         </div>
 
@@ -25,31 +25,29 @@ const Footer = () => {
         <div className="w-full h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500 mb-12 pixel-border"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Programs Section */}
+          {/* Events Section */}
           <div className="pixel-card bg-gradient-to-br from-red-600/20 to-red-800/20 border-red-400">
             <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
-              <span>🚀</span> PROGRAMS
+              <span>🚀</span> EVENTS
             </h3>
             <ul className="space-y-4 font-jetbrains text-black">
-              <li><Link to="/makeathon" className="hover:text-red-400 transition-colors block retro-underline">Startup Makeathon</Link></li>
-              <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Live Events</Link></li>
-
-              <li><Link to="/hackathon" className="hover:text-red-400 transition-colors block retro-underline">Hackathons</Link></li>
-              <li><Link to="/bootcamps" className="hover:text-red-400 transition-colors block retro-underline">Skill Bootcamps</Link></li>
+              <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Past Hackathons</Link></li>
+              <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Upcoming Challenges</Link></li>
+              <li><Link to="/makeathon" className="hover:text-red-400 transition-colors block retro-underline">Archived: Summer 2025</Link></li>
+              <li><Link to="/hackathon" className="hover:text-red-400 transition-colors block retro-underline">Innovation Sprints</Link></li>
             </ul>
           </div>
 
-          {/* Partnership & Community */}
+          {/* Community */}
           <div className="pixel-card bg-gradient-to-br from-yellow-600/20 to-yellow-800/20 border-yellow-400">
             <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
               <span>🤝</span> COMMUNITY
             </h3>
             <ul className="space-y-4 font-jetbrains text-black">
-              <li><Link to="/partnership" className="hover:text-yellow-400 transition-colors block retro-underline">Join Partnership</Link></li>
-              <li><Link to="/community" className="hover:text-yellow-400 transition-colors block retro-underline">Student Community</Link></li>
-              <li><Link to="/allies" className="hover:text-yellow-400 transition-colors block retro-underline">Our Allies</Link></li>
-              <li><Link to="/collaborate" className="hover:text-yellow-400 transition-colors block retro-underline">Collaborate</Link></li>
-              <li><Link to="/wall-of-progressive-schools" className="hover:text-yellow-400 transition-colors block retro-underline">Progressive Schools</Link></li>
+              <li><Link to="/community" className="hover:text-yellow-400 transition-colors block retro-underline">Join Our League</Link></li>
+              <li><Link to="/collaborate" className="hover:text-yellow-400 transition-colors block retro-underline">Collaborate with Us</Link></li>
+              <li><Link to="/partnership" className="hover:text-yellow-400 transition-colors block retro-underline">Partner Network</Link></li>
+              <li><Link to="/allies" className="hover:text-yellow-400 transition-colors block retro-underline">Global Allies</Link></li>
             </ul>
           </div>
 
@@ -59,11 +57,10 @@ const Footer = () => {
               <span>🏢</span> COMPANY
             </h3>
             <ul className="space-y-4 font-jetbrains text-black">
-              <li><Link to="/blog" className="hover:text-blue-400 transition-colors block retro-underline">Blog & Stories</Link></li>
+              <li><Link to="/blog" className="hover:text-blue-400 transition-colors block retro-underline">About Maximally</Link></li>
+              <li><Link to="/blog" className="hover:text-blue-400 transition-colors block retro-underline">Blog</Link></li>
+              <li><Link to="/contact" className="hover:text-blue-400 transition-colors block retro-underline">Contact</Link></li>
               <li><Link to="/careers" className="hover:text-blue-400 transition-colors block retro-underline">Join Our Team</Link></li>
-              <li><Link to="/featured" className="hover:text-blue-400 transition-colors block retro-underline">Featured</Link></li>
-              <li><Link to="/contact" className="hover:text-blue-400 transition-colors block retro-underline">Contact Us</Link></li>
-              <li><Link to="/join-us" className="hover:text-blue-400 transition-colors block retro-underline">Get Involved</Link></li>
             </ul>
           </div>
 
