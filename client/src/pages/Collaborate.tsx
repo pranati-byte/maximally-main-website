@@ -8,6 +8,8 @@ const Collaborate = () => {
   const [openSponsorshipItems, setOpenSponsorshipItems] = useState<string[]>([]);
   const [openStrategicItems, setOpenStrategicItems] = useState<string[]>([]);
   const [openCommunityItems, setOpenCommunityItems] = useState<string[]>([]);
+  const [openCreatorItems, setOpenCreatorItems] = useState<string[]>([]);
+  const [openEducationalItems, setOpenEducationalItems] = useState<string[]>([]);
 
   const toggleSection = (sectionId: string) => {
     setOpenSections(prev => 
@@ -35,6 +37,22 @@ const Collaborate = () => {
 
   const toggleCommunityItem = (itemId: string) => {
     setOpenCommunityItems(prev => 
+      prev.includes(itemId) 
+        ? prev.filter(id => id !== itemId)
+        : [...prev, itemId]
+    );
+  };
+
+  const toggleCreatorItem = (itemId: string) => {
+    setOpenCreatorItems(prev => 
+      prev.includes(itemId) 
+        ? prev.filter(id => id !== itemId)
+        : [...prev, itemId]
+    );
+  };
+
+  const toggleEducationalItem = (itemId: string) => {
+    setOpenEducationalItems(prev => 
       prev.includes(itemId) 
         ? prev.filter(id => id !== itemId)
         : [...prev, itemId]
@@ -294,6 +312,128 @@ Ideal for: Brands, SaaS tools, creator collectives, product teams, NGOs.`,
     }
   ];
 
+  const creatorItems = [
+    {
+      id: 'amplification',
+      title: '📺 Event Amplification Reels',
+      description: `Got reach? Help us spread the word about our hackathons by:
+
+• Posting challenge launches
+• Breaking down winning entries
+• Reacting to wild ideas Gen Z is building
+
+We'll feature you as a creator-collaborator, send reel packs and CTAs, and promote you in our Discord + recap drops.
+
+Ideal for: Creators on IG/YouTube/LinkedIn with Gen Z or startup-focused audiences.`,
+      idealFor: 'Creators on IG/YouTube/LinkedIn with Gen Z or startup-focused audiences'
+    },
+    {
+      id: 'judge',
+      title: '🎙️ Judge / Host Guest Spot',
+      description: `Become part of the Maximally world by joining as:
+
+• A guest judge during Demo Day
+• A hype MC or live session host
+• A mentor to a top builder team
+
+No boring panels. We keep it crisp, funny, and punchy — and we love letting creators share the stage.
+
+Ideal for: Podcasters, content-led founders, student influencers, indie creators.`,
+      idealFor: 'Podcasters, content-led founders, student influencers, indie creators'
+    },
+    {
+      id: 'social',
+      title: '📱 LinkedIn + Instagram Collabs',
+      description: `Let's co-post. We'll write or design content together, remix something wild, or collaborate on:
+
+• Carousel content
+• Startup memes
+• Founder/creator story breakdowns
+• "Build with us" promos
+
+We help with copy, editing, strategy — you get growth, content, and community love.
+
+Ideal for: LinkedIn content creators, Instagram carousel accounts, startup memes, founderfluencers.`,
+      idealFor: 'LinkedIn content creators, Instagram carousel accounts, startup memes, founderfluencers'
+    },
+    {
+      id: 'ambassador',
+      title: '🎓 Student Ambassador Partnerships',
+      description: `If you're an active student with a strong personal brand or campus rep power — join as a:
+
+• Brand voice for Maximally
+• Campus builder recruiter
+• Creator-in-residence (content + growth)
+
+You get exposure, behind-the-scenes access, early product drops, and a chance to lead real experiments.
+
+Ideal for: Students running communities, IG/YouTube creators, Gen Z with vibes + hustle.`,
+      idealFor: 'Students running communities, IG/YouTube creators, Gen Z with vibes + hustle'
+    }
+  ];
+
+  const educationalItems = [
+    {
+      id: 'hackathon-box',
+      title: '📦 Hackathon-in-a-Box for Institutions',
+      description: `Bring Maximally to your campus. We'll set up and execute a high-energy hackathon for your students — virtually or physically — with:
+
+• Full theme + track design
+• Submission systems + judging
+• Real mentors + industry speakers
+• Content recap + PR assets
+
+Your students get a startup-grade experience. You get national visibility, builder proof, and top-tier energy.
+
+Ideal for: Schools, colleges, alt-ed programs, coding clubs, edtech accelerators.`,
+      idealFor: 'Schools, colleges, alt-ed programs, coding clubs, edtech accelerators'
+    },
+    {
+      id: 'bootcamp',
+      title: '⚡ Bootcamp Collabs',
+      description: `Plug your students directly into our hackathon or challenge sprints. We offer:
+
+• Reserved seats in upcoming events
+• Custom onboarding for your cohort
+• Certification + builder support post-event
+
+You bring the learners. We bring the real world.
+
+Ideal for: Coding bootcamps, upskilling cohorts, scholarship foundations, training orgs.`,
+      idealFor: 'Coding bootcamps, upskilling cohorts, scholarship foundations, training orgs'
+    },
+    {
+      id: 'curriculum',
+      title: '📖 Curriculum Plug-ins',
+      description: `Want to make your syllabus more applied? We can plug Maximally's hackathon formats into your curriculum as:
+
+• Project-based learning modules
+• Mini-challenges or build tasks
+• Evaluation-friendly structures
+
+Think of it as JEE meets Shark Tank, but cooler and actually useful.
+
+Ideal for: Schools, universities, blended learning orgs, edtech startups.`,
+      idealFor: 'Schools, universities, blended learning orgs, edtech startups'
+    },
+    {
+      id: 'experiments',
+      title: '🧪 Ed-tech x Hackathon Experiments',
+      description: `Want to experiment with formats that drive engagement, retention, or real proof-of-work?
+
+We'll collaborate on wild innovation pilots:
+
+• Tool-based sprints
+• AI-assisted learning challenges
+• Skill-to-startup builder formats
+
+You test something new. We give it speed, talent, and stories.
+
+Ideal for: Edtech products, learning tools, R&D teams, accelerators.`,
+      idealFor: 'Edtech products, learning tools, R&D teams, accelerators'
+    }
+  ];
+
   const collaborationCategories = [
     {
       id: 'sponsorship',
@@ -321,24 +461,14 @@ Ideal for: Brands, SaaS tools, creator collectives, product teams, NGOs.`,
       title: '📱 Creator & Influencer Collabs',
       bgColor: 'bg-[#FF5F5F]/10',
       borderColor: 'border-[#FF5F5F]',
-      items: [
-        'Event Amplification Reels',
-        'Judge/Host Guest Spot',
-        'LinkedIn + Instagram Collabs',
-        'Student Ambassador Partnerships'
-      ]
+      items: creatorItems.map(item => item.title)
     },
     {
       id: 'educational',
       title: '📚 Educational & Institutional Partnerships',
       bgColor: 'bg-[#9B59B6]/10',
       borderColor: 'border-[#9B59B6]',
-      items: [
-        'Hackathon-in-a-Box for Institutions',
-        'Bootcamp Collabs',
-        'Curriculum Plug-ins',
-        'Ed-tech x Hackathon Experiments'
-      ]
+      items: educationalItems.map(item => item.title)
     },
     {
       id: 'international',
@@ -565,6 +695,113 @@ Ideal for: Brands, SaaS tools, creator collectives, product teams, NGOs.`,
                                   <span>📲 DM <a href="https://instagram.com/maximally.in" target="_blank" rel="noopener noreferrer" className="text-[#39FF14] hover:text-[#FFD700] transition-colors underline font-medium">@maximally.in</a></span>
                                 </div>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      ) : category.id === 'creator' ? (
+                        <div className="space-y-4 mt-4">
+                          {creatorItems.map((item) => (
+                            <div key={item.id} className="pixel-border bg-white/50 border-gray-300">
+                              <button
+                                onClick={() => toggleCreatorItem(item.id)}
+                                className="w-full p-4 text-left flex items-center justify-between hover:bg-black/5 transition-colors"
+                              >
+                                <span className="font-jetbrains text-lg text-black/90 font-medium">
+                                  {item.title}
+                                </span>
+                                {openCreatorItems.includes(item.id) ? (
+                                  <ChevronUp className="h-5 w-5 text-black/70" />
+                                ) : (
+                                  <ChevronDown className="h-5 w-5 text-black/70" />
+                                )}
+                              </button>
+                              
+                              {openCreatorItems.includes(item.id) && (
+                                <div className="px-4 pb-4 border-t border-gray-200">
+                                  <div className="mt-3 space-y-3">
+                                    <div className="font-jetbrains text-base text-black/80 whitespace-pre-line leading-relaxed">
+                                      {item.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                          
+                          {/* Creator CTA */}
+                          <div className="mt-6 p-4 pixel-border bg-gradient-to-r from-[#FF5F5F]/10 to-[#FFD700]/10 border-[#FF5F5F]">
+                            <div className="text-center">
+                              <h3 className="font-press-start text-lg mb-3 text-black">
+                                📣 You create. We amplify. Let's co-build a movement.
+                              </h3>
+                              <div className="space-y-2 font-jetbrains text-base">
+                                <div className="flex items-center justify-center gap-2">
+                                  <Mail className="h-4 w-4 text-[#FF5F5F]" />
+                                  <span>💬 Email <a href="mailto:hello@maximally.in" className="text-[#FF5F5F] hover:text-[#FFD700] transition-colors underline font-medium">hello@maximally.in</a></span>
+                                </div>
+                                <div className="flex items-center justify-center gap-2">
+                                  <MessageSquare className="h-4 w-4 text-[#FF5F5F]" />
+                                  <span>📲 DM <a href="https://instagram.com/maximally.in" target="_blank" rel="noopener noreferrer" className="text-[#FF5F5F] hover:text-[#FFD700] transition-colors underline font-medium">@maximally.in</a></span>
+                                </div>
+                              </div>
+                              <p className="font-jetbrains text-black/70 mt-3 text-sm">
+                                We're always looking for content-first rebels and storytellers.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ) : category.id === 'educational' ? (
+                        <div className="space-y-4 mt-4">
+                          {educationalItems.map((item) => (
+                            <div key={item.id} className="pixel-border bg-white/50 border-gray-300">
+                              <button
+                                onClick={() => toggleEducationalItem(item.id)}
+                                className="w-full p-4 text-left flex items-center justify-between hover:bg-black/5 transition-colors"
+                              >
+                                <span className="font-jetbrains text-lg text-black/90 font-medium">
+                                  {item.title}
+                                </span>
+                                {openEducationalItems.includes(item.id) ? (
+                                  <ChevronUp className="h-5 w-5 text-black/70" />
+                                ) : (
+                                  <ChevronDown className="h-5 w-5 text-black/70" />
+                                )}
+                              </button>
+                              
+                              {openEducationalItems.includes(item.id) && (
+                                <div className="px-4 pb-4 border-t border-gray-200">
+                                  <div className="mt-3 space-y-3">
+                                    <div className="font-jetbrains text-base text-black/80 whitespace-pre-line leading-relaxed">
+                                      {item.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                          
+                          {/* Educational CTA */}
+                          <div className="mt-6 p-4 pixel-border bg-gradient-to-r from-[#9B59B6]/10 to-[#FFD700]/10 border-[#9B59B6]">
+                            <div className="text-center">
+                              <h3 className="font-press-start text-lg mb-3 text-black">
+                                📣 Work at a school, college, or ed-tech org?
+                              </h3>
+                              <p className="font-jetbrains text-base text-black/80 mb-4">
+                                Let's plug Maximally into your ecosystem.
+                              </p>
+                              <div className="space-y-2 font-jetbrains text-base">
+                                <div className="flex items-center justify-center gap-2">
+                                  <Mail className="h-4 w-4 text-[#9B59B6]" />
+                                  <span>💬 Email <a href="mailto:hello@maximally.in" className="text-[#9B59B6] hover:text-[#FFD700] transition-colors underline font-medium">hello@maximally.in</a></span>
+                                </div>
+                                <div className="flex items-center justify-center gap-2">
+                                  <MessageSquare className="h-4 w-4 text-[#9B59B6]" />
+                                  <span>📲 DM <a href="https://instagram.com/maximally.in" target="_blank" rel="noopener noreferrer" className="text-[#9B59B6] hover:text-[#FFD700] transition-colors underline font-medium">@maximally.in</a></span>
+                                </div>
+                              </div>
+                              <p className="font-jetbrains text-black/70 mt-3 text-sm">
+                                We're building the JEE alternative — and we'd love to build it with you.
+                              </p>
                             </div>
                           </div>
                         </div>
