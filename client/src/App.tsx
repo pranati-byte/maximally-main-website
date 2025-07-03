@@ -70,7 +70,7 @@ import ParentsSupport from './pages/BlogPost/ParentsSupport';
 import MakeathonFAQ from './pages/BlogPost/MakeathonFAQ';
 import BuildingTeamworkLeadership from './pages/BlogPost/BuildingTeamworkLeadership';
 import Allies from './pages/Allies';
-import Partnership from './pages/Partnership';
+
 
 const queryClient = new QueryClient();
 
@@ -174,7 +174,7 @@ const App = () => {
           <Route path="/blog/makeathon-faq-maximally" element={<MakeathonFAQ />} />
           <Route path="/blog/teamwork-leadership-maximally" element={<BuildingTeamworkLeadership />} />
           <Route path="/allies" element={<Allies />} />
-          <Route path="/partnership" element={<Partnership />} />
+
 
           {/* Catch all route for 404 */}
           <Route path="*" element={<NotFound />} />
