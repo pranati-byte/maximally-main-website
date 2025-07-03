@@ -80,8 +80,8 @@ const Events = () => {
     <>
       <SEO
         title="Maximally Events | High-Energy Innovation Battles"
-        description="We don't run events. We throw startup wars, code battles, and creator faceoffs for the world's youngest builders. Join the chaos."
-        keywords="teen events, hackathons, startup makeathons, innovation battles, chaos formats, wildcard sprints"
+        description="We don't run events. We throw startup wars, code battles, and creator faceoffs for ambitious builders worldwide. Join the chaos."
+        keywords="hackathons, startup makeathons, innovation battles, builder events, chaos formats, wildcard sprints"
       />
       <div className="min-h-screen bg-white overflow-hidden relative">
         {/* Animated Background */}
@@ -113,10 +113,10 @@ const Events = () => {
               We don't run events.
             </h1>
             <h2 className="font-press-start text-lg sm:text-xl md:text-2xl lg:text-4xl mb-4 sm:mb-6 lg:mb-8 text-black leading-tight px-2">
-              We throw startup wars, code battles, and creator faceoffs for anyone building wild things.
+              We throw startup wars, code battles, and creator faceoffs for ambitious builders across all disciplines.
             </h2>
             <p className="font-jetbrains text-base sm:text-lg md:text-xl text-black/80 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
-              From virtual hackathons to physical startup makeathons, Maximally is the fastest-growing global ecosystem for teen innovation.
+              From virtual hackathons to physical startup makeathons, Maximally is the fastest-growing global ecosystem for emerging builders and innovators.
             </p>
           </motion.div>
 

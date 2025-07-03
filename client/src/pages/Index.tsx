@@ -10,7 +10,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Maximally",
-    "description": "The global hackathon league for teen builders, creators, and innovators worldwide",
+    "description": "A global innovation league that hosts high-stakes hackathons for ambitious builders across disciplines worldwide",
     "url": "https://maximally.in",
     "logo": "https://maximally.in/logo.png",
     "sameAs": ["https://twitter.com/maximallyHQ", "https://instagram.com/maximallyHQ"]
@@ -47,8 +47,8 @@ const Index = () => {
     <>
       <SEO 
         title="Maximally | The Global Hackathon League for Teen Builders" 
-        description="Join the global hackathon ecosystem for teen founders, coders, and creators. High-stakes innovation events designed for ambitious teenagers worldwide." 
-        keywords="teen hackathons, global youth innovation, teen builders, youth startups, coding competitions for teenagers, teen entrepreneurship" 
+        description="Maximally hosts execution-first hackathons and challenges for global builders to showcase real work and get discovered. Join engineers, founders, and creatives worldwide." 
+        keywords="global hackathons, innovation challenges, builder community, startup competitions, coding competitions, entrepreneurship platform" 
         canonicalUrl="https://maximally.in" 
         structuredData={structuredData} 
       />
@@ -96,11 +96,11 @@ const Index = () => {
               </h1>
 
               <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-3xl mx-auto mb-4 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
-                The boldest hackathon ecosystem for teen founders, coders, and creators.
+                A global innovation league that hosts high-stakes hackathons for ambitious builders across disciplines.
               </p>
 
               <p className="font-jetbrains text-base sm:text-lg text-maximally-black/60 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1.5s]">
-                We host global hackathons that bring together ambitious teens to build, launch, and compete in innovation challenges worldwide.
+                Whether you're an engineer, designer, founder, or creator — if you're ready to build, we have something for you.
               </p>
 
               {/* CTAs */}
@@ -137,10 +137,10 @@ const Index = () => {
             
             <div className="max-w-3xl mx-auto mb-12">
               <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/80 mb-6">
-                We host the world's most innovative hackathons for teenagers.
+                We host execution-first challenges for engineers, founders, and creatives worldwide.
               </p>
               <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
-                Global hackathon events where teens build, launch, and compete with real solutions — designed for the next generation of innovators.
+                Proof-of-work platform where ambitious builders create, launch, and compete with real solutions — designed for emerging talent across all disciplines.
               </p>
             </div>
 
@@ -191,7 +191,7 @@ const Index = () => {
 
             <div className="text-center">
               <p className="font-jetbrains text-xl text-white/90 max-w-3xl mx-auto mb-8">
-                At Maximally, we believe innovation has no borders — and no age limits. Whether you're 13 or 19, from a metro or a small town, if you're building bold things, you belong here.
+                At Maximally, we believe innovation has no borders — and no traditional limits. Whether you're from a metro or a small town, if you're building bold things, you belong here.
               </p>
             </div>
           </div>
@@ -206,7 +206,7 @@ const Index = () => {
             
             <div className="max-w-3xl mx-auto mb-12">
               <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/80 mb-6">
-                We partner with schools, creators, and brands to host transformative hackathons that inspire teen innovation and real-world impact.
+                We partner with organizations, creators, and brands to host transformative hackathons that inspire innovation and real-world impact.
               </p>
               <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
                 Ready to host a hackathon that empowers the next generation of builders? Let's collaborate.

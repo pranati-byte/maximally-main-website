@@ -11,8 +11,8 @@ const Hackathon = () => {
     <>
       <SEO
         title="Maximally Hack: Future Founders Quest | Teen Hackathon India"
-        description="Join India's boldest teen hackathon. 48 hours of building, innovating, and launching the future. Open to coders, creators, and community builders aged 13-19."
-        keywords="teen hackathon, student hackathon India, coding competition, future founders"
+        description="Join one of India's most ambitious innovation challenges. 48 hours of building, innovating, and launching the future. Open to coders, creators, and community builders."
+        keywords="hackathon India, innovation challenge, coding competition, future founders, startup competition"
       />
       <div className="min-h-screen bg-black overflow-hidden relative">
         {/* Animated Background */}
@@ -58,7 +58,7 @@ const Hackathon = () => {
                 Maximally Hack: Future Founders Quest
               </h1>
               <p className="font-jetbrains text-xl text-white mb-4">
-                July 1–3, 2025 | Virtual | Open to Teens Across India
+                July 1–3, 2025 | Virtual | Open to Builders Across India
               </p>
               <p className="text-white/90">
                 $1,000 in Prizes | Beginner Friendly | AI & No-Code Welcome
@@ -149,7 +149,7 @@ const Hackathon = () => {
             >
               <h2 className="font-press-start text-2xl text-center mb-8">📜 Quest Rules</h2>
               <div className="space-y-4 font-jetbrains">
-                <p>• Open to all Indian teens aged 13-19</p>
+                <p>• Open to all builders across India</p>
                 <p>• Build something new during the hackathon</p>
                 <p>• Teams of 1-4 players allowed</p>
                 <p>• All code must be your own or openly licensed</p>
