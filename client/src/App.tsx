@@ -16,10 +16,9 @@ import Privacy from "./pages/Privacy";
 import ThankYou from "./pages/ThankYou";
 import Featured from "./pages/Featured";
 import Bootcamps from '@/pages/Bootcamps';
-import Careers from "./pages/Careers";
 import Blog from "./pages/Blog";
 import Community from "./pages/Community";
-import Sponsor from "@/pages/Sponsor";
+
 import Collaborate from "./pages/Collaborate";
 import SummerPrograms2025 from './pages/BlogPost/SummerPrograms2025';
 import MaximallyLeangap2025 from './pages/BlogPost/MaximallyLeangap2025';
@@ -50,7 +49,6 @@ import TeenEntrepreneursIndia from "@/pages/BlogPost/TeenEntrepreneursIndia";
 import YoutubeVsStartup from "@/pages/BlogPost/YoutubeVsStartup";
 import TopCareersForTeens from "@/pages/BlogPost/TopCareersForTeens";
 import WallOfProgressiveSchools from "@/pages/WallOfProgressiveSchools";
-import Hackathon from "./pages/Hackathon";
 import Events from "./pages/Events";
 import MakeathonForFuture from './pages/BlogPost/MakeathonForFuture';
 import StartupsThroughMaximally from './pages/BlogPost/StartupsThroughMaximally';
@@ -115,7 +113,7 @@ const App = () => {
             <Route path="/bootcamps" element={<Navigate to="/" replace />} />
             <Route path="/makeathon" element={<Makeathon />} />
             {/* Team route removed */}
-            <Route path="/careers" element={<Careers />} />
+
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
             <Route path="/blog/summer-bootcamps-2025" element={<SummerBootcamps2025 />} />
@@ -154,7 +152,7 @@ const App = () => {
             <Route path="/collaborate" element={<Collaborate />} />
             <Route path="/join-us" element={<JoinUs />} />
             <Route path="/featured" element={<Featured />} />
-            <Route path="/hackathon" element={<Hackathon />} />
+
             <Route path="/events" element={<Events />} />
           <Route path="/blog/makeathon-for-future" element={<MakeathonForFuture />} />
           <Route path="/blog/startups-through-maximally" element={<StartupsThroughMaximally />} />

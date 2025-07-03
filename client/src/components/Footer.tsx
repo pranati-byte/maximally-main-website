@@ -34,7 +34,7 @@ const Footer = () => {
               <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Past Hackathons</Link></li>
               <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Upcoming Challenges</Link></li>
               <li><Link to="/makeathon" className="hover:text-red-400 transition-colors block retro-underline">Archived: Summer 2025</Link></li>
-              <li><Link to="/hackathon" className="hover:text-red-400 transition-colors block retro-underline">Innovation Sprints</Link></li>
+
             </ul>
           </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
               <li><Link to="/blog" className="hover:text-blue-400 transition-colors block retro-underline">About Maximally</Link></li>
               <li><Link to="/blog" className="hover:text-blue-400 transition-colors block retro-underline">Blog</Link></li>
               <li><Link to="/contact" className="hover:text-blue-400 transition-colors block retro-underline">Contact</Link></li>
-              <li><Link to="/careers" className="hover:text-blue-400 transition-colors block retro-underline">Join Our Team</Link></li>
+
             </ul>
           </div>
 
@@ -71,7 +71,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4 font-jetbrains text-black">
               <li><Link to="/support" className="hover:text-purple-400 transition-colors block retro-underline">Help Center</Link></li>
-              <li><Link to="/sponsor" className="hover:text-purple-400 transition-colors block retro-underline">Sponsor Program</Link></li>
+
               <li><Link to="/privacy" className="hover:text-purple-400 transition-colors block retro-underline">Privacy Policy</Link></li>
               <li><Link to="/terms" className="hover:text-purple-400 transition-colors block retro-underline">Terms of Service</Link></li>
             </ul>
