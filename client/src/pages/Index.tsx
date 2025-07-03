@@ -100,7 +100,7 @@ const Index = () => {
               </p>
 
               <p className="font-jetbrains text-base sm:text-lg text-maximally-black/60 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1.5s]">
-                No lectures. No theory. Just high-pressure innovation events for teens who want to launch, compete, and grow fast.
+                We host global hackathons that bring together ambitious teens to build, launch, and compete in innovation challenges worldwide.
               </p>
 
               {/* CTAs */}
@@ -137,10 +137,10 @@ const Index = () => {
             
             <div className="max-w-3xl mx-auto mb-12">
               <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/80 mb-6">
-                We host the world's most rebellious startup events for teenagers.
+                We host the world's most innovative hackathons for teenagers.
               </p>
               <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
-                High-stakes hackathons, chaos sprints, and public launch challenges — built for Gen Z.
+                Global hackathon events where teens build, launch, and compete with real solutions — designed for the next generation of innovators.
               </p>
             </div>
 
@@ -206,10 +206,10 @@ const Index = () => {
             
             <div className="max-w-3xl mx-auto mb-12">
               <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/80 mb-6">
-                We collaborate with schools, creators, and brands to run youth-focused hackathons that inspire bold execution and real proof of work.
+                We partner with schools, creators, and brands to host transformative hackathons that inspire teen innovation and real-world impact.
               </p>
               <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
-                If you want to empower the next generation of builders — let's talk.
+                Ready to host a hackathon that empowers the next generation of builders? Let's collaborate.
               </p>
             </div>
 
