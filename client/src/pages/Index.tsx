@@ -110,12 +110,8 @@ const Index = () => {
                 </div>
               </div>
 
-              <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-3xl mx-auto mb-4 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_2s]">
+              <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-3xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_2s]">
                 A global innovation league that hosts high-stakes hackathons for ambitious builders across disciplines.
-              </p>
-
-              <p className="font-jetbrains text-base sm:text-lg text-maximally-black/60 max-w-2xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1.5s]">
-                Whether you're an engineer, designer, founder, or creator — if you're ready to build, we have something for you.
               </p>
 
               {/* CTAs */}
