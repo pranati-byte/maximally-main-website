@@ -1,5 +1,5 @@
 
-import { ArrowLeft, CheckCircle2, Brain, MessageCircle, Lightbulb, HelpCircle } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Brain, MessagesSquare, Lightbulb, HelpCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -49,7 +49,7 @@ const ThankYou = () => {
 
             <div className="pixel-border bg-white/80 p-6 rounded-xl">
               <div className="flex items-center gap-3 mb-3">
-                <MessageCircle className="h-5 w-5 text-green-500" />
+                <MessagesSquare className="h-5 w-5 text-green-500" />
                 <h3 className="font-press-start text-sm">Keep it Chill</h3>
               </div>
               <p className="font-jetbrains text-sm text-maximally-black/80">

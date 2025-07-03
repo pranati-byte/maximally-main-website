@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
-import WhatsAppButton from "@/components/WhatsAppButton";
+
 import Index from "./pages/Index";
 import Makeathon from "./pages/Makeathon";
 import Contact from "./pages/Contact";
@@ -106,7 +106,7 @@ const App = () => {
         <Sonner />
         <Router>
           <ScrollToTop />
-          <WhatsAppButton />
+
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />

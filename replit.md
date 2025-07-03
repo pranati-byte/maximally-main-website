@@ -47,8 +47,8 @@ The application follows a modern full-stack monolith approach with clear separat
 
 ### User Journey
 1. **Discovery**: Landing page with SEO-optimized content and clear value proposition
-2. **Application**: Tally form integration for bootcamp applications
-3. **Community**: WhatsApp and Discord integration for ongoing engagement
+2. **Application**: Tally form integration for event applications
+3. **Community**: Discord integration for ongoing engagement
 4. **Content**: Blog system with detailed guides and success stories
 
 ### Content Management

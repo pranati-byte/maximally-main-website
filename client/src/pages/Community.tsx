@@ -1,4 +1,4 @@
-import { ArrowRight, Lock, Star, Users, Zap, MessageCircle, MessagesSquare } from 'lucide-react';
+import { ArrowRight, Lock, Star, Users, Zap, MessagesSquare } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { Card, CardContent } from '@/components/ui/card';
 import Footer from '@/components/Footer';
@@ -22,27 +22,13 @@ const Community = () => {
             <p className="font-jetbrains text-lg md:text-xl mb-8 text-white/80">
               Join 1000+ ambitious builders creating the future, worldwide
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <div className="pixel-border p-6 bg-gradient-to-br from-green-500/20 to-green-600/20 hover:from-green-500/30 hover:to-green-600/30 transition-all group">
-                <div className="mb-4">
-                  <MessageCircle className="h-12 w-12 mx-auto text-green-400 group-hover:scale-110 transition-transform" />
+            <div className="flex justify-center max-w-md mx-auto">
+              <div className="pixel-border p-8 bg-gradient-to-br from-[#5865F2]/20 to-[#7289DA]/20 hover:from-[#5865F2]/30 hover:to-[#7289DA]/30 transition-all group w-full">
+                <div className="mb-6">
+                  <MessagesSquare className="h-16 w-16 mx-auto text-[#5865F2] group-hover:scale-110 transition-transform" />
                 </div>
-                <h3 className="font-press-start text-xl mb-3">WhatsApp Group</h3>
-                <p className="font-jetbrains mb-4 text-white/70">Quick updates & daily interactions with the community</p>
-                <button 
-                  onClick={() => window.location.href = 'https://chat.whatsapp.com/HUHLmjbQCMRJAMtdpdgKgt'}
-                  className="pixel-button bg-green-500 text-white w-full group-hover:scale-105 transition-transform"
-                >
-                  Join WhatsApp →
-                </button>
-              </div>
-
-              <div className="pixel-border p-6 bg-gradient-to-br from-[#5865F2]/20 to-[#7289DA]/20 hover:from-[#5865F2]/30 hover:to-[#7289DA]/30 transition-all group">
-                <div className="mb-4">
-                  <MessagesSquare className="h-12 w-12 mx-auto text-[#5865F2] group-hover:scale-110 transition-transform" />
-                </div>
-                <h3 className="font-press-start text-xl mb-3">Discord Server</h3>
-                <p className="font-jetbrains mb-4 text-white/70">Deeper discussions & structured learning channels</p>
+                <h3 className="font-press-start text-xl mb-4 text-center">Discord Server</h3>
+                <p className="font-jetbrains mb-6 text-white/70 text-center">Join thousands of builders, creators, and innovators from around the globe</p>
                 <button 
                   onClick={() => window.location.href = 'https://discord.gg/S2YyGtBWKa'}
                   className="pixel-button bg-[#5865F2] text-white w-full group-hover:scale-105 transition-transform"
@@ -104,7 +90,7 @@ const Community = () => {
                 onClick={() => window.location.href = 'https://discord.gg/S2YyGtBWKa'}
                 className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 hover:scale-105 transition-transform"
               >
-                <MessageCircle className="h-4 w-4" />
+                <MessagesSquare className="h-4 w-4" />
                 Join Maximally Club
               </button>
             </div>
