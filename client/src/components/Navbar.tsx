@@ -26,7 +26,7 @@ const Navbar = () => {
     { path: "/community", label: "Community", color: "#FF2B2B" },
     { path: "/blog", label: "Blog", color: "#FFCB47" },
     { path: "/collaborate", label: "Collaborate", color: "#E50914" },
-    { path: "/join-us", label: "Join Us", color: "#FFD700" },
+
     { path: "/contact", label: "Contact", color: "#FF2B2B" }
   ];
 
@@ -69,14 +69,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button and Join Button */}
-          <div className="flex items-center gap-3 md:hidden">
-            <Link
-              to="/join-us"
-              className="bg-maximally-red hover:bg-maximally-yellow hover:text-black text-white px-4 py-2 rounded-lg font-jetbrains text-sm transition-all duration-200"
-            >
-              Join Us
-            </Link>
+          {/* Mobile Menu Button */}
+          <div className="flex items-center md:hidden">
             <button 
               className="text-maximally-black hover:text-maximally-red transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}

@@ -27,7 +27,7 @@ import RealWorldSkills2025 from './pages/BlogPost/RealWorldSkills2025';
 import SchoolVsLife2025 from './pages/BlogPost/SchoolVsLife2025';
 import OnlineCourses2025 from './pages/BlogPost/OnlineCourses2025';
 import Internships2025 from './pages/BlogPost/Internships2025';
-import JoinUs from './pages/JoinUs';
+
 import NotFound from '@/pages/NotFound';
 import TeenBusiness from './pages/BlogPost/TeenBusiness';
 import SummerBootcamps2025 from './pages/BlogPost/SummerBootcamps2025';
@@ -150,7 +150,7 @@ const App = () => {
 
             <Route path="/community" element={<Community />} />
             <Route path="/collaborate" element={<Collaborate />} />
-            <Route path="/join-us" element={<JoinUs />} />
+
             <Route path="/featured" element={<Featured />} />
 
             <Route path="/events" element={<Events />} />
