@@ -10,8 +10,8 @@ const About = () => {
   return (
     <div className="min-h-screen pt-20">
       <SEO 
-        title="About Maximally | Where Young Innovators Are Born"
-        description="Join India's exclusive community for ambitious teens. Learn entrepreneurship, AI, and innovation through our transformative bootcamps."
+        title="About Maximally | Where Global Innovators Are Born"
+        description="Join the global community for ambitious builders. Learn entrepreneurship, AI, and innovation through our transformative hackathons."
       />
 
       {/* Hero Section */}
@@ -19,7 +19,7 @@ const About = () => {
         <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
         <div className="container mx-auto px-4 text-center relative">
           <h1 className="font-press-start text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-            <span className="bg-[#39FF14]/20 px-2">Maximally:</span> Where Young{" "}
+            <span className="bg-[#39FF14]/20 px-2">Maximally:</span> Where Global{" "}
             <span className="bg-[#FF5F5F]/20 px-2">Innovators</span> Are Born
           </h1>
           <p className="font-jetbrains text-white/80 text-xl md:text-2xl mb-8">
@@ -37,8 +37,8 @@ const About = () => {
             Maximally isn't just an{" "}
             <span className="bg-[#39FF14]/20 px-2">educational platform</span>;
             it's a{" "}
-            <span className="bg-[#FF5F5F]/20 px-2">launchpad</span> for the next
-            generation of leaders.
+            <span className="bg-[#FF5F5F]/20 px-2">launchpad</span> for global
+            innovators and leaders.
           </p>
         </div>
       </section>
@@ -46,7 +46,7 @@ const About = () => {
       {/* Bootcamp Experience */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="font-press-start text-3xl mb-12 text-center">The Bootcamp Experience</h2>
+          <h2 className="font-press-start text-3xl mb-12 text-center">The Hackathon Experience</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
               <div className="text-4xl mb-4">🎓</div>

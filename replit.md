@@ -99,6 +99,14 @@ The application follows a modern full-stack monolith approach with clear separat
   - Updated all pages to reflect hackathon-only focus (no more bootcamps/courses)
   - Updated Footer navigation and SEO to align with new positioning
   - Archived Summer 2025 Makeathon page with proper banners and redirects
+  - **MESSAGING UPDATE**: Replaced all teen-specific language with inclusive builder-focused messaging
+    - Updated Homepage: "for builders worldwide" instead of "for teen builders"
+    - Updated Events page: "ambitious builders across all disciplines" 
+    - Updated Community page: "1000+ active builders" instead of "entrepreneurs"
+    - Updated About page: "Global Innovators" instead of "Young Innovators"
+    - Updated Hackathon page: "Global Innovation Challenge" instead of "Teen Hackathon"
+    - Updated all SEO titles and descriptions to remove teen-specific language
+    - Navigation cleaned up: removed /hackathon, /sponsor, /careers routes
 - June 15, 2025. Initial setup
 
 ## User Preferences

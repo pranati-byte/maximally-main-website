@@ -46,7 +46,7 @@ const Index = () => {
   return (
     <>
       <SEO 
-        title="Maximally | The Global Hackathon League for Teen Builders" 
+        title="Maximally | The Global Hackathon League for Builders" 
         description="Maximally hosts execution-first hackathons and challenges for global builders to showcase real work and get discovered. Join engineers, founders, and creatives worldwide." 
         keywords="global hackathons, innovation challenges, builder community, startup competitions, coding competitions, entrepreneurship platform" 
         canonicalUrl="https://maximally.in" 
@@ -168,7 +168,7 @@ const Index = () => {
                 <div className="bg-black/40 p-8 rounded-lg border-2 border-[#39FF14] hover:scale-105 transform transition-all duration-300">
                   <Globe className="h-12 w-12 text-[#39FF14] mx-auto mb-4" />
                   <h3 className="font-press-start text-2xl text-white mb-2">Global</h3>
-                  <p className="font-jetbrains text-white/80">Borderless innovation for teen builders worldwide</p>
+                  <p className="font-jetbrains text-white/80">Borderless innovation for builders worldwide</p>
                 </div>
               </div>
               
@@ -176,7 +176,7 @@ const Index = () => {
                 <div className="bg-black/40 p-8 rounded-lg border-2 border-[#00ff99] hover:scale-105 transform transition-all duration-300">
                   <Code className="h-12 w-12 text-[#00ff99] mx-auto mb-4" />
                   <h3 className="font-press-start text-2xl text-white mb-2">Digital</h3>
-                  <p className="font-jetbrains text-white/80">Internet-native events for the digital generation</p>
+                  <p className="font-jetbrains text-white/80">Internet-native events for digital builders</p>
                 </div>
               </div>
               

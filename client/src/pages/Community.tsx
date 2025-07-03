@@ -89,7 +89,7 @@ const Community = () => {
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-2">
                   <Users className="h-5 w-5 text-maximally-red" />
-                  <span>1000+ active entrepreneurs</span>
+                  <span>1000+ active builders</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Star className="h-5 w-5 text-maximally-blue" />

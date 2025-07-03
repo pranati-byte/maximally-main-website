@@ -10,7 +10,7 @@ const Hackathon = () => {
   return (
     <>
       <SEO
-        title="Maximally Hack: Future Founders Quest | Teen Hackathon India"
+        title="Maximally Hack: Future Founders Quest | Global Innovation Challenge"
         description="Join one of India's most ambitious innovation challenges. 48 hours of building, innovating, and launching the future. Open to coders, creators, and community builders."
         keywords="hackathon India, innovation challenge, coding competition, future founders, startup competition"
       />
