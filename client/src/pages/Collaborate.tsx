@@ -6,6 +6,8 @@ import Footer from '@/components/Footer';
 const Collaborate = () => {
   const [openSections, setOpenSections] = useState<string[]>([]);
   const [openSponsorshipItems, setOpenSponsorshipItems] = useState<string[]>([]);
+  const [openStrategicItems, setOpenStrategicItems] = useState<string[]>([]);
+  const [openCommunityItems, setOpenCommunityItems] = useState<string[]>([]);
 
   const toggleSection = (sectionId: string) => {
     setOpenSections(prev => 
@@ -17,6 +19,22 @@ const Collaborate = () => {
 
   const toggleSponsorshipItem = (itemId: string) => {
     setOpenSponsorshipItems(prev => 
+      prev.includes(itemId) 
+        ? prev.filter(id => id !== itemId)
+        : [...prev, itemId]
+    );
+  };
+
+  const toggleStrategicItem = (itemId: string) => {
+    setOpenStrategicItems(prev => 
+      prev.includes(itemId) 
+        ? prev.filter(id => id !== itemId)
+        : [...prev, itemId]
+    );
+  };
+
+  const toggleCommunityItem = (itemId: string) => {
+    setOpenCommunityItems(prev => 
       prev.includes(itemId) 
         ? prev.filter(id => id !== itemId)
         : [...prev, itemId]
@@ -104,6 +122,178 @@ Ideal for: Communities, publishers, niche brands, personal brands.`,
     }
   ];
 
+  const strategicItems = [
+    {
+      id: 'cobranded',
+      title: '🎯 Co-branded Hackathon Tracks',
+      description: `Design a challenge, theme, or industry track under your brand inside our upcoming hackathons — for example:
+
+"Zerodha Fintech Sprint"
+"OpenAI for India Track"
+"Zomato x Maximally FoodTech Challenge"
+
+We'll give your track its own:
+
+• Branding inside the event
+• Dedicated reel or explainer
+• Finalist shortlisting support
+• Judging panel slot
+
+Ideal for: Product-first startups, industry leaders, innovation arms of big brands.`,
+      idealFor: 'Product-first startups, industry leaders, innovation arms of big brands'
+    },
+    {
+      id: 'design',
+      title: '🎨 Design / Content Collabs',
+      description: `We team up with creators, studios, or in-house content teams to build:
+
+• Short-form reels or docu-style videos
+• Design packs or storytelling kits for challenges
+• Viral recap or founder story formats
+
+If you're building something cool, we'll turn it into a creative sprint and tell your story while our builders remix it in wild, Gen Z-native ways.
+
+Ideal for: Studios, creator tools, youth marketing teams, B2C brands.`,
+      idealFor: 'Studios, creator tools, youth marketing teams, B2C brands'
+    },
+    {
+      id: 'partnered',
+      title: '🤝 Partnered Events',
+      description: `Want to run your own hackathon or startup sprint, but with Maximally's energy, reach, and systems?
+
+We'll co-host it under your banner or inside your community, bringing:
+
+• Event planning + execution
+• Builder pipeline + applications
+• Judges, mentors, and challenge design
+• Full content and brand rollout
+
+You bring the vision — we make it real.
+
+Ideal for: Schools, student orgs, youth platforms, startup accelerators.`,
+      idealFor: 'Schools, student orgs, youth platforms, startup accelerators'
+    },
+    {
+      id: 'pilots',
+      title: '🧪 Product Pilots',
+      description: `Let teen builders test your product in a real-world challenge.
+
+We'll build a track that uses your:
+
+• API or SDK
+• SaaS tool or browser extension
+• AI workflow or dev toolkit
+
+You'll get:
+
+• Real usage data + builds
+• Screenshots, testimonials, and feedback
+• Brand love and discoverability
+
+Ideal for: Early-stage startups, devtools, AI tools, and new launches.`,
+      idealFor: 'Early-stage startups, devtools, AI tools, and new launches'
+    },
+    {
+      id: 'storytelling',
+      title: '📖 Storytelling Exchange',
+      description: `Got a powerful founder story, product journey, or campaign you want shared?
+
+We'll:
+
+• Feature you on our podcast or content reels
+• Turn your story into a creative challenge
+• Share it with our builders for remixing
+• Cross-promote it in our newsletters + community drops
+
+You get reach + cultural relevance; we get content + inspiration.
+
+Ideal for: Founders, creators, journalists, indie brands.`,
+      idealFor: 'Founders, creators, journalists, indie brands'
+    }
+  ];
+
+  const communityItems = [
+    {
+      id: 'crosspromo',
+      title: '📣 Cross-Promo Collabs',
+      description: `You post about us, we post about you.
+Simple, high-trust collaborations where we:
+
+• Promote your org during our hackathons
+• Share mutual event announcements
+• Highlight cool projects, newsletters, or pages
+
+You reach thousands of Gen Z founders and creators. We build community reach, together.
+
+Ideal for: Instagram communities, youth media pages, Gen Z ecosystems, edtech pages, and tool platforms.`,
+      idealFor: 'Instagram communities, youth media pages, Gen Z ecosystems, edtech pages, and tool platforms'
+    },
+    {
+      id: 'accessswaps',
+      title: '🔄 Community Access Swaps',
+      description: `We give your team mod or guest-posting access to our Discord, and you return the same.
+
+Together, we:
+
+• Promote key announcements or product drops
+• Organize live AMAs or Q&As
+• Host chill community takeovers
+
+This is about trust, alignment, and mutual audience love — no fluff.
+
+Ideal for: Niche Discord servers, early-stage DAOs, startup clubs, youth-led groups.`,
+      idealFor: 'Niche Discord servers, early-stage DAOs, startup clubs, youth-led groups'
+    },
+    {
+      id: 'discord',
+      title: '🎮 Discord Server Integrations',
+      description: `We can run micro-events, cross-server challenges, or even pin your prompts into our hackathon ecosystem.
+
+Ideas include:
+
+• Shared leaderboard sprints
+• "Mini-Hack" rooms across servers
+• Public builder jam collabs
+
+We treat Discord as infrastructure. Let's wire up something wild.
+
+Ideal for: Hackathon clubs, open-source projects, student tech forums, AI hobbyist spaces.`,
+      idealFor: 'Hackathon clubs, open-source projects, student tech forums, AI hobbyist spaces'
+    },
+    {
+      id: 'infrastructure',
+      title: '🏗️ Shared Hackathon Infrastructure',
+      description: `We can lend you our:
+
+• Judging templates
+• Event structures
+• Track ideas
+• Submission frameworks
+
+Or you lend us yours.
+We also co-create joint makeathons or run formats together — your squad + our format.
+
+Ideal for: Hackathon organizers, student clubs, or regional startup programs.`,
+      idealFor: 'Hackathon organizers, student clubs, or regional startup programs'
+    },
+    {
+      id: 'hosting',
+      title: '🎪 Event Hosting on Our Platform',
+      description: `Have an event but need Gen Z energy, structure, or reach?
+
+We can host your event inside the Maximally ecosystem — as:
+
+• A "Lab" track in a larger hackathon
+• A standalone weekend jam
+• A brand collab sprint
+
+We handle execution, community, and visibility — you bring the theme.
+
+Ideal for: Brands, SaaS tools, creator collectives, product teams, NGOs.`,
+      idealFor: 'Brands, SaaS tools, creator collectives, product teams, NGOs'
+    }
+  ];
+
   const collaborationCategories = [
     {
       id: 'sponsorship',
@@ -117,26 +307,14 @@ Ideal for: Communities, publishers, niche brands, personal brands.`,
       title: '🚀 Strategic Collaborations',
       bgColor: 'bg-[#FFD700]/10',
       borderColor: 'border-[#FFD700]',
-      items: [
-        'Co-branded Hackathon Tracks',
-        'Design/Content Collabs',
-        'Partnered Events',
-        'Product Pilots',
-        'Storytelling Exchange'
-      ]
+      items: strategicItems.map(item => item.title)
     },
     {
       id: 'community',
       title: '🌐 Community & Platform Partnerships',
       bgColor: 'bg-[#39FF14]/10',
       borderColor: 'border-[#39FF14]',
-      items: [
-        'Cross-Promo Collabs',
-        'Community Access Swaps',
-        'Discord Server Integrations',
-        'Shared Hackathon Infrastructure',
-        'Event Hosting on Our Platform'
-      ]
+      items: communityItems.map(item => item.title)
     },
     {
       id: 'creator',
@@ -283,6 +461,110 @@ Ideal for: Communities, publishers, niche brands, personal brands.`,
                               <p className="font-jetbrains text-black/70 mt-3 text-sm">
                                 We'll send you a sponsor deck, available tracks, and custom collab ideas.
                               </p>
+                            </div>
+                          </div>
+                        </div>
+                      ) : category.id === 'strategic' ? (
+                        <div className="space-y-4 mt-4">
+                          {strategicItems.map((item) => (
+                            <div key={item.id} className="pixel-border bg-white/50 border-gray-300">
+                              <button
+                                onClick={() => toggleStrategicItem(item.id)}
+                                className="w-full p-4 text-left flex items-center justify-between hover:bg-black/5 transition-colors"
+                              >
+                                <span className="font-jetbrains text-lg text-black/90 font-medium">
+                                  {item.title}
+                                </span>
+                                {openStrategicItems.includes(item.id) ? (
+                                  <ChevronUp className="h-5 w-5 text-black/70" />
+                                ) : (
+                                  <ChevronDown className="h-5 w-5 text-black/70" />
+                                )}
+                              </button>
+                              
+                              {openStrategicItems.includes(item.id) && (
+                                <div className="px-4 pb-4 border-t border-gray-200">
+                                  <div className="mt-3 space-y-3">
+                                    <div className="font-jetbrains text-base text-black/80 whitespace-pre-line leading-relaxed">
+                                      {item.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                          
+                          {/* Strategic CTA */}
+                          <div className="mt-6 p-4 pixel-border bg-gradient-to-r from-[#FFD700]/10 to-[#E50914]/10 border-[#FFD700]">
+                            <div className="text-center">
+                              <h3 className="font-press-start text-lg mb-3 text-black">
+                                📣 Have a wild idea or campaign in mind?
+                              </h3>
+                              <p className="font-jetbrains text-base text-black/80 mb-4">
+                                Let's co-create something that gets people talking.
+                              </p>
+                              <div className="space-y-2 font-jetbrains text-base">
+                                <div className="flex items-center justify-center gap-2">
+                                  <Mail className="h-4 w-4 text-[#FFD700]" />
+                                  <span>💬 Reach out at <a href="mailto:hello@maximally.in" className="text-[#FFD700] hover:text-[#E50914] transition-colors underline font-medium">hello@maximally.in</a></span>
+                                </div>
+                                <div className="flex items-center justify-center gap-2">
+                                  <MessageSquare className="h-4 w-4 text-[#FFD700]" />
+                                  <span>📲 DM <a href="https://instagram.com/maximally.in" target="_blank" rel="noopener noreferrer" className="text-[#FFD700] hover:text-[#E50914] transition-colors underline font-medium">@maximally.in</a></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ) : category.id === 'community' ? (
+                        <div className="space-y-4 mt-4">
+                          {communityItems.map((item) => (
+                            <div key={item.id} className="pixel-border bg-white/50 border-gray-300">
+                              <button
+                                onClick={() => toggleCommunityItem(item.id)}
+                                className="w-full p-4 text-left flex items-center justify-between hover:bg-black/5 transition-colors"
+                              >
+                                <span className="font-jetbrains text-lg text-black/90 font-medium">
+                                  {item.title}
+                                </span>
+                                {openCommunityItems.includes(item.id) ? (
+                                  <ChevronUp className="h-5 w-5 text-black/70" />
+                                ) : (
+                                  <ChevronDown className="h-5 w-5 text-black/70" />
+                                )}
+                              </button>
+                              
+                              {openCommunityItems.includes(item.id) && (
+                                <div className="px-4 pb-4 border-t border-gray-200">
+                                  <div className="mt-3 space-y-3">
+                                    <div className="font-jetbrains text-base text-black/80 whitespace-pre-line leading-relaxed">
+                                      {item.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                          
+                          {/* Community CTA */}
+                          <div className="mt-6 p-4 pixel-border bg-gradient-to-r from-[#39FF14]/10 to-[#FFD700]/10 border-[#39FF14]">
+                            <div className="text-center">
+                              <h3 className="font-press-start text-lg mb-3 text-black">
+                                📣 Run a Discord? Own a niche page? Lead a club?
+                              </h3>
+                              <p className="font-jetbrains text-base text-black/80 mb-4">
+                                We'd love to swap value, visibility, or vibes.
+                              </p>
+                              <div className="space-y-2 font-jetbrains text-base">
+                                <div className="flex items-center justify-center gap-2">
+                                  <Mail className="h-4 w-4 text-[#39FF14]" />
+                                  <span>💬 Hit us at <a href="mailto:hello@maximally.in" className="text-[#39FF14] hover:text-[#FFD700] transition-colors underline font-medium">hello@maximally.in</a></span>
+                                </div>
+                                <div className="flex items-center justify-center gap-2">
+                                  <MessageSquare className="h-4 w-4 text-[#39FF14]" />
+                                  <span>📲 DM <a href="https://instagram.com/maximally.in" target="_blank" rel="noopener noreferrer" className="text-[#39FF14] hover:text-[#FFD700] transition-colors underline font-medium">@maximally.in</a></span>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
