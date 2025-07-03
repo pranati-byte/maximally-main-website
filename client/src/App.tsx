@@ -112,7 +112,7 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/bootcamps" element={<Navigate to="/makeathon" replace />} />
+            <Route path="/bootcamps" element={<Navigate to="/" replace />} />
             <Route path="/makeathon" element={<Makeathon />} />
             {/* Team route removed */}
             <Route path="/careers" element={<Careers />} />

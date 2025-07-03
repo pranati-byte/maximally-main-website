@@ -93,6 +93,7 @@ The application follows a modern full-stack monolith approach with clear separat
 
 ## Changelog
 
+- July 3, 2025. Archived the Makeathon page for Summer 2025 edition - removed from navigation, added archive banners, updated CTAs to redirect to homepage, changed copy to past tense
 - June 15, 2025. Initial setup
 
 ## User Preferences
