@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 
 const Collaborate = () => {
   const [openSections, setOpenSections] = useState<string[]>([]);
+  const [openSponsorshipItems, setOpenSponsorshipItems] = useState<string[]>([]);
 
   const toggleSection = (sectionId: string) => {
     setOpenSections(prev => 
@@ -14,19 +15,102 @@ const Collaborate = () => {
     );
   };
 
+  const toggleSponsorshipItem = (itemId: string) => {
+    setOpenSponsorshipItems(prev => 
+      prev.includes(itemId) 
+        ? prev.filter(id => id !== itemId)
+        : [...prev, itemId]
+    );
+  };
+
+  const sponsorshipItems = [
+    {
+      id: 'cash',
+      title: '💰 Cash Sponsorship',
+      description: `Back Maximally hackathons with cash support to fuel operations, rewards, and outreach.
+We offer tiered sponsorship packages (₹10K–₹2L+) with clear benefits — including:
+
+• Logo placement across event materials and social content
+• Named track or challenge (e.g. "The [YourBrand] Build Sprint")
+• Co-branded reels and shoutouts
+• Speaking/judging opportunities
+• Access to resume books, MVPs, and our top teen builders
+
+Ideal for: VC firms, ed-techs, dev tools, talent scouts, D2C brands, impact orgs.`,
+      idealFor: 'VC firms, ed-techs, dev tools, talent scouts, D2C brands, impact orgs'
+    },
+    {
+      id: 'tool',
+      title: '🛠️ Tool Credits / Product Sponsorship',
+      description: `If you're a dev tool, SaaS product, or platform, you can sponsor Maximally with:
+
+• Free credits (e.g. Replit, Notion, Figma)
+• Pro accounts for hackers
+• API access for MVP builds
+
+We'll integrate your product into our event stack, recommend it to teen founders, and give you:
+
+• Organic usage feedback
+• Screenshots + testimonials
+• Mentions in our toolkit, Discord, and content
+
+Ideal for: Startup tools, AI products, productivity platforms, infra APIs.`,
+      idealFor: 'Startup tools, AI products, productivity platforms, infra APIs'
+    },
+    {
+      id: 'prize',
+      title: '🏅 Prize Sponsorship',
+      description: `Offer a prize to winning teams — it could be:
+
+• Cash awards
+• Internships or fast-track interviews
+• Free access to premium plans
+• Swag, gadgets, or merch
+• Gift cards or learning credits
+
+We'll shout you out on social, tag you in winner posts, and integrate your brand into the ceremony.
+
+Ideal for: Youth platforms, hiring partners, creators, startup brands.`,
+      idealFor: 'Youth platforms, hiring partners, creators, startup brands'
+    },
+    {
+      id: 'mentor',
+      title: '👨‍🏫 Mentor / Expert Sponsorship',
+      description: `Nominate your team members, founders, or community experts to:
+
+• Judge our hackathons
+• Run AMA sessions
+• Join Discord mentor threads
+
+We curate the most ambitious teen founders — mentoring them builds goodwill, brand trust, and can lead to hiring, investments, or viral content.
+
+Ideal for: Founder-led startups, talent teams, tech leaders, product thinkers.`,
+      idealFor: 'Founder-led startups, talent teams, tech leaders, product thinkers'
+    },
+    {
+      id: 'amplification',
+      title: '📢 Amplification Sponsorship',
+      description: `Use your platform (social, newsletter, media) to amplify Maximally before or after our hackathons.
+We'll return the love with:
+
+• Shoutouts in our builder community
+• Cross-promo content
+• Partner recognition on reels and recap docs
+
+This is a no-cash-needed way to support teen innovation and earn long-term ecosystem cred.
+
+Ideal for: Communities, publishers, niche brands, personal brands.`,
+      idealFor: 'Communities, publishers, niche brands, personal brands'
+    }
+  ];
+
   const collaborationCategories = [
     {
       id: 'sponsorship',
       title: '🏆 Sponsorship Collaborations',
       bgColor: 'bg-[#E50914]/10',
       borderColor: 'border-[#E50914]',
-      items: [
-        'Cash Sponsorship',
-        'Tool Credits / Product Sponsorship',
-        'Prize Sponsorship',
-        'Mentor/Expert Sponsorship',
-        'Amplification Sponsorship'
-      ]
+      items: sponsorshipItems.map(item => item.title)
     },
     {
       id: 'strategic',
@@ -150,17 +234,71 @@ const Collaborate = () => {
                   
                   {openSections.includes(category.id) && (
                     <div className="px-6 pb-6 border-t border-gray-200">
-                      <ul className="space-y-3 mt-4">
-                        {category.items.map((item, index) => (
-                          <li 
-                            key={index}
-                            className="font-jetbrains text-lg text-black/80 flex items-center gap-3"
-                          >
-                            <span className="w-2 h-2 bg-black/40 pixel-border-sm"></span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+                      {category.id === 'sponsorship' ? (
+                        <div className="space-y-4 mt-4">
+                          {sponsorshipItems.map((item) => (
+                            <div key={item.id} className="pixel-border bg-white/50 border-gray-300">
+                              <button
+                                onClick={() => toggleSponsorshipItem(item.id)}
+                                className="w-full p-4 text-left flex items-center justify-between hover:bg-black/5 transition-colors"
+                              >
+                                <span className="font-jetbrains text-lg text-black/90 font-medium">
+                                  {item.title}
+                                </span>
+                                {openSponsorshipItems.includes(item.id) ? (
+                                  <ChevronUp className="h-5 w-5 text-black/70" />
+                                ) : (
+                                  <ChevronDown className="h-5 w-5 text-black/70" />
+                                )}
+                              </button>
+                              
+                              {openSponsorshipItems.includes(item.id) && (
+                                <div className="px-4 pb-4 border-t border-gray-200">
+                                  <div className="mt-3 space-y-3">
+                                    <div className="font-jetbrains text-base text-black/80 whitespace-pre-line leading-relaxed">
+                                      {item.description}
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                          
+                          {/* Sponsorship CTA */}
+                          <div className="mt-6 p-4 pixel-border bg-gradient-to-r from-[#E50914]/10 to-[#FFD700]/10 border-[#E50914]">
+                            <div className="text-center">
+                              <h3 className="font-press-start text-lg mb-3 text-black">
+                                📣 Interested in becoming a sponsor?
+                              </h3>
+                              <div className="space-y-2 font-jetbrains text-base">
+                                <div className="flex items-center justify-center gap-2">
+                                  <Mail className="h-4 w-4 text-[#E50914]" />
+                                  <span>💬 Email us at <a href="mailto:hello@maximally.in" className="text-[#E50914] hover:text-[#FFD700] transition-colors underline font-medium">hello@maximally.in</a></span>
+                                </div>
+                                <div className="flex items-center justify-center gap-2">
+                                  <MessageSquare className="h-4 w-4 text-[#E50914]" />
+                                  <span>📲 DM <a href="https://instagram.com/maximally.in" target="_blank" rel="noopener noreferrer" className="text-[#E50914] hover:text-[#FFD700] transition-colors underline font-medium">@maximally.in</a></span>
+                                </div>
+                              </div>
+                              <p className="font-jetbrains text-black/70 mt-3 text-sm">
+                                We'll send you a sponsor deck, available tracks, and custom collab ideas.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        <ul className="space-y-3 mt-4">
+                          {category.items.map((item, index) => (
+                            <li 
+                              key={index}
+                              className="font-jetbrains text-lg text-black/80 flex items-center gap-3"
+                            >
+                              <span className="w-2 h-2 bg-black/40 pixel-border-sm"></span>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   )}
                 </div>
