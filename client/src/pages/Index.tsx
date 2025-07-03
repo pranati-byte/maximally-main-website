@@ -17,7 +17,7 @@ const Index = () => {
   };
   
   const [text, setText] = useState('');
-  const fullText = 'Welcome to the Maximally League';
+  const fullText = 'We Host Hackathons';
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
@@ -95,7 +95,22 @@ const Index = () => {
                 <div className="absolute inset-0 minecraft-glow"></div>
               </h1>
 
-              <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-3xl mx-auto mb-4 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1s]">
+              {/* Floating Subtext with Twist */}
+              <div className="relative mb-8 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1.5s]">
+                <div className="inline-block relative">
+                  <p className="font-jetbrains text-base sm:text-lg text-maximally-black/60 font-medium" style={{animation: 'float-twist 4s ease-in-out infinite'}}>
+                    but not the boring ones
+                  </p>
+                  <div className="absolute -top-1 -right-6 transform" style={{animation: 'sparkle 2s ease-in-out infinite', animationDelay: '2s'}}>
+                    <span className="text-maximally-red text-lg">⚡</span>
+                  </div>
+                  <div className="absolute -bottom-1 -left-4 transform" style={{animation: 'sparkle 2.5s ease-in-out infinite', animationDelay: '3s'}}>
+                    <span className="text-maximally-yellow text-sm">✨</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-3xl mx-auto mb-4 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_2s]">
                 A global innovation league that hosts high-stakes hackathons for ambitious builders across disciplines.
               </p>
 
