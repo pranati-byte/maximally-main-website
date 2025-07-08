@@ -16,7 +16,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        'maximally-red': '#E50914',
+        'maximally-red': '#E53935',
+        'maximally-gold': '#D4AF37',
         'maximally-yellow': '#FFCB47',
         'maximally-blue': '#3C9EE7',
         'maximally-green': '#00CED1',
