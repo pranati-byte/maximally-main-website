@@ -166,7 +166,8 @@ export default function Shipathon() {
             <div className="absolute top-1/2 left-5 text-2xl pixel-float" style={{animationDelay: '0.5s'}}>💾</div>
             <div className="absolute bottom-40 right-10 text-2xl pixel-float" style={{animationDelay: '1.5s'}}>🔧</div>
             <div className="absolute top-32 left-1/3 text-2xl pixel-float" style={{animationDelay: '3s'}}>💻</div>
-          </section>
+          </div>
+        </section>
 
           {/* About the Challenge */}
           <section className="py-20 px-4 bg-gray-900">
