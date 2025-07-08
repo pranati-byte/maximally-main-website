@@ -60,9 +60,62 @@ export default function Shipathon() {
 
       {/* Starfield Background */}
       <div className="starfield">
-        <div className="shooting-star"></div>
-        <div className="shooting-star"></div>
-        <div className="shooting-star"></div>
+        {/* Shooting Stars */}
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={`shooting-star-${i}`}
+            className="shooting-star"
+            style={{
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 2}s`,
+            }}
+          />
+        ))}
+
+        {/* Space Ships */}
+        {[...Array(3)].map((_, i) => (
+          <div
+            key={`ship-${i}`}
+            className="space-ship"
+            style={{
+              top: `${20 + Math.random() * 60}%`,
+              left: `${20 + Math.random() * 60}%`,
+              animationDelay: `${Math.random() * 4}s`,
+              animationDuration: `${6 + Math.random() * 4}s`,
+            }}
+          />
+        ))}
+
+        {/* Nebula Effects */}
+        {[...Array(4)].map((_, i) => (
+          <div
+            key={`nebula-${i}`}
+            className={`nebula ${i % 2 === 0 ? 'nebula-red' : 'nebula-blue'}`}
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              width: `${100 + Math.random() * 200}px`,
+              height: `${100 + Math.random() * 200}px`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          />
+        ))}
+
+        {/* Constellation Lines */}
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={`constellation-${i}`}
+            className="constellation"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              height: `${50 + Math.random() * 100}px`,
+              transform: `rotate(${Math.random() * 360}deg)`,
+              animationDelay: `${Math.random() * 3}s`,
+            }}
+          />
+        ))}
       </div>
       
       <div className="min-h-screen bg-transparent text-white overflow-hidden relative">
