@@ -91,7 +91,7 @@ export default function Shipathon() {
                 <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-red-600 minecraft-block"></div>
                 {/* Sail with AI circuits */}
                 <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 translate-x-4 w-16 h-12 bg-red-600 minecraft-block flex items-center justify-center">
-                  <span className="font-press-start text-xs text-black">AI</span>
+                  <span className="font-press-start text-xs text-white">AI</span>
                 </div>
                 {/* Flag */}
                 <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-maximally-red minecraft-block"></div>
@@ -103,7 +103,7 @@ export default function Shipathon() {
               <div className="space-y-6">
                 <div className="relative inline-block">
                   <div className="minecraft-block bg-red-600 p-4 md:p-6 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-black">
+                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-white">
                       AI
                     </h1>
                   </div>
@@ -126,8 +126,8 @@ export default function Shipathon() {
 
               {/* Event Details */}
               <div className="minecraft-block bg-red-600 max-w-md mx-auto p-4 md:p-6">
-                <div className="text-black font-press-start text-sm md:text-lg mb-2">AUG 30 - SEP 1</div>
-                <div className="text-black font-press-start text-sm md:text-lg">GLOBAL DIGITAL</div>
+                <div className="text-white font-press-start text-sm md:text-lg mb-2">AUG 30 - SEP 1</div>
+                <div className="text-white font-press-start text-sm md:text-lg">GLOBAL DIGITAL</div>
               </div>
 
               {/* Message Box */}
@@ -136,7 +136,7 @@ export default function Shipathon() {
                   <div className="text-base md:text-xl font-press-start mb-4 text-red-600">
                     48-HOUR GLOBAL HACKATHON
                   </div>
-                  <p className="text-red-600 font-jetbrains leading-relaxed text-sm md:text-base">
+                  <p className="text-white font-jetbrains leading-relaxed text-sm md:text-base">
                     For the curious, the chaotic, and the creative. No pitch decks. No suits. 
                     Just ideas, friends, and a playground where weird is welcome.
                   </p>
@@ -147,13 +147,13 @@ export default function Shipathon() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
-                  className="pixel-button bg-red-600 text-black font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-red-800"
+                  className="pixel-button bg-red-600 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-red-800"
                 >
                   REGISTER NOW
                 </Button>
                 <Button 
                   onClick={() => window.open('https://discord.gg/maximally', '_blank')}
-                  className="pixel-button bg-black text-red-600 font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-red-600"
+                  className="pixel-button bg-black text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-red-600"
                 >
                   JOIN DISCORD
                 </Button>
@@ -202,15 +202,15 @@ export default function Shipathon() {
                 <Card className="minecraft-block bg-red-600 hover:scale-105 transition-all duration-300">
                   <CardContent className="p-4 md:p-6 text-center">
                     <div className="text-2xl md:text-3xl mb-4">👥</div>
-                    <h3 className="font-press-start text-black mb-2 text-sm md:text-base">TEAMS</h3>
-                    <p className="text-black font-jetbrains font-bold text-sm">Solo or up to 4</p>
+                    <h3 className="font-press-start text-white mb-2 text-sm md:text-base">TEAMS</h3>
+                    <p className="text-white font-jetbrains font-bold text-sm">Solo or up to 4</p>
                   </CardContent>
                 </Card>
                 <Card className="minecraft-block bg-black hover:scale-105 transition-all duration-300 border-2 border-red-600">
                   <CardContent className="p-4 md:p-6 text-center">
                     <div className="text-2xl md:text-3xl mb-4">💻</div>
                     <h3 className="font-press-start text-red-600 mb-2 text-sm md:text-base">ONLINE</h3>
-                    <p className="text-red-600 font-jetbrains font-bold text-sm">+ Chandigarh hub</p>
+                    <p className="text-white font-jetbrains font-bold text-sm">+ Chandigarh hub</p>
                   </CardContent>
                 </Card>
               </div>
@@ -224,7 +224,7 @@ export default function Shipathon() {
                 WHO CAN JOIN
               </h2>
               <div className="minecraft-block bg-red-600 px-4 md:px-6 py-3 inline-block mb-12">
-                <p className="text-lg md:text-xl font-press-start text-black">
+                <p className="text-lg md:text-xl font-press-start text-white">
                   NO EXPERIENCE NEEDED. JUST ENERGY + IDEAS.
                 </p>
               </div>
@@ -240,8 +240,8 @@ export default function Shipathon() {
                   return (
                     <div key={i} className={`minecraft-block ${isEven ? 'bg-red-600' : 'bg-black border-2 border-red-600'} p-4 md:p-6 hover:scale-105 transition-all duration-300`}>
                       <div className="text-4xl md:text-6xl mb-4">{persona.icon}</div>
-                      <h3 className={`text-lg md:text-xl font-press-start mb-2 ${isEven ? 'text-black' : 'text-red-600'}`}>{persona.title}</h3>
-                      <p className={`${isEven ? 'text-black' : 'text-red-600'} font-jetbrains font-bold text-sm md:text-base`}>{persona.desc}</p>
+                      <h3 className={`text-lg md:text-xl font-press-start mb-2 ${isEven ? 'text-white' : 'text-red-600'}`}>{persona.title}</h3>
+                      <p className={`${isEven ? 'text-white' : 'text-white'} font-jetbrains font-bold text-sm md:text-base`}>{persona.desc}</p>
                     </div>
                   );
                 })}
@@ -366,7 +366,7 @@ export default function Shipathon() {
 
               <div className="text-center mb-8">
                 <div className="minecraft-block bg-red-600 px-4 md:px-6 py-3 inline-block">
-                  <p className="font-press-start text-black text-lg md:text-xl">₹7,500+ CASH + MAXIMALLY PERKS</p>
+                  <p className="font-press-start text-white text-lg md:text-xl">₹7,500+ CASH + MAXIMALLY PERKS</p>
                 </div>
               </div>
 
