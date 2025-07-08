@@ -353,11 +353,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #000;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .starfield::before {
@@ -367,30 +368,29 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #fff, transparent),
-    radial-gradient(2px 2px at 40px 70px, #fff, transparent),
-    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-    radial-gradient(1px 1px at 130px 80px, #fff, transparent),
-    radial-gradient(2px 2px at 160px 30px, #fff, transparent),
-    radial-gradient(1px 1px at 200px 90px, #fff, transparent),
-    radial-gradient(2px 2px at 240px 50px, #fff, transparent),
-    radial-gradient(1px 1px at 280px 120px, #fff, transparent),
-    radial-gradient(1px 1px at 320px 20px, #fff, transparent),
-    radial-gradient(2px 2px at 360px 100px, #fff, transparent),
-    radial-gradient(1px 1px at 400px 60px, #fff, transparent),
-    radial-gradient(1px 1px at 440px 140px, #fff, transparent),
-    radial-gradient(2px 2px at 480px 80px, #fff, transparent),
-    radial-gradient(1px 1px at 520px 30px, #fff, transparent),
-    radial-gradient(1px 1px at 560px 110px, #fff, transparent),
-    radial-gradient(2px 2px at 600px 70px, #fff, transparent),
-    radial-gradient(1px 1px at 640px 40px, #fff, transparent),
-    radial-gradient(1px 1px at 680px 120px, #fff, transparent),
-    radial-gradient(2px 2px at 720px 90px, #fff, transparent),
-    radial-gradient(1px 1px at 760px 20px, #fff, transparent);
-  background-repeat: repeat;
-  background-size: 800px 150px;
-  animation: twinkle 20s linear infinite;
+  background: 
+    radial-gradient(3px 3px at 50px 80px, #fff, transparent),
+    radial-gradient(2px 2px at 150px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 250px 120px, #fff, transparent),
+    radial-gradient(2px 2px at 350px 60px, #fff, transparent),
+    radial-gradient(1px 1px at 450px 30px, #fff, transparent),
+    radial-gradient(3px 3px at 550px 100px, #fff, transparent),
+    radial-gradient(1px 1px at 650px 70px, #fff, transparent),
+    radial-gradient(2px 2px at 750px 45px, #fff, transparent),
+    radial-gradient(1px 1px at 850px 110px, #fff, transparent),
+    radial-gradient(2px 2px at 950px 25px, #fff, transparent),
+    radial-gradient(1px 1px at 1050px 85px, #fff, transparent),
+    radial-gradient(3px 3px at 1150px 55px, #fff, transparent),
+    radial-gradient(1px 1px at 1250px 95px, #fff, transparent),
+    radial-gradient(2px 2px at 1350px 15px, #fff, transparent),
+    radial-gradient(1px 1px at 100px 200px, #fff, transparent),
+    radial-gradient(2px 2px at 300px 180px, #fff, transparent),
+    radial-gradient(1px 1px at 500px 220px, #fff, transparent),
+    radial-gradient(3px 3px at 700px 160px, #fff, transparent),
+    radial-gradient(1px 1px at 900px 240px, #fff, transparent),
+    radial-gradient(2px 2px at 1100px 190px, #fff, transparent);
+  background-size: 1400px 300px;
+  animation: twinkle 15s ease-in-out infinite;
 }
 
 .starfield::after {
@@ -400,36 +400,49 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(1px 1px at 30px 60px, #fff, transparent),
-    radial-gradient(1px 1px at 70px 100px, #fff, transparent),
-    radial-gradient(2px 2px at 110px 20px, #fff, transparent),
-    radial-gradient(1px 1px at 150px 90px, #fff, transparent),
-    radial-gradient(1px 1px at 190px 50px, #fff, transparent),
-    radial-gradient(2px 2px at 230px 110px, #fff, transparent),
-    radial-gradient(1px 1px at 270px 70px, #fff, transparent),
-    radial-gradient(1px 1px at 310px 30px, #fff, transparent),
-    radial-gradient(2px 2px at 350px 140px, #fff, transparent),
-    radial-gradient(1px 1px at 390px 80px, #fff, transparent),
-    radial-gradient(1px 1px at 430px 10px, #fff, transparent),
-    radial-gradient(2px 2px at 470px 120px, #fff, transparent),
-    radial-gradient(1px 1px at 510px 60px, #fff, transparent),
-    radial-gradient(1px 1px at 550px 90px, #fff, transparent),
-    radial-gradient(2px 2px at 590px 40px, #fff, transparent),
-    radial-gradient(1px 1px at 630px 130px, #fff, transparent),
-    radial-gradient(1px 1px at 670px 70px, #fff, transparent),
-    radial-gradient(2px 2px at 710px 20px, #fff, transparent),
-    radial-gradient(1px 1px at 750px 100px, #fff, transparent),
-    radial-gradient(1px 1px at 790px 50px, #fff, transparent);
-  background-repeat: repeat;
-  background-size: 820px 160px;
-  animation: twinkle 25s linear infinite reverse;
-  opacity: 0.7;
+  background: 
+    radial-gradient(1px 1px at 80px 130px, #fff, transparent),
+    radial-gradient(2px 2px at 180px 90px, #fff, transparent),
+    radial-gradient(1px 1px at 280px 170px, #fff, transparent),
+    radial-gradient(1px 1px at 380px 50px, #fff, transparent),
+    radial-gradient(2px 2px at 480px 140px, #fff, transparent),
+    radial-gradient(1px 1px at 580px 20px, #fff, transparent),
+    radial-gradient(1px 1px at 680px 110px, #fff, transparent),
+    radial-gradient(2px 2px at 780px 75px, #fff, transparent),
+    radial-gradient(1px 1px at 880px 35px, #fff, transparent),
+    radial-gradient(1px 1px at 980px 125px, #fff, transparent),
+    radial-gradient(2px 2px at 1080px 65px, #fff, transparent),
+    radial-gradient(1px 1px at 1180px 155px, #fff, transparent),
+    radial-gradient(1px 1px at 120px 250px, #fff, transparent),
+    radial-gradient(2px 2px at 320px 280px, #fff, transparent),
+    radial-gradient(1px 1px at 520px 210px, #fff, transparent),
+    radial-gradient(1px 1px at 720px 270px, #fff, transparent),
+    radial-gradient(2px 2px at 920px 230px, #fff, transparent),
+    radial-gradient(1px 1px at 1120px 290px, #fff, transparent),
+    radial-gradient(1px 1px at 220px 320px, #fff, transparent),
+    radial-gradient(2px 2px at 620px 340px, #fff, transparent);
+  background-size: 1200px 400px;
+  animation: twinkle 20s ease-in-out infinite reverse;
+  opacity: 0.8;
 }
 
 @keyframes twinkle {
-  0%, 100% { opacity: 0.8; }
-  50% { opacity: 0.3; }
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% { 
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+  75% { 
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
 }
 
 /* Shooting stars */

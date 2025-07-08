@@ -80,7 +80,7 @@ export default function Shipathon() {
           />
         ))}
 
-        <div className="relative z-10">
+        <div className="relative z-20">
           <Navbar />
           
           {/* Hero Section */}
