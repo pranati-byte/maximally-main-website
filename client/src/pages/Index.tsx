@@ -115,7 +115,22 @@ const Index = () => {
               </p>
 
               {/* CTAs */}
-              <div className="relative max-w-2xl mx-auto">
+              <div className="relative max-w-2xl mx-auto space-y-6">
+                {/* Featured Shipathon CTA */}
+                <div className="w-full">
+                  <a 
+                    href="https://maximally-ai-shipathon.devpost.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pixel-button bg-gradient-to-r from-maximally-yellow via-maximally-red to-maximally-yellow text-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-18 px-8 font-press-start text-sm w-full border-4 border-maximally-red animate-pulse"
+                  >
+                    <span>🚢</span>
+                    <span>Register for AI Shipathon</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+
+                {/* Secondary CTAs */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <Link 
                     to="/events" 
