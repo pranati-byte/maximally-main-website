@@ -17,12 +17,248 @@
   50% { transform: translateY(-8px) rotate(2deg); }
 }
 
+@keyframes ai-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  33% { 
+    transform: translateY(-15px) rotate(5deg) scale(1.1);
+    opacity: 0.7;
+  }
+  66% { 
+    transform: translateY(-5px) rotate(-3deg) scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+@keyframes data-stream {
+  0% { 
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% { 
+    opacity: 0.8;
+  }
+  90% { 
+    opacity: 0.8;
+  }
+  100% { 
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes flag-wave {
+  0%, 100% { 
+    transform: skew(0deg, 0deg);
+  }
+  25% { 
+    transform: skew(2deg, 1deg);
+  }
+  50% { 
+    transform: skew(-1deg, -0.5deg);
+  }
+  75% { 
+    transform: skew(1deg, 0.5deg);
+  }
+}
+
+@keyframes particle {
+  0% { 
+    transform: translate(0, 0) scale(0);
+    opacity: 0;
+  }
+  20% { 
+    transform: translate(5px, -10px) scale(1);
+    opacity: 1;
+  }
+  80% { 
+    transform: translate(-10px, -30px) scale(0.8);
+    opacity: 0.5;
+  }
+  100% { 
+    transform: translate(-20px, -50px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes neural-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+@keyframes code-scroll {
+  0% { 
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% { 
+    opacity: 0.7;
+  }
+  80% { 
+    opacity: 0.7;
+  }
+  100% { 
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+@keyframes circuit-flow {
+  0% { 
+    background-position: 0 0;
+  }
+  100% { 
+    background-position: 20px 20px;
+  }
+}
+
 .pixel-glow {
   animation: pixel-glow 2s ease-in-out infinite;
 }
 
 .ship-sail {
   animation: ship-sail 3s ease-in-out infinite;
+}
+
+.animate-ai-float {
+  animation: ai-float 6s ease-in-out infinite;
+}
+
+.animate-data-stream {
+  animation: data-stream 4s linear infinite;
+}
+
+.animate-flag-wave {
+  animation: flag-wave 2s ease-in-out infinite;
+}
+
+.animate-particle {
+  animation: particle 2s ease-out infinite;
+}
+
+.animate-neural-pulse {
+  animation: neural-pulse 1.5s ease-in-out infinite;
+}
+
+.animate-code-scroll {
+  animation: code-scroll 8s linear infinite;
+}
+
+.pixel-float-enhanced {
+  animation: ai-float 4s ease-in-out infinite;
+}
+
+.ship-glow {
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+}
+
+.circuit-pattern {
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, var(--maximally-blue) 1px, transparent 1px),
+    linear-gradient(var(--maximally-blue) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: circuit-flow 10s linear infinite;
+}
+
+.neural-network {
+  position: relative;
+}
+
+.neural-network::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 30%, var(--maximally-blue) 50%, transparent 70%);
+  opacity: 0.1;
+  animation: neural-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glitch-red {
+  0%, 100% { 
+    transform: translate(0);
+    opacity: 0;
+  }
+  20% { 
+    transform: translate(-2px, 1px);
+    opacity: 0.3;
+  }
+  40% { 
+    transform: translate(2px, -1px);
+    opacity: 0.1;
+  }
+  60% { 
+    transform: translate(-1px, 2px);
+    opacity: 0.2;
+  }
+  80% { 
+    transform: translate(1px, -2px);
+    opacity: 0.1;
+  }
+}
+
+@keyframes glitch-blue {
+  0%, 100% { 
+    transform: translate(0);
+    opacity: 0;
+  }
+  25% { 
+    transform: translate(2px, -1px);
+    opacity: 0.2;
+  }
+  50% { 
+    transform: translate(-2px, 1px);
+    opacity: 0.3;
+  }
+  75% { 
+    transform: translate(1px, 2px);
+    opacity: 0.1;
+  }
+}
+
+@keyframes scan-line {
+  0% { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-glitch-red {
+  animation: glitch-red 0.3s ease-in-out infinite;
+}
+
+.animate-glitch-blue {
+  animation: glitch-blue 0.3s ease-in-out infinite;
+  animation-delay: 0.1s;
+}
+
+.animate-scan-line {
+  animation: scan-line 3s ease-in-out infinite;
+}
+
+.glitch-text {
+  text-shadow: 
+    2px 0 var(--maximally-red),
+    -2px 0 var(--maximally-blue);
 }
 
 @tailwind base;

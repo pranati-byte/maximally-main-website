@@ -60,7 +60,7 @@ export default function Shipathon() {
       <div className="min-h-screen bg-black text-white overflow-hidden relative">
         {/* Pixelated background */}
         <div className="fixed inset-0 pixel-grid opacity-30 z-0"></div>
-        
+
         {/* Floating pixel elements */}
         {[...Array(12)].map((_, i) => (
           <div 
@@ -74,7 +74,7 @@ export default function Shipathon() {
             }}
           />
         ))}
-        
+
         <div className="relative z-10">
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col items-center justify-center relative px-4">
@@ -113,11 +113,15 @@ export default function Shipathon() {
                     </h1>
                   </div>
                 </div>
-                <div className="minecraft-block bg-maximally-black px-4 md:px-6 py-3 inline-block">
-                  <p className="text-sm md:text-lg lg:text-xl font-press-start text-maximally-yellow">
-                    {glitchText}
-                  </p>
-                </div>
+                <div className="minecraft-block bg-maximally-black px-4 md:px-6 py-3 inline-block relative overflow-hidden">
+                <p className="text-sm md:text-lg lg:text-xl font-press-start text-maximally-yellow glitch-text relative z-10">
+                  {glitchText}
+                </p>
+                {/* Glitch overlay effects */}
+                <div className="absolute inset-0 bg-maximally-red opacity-20 animate-glitch-red"></div>
+                <div className="absolute inset-0 bg-maximally-blue opacity-20 animate-glitch-blue"></div>
+                {/* Scanning line effect */}
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-maximally-yellow animate-scan-line"></div>
               </div>
 
               {/* Event Details */}
@@ -250,7 +254,7 @@ export default function Shipathon() {
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
                 CHOOSE YOUR TRACK
               </h2>
-              
+
               <div className="grid lg:grid-cols-3 gap-8">
                 {tracks.map((track, i) => {
                   const colors = [
@@ -318,7 +322,7 @@ export default function Shipathon() {
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
                 SUBMISSION RULES
               </h2>
-              
+
               <div className="minecraft-block bg-maximally-black p-6 md:p-8">
                 <div className="text-maximally-yellow mb-6 text-center">
                   <div className="text-lg md:text-2xl font-press-start mb-4">
@@ -358,13 +362,13 @@ export default function Shipathon() {
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
                 PRIZES & AWARDS
               </h2>
-              
+
               <div className="text-center mb-8">
                 <div className="minecraft-block bg-maximally-yellow px-4 md:px-6 py-3 inline-block">
                   <p className="font-press-start text-black text-lg md:text-xl">₹7,500+ CASH + MAXIMALLY PERKS</p>
                 </div>
               </div>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {prizes.map((prize, i) => {
                   const colors = ["bg-maximally-yellow", "bg-maximally-red", "bg-maximally-yellow", "bg-maximally-red"];
@@ -389,7 +393,7 @@ export default function Shipathon() {
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
                 EVENT TIMELINE
               </h2>
-              
+
               <div className="space-y-6">
                 {timeline.map((item, i) => (
                   <div key={i} className="flex items-center gap-4 md:gap-6 minecraft-block bg-white p-4 md:p-6 hover:scale-105 transition-all duration-300">
@@ -413,7 +417,7 @@ export default function Shipathon() {
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
                 RULES & GUIDELINES
               </h2>
-              
+
               <div className="minecraft-block bg-maximally-black p-6 md:p-8">
                 <div className="space-y-4 text-maximally-yellow font-jetbrains text-base md:text-lg">
                   <div className="flex items-start md:items-center gap-3">
@@ -451,7 +455,7 @@ export default function Shipathon() {
                   <p className="text-base md:text-lg text-maximally-yellow mb-8 font-jetbrains font-bold">
                     Experiment wildly. Build bravely. See you inside.
                   </p>
-                  
+
                   {/* Final CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button 
