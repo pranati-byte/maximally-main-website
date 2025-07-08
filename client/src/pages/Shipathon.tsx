@@ -58,63 +58,81 @@ export default function Shipathon() {
         keywords="AI hackathon, teen developers, global hackathon, AI creativity, shipathon, maximally"
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-sky-300 via-blue-400 to-blue-600 text-white overflow-hidden relative">
-        {/* Ocean Background */}
-        <div className="fixed inset-0 bg-gradient-to-b from-sky-200 via-blue-300 to-blue-800 z-0"></div>
-        {/* Floating clouds */}
-        <div className="fixed top-10 left-20 w-32 h-16 bg-white rounded-full opacity-70 animate-float"></div>
-        <div className="fixed top-20 right-32 w-24 h-12 bg-white rounded-full opacity-60 animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="fixed top-5 left-1/2 w-40 h-20 bg-white rounded-full opacity-50 animate-float" style={{animationDelay: '4s'}}></div>
+      <div className="min-h-screen bg-black text-yellow-400 overflow-hidden relative">
+        {/* Pixelated stars background */}
+        <div className="fixed inset-0 bg-black z-0"></div>
+        {/* Floating pixel stars */}
+        <div className="fixed top-10 left-20 w-2 h-2 bg-yellow-400 animate-pulse"></div>
+        <div className="fixed top-40 right-32 w-2 h-2 bg-red-500 animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="fixed top-20 left-1/3 w-2 h-2 bg-yellow-400 animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="fixed bottom-32 right-20 w-2 h-2 bg-red-500 animate-pulse" style={{animationDelay: '3s'}}></div>
+        <div className="fixed top-1/2 right-1/4 w-2 h-2 bg-yellow-400 animate-pulse" style={{animationDelay: '0.5s'}}></div>
         
         <div className="relative z-10">
           {/* Hero Section - Pixel Ocean */}
           <section className="min-h-screen flex flex-col items-center justify-center relative px-4">
-            {/* Shipwreck Island Scene */}
-            <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-yellow-200 via-yellow-100 to-transparent"></div>
-            <div className="absolute bottom-0 left-1/4 w-32 h-32 bg-yellow-600 rounded-full opacity-80"></div>
-            <div className="absolute bottom-10 right-1/3 w-24 h-24 bg-yellow-500 rounded-full opacity-70"></div>
+            {/* Pixel Ship Scene */}
+            <div className="absolute bottom-0 left-0 right-0 h-16 bg-yellow-400" style={{clipPath: 'polygon(0 70%, 10% 90%, 20% 80%, 30% 85%, 40% 75%, 50% 85%, 60% 80%, 70% 90%, 80% 75%, 90% 85%, 100% 70%, 100% 100%, 0% 100%)'}}></div>
             
-            {/* Shipwreck elements */}
-            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
-              <div className="text-8xl">🏴‍☠️</div>
+            {/* Pixel Ship */}
+            <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2">
+              <div className="pixel-ship">
+                {/* Ship body */}
+                <div className="relative">
+                  <div className="w-32 h-16 bg-red-600 relative" style={{clipPath: 'polygon(10% 100%, 0% 70%, 20% 0%, 80% 0%, 100% 70%, 90% 100%)'}}>
+                    {/* Portholes */}
+                    <div className="absolute top-8 left-4 w-3 h-3 bg-black"></div>
+                    <div className="absolute top-8 left-12 w-3 h-3 bg-black"></div>
+                    <div className="absolute top-8 left-20 w-3 h-3 bg-black"></div>
+                  </div>
+                  {/* Mast */}
+                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-yellow-600"></div>
+                  {/* Sail with AI circuits */}
+                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 translate-x-4 w-16 h-12 bg-yellow-400 border-2 border-yellow-600">
+                    <div className="text-xs text-red-600 font-bold p-1">⚡AI⚡</div>
+                  </div>
+                  {/* Flag */}
+                  <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-red-600"></div>
+                </div>
+              </div>
             </div>
-            <div className="absolute bottom-16 left-1/3 text-6xl">⚓</div>
-            <div className="absolute bottom-12 right-1/4 text-4xl">📦</div>
 
             <div className="text-center space-y-8 max-w-4xl relative z-10">
-              {/* Shipwrecked Logo */}
-              <div className="space-y-4">
+              {/* AI Shipathon Logo */}
+              <div className="space-y-6">
                 <div className="relative inline-block">
-                  <div className="bg-white rounded-2xl p-6 shadow-2xl border-4 border-blue-600 transform -rotate-2">
-                    <h1 className="text-4xl md:text-6xl font-black text-blue-600" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                      SHIP
+                  <div className="bg-yellow-400 border-4 border-yellow-600 p-6 shadow-2xl transform -rotate-1" style={{clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)'}}>
+                    <h1 className="text-4xl md:text-6xl font-black text-red-600" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                      AI
                     </h1>
                   </div>
-                  <div className="bg-orange-400 rounded-2xl p-4 shadow-2xl border-4 border-orange-600 transform rotate-1 -mt-4">
-                    <h1 className="text-3xl md:text-5xl font-black text-white" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                      WRECKED
+                  <div className="bg-red-600 border-4 border-red-800 p-4 shadow-2xl transform rotate-1 -mt-4" style={{clipPath: 'polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%)'}}>
+                    <h1 className="text-3xl md:text-5xl font-black text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                      SHIPATHON
                     </h1>
                   </div>
                 </div>
-                <p className="text-xl md:text-2xl font-bold text-blue-900 bg-white bg-opacity-80 rounded-lg px-6 py-2 inline-block">
-                  {glitchText}
-                </p>
+                <div className="bg-black border-2 border-yellow-400 px-6 py-3 inline-block">
+                  <p className="text-lg md:text-xl font-bold text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                    {glitchText}
+                  </p>
+                </div>
               </div>
 
               {/* Event Details */}
-              <div className="bg-yellow-400 rounded-2xl p-6 border-4 border-yellow-600 shadow-2xl max-w-md mx-auto">
-                <div className="text-blue-900 font-bold text-lg mb-2">📅 AUGUST 30 - SEPT 1, 2025</div>
-                <div className="text-blue-900 font-bold text-lg">📍 GLOBAL VIRTUAL ISLAND</div>
+              <div className="bg-yellow-400 border-4 border-yellow-600 shadow-2xl max-w-md mx-auto p-6" style={{clipPath: 'polygon(0% 0%, 90% 0%, 100% 15%, 100% 100%, 10% 100%, 0% 85%)'}}>
+                <div className="text-red-600 font-black text-lg mb-2" style={{fontFamily: 'Press Start 2P, monospace'}}>AUG 30 - SEP 1</div>
+                <div className="text-red-600 font-black text-lg" style={{fontFamily: 'Press Start 2P, monospace'}}>GLOBAL DIGITAL</div>
               </div>
 
-              {/* Message in a Bottle */}
+              {/* Message Box */}
               <div className="relative my-12">
-                <div className="bg-white bg-opacity-90 border-4 border-blue-600 rounded-2xl p-6 max-w-2xl mx-auto transform rotate-1 hover:rotate-0 transition-transform shadow-2xl">
-                  <div className="text-lg md:text-xl font-bold mb-4 text-blue-900">
-                    🏝️ Message from the Shipwreck
+                <div className="bg-black border-2 border-yellow-400 p-6 max-w-2xl mx-auto shadow-2xl">
+                  <div className="text-lg md:text-xl font-bold mb-4 text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                    SHIP YOUR FIRST AI PROJECT
                   </div>
-                  <p className="text-blue-800 leading-relaxed font-semibold">
-                    "No pitch decks. No suits. Just ideas, friends, and a playground where weird is welcome."
+                  <p className="text-yellow-400 leading-relaxed font-bold">
+                    MEET BUILDERS LIKE YOU.
                   </p>
                 </div>
               </div>
@@ -123,72 +141,72 @@ export default function Shipathon() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   onClick={() => window.open('https://maximally-ai-shipathon.devpost.com/', '_blank')}
-                  className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-black py-4 px-8 text-lg border-4 border-yellow-600 rounded-xl shadow-2xl transform hover:scale-105 transition-all"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-red-600 font-black py-4 px-8 text-lg border-4 border-yellow-600 shadow-2xl transform hover:scale-105 transition-all"
                   style={{fontFamily: 'Press Start 2P, monospace'}}
                 >
-                  🚢 LOG INTO THE BAY
+                  REGISTER NOW
                 </Button>
                 <Button 
                   onClick={() => window.open('https://discord.gg/maximally', '_blank')}
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-black py-4 px-8 text-lg border-4 border-blue-700 rounded-xl shadow-2xl transform hover:scale-105 transition-all"
+                  className="bg-red-600 hover:bg-red-700 text-yellow-400 font-black py-4 px-8 text-lg border-4 border-red-800 shadow-2xl transform hover:scale-105 transition-all"
                   style={{fontFamily: 'Press Start 2P, monospace'}}
                 >
-                  💬 JOIN THE CREW
+                  JOIN DISCORD
                 </Button>
               </div>
             </div>
 
-            {/* Floating Tropical Elements */}
-            <div className="absolute top-20 left-10 text-4xl animate-float">🌴</div>
-            <div className="absolute top-40 right-20 text-3xl animate-float" style={{animationDelay: '1s'}}>🐚</div>
-            <div className="absolute top-1/2 left-5 text-2xl animate-float" style={{animationDelay: '0.5s'}}>⭐</div>
-            <div className="absolute bottom-40 right-10 text-2xl animate-float" style={{animationDelay: '1.5s'}}>🦜</div>
-            <div className="absolute top-32 left-1/3 text-2xl animate-float" style={{animationDelay: '3s'}}>🏖️</div>
+            {/* Floating Pixel Elements */}
+            <div className="absolute top-20 left-10 text-4xl animate-float">🤖</div>
+            <div className="absolute top-40 right-20 text-3xl animate-float" style={{animationDelay: '1s'}}>⚡</div>
+            <div className="absolute top-1/2 left-5 text-2xl animate-float" style={{animationDelay: '0.5s'}}>💾</div>
+            <div className="absolute bottom-40 right-10 text-2xl animate-float" style={{animationDelay: '1.5s'}}>🔧</div>
+            <div className="absolute top-32 left-1/3 text-2xl animate-float" style={{animationDelay: '3s'}}>💻</div>
           </section>
 
           {/* About the Challenge */}
-          <section className="py-20 px-4 bg-gradient-to-b from-blue-600 to-blue-800">
+          <section className="py-20 px-4 bg-black">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-6xl font-black text-yellow-400 mb-6" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                  🏝️ THE ADVENTURE
+                  THE MISSION
                 </h2>
-                <div className="bg-white bg-opacity-90 border-4 border-yellow-400 rounded-2xl p-8 max-w-4xl mx-auto shadow-2xl">
-                  <p className="text-xl md:text-2xl leading-relaxed text-blue-900 font-bold">
-                    "48 hours. One mission: <span className="text-orange-600 font-black">build with AI</span>. 
-                    Doesn't matter who you are — coder, creator, or chaotic tinkerer — 
-                    if you've got Wi-Fi and curiosity, you're in."
+                <div className="bg-red-600 border-4 border-red-800 p-8 max-w-4xl mx-auto shadow-2xl">
+                  <p className="text-xl md:text-2xl leading-relaxed text-yellow-400 font-bold" style={{fontFamily: 'Press Start 2P, monospace', lineHeight: '1.8'}}>
+                    48 HOURS. ONE MISSION: BUILD WITH AI. 
+                    CODER, CREATOR, OR CHAOS MAKER - 
+                    IF YOU HAVE WIFI + CURIOSITY, YOU'RE IN.
                   </p>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className="bg-yellow-400 border-4 border-yellow-600 rounded-xl shadow-2xl transform hover:scale-105 transition-all">
+                <Card className="bg-yellow-400 border-4 border-yellow-600 shadow-2xl transform hover:scale-105 transition-all">
                   <CardContent className="p-6 text-center">
                     <div className="text-3xl mb-4">🌍</div>
-                    <h3 className="font-black text-blue-900" style={{fontFamily: 'Press Start 2P, monospace'}}>GLOBAL</h3>
-                    <p className="text-blue-800 font-bold">All ages, all skill levels</p>
+                    <h3 className="font-black text-red-600" style={{fontFamily: 'Press Start 2P, monospace'}}>GLOBAL</h3>
+                    <p className="text-red-600 font-bold">ALL SKILL LEVELS</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-blue-400 border-4 border-blue-600 rounded-xl shadow-2xl transform hover:scale-105 transition-all">
+                <Card className="bg-red-600 border-4 border-red-800 shadow-2xl transform hover:scale-105 transition-all">
                   <CardContent className="p-6 text-center">
                     <div className="text-3xl mb-4">⏰</div>
-                    <h3 className="font-black text-white" style={{fontFamily: 'Press Start 2P, monospace'}}>48 HOURS</h3>
-                    <p className="text-blue-100 font-bold">Aug 30 – Sept 1, 2025</p>
+                    <h3 className="font-black text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>48 HOURS</h3>
+                    <p className="text-yellow-400 font-bold">AUG 30 - SEP 1</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-orange-400 border-4 border-orange-600 rounded-xl shadow-2xl transform hover:scale-105 transition-all">
+                <Card className="bg-yellow-400 border-4 border-yellow-600 shadow-2xl transform hover:scale-105 transition-all">
                   <CardContent className="p-6 text-center">
                     <div className="text-3xl mb-4">👥</div>
-                    <h3 className="font-black text-white" style={{fontFamily: 'Press Start 2P, monospace'}}>CREW UP</h3>
-                    <p className="text-orange-100 font-bold">Solo or teams up to 4</p>
+                    <h3 className="font-black text-red-600" style={{fontFamily: 'Press Start 2P, monospace'}}>TEAMS</h3>
+                    <p className="text-red-600 font-bold">SOLO OR UP TO 4</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-green-400 border-4 border-green-600 rounded-xl shadow-2xl transform hover:scale-105 transition-all">
+                <Card className="bg-red-600 border-4 border-red-800 shadow-2xl transform hover:scale-105 transition-all">
                   <CardContent className="p-6 text-center">
-                    <div className="text-3xl mb-4">🏝️</div>
-                    <h3 className="font-black text-white" style={{fontFamily: 'Press Start 2P, monospace'}}>VIRTUAL</h3>
-                    <p className="text-green-100 font-bold">Online + Chandigarh hub</p>
+                    <div className="text-3xl mb-4">💻</div>
+                    <h3 className="font-black text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>ONLINE</h3>
+                    <p className="text-yellow-400 font-bold">VIRTUAL EVENT</p>
                   </CardContent>
                 </Card>
               </div>
@@ -196,56 +214,61 @@ export default function Shipathon() {
           </section>
 
           {/* Who It's For */}
-          <section className="py-20 px-4 bg-gradient-to-b from-blue-800 to-green-400">
+          <section className="py-20 px-4 bg-black border-t-4 border-yellow-400">
             <div className="max-w-6xl mx-auto text-center">
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-6" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                🏴‍☠️ WHO'S INVITED
+              <h2 className="text-4xl md:text-6xl font-black text-yellow-400 mb-6" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                WHO CAN JOIN
               </h2>
-              <p className="text-2xl text-yellow-300 mb-12 font-bold bg-white bg-opacity-20 rounded-xl px-6 py-3 inline-block">
-                "No experience needed. Just energy. And ideas."
-              </p>
+              <div className="bg-red-600 border-4 border-red-800 px-6 py-3 inline-block mb-12">
+                <p className="text-xl text-yellow-400 font-bold" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                  NO EXPERIENCE NEEDED. JUST ENERGY + IDEAS.
+                </p>
+              </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
-                  { icon: "🧙‍♂️", title: "First-time Sailors", desc: "Never coded? Perfect!", bg: "bg-purple-400", border: "border-purple-600" },
-                  { icon: "👾", title: "No-code Pirates", desc: "Indie hackers welcome", bg: "bg-pink-400", border: "border-pink-600" },
-                  { icon: "🎨", title: "Creative Crew", desc: "Designers, writers, memers", bg: "bg-orange-400", border: "border-orange-600" },
-                  { icon: "🧠", title: "Curious Explorers", desc: "Students & tinkerers", bg: "bg-green-400", border: "border-green-600" }
-                ].map((persona, i) => (
-                  <div key={i} className={`${persona.bg} ${persona.border} border-4 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-transform`}>
-                    <div className="text-6xl mb-4">{persona.icon}</div>
-                    <h3 className="text-xl font-black text-white mb-2" style={{fontFamily: 'Press Start 2P, monospace'}}>{persona.title}</h3>
-                    <p className="text-white font-bold">{persona.desc}</p>
-                  </div>
-                ))}
+                  { icon: "🧙‍♂️", title: "FIRST-TIMERS", desc: "NEVER CODED? PERFECT!" },
+                  { icon: "👾", title: "NO-CODERS", desc: "INDIE HACKERS WELCOME" },
+                  { icon: "🎨", title: "CREATIVES", desc: "DESIGNERS, WRITERS, MEMERS" },
+                  { icon: "🧠", title: "CURIOUS MINDS", desc: "STUDENTS & TINKERERS" }
+                ].map((persona, i) => {
+                  const isEven = i % 2 === 0;
+                  return (
+                    <div key={i} className={`${isEven ? 'bg-yellow-400 border-yellow-600' : 'bg-red-600 border-red-800'} border-4 p-6 shadow-2xl transform hover:scale-105 transition-transform`}>
+                      <div className="text-6xl mb-4">{persona.icon}</div>
+                      <h3 className={`text-xl font-black mb-2 ${isEven ? 'text-red-600' : 'text-yellow-400'}`} style={{fontFamily: 'Press Start 2P, monospace'}}>{persona.title}</h3>
+                      <p className={`${isEven ? 'text-red-600' : 'text-yellow-400'} font-bold`}>{persona.desc}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </section>
 
           {/* Tracks */}
-          <section className="py-20 px-4 bg-gradient-to-b from-green-400 to-blue-600">
+          <section className="py-20 px-4 bg-black border-t-4 border-red-600">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black text-white text-center mb-16" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                🧭 CHOOSE YOUR ROUTE
+              <h2 className="text-4xl md:text-6xl font-black text-yellow-400 text-center mb-16" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                CHOOSE YOUR TRACK
               </h2>
               
               <div className="grid lg:grid-cols-3 gap-8">
                 {tracks.map((track, i) => {
                   const colors = [
-                    { bg: "bg-yellow-400", border: "border-yellow-600", text: "text-blue-900" },
-                    { bg: "bg-orange-400", border: "border-orange-600", text: "text-white" },
-                    { bg: "bg-purple-400", border: "border-purple-600", text: "text-white" }
+                    { bg: "bg-yellow-400", border: "border-yellow-600", text: "text-red-600" },
+                    { bg: "bg-red-600", border: "border-red-800", text: "text-yellow-400" },
+                    { bg: "bg-yellow-400", border: "border-yellow-600", text: "text-red-600" }
                   ];
                   return (
-                    <Card key={i} className={`${colors[i].bg} ${colors[i].border} border-4 rounded-2xl shadow-2xl transform hover:scale-105 transition-all`}>
+                    <Card key={i} className={`${colors[i].bg} ${colors[i].border} border-4 shadow-2xl transform hover:scale-105 transition-all`}>
                       <CardContent className="p-8">
                         <h3 className={`text-2xl font-black ${colors[i].text} mb-4`} style={{fontFamily: 'Press Start 2P, monospace'}}>{track.title}</h3>
                         <p className={`${colors[i].text} mb-6 font-bold`}>{track.description}</p>
                         <div className="space-y-2">
-                          <p className={`text-sm ${colors[i].text} font-black`}>Treasure Ideas:</p>
+                          <p className={`text-sm ${colors[i].text} font-black`}>IDEAS:</p>
                           {track.examples.map((example, j) => (
                             <div key={j} className={`text-sm ${colors[i].text} font-bold`}>
-                              🏴‍☠️ {example}
+                              ⚡ {example}
                             </div>
                           ))}
                         </div>
@@ -258,36 +281,31 @@ export default function Shipathon() {
           </section>
 
           {/* What to Build */}
-          <section className="py-20 px-4 bg-gradient-to-b from-blue-600 to-orange-400">
+          <section className="py-20 px-4 bg-black border-t-4 border-yellow-400">
             <div className="max-w-6xl mx-auto text-center">
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-6" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                ⚒️ WHAT TO CRAFT
+              <h2 className="text-4xl md:text-6xl font-black text-yellow-400 mb-6" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                WHAT TO BUILD
               </h2>
-              <p className="text-2xl text-yellow-200 mb-12 font-bold bg-white bg-opacity-20 rounded-xl px-6 py-3 inline-block">
-                "Code it. No-code it. Prompt it. Doesn't matter — just ship it."
-              </p>
+              <div className="bg-red-600 border-4 border-red-800 px-6 py-3 inline-block mb-12">
+                <p className="text-xl text-yellow-400 font-bold" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                  CODE IT. NO-CODE IT. PROMPT IT. JUST SHIP IT.
+                </p>
+              </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
-                  { idea: "GPT therapist that actually listens", icon: "🧠" },
-                  { idea: "Meme generator for your mood", icon: "😂" },
-                  { idea: "Chrome extension that saves sanity", icon: "🔧" }, 
-                  { idea: "Storyteller bot with personality", icon: "📚" },
-                  { idea: "AI that roasts your code", icon: "🔥" },
-                  { idea: "Music producer that gets you", icon: "🎵" }
+                  { idea: "GPT THERAPIST THAT LISTENS", icon: "🧠" },
+                  { idea: "MEME GENERATOR FOR MOODS", icon: "😂" },
+                  { idea: "CHROME EXTENSION FOR SANITY", icon: "🔧" }, 
+                  { idea: "STORYTELLER BOT + PERSONALITY", icon: "📚" },
+                  { idea: "AI THAT ROASTS YOUR CODE", icon: "🔥" },
+                  { idea: "MUSIC PRODUCER THAT GETS YOU", icon: "🎵" }
                 ].map((item, i) => {
-                  const colors = [
-                    "bg-yellow-400 border-yellow-600",
-                    "bg-pink-400 border-pink-600", 
-                    "bg-green-400 border-green-600",
-                    "bg-blue-400 border-blue-600",
-                    "bg-red-400 border-red-600",
-                    "bg-purple-400 border-purple-600"
-                  ];
+                  const isEven = i % 2 === 0;
                   return (
-                    <div key={i} className={`${colors[i]} border-4 rounded-2xl p-6 shadow-2xl hover:scale-105 transition-all`}>
+                    <div key={i} className={`${isEven ? 'bg-yellow-400 border-yellow-600' : 'bg-red-600 border-red-800'} border-4 p-6 shadow-2xl hover:scale-105 transition-all`}>
                       <div className="text-4xl mb-4">{item.icon}</div>
-                      <p className="text-white font-bold">{item.idea}</p>
+                      <p className={`${isEven ? 'text-red-600' : 'text-yellow-400'} font-bold`} style={{fontFamily: 'Press Start 2P, monospace', fontSize: '12px', lineHeight: '1.4'}}>{item.idea}</p>
                     </div>
                   );
                 })}

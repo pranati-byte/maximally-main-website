@@ -208,6 +208,81 @@ const Index = () => {
           </div>
         </section>
 
+        {/* AI Shipathon CTA Section */}
+        <section className="py-20 px-4 bg-black relative overflow-hidden">
+          {/* Pixel stars background */}
+          <div className="absolute inset-0">
+            {[...Array(20)].map((_, i) => (
+              <div 
+                key={i}
+                className="absolute w-2 h-2 bg-yellow-400 animate-pulse"
+                style={{
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`
+                }}
+              />
+            ))}
+          </div>
+          
+          <div className="container mx-auto text-center relative z-10">
+            {/* Pixel Ship */}
+            <div className="mb-8 flex justify-center">
+              <div className="relative">
+                <div className="w-24 h-12 bg-red-600 relative" style={{clipPath: 'polygon(10% 100%, 0% 70%, 20% 0%, 80% 0%, 100% 70%, 90% 100%)'}}>
+                  <div className="absolute top-4 left-2 w-2 h-2 bg-black"></div>
+                  <div className="absolute top-4 left-6 w-2 h-2 bg-black"></div>
+                  <div className="absolute top-4 left-10 w-2 h-2 bg-black"></div>
+                </div>
+                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-1 h-8 bg-yellow-600"></div>
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 translate-x-2 w-8 h-6 bg-yellow-400 border-2 border-yellow-600">
+                  <div className="text-xs text-red-600 font-bold">AI</div>
+                </div>
+              </div>
+            </div>
+
+            <h2 className="font-press-start text-3xl md:text-5xl text-yellow-400 mb-6">
+              AI SHIPATHON
+            </h2>
+            
+            <div className="bg-red-600 border-4 border-red-800 p-6 max-w-4xl mx-auto mb-8">
+              <p className="font-press-start text-lg md:text-xl text-yellow-400 leading-relaxed">
+                48 HOURS. BUILD WITH AI. SHIP YOUR FIRST PROJECT. MEET BUILDERS LIKE YOU.
+              </p>
+            </div>
+
+            <div className="text-center mb-8">
+              <div className="bg-yellow-400 border-4 border-yellow-600 px-6 py-3 inline-block mb-4">
+                <p className="font-press-start text-red-600 text-lg">
+                  AUG 30 - SEP 1, 2025
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/shipathon"
+                className="bg-yellow-400 hover:bg-yellow-500 text-red-600 font-black py-4 px-8 text-lg border-4 border-yellow-600 shadow-2xl transform hover:scale-105 transition-all inline-flex items-center gap-2"
+                style={{fontFamily: 'Press Start 2P, monospace'}}
+              >
+                <span>⚡</span>
+                LEARN MORE
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <a 
+                href="https://maximally-ai-shipathon.devpost.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 hover:bg-red-700 text-yellow-400 font-black py-4 px-8 text-lg border-4 border-red-800 shadow-2xl transform hover:scale-105 transition-all inline-flex items-center gap-2"
+                style={{fontFamily: 'Press Start 2P, monospace'}}
+              >
+                <span>🚢</span>
+                REGISTER NOW
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Partner With Us Section */}
         <section className="py-20 px-4 bg-white">
           <div className="container mx-auto text-center">

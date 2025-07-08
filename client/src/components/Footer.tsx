@@ -31,10 +31,10 @@ const Footer = () => {
               <span>🚀</span> EVENTS
             </h3>
             <ul className="space-y-4 font-jetbrains text-black">
+              <li><Link to="/shipathon" className="hover:text-red-400 transition-colors block retro-underline">AI Shipathon</Link></li>
               <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Past Hackathons</Link></li>
               <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Upcoming Challenges</Link></li>
               <li><Link to="/makeathon" className="hover:text-red-400 transition-colors block retro-underline">Archived: Summer 2025</Link></li>
-
             </ul>
           </div>
 
