@@ -146,7 +146,7 @@ export default function Shipathon() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  onClick={() => window.open('https://maximally-ai-shipathon.devpost.com/', '_blank')}
+                  onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
                   className="pixel-button bg-maximally-yellow text-black font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-maximally-yellow"
                 >
                   REGISTER NOW
@@ -665,7 +665,7 @@ export default function Shipathon() {
                   {/* Final CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button 
-                      onClick={() => window.open('https://maximally-ai-shipathon.devpost.com/', '_blank')}
+                      onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
                       className="pixel-button bg-maximally-yellow text-black font-press-start py-4 md:py-6 px-6 md:px-10 text-lg md:text-xl hover:scale-110 transition-all duration-300 border-2 border-maximally-yellow"
                     >
                       🚢 REGISTER ON DEVPOST
