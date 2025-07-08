@@ -1,25 +1,38 @@
-import { useEffect, useState } from 'react';
-import { ArrowRight, Users, Target, Trophy, Globe, Code, Zap, Terminal } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import {
+  ArrowRight,
+  Users,
+  Target,
+  Trophy,
+  Globe,
+  Code,
+  Zap,
+  Terminal,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
-import Footer from '@/components/Footer';
-import SEO from '@/components/SEO';
+import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Maximally",
-    "description": "A global innovation league that hosts high-stakes hackathons for ambitious builders across disciplines worldwide",
-    "url": "https://maximally.in",
-    "logo": "https://maximally.in/logo.png",
-    "sameAs": ["https://twitter.com/maximallyHQ", "https://instagram.com/maximallyHQ"]
+    name: "Maximally",
+    description:
+      "A global innovation league that hosts high-stakes hackathons for ambitious builders across disciplines worldwide",
+    url: "https://maximally.in",
+    logo: "https://maximally.in/logo.png",
+    sameAs: [
+      "https://twitter.com/maximallyHQ",
+      "https://instagram.com/maximallyHQ",
+    ],
   };
-  
-  const [text, setText] = useState('');
-  const fullText = 'We Host Hackathons';
+
+  const [text, setText] = useState("");
+  const fullText = "We Host Hackathons";
   const [isVisible, setIsVisible] = useState(false);
-  
+
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -30,29 +43,29 @@ const Index = () => {
         clearInterval(timer);
       }
     }, 100);
-    
+
     const handleScroll = () => {
       const scrolled = window.scrollY;
       setIsVisible(scrolled > 100);
     };
-    
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
       clearInterval(timer);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <>
-      <SEO 
-        title="Maximally | The Global Hackathon League for Builders" 
-        description="Maximally hosts execution-first hackathons and challenges for global builders to showcase real work and get discovered. Join engineers, founders, and creatives worldwide." 
-        keywords="global hackathons, innovation challenges, builder community, startup competitions, coding competitions, entrepreneurship platform" 
-        canonicalUrl="https://maximally.in" 
-        structuredData={structuredData} 
+      <SEO
+        title="Maximally | The Global Hackathon League for Builders"
+        description="Maximally hosts execution-first hackathons and challenges for global builders to showcase real work and get discovered. Join engineers, founders, and creatives worldwide."
+        keywords="global hackathons, innovation challenges, builder community, startup competitions, coding competitions, entrepreneurship platform"
+        canonicalUrl="https://maximally.in"
+        structuredData={structuredData}
       />
-      
+
       <div className="min-h-screen bg-white relative overflow-hidden">
         {/* Hero Section */}
         <section className="min-h-screen relative">
@@ -62,22 +75,22 @@ const Index = () => {
 
           {/* Floating Pixels */}
           {[...Array(8)].map((_, i) => (
-            <div 
-              key={i} 
-              className="absolute w-4 h-4 bg-maximally-red/20 pixel-border animate-float" 
+            <div
+              key={i}
+              className="absolute w-4 h-4 bg-maximally-red/20 pixel-border animate-float"
               style={{
                 top: `${Math.random() * 90}%`,
                 left: `${Math.random() * 90}%`,
                 animationDelay: `${i * 0.5}s`,
-                animationDuration: `${4 + i}s`
-              }} 
+                animationDuration: `${4 + i}s`,
+              }}
             />
           ))}
 
           <div className="relative container mx-auto px-4 pt-32 pb-20">
             <div className="max-w-4xl mx-auto text-center relative">
               <div className="absolute inset-0 pixel-grid-bg opacity-20"></div>
-              
+
               {/* Alert Banner */}
               <div className="mb-8 inline-block group relative">
                 <div className="minecraft-block bg-gradient-to-r from-maximally-red via-maximally-yellow to-maximally-red-light p-3 relative overflow-hidden">
@@ -98,27 +111,43 @@ const Index = () => {
               {/* Floating Subtext with Twist */}
               <div className="relative mb-8 opacity-0 animate-[fadeIn_1s_ease-in_forwards_1.5s]">
                 <div className="inline-block relative">
-                  <p className="font-jetbrains text-base sm:text-lg text-maximally-black/60 font-medium" style={{animation: 'float-twist 4s ease-in-out infinite'}}>
+                  <p
+                    className="font-jetbrains text-base sm:text-lg text-maximally-black/60 font-medium"
+                    style={{ animation: "float-twist 4s ease-in-out infinite" }}
+                  >
                     but not the boring ones
                   </p>
-                  <div className="absolute -top-1 -right-6 transform" style={{animation: 'sparkle 2s ease-in-out infinite', animationDelay: '2s'}}>
+                  <div
+                    className="absolute -top-1 -right-6 transform"
+                    style={{
+                      animation: "sparkle 2s ease-in-out infinite",
+                      animationDelay: "2s",
+                    }}
+                  >
                     <span className="text-maximally-red text-lg">⚡</span>
                   </div>
-                  <div className="absolute -bottom-1 -left-4 transform" style={{animation: 'sparkle 2.5s ease-in-out infinite', animationDelay: '3s'}}>
+                  <div
+                    className="absolute -bottom-1 -left-4 transform"
+                    style={{
+                      animation: "sparkle 2.5s ease-in-out infinite",
+                      animationDelay: "3s",
+                    }}
+                  >
                     <span className="text-maximally-yellow text-sm">✨</span>
                   </div>
                 </div>
               </div>
 
               <p className="font-jetbrains text-lg sm:text-xl text-maximally-black/80 max-w-3xl mx-auto mb-8 sm:mb-12 px-4 opacity-0 animate-[fadeIn_1s_ease-in_forwards_2s]">
-                A global innovation league that hosts high-stakes hackathons for ambitious builders across disciplines.
+                A global innovation league that hosts high-stakes hackathons for
+                ambitious builders across disciplines.
               </p>
 
               {/* CTAs */}
               <div className="relative max-w-2xl mx-auto space-y-6">
                 {/* Featured Shipathon CTA */}
                 <div className="w-full">
-                  <Link 
+                  <Link
                     to="/shipathon"
                     className="pixel-button bg-gradient-to-r from-maximally-yellow via-maximally-red to-maximally-yellow text-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-18 px-8 font-press-start text-sm w-full border-4 border-maximally-red"
                   >
@@ -130,16 +159,16 @@ const Index = () => {
 
                 {/* Secondary CTAs */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <Link 
-                    to="/events" 
+                  <Link
+                    to="/events"
                     className="pixel-button bg-maximally-red text-white group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red h-16 px-6 font-press-start text-sm"
                   >
                     <span>Explore Events</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
 
-                  <Link 
-                    to="/community" 
+                  <Link
+                    to="/community"
                     className="pixel-button bg-maximally-yellow text-maximally-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-16 px-6 font-press-start text-sm"
                   >
                     <Users className="h-4 w-4" />
@@ -156,23 +185,29 @@ const Index = () => {
           {/* Pixel stars background */}
           <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
-              <div 
+              <div
                 key={i}
                 className="absolute w-2 h-2 bg-yellow-400 animate-pulse"
                 style={{
                   top: `${Math.random() * 100}%`,
                   left: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 3}s`
+                  animationDelay: `${Math.random() * 3}s`,
                 }}
               />
             ))}
           </div>
-          
+
           <div className="container mx-auto text-center relative z-10">
             {/* Pixel Ship */}
             <div className="mb-8 flex justify-center">
               <div className="relative">
-                <div className="w-24 h-12 bg-red-600 relative" style={{clipPath: 'polygon(10% 100%, 0% 70%, 20% 0%, 80% 0%, 100% 70%, 90% 100%)'}}>
+                <div
+                  className="w-24 h-12 bg-red-600 relative"
+                  style={{
+                    clipPath:
+                      "polygon(10% 100%, 0% 70%, 20% 0%, 80% 0%, 100% 70%, 90% 100%)",
+                  }}
+                >
                   <div className="absolute top-4 left-2 w-2 h-2 bg-black"></div>
                   <div className="absolute top-4 left-6 w-2 h-2 bg-black"></div>
                   <div className="absolute top-4 left-10 w-2 h-2 bg-black"></div>
@@ -187,10 +222,11 @@ const Index = () => {
             <h2 className="font-press-start text-3xl md:text-5xl text-yellow-400 mb-6">
               AI SHIPATHON
             </h2>
-            
+
             <div className="bg-red-600 border-4 border-red-800 p-6 max-w-4xl mx-auto mb-8">
               <p className="font-press-start text-lg md:text-xl text-yellow-400 leading-relaxed">
-                48 HOURS. BUILD WITH AI. SHIP YOUR FIRST PROJECT. MEET BUILDERS LIKE YOU.
+                48 HOURS. BUILD WITH AI. SHIP YOUR FIRST PROJECT. MEET BUILDERS
+                LIKE YOU.
               </p>
             </div>
 
@@ -203,21 +239,21 @@ const Index = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link
                 to="/shipathon"
                 className="bg-yellow-400 hover:bg-yellow-500 text-red-600 font-black py-4 px-8 text-lg border-4 border-yellow-600 shadow-2xl transform hover:scale-105 transition-all inline-flex items-center gap-2"
-                style={{fontFamily: 'Press Start 2P, monospace'}}
+                style={{ fontFamily: "Press Start 2P, monospace" }}
               >
                 <span>⚡</span>
                 LEARN MORE
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              <a 
-                href="https://maximally-ai-shipathon.devpost.com/"
+              <a
+                href="https://maximally-ai-shipathon-2025.devpost.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-red-600 hover:bg-red-700 text-yellow-400 font-black py-4 px-8 text-lg border-4 border-red-800 shadow-2xl transform hover:scale-105 transition-all inline-flex items-center gap-2"
-                style={{fontFamily: 'Press Start 2P, monospace'}}
+                style={{ fontFamily: "Press Start 2P, monospace" }}
               >
                 <span>🚢</span>
                 REGISTER NOW
@@ -233,18 +269,21 @@ const Index = () => {
             <h2 className="font-press-start text-3xl md:text-4xl text-maximally-black mb-8">
               What We Do
             </h2>
-            
+
             <div className="max-w-3xl mx-auto mb-12">
               <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/80 mb-6">
-                We host execution-first challenges for engineers, founders, and creatives worldwide.
+                We host execution-first challenges for engineers, founders, and
+                creatives worldwide.
               </p>
               <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
-                Proof-of-work platform where ambitious builders create, launch, and compete with real solutions — designed for emerging talent across all disciplines.
+                Proof-of-work platform where ambitious builders create, launch,
+                and compete with real solutions — designed for emerging talent
+                across all disciplines.
               </p>
             </div>
 
-            <Link 
-              to="/events" 
+            <Link
+              to="/events"
               className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
             >
               <Trophy className="h-5 w-5" />
@@ -261,36 +300,50 @@ const Index = () => {
             <h2 className="font-press-start text-3xl md:text-4xl text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-[#39FF14] via-[#00ff99] to-[#00ffcc]">
               Born in India. Built for the World.
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <div className="text-center">
                 <div className="bg-black/40 p-8 rounded-lg border-2 border-[#39FF14] hover:scale-105 transform transition-all duration-300">
                   <Globe className="h-12 w-12 text-[#39FF14] mx-auto mb-4" />
-                  <h3 className="font-press-start text-2xl text-white mb-2">Global</h3>
-                  <p className="font-jetbrains text-white/80">Borderless innovation for builders worldwide</p>
+                  <h3 className="font-press-start text-2xl text-white mb-2">
+                    Global
+                  </h3>
+                  <p className="font-jetbrains text-white/80">
+                    Borderless innovation for builders worldwide
+                  </p>
                 </div>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-black/40 p-8 rounded-lg border-2 border-[#00ff99] hover:scale-105 transform transition-all duration-300">
                   <Code className="h-12 w-12 text-[#00ff99] mx-auto mb-4" />
-                  <h3 className="font-press-start text-2xl text-white mb-2">Digital</h3>
-                  <p className="font-jetbrains text-white/80">Internet-native events for digital builders</p>
+                  <h3 className="font-press-start text-2xl text-white mb-2">
+                    Digital
+                  </h3>
+                  <p className="font-jetbrains text-white/80">
+                    Internet-native events for digital builders
+                  </p>
                 </div>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-black/40 p-8 rounded-lg border-2 border-[#00ffcc] hover:scale-105 transform transition-all duration-300">
                   <Zap className="h-12 w-12 text-[#00ffcc] mx-auto mb-4" />
-                  <h3 className="font-press-start text-2xl text-white mb-2">Fast</h3>
-                  <p className="font-jetbrains text-white/80">High-pressure sprints for real proof of work</p>
+                  <h3 className="font-press-start text-2xl text-white mb-2">
+                    Fast
+                  </h3>
+                  <p className="font-jetbrains text-white/80">
+                    High-pressure sprints for real proof of work
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="text-center">
               <p className="font-jetbrains text-xl text-white/90 max-w-3xl mx-auto mb-8">
-                At Maximally, we believe innovation has no borders — and no traditional limits. Whether you're from a metro or a small town, if you're building bold things, you belong here.
+                At Maximally, we believe innovation has no borders — and no
+                traditional limits. Whether you're from a metro or a small town,
+                if you're building bold things, you belong here.
               </p>
             </div>
           </div>
@@ -299,29 +352,32 @@ const Index = () => {
         {/* Partner With Us Section */}
         <section className="py-20 px-4 bg-white">
           <div className="container mx-auto text-center">
-          <div className="container mx-auto text-center">
-            <h2 className="font-press-start text-3xl md:text-4xl text-maximally-black mb-8">
-              Let's Build the Innovation League — Together
-            </h2>
-            
-            <div className="max-w-3xl mx-auto mb-12">
-              <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/80 mb-6">
-                We partner with organizations, creators, and brands to host transformative hackathons that inspire innovation and real-world impact.
-              </p>
-              <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
-                Ready to host a hackathon that empowers the next generation of builders? Let's collaborate.
-              </p>
-            </div>
+            <div className="container mx-auto text-center">
+              <h2 className="font-press-start text-3xl md:text-4xl text-maximally-black mb-8">
+                Let's Build the Innovation League — Together
+              </h2>
 
-            <Link 
-              to="/collaborate" 
-              className="pixel-button bg-maximally-yellow text-maximally-black inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
-            >
-              <Users className="h-5 w-5" />
-              <span>Partner With Us</span>
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </div>
+              <div className="max-w-3xl mx-auto mb-12">
+                <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/80 mb-6">
+                  We partner with organizations, creators, and brands to host
+                  transformative hackathons that inspire innovation and
+                  real-world impact.
+                </p>
+                <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
+                  Ready to host a hackathon that empowers the next generation of
+                  builders? Let's collaborate.
+                </p>
+              </div>
+
+              <Link
+                to="/collaborate"
+                className="pixel-button bg-maximally-yellow text-maximally-black inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
+              >
+                <Users className="h-5 w-5" />
+                <span>Partner With Us</span>
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </section>
 
