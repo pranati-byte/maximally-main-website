@@ -1,15 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import SEO from '@/components/SEO';
 
 export default function Shipathon() {
   const [glitchText, setGlitchText] = useState("BUILD OR BE FORGOTTEN");
-  const [terminalLines, setTerminalLines] = useState<string[]>([]);
 
   useEffect(() => {
     const glitchInterval = setInterval(() => {
-      const texts = ["BUILD OR BE FORGOTTEN", "SHIP OR SINK", "BUILD OR BE FORGOTTEN"];
+      const texts = ["BUILD OR BE FORGOTTEN", "SHIP OR SINK", "AI POWERED CHAOS"];
       setGlitchText(texts[Math.floor(Math.random() * texts.length)]);
     }, 3000);
 
@@ -20,119 +19,122 @@ export default function Shipathon() {
 
   const tracks = [
     {
-      title: "🛠️ Build with AI",
-      description: "Tools, agents, bots that actually work",
-      examples: ["GPT therapist", "Smart Chrome extension", "AI coding buddy"]
+      title: "BUILD WITH AI",
+      description: "Agents, bots, tools, extensions, automations",
+      examples: ["AI agents & chatbots", "Chrome extensions & tools", "GPT workflows & automations", "Startup MVPs"]
     },
     {
-      title: "🎨 Create with AI", 
-      description: "Visuals, memes, music that slaps",
-      examples: ["Meme generator", "AI music producer", "Story visualizer"]
+      title: "CREATE WITH AI", 
+      description: "Art, music, video, design, brand, memes",
+      examples: ["Visuals, music, storytelling", "Podcast snippets & edits", "Design kits & voiceovers", "Creative experiments"]
     },
     {
-      title: "🧪 Experiment with AI",
-      description: "Hacks, pranks, weird genius stuff",
-      examples: ["Absurd prompt prank", "AI personality test", "Dream decoder"]
+      title: "EXPERIMENT WITH AI",
+      description: "Pranks, simulations, hacks, weird stuff", 
+      examples: ["Prompt hacks & sims", "Why does this exist tools", "Absurd yet brilliant bots", "Creative chaos"]
     }
   ];
 
   const prizes = [
-    { title: "Track Winners", prize: "₹2,500 each", icon: "🏆" },
-    { title: "Best Beginner", prize: "LOR + Certificate", icon: "🌟" },
-    { title: "Most Viral", prize: "Meme Collab + IG Feature", icon: "🔥" },
-    { title: "Future Founder", prize: "Maximally Inner Circle Access", icon: "👑" }
+    { title: "BEST BUILD", prize: "₹2,500 + LOR + internship referrals", icon: "🛠️" },
+    { title: "BEST CREATE", prize: "₹2,500 + LOR + Insta feature", icon: "🎨" },
+    { title: "BEST EXPERIMENT", prize: "₹2,500 + Weird Genius cert", icon: "🧪" },
+    { title: "MOST VIRAL", prize: "Feature + meme drop + reel collab", icon: "🚀" }
   ];
 
   const timeline = [
-    { date: "Aug 30", event: "🚀 Shipathon Begins", time: "12:00 AM IST" },
-    { date: "Sept 1", event: "⏰ Submission Deadline", time: "12:00 AM IST" },
-    { date: "Sept 2", event: "🔍 Judging Phase", time: "All Day" },
-    { date: "Sept 3", event: "🎉 Feature Drops Begin", time: "Evening" }
+    { date: "AUG 30", time: "12:00 AM IST", event: "Hackathon begins - Start building!" },
+    { date: "SEP 1", time: "12:00 AM IST", event: "Submission deadline" },
+    { date: "SEP 1-2", time: "TBD", event: "Judging period" },
+    { date: "SEP 3+", time: "TBD", event: "Winners announced & featured" }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <SEO 
-        title="AI Shipathon - Maximally"
-        description="48-hour global hackathon for teen builders. AI x Chaos x Creativity. Aug 30 - Sept 1, 2025. Build or be forgotten."
-        keywords="AI hackathon, teen developers, global hackathon, AI creativity, shipathon, maximally"
+        title="AI Shipathon 2025 - Maximally Global Hackathon"
+        description="48-hour global hackathon for AI builders. Build, create, or experiment with AI. Aug 30 - Sept 1, 2025. ₹7,500+ prizes. All skill levels welcome."
+        keywords="AI hackathon, global hackathon, AI builders, AI creativity, shipathon, maximally"
       />
 
-      <div className="min-h-screen bg-black text-yellow-400 overflow-hidden relative">
-        {/* Pixelated stars background */}
-        <div className="fixed inset-0 bg-black z-0"></div>
-        {/* Floating pixel stars */}
-        <div className="fixed top-10 left-20 w-2 h-2 bg-yellow-400 animate-pulse"></div>
-        <div className="fixed top-40 right-32 w-2 h-2 bg-red-500 animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="fixed top-20 left-1/3 w-2 h-2 bg-yellow-400 animate-pulse" style={{animationDelay: '2s'}}></div>
-        <div className="fixed bottom-32 right-20 w-2 h-2 bg-red-500 animate-pulse" style={{animationDelay: '3s'}}></div>
-        <div className="fixed top-1/2 right-1/4 w-2 h-2 bg-yellow-400 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+      <div className="min-h-screen bg-white text-maximally-black overflow-hidden relative">
+        {/* Pixelated background */}
+        <div className="fixed inset-0 pixel-grid opacity-20 z-0"></div>
+        
+        {/* Floating pixel elements */}
+        {[...Array(12)].map((_, i) => (
+          <div 
+            key={i}
+            className="fixed w-4 h-4 bg-maximally-red pixel-border animate-float opacity-30"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${i * 0.5}s`,
+              animationDuration: `${4 + i * 0.5}s`
+            }}
+          />
+        ))}
         
         <div className="relative z-10">
-          {/* Hero Section - Pixel Ocean */}
+          {/* Hero Section */}
           <section className="min-h-screen flex flex-col items-center justify-center relative px-4">
-            {/* Pixel Ship Scene */}
-            <div className="absolute bottom-0 left-0 right-0 h-16 bg-yellow-400" style={{clipPath: 'polygon(0 70%, 10% 90%, 20% 80%, 30% 85%, 40% 75%, 50% 85%, 60% 80%, 70% 90%, 80% 75%, 90% 85%, 100% 70%, 100% 100%, 0% 100%)'}}></div>
-            
-            {/* Pixel Ship */}
-            <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2">
-              <div className="pixel-ship">
+            {/* Pixel Ship Animation */}
+            <div className="mb-12 pixel-float">
+              <div className="relative">
                 {/* Ship body */}
-                <div className="relative">
-                  <div className="w-32 h-16 bg-red-600 relative" style={{clipPath: 'polygon(10% 100%, 0% 70%, 20% 0%, 80% 0%, 100% 70%, 90% 100%)'}}>
-                    {/* Portholes */}
-                    <div className="absolute top-8 left-4 w-3 h-3 bg-black"></div>
-                    <div className="absolute top-8 left-12 w-3 h-3 bg-black"></div>
-                    <div className="absolute top-8 left-20 w-3 h-3 bg-black"></div>
-                  </div>
-                  {/* Mast */}
-                  <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-yellow-600"></div>
-                  {/* Sail with AI circuits */}
-                  <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 translate-x-4 w-16 h-12 bg-yellow-400 border-2 border-yellow-600">
-                    <div className="text-xs text-red-600 font-bold p-1">⚡AI⚡</div>
-                  </div>
-                  {/* Flag */}
-                  <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-red-600"></div>
+                <div className="w-32 h-16 bg-maximally-red minecraft-block relative">
+                  <div className="absolute top-4 left-4 w-3 h-3 bg-maximally-black pixel-border"></div>
+                  <div className="absolute top-4 left-12 w-3 h-3 bg-maximally-black pixel-border"></div>
+                  <div className="absolute top-4 left-20 w-3 h-3 bg-maximally-black pixel-border"></div>
                 </div>
+                {/* Mast */}
+                <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-maximally-yellow minecraft-block"></div>
+                {/* Sail with AI circuits */}
+                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 translate-x-4 w-16 h-12 bg-maximally-yellow minecraft-block flex items-center justify-center">
+                  <span className="font-press-start text-xs text-maximally-red">AI</span>
+                </div>
+                {/* Flag */}
+                <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-maximally-red minecraft-block"></div>
               </div>
             </div>
 
-            <div className="text-center space-y-8 max-w-4xl relative z-10">
+            <div className="text-center space-y-8 max-w-4xl relative">
               {/* AI Shipathon Logo */}
               <div className="space-y-6">
                 <div className="relative inline-block">
-                  <div className="bg-yellow-400 border-4 border-yellow-600 p-6 shadow-2xl transform -rotate-1" style={{clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)'}}>
-                    <h1 className="text-4xl md:text-6xl font-black text-red-600" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                  <div className="minecraft-block bg-maximally-yellow p-6 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                    <h1 className="text-4xl md:text-6xl font-press-start text-maximally-red">
                       AI
                     </h1>
                   </div>
-                  <div className="bg-red-600 border-4 border-red-800 p-4 shadow-2xl transform rotate-1 -mt-4" style={{clipPath: 'polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%)'}}>
-                    <h1 className="text-3xl md:text-5xl font-black text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                  <div className="minecraft-block bg-maximally-red p-4 transform rotate-1 -mt-4 hover:rotate-0 transition-transform duration-300">
+                    <h1 className="text-3xl md:text-5xl font-press-start text-maximally-yellow">
                       SHIPATHON
                     </h1>
                   </div>
                 </div>
-                <div className="bg-black border-2 border-yellow-400 px-6 py-3 inline-block">
-                  <p className="text-lg md:text-xl font-bold text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                <div className="minecraft-block bg-maximally-black px-6 py-3 inline-block">
+                  <p className="text-lg md:text-xl font-press-start text-maximally-yellow">
                     {glitchText}
                   </p>
                 </div>
               </div>
 
               {/* Event Details */}
-              <div className="bg-yellow-400 border-4 border-yellow-600 shadow-2xl max-w-md mx-auto p-6" style={{clipPath: 'polygon(0% 0%, 90% 0%, 100% 15%, 100% 100%, 10% 100%, 0% 85%)'}}>
-                <div className="text-red-600 font-black text-lg mb-2" style={{fontFamily: 'Press Start 2P, monospace'}}>AUG 30 - SEP 1</div>
-                <div className="text-red-600 font-black text-lg" style={{fontFamily: 'Press Start 2P, monospace'}}>GLOBAL DIGITAL</div>
+              <div className="minecraft-block bg-maximally-yellow max-w-md mx-auto p-6">
+                <div className="text-maximally-red font-press-start text-lg mb-2">AUG 30 - SEP 1</div>
+                <div className="text-maximally-red font-press-start text-lg">GLOBAL DIGITAL</div>
               </div>
 
               {/* Message Box */}
               <div className="relative my-12">
-                <div className="bg-black border-2 border-yellow-400 p-6 max-w-2xl mx-auto shadow-2xl">
-                  <div className="text-lg md:text-xl font-bold mb-4 text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                    SHIP YOUR FIRST AI PROJECT
+                <div className="minecraft-block bg-maximally-black p-6 max-w-2xl mx-auto hover:scale-105 transition-transform duration-300">
+                  <div className="text-lg md:text-xl font-press-start mb-4 text-maximally-yellow">
+                    48-HOUR GLOBAL HACKATHON
                   </div>
-                  <p className="text-yellow-400 leading-relaxed font-bold">
-                    MEET BUILDERS LIKE YOU.
+                  <p className="text-maximally-yellow font-jetbrains leading-relaxed">
+                    For the curious, the chaotic, and the creative. No pitch decks. No suits. 
+                    Just ideas, friends, and a playground where weird is welcome.
                   </p>
                 </div>
               </div>
@@ -141,72 +143,69 @@ export default function Shipathon() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   onClick={() => window.open('https://maximally-ai-shipathon.devpost.com/', '_blank')}
-                  className="bg-yellow-400 hover:bg-yellow-500 text-red-600 font-black py-4 px-8 text-lg border-4 border-yellow-600 shadow-2xl transform hover:scale-105 transition-all"
-                  style={{fontFamily: 'Press Start 2P, monospace'}}
+                  className="pixel-button bg-maximally-yellow text-maximally-red font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300"
                 >
                   REGISTER NOW
                 </Button>
                 <Button 
                   onClick={() => window.open('https://discord.gg/maximally', '_blank')}
-                  className="bg-red-600 hover:bg-red-700 text-yellow-400 font-black py-4 px-8 text-lg border-4 border-red-800 shadow-2xl transform hover:scale-105 transition-all"
-                  style={{fontFamily: 'Press Start 2P, monospace'}}
+                  className="pixel-button bg-maximally-red text-maximally-yellow font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300"
                 >
                   JOIN DISCORD
                 </Button>
               </div>
             </div>
 
-            {/* Floating Pixel Elements */}
-            <div className="absolute top-20 left-10 text-4xl animate-float">🤖</div>
-            <div className="absolute top-40 right-20 text-3xl animate-float" style={{animationDelay: '1s'}}>⚡</div>
-            <div className="absolute top-1/2 left-5 text-2xl animate-float" style={{animationDelay: '0.5s'}}>💾</div>
-            <div className="absolute bottom-40 right-10 text-2xl animate-float" style={{animationDelay: '1.5s'}}>🔧</div>
-            <div className="absolute top-32 left-1/3 text-2xl animate-float" style={{animationDelay: '3s'}}>💻</div>
+            {/* Floating Tech Icons */}
+            <div className="absolute top-20 left-10 text-4xl pixel-float">🤖</div>
+            <div className="absolute top-40 right-20 text-3xl pixel-float" style={{animationDelay: '1s'}}>⚡</div>
+            <div className="absolute top-1/2 left-5 text-2xl pixel-float" style={{animationDelay: '0.5s'}}>💾</div>
+            <div className="absolute bottom-40 right-10 text-2xl pixel-float" style={{animationDelay: '1.5s'}}>🔧</div>
+            <div className="absolute top-32 left-1/3 text-2xl pixel-float" style={{animationDelay: '3s'}}>💻</div>
           </section>
 
           {/* About the Challenge */}
-          <section className="py-20 px-4 bg-black">
+          <section className="py-20 px-4 bg-gray-50">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-6xl font-black text-yellow-400 mb-6" style={{fontFamily: 'Press Start 2P, monospace'}}>
+                <h2 className="text-4xl md:text-6xl font-press-start text-maximally-black mb-6">
                   THE MISSION
                 </h2>
-                <div className="bg-red-600 border-4 border-red-800 p-8 max-w-4xl mx-auto shadow-2xl">
-                  <p className="text-xl md:text-2xl leading-relaxed text-yellow-400 font-bold" style={{fontFamily: 'Press Start 2P, monospace', lineHeight: '1.8'}}>
-                    48 HOURS. ONE MISSION: BUILD WITH AI. 
-                    CODER, CREATOR, OR CHAOS MAKER - 
-                    IF YOU HAVE WIFI + CURIOSITY, YOU'RE IN.
+                <div className="minecraft-block bg-maximally-red p-8 max-w-4xl mx-auto">
+                  <p className="text-xl md:text-2xl font-jetbrains text-white leading-relaxed">
+                    Whether you're a coder, artist, student, or first-time builder — if you're excited about AI 
+                    and want to build something real, this event is for you.
                   </p>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className="bg-yellow-400 border-4 border-yellow-600 shadow-2xl transform hover:scale-105 transition-all">
+                <Card className="minecraft-block bg-maximally-yellow hover:scale-105 transition-all duration-300">
                   <CardContent className="p-6 text-center">
                     <div className="text-3xl mb-4">🌍</div>
-                    <h3 className="font-black text-red-600" style={{fontFamily: 'Press Start 2P, monospace'}}>GLOBAL</h3>
-                    <p className="text-red-600 font-bold">ALL SKILL LEVELS</p>
+                    <h3 className="font-press-start text-maximally-red mb-2">GLOBAL</h3>
+                    <p className="text-maximally-red font-jetbrains font-bold">All skill levels</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-red-600 border-4 border-red-800 shadow-2xl transform hover:scale-105 transition-all">
+                <Card className="minecraft-block bg-maximally-red hover:scale-105 transition-all duration-300">
                   <CardContent className="p-6 text-center">
                     <div className="text-3xl mb-4">⏰</div>
-                    <h3 className="font-black text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>48 HOURS</h3>
-                    <p className="text-yellow-400 font-bold">AUG 30 - SEP 1</p>
+                    <h3 className="font-press-start text-maximally-yellow mb-2">48 HOURS</h3>
+                    <p className="text-maximally-yellow font-jetbrains font-bold">Aug 30 - Sep 1</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-yellow-400 border-4 border-yellow-600 shadow-2xl transform hover:scale-105 transition-all">
+                <Card className="minecraft-block bg-maximally-yellow hover:scale-105 transition-all duration-300">
                   <CardContent className="p-6 text-center">
                     <div className="text-3xl mb-4">👥</div>
-                    <h3 className="font-black text-red-600" style={{fontFamily: 'Press Start 2P, monospace'}}>TEAMS</h3>
-                    <p className="text-red-600 font-bold">SOLO OR UP TO 4</p>
+                    <h3 className="font-press-start text-maximally-red mb-2">TEAMS</h3>
+                    <p className="text-maximally-red font-jetbrains font-bold">Solo or up to 4</p>
                   </CardContent>
                 </Card>
-                <Card className="bg-red-600 border-4 border-red-800 shadow-2xl transform hover:scale-105 transition-all">
+                <Card className="minecraft-block bg-maximally-red hover:scale-105 transition-all duration-300">
                   <CardContent className="p-6 text-center">
                     <div className="text-3xl mb-4">💻</div>
-                    <h3 className="font-black text-yellow-400" style={{fontFamily: 'Press Start 2P, monospace'}}>ONLINE</h3>
-                    <p className="text-yellow-400 font-bold">VIRTUAL EVENT</p>
+                    <h3 className="font-press-start text-maximally-yellow mb-2">ONLINE</h3>
+                    <p className="text-maximally-yellow font-jetbrains font-bold">+ Chandigarh hub</p>
                   </CardContent>
                 </Card>
               </div>
@@ -214,30 +213,30 @@ export default function Shipathon() {
           </section>
 
           {/* Who It's For */}
-          <section className="py-20 px-4 bg-black border-t-4 border-yellow-400">
+          <section className="py-20 px-4 bg-white">
             <div className="max-w-6xl mx-auto text-center">
-              <h2 className="text-4xl md:text-6xl font-black text-yellow-400 mb-6" style={{fontFamily: 'Press Start 2P, monospace'}}>
+              <h2 className="text-4xl md:text-6xl font-press-start text-maximally-black mb-6">
                 WHO CAN JOIN
               </h2>
-              <div className="bg-red-600 border-4 border-red-800 px-6 py-3 inline-block mb-12">
-                <p className="text-xl text-yellow-400 font-bold" style={{fontFamily: 'Press Start 2P, monospace'}}>
+              <div className="minecraft-block bg-maximally-red px-6 py-3 inline-block mb-12">
+                <p className="text-xl font-press-start text-maximally-yellow">
                   NO EXPERIENCE NEEDED. JUST ENERGY + IDEAS.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
-                  { icon: "🧙‍♂️", title: "FIRST-TIMERS", desc: "NEVER CODED? PERFECT!" },
-                  { icon: "👾", title: "NO-CODERS", desc: "INDIE HACKERS WELCOME" },
-                  { icon: "🎨", title: "CREATIVES", desc: "DESIGNERS, WRITERS, MEMERS" },
-                  { icon: "🧠", title: "CURIOUS MINDS", desc: "STUDENTS & TINKERERS" }
+                  { icon: "🧙‍♂️", title: "FIRST-TIMERS", desc: "Never coded? Perfect!" },
+                  { icon: "👾", title: "NO-CODERS", desc: "Indie hackers welcome" },
+                  { icon: "🎨", title: "CREATIVES", desc: "AI-curious designers & artists" },
+                  { icon: "🧠", title: "STUDENTS", desc: "Creators of all kinds" }
                 ].map((persona, i) => {
                   const isEven = i % 2 === 0;
                   return (
-                    <div key={i} className={`${isEven ? 'bg-yellow-400 border-yellow-600' : 'bg-red-600 border-red-800'} border-4 p-6 shadow-2xl transform hover:scale-105 transition-transform`}>
+                    <div key={i} className={`minecraft-block ${isEven ? 'bg-maximally-yellow' : 'bg-maximally-red'} p-6 hover:scale-105 transition-all duration-300`}>
                       <div className="text-6xl mb-4">{persona.icon}</div>
-                      <h3 className={`text-xl font-black mb-2 ${isEven ? 'text-red-600' : 'text-yellow-400'}`} style={{fontFamily: 'Press Start 2P, monospace'}}>{persona.title}</h3>
-                      <p className={`${isEven ? 'text-red-600' : 'text-yellow-400'} font-bold`}>{persona.desc}</p>
+                      <h3 className={`text-xl font-press-start mb-2 ${isEven ? 'text-maximally-red' : 'text-maximally-yellow'}`}>{persona.title}</h3>
+                      <p className={`${isEven ? 'text-maximally-red' : 'text-maximally-yellow'} font-jetbrains font-bold`}>{persona.desc}</p>
                     </div>
                   );
                 })}
@@ -246,28 +245,28 @@ export default function Shipathon() {
           </section>
 
           {/* Tracks */}
-          <section className="py-20 px-4 bg-black border-t-4 border-red-600">
+          <section className="py-20 px-4 bg-gray-50">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black text-yellow-400 text-center mb-16" style={{fontFamily: 'Press Start 2P, monospace'}}>
+              <h2 className="text-4xl md:text-6xl font-press-start text-maximally-black text-center mb-16">
                 CHOOSE YOUR TRACK
               </h2>
               
               <div className="grid lg:grid-cols-3 gap-8">
                 {tracks.map((track, i) => {
                   const colors = [
-                    { bg: "bg-yellow-400", border: "border-yellow-600", text: "text-red-600" },
-                    { bg: "bg-red-600", border: "border-red-800", text: "text-yellow-400" },
-                    { bg: "bg-yellow-400", border: "border-yellow-600", text: "text-red-600" }
+                    { bg: "bg-maximally-yellow", text: "text-maximally-red" },
+                    { bg: "bg-maximally-red", text: "text-maximally-yellow" },
+                    { bg: "bg-maximally-yellow", text: "text-maximally-red" }
                   ];
                   return (
-                    <Card key={i} className={`${colors[i].bg} ${colors[i].border} border-4 shadow-2xl transform hover:scale-105 transition-all`}>
+                    <Card key={i} className={`minecraft-block ${colors[i].bg} hover:scale-105 transition-all duration-300`}>
                       <CardContent className="p-8">
-                        <h3 className={`text-2xl font-black ${colors[i].text} mb-4`} style={{fontFamily: 'Press Start 2P, monospace'}}>{track.title}</h3>
-                        <p className={`${colors[i].text} mb-6 font-bold`}>{track.description}</p>
+                        <h3 className={`text-2xl font-press-start ${colors[i].text} mb-4`}>{track.title}</h3>
+                        <p className={`${colors[i].text} mb-6 font-jetbrains font-bold`}>{track.description}</p>
                         <div className="space-y-2">
-                          <p className={`text-sm ${colors[i].text} font-black`}>IDEAS:</p>
+                          <p className={`text-sm ${colors[i].text} font-press-start`}>IDEAS:</p>
                           {track.examples.map((example, j) => (
-                            <div key={j} className={`text-sm ${colors[i].text} font-bold`}>
+                            <div key={j} className={`text-sm ${colors[i].text} font-jetbrains`}>
                               ⚡ {example}
                             </div>
                           ))}
@@ -281,13 +280,13 @@ export default function Shipathon() {
           </section>
 
           {/* What to Build */}
-          <section className="py-20 px-4 bg-black border-t-4 border-yellow-400">
+          <section className="py-20 px-4 bg-white">
             <div className="max-w-6xl mx-auto text-center">
-              <h2 className="text-4xl md:text-6xl font-black text-yellow-400 mb-6" style={{fontFamily: 'Press Start 2P, monospace'}}>
+              <h2 className="text-4xl md:text-6xl font-press-start text-maximally-black mb-6">
                 WHAT TO BUILD
               </h2>
-              <div className="bg-red-600 border-4 border-red-800 px-6 py-3 inline-block mb-12">
-                <p className="text-xl text-yellow-400 font-bold" style={{fontFamily: 'Press Start 2P, monospace'}}>
+              <div className="minecraft-block bg-maximally-red px-6 py-3 inline-block mb-12">
+                <p className="text-xl font-press-start text-maximally-yellow">
                   CODE IT. NO-CODE IT. PROMPT IT. JUST SHIP IT.
                 </p>
               </div>
@@ -295,17 +294,17 @@ export default function Shipathon() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   { idea: "GPT THERAPIST THAT LISTENS", icon: "🧠" },
-                  { idea: "MEME GENERATOR FOR MOODS", icon: "😂" },
+                  { idea: "AI MEME GENERATOR", icon: "😂" },
                   { idea: "CHROME EXTENSION FOR SANITY", icon: "🔧" }, 
-                  { idea: "STORYTELLER BOT + PERSONALITY", icon: "📚" },
-                  { idea: "AI THAT ROASTS YOUR CODE", icon: "🔥" },
-                  { idea: "MUSIC PRODUCER THAT GETS YOU", icon: "🎵" }
+                  { idea: "STORYTELLER BOT", icon: "📚" },
+                  { idea: "AI CODE ROASTER", icon: "🔥" },
+                  { idea: "MUSIC PRODUCER AI", icon: "🎵" }
                 ].map((item, i) => {
                   const isEven = i % 2 === 0;
                   return (
-                    <div key={i} className={`${isEven ? 'bg-yellow-400 border-yellow-600' : 'bg-red-600 border-red-800'} border-4 p-6 shadow-2xl hover:scale-105 transition-all`}>
+                    <div key={i} className={`minecraft-block ${isEven ? 'bg-maximally-yellow' : 'bg-maximally-red'} p-6 hover:scale-105 transition-all duration-300`}>
                       <div className="text-4xl mb-4">{item.icon}</div>
-                      <p className={`${isEven ? 'text-red-600' : 'text-yellow-400'} font-bold`} style={{fontFamily: 'Press Start 2P, monospace', fontSize: '12px', lineHeight: '1.4'}}>{item.idea}</p>
+                      <p className={`${isEven ? 'text-maximally-red' : 'text-maximally-yellow'} font-jetbrains font-bold text-sm`}>{item.idea}</p>
                     </div>
                   );
                 })}
@@ -314,46 +313,68 @@ export default function Shipathon() {
           </section>
 
           {/* Submission Requirements */}
-          <section className="py-20 px-4">
+          <section className="py-20 px-4 bg-gray-50">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black text-[#FFD700] text-center mb-16">
-                📦 WHAT TO SUBMIT
+              <h2 className="text-4xl md:text-6xl font-press-start text-maximally-black text-center mb-16">
+                SUBMISSION RULES
               </h2>
               
-              <div className="bg-black border-2 border-[#E50914] rounded-lg p-8 font-mono">
-                <div className="text-[#FFD700] mb-4">
-                  &gt; DEADLINE: Sept 1, 12:00 AM IST
+              <div className="minecraft-block bg-maximally-black p-8">
+                <div className="text-maximally-yellow mb-6 text-center">
+                  <div className="text-2xl font-press-start mb-4">
+                    DEADLINE: SEP 1, 12:00 AM IST
+                  </div>
                 </div>
-                <div className="space-y-4 text-gray-300">
-                  <div>1. 2-min demo video (can be casual AF)</div>
-                  <div>2. Short write-up (what, why AI, how it works)</div>
-                  <div>3. GitHub or live link</div>
+                <div className="space-y-6 text-maximally-yellow font-jetbrains text-lg">
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl">🎬</span>
+                    <div>
+                      <div className="font-press-start text-xl text-maximally-red">Demo Video</div>
+                      <div className="text-maximally-yellow">Max 2 mins - screen record or natural</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl">📝</span>
+                    <div>
+                      <div className="font-press-start text-xl text-maximally-red">Write-up</div>
+                      <div className="text-maximally-yellow">What you built, why AI, how it works</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="text-3xl">🔗</span>
+                    <div>
+                      <div className="font-press-start text-xl text-maximally-red">Live Link</div>
+                      <div className="text-maximally-yellow">Working link or GitHub repo</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Prizes */}
-          <section className="py-20 px-4 bg-gradient-to-b from-orange-400 to-yellow-500">
+          <section className="py-20 px-4 bg-white">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black text-white text-center mb-16" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                💰 TREASURE AWAITS
+              <h2 className="text-4xl md:text-6xl font-press-start text-maximally-black text-center mb-16">
+                PRIZES & AWARDS
               </h2>
+              
+              <div className="text-center mb-8">
+                <div className="minecraft-block bg-maximally-yellow px-6 py-3 inline-block">
+                  <p className="font-press-start text-maximally-red text-xl">₹7,500+ CASH + MAXIMALLY PERKS</p>
+                </div>
+              </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {prizes.map((prize, i) => {
-                  const colors = [
-                    "bg-yellow-300 border-yellow-500",
-                    "bg-orange-300 border-orange-500", 
-                    "bg-red-300 border-red-500",
-                    "bg-purple-300 border-purple-500"
-                  ];
+                  const colors = ["bg-maximally-yellow", "bg-maximally-red", "bg-maximally-yellow", "bg-maximally-red"];
+                  const textColors = ["text-maximally-red", "text-maximally-yellow", "text-maximally-red", "text-maximally-yellow"];
                   return (
-                    <Card key={i} className={`${colors[i]} border-4 rounded-2xl shadow-2xl hover:scale-105 transition-all`}>
+                    <Card key={i} className={`minecraft-block ${colors[i]} hover:scale-105 transition-all duration-300`}>
                       <CardContent className="p-6 text-center">
                         <div className="text-4xl mb-4">{prize.icon}</div>
-                        <h3 className="font-black text-blue-900 mb-2" style={{fontFamily: 'Press Start 2P, monospace'}}>{prize.title}</h3>
-                        <p className="text-blue-800 text-sm font-bold">{prize.prize}</p>
+                        <h3 className={`font-press-start ${textColors[i]} mb-2 text-sm`}>{prize.title}</h3>
+                        <p className={`${textColors[i]} text-xs font-jetbrains font-bold`}>{prize.prize}</p>
                       </CardContent>
                     </Card>
                   );
@@ -362,63 +383,23 @@ export default function Shipathon() {
             </div>
           </section>
 
-          {/* Submission Requirements */}
-          <section className="py-20 px-4 bg-gradient-to-b from-blue-600 to-purple-600">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black text-white text-center mb-16" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                📦 SHIP YOUR TREASURE
-              </h2>
-              
-              <div className="bg-white bg-opacity-90 border-4 border-yellow-400 rounded-2xl p-8 shadow-2xl">
-                <div className="text-yellow-600 mb-6 text-center">
-                  <div className="text-2xl font-black" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                    ⏰ DEADLINE: SEPT 1, 12:00 AM IST
-                  </div>
-                </div>
-                <div className="space-y-6 text-blue-900 font-bold text-lg">
-                  <div className="flex items-start gap-4">
-                    <span className="text-3xl">🎬</span>
-                    <div>
-                      <div className="font-black text-xl">2-min demo video</div>
-                      <div className="text-blue-600">(can be casual - just show it working!)</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <span className="text-3xl">📝</span>
-                    <div>
-                      <div className="font-black text-xl">Short write-up</div>
-                      <div className="text-blue-600">(what it does, why AI, how it works)</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <span className="text-3xl">🔗</span>
-                    <div>
-                      <div className="font-black text-xl">GitHub or live link</div>
-                      <div className="text-blue-600">(so we can explore your creation)</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
           {/* Timeline */}
-          <section className="py-20 px-4 bg-gradient-to-b from-yellow-500 to-orange-600">
+          <section className="py-20 px-4 bg-gray-50">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black text-white text-center mb-16" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                🗺️ THE TREASURE MAP
+              <h2 className="text-4xl md:text-6xl font-press-start text-maximally-black text-center mb-16">
+                EVENT TIMELINE
               </h2>
               
               <div className="space-y-6">
                 {timeline.map((item, i) => (
-                  <div key={i} className="flex items-center gap-6 bg-white bg-opacity-90 border-4 border-blue-600 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-all">
+                  <div key={i} className="flex items-center gap-6 minecraft-block bg-white p-6 hover:scale-105 transition-all duration-300">
                     <div className="text-3xl">🏝️</div>
                     <div className="flex-1">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                        <span className="font-black text-blue-900 text-lg" style={{fontFamily: 'Press Start 2P, monospace'}}>{item.date}</span>
-                        <span className="text-blue-600 text-sm font-bold">{item.time}</span>
+                        <span className="font-press-start text-maximally-red text-lg">{item.date}</span>
+                        <span className="text-maximally-black text-sm font-jetbrains font-bold">{item.time}</span>
                       </div>
-                      <p className="text-blue-800 font-bold">{item.event}</p>
+                      <p className="text-maximally-black font-jetbrains font-bold">{item.event}</p>
                     </div>
                   </div>
                 ))}
@@ -427,29 +408,29 @@ export default function Shipathon() {
           </section>
 
           {/* Rules */}
-          <section className="py-20 px-4 bg-gradient-to-b from-orange-600 to-red-500">
+          <section className="py-20 px-4 bg-white">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-6xl font-black text-white text-center mb-16" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                ⚖️ PIRATE CODE
+              <h2 className="text-4xl md:text-6xl font-press-start text-maximally-black text-center mb-16">
+                RULES & GUIDELINES
               </h2>
               
-              <div className="bg-white bg-opacity-90 border-4 border-yellow-400 rounded-2xl p-8 shadow-2xl">
-                <div className="space-y-4 text-blue-900 font-bold text-lg">
+              <div className="minecraft-block bg-maximally-black p-8">
+                <div className="space-y-4 text-maximally-yellow font-jetbrains text-lg">
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">🚫</span>
-                    <span>No prebuilt projects</span>
+                    <span>No prebuilt projects - start fresh after Aug 30</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">💬</span>
-                    <span>Must join Discord crew</span>
+                    <span>Must join Discord to qualify</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">👥</span>
-                    <span>Max 4 sailors per ship</span>
+                    <span>Max 4 members per team</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">🏴‍☠️</span>
-                    <span>Be cool. Be safe. Don't cheat the vibe.</span>
+                    <span>Be safe, respectful, and follow code of conduct</span>
                   </div>
                 </div>
               </div>
@@ -457,28 +438,27 @@ export default function Shipathon() {
           </section>
 
           {/* Final CTA */}
-          <section className="py-20 px-4 bg-gradient-to-b from-red-500 to-blue-800">
+          <section className="py-20 px-4 bg-gray-50">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="bg-yellow-400 border-4 border-yellow-600 rounded-2xl p-2 shadow-2xl">
-                <div className="bg-blue-900 rounded-xl p-12">
-                  <h2 className="text-4xl md:text-6xl font-black text-yellow-400 mb-6" style={{fontFamily: 'Press Start 2P, monospace'}}>
-                    🌅 FINAL CALL
+              <div className="minecraft-block bg-maximally-yellow p-2">
+                <div className="minecraft-block bg-maximally-black p-12">
+                  <h2 className="text-4xl md:text-6xl font-press-start text-maximally-yellow mb-6">
+                    READY TO SHIP?
                   </h2>
-                  <p className="text-xl md:text-2xl text-white mb-8 font-bold italic">
-                    "This isn't school. This is the adventure."
+                  <p className="text-xl md:text-2xl text-maximally-yellow mb-8 font-jetbrains italic">
+                    "This isn't school. This is the playground."
                   </p>
-                  <p className="text-lg text-yellow-200 mb-8 font-bold">
-                    Ship wildly. Build bravely. See you on the island.
+                  <p className="text-lg text-maximally-yellow mb-8 font-jetbrains font-bold">
+                    Experiment wildly. Build bravely. See you inside.
                   </p>
                   
                   {/* Final CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button 
                       onClick={() => window.open('https://maximally-ai-shipathon.devpost.com/', '_blank')}
-                      className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-black py-6 px-10 text-xl border-4 border-yellow-600 rounded-xl shadow-2xl transform hover:scale-110 transition-all"
-                      style={{fontFamily: 'Press Start 2P, monospace'}}
+                      className="pixel-button bg-maximally-yellow text-maximally-red font-press-start py-6 px-10 text-xl hover:scale-110 transition-all duration-300"
                     >
-                      🚢 BOARD THE SHIP NOW
+                      🚢 REGISTER ON DEVPOST
                     </Button>
                   </div>
                 </div>
@@ -487,21 +467,6 @@ export default function Shipathon() {
           </section>
         </div>
       </div>
-
-      <style jsx>{`
-        .glitch-text {
-          animation: glitch 2s infinite;
-        }
-        
-        @keyframes glitch {
-          0% { transform: translate(0); }
-          20% { transform: translate(-2px, 2px); }
-          40% { transform: translate(-2px, -2px); }
-          60% { transform: translate(2px, 2px); }
-          80% { transform: translate(2px, -2px); }
-          100% { transform: translate(0); }
-        }
-      `}</style>
-    </>
+    </div>
   );
 }
