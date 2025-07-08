@@ -370,10 +370,17 @@ export default function Shipathon() {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {prizes.map((prize, i) => {
-                  const colors = ["bg-maximally-yellow", "bg-maximally-red", "bg-maximally-yellow", "bg-maximally-red"];
-                  const textColors = ["text-black", "text-white", "text-black", "text-white"];
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  { title: "BEST BUILD", prize: "₹2,500 + LOR + internship referrals", icon: "🛠️" },
+                  { title: "BEST CREATE", prize: "₹2,500 + LOR + Insta feature", icon: "🎨" },
+                  { title: "BEST EXPERIMENT", prize: "₹2,500 + Weird Genius cert", icon: "🧪" },
+                  { title: "BEST BEGINNER", prize: "LOR + certificate + early access", icon: "🌟" },
+                  { title: "MOST VIRAL", prize: "Feature + meme drop + reel collab", icon: "🚀" },
+                  { title: "FUTURE FOUNDER", prize: "Inner circle + mentorship", icon: "👑" }
+                ].map((prize, i) => {
+                  const colors = ["bg-maximally-yellow", "bg-maximally-red", "bg-maximally-yellow", "bg-maximally-red", "bg-maximally-yellow", "bg-maximally-red"];
+                  const textColors = ["text-black", "text-white", "text-black", "text-white", "text-black", "text-white"];
                   return (
                     <Card key={i} className={`minecraft-block ${colors[i]} hover:scale-105 transition-all duration-300`}>
                       <CardContent className="p-4 md:p-6 text-center">
@@ -452,8 +459,125 @@ export default function Shipathon() {
             </div>
           </section>
 
-          {/* Rules */}
+          {/* Judging Criteria */}
+          <section className="py-20 px-4 bg-gray-900">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
+                JUDGING CRITERIA
+              </h2>
+
+              <div className="minecraft-block bg-maximally-black p-6 md:p-8">
+                <div className="space-y-6 text-maximally-yellow font-jetbrains text-base md:text-lg">
+                  <div className="flex items-start gap-4">
+                    <span className="text-2xl md:text-3xl">💡</span>
+                    <div>
+                      <div className="font-press-start text-lg md:text-xl text-maximally-red">Originality & Creativity</div>
+                      <div className="text-maximally-yellow text-sm md:text-base">Is it fresh and unexpected?</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="text-2xl md:text-3xl">⚙️</span>
+                    <div>
+                      <div className="font-press-start text-lg md:text-xl text-maximally-red">Execution</div>
+                      <div className="text-maximally-yellow text-sm md:text-base">Does it work or at least demo clearly?</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="text-2xl md:text-3xl">📝</span>
+                    <div>
+                      <div className="font-press-start text-lg md:text-xl text-maximally-red">Clarity</div>
+                      <div className="text-maximally-yellow text-sm md:text-base">Can we understand it easily?</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="text-2xl md:text-3xl">🤖</span>
+                    <div>
+                      <div className="font-press-start text-lg md:text-xl text-maximally-red">AI Use</div>
+                      <div className="text-maximally-yellow text-sm md:text-base">Was AI used meaningfully?</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="text-2xl md:text-3xl">🌟</span>
+                    <div>
+                      <div className="font-press-start text-lg md:text-xl text-maximally-red">Beginner Spirit</div>
+                      <div className="text-maximally-yellow text-sm md:text-base">Bonus for first-timers or clever hacks</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Tools & Resources */}
           <section className="py-20 px-4 bg-black">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
+                TOOLS & RESOURCES
+              </h2>
+
+              <div className="grid lg:grid-cols-3 gap-8 mb-12">
+                <Card className="minecraft-block bg-maximally-yellow hover:scale-105 transition-all duration-300">
+                  <CardContent className="p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-press-start text-black mb-4">NO-CODE TOOLS</h3>
+                    <div className="space-y-2 text-black font-jetbrains text-sm md:text-base">
+                      <div>⚡ Glide, Bubble, Tally</div>
+                      <div>⚡ Zapier, n8n</div>
+                      <div>⚡ Replit, Vercel</div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="minecraft-block bg-maximally-red hover:scale-105 transition-all duration-300">
+                  <CardContent className="p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-press-start text-white mb-4">AI TOOLS</h3>
+                    <div className="space-y-2 text-white font-jetbrains text-sm md:text-base">
+                      <div>⚡ OpenAI, RunwayML</div>
+                      <div>⚡ ElevenLabs, Replicate</div>
+                      <div>⚡ Hugging Face</div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="minecraft-block bg-maximally-yellow hover:scale-105 transition-all duration-300">
+                  <CardContent className="p-6 md:p-8">
+                    <h3 className="text-xl md:text-2xl font-press-start text-black mb-4">DEV TOOLS</h3>
+                    <div className="space-y-2 text-black font-jetbrains text-sm md:text-base">
+                      <div>⚡ LangChain, Supabase</div>
+                      <div>⚡ GitHub, Replit</div>
+                      <div>⚡ Chrome Extensions</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="minecraft-block bg-maximally-black p-6 md:p-8">
+                <h3 className="text-2xl md:text-3xl font-press-start text-maximally-yellow text-center mb-6">
+                  FREE LEARNING RESOURCES
+                </h3>
+                <div className="space-y-4 text-maximally-yellow font-jetbrains text-base md:text-lg">
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl md:text-2xl flex-shrink-0">📚</span>
+                    <span>Andrew Ng's "AI for Everyone" - Coursera</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl md:text-2xl flex-shrink-0">☁️</span>
+                    <span>Google Cloud's "Intro to Gen AI"</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl md:text-2xl flex-shrink-0">🎓</span>
+                    <span>Elements of AI - University of Helsinki</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl md:text-2xl flex-shrink-0">💡</span>
+                    <span>ProjectPro (40+ AI beginner ideas)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Rules */}
+          <section className="py-20 px-4 bg-gray-900">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
                 RULES & GUIDELINES
@@ -463,21 +587,62 @@ export default function Shipathon() {
                 <div className="space-y-4 text-maximally-yellow font-jetbrains text-base md:text-lg">
                   <div className="flex items-start md:items-center gap-3">
                     <span className="text-xl md:text-2xl flex-shrink-0">🚫</span>
-                    <span>No prebuilt projects - start fresh after Aug 30</span>
+                    <span>No prebuilt projects - all builds must start after Aug 30, 12:00 AM IST</span>
                   </div>
                   <div className="flex items-start md:items-center gap-3">
                     <span className="text-xl md:text-2xl flex-shrink-0">💬</span>
-                    <span>Must join Discord to qualify</span>
+                    <span>Must join Discord to qualify for prizes</span>
                   </div>
                   <div className="flex items-start md:items-center gap-3">
                     <span className="text-xl md:text-2xl flex-shrink-0">👥</span>
-                    <span>Max 4 members per team</span>
+                    <span>Max 4 members per team (solo participation welcome)</span>
                   </div>
                   <div className="flex items-start md:items-center gap-3">
                     <span className="text-xl md:text-2xl flex-shrink-0">🏴‍☠️</span>
-                    <span>Be safe, respectful, and follow code of conduct</span>
+                    <span>Project must be safe, respectful, and follow code of conduct</span>
+                  </div>
+                  <div className="flex items-start md:items-center gap-3">
+                    <span className="text-xl md:text-2xl flex-shrink-0">🌍</span>
+                    <span>Global eligibility - all ages, all skill levels welcome</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Support Channels */}
+          <section className="py-20 px-4 bg-black">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
+                SUPPORT CHANNELS
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="minecraft-block bg-maximally-yellow hover:scale-105 transition-all duration-300">
+                  <CardContent className="p-6 md:p-8 text-center">
+                    <div className="text-3xl md:text-4xl mb-4">💬</div>
+                    <h3 className="font-press-start text-black mb-2 text-sm md:text-base">DISCORD</h3>
+                    <p className="text-black text-xs md:text-sm font-jetbrains font-bold">Main hub for updates, teams, banter</p>
+                    <Button 
+                      onClick={() => window.open('https://discord.gg/EE7n8tD3WS', '_blank')}
+                      className="mt-4 bg-maximally-red text-white font-press-start text-xs px-4 py-2"
+                    >
+                      JOIN NOW
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                <Card className="minecraft-block bg-maximally-red hover:scale-105 transition-all duration-300">
+                  <CardContent className="p-6 md:p-8 text-center">
+                    <div className="text-3xl md:text-4xl mb-4">📧</div>
+                    <h3 className="font-press-start text-white mb-2 text-sm md:text-base">EMAIL & SOCIAL</h3>
+                    <div className="text-white text-xs md:text-sm font-jetbrains font-bold space-y-1">
+                      <div>hello@maximally.in</div>
+                      <div>@maximally.in (Instagram)</div>
+                      <div>www.maximally.in</div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </section>
