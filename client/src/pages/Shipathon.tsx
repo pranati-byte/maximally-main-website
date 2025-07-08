@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import SEO from '@/components/SEO';
+import Navbar from '@/components/Navbar';
 
 export default function Shipathon() {
   const [glitchText, setGlitchText] = useState("BUILD OR BE FORGOTTEN");
@@ -57,15 +58,19 @@ export default function Shipathon() {
         keywords="AI hackathon, global hackathon, AI builders, AI creativity, shipathon, maximally"
       />
 
-      <div className="min-h-screen bg-black text-white overflow-hidden relative">
-        {/* Pixelated background */}
-        <div className="fixed inset-0 pixel-grid opacity-30 z-0"></div>
-
+      {/* Starfield Background */}
+      <div className="starfield">
+        <div className="shooting-star"></div>
+        <div className="shooting-star"></div>
+        <div className="shooting-star"></div>
+      </div>
+      
+      <div className="min-h-screen bg-transparent text-white overflow-hidden relative">
         {/* Floating pixel elements */}
-        {[...Array(12)].map((_, i) => (
+        {[...Array(6)].map((_, i) => (
           <div 
             key={i}
-            className="fixed w-4 h-4 bg-red-600 pixel-border animate-float opacity-20"
+            className="fixed w-4 h-4 bg-red-600 pixel-border animate-float opacity-10"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -76,6 +81,8 @@ export default function Shipathon() {
         ))}
 
         <div className="relative z-10">
+          <Navbar />
+          
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col items-center justify-center relative px-4">
             {/* Pixel Ship Animation */}
@@ -170,7 +177,7 @@ export default function Shipathon() {
         </section>
 
           {/* About the Challenge */}
-          <section className="py-20 px-4 bg-gray-900">
+          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 mb-6">
@@ -250,7 +257,7 @@ export default function Shipathon() {
           </section>
 
           {/* Tracks */}
-          <section className="py-20 px-4 bg-gray-900">
+          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
                 CHOOSE YOUR TRACK
@@ -318,7 +325,7 @@ export default function Shipathon() {
           </section>
 
           {/* Submission Requirements */}
-          <section className="py-20 px-4 bg-gray-900">
+          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
                 SUBMISSION RULES
@@ -460,7 +467,7 @@ export default function Shipathon() {
           </section>
 
           {/* Judging Criteria */}
-          <section className="py-20 px-4 bg-gray-900">
+          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
                 JUDGING CRITERIA
@@ -577,7 +584,7 @@ export default function Shipathon() {
           </section>
 
           {/* Rules */}
-          <section className="py-20 px-4 bg-gray-900">
+          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
                 RULES & GUIDELINES
@@ -648,7 +655,7 @@ export default function Shipathon() {
           </section>
 
           {/* Final CTA */}
-          <section className="py-20 px-4 bg-gray-900">
+          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
             <div className="max-w-4xl mx-auto text-center">
               <div className="minecraft-block bg-red-600 p-2">
                 <div className="minecraft-block bg-black p-8 md:p-12 border-2 border-red-600">
