@@ -122,7 +122,7 @@ const Index = () => {
                     href="https://maximally-ai-shipathon.devpost.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="pixel-button bg-gradient-to-r from-maximally-yellow via-maximally-red to-maximally-yellow text-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-18 px-8 font-press-start text-sm w-full border-4 border-maximally-red animate-pulse"
+                    className="pixel-button bg-gradient-to-r from-maximally-yellow via-maximally-red to-maximally-yellow text-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-18 px-8 font-press-start text-sm w-full border-4 border-maximally-red"
                   >
                     <span>🚢</span>
                     <span>Register for AI Shipathon</span>
@@ -149,76 +149,6 @@ const Index = () => {
                   </Link>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What We Do Section */}
-        <section className="py-20 px-4 bg-gray-50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-maximally-red/5 to-transparent" />
-          <div className="container mx-auto text-center relative">
-            <h2 className="font-press-start text-3xl md:text-4xl text-maximally-black mb-8">
-              What We Do
-            </h2>
-            
-            <div className="max-w-3xl mx-auto mb-12">
-              <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/80 mb-6">
-                We host execution-first challenges for engineers, founders, and creatives worldwide.
-              </p>
-              <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
-                Proof-of-work platform where ambitious builders create, launch, and compete with real solutions — designed for emerging talent across all disciplines.
-              </p>
-            </div>
-
-            <Link 
-              to="/events" 
-              className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
-            >
-              <Trophy className="h-5 w-5" />
-              <span>See Past Editions</span>
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </div>
-        </section>
-
-        {/* Global Innovation Stats */}
-        <section className="py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-          <div className="container mx-auto relative">
-            <h2 className="font-press-start text-3xl md:text-4xl text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-[#39FF14] via-[#00ff99] to-[#00ffcc]">
-              Born in India. Built for the World.
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <div className="text-center">
-                <div className="bg-black/40 p-8 rounded-lg border-2 border-[#39FF14] hover:scale-105 transform transition-all duration-300">
-                  <Globe className="h-12 w-12 text-[#39FF14] mx-auto mb-4" />
-                  <h3 className="font-press-start text-2xl text-white mb-2">Global</h3>
-                  <p className="font-jetbrains text-white/80">Borderless innovation for builders worldwide</p>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-black/40 p-8 rounded-lg border-2 border-[#00ff99] hover:scale-105 transform transition-all duration-300">
-                  <Code className="h-12 w-12 text-[#00ff99] mx-auto mb-4" />
-                  <h3 className="font-press-start text-2xl text-white mb-2">Digital</h3>
-                  <p className="font-jetbrains text-white/80">Internet-native events for digital builders</p>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-black/40 p-8 rounded-lg border-2 border-[#00ffcc] hover:scale-105 transform transition-all duration-300">
-                  <Zap className="h-12 w-12 text-[#00ffcc] mx-auto mb-4" />
-                  <h3 className="font-press-start text-2xl text-white mb-2">Fast</h3>
-                  <p className="font-jetbrains text-white/80">High-pressure sprints for real proof of work</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <p className="font-jetbrains text-xl text-white/90 max-w-3xl mx-auto mb-8">
-                At Maximally, we believe innovation has no borders — and no traditional limits. Whether you're from a metro or a small town, if you're building bold things, you belong here.
-              </p>
             </div>
           </div>
         </section>
@@ -298,8 +228,79 @@ const Index = () => {
           </div>
         </section>
 
+        {/* What We Do Section */}
+        <section className="py-20 px-4 bg-gray-50 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-maximally-red/5 to-transparent" />
+          <div className="container mx-auto text-center relative">
+            <h2 className="font-press-start text-3xl md:text-4xl text-maximally-black mb-8">
+              What We Do
+            </h2>
+            
+            <div className="max-w-3xl mx-auto mb-12">
+              <p className="font-jetbrains text-xl md:text-2xl text-maximally-black/80 mb-6">
+                We host execution-first challenges for engineers, founders, and creatives worldwide.
+              </p>
+              <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
+                Proof-of-work platform where ambitious builders create, launch, and compete with real solutions — designed for emerging talent across all disciplines.
+              </p>
+            </div>
+
+            <Link 
+              to="/events" 
+              className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
+            >
+              <Trophy className="h-5 w-5" />
+              <span>See Past Editions</span>
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </section>
+
+        {/* Global Innovation Stats */}
+        <section className="py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+          <div className="container mx-auto relative">
+            <h2 className="font-press-start text-3xl md:text-4xl text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-[#39FF14] via-[#00ff99] to-[#00ffcc]">
+              Born in India. Built for the World.
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <div className="text-center">
+                <div className="bg-black/40 p-8 rounded-lg border-2 border-[#39FF14] hover:scale-105 transform transition-all duration-300">
+                  <Globe className="h-12 w-12 text-[#39FF14] mx-auto mb-4" />
+                  <h3 className="font-press-start text-2xl text-white mb-2">Global</h3>
+                  <p className="font-jetbrains text-white/80">Borderless innovation for builders worldwide</p>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-black/40 p-8 rounded-lg border-2 border-[#00ff99] hover:scale-105 transform transition-all duration-300">
+                  <Code className="h-12 w-12 text-[#00ff99] mx-auto mb-4" />
+                  <h3 className="font-press-start text-2xl text-white mb-2">Digital</h3>
+                  <p className="font-jetbrains text-white/80">Internet-native events for digital builders</p>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-black/40 p-8 rounded-lg border-2 border-[#00ffcc] hover:scale-105 transform transition-all duration-300">
+                  <Zap className="h-12 w-12 text-[#00ffcc] mx-auto mb-4" />
+                  <h3 className="font-press-start text-2xl text-white mb-2">Fast</h3>
+                  <p className="font-jetbrains text-white/80">High-pressure sprints for real proof of work</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <p className="font-jetbrains text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                At Maximally, we believe innovation has no borders — and no traditional limits. Whether you're from a metro or a small town, if you're building bold things, you belong here.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Partner With Us Section */}
         <section className="py-20 px-4 bg-white">
+          <div className="container mx-auto text-center">
           <div className="container mx-auto text-center">
             <h2 className="font-press-start text-3xl md:text-4xl text-maximally-black mb-8">
               Let's Build the Innovation League — Together
