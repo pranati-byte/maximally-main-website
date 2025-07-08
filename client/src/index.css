@@ -242,6 +242,25 @@
   }
 }
 
+@keyframes pixel-glow {
+  0%, 100% { 
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    transform: scale(1);
+  }
+  50% { 
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    transform: scale(1.02);
+  }
+}
+
+.pixel-glow {
+  animation: pixel-glow 2s ease-in-out infinite;
+}
+
+.animate-scan-line {
+  animation: scan-line 3s linear infinite;
+}
+
 .animate-glitch-red {
   animation: glitch-red 0.3s ease-in-out infinite;
 }
@@ -251,9 +270,7 @@
   animation-delay: 0.1s;
 }
 
-.animate-scan-line {
-  animation: scan-line 3s ease-in-out infinite;
-}
+
 
 .glitch-text {
   text-shadow: 
@@ -1198,4 +1215,3 @@
     80% { transform: translate(2px, -2px); }
     100% { transform: translate(0); }
   }
-

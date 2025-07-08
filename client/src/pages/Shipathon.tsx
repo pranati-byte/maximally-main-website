@@ -389,25 +389,65 @@ export default function Shipathon() {
           </section>
 
           {/* Timeline */}
-          <section className="py-20 px-4 bg-gray-900">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16">
+          <section className="py-20 px-4 bg-black relative overflow-hidden">
+            {/* Animated background elements */}
+            <div className="absolute inset-0">
+              {[...Array(15)].map((_, i) => (
+                <div 
+                  key={i}
+                  className="absolute w-3 h-3 bg-maximally-yellow opacity-20 pixel-float"
+                  style={{
+                    top: `${Math.random() * 100}%`,
+                    left: `${Math.random() * 100}%`,
+                    animationDelay: `${i * 0.3}s`,
+                    animationDuration: `${3 + i * 0.2}s`
+                  }}
+                />
+              ))}
+            </div>
+
+            <div className="max-w-4xl mx-auto relative z-10">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-yellow text-center mb-16 neon-glow">
                 EVENT TIMELINE
               </h2>
 
               <div className="space-y-6">
-                {timeline.map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 md:gap-6 minecraft-block bg-white p-4 md:p-6 hover:scale-105 transition-all duration-300">
-                    <div className="text-2xl md:text-3xl">🏝️</div>
-                    <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                        <span className="font-press-start text-maximally-red text-sm md:text-lg">{item.date}</span>
-                        <span className="text-black text-xs md:text-sm font-jetbrains font-bold">{item.time}</span>
+                {timeline.map((item, i) => {
+                  const isEven = i % 2 === 0;
+                  return (
+                    <div key={i} className={`flex items-center gap-4 md:gap-6 minecraft-block ${isEven ? 'bg-maximally-yellow' : 'bg-maximally-red'} p-4 md:p-6 hover:scale-105 hover:rotate-1 transition-all duration-300 relative overflow-hidden`}>
+                      {/* Glitch overlay for extra style */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-scan-line"></div>
+                      
+                      <div className="text-3xl md:text-4xl pixel-float relative z-10">🏝️</div>
+                      <div className="flex-1 relative z-10">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                          <span className={`font-press-start ${isEven ? 'text-maximally-red' : 'text-maximally-yellow'} text-sm md:text-lg pixel-glow`}>
+                            {item.date}
+                          </span>
+                          <span className={`${isEven ? 'text-black' : 'text-white'} text-xs md:text-sm font-jetbrains font-bold`}>
+                            {item.time}
+                          </span>
+                        </div>
+                        <p className={`${isEven ? 'text-black' : 'text-white'} font-jetbrains font-bold text-sm md:text-base mt-2`}>
+                          {item.event}
+                        </p>
                       </div>
-                      <p className="text-black font-jetbrains font-bold text-sm md:text-base">{item.event}</p>
+                      
+                      {/* Corner accent */}
+                      <div className={`absolute top-0 right-0 w-4 h-4 ${isEven ? 'bg-maximally-red' : 'bg-maximally-yellow'} minecraft-block`}></div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
+              </div>
+
+              {/* Floating call-to-action */}
+              <div className="text-center mt-12">
+                <div className="minecraft-block bg-maximally-yellow p-4 inline-block hover:scale-110 transition-all duration-300 pixel-glow">
+                  <p className="font-press-start text-black text-sm md:text-base">
+                    ⏰ MARK YOUR CALENDARS! ⏰
+                  </p>
+                </div>
               </div>
             </div>
           </section>
