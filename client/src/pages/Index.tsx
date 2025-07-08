@@ -324,6 +324,7 @@ const Index = () => {
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
+          </div>
         </section>
 
         <Footer />
