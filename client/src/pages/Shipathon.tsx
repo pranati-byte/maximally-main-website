@@ -518,8 +518,8 @@ export default function Shipathon() {
               <div className="grid lg:grid-cols-3 gap-8 mb-12">
                 <Card className="minecraft-block bg-red-600 hover:scale-105 transition-all duration-300">
                   <CardContent className="p-6 md:p-8">
-                    <h3 className="text-xl md:text-2xl font-press-start text-black mb-4">NO-CODE TOOLS</h3>
-                    <div className="space-y-2 text-black font-jetbrains text-sm md:text-base">
+                    <h3 className="text-xl md:text-2xl font-press-start text-white mb-4">NO-CODE TOOLS</h3>
+                    <div className="space-y-2 text-white font-jetbrains text-sm md:text-base">
                       <div>⚡ Glide, Bubble, Tally</div>
                       <div>⚡ Zapier, n8n</div>
                       <div>⚡ Replit, Vercel</div>
@@ -540,8 +540,8 @@ export default function Shipathon() {
 
                 <Card className="minecraft-block bg-red-600 hover:scale-105 transition-all duration-300">
                   <CardContent className="p-6 md:p-8">
-                    <h3 className="text-xl md:text-2xl font-press-start text-black mb-4">DEV TOOLS</h3>
-                    <div className="space-y-2 text-black font-jetbrains text-sm md:text-base">
+                    <h3 className="text-xl md:text-2xl font-press-start text-white mb-4">DEV TOOLS</h3>
+                    <div className="space-y-2 text-white font-jetbrains text-sm md:text-base">
                       <div>⚡ LangChain, Supabase</div>
                       <div>⚡ GitHub, Replit</div>
                       <div>⚡ Chrome Extensions</div>
@@ -621,11 +621,11 @@ export default function Shipathon() {
                 <Card className="minecraft-block bg-red-600 hover:scale-105 transition-all duration-300">
                   <CardContent className="p-6 md:p-8 text-center">
                     <div className="text-3xl md:text-4xl mb-4">💬</div>
-                    <h3 className="font-press-start text-black mb-2 text-sm md:text-base">DISCORD</h3>
-                    <p className="text-black text-xs md:text-sm font-jetbrains font-bold">Main hub for updates, teams, banter</p>
+                    <h3 className="font-press-start text-white mb-2 text-sm md:text-base">DISCORD</h3>
+                    <p className="text-white text-xs md:text-sm font-jetbrains font-bold">Main hub for updates, teams, banter</p>
                     <Button 
                       onClick={() => window.open('https://discord.gg/EE7n8tD3WS', '_blank')}
-                      className="mt-4 bg-black text-red-600 font-press-start text-xs px-4 py-2 border border-red-600"
+                      className="mt-4 bg-white text-black font-press-start text-xs px-4 py-2 border border-black"
                     >
                       JOIN NOW
                     </Button>
@@ -666,7 +666,7 @@ export default function Shipathon() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button 
                       onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
-                      className="pixel-button bg-red-600 text-black font-press-start py-4 md:py-6 px-6 md:px-10 text-lg md:text-xl hover:scale-110 transition-all duration-300 border-2 border-red-800"
+                      className="pixel-button bg-red-600 text-white font-press-start py-4 md:py-6 px-6 md:px-10 text-lg md:text-xl hover:scale-110 transition-all duration-300 border-2 border-red-800"
                     >
                       🚢 REGISTER ON DEVPOST
                     </Button>
