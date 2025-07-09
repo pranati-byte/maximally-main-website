@@ -352,7 +352,7 @@ export default function Shipathon() {
                 <div className="relative group">
                   {!isMobile && <div className="absolute inset-0 bg-purple-600 rounded-lg blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>}
                   <Button 
-                    onClick={() => window.open('https://discord.gg/maximally', '_blank')}
+                    onClick={() => window.open('https://discord.gg/S2YyGtBWKa', '_blank')}
                     className="relative w-full sm:w-auto pixel-button bg-gradient-to-r from-gray-900 to-black text-white font-press-start py-3 md:py-4 px-6 md:px-8 text-sm md:text-lg hover:scale-105 md:hover:scale-110 transition-all duration-300 border-2 border-red-600 shadow-xl"
                   >
                     💬 JOIN DISCORD
@@ -839,7 +839,7 @@ export default function Shipathon() {
                     <h3 className="font-press-start text-white mb-2 text-sm md:text-base">DISCORD</h3>
                     <p className="text-white text-xs md:text-sm font-jetbrains font-bold">Main hub for updates, teams, banter</p>
                     <Button 
-                      onClick={() => window.open('https://discord.gg/EE7n8tD3WS', '_blank')}
+                      onClick={() => window.open('https://discord.gg/S2YyGtBWKa', '_blank')}
                       className="mt-4 bg-white text-black font-press-start text-xs px-4 py-2 border border-black"
                     >
                       JOIN NOW
@@ -891,7 +891,7 @@ export default function Shipathon() {
                     <div className="relative group">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                       <Button 
-                        onClick={() => window.open('https://discord.gg/maximally', '_blank')}
+                        onClick={() => window.open('https://discord.gg/S2YyGtBWKa', '_blank')}
                         className="relative pixel-button bg-gradient-to-r from-gray-900 to-black text-white font-press-start py-4 md:py-6 px-6 md:px-10 text-lg md:text-xl hover:scale-110 transition-all duration-300 border-2 border-blue-500 shadow-2xl"
                       >
                         💬 JOIN COMMUNITY
