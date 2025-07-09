@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import SEO from '@/components/SEO';
@@ -6,6 +6,54 @@ import Navbar from '@/components/Navbar';
 
 export default function Shipathon() {
   const [glitchText, setGlitchText] = useState("BUILD OR BE FORGOTTEN");
+
+  // Pre-calculate random positions to avoid re-renders
+  const animationElements = useMemo(() => ({
+    shootingStars: Array.from({ length: 4 }, (_, i) => ({ // Reduced from 8 to 4
+      key: `shooting-star-${i}`,
+      top: Math.random() * 100,
+      delay: Math.random() * 5,
+      duration: 3 + Math.random() * 2,
+    })),
+    spaceShips: Array.from({ length: 2 }, (_, i) => ({ // Reduced from 3 to 2
+      key: `ship-${i}`,
+      top: 20 + Math.random() * 60,
+      left: 20 + Math.random() * 60,
+      delay: Math.random() * 4,
+      duration: 6 + Math.random() * 4,
+    })),
+    nebulas: Array.from({ length: 2 }, (_, i) => ({ // Reduced from 4 to 2
+      key: `nebula-${i}`,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      width: 100 + Math.random() * 200,
+      height: 100 + Math.random() * 200,
+      delay: Math.random() * 5,
+      isRed: i % 2 === 0,
+    })),
+    constellations: Array.from({ length: 3 }, (_, i) => ({ // Reduced from 6 to 3
+      key: `constellation-${i}`,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      height: 50 + Math.random() * 100,
+      rotation: Math.random() * 360,
+      delay: Math.random() * 3,
+    })),
+    floatingPixels: Array.from({ length: 4 }, (_, i) => ({ // Reduced from 6 to 4
+      key: `pixel-${i}`,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      delay: i * 0.5,
+      duration: 4 + i * 0.5,
+    })),
+    timelinePixels: Array.from({ length: 8 }, (_, i) => ({ // Reduced from 15 to 8
+      key: `timeline-pixel-${i}`,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      delay: i * 0.3,
+      duration: 3 + i * 0.2,
+    })),
+  }), []);
 
   useEffect(() => {
     const glitchInterval = setInterval(() => {
@@ -61,58 +109,58 @@ export default function Shipathon() {
       {/* Starfield Background */}
       <div className="starfield">
         {/* Shooting Stars */}
-        {[...Array(8)].map((_, i) => (
+        {animationElements.shootingStars.map((star) => (
           <div
-            key={`shooting-star-${i}`}
+            key={star.key}
             className="shooting-star"
             style={{
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
+              top: `${star.top}%`,
+              animationDelay: `${star.delay}s`,
+              animationDuration: `${star.duration}s`,
             }}
           />
         ))}
 
         {/* Space Ships */}
-        {[...Array(3)].map((_, i) => (
+        {animationElements.spaceShips.map((ship) => (
           <div
-            key={`ship-${i}`}
+            key={ship.key}
             className="space-ship"
             style={{
-              top: `${20 + Math.random() * 60}%`,
-              left: `${20 + Math.random() * 60}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${6 + Math.random() * 4}s`,
+              top: `${ship.top}%`,
+              left: `${ship.left}%`,
+              animationDelay: `${ship.delay}s`,
+              animationDuration: `${ship.duration}s`,
             }}
           />
         ))}
 
         {/* Nebula Effects */}
-        {[...Array(4)].map((_, i) => (
+        {animationElements.nebulas.map((nebula) => (
           <div
-            key={`nebula-${i}`}
-            className={`nebula ${i % 2 === 0 ? 'nebula-red' : 'nebula-blue'}`}
+            key={nebula.key}
+            className={`nebula ${nebula.isRed ? 'nebula-red' : 'nebula-blue'}`}
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${100 + Math.random() * 200}px`,
-              height: `${100 + Math.random() * 200}px`,
-              animationDelay: `${Math.random() * 5}s`,
+              top: `${nebula.top}%`,
+              left: `${nebula.left}%`,
+              width: `${nebula.width}px`,
+              height: `${nebula.height}px`,
+              animationDelay: `${nebula.delay}s`,
             }}
           />
         ))}
 
         {/* Constellation Lines */}
-        {[...Array(6)].map((_, i) => (
+        {animationElements.constellations.map((constellation) => (
           <div
-            key={`constellation-${i}`}
+            key={constellation.key}
             className="constellation"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              height: `${50 + Math.random() * 100}px`,
-              transform: `rotate(${Math.random() * 360}deg)`,
-              animationDelay: `${Math.random() * 3}s`,
+              top: `${constellation.top}%`,
+              left: `${constellation.left}%`,
+              height: `${constellation.height}px`,
+              transform: `rotate(${constellation.rotation}deg)`,
+              animationDelay: `${constellation.delay}s`,
             }}
           />
         ))}
@@ -120,15 +168,15 @@ export default function Shipathon() {
       
       <div className="min-h-screen bg-transparent text-white overflow-hidden relative">
         {/* Floating pixel elements */}
-        {[...Array(6)].map((_, i) => (
+        {animationElements.floatingPixels.map((pixel) => (
           <div 
-            key={i}
+            key={pixel.key}
             className="fixed w-4 h-4 bg-red-600 pixel-border animate-float opacity-10"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${i * 0.5}s`,
-              animationDuration: `${4 + i * 0.5}s`
+              top: `${pixel.top}%`,
+              left: `${pixel.left}%`,
+              animationDelay: `${pixel.delay}s`,
+              animationDuration: `${pixel.duration}s`
             }}
           />
         ))}
@@ -138,14 +186,14 @@ export default function Shipathon() {
           
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col items-center justify-center relative px-4">
-            {/* Pixel Ship Animation */}
-            <div className="mb-12 pixel-float">
+            {/* Pixel Ship Animation - Simplified */}
+            <div className="mb-12">
               <div className="relative">
                 {/* Ship body */}
-                <div className="w-32 h-16 bg-maximally-red minecraft-block relative">
-                  <div className="absolute top-4 left-4 w-3 h-3 bg-maximally-black pixel-border"></div>
-                  <div className="absolute top-4 left-12 w-3 h-3 bg-maximally-black pixel-border"></div>
-                  <div className="absolute top-4 left-20 w-3 h-3 bg-maximally-black pixel-border"></div>
+                <div className="w-32 h-16 bg-red-600 minecraft-block relative mx-auto">
+                  <div className="absolute top-4 left-4 w-3 h-3 bg-black pixel-border"></div>
+                  <div className="absolute top-4 left-12 w-3 h-3 bg-black pixel-border"></div>
+                  <div className="absolute top-4 left-20 w-3 h-3 bg-black pixel-border"></div>
                 </div>
                 {/* Mast */}
                 <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-red-600 minecraft-block"></div>
@@ -154,7 +202,7 @@ export default function Shipathon() {
                   <span className="font-press-start text-xs text-white">AI</span>
                 </div>
                 {/* Flag */}
-                <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-maximally-red minecraft-block"></div>
+                <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-red-600 minecraft-block"></div>
               </div>
             </div>
 
@@ -173,15 +221,10 @@ export default function Shipathon() {
                     </h1>
                   </div>
                 </div>
-                <div className="minecraft-block bg-black px-4 md:px-6 py-3 inline-block relative overflow-hidden border-2 border-red-600">
-                <p className="text-sm md:text-lg lg:text-xl font-press-start text-red-600 glitch-text relative z-10">
+                <div className="minecraft-block bg-black px-4 md:px-6 py-3 inline-block border-2 border-red-600">
+                <p className="text-sm md:text-lg lg:text-xl font-press-start text-red-600">
                   {glitchText}
                 </p>
-                {/* Glitch overlay effects */}
-                <div className="absolute inset-0 bg-red-600 opacity-20 animate-glitch-red"></div>
-                <div className="absolute inset-0 bg-black opacity-20 animate-glitch-blue"></div>
-                {/* Scanning line effect */}
-                <div className="absolute top-0 left-0 w-full h-0.5 bg-red-600 animate-scan-line"></div>
               </div>
 
               {/* Event Details */}
@@ -220,17 +263,15 @@ export default function Shipathon() {
               </div>
             </div>
 
-            {/* Floating Tech Icons */}
-            <div className="absolute top-20 left-10 text-4xl pixel-float">🤖</div>
-            <div className="absolute top-40 right-20 text-3xl pixel-float" style={{animationDelay: '1s'}}>⚡</div>
-            <div className="absolute top-1/2 left-5 text-2xl pixel-float" style={{animationDelay: '0.5s'}}>💾</div>
-            <div className="absolute bottom-40 right-10 text-2xl pixel-float" style={{animationDelay: '1.5s'}}>🔧</div>
-            <div className="absolute top-32 left-1/3 text-2xl pixel-float" style={{animationDelay: '3s'}}>💻</div>
+            {/* Floating Tech Icons - Simplified */}
+            <div className="absolute top-20 left-10 text-4xl">🤖</div>
+            <div className="absolute top-40 right-20 text-3xl">⚡</div>
+            <div className="absolute bottom-40 right-10 text-2xl">🔧</div>
           </div>
         </section>
 
           {/* About the Challenge */}
-          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
+          <section className="py-20 px-4 bg-black bg-opacity-30">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 mb-6">
@@ -310,7 +351,7 @@ export default function Shipathon() {
           </section>
 
           {/* Tracks */}
-          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
+          <section className="py-20 px-4 bg-black bg-opacity-30">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
                 CHOOSE YOUR TRACK
@@ -378,7 +419,7 @@ export default function Shipathon() {
           </section>
 
           {/* Submission Requirements */}
-          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
+          <section className="py-20 px-4 bg-black bg-opacity-30">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
                 SUBMISSION RULES
@@ -459,15 +500,15 @@ export default function Shipathon() {
           <section className="py-20 px-4 bg-black relative overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0">
-              {[...Array(15)].map((_, i) => (
+              {animationElements.timelinePixels.map((pixel) => (
                 <div 
-                  key={i}
+                  key={pixel.key}
                   className="absolute w-3 h-3 bg-red-600 opacity-20 pixel-float"
                   style={{
-                    top: `${Math.random() * 100}%`,
-                    left: `${Math.random() * 100}%`,
-                    animationDelay: `${i * 0.3}s`,
-                    animationDuration: `${3 + i * 0.2}s`
+                    top: `${pixel.top}%`,
+                    left: `${pixel.left}%`,
+                    animationDelay: `${pixel.delay}s`,
+                    animationDuration: `${pixel.duration}s`
                   }}
                 />
               ))}
@@ -482,14 +523,11 @@ export default function Shipathon() {
                 {timeline.map((item, i) => {
                   const isEven = i % 2 === 0;
                   return (
-                    <div key={i} className={`flex items-center gap-4 md:gap-6 minecraft-block ${isEven ? 'bg-red-600' : 'bg-black border-2 border-red-600'} p-4 md:p-6 hover:scale-105 hover:rotate-1 transition-all duration-300 relative overflow-hidden`}>
-                      {/* Glitch overlay for extra style */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-scan-line"></div>
-                      
-                      <div className="text-3xl md:text-4xl pixel-float relative z-10">🏝️</div>
-                      <div className="flex-1 relative z-10">
+                    <div key={i} className={`flex items-center gap-4 md:gap-6 minecraft-block ${isEven ? 'bg-red-600' : 'bg-black border-2 border-red-600'} p-4 md:p-6 hover:scale-105 transition-all duration-300`}>
+                      <div className="text-3xl md:text-4xl">🏝️</div>
+                      <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                          <span className={`font-press-start ${isEven ? 'text-black' : 'text-red-600'} text-sm md:text-lg pixel-glow`}>
+                          <span className={`font-press-start ${isEven ? 'text-black' : 'text-red-600'} text-sm md:text-lg`}>
                             {item.date}
                           </span>
                           <span className={`${isEven ? 'text-black' : 'text-white'} text-xs md:text-sm font-jetbrains font-bold`}>
@@ -500,9 +538,6 @@ export default function Shipathon() {
                           {item.event}
                         </p>
                       </div>
-                      
-                      {/* Corner accent */}
-                      <div className={`absolute top-0 right-0 w-4 h-4 ${isEven ? 'bg-black' : 'bg-red-600'} minecraft-block`}></div>
                     </div>
                   );
                 })}
@@ -510,7 +545,7 @@ export default function Shipathon() {
 
               {/* Floating call-to-action */}
               <div className="text-center mt-12">
-                <div className="minecraft-block bg-red-600 p-4 inline-block hover:scale-110 transition-all duration-300 pixel-glow">
+                <div className="minecraft-block bg-red-600 p-4 inline-block hover:scale-110 transition-all duration-300">
                   <p className="font-press-start text-black text-sm md:text-base">
                     ⏰ MARK YOUR CALENDARS! ⏰
                   </p>
@@ -520,7 +555,7 @@ export default function Shipathon() {
           </section>
 
           {/* Judging Criteria */}
-          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
+          <section className="py-20 px-4 bg-black bg-opacity-30">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
                 JUDGING CRITERIA
@@ -637,7 +672,7 @@ export default function Shipathon() {
           </section>
 
           {/* Rules */}
-          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
+          <section className="py-20 px-4 bg-black bg-opacity-30">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
                 RULES & GUIDELINES
@@ -708,7 +743,7 @@ export default function Shipathon() {
           </section>
 
           {/* Final CTA */}
-          <section className="py-20 px-4 bg-black bg-opacity-30 backdrop-blur-sm">
+          <section className="py-20 px-4 bg-black bg-opacity-30">
             <div className="max-w-4xl mx-auto text-center">
               <div className="minecraft-block bg-red-600 p-2">
                 <div className="minecraft-block bg-black p-8 md:p-12 border-2 border-red-600">
@@ -726,7 +761,7 @@ export default function Shipathon() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button 
                       onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
-                      className="pixel-button bg-red-600 text-white font-press-start py-4 md:py-6 px-6 md:px-10 text-lg md:text-xl hover:scale-110 transition-all duration-300 border-2 border-red-800"
+                      className="pixel-button bg-red-600 text-white font-press-start py-4 md:py-6 px-6 md:px-10 text-lg md:text-xl hover:scale-105 transition-all duration-300 border-2 border-red-800"
                     >
                       🚢 REGISTER ON DEVPOST
                     </Button>
