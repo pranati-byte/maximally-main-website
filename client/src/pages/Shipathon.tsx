@@ -101,9 +101,35 @@ export default function Shipathon() {
   return (
     <div className="min-h-screen bg-black">
       <SEO 
-        title="AI Shipathon 2025 - Maximally Global Hackathon"
-        description="48-hour global hackathon for AI builders. Build, create, or experiment with AI. Aug 30 - Sept 1, 2025. ₹7,500+ prizes. All skill levels welcome."
-        keywords="AI hackathon, global hackathon, AI builders, AI creativity, shipathon, maximally"
+        title="AI Shipathon 2025 - Global 48-Hour Hackathon | Maximally"
+        description="Join the ultimate 48-hour AI hackathon! Build with AI, create digital art, experiment with automation. Aug 30-Sep 1, 2025. ₹7,500+ prizes, global participation, all skill levels welcome. Register now!"
+        keywords="AI hackathon 2025, global hackathon, AI builders, artificial intelligence competition, hackathon prizes, AI creativity contest, developer hackathon, maximally hackathon, shipathon, AI programming contest"
+        image="/ai-shipathon-social.jpg"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "AI Shipathon 2025",
+          "description": "48-hour global hackathon for AI builders, creators, and experimenters",
+          "startDate": "2025-08-30T00:00:00+05:30",
+          "endDate": "2025-09-01T00:00:00+05:30",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+          "location": {
+            "@type": "VirtualLocation",
+            "url": "https://maximally-ai-shipathon-2025.devpost.com/"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "Maximally",
+            "url": "https://maximally.in"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock"
+          }
+        }}
       />
 
       {/* Starfield Background */}
@@ -186,39 +212,56 @@ export default function Shipathon() {
           
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col items-center justify-center relative px-4">
-            {/* Pixel Ship Animation - Simplified */}
-            <div className="mb-12">
+            {/* Enhanced Ship Animation with Glow Effects */}
+            <div className="mb-12 relative group">
+              <div className="absolute inset-0 bg-red-600 rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
               <div className="relative">
-                {/* Ship body */}
-                <div className="w-32 h-16 bg-red-600 minecraft-block relative mx-auto">
-                  <div className="absolute top-4 left-4 w-3 h-3 bg-black pixel-border"></div>
-                  <div className="absolute top-4 left-12 w-3 h-3 bg-black pixel-border"></div>
-                  <div className="absolute top-4 left-20 w-3 h-3 bg-black pixel-border"></div>
+                {/* Ship body with enhanced styling */}
+                <div className="w-40 h-20 bg-gradient-to-br from-red-500 to-red-700 minecraft-block relative mx-auto shadow-2xl border-2 border-red-400">
+                  <div className="absolute top-5 left-5 w-4 h-4 bg-black rounded-sm border border-gray-600"></div>
+                  <div className="absolute top-5 left-14 w-4 h-4 bg-black rounded-sm border border-gray-600"></div>
+                  <div className="absolute top-5 left-23 w-4 h-4 bg-black rounded-sm border border-gray-600"></div>
+                  {/* Ship details */}
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded"></div>
                 </div>
-                {/* Mast */}
-                <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-2 h-16 bg-red-600 minecraft-block"></div>
-                {/* Sail with AI circuits */}
-                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 translate-x-4 w-16 h-12 bg-red-600 minecraft-block flex items-center justify-center">
-                  <span className="font-press-start text-xs text-white">AI</span>
+                {/* Enhanced Mast */}
+                <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-3 h-20 bg-gradient-to-t from-red-600 to-red-500 minecraft-block shadow-lg border border-red-400"></div>
+                {/* Enhanced Sail with AI circuits */}
+                <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 translate-x-5 w-20 h-16 bg-gradient-to-br from-red-500 to-red-700 minecraft-block flex items-center justify-center shadow-xl border-2 border-red-400">
+                  <span className="font-press-start text-sm text-white drop-shadow-lg">AI</span>
+                  <div className="absolute top-1 right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                  <div className="absolute bottom-1 left-1 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
                 </div>
-                {/* Flag */}
-                <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-8 h-4 bg-red-600 minecraft-block"></div>
+                {/* Enhanced Flag */}
+                <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 w-10 h-6 bg-gradient-to-r from-red-500 to-red-600 minecraft-block shadow-lg border border-red-400"></div>
+                {/* Waves effect */}
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-8 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 opacity-30 rounded-full blur-sm"></div>
               </div>
             </div>
 
             <div className="text-center space-y-8 max-w-4xl relative">
-              {/* AI Shipathon Logo */}
+              {/* Enhanced AI Shipathon Logo */}
               <div className="space-y-6">
-                <div className="relative inline-block">
-                  <div className="minecraft-block bg-red-600 p-4 md:p-6 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-white">
-                      AI
-                    </h1>
-                  </div>
-                  <div className="minecraft-block bg-black p-3 md:p-4 transform rotate-1 -mt-4 hover:rotate-0 transition-transform duration-300 border-2 border-red-600">
-                    <h1 className="text-2xl md:text-4xl lg:text-5xl font-press-start text-red-600">
-                      SHIPATHON
-                    </h1>
+                <div className="relative inline-block group">
+                  {/* Glow effect behind logo */}
+                  <div className="absolute inset-0 bg-red-600 rounded-lg blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-300 scale-110"></div>
+                  <div className="relative">
+                    <div className="minecraft-block bg-gradient-to-br from-red-500 to-red-700 p-4 md:p-6 transform -rotate-1 hover:rotate-0 transition-all duration-300 shadow-2xl border-2 border-red-400">
+                      <h1 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-white drop-shadow-2xl">
+                        AI
+                      </h1>
+                      {/* Circuit pattern overlay */}
+                      <div className="absolute top-2 right-2 w-3 h-3 border border-white opacity-50"></div>
+                      <div className="absolute bottom-2 left-2 w-2 h-2 bg-white opacity-30 rounded-full"></div>
+                    </div>
+                    <div className="minecraft-block bg-black p-3 md:p-4 transform rotate-1 -mt-4 hover:rotate-0 transition-all duration-300 border-2 border-red-600 shadow-2xl">
+                      <h1 className="text-2xl md:text-4xl lg:text-5xl font-press-start text-red-600 drop-shadow-lg">
+                        SHIPATHON
+                      </h1>
+                      {/* Tech accent dots */}
+                      <div className="absolute top-1 right-1 w-1 h-1 bg-red-600 rounded-full animate-pulse"></div>
+                      <div className="absolute bottom-1 left-1 w-1 h-1 bg-red-600 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                    </div>
                   </div>
                 </div>
                 <div className="minecraft-block bg-black px-4 md:px-6 py-3 inline-block border-2 border-red-600">
@@ -227,39 +270,61 @@ export default function Shipathon() {
                 </p>
               </div>
 
-              {/* Event Details */}
-              <div className="minecraft-block bg-red-600 max-w-md mx-auto p-4 md:p-6">
-                <div className="text-white font-press-start text-sm md:text-lg mb-2">AUG 30 - SEP 1</div>
-                <div className="text-white font-press-start text-sm md:text-lg">GLOBAL DIGITAL</div>
-              </div>
-
-              {/* Message Box */}
-              <div className="relative my-12">
-                <div className="minecraft-block bg-black p-6 max-w-2xl mx-auto hover:scale-105 transition-transform duration-300 border-2 border-red-600">
-                  <div className="text-base md:text-xl font-press-start mb-4 text-red-600">
-                    48-HOUR GLOBAL HACKATHON
+              {/* Enhanced Event Details */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-red-600 rounded-lg blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+                <div className="relative minecraft-block bg-gradient-to-br from-red-500 to-red-700 max-w-md mx-auto p-4 md:p-6 border-2 border-red-400 shadow-2xl">
+                  <div className="text-white font-press-start text-sm md:text-lg mb-2 drop-shadow-lg">
+                    🗓️ AUG 30 - SEP 1
                   </div>
-                  <p className="text-white font-jetbrains leading-relaxed text-sm md:text-base">
-                    For the curious, the chaotic, and the creative. No pitch decks. No suits. 
-                    Just ideas, friends, and a playground where weird is welcome.
-                  </p>
+                  <div className="text-white font-press-start text-sm md:text-lg drop-shadow-lg">
+                    🌍 GLOBAL DIGITAL
+                  </div>
+                  {/* Animated accent */}
+                  <div className="absolute top-2 right-2 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                  <div className="absolute bottom-2 left-2 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
                 </div>
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
-                  className="pixel-button bg-red-600 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-red-800"
-                >
-                  REGISTER NOW
-                </Button>
-                <Button 
-                  onClick={() => window.open('https://discord.gg/maximally', '_blank')}
-                  className="pixel-button bg-black text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-red-600"
-                >
-                  JOIN DISCORD
-                </Button>
+              {/* Enhanced Message Box */}
+              <div className="relative my-12 group">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 rounded-xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <div className="relative minecraft-block bg-gradient-to-br from-gray-900 to-black p-6 max-w-2xl mx-auto hover:scale-105 transition-all duration-300 border-2 border-red-600 shadow-2xl">
+                  <div className="text-base md:text-xl font-press-start mb-4 text-transparent bg-gradient-to-r from-red-400 to-red-600 bg-clip-text">
+                    ⚡ 48-HOUR GLOBAL HACKATHON ⚡
+                  </div>
+                  <p className="text-gray-200 font-jetbrains leading-relaxed text-sm md:text-base">
+                    For the curious, the chaotic, and the creative. No pitch decks. No suits. 
+                    Just ideas, friends, and a playground where weird is welcome.
+                  </p>
+                  {/* Decorative elements */}
+                  <div className="absolute top-3 right-3 w-3 h-3 border border-red-600 rotate-45 opacity-50"></div>
+                  <div className="absolute bottom-3 left-3 w-2 h-2 bg-red-600 rounded-full opacity-30"></div>
+                  {/* Circuit pattern */}
+                  <div className="absolute top-1/2 right-1 w-8 h-px bg-gradient-to-r from-transparent to-red-600 opacity-30"></div>
+                </div>
+              </div>
+
+              {/* Enhanced CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-red-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  <Button 
+                    onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
+                    className="relative pixel-button bg-gradient-to-r from-red-600 to-red-700 text-white font-press-start py-4 px-8 text-lg hover:scale-110 transition-all duration-300 border-2 border-red-400 shadow-2xl"
+                  >
+                    🚀 REGISTER NOW
+                  </Button>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-purple-600 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  <Button 
+                    onClick={() => window.open('https://discord.gg/maximally', '_blank')}
+                    className="relative pixel-button bg-gradient-to-r from-gray-900 to-black text-white font-press-start py-4 px-8 text-lg hover:scale-110 transition-all duration-300 border-2 border-red-600 shadow-2xl"
+                  >
+                    💬 JOIN DISCORD
+                  </Button>
+                </div>
               </div>
             </div>
 
@@ -286,34 +351,46 @@ export default function Shipathon() {
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <Card className="minecraft-block bg-red-600 hover:scale-105 transition-all duration-300">
-                  <CardContent className="p-4 md:p-6 text-center">
-                    <div className="text-2xl md:text-3xl mb-4">🌍</div>
-                    <h3 className="font-press-start text-black mb-2 text-sm md:text-base">GLOBAL</h3>
-                    <p className="text-black font-jetbrains font-bold text-sm">All skill levels</p>
-                  </CardContent>
-                </Card>
-                <Card className="minecraft-block bg-black hover:scale-105 transition-all duration-300 border-2 border-red-600">
-                  <CardContent className="p-4 md:p-6 text-center">
-                    <div className="text-2xl md:text-3xl mb-4">⏰</div>
-                    <h3 className="font-press-start text-red-600 mb-2 text-sm md:text-base">48 HOURS</h3>
-                    <p className="text-red-600 font-jetbrains font-bold text-sm">Aug 30 - Sep 1</p>
-                  </CardContent>
-                </Card>
-                <Card className="minecraft-block bg-red-600 hover:scale-105 transition-all duration-300">
-                  <CardContent className="p-4 md:p-6 text-center">
-                    <div className="text-2xl md:text-3xl mb-4">👥</div>
-                    <h3 className="font-press-start text-white mb-2 text-sm md:text-base">TEAMS</h3>
-                    <p className="text-white font-jetbrains font-bold text-sm">Solo or up to 4</p>
-                  </CardContent>
-                </Card>
-                <Card className="minecraft-block bg-black hover:scale-105 transition-all duration-300 border-2 border-red-600">
-                  <CardContent className="p-4 md:p-6 text-center">
-                    <div className="text-2xl md:text-3xl mb-4">💻</div>
-                    <h3 className="font-press-start text-red-600 mb-2 text-sm md:text-base">ONLINE</h3>
-                    <p className="text-white font-jetbrains font-bold text-sm">+ Chandigarh hub</p>
-                  </CardContent>
-                </Card>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-red-600 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  <Card className="relative minecraft-block bg-gradient-to-br from-red-500 to-red-700 hover:scale-105 transition-all duration-300 border-2 border-red-400 shadow-xl">
+                    <CardContent className="p-4 md:p-6 text-center">
+                      <div className="text-2xl md:text-3xl mb-4 drop-shadow-lg">🌍</div>
+                      <h3 className="font-press-start text-white mb-2 text-sm md:text-base drop-shadow-lg">GLOBAL</h3>
+                      <p className="text-white font-jetbrains font-bold text-sm drop-shadow-sm">All skill levels</p>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-orange-600 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  <Card className="relative minecraft-block bg-gradient-to-br from-gray-900 to-black hover:scale-105 transition-all duration-300 border-2 border-orange-500 shadow-xl">
+                    <CardContent className="p-4 md:p-6 text-center">
+                      <div className="text-2xl md:text-3xl mb-4">⏰</div>
+                      <h3 className="font-press-start text-orange-500 mb-2 text-sm md:text-base">48 HOURS</h3>
+                      <p className="text-orange-400 font-jetbrains font-bold text-sm">Aug 30 - Sep 1</p>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-blue-600 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  <Card className="relative minecraft-block bg-gradient-to-br from-blue-600 to-blue-800 hover:scale-105 transition-all duration-300 border-2 border-blue-400 shadow-xl">
+                    <CardContent className="p-4 md:p-6 text-center">
+                      <div className="text-2xl md:text-3xl mb-4 drop-shadow-lg">👥</div>
+                      <h3 className="font-press-start text-white mb-2 text-sm md:text-base drop-shadow-lg">TEAMS</h3>
+                      <p className="text-white font-jetbrains font-bold text-sm drop-shadow-sm">Solo or up to 4</p>
+                    </CardContent>
+                  </Card>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-purple-600 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  <Card className="relative minecraft-block bg-gradient-to-br from-gray-900 to-black hover:scale-105 transition-all duration-300 border-2 border-purple-500 shadow-xl">
+                    <CardContent className="p-4 md:p-6 text-center">
+                      <div className="text-2xl md:text-3xl mb-4">💻</div>
+                      <h3 className="font-press-start text-purple-500 mb-2 text-sm md:text-base">ONLINE</h3>
+                      <p className="text-purple-400 font-jetbrains font-bold text-sm">+ Chandigarh hub</p>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </div>
           </section>
@@ -332,17 +409,21 @@ export default function Shipathon() {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
-                  { icon: "🧙‍♂️", title: "FIRST-TIMERS", desc: "Never coded? Perfect!" },
-                  { icon: "👾", title: "NO-CODERS", desc: "Indie hackers welcome" },
-                  { icon: "🎨", title: "CREATIVES", desc: "AI-curious designers & artists" },
-                  { icon: "🧠", title: "STUDENTS", desc: "Creators of all kinds" }
+                  { icon: "🧙‍♂️", title: "FIRST-TIMERS", desc: "Never coded? Perfect!", color: "from-green-600 to-green-800", glowColor: "bg-green-600" },
+                  { icon: "👾", title: "NO-CODERS", desc: "Indie hackers welcome", color: "from-purple-600 to-purple-800", glowColor: "bg-purple-600" },
+                  { icon: "🎨", title: "CREATIVES", desc: "AI-curious designers & artists", color: "from-pink-600 to-pink-800", glowColor: "bg-pink-600" },
+                  { icon: "🧠", title: "STUDENTS", desc: "Creators of all kinds", color: "from-blue-600 to-blue-800", glowColor: "bg-blue-600" }
                 ].map((persona, i) => {
-                  const isEven = i % 2 === 0;
                   return (
-                    <div key={i} className={`minecraft-block ${isEven ? 'bg-red-600' : 'bg-black border-2 border-red-600'} p-4 md:p-6 hover:scale-105 transition-all duration-300`}>
-                      <div className="text-4xl md:text-6xl mb-4">{persona.icon}</div>
-                      <h3 className={`text-lg md:text-xl font-press-start mb-2 ${isEven ? 'text-white' : 'text-red-600'}`}>{persona.title}</h3>
-                      <p className={`${isEven ? 'text-white' : 'text-white'} font-jetbrains font-bold text-sm md:text-base`}>{persona.desc}</p>
+                    <div key={i} className="relative group">
+                      <div className={`absolute inset-0 ${persona.glowColor} rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300`}></div>
+                      <div className={`relative minecraft-block bg-gradient-to-br ${persona.color} p-4 md:p-6 hover:scale-105 transition-all duration-300 border-2 border-white border-opacity-20 shadow-2xl`}>
+                        <div className="text-4xl md:text-6xl mb-4 drop-shadow-lg">{persona.icon}</div>
+                        <h3 className="text-lg md:text-xl font-press-start mb-2 text-white drop-shadow-lg">{persona.title}</h3>
+                        <p className="text-white font-jetbrains font-bold text-sm md:text-base drop-shadow-sm opacity-90">{persona.desc}</p>
+                        {/* Tech accent */}
+                        <div className="absolute top-2 right-2 w-2 h-2 bg-white rounded-full opacity-30"></div>
+                      </div>
                     </div>
                   );
                 })}
@@ -758,13 +839,25 @@ export default function Shipathon() {
                   </p>
 
                   {/* Final CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button 
-                      onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
-                      className="pixel-button bg-red-600 text-white font-press-start py-4 md:py-6 px-6 md:px-10 text-lg md:text-xl hover:scale-105 transition-all duration-300 border-2 border-red-800"
-                    >
-                      🚢 REGISTER ON DEVPOST
-                    </Button>
+                  <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                      <Button 
+                        onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
+                        className="relative pixel-button bg-gradient-to-r from-red-600 to-red-700 text-white font-press-start py-4 md:py-6 px-6 md:px-10 text-lg md:text-xl hover:scale-110 transition-all duration-300 border-2 border-red-400 shadow-2xl"
+                      >
+                        🚢 REGISTER ON DEVPOST
+                      </Button>
+                    </div>
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                      <Button 
+                        onClick={() => window.open('https://discord.gg/maximally', '_blank')}
+                        className="relative pixel-button bg-gradient-to-r from-gray-900 to-black text-white font-press-start py-4 md:py-6 px-6 md:px-10 text-lg md:text-xl hover:scale-110 transition-all duration-300 border-2 border-blue-500 shadow-2xl"
+                      >
+                        💬 JOIN COMMUNITY
+                      </Button>
+                    </div>
                   </div>
                 </div>
               </div>
