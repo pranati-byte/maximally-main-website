@@ -174,7 +174,6 @@ const App = () => {
           <Route path="/blog/parents-support-makeathon" element={<ParentsSupport />} />
           <Route path="/blog/makeathon-faq-maximally" element={<MakeathonFAQ />} />
           <Route path="/blog/teamwork-leadership-maximally" element={<BuildingTeamworkLeadership />} />
-
           <Route path="/shipathon" element={<Shipathon />} />
 
           {/* Catch all route for 404 */}
