@@ -41,9 +41,6 @@ const Contact = () => {
                   <a href="mailto:contact.maximally@gmail.com" className="block text-maximally-black hover:text-maximally-blue transition-colors">
                     contact.maximally@gmail.com
                   </a>
-                  <a href="mailto:sponsorships.maximally@gmail.com" className="block text-maximally-black hover:text-maximally-blue transition-colors">
-                    sponsorships.maximally@gmail.com
-                  </a>
                 </div>
               </div>
             </div>
