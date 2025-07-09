@@ -47,7 +47,6 @@ const Footer = () => {
               <li><Link to="/community" className="hover:text-yellow-400 transition-colors block retro-underline">Join Our League</Link></li>
               <li><Link to="/collaborate" className="hover:text-yellow-400 transition-colors block retro-underline">Collaborate with Us</Link></li>
               <li><Link to="/partnership" className="hover:text-yellow-400 transition-colors block retro-underline">Partner Network</Link></li>
-              <li><Link to="/allies" className="hover:text-yellow-400 transition-colors block retro-underline">Global Allies</Link></li>
             </ul>
           </div>
 
