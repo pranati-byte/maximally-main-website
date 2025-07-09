@@ -148,6 +148,53 @@
   animation: neural-pulse 1.5s ease-in-out infinite;
 }
 
+/* Performance Optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+  * {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .animate-pulse {
+    animation-duration: 3s; /* Slower animations on mobile */
+  }
+  
+  .animate-bounce {
+    animation-duration: 2s;
+  }
+  
+  /* Disable complex animations on mobile */
+  .mobile-disable-animation {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Hardware acceleration for better performance */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .animate-code-scroll {
   animation: code-scroll 8s linear infinite;
 }

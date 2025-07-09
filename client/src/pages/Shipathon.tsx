@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, lazy, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import SEO from '@/components/SEO';
@@ -7,31 +7,43 @@ import Navbar from '@/components/Navbar';
 export default function Shipathon() {
   const [glitchText, setGlitchText] = useState("BUILD OR BE FORGOTTEN");
 
-  // Pre-calculate random positions to avoid re-renders
+  // Mobile detection for reduced animations
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || 'ontouchstart' in window);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Pre-calculate random positions with mobile optimization
   const animationElements = useMemo(() => ({
-    shootingStars: Array.from({ length: 4 }, (_, i) => ({ // Reduced from 8 to 4
+    shootingStars: Array.from({ length: isMobile ? 2 : 3 }, (_, i) => ({
       key: `shooting-star-${i}`,
       top: Math.random() * 100,
       delay: Math.random() * 5,
       duration: 3 + Math.random() * 2,
     })),
-    spaceShips: Array.from({ length: 2 }, (_, i) => ({ // Reduced from 3 to 2
+    spaceShips: Array.from({ length: isMobile ? 1 : 2 }, (_, i) => ({
       key: `ship-${i}`,
       top: 20 + Math.random() * 60,
       left: 20 + Math.random() * 60,
       delay: Math.random() * 4,
       duration: 6 + Math.random() * 4,
     })),
-    nebulas: Array.from({ length: 2 }, (_, i) => ({ // Reduced from 4 to 2
+    nebulas: Array.from({ length: isMobile ? 1 : 2 }, (_, i) => ({
       key: `nebula-${i}`,
       top: Math.random() * 100,
       left: Math.random() * 100,
-      width: 100 + Math.random() * 200,
-      height: 100 + Math.random() * 200,
+      width: 100 + Math.random() * (isMobile ? 100 : 200),
+      height: 100 + Math.random() * (isMobile ? 100 : 200),
       delay: Math.random() * 5,
       isRed: i % 2 === 0,
     })),
-    constellations: Array.from({ length: 3 }, (_, i) => ({ // Reduced from 6 to 3
+    constellations: Array.from({ length: isMobile ? 1 : 2 }, (_, i) => ({
       key: `constellation-${i}`,
       top: Math.random() * 100,
       left: Math.random() * 100,
@@ -39,21 +51,21 @@ export default function Shipathon() {
       rotation: Math.random() * 360,
       delay: Math.random() * 3,
     })),
-    floatingPixels: Array.from({ length: 4 }, (_, i) => ({ // Reduced from 6 to 4
+    floatingPixels: Array.from({ length: isMobile ? 2 : 3 }, (_, i) => ({
       key: `pixel-${i}`,
       top: Math.random() * 100,
       left: Math.random() * 100,
       delay: i * 0.5,
       duration: 4 + i * 0.5,
     })),
-    timelinePixels: Array.from({ length: 8 }, (_, i) => ({ // Reduced from 15 to 8
+    timelinePixels: Array.from({ length: isMobile ? 3 : 5 }, (_, i) => ({
       key: `timeline-pixel-${i}`,
       top: Math.random() * 100,
       left: Math.random() * 100,
       delay: i * 0.3,
       duration: 3 + i * 0.2,
     })),
-  }), []);
+  }), [isMobile]);
 
   useEffect(() => {
     const glitchInterval = setInterval(() => {
@@ -132,72 +144,74 @@ export default function Shipathon() {
         }}
       />
 
-      {/* Starfield Background */}
-      <div className="starfield">
-        {/* Shooting Stars */}
-        {animationElements.shootingStars.map((star) => (
-          <div
-            key={star.key}
-            className="shooting-star"
-            style={{
-              top: `${star.top}%`,
-              animationDelay: `${star.delay}s`,
-              animationDuration: `${star.duration}s`,
-            }}
-          />
-        ))}
+      {/* Optimized Starfield Background - Only render on non-mobile or when explicitly enabled */}
+      {!isMobile && (
+        <div className="starfield will-change-transform">
+          {/* Shooting Stars */}
+          {animationElements.shootingStars.map((star) => (
+            <div
+              key={star.key}
+              className="shooting-star will-change-transform"
+              style={{
+                top: `${star.top}%`,
+                animationDelay: `${star.delay}s`,
+                animationDuration: `${star.duration}s`,
+              }}
+            />
+          ))}
 
-        {/* Space Ships */}
-        {animationElements.spaceShips.map((ship) => (
-          <div
-            key={ship.key}
-            className="space-ship"
-            style={{
-              top: `${ship.top}%`,
-              left: `${ship.left}%`,
-              animationDelay: `${ship.delay}s`,
-              animationDuration: `${ship.duration}s`,
-            }}
-          />
-        ))}
+          {/* Space Ships */}
+          {animationElements.spaceShips.map((ship) => (
+            <div
+              key={ship.key}
+              className="space-ship will-change-transform"
+              style={{
+                top: `${ship.top}%`,
+                left: `${ship.left}%`,
+                animationDelay: `${ship.delay}s`,
+                animationDuration: `${ship.duration}s`,
+              }}
+            />
+          ))}
 
-        {/* Nebula Effects */}
-        {animationElements.nebulas.map((nebula) => (
-          <div
-            key={nebula.key}
-            className={`nebula ${nebula.isRed ? 'nebula-red' : 'nebula-blue'}`}
-            style={{
-              top: `${nebula.top}%`,
-              left: `${nebula.left}%`,
-              width: `${nebula.width}px`,
-              height: `${nebula.height}px`,
-              animationDelay: `${nebula.delay}s`,
-            }}
-          />
-        ))}
+          {/* Nebula Effects */}
+          {animationElements.nebulas.map((nebula) => (
+            <div
+              key={nebula.key}
+              className={`nebula ${nebula.isRed ? 'nebula-red' : 'nebula-blue'} will-change-transform`}
+              style={{
+                top: `${nebula.top}%`,
+                left: `${nebula.left}%`,
+                width: `${nebula.width}px`,
+                height: `${nebula.height}px`,
+                animationDelay: `${nebula.delay}s`,
+              }}
+            />
+          ))}
 
-        {/* Constellation Lines */}
-        {animationElements.constellations.map((constellation) => (
-          <div
-            key={constellation.key}
-            className="constellation"
-            style={{
-              top: `${constellation.top}%`,
-              left: `${constellation.left}%`,
-              height: `${constellation.height}px`,
-              transform: `rotate(${constellation.rotation}deg)`,
-              animationDelay: `${constellation.delay}s`,
-            }}
-          />
-        ))}
-      </div>
+          {/* Constellation Lines */}
+          {animationElements.constellations.map((constellation) => (
+            <div
+              key={constellation.key}
+              className="constellation will-change-transform"
+              style={{
+                top: `${constellation.top}%`,
+                left: `${constellation.left}%`,
+                height: `${constellation.height}px`,
+                transform: `rotate(${constellation.rotation}deg)`,
+                animationDelay: `${constellation.delay}s`,
+              }}
+            />
+          ))}
+        </div>
+      )}
       
       <div className="min-h-screen bg-transparent text-white overflow-hidden relative">
-        {/* Floating pixel elements */}
-        {animationElements.floatingPixels.map((pixel) => (
+        {/* Floating pixel elements - Reduced on mobile */}
+        {!isMobile && animationElements.floatingPixels.map((pixel) => (
           <div 
             key={pixel.key}
-            className="fixed w-4 h-4 bg-red-600 pixel-border animate-float opacity-10"
+            className="fixed w-4 h-4 bg-red-600 pixel-border animate-float opacity-10 will-change-transform"
             style={{
               top: `${pixel.top}%`,
               left: `${pixel.left}%`,
@@ -212,55 +226,67 @@ export default function Shipathon() {
           
           {/* Hero Section */}
           <section className="min-h-screen flex flex-col items-center justify-center relative px-4">
-            {/* Enhanced Ship Animation with Glow Effects */}
-            <div className="mb-12 relative group">
-              <div className="absolute inset-0 bg-red-600 rounded-lg blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+            {/* Optimized Ship Animation */}
+            <div className="mb-8 md:mb-12 relative group">
+              {!isMobile && <div className="absolute inset-0 bg-red-600 rounded-lg blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>}
               <div className="relative">
-                {/* Ship body with enhanced styling */}
-                <div className="w-40 h-20 bg-gradient-to-br from-red-500 to-red-700 minecraft-block relative mx-auto shadow-2xl border-2 border-red-400">
-                  <div className="absolute top-5 left-5 w-4 h-4 bg-black rounded-sm border border-gray-600"></div>
-                  <div className="absolute top-5 left-14 w-4 h-4 bg-black rounded-sm border border-gray-600"></div>
-                  <div className="absolute top-5 left-23 w-4 h-4 bg-black rounded-sm border border-gray-600"></div>
+                {/* Simplified Ship body for mobile */}
+                <div className="w-32 md:w-40 h-16 md:h-20 bg-gradient-to-br from-red-500 to-red-700 minecraft-block relative mx-auto shadow-xl border-2 border-red-400">
+                  <div className="absolute top-3 md:top-5 left-3 md:left-5 w-3 md:w-4 h-3 md:h-4 bg-black rounded-sm border border-gray-600"></div>
+                  <div className="absolute top-3 md:top-5 left-10 md:left-14 w-3 md:w-4 h-3 md:h-4 bg-black rounded-sm border border-gray-600"></div>
+                  <div className="absolute top-3 md:top-5 left-17 md:left-23 w-3 md:w-4 h-3 md:h-4 bg-black rounded-sm border border-gray-600"></div>
                   {/* Ship details */}
-                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded"></div>
+                  <div className="absolute bottom-1 md:bottom-2 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-1 md:h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded"></div>
                 </div>
-                {/* Enhanced Mast */}
-                <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-3 h-20 bg-gradient-to-t from-red-600 to-red-500 minecraft-block shadow-lg border border-red-400"></div>
-                {/* Enhanced Sail with AI circuits */}
-                <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 translate-x-5 w-20 h-16 bg-gradient-to-br from-red-500 to-red-700 minecraft-block flex items-center justify-center shadow-xl border-2 border-red-400">
-                  <span className="font-press-start text-sm text-white drop-shadow-lg">AI</span>
-                  <div className="absolute top-1 right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-                  <div className="absolute bottom-1 left-1 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                {/* Simplified Mast for mobile */}
+                <div className="absolute -top-16 md:-top-20 left-1/2 transform -translate-x-1/2 w-2 md:w-3 h-16 md:h-20 bg-gradient-to-t from-red-600 to-red-500 minecraft-block shadow-lg border border-red-400"></div>
+                {/* Sail */}
+                <div className="absolute -top-12 md:-top-16 left-1/2 transform -translate-x-1/2 translate-x-4 md:translate-x-5 w-16 md:w-20 h-12 md:h-16 bg-gradient-to-br from-red-500 to-red-700 minecraft-block flex items-center justify-center shadow-xl border-2 border-red-400">
+                  <span className="font-press-start text-xs md:text-sm text-white drop-shadow-lg">AI</span>
+                  {!isMobile && (
+                    <>
+                      <div className="absolute top-1 right-1 w-1 md:w-2 h-1 md:h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                      <div className="absolute bottom-1 left-1 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                    </>
+                  )}
                 </div>
-                {/* Enhanced Flag */}
-                <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 w-10 h-6 bg-gradient-to-r from-red-500 to-red-600 minecraft-block shadow-lg border border-red-400"></div>
-                {/* Waves effect */}
-                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-8 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 opacity-30 rounded-full blur-sm"></div>
+                {/* Flag */}
+                <div className="absolute -top-20 md:-top-24 left-1/2 transform -translate-x-1/2 w-8 md:w-10 h-4 md:h-6 bg-gradient-to-r from-red-500 to-red-600 minecraft-block shadow-lg border border-red-400"></div>
+                {/* Waves effect - removed on mobile */}
+                {!isMobile && <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-48 h-8 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 opacity-30 rounded-full blur-sm"></div>}
               </div>
             </div>
 
             <div className="text-center space-y-8 max-w-4xl relative">
-              {/* Enhanced AI Shipathon Logo */}
-              <div className="space-y-6">
+              {/* Mobile-Optimized AI Shipathon Logo */}
+              <div className="space-y-4 md:space-y-6">
                 <div className="relative inline-block group">
-                  {/* Glow effect behind logo */}
-                  <div className="absolute inset-0 bg-red-600 rounded-lg blur-2xl opacity-50 group-hover:opacity-75 transition-opacity duration-300 scale-110"></div>
+                  {/* Reduced glow effect on mobile */}
+                  {!isMobile && <div className="absolute inset-0 bg-red-600 rounded-lg blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 scale-110"></div>}
                   <div className="relative">
-                    <div className="minecraft-block bg-gradient-to-br from-red-500 to-red-700 p-4 md:p-6 transform -rotate-1 hover:rotate-0 transition-all duration-300 shadow-2xl border-2 border-red-400">
-                      <h1 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-white drop-shadow-2xl">
+                    <div className="minecraft-block bg-gradient-to-br from-red-500 to-red-700 p-3 md:p-4 lg:p-6 transform -rotate-1 hover:rotate-0 transition-all duration-300 shadow-xl md:shadow-2xl border-2 border-red-400">
+                      <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-press-start text-white drop-shadow-xl">
                         AI
                       </h1>
-                      {/* Circuit pattern overlay */}
-                      <div className="absolute top-2 right-2 w-3 h-3 border border-white opacity-50"></div>
-                      <div className="absolute bottom-2 left-2 w-2 h-2 bg-white opacity-30 rounded-full"></div>
+                      {/* Simplified circuit pattern for mobile */}
+                      {!isMobile && (
+                        <>
+                          <div className="absolute top-2 right-2 w-2 md:w-3 h-2 md:h-3 border border-white opacity-50"></div>
+                          <div className="absolute bottom-2 left-2 w-1 md:w-2 h-1 md:h-2 bg-white opacity-30 rounded-full"></div>
+                        </>
+                      )}
                     </div>
-                    <div className="minecraft-block bg-black p-3 md:p-4 transform rotate-1 -mt-4 hover:rotate-0 transition-all duration-300 border-2 border-red-600 shadow-2xl">
-                      <h1 className="text-2xl md:text-4xl lg:text-5xl font-press-start text-red-600 drop-shadow-lg">
+                    <div className="minecraft-block bg-black p-2 md:p-3 lg:p-4 transform rotate-1 -mt-3 md:-mt-4 hover:rotate-0 transition-all duration-300 border-2 border-red-600 shadow-xl md:shadow-2xl">
+                      <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-press-start text-red-600 drop-shadow-lg">
                         SHIPATHON
                       </h1>
-                      {/* Tech accent dots */}
-                      <div className="absolute top-1 right-1 w-1 h-1 bg-red-600 rounded-full animate-pulse"></div>
-                      <div className="absolute bottom-1 left-1 w-1 h-1 bg-red-600 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                      {/* Simplified tech accent dots for mobile */}
+                      {!isMobile && (
+                        <>
+                          <div className="absolute top-1 right-1 w-1 h-1 bg-red-600 rounded-full animate-pulse"></div>
+                          <div className="absolute bottom-1 left-1 w-1 h-1 bg-red-600 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -270,57 +296,64 @@ export default function Shipathon() {
                 </p>
               </div>
 
-              {/* Enhanced Event Details */}
+              {/* Mobile-Optimized Event Details */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-red-600 rounded-lg blur-xl opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
-                <div className="relative minecraft-block bg-gradient-to-br from-red-500 to-red-700 max-w-md mx-auto p-4 md:p-6 border-2 border-red-400 shadow-2xl">
-                  <div className="text-white font-press-start text-sm md:text-lg mb-2 drop-shadow-lg">
+                {!isMobile && <div className="absolute inset-0 bg-red-600 rounded-lg blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>}
+                <div className="relative minecraft-block bg-gradient-to-br from-red-500 to-red-700 max-w-sm md:max-w-md mx-auto p-3 md:p-4 lg:p-6 border-2 border-red-400 shadow-xl">
+                  <div className="text-white font-press-start text-xs sm:text-sm md:text-lg mb-1 md:mb-2 drop-shadow-lg">
                     🗓️ AUG 30 - SEP 1
                   </div>
-                  <div className="text-white font-press-start text-sm md:text-lg drop-shadow-lg">
+                  <div className="text-white font-press-start text-xs sm:text-sm md:text-lg drop-shadow-lg">
                     🌍 GLOBAL DIGITAL
                   </div>
-                  {/* Animated accent */}
-                  <div className="absolute top-2 right-2 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
-                  <div className="absolute bottom-2 left-2 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                  {/* Simplified animated accent for mobile */}
+                  {!isMobile && (
+                    <>
+                      <div className="absolute top-2 right-2 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                      <div className="absolute bottom-2 left-2 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                    </>
+                  )}
                 </div>
               </div>
 
-              {/* Enhanced Message Box */}
-              <div className="relative my-12 group">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 rounded-xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="relative minecraft-block bg-gradient-to-br from-gray-900 to-black p-6 max-w-2xl mx-auto hover:scale-105 transition-all duration-300 border-2 border-red-600 shadow-2xl">
-                  <div className="text-base md:text-xl font-press-start mb-4 text-transparent bg-gradient-to-r from-red-400 to-red-600 bg-clip-text">
+              {/* Mobile-Optimized Message Box */}
+              <div className="relative my-8 md:my-12 group">
+                {!isMobile && <div className="absolute inset-0 bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 rounded-xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>}
+                <div className="relative minecraft-block bg-gradient-to-br from-gray-900 to-black p-4 md:p-6 max-w-xl md:max-w-2xl mx-auto hover:scale-105 transition-all duration-300 border-2 border-red-600 shadow-xl">
+                  <div className="text-sm md:text-base lg:text-xl font-press-start mb-3 md:mb-4 text-transparent bg-gradient-to-r from-red-400 to-red-600 bg-clip-text">
                     ⚡ 48-HOUR GLOBAL HACKATHON ⚡
                   </div>
-                  <p className="text-gray-200 font-jetbrains leading-relaxed text-sm md:text-base">
+                  <p className="text-gray-200 font-jetbrains leading-relaxed text-xs sm:text-sm md:text-base">
                     For the curious, the chaotic, and the creative. No pitch decks. No suits. 
                     Just ideas, friends, and a playground where weird is welcome.
                   </p>
-                  {/* Decorative elements */}
-                  <div className="absolute top-3 right-3 w-3 h-3 border border-red-600 rotate-45 opacity-50"></div>
-                  <div className="absolute bottom-3 left-3 w-2 h-2 bg-red-600 rounded-full opacity-30"></div>
-                  {/* Circuit pattern */}
-                  <div className="absolute top-1/2 right-1 w-8 h-px bg-gradient-to-r from-transparent to-red-600 opacity-30"></div>
+                  {/* Simplified decorative elements for mobile */}
+                  {!isMobile && (
+                    <>
+                      <div className="absolute top-3 right-3 w-3 h-3 border border-red-600 rotate-45 opacity-50"></div>
+                      <div className="absolute bottom-3 left-3 w-2 h-2 bg-red-600 rounded-full opacity-30"></div>
+                      <div className="absolute top-1/2 right-1 w-8 h-px bg-gradient-to-r from-transparent to-red-600 opacity-30"></div>
+                    </>
+                  )}
                 </div>
               </div>
 
-              {/* Enhanced CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              {/* Mobile-Optimized CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-red-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  {!isMobile && <div className="absolute inset-0 bg-red-600 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>}
                   <Button 
                     onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
-                    className="relative pixel-button bg-gradient-to-r from-red-600 to-red-700 text-white font-press-start py-4 px-8 text-lg hover:scale-110 transition-all duration-300 border-2 border-red-400 shadow-2xl"
+                    className="relative w-full sm:w-auto pixel-button bg-gradient-to-r from-red-600 to-red-700 text-white font-press-start py-3 md:py-4 px-6 md:px-8 text-sm md:text-lg hover:scale-105 md:hover:scale-110 transition-all duration-300 border-2 border-red-400 shadow-xl"
                   >
                     🚀 REGISTER NOW
                   </Button>
                 </div>
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-purple-600 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  {!isMobile && <div className="absolute inset-0 bg-purple-600 rounded-lg blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>}
                   <Button 
                     onClick={() => window.open('https://discord.gg/maximally', '_blank')}
-                    className="relative pixel-button bg-gradient-to-r from-gray-900 to-black text-white font-press-start py-4 px-8 text-lg hover:scale-110 transition-all duration-300 border-2 border-red-600 shadow-2xl"
+                    className="relative w-full sm:w-auto pixel-button bg-gradient-to-r from-gray-900 to-black text-white font-press-start py-3 md:py-4 px-6 md:px-8 text-sm md:text-lg hover:scale-105 md:hover:scale-110 transition-all duration-300 border-2 border-red-600 shadow-xl"
                   >
                     💬 JOIN DISCORD
                   </Button>
@@ -328,22 +361,26 @@ export default function Shipathon() {
               </div>
             </div>
 
-            {/* Floating Tech Icons - Simplified */}
-            <div className="absolute top-20 left-10 text-4xl">🤖</div>
-            <div className="absolute top-40 right-20 text-3xl">⚡</div>
-            <div className="absolute bottom-40 right-10 text-2xl">🔧</div>
+            {/* Floating Tech Icons - Hidden on mobile */}
+            {!isMobile && (
+              <>
+                <div className="absolute top-20 left-10 text-4xl opacity-60">🤖</div>
+                <div className="absolute top-40 right-20 text-3xl opacity-60">⚡</div>
+                <div className="absolute bottom-40 right-10 text-2xl opacity-60">🔧</div>
+              </>
+            )}
           </div>
         </section>
 
           {/* About the Challenge */}
-          <section className="py-20 px-4 bg-black bg-opacity-30">
+          <section className="py-12 md:py-20 px-4 bg-black bg-opacity-30">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 mb-6">
+              <div className="text-center mb-12 md:mb-16">
+                <h2 className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-press-start text-red-600 mb-4 md:mb-6">
                   THE MISSION
                 </h2>
-                <div className="minecraft-block bg-red-600 p-6 md:p-8 max-w-4xl mx-auto">
-                  <p className="text-lg md:text-xl lg:text-2xl font-jetbrains text-black leading-relaxed">
+                <div className="minecraft-block bg-red-600 p-4 md:p-6 lg:p-8 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-jetbrains text-black leading-relaxed">
                     Whether you're a coder, artist, student, or first-time builder — if you're excited about AI 
                     and want to build something real, this event is for you.
                   </p>
@@ -407,7 +444,7 @@ export default function Shipathon() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
                 {[
                   { icon: "🧙‍♂️", title: "FIRST-TIMERS", desc: "Never coded? Perfect!", color: "from-green-600 to-green-800", glowColor: "bg-green-600" },
                   { icon: "👾", title: "NO-CODERS", desc: "Indie hackers welcome", color: "from-purple-600 to-purple-800", glowColor: "bg-purple-600" },
@@ -416,13 +453,13 @@ export default function Shipathon() {
                 ].map((persona, i) => {
                   return (
                     <div key={i} className="relative group">
-                      <div className={`absolute inset-0 ${persona.glowColor} rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300`}></div>
-                      <div className={`relative minecraft-block bg-gradient-to-br ${persona.color} p-4 md:p-6 hover:scale-105 transition-all duration-300 border-2 border-white border-opacity-20 shadow-2xl`}>
-                        <div className="text-4xl md:text-6xl mb-4 drop-shadow-lg">{persona.icon}</div>
-                        <h3 className="text-lg md:text-xl font-press-start mb-2 text-white drop-shadow-lg">{persona.title}</h3>
-                        <p className="text-white font-jetbrains font-bold text-sm md:text-base drop-shadow-sm opacity-90">{persona.desc}</p>
-                        {/* Tech accent */}
-                        <div className="absolute top-2 right-2 w-2 h-2 bg-white rounded-full opacity-30"></div>
+                      {!isMobile && <div className={`absolute inset-0 ${persona.glowColor} rounded-lg blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500`}></div>}
+                      <div className={`relative minecraft-block bg-gradient-to-br ${persona.color} p-3 md:p-4 lg:p-6 hover:scale-105 transition-all duration-300 border-2 border-white border-opacity-20 shadow-xl gpu-accelerated`}>
+                        <div className="text-3xl md:text-4xl lg:text-6xl mb-3 md:mb-4 drop-shadow-lg">{persona.icon}</div>
+                        <h3 className="text-sm md:text-lg lg:text-xl font-press-start mb-1 md:mb-2 text-white drop-shadow-lg">{persona.title}</h3>
+                        <p className="text-white font-jetbrains font-bold text-xs sm:text-sm md:text-base drop-shadow-sm opacity-90">{persona.desc}</p>
+                        {/* Tech accent - hidden on mobile */}
+                        {!isMobile && <div className="absolute top-2 right-2 w-2 h-2 bg-white rounded-full opacity-30"></div>}
                       </div>
                     </div>
                   );
@@ -578,25 +615,27 @@ export default function Shipathon() {
           </section>
 
           {/* Timeline */}
-          <section className="py-20 px-4 bg-black relative overflow-hidden">
-            {/* Animated background elements */}
-            <div className="absolute inset-0">
-              {animationElements.timelinePixels.map((pixel) => (
-                <div 
-                  key={pixel.key}
-                  className="absolute w-3 h-3 bg-red-600 opacity-20 pixel-float"
-                  style={{
-                    top: `${pixel.top}%`,
-                    left: `${pixel.left}%`,
-                    animationDelay: `${pixel.delay}s`,
-                    animationDuration: `${pixel.duration}s`
-                  }}
-                />
-              ))}
-            </div>
+          <section className="py-12 md:py-20 px-4 bg-black relative overflow-hidden">
+            {/* Animated background elements - Reduced for mobile */}
+            {!isMobile && (
+              <div className="absolute inset-0">
+                {animationElements.timelinePixels.map((pixel) => (
+                  <div 
+                    key={pixel.key}
+                    className="absolute w-3 h-3 bg-red-600 opacity-20 pixel-float will-change-transform"
+                    style={{
+                      top: `${pixel.top}%`,
+                      left: `${pixel.left}%`,
+                      animationDelay: `${pixel.delay}s`,
+                      animationDuration: `${pixel.duration}s`
+                    }}
+                  />
+                ))}
+              </div>
+            )}
 
             <div className="max-w-4xl mx-auto relative z-10">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16 neon-glow">
+              <h2 className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-press-start text-red-600 text-center mb-8 md:mb-16 neon-glow">
                 EVENT TIMELINE
               </h2>
 
@@ -624,10 +663,10 @@ export default function Shipathon() {
                 })}
               </div>
 
-              {/* Floating call-to-action */}
-              <div className="text-center mt-12">
-                <div className="minecraft-block bg-red-600 p-4 inline-block hover:scale-110 transition-all duration-300">
-                  <p className="font-press-start text-black text-sm md:text-base">
+              {/* Mobile-optimized call-to-action */}
+              <div className="text-center mt-8 md:mt-12">
+                <div className="minecraft-block bg-red-600 p-3 md:p-4 inline-block hover:scale-105 md:hover:scale-110 transition-all duration-300 gpu-accelerated">
+                  <p className="font-press-start text-black text-xs sm:text-sm md:text-base">
                     ⏰ MARK YOUR CALENDARS! ⏰
                   </p>
                 </div>
@@ -636,19 +675,19 @@ export default function Shipathon() {
           </section>
 
           {/* Judging Criteria */}
-          <section className="py-20 px-4 bg-black bg-opacity-30">
+          <section className="py-12 md:py-20 px-4 bg-black bg-opacity-30">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
+              <h2 className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-press-start text-red-600 text-center mb-8 md:mb-16">
                 JUDGING CRITERIA
               </h2>
 
-              <div className="minecraft-block bg-black p-6 md:p-8 border-2 border-red-600">
-                <div className="space-y-6 text-red-600 font-jetbrains text-base md:text-lg">
-                  <div className="flex items-start gap-4">
-                    <span className="text-2xl md:text-3xl">💡</span>
+              <div className="minecraft-block bg-black p-4 md:p-6 lg:p-8 border-2 border-red-600 gpu-accelerated">
+                <div className="space-y-4 md:space-y-6 text-red-600 font-jetbrains text-sm md:text-base lg:text-lg">
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <span className="text-xl md:text-2xl lg:text-3xl flex-shrink-0">💡</span>
                     <div>
-                      <div className="font-press-start text-lg md:text-xl text-maximally-red">Originality & Creativity</div>
-                      <div className="text-red-600 text-sm md:text-base">Is it fresh and unexpected?</div>
+                      <div className="font-press-start text-sm md:text-lg lg:text-xl text-maximally-red">Originality & Creativity</div>
+                      <div className="text-red-600 text-xs md:text-sm lg:text-base">Is it fresh and unexpected?</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -685,17 +724,17 @@ export default function Shipathon() {
           </section>
 
           {/* Tools & Resources */}
-          <section className="py-20 px-4 bg-black">
+          <section className="py-12 md:py-20 px-4 bg-black">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-press-start text-red-600 text-center mb-16">
+              <h2 className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-press-start text-red-600 text-center mb-8 md:mb-16">
                 TOOLS & RESOURCES
               </h2>
 
-              <div className="grid lg:grid-cols-3 gap-8 mb-12">
-                <Card className="minecraft-block bg-red-600 hover:scale-105 transition-all duration-300">
-                  <CardContent className="p-6 md:p-8">
-                    <h3 className="text-xl md:text-2xl font-press-start text-white mb-4">NO-CODE TOOLS</h3>
-                    <div className="space-y-2 text-white font-jetbrains text-sm md:text-base">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12">
+                <Card className="minecraft-block bg-red-600 hover:scale-105 transition-all duration-300 gpu-accelerated">
+                  <CardContent className="p-4 md:p-6 lg:p-8">
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-press-start text-white mb-3 md:mb-4">NO-CODE TOOLS</h3>
+                    <div className="space-y-1 md:space-y-2 text-white font-jetbrains text-xs sm:text-sm md:text-base">
                       <div>⚡ Glide, Bubble, Tally</div>
                       <div>⚡ Zapier, n8n</div>
                       <div>⚡ Replit, Vercel</div>
