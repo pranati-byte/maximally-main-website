@@ -59,11 +59,30 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Maximally | The Global Hackathon League for Builders"
-        description="Maximally hosts execution-first hackathons and challenges for global builders to showcase real work and get discovered. Join engineers, founders, and creatives worldwide."
-        keywords="global hackathons, innovation challenges, builder community, startup competitions, coding competitions, entrepreneurship platform"
+        title="Maximally - India's Premier Teen Hackathon Platform"
+        description="Join India's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges. Global innovation league for ambitious teens."
+        keywords="teen hackathons, India hackathons, startup makeathons, AI shipathon, Gen Z builders, teen innovation, India tech"
         canonicalUrl="https://maximally.in"
-        structuredData={structuredData}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "Maximally AI Shipathon",
+          "description": "India's premier teen hackathon platform for AI projects and startup makeathons",
+          "organizer": {
+            "@type": "Organization",
+            "name": "Maximally",
+            "url": "https://maximally.in"
+          },
+          "location": {
+            "@type": "Place",
+            "name": "Online and India",
+            "address": "India"
+          },
+          "audience": {
+            "@type": "Audience",
+            "name": "Teen builders, students, Gen Z innovators"
+          }
+        }}
       />
 
       <div className="min-h-screen bg-white relative overflow-hidden">

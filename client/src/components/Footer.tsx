@@ -24,17 +24,17 @@ const Footer = () => {
         {/* Pixel divider */}
         <div className="w-full h-1 bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500 mb-12 pixel-border"></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Events Section */}
           <div className="pixel-card bg-gradient-to-br from-red-600/20 to-red-800/20 border-red-400">
             <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
               <span>🚀</span> EVENTS
             </h3>
-            <ul className="space-y-4 font-jetbrains text-black">
+            <ul className="space-y-3 font-jetbrains text-black text-sm">
               <li><Link to="/shipathon" className="hover:text-red-400 transition-colors block retro-underline">AI Shipathon</Link></li>
-              <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Past Hackathons</Link></li>
-              <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">Upcoming Challenges</Link></li>
-              <li><Link to="/makeathon" className="hover:text-red-400 transition-colors block retro-underline">Archived: Summer 2025</Link></li>
+              <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">All Events</Link></li>
+              <li><Link to="/makeathon" className="hover:text-red-400 transition-colors block retro-underline">Summer 2025 Makeathon</Link></li>
+              <li><Link to="/featured" className="hover:text-red-400 transition-colors block retro-underline">Featured Heroes</Link></li>
             </ul>
           </div>
 
@@ -43,10 +43,24 @@ const Footer = () => {
             <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
               <span>🤝</span> COMMUNITY
             </h3>
-            <ul className="space-y-4 font-jetbrains text-black">
-              <li><Link to="/community" className="hover:text-yellow-400 transition-colors block retro-underline">Join Our League</Link></li>
-              <li><Link to="/collaborate" className="hover:text-yellow-400 transition-colors block retro-underline">Collaborate with Us</Link></li>
-              <li><Link to="/partnership" className="hover:text-yellow-400 transition-colors block retro-underline">Partner Network</Link></li>
+            <ul className="space-y-3 font-jetbrains text-black text-sm">
+              <li><Link to="/community" className="hover:text-yellow-400 transition-colors block retro-underline">Join League</Link></li>
+              <li><Link to="/collaborate" className="hover:text-yellow-400 transition-colors block retro-underline">Collaborate</Link></li>
+              <li><Link to="/partnership" className="hover:text-yellow-400 transition-colors block retro-underline">Partners</Link></li>
+              <li><Link to="/allies" className="hover:text-yellow-400 transition-colors block retro-underline">Allies</Link></li>
+            </ul>
+          </div>
+
+          {/* Content */}
+          <div className="pixel-card bg-gradient-to-br from-green-600/20 to-green-800/20 border-green-400">
+            <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
+              <span>📖</span> CONTENT
+            </h3>
+            <ul className="space-y-3 font-jetbrains text-black text-sm">
+              <li><Link to="/blog" className="hover:text-green-400 transition-colors block retro-underline">Blog</Link></li>
+              <li><Link to="/blog/maximally-ai-shipathon-guide" className="hover:text-green-400 transition-colors block retro-underline">AI Shipathon Guide</Link></li>
+              <li><Link to="/blog/top-ai-hackathons-students-2025" className="hover:text-green-400 transition-colors block retro-underline">Top AI Hackathons</Link></li>
+              <li><Link to="/blog/no-code-ai-shipathon" className="hover:text-green-400 transition-colors block retro-underline">No-Code Guide</Link></li>
             </ul>
           </div>
 
@@ -55,11 +69,11 @@ const Footer = () => {
             <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
               <span>🏢</span> COMPANY
             </h3>
-            <ul className="space-y-4 font-jetbrains text-black">
-              <li><Link to="/blog" className="hover:text-blue-400 transition-colors block retro-underline">About Maximally</Link></li>
-              <li><Link to="/blog" className="hover:text-blue-400 transition-colors block retro-underline">Blog</Link></li>
+            <ul className="space-y-3 font-jetbrains text-black text-sm">
+              <li><Link to="/about" className="hover:text-blue-400 transition-colors block retro-underline">About</Link></li>
+              <li><Link to="/story" className="hover:text-blue-400 transition-colors block retro-underline">Our Story</Link></li>
               <li><Link to="/contact" className="hover:text-blue-400 transition-colors block retro-underline">Contact</Link></li>
-
+              <li><Link to="/bootcamps" className="hover:text-blue-400 transition-colors block retro-underline">Bootcamps</Link></li>
             </ul>
           </div>
 
@@ -68,11 +82,11 @@ const Footer = () => {
             <h3 className="font-press-start text-sm mb-6 text-black flex items-center gap-2">
               <span>⚖️</span> SUPPORT
             </h3>
-            <ul className="space-y-4 font-jetbrains text-black">
+            <ul className="space-y-3 font-jetbrains text-black text-sm">
               <li><Link to="/support" className="hover:text-purple-400 transition-colors block retro-underline">Help Center</Link></li>
-
-              <li><Link to="/privacy" className="hover:text-purple-400 transition-colors block retro-underline">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="hover:text-purple-400 transition-colors block retro-underline">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="hover:text-purple-400 transition-colors block retro-underline">Privacy</Link></li>
+              <li><Link to="/terms" className="hover:text-purple-400 transition-colors block retro-underline">Terms</Link></li>
+              <li><Link to="/thank-you" className="hover:text-purple-400 transition-colors block retro-underline">Thank You</Link></li>
             </ul>
           </div>
         </div>

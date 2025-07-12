@@ -14,11 +14,11 @@ interface SEOProps {
 const SEO = ({ title, description, image, article, keywords, canonicalUrl, structuredData }: SEOProps) => {
   const { pathname } = useLocation();
   const seo = {
-    title: title || "Maximally - Learn Real-World Skills for Indian Teenagers",
-    description: description || "Join India's premier skill development platform for teenagers. Learn AI, Digital Marketing, Public Speaking & more through hands-on bootcamps.",
-    image: image || "https://maximally.in/og-image.jpg",
+    title: title || "Maximally - India's Premier Teen Hackathon Platform",
+    description: description || "Join India's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges. Global innovation league for ambitious teens.",
+    image: image || "/og-thumbnail.png",
     url: canonicalUrl || `https://maximally.in${pathname}`,
-    keywords: keywords || "teen bootcamps, startup for teens, public speaking classes, Maximally, edtech India"
+    keywords: keywords || "teen hackathons, India hackathons, startup makeathons, AI shipathon, Gen Z builders, teen innovation, India tech"
   };
 
   return (
@@ -39,11 +39,34 @@ const SEO = ({ title, description, image, article, keywords, canonicalUrl, struc
       <meta name="twitter:image" content={seo.image} />
       <link rel="canonical" href={seo.url} />
       {/* Favicons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       
-      {/* Structured Data */}
+      {/* Default Structured Data for Organization */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Maximally",
+          "description": "India's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges.",
+          "url": "https://maximally.in",
+          "logo": "https://maximally.in/og-thumbnail.png",
+          "sameAs": [
+            "https://www.instagram.com/maximally.in/",
+            "https://twitter.com/maximally_in",
+            "https://www.linkedin.com/company/maximallyedu"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "url": "https://maximally.in/contact"
+          }
+        })}
+      </script>
+      
+      {/* Additional Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
