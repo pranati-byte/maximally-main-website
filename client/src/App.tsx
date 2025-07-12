@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Support from "./pages/Support";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import Story from "./pages/Story";
 
 import ThankYou from "./pages/ThankYou";
 import Featured from "./pages/Featured";
@@ -122,13 +123,13 @@ const App = () => {
             {/* Team route removed */}
 
             <Route path="/blog" element={<Blog />} />
-            
+
             {/* AI Shipathon Blog Posts */}
             <Route path="/blog/maximally-ai-shipathon-guide" element={<MaximallyAIShipathonGuide />} />
             <Route path="/blog/top-ai-hackathons-students-2025" element={<TopAIHackathonsStudents2025 />} />
             <Route path="/blog/no-code-ai-shipathon" element={<NoCodeAIShipathon />} />
             <Route path="/blog/first-ai-project-48-hours" element={<FirstAIProject48Hours />} />
-            
+
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
             <Route path="/blog/summer-bootcamps-2025" element={<SummerBootcamps2025 />} />
             <Route path="/blog/maximally-leangap-2025" element={<MaximallyLeangap2025 />} />
@@ -158,7 +159,8 @@ const App = () => {
             <Route path="/wall-of-progressive-schools" element={<WallOfProgressiveSchools />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/support" element={<Support />} />
+          <Route path="/story" element={<Story />} />
+          <Route path="/support" element={<Support />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
 
