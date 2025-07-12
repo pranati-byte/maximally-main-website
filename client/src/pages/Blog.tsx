@@ -6,6 +6,38 @@ import Footer from "@/components/Footer";
 
 const blogPosts = [
   {
+    title: "What is the Maximally AI Shipathon and Why You Should Join",
+    excerpt: "If you've ever watched a cool AI demo and thought, 'I wish I could build something like that,' the Maximally AI Shipathon is exactly where you should start. It's not just another hackathon — it's a launchpad for teen innovators...",
+    date: "July 12, 2025",
+    readTime: "8 min read",
+    category: "AI Hackathons",
+    link: "/blog/maximally-ai-shipathon-guide"
+  },
+  {
+    title: "Top AI Hackathons for Students in 2025 — And Why This One Is Different",
+    excerpt: "Let's be honest: most hackathons can feel overwhelming. You see posts about AI models, lines of code, massive prizes — and you think, 'That's not for me… yet.' But what if there was a hackathon made for beginners?",
+    date: "July 12, 2025",
+    readTime: "10 min read",
+    category: "AI Hackathons",
+    link: "/blog/top-ai-hackathons-students-2025"
+  },
+  {
+    title: "No Code? No Problem: How Anyone Can Join the AI Shipathon",
+    excerpt: "So you've heard about AI. Maybe even messed around with ChatGPT. But when someone says 'build an AI project,' you panic because you don't know how to code. Here's the good news: you don't need to.",
+    date: "July 12, 2025",
+    readTime: "7 min read",
+    category: "No-Code AI",
+    link: "/blog/no-code-ai-shipathon"
+  },
+  {
+    title: "How I Built My First AI Project in 48 Hours (And You Can Too)",
+    excerpt: "Let me take you back 48 hours. I was staring at a blank Google Doc, part of a fresh team I'd never met before, in the middle of my first ever AI hackathon for beginners. The challenge? Build an AI-powered solution to a real-world problem using no code AI tools.",
+    date: "July 12, 2025",
+    readTime: "9 min read",
+    category: "Success Stories",
+    link: "/blog/first-ai-project-48-hours"
+  },
+  {
     title: "Tech Mentoring Benefits: Why Developers Should Join Makeathons",
     excerpt: "Discover how senior developers can accelerate their careers by mentoring at makeathons. Learn the leadership skills, networking opportunities, and professional growth that comes from guiding young innovators...",
     date: "January 11, 2025",

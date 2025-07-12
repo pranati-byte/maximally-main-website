@@ -72,6 +72,12 @@ import BuildingTeamworkLeadership from './pages/BlogPost/BuildingTeamworkLeaders
 
 import Shipathon from './pages/Shipathon';
 
+// AI Shipathon Blog Posts
+import MaximallyAIShipathonGuide from './pages/blog/MaximallyAIShipathonGuide';
+import TopAIHackathonsStudents2025 from './pages/blog/TopAIHackathonsStudents2025';
+import NoCodeAIShipathon from './pages/blog/NoCodeAIShipathon';
+import FirstAIProject48Hours from './pages/blog/FirstAIProject48Hours';
+
 
 const queryClient = new QueryClient();
 
@@ -116,6 +122,13 @@ const App = () => {
             {/* Team route removed */}
 
             <Route path="/blog" element={<Blog />} />
+            
+            {/* AI Shipathon Blog Posts */}
+            <Route path="/blog/maximally-ai-shipathon-guide" element={<MaximallyAIShipathonGuide />} />
+            <Route path="/blog/top-ai-hackathons-students-2025" element={<TopAIHackathonsStudents2025 />} />
+            <Route path="/blog/no-code-ai-shipathon" element={<NoCodeAIShipathon />} />
+            <Route path="/blog/first-ai-project-48-hours" element={<FirstAIProject48Hours />} />
+            
             <Route path="/blog/summer-programs-2025" element={<SummerPrograms2025 />} />
             <Route path="/blog/summer-bootcamps-2025" element={<SummerBootcamps2025 />} />
             <Route path="/blog/maximally-leangap-2025" element={<MaximallyLeangap2025 />} />
