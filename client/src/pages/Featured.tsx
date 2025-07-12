@@ -26,74 +26,104 @@ const Featured = () => {
       name: "Thilakavathi Sankaran",
       role: "Data & Analytics Professional",
       company: "15+ Years Experience",
-      linkedin: "https://www.linkedin.com/in/thila-sankaran",
       quote: "Great ideas need more than vision — they need data, direction, and people who believe in both."
     },
     {
       name: "Priyanshu Sharma",
       role: "Founder & CEO",
       company: "ByteBrain",
-      linkedin: "https://www.linkedin.com/in/ipriyaaanshu",
       quote: "Maximally is doing what the world needs more of — empowering young minds to build boldly, think independently, and lead with purpose."
     },
     {
       name: "Anusha Ravi",
       role: "Product Leader",
       company: "Intuit",
-      linkedin: "https://www.linkedin.com/in/anusharavi1",
       quote: "Big fan of starting small and growing fast!"
     },
     {
       name: "Hatim Kagalwala",
       role: "Applied Scientist",
       company: "Amazon",
-      linkedin: "https://www.linkedin.com/in/hatim-kagalwala",
       quote: "Maximally empowers individuals and organizations to think boldly, solve creatively, and build solutions that truly make an impact."
+    },
+    {
+      name: "Rishul Chanana",
+      role: "Founder",
+      company: "Maximally",
+      quote: "Building the future by empowering builders to create meaningful impact through innovation."
     }
   ];
 
   const industryJudges = [
     {
+      name: "Rahul Chandra",
+      role: "Software Engineer",
+      company: "Deepmind"
+    },
+    {
       name: "Milankumar Rana",
       role: "Software Engineer Advisor",
-      company: "FedEx",
-      linkedin: "https://linkedin.com/in/milanrana"
+      company: "FedEx"
     },
     {
       name: "Krishna Ganeriwal",
       role: "Senior Software Engineer",
-      company: "Meta Platforms Inc",
-      linkedin: "https://www.linkedin.com/in/krishna-ganeriwal/"
+      company: "Meta Platforms Inc"
     },
     {
       name: "Harpreet Kaur Chawla",
-      role: "Tech Lead; Senior Software Engineer",
-      company: "Amazon",
-      linkedin: "https://www.linkedin.com/in/hkchawla/"
+      role: "Senior Software Engineer",
+      company: "Amazon"
     },
     {
       name: "Nancy Al Kalach",
       role: "Senior Salesforce Developer",
-      company: "Freelance",
-      linkedin: "https://www.linkedin.com/in/nancy-al-kalach"
+      company: "Technology Professional"
     },
     {
       name: "Prashanthi Matam",
       role: "Senior MLOPS Engineer",
-      company: "Enterprise",
-      linkedin: "https://www.linkedin.com/in/prashanthimatam/"
+      company: "Enterprise Technology"
     },
     {
       name: "Nidhi Mahajan",
-      role: "Director",
-      company: "Technology Leader",
-      linkedin: "https://linkedin.com/in/nmahajan012"
+      role: "Director of Business Strategy and Operations",
+      company: "Visa"
     },
     {
       name: "Rama Mallika Kadali",
       role: "Lead QA Engineer",
-      company: "Quality Engineering",
-      linkedin: "https://www.linkedin.com/in/ramamallika-kadali-07a83357/"
+      company: "Quality Engineering"
+    },
+    {
+      name: "Harshith Vaddiparthy",
+      role: "AI Product Engineer & Head of Growth",
+      company: "JustPaid.ai (YCW23)"
+    },
+    {
+      name: "Hassan Rehan",
+      role: "Senior IT Systems Engineer",
+      company: "General Motors"
+    },
+    {
+      name: "Kostyantyn Bondar",
+      role: "Founder & CEO",
+      company: "DarinX"
+    },
+    {
+      name: "Louis Demeslay",
+      role: "CTO",
+      company: "Zealy.io"
+    },
+    {
+      name: "Saket Ozarkar",
+      role: "Software Engineer",
+      company: "Replit"
+    },
+    {
+      name: "Nishanth Prakash",
+      role: "Senior Member of Technical Staff",
+      company: "Oracle Inc"
     }
   ];
 
@@ -147,17 +177,6 @@ const Featured = () => {
                 <div key={advisor.name} className="pixel-border p-6 bg-gradient-to-br from-yellow-50 to-orange-50 hover:transform hover:scale-105 transition-all">
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="font-press-start text-lg mb-2">{advisor.name}</h3>
-                    {advisor.linkedin && (
-                      <a
-                        href={advisor.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#0077B5] hover:text-[#005885] transition-colors"
-                        aria-label={`${advisor.name}'s LinkedIn profile`}
-                      >
-                        <ExternalLink className="h-5 w-5" />
-                      </a>
-                    )}
                   </div>
                   <p className="font-jetbrains text-maximally-black/70">{advisor.role}</p>
                   <p className="font-jetbrains text-maximally-black/90 font-bold mb-3">{advisor.company}</p>
@@ -182,17 +201,6 @@ const Featured = () => {
                 <div key={judge.name} className="pixel-border p-6 bg-gradient-to-br from-blue-50 to-purple-50 hover:transform hover:scale-105 transition-all">
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="font-press-start text-base mb-2">{judge.name}</h3>
-                    {judge.linkedin && (
-                      <a
-                        href={judge.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#0077B5] hover:text-[#005885] transition-colors"
-                        aria-label={`${judge.name}'s LinkedIn profile`}
-                      >
-                        <ExternalLink className="h-5 w-5" />
-                      </a>
-                    )}
                   </div>
                   <p className="font-jetbrains text-maximally-black/70 text-sm mb-1">{judge.role}</p>
                   <p className="font-jetbrains text-maximally-black/90 font-bold text-sm">{judge.company}</p>

@@ -93,12 +93,14 @@ The application follows a modern full-stack monolith approach with clear separat
 
 ## Changelog
 
-- July 12, 2025. **BLOG CONTENT EXPANSION**: Added comprehensive AI Shipathon blog content for SEO
+- July 12, 2025. **BLOG CONTENT EXPANSION & FEATURED UPDATES**: Added comprehensive AI Shipathon blog content for SEO
   - Created 4 new AI Shipathon focused blog posts with rich content and proper formatting
   - Added routes and navigation for all new blog posts
   - Integrated featured AI Shipathon section on homepage for better visibility
   - Enhanced SEO with proper meta tags, structured data, and keyword targeting
   - All posts focus on AI hackathons, no-code tools, and beginner-friendly content
+  - Updated /featured page with new industry professionals and mentors
+  - Removed LinkedIn references from all featured page entries
 - July 3, 2025. **MAJOR TRANSFORMATION**: Converted Maximally from bootcamp platform to global hackathon league
   - Completely rebuilt homepage with new "Welcome to the Maximally League" branding
   - Removed all India-specific references, now global-first approach
