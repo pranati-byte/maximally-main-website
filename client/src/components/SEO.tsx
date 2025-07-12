@@ -14,11 +14,11 @@ interface SEOProps {
 const SEO = ({ title, description, image, article, keywords, canonicalUrl, structuredData }: SEOProps) => {
   const { pathname } = useLocation();
   const seo = {
-    title: title || "Maximally - India's Premier Teen Hackathon Platform",
-    description: description || "Join India's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges. Global innovation league for ambitious teens.",
+    title: title || "Maximally - Global Teen Hackathon Platform",
+    description: description || "Join the world's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges. Global innovation league for ambitious teens.",
     image: image || "/og-thumbnail.png",
     url: canonicalUrl || `https://maximally.in${pathname}`,
-    keywords: keywords || "teen hackathons, India hackathons, startup makeathons, AI shipathon, Gen Z builders, teen innovation, India tech"
+    keywords: keywords || "teen hackathons, global hackathons, startup makeathons, AI shipathon, Gen Z builders, teen innovation, global tech"
   };
 
   return (
@@ -50,7 +50,7 @@ const SEO = ({ title, description, image, article, keywords, canonicalUrl, struc
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Maximally",
-          "description": "India's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges.",
+          "description": "The world's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges.",
           "url": "https://maximally.in",
           "logo": "https://maximally.in/og-thumbnail.png",
           "sameAs": [

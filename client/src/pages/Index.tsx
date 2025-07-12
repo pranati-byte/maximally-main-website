@@ -59,15 +59,15 @@ const Index = () => {
   return (
     <>
       <SEO
-        title="Maximally - India's Premier Teen Hackathon Platform"
-        description="Join India's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges. Global innovation league for ambitious teens."
-        keywords="teen hackathons, India hackathons, startup makeathons, AI shipathon, Gen Z builders, teen innovation, India tech"
+        title="Maximally - Global Teen Hackathon Platform"
+        description="Join the world's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges. Global innovation league for ambitious teens."
+        keywords="teen hackathons, global hackathons, startup makeathons, AI shipathon, Gen Z builders, teen innovation, global tech"
         canonicalUrl="https://maximally.in"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Event",
           "name": "Maximally AI Shipathon",
-          "description": "India's premier teen hackathon platform for AI projects and startup makeathons",
+          "description": "The world's premier teen hackathon platform for AI projects and startup makeathons",
           "organizer": {
             "@type": "Organization",
             "name": "Maximally",
@@ -75,8 +75,8 @@ const Index = () => {
           },
           "location": {
             "@type": "Place",
-            "name": "Online and India",
-            "address": "India"
+            "name": "Online and Global",
+            "address": "Worldwide"
           },
           "audience": {
             "@type": "Audience",
