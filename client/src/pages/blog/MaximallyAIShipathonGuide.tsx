@@ -23,7 +23,7 @@ export default function MaximallyAIShipathonGuide() {
       <h2 className="text-2xl font-bold text-maximally-red mt-8 mb-4">So, What Exactly Is the Maximally AI Shipathon?</h2>
 
       <p>
-        In simple words: It's a fast-paced, high-energy AI competition in India (but open globally) where teens build real AI projects using modern no code AI tools. It's about exploring ideas, collaborating with other smart students, building your very first AI project, and launching it to the world — all in just a few days.
+        In simple words: It's a fast-paced, high-energy global AI competition where teens build real AI projects using modern no code AI tools. It's about exploring ideas, collaborating with other smart students, building your very first AI project, and launching it to the world — all in just a few days.
       </p>
 
       <p>

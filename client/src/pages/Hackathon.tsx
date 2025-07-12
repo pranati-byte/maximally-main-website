@@ -58,7 +58,7 @@ const Hackathon = () => {
                 Maximally Hack: Future Founders Quest
               </h1>
               <p className="font-jetbrains text-xl text-white mb-4">
-                July 1–3, 2025 | Virtual | Open to Builders Across India
+                July 1–3, 2025 | Virtual | Open to Builders Worldwide
               </p>
               <p className="text-white/90">
                 $1,000 in Prizes | Beginner Friendly | AI & No-Code Welcome

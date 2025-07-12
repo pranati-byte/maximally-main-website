@@ -84,7 +84,7 @@ const WallOfProgressiveSchools = () => {
       <div className="container mx-auto px-4">
         <h1 className="font-press-start text-4xl mb-4 text-center">Progressive Schools</h1>
         <p className="text-center mb-12 font-jetbrains text-maximally-black/70">
-          Discover India's most innovative schools reshaping education
+          Discover the world's most innovative schools reshaping education
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

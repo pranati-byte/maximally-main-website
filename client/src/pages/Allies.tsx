@@ -82,7 +82,7 @@ const Allies = () => {
               Partner with Maximally. Power What You Build.
             </h1>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join the official Maximally Allies network — a curated alliance of India's boldest student-led organizations. 
+              Join the official Maximally Allies network — a curated alliance of the world's boldest student-led organizations. 
               From E-Cells and MUN clubs to content crews and youth NGOs, we back the ones who build.
             </p>
             <Button 
@@ -167,7 +167,7 @@ const Allies = () => {
               Let's Build. Together.
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We're building the default startup and storytelling engine for India's teens. 
+              We're building the default startup and storytelling engine for global teens. 
               Join us early and help shape the movement.
             </p>
             <Button 

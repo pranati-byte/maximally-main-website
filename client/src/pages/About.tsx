@@ -122,7 +122,7 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-press-start text-3xl mb-8">Our Vision</h2>
           <p className="font-jetbrains text-xl max-w-3xl mx-auto mb-12">
-            We're building India's most powerful network of young{" "}
+            We're building the world's most powerful network of young{" "}
             <span className="bg-[#39FF14]/20 px-2">innovators</span>,{" "}
             <span className="bg-[#FF5F5F]/20 px-2">entrepreneurs</span>, and{" "}
             <span className="bg-[#B400FF]/20 px-2">changemakers</span>. Our mission

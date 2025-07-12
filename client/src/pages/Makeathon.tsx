@@ -61,7 +61,7 @@ const Makeathon = () => {
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
             <p className="font-jetbrains text-xl sm:text-2xl md:text-3xl mb-4 leading-relaxed">
-              <span className="bg-gradient-to-r from-[#39FF14] to-[#00ff99] bg-clip-text text-transparent font-bold">Maximally Startup Makeathon:</span> India's #1 startup simulation for teens — 7 days of idea validation, MVP building, and public pitching with real mentors.
+              <span className="bg-gradient-to-r from-[#39FF14] to-[#00ff99] bg-clip-text text-transparent font-bold">Maximally Startup Makeathon:</span> The world's premier startup simulation for teens — 7 days of idea validation, MVP building, and public pitching with real mentors.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg sm:text-xl">
@@ -367,7 +367,7 @@ const Makeathon = () => {
             <AccordionItem value="faq3">
               <AccordionTrigger className="font-press-start">Was this only for kids from big cities?</AccordionTrigger>
               <AccordionContent className="font-jetbrains">
-                Not at all. We had students from small towns across India. All that mattered was ambition.
+                Not at all. We had students from small towns around the world. All that mattered was ambition.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="faq9">
@@ -428,7 +428,7 @@ const Makeathon = () => {
         <div className="container mx-auto text-center relative">
           <h2 className="font-press-start text-3xl mb-8 text-white">🏫 Our Partner Schools</h2>
           <p className="font-jetbrains text-xl mb-8 text-white/80">
-            Progressive schools across India that partnered with Maximally
+            Progressive schools worldwide that partnered with Maximally
             to bring cutting-edge education to their students.
           </p>
           <Link

@@ -80,7 +80,7 @@ export default function NoCodeAIShipathon() {
       <div className="space-y-4">
         <div className="flex items-start gap-4">
           <div className="bg-maximally-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
-          <p>Team up with 2–4 teens from across the country</p>
+          <p>Team up with 2–4 teens from around the world</p>
         </div>
         <div className="flex items-start gap-4">
           <div className="bg-maximally-blue text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>

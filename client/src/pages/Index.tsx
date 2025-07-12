@@ -317,7 +317,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
           <div className="container mx-auto relative">
             <h2 className="font-press-start text-3xl md:text-4xl text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-[#39FF14] via-[#00ff99] to-[#00ffcc]">
-              Born in India. Built for the World.
+              Built Global. Made for Builders.
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -361,7 +361,7 @@ const Index = () => {
             <div className="text-center">
               <p className="font-jetbrains text-xl text-white/90 max-w-3xl mx-auto mb-8">
                 At Maximally, we believe innovation has no borders — and no
-                traditional limits. Whether you're from a metro or a small town,
+                traditional limits. Whether you're from a major city or a small town,
                 if you're building bold things, you belong here.
               </p>
             </div>

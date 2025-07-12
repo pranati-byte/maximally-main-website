@@ -36,7 +36,7 @@ export default function TopAIHackathonsStudents2025() {
         </div>
 
         <div className="border-l-4 border-maximally-green pl-4">
-          <h3 className="font-bold text-lg">AI for Good Hackathon (India + Global)</h3>
+          <h3 className="font-bold text-lg">AI for Good Hackathon (Global)</h3>
           <ul className="list-disc list-inside mt-2 space-y-1">
             <li>Great for socially driven problem solvers.</li>
             <li>Encourages use of AI in sustainability, education, and healthcare.</li>
