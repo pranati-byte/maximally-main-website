@@ -47,6 +47,12 @@ const Featured = () => {
       quote: "Maximally empowers individuals and organizations to think boldly, solve creatively, and build solutions that truly make an impact."
     },
     {
+      name: "Milankumar Rana",
+      role: "Software Engineer Advisor",
+      company: "FedEx",
+      quote: "Innovation happens when young minds are given the right platform and mentorship to transform ideas into reality."
+    },
+    {
       name: "Rishul Chanana",
       role: "Founder",
       company: "Maximally",
@@ -59,11 +65,6 @@ const Featured = () => {
       name: "Rahul Chandra",
       role: "Software Engineer",
       company: "Deepmind"
-    },
-    {
-      name: "Milankumar Rana",
-      role: "Software Engineer Advisor",
-      company: "FedEx"
     },
     {
       name: "Krishna Ganeriwal",
