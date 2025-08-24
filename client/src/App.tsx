@@ -80,6 +80,12 @@ import NoCodeAIShipathon from './pages/blog/NoCodeAIShipathon';
 import FirstAIProject48Hours from './pages/blog/FirstAIProject48Hours';
 import CodeHypothesis from './pages/CodeHypothesis';
 
+// Code Hypothesis Blog Posts
+import WhyHackathonsGotBoring from './pages/blog/WhyHackathonsGotBoring';
+import ScienceWildIdeas from './pages/blog/ScienceWildIdeas';
+import NoPitchDecksGatekeepingChaos from './pages/blog/NoPitchDecksGatekeepingChaos';
+import SurviveCodeHypothesis24Hours from './pages/blog/SurviveCodeHypothesis24Hours';
+
 
 const queryClient = new QueryClient();
 
@@ -192,6 +198,12 @@ const App = () => {
           <Route path="/blog/teamwork-leadership-maximally" element={<BuildingTeamworkLeadership />} />
           <Route path="/shipathon" element={<Shipathon />} />
           <Route path="/codehypothesis" element={<CodeHypothesis />} />
+          
+          {/* Code Hypothesis Blog Posts */}
+          <Route path="/blog/why-hackathons-got-boring-code-hypothesis" element={<WhyHackathonsGotBoring />} />
+          <Route path="/blog/science-wild-ideas-code-hypothesis" element={<ScienceWildIdeas />} />
+          <Route path="/blog/no-pitch-decks-gatekeeping-chaos" element={<NoPitchDecksGatekeepingChaos />} />
+          <Route path="/blog/survive-code-hypothesis-24-hours" element={<SurviveCodeHypothesis24Hours />} />
 
           {/* Catch all route for 404 */}
           <Route path="*" element={<NotFound />} />

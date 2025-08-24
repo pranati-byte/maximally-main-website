@@ -6,6 +6,38 @@ import Footer from "@/components/Footer";
 
 const blogPosts = [
   {
+    title: "Why Hackathons Got Boring (and How Code Hypothesis Breaks the Script)",
+    excerpt: "Code Hypothesis is a 24-hour online hackathon where you don't pitch ideas—you test them. No theatrics. No gatekeeping. Just one question: Can you prove a weird theory in a day?",
+    date: "January 24, 2025",
+    readTime: "8 min read",
+    category: "Code Hypothesis",
+    link: "/blog/why-hackathons-got-boring-code-hypothesis"
+  },
+  {
+    title: "The Science of Wild Ideas: Why We're Calling It Code Hypothesis",
+    excerpt: "Pitches are about selling. A hypothesis is about testing. Code Hypothesis is built on science + chaos - testing theories with code in 24 hours.",
+    date: "January 24, 2025",
+    readTime: "6 min read",
+    category: "Code Hypothesis",
+    link: "/blog/science-wild-ideas-code-hypothesis"
+  },
+  {
+    title: "No Pitch Decks. No Gatekeeping. Just Chaos.",
+    excerpt: "Code Hypothesis isn't startup theater or hand-holding. 24 hours of shipping weird experiments judged on boldness + execution, not polish. Chaos is honest.",
+    date: "January 24, 2025",
+    readTime: "5 min read",
+    category: "Code Hypothesis",
+    link: "/blog/no-pitch-decks-gatekeeping-chaos"
+  },
+  {
+    title: "24 Hours, Zero Excuses: How to Survive Code Hypothesis",
+    excerpt: "The punk's field manual for 24-hour hackathon experimentation. From pre-hack checklist to submission - how to survive Code Hypothesis and ship something brilliant.",
+    date: "January 24, 2025",
+    readTime: "12 min read",
+    category: "Code Hypothesis",
+    link: "/blog/survive-code-hypothesis-24-hours"
+  },
+  {
     title: "What is the Maximally AI Shipathon and Why You Should Join",
     excerpt: "If you've ever watched a cool AI demo and thought, 'I wish I could build something like that,' the Maximally AI Shipathon is exactly where you should start. It's not just another hackathon — it's a launchpad for teen innovators...",
     date: "July 12, 2025",

@@ -87,6 +87,11 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://maximally.in/codehypothesis</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://maximally.in/privacy</loc>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
@@ -321,6 +326,28 @@
   <url>
     <loc>https://maximally.in/blog/teamwork-leadership-maximally</loc>
     <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+  <!-- Code Hypothesis Blog Posts -->
+  <url>
+    <loc>https://maximally.in/blog/why-hackathons-got-boring-code-hypothesis</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/science-wild-ideas-code-hypothesis</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/no-pitch-decks-gatekeeping-chaos</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://maximally.in/blog/survive-code-hypothesis-24-hours</loc>
+    <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
