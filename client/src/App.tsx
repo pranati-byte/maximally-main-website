@@ -78,6 +78,7 @@ import MaximallyAIShipathonGuide from './pages/blog/MaximallyAIShipathonGuide';
 import TopAIHackathonsStudents2025 from './pages/blog/TopAIHackathonsStudents2025';
 import NoCodeAIShipathon from './pages/blog/NoCodeAIShipathon';
 import FirstAIProject48Hours from './pages/blog/FirstAIProject48Hours';
+import CodeHypothesis from './pages/CodeHypothesis';
 
 
 const queryClient = new QueryClient();
@@ -190,6 +191,7 @@ const App = () => {
           <Route path="/blog/makeathon-faq-maximally" element={<MakeathonFAQ />} />
           <Route path="/blog/teamwork-leadership-maximally" element={<BuildingTeamworkLeadership />} />
           <Route path="/shipathon" element={<Shipathon />} />
+          <Route path="/codehypothesis" element={<CodeHypothesis />} />
 
           {/* Catch all route for 404 */}
           <Route path="*" element={<NotFound />} />
