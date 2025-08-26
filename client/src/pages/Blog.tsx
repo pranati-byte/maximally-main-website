@@ -6,6 +6,38 @@ import Footer from "@/components/Footer";
 
 const blogPosts = [
   {
+    title: "Protocol 404: When the System is Broken, Build Anyway",
+    excerpt: "Most hackathons sell you order, tracks, mentors, polished pitches. Protocol 404? It sells you the exact opposite. This isn't about fixing the system—it's about building in the wreckage.",
+    date: "January 16, 2025",
+    readTime: "4 min read",
+    category: "Protocol 404",
+    link: "/blog/protocol-404-when-system-broken"
+  },
+  {
+    title: "Protocol 404: Why Hackathons Are the Future of Problem-Solving",
+    excerpt: "What if an error wasn't just a bug, but a way of thinking? Discover how Protocol 404 represents a mindset where failure isn't the end—it's the start of innovation.",
+    date: "January 16, 2025",
+    readTime: "5 min read",
+    category: "Protocol 404",
+    link: "/blog/protocol-404-future-problem-solving"
+  },
+  {
+    title: "Protocol 404: The Hacker's Shortcut to Chaos",
+    excerpt: "The internet was built on protocols. But what happens when someone breaks those rules? Learn about Protocol 404 and how hackers exploit system vulnerabilities.",
+    date: "January 16, 2025",
+    readTime: "6 min read",
+    category: "Protocol 404",
+    link: "/blog/protocol-404-hacker-shortcut"
+  },
+  {
+    title: "Protocol 404: The Future of Hackathons Nobody Saw Coming",
+    excerpt: "Protocol 404 isn't just a concept; it's a movement redefining how hackathons are run, how teams collaborate, and how innovation gets discovered.",
+    date: "January 16, 2025",
+    readTime: "5 min read",
+    category: "Protocol 404",
+    link: "/blog/protocol-404-future-of-hackathons"
+  },
+  {
     title: "Why Hackathons Got Boring (and How Code Hypothesis Breaks the Script)",
     excerpt: "Code Hypothesis is a 24-hour online hackathon where you don't pitch ideas—you test them. No theatrics. No gatekeeping. Just one question: Can you prove a weird theory in a day?",
     date: "January 24, 2025",
