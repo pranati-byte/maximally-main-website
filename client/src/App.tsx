@@ -88,6 +88,12 @@ import ScienceWildIdeas from './pages/blog/ScienceWildIdeas';
 import NoPitchDecksGatekeepingChaos from './pages/blog/NoPitchDecksGatekeepingChaos';
 import SurviveCodeHypothesis24Hours from './pages/blog/SurviveCodeHypothesis24Hours';
 
+// Protocol 404 Blog Posts
+import Protocol404WhenSystemBroken from './pages/blog/Protocol404WhenSystemBroken';
+import Protocol404FutureOfProblemSolving from './pages/blog/Protocol404FutureOfProblemSolving';
+import Protocol404HackerShortcut from './pages/blog/Protocol404HackerShortcut';
+import Protocol404FutureOfHackathons from './pages/blog/Protocol404FutureOfHackathons';
+
 
 const queryClient = new QueryClient();
 
@@ -208,6 +214,12 @@ const App = () => {
           <Route path="/blog/science-wild-ideas-code-hypothesis" element={<ScienceWildIdeas />} />
           <Route path="/blog/no-pitch-decks-gatekeeping-chaos" element={<NoPitchDecksGatekeepingChaos />} />
           <Route path="/blog/survive-code-hypothesis-24-hours" element={<SurviveCodeHypothesis24Hours />} />
+
+          {/* Protocol 404 Blog Posts */}
+          <Route path="/blog/protocol-404-when-system-broken" element={<Protocol404WhenSystemBroken />} />
+          <Route path="/blog/protocol-404-future-problem-solving" element={<Protocol404FutureOfProblemSolving />} />
+          <Route path="/blog/protocol-404-hacker-shortcut" element={<Protocol404HackerShortcut />} />
+          <Route path="/blog/protocol-404-future-of-hackathons" element={<Protocol404FutureOfHackathons />} />
 
           {/* Catch all route for 404 */}
           <Route path="*" element={<NotFound />} />
