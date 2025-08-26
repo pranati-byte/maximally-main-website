@@ -79,6 +79,7 @@ import TopAIHackathonsStudents2025 from './pages/blog/TopAIHackathonsStudents202
 import NoCodeAIShipathon from './pages/blog/NoCodeAIShipathon';
 import FirstAIProject48Hours from './pages/blog/FirstAIProject48Hours';
 import CodeHypothesis from './pages/CodeHypothesis';
+import Protocol404 from './pages/Protocol404';
 
 // Code Hypothesis Blog Posts
 import WhyHackathonsGotBoring from './pages/blog/WhyHackathonsGotBoring';
@@ -198,6 +199,7 @@ const App = () => {
           <Route path="/blog/teamwork-leadership-maximally" element={<BuildingTeamworkLeadership />} />
           <Route path="/shipathon" element={<Shipathon />} />
           <Route path="/codehypothesis" element={<CodeHypothesis />} />
+          <Route path="/protocol-404" element={<Protocol404 />} />
           
           {/* Code Hypothesis Blog Posts */}
           <Route path="/blog/why-hackathons-got-boring-code-hypothesis" element={<WhyHackathonsGotBoring />} />
