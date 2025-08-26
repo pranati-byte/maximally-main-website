@@ -158,7 +158,7 @@ const CodeHypothesis = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-red-500 to-yellow-400 rounded blur opacity-40 animate-pulse"></div>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full opacity-60"></div>
               <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-green-400 rounded-full opacity-70"></div>
-              <span className="relative text-red-500 font-bold text-sm md:text-base tracking-wide font-mono glitch-text">
+              <span className="relative text-white font-bold text-sm md:text-base tracking-wide font-mono glitch-text">
                 GRAND INDIAN HACKATHON SEASON
               </span>
               {/* Distressed corners */}

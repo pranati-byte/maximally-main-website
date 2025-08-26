@@ -93,7 +93,7 @@ const Footer = () => {
 
         {/* Grand Indian Hackathon Season 2025 */}
         <div className="mt-16 text-center">
-          <h3 className="font-press-start text-lg mb-6 text-black">
+          <h3 className="font-press-start text-lg mb-6 text-white">
             GRAND INDIAN HACKATHON SEASON 2025
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
