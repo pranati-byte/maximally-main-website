@@ -6,6 +6,38 @@ import Footer from "@/components/Footer";
 
 const blogPosts = [
   {
+    title: "Project CodeGen: Why Play Might Be the Future of Building",
+    excerpt: "When was the last time you played with technology—not for work, not for profit, but just because it was fun? Project CodeGen is a 48-hour hackathon that celebrates joy over disruption.",
+    date: "January 26, 2025",
+    readTime: "6 min read",
+    category: "Project CodeGen",
+    link: "/blog/project-codegen-play-future"
+  },
+  {
+    title: "Project CodeGen: Redefining Code Collaboration",
+    excerpt: "Project CodeGen reshapes coding collaboration with AI-driven productivity, fluid teamwork, and gamified elements. More than a tool - it's a movement for better building.",
+    date: "January 26, 2025",
+    readTime: "7 min read",
+    category: "Project CodeGen",
+    link: "/blog/project-codegen-redefining-collaboration"
+  },
+  {
+    title: "From Idea to Execution: How Project Codegen Powers Real Hackathon Projects",
+    excerpt: "Great hackathon ideas stumble at execution. Project Codegen helps you skip setup chaos and jump straight into building winning demos. Speed up your hackathon success.",
+    date: "January 26, 2025",
+    readTime: "5 min read",
+    category: "Project CodeGen",
+    link: "/blog/project-codegen-idea-to-execution"
+  },
+  {
+    title: "Beyond Hackathons: The Future of Project Codegen in Everyday Development",
+    excerpt: "Project Codegen started for hackathons but evolved for everyday development. Speed up MVPs, prototype faster, and amplify developer productivity in real-world projects.",
+    date: "January 26, 2025",
+    readTime: "8 min read",
+    category: "Project CodeGen",
+    link: "/blog/project-codegen-beyond-hackathons"
+  },
+  {
     title: "Protocol 404: When the System is Broken, Build Anyway",
     excerpt: "Most hackathons sell you order, tracks, mentors, polished pitches. Protocol 404? It sells you the exact opposite. This isn't about fixing the system—it's about building in the wreckage.",
     date: "January 16, 2025",

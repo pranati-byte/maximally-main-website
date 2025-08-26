@@ -95,6 +95,12 @@ import Protocol404FutureOfProblemSolving from './pages/blog/Protocol404FutureOfP
 import Protocol404HackerShortcut from './pages/blog/Protocol404HackerShortcut';
 import Protocol404FutureOfHackathons from './pages/blog/Protocol404FutureOfHackathons';
 
+// Project CodeGen Blog Posts
+import ProjectCodeGenPlayFuture from './pages/blog/ProjectCodeGenPlayFuture';
+import ProjectCodeGenRedefiningCollaboration from './pages/blog/ProjectCodeGenRedefiningCollaboration';
+import ProjectCodeGenIdeaToExecution from './pages/blog/ProjectCodeGenIdeaToExecution';
+import ProjectCodeGenBeyondHackathons from './pages/blog/ProjectCodeGenBeyondHackathons';
+
 
 const queryClient = new QueryClient();
 
@@ -222,6 +228,12 @@ const App = () => {
           <Route path="/blog/protocol-404-future-problem-solving" element={<Protocol404FutureOfProblemSolving />} />
           <Route path="/blog/protocol-404-hacker-shortcut" element={<Protocol404HackerShortcut />} />
           <Route path="/blog/protocol-404-future-of-hackathons" element={<Protocol404FutureOfHackathons />} />
+
+          {/* Project CodeGen Blog Posts */}
+          <Route path="/blog/project-codegen-play-future" element={<ProjectCodeGenPlayFuture />} />
+          <Route path="/blog/project-codegen-redefining-collaboration" element={<ProjectCodeGenRedefiningCollaboration />} />
+          <Route path="/blog/project-codegen-idea-to-execution" element={<ProjectCodeGenIdeaToExecution />} />
+          <Route path="/blog/project-codegen-beyond-hackathons" element={<ProjectCodeGenBeyondHackathons />} />
 
           {/* Catch all route for 404 */}
           <Route path="*" element={<NotFound />} />
