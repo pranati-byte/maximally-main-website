@@ -93,39 +93,39 @@ const Footer = () => {
 
         {/* Grand Indian Hackathon Season 2025 */}
         <div className="mt-16 text-center">
-          <h3 className="font-press-start text-lg mb-6 text-white">
+          <h3 className="font-press-start text-lg mb-6 text-black">
             GRAND INDIAN HACKATHON SEASON 2025
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
             <Link to="/hacktober" className="group">
               <div className="pixel-card bg-gradient-to-br from-orange-600/20 to-red-800/20 border-orange-400 hover:scale-105 transition-transform p-4">
                 <div className="text-2xl mb-2">🍂</div>
-                <div className="font-press-start text-xs text-white group-hover:text-orange-400 transition-colors">HACKTOBER</div>
-                <div className="font-jetbrains text-xs text-gray-400 mt-1">Oct 1-31</div>
+                <div className="font-press-start text-xs text-black group-hover:text-orange-400 transition-colors">HACKTOBER</div>
+                <div className="font-jetbrains text-xs text-black mt-1">Oct 1-31</div>
               </div>
             </Link>
             
             <Link to="/project-codegen" className="group">
               <div className="pixel-card bg-gradient-to-br from-blue-600/20 to-cyan-800/20 border-blue-400 hover:scale-105 transition-transform p-4">
                 <div className="text-2xl mb-2">📝</div>
-                <div className="font-press-start text-xs text-white group-hover:text-blue-400 transition-colors">CODEGEN</div>
-                <div className="font-jetbrains text-xs text-gray-400 mt-1">Code + Create</div>
+                <div className="font-press-start text-xs text-black group-hover:text-blue-400 transition-colors">CODEGEN</div>
+                <div className="font-jetbrains text-xs text-black mt-1">Code + Create</div>
               </div>
             </Link>
             
             <Link to="/protocol-404" className="group">
               <div className="pixel-card bg-gradient-to-br from-red-600/20 to-yellow-800/20 border-red-400 hover:scale-105 transition-transform p-4">
                 <div className="text-2xl mb-2">⚡</div>
-                <div className="font-press-start text-xs text-white group-hover:text-red-400 transition-colors">PROTOCOL 404</div>
-                <div className="font-jetbrains text-xs text-gray-400 mt-1">Error = Innovation</div>
+                <div className="font-press-start text-xs text-black group-hover:text-red-400 transition-colors">PROTOCOL 404</div>
+                <div className="font-jetbrains text-xs text-black mt-1">Error = Innovation</div>
               </div>
             </Link>
             
             <Link to="/codehypothesis" className="group">
               <div className="pixel-card bg-gradient-to-br from-purple-600/20 to-pink-800/20 border-purple-400 hover:scale-105 transition-transform p-4">
                 <div className="text-2xl mb-2">🧪</div>
-                <div className="font-press-start text-xs text-white group-hover:text-purple-400 transition-colors">CODE HYPOTHESIS</div>
-                <div className="font-jetbrains text-xs text-gray-400 mt-1">Test Ideas</div>
+                <div className="font-press-start text-xs text-black group-hover:text-purple-400 transition-colors">CODE HYPOTHESIS</div>
+                <div className="font-jetbrains text-xs text-black mt-1">Test Ideas</div>
               </div>
             </Link>
           </div>
