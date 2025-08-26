@@ -147,7 +147,7 @@ const Protocol404 = () => {
                 variant="outline" 
                 className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-bold px-8 py-3 text-lg"
               >
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href="https://discord.gg/WmSXVzDYuq" target="_blank" rel="noopener noreferrer">
                   Join Discord
                 </a>
               </Button>
