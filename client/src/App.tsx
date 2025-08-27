@@ -104,6 +104,9 @@ import ProjectCodeGenBeyondHackathons from './pages/blog/ProjectCodeGenBeyondHac
 // Partnership Blog Posts
 import MastersUnionPartnership from './pages/blog/MastersUnionPartnership';
 
+// Event Pages
+import GrandTechAssembly from './pages/GrandTechAssembly';
+
 
 const queryClient = new QueryClient();
 
@@ -222,6 +225,7 @@ const App = () => {
           <Route path="/protocol-404" element={<Protocol404 />} />
           <Route path="/project-codegen" element={<ProjectCodeGen />} />
           <Route path="/hacktober" element={<Hacktober />} />
+          <Route path="/grand-tech-assembly" element={<GrandTechAssembly />} />
           
           {/* Code Hypothesis Blog Posts */}
           <Route path="/blog/why-hackathons-got-boring-code-hypothesis" element={<WhyHackathonsGotBoring />} />
