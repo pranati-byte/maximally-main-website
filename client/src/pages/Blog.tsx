@@ -6,6 +6,38 @@ import Footer from "@/components/Footer";
 
 const blogPosts = [
   {
+    title: "What is the Maximally AI Shipathon and Why You Should Join",
+    excerpt: "If you've ever watched a cool AI demo and thought, 'I wish I could build something like that,' the Maximally AI Shipathon is exactly where you should start. It's not just another hackathon — it's a launchpad for teen innovators...",
+    date: "July 12, 2025",
+    readTime: "8 min read",
+    category: "AI Hackathons",
+    link: "/blog/maximally-ai-shipathon-guide"
+  },
+  {
+    title: "Top AI Hackathons for Students in 2025 — And Why This One Is Different",
+    excerpt: "Let's be honest: most hackathons can feel overwhelming. You see posts about AI models, lines of code, massive prizes — and you think, 'That's not for me… yet.' But what if there was a hackathon made for beginners?",
+    date: "July 12, 2025",
+    readTime: "10 min read",
+    category: "AI Hackathons",
+    link: "/blog/top-ai-hackathons-students-2025"
+  },
+  {
+    title: "No Code? No Problem: How Anyone Can Join the AI Shipathon",
+    excerpt: "So you've heard about AI. Maybe even messed around with ChatGPT. But when someone says 'build an AI project,' you panic because you don't know how to code. Here's the good news: you don't need to.",
+    date: "July 12, 2025",
+    readTime: "7 min read",
+    category: "No-Code AI",
+    link: "/blog/no-code-ai-shipathon"
+  },
+  {
+    title: "How I Built My First AI Project in 48 Hours (And You Can Too)",
+    excerpt: "Let me take you back 48 hours. I was staring at a blank Google Doc, part of a fresh team I'd never met before, in the middle of my first ever AI hackathon for beginners. The challenge? Build an AI-powered solution to a real-world problem using no code AI tools.",
+    date: "July 12, 2025",
+    readTime: "9 min read",
+    category: "Success Stories",
+    link: "/blog/first-ai-project-48-hours"
+  },
+  {
     title: "Masters' Union backs Maximally Startup Make-a-thon",
     excerpt: "We're excited to share that Masters' Union, one of India's most forward-thinking institutions for business and entrepreneurship, is officially backing the upcoming Maximally Startup Make-a-thon (July 1–7).",
     date: "June 10, 2025",
@@ -46,38 +78,6 @@ const blogPosts = [
     link: "/blog/project-codegen-beyond-hackathons"
   },
   {
-    title: "Protocol 404: When the System is Broken, Build Anyway",
-    excerpt: "Most hackathons sell you order, tracks, mentors, polished pitches. Protocol 404? It sells you the exact opposite. This isn't about fixing the system—it's about building in the wreckage.",
-    date: "January 16, 2025",
-    readTime: "4 min read",
-    category: "Protocol 404",
-    link: "/blog/protocol-404-when-system-broken"
-  },
-  {
-    title: "Protocol 404: Why Hackathons Are the Future of Problem-Solving",
-    excerpt: "What if an error wasn't just a bug, but a way of thinking? Discover how Protocol 404 represents a mindset where failure isn't the end—it's the start of innovation.",
-    date: "January 16, 2025",
-    readTime: "5 min read",
-    category: "Protocol 404",
-    link: "/blog/protocol-404-future-problem-solving"
-  },
-  {
-    title: "Protocol 404: The Hacker's Shortcut to Chaos",
-    excerpt: "The internet was built on protocols. But what happens when someone breaks those rules? Learn about Protocol 404 and how hackers exploit system vulnerabilities.",
-    date: "January 16, 2025",
-    readTime: "6 min read",
-    category: "Protocol 404",
-    link: "/blog/protocol-404-hacker-shortcut"
-  },
-  {
-    title: "Protocol 404: The Future of Hackathons Nobody Saw Coming",
-    excerpt: "Protocol 404 isn't just a concept; it's a movement redefining how hackathons are run, how teams collaborate, and how innovation gets discovered.",
-    date: "January 16, 2025",
-    readTime: "5 min read",
-    category: "Protocol 404",
-    link: "/blog/protocol-404-future-of-hackathons"
-  },
-  {
     title: "Why Hackathons Got Boring (and How Code Hypothesis Breaks the Script)",
     excerpt: "Code Hypothesis is a 24-hour online hackathon where you don't pitch ideas—you test them. No theatrics. No gatekeeping. Just one question: Can you prove a weird theory in a day?",
     date: "January 24, 2025",
@@ -110,36 +110,36 @@ const blogPosts = [
     link: "/blog/survive-code-hypothesis-24-hours"
   },
   {
-    title: "What is the Maximally AI Shipathon and Why You Should Join",
-    excerpt: "If you've ever watched a cool AI demo and thought, 'I wish I could build something like that,' the Maximally AI Shipathon is exactly where you should start. It's not just another hackathon — it's a launchpad for teen innovators...",
-    date: "July 12, 2025",
-    readTime: "8 min read",
-    category: "AI Hackathons",
-    link: "/blog/maximally-ai-shipathon-guide"
+    title: "Protocol 404: When the System is Broken, Build Anyway",
+    excerpt: "Most hackathons sell you order, tracks, mentors, polished pitches. Protocol 404? It sells you the exact opposite. This isn't about fixing the system—it's about building in the wreckage.",
+    date: "January 16, 2025",
+    readTime: "4 min read",
+    category: "Protocol 404",
+    link: "/blog/protocol-404-when-system-broken"
   },
   {
-    title: "Top AI Hackathons for Students in 2025 — And Why This One Is Different",
-    excerpt: "Let's be honest: most hackathons can feel overwhelming. You see posts about AI models, lines of code, massive prizes — and you think, 'That's not for me… yet.' But what if there was a hackathon made for beginners?",
-    date: "July 12, 2025",
-    readTime: "10 min read",
-    category: "AI Hackathons",
-    link: "/blog/top-ai-hackathons-students-2025"
+    title: "Protocol 404: Why Hackathons Are the Future of Problem-Solving",
+    excerpt: "What if an error wasn't just a bug, but a way of thinking? Discover how Protocol 404 represents a mindset where failure isn't the end—it's the start of innovation.",
+    date: "January 16, 2025",
+    readTime: "5 min read",
+    category: "Protocol 404",
+    link: "/blog/protocol-404-future-problem-solving"
   },
   {
-    title: "No Code? No Problem: How Anyone Can Join the AI Shipathon",
-    excerpt: "So you've heard about AI. Maybe even messed around with ChatGPT. But when someone says 'build an AI project,' you panic because you don't know how to code. Here's the good news: you don't need to.",
-    date: "July 12, 2025",
-    readTime: "7 min read",
-    category: "No-Code AI",
-    link: "/blog/no-code-ai-shipathon"
+    title: "Protocol 404: The Hacker's Shortcut to Chaos",
+    excerpt: "The internet was built on protocols. But what happens when someone breaks those rules? Learn about Protocol 404 and how hackers exploit system vulnerabilities.",
+    date: "January 16, 2025",
+    readTime: "6 min read",
+    category: "Protocol 404",
+    link: "/blog/protocol-404-hacker-shortcut"
   },
   {
-    title: "How I Built My First AI Project in 48 Hours (And You Can Too)",
-    excerpt: "Let me take you back 48 hours. I was staring at a blank Google Doc, part of a fresh team I'd never met before, in the middle of my first ever AI hackathon for beginners. The challenge? Build an AI-powered solution to a real-world problem using no code AI tools.",
-    date: "July 12, 2025",
-    readTime: "9 min read",
-    category: "Success Stories",
-    link: "/blog/first-ai-project-48-hours"
+    title: "Protocol 404: The Future of Hackathons Nobody Saw Coming",
+    excerpt: "Protocol 404 isn't just a concept; it's a movement redefining how hackathons are run, how teams collaborate, and how innovation gets discovered.",
+    date: "January 16, 2025",
+    readTime: "5 min read",
+    category: "Protocol 404",
+    link: "/blog/protocol-404-future-of-hackathons"
   },
   {
     title: "Tech Mentoring Benefits: Why Developers Should Join Makeathons",
