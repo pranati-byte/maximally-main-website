@@ -6,6 +6,14 @@ import Footer from "@/components/Footer";
 
 const blogPosts = [
   {
+    title: "Masters' Union backs Maximally Startup Make-a-thon",
+    excerpt: "We're excited to share that Masters' Union, one of India's most forward-thinking institutions for business and entrepreneurship, is officially backing the upcoming Maximally Startup Make-a-thon (July 1–7).",
+    date: "June 10, 2025",
+    readTime: "5 min read",
+    category: "Partnership",
+    link: "/blog/masters-union-partnership"
+  },
+  {
     title: "Project CodeGen: Why Play Might Be the Future of Building",
     excerpt: "When was the last time you played with technology—not for work, not for profit, but just because it was fun? Project CodeGen is a 48-hour hackathon that celebrates joy over disruption.",
     date: "January 26, 2025",

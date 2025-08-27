@@ -101,6 +101,9 @@ import ProjectCodeGenRedefiningCollaboration from './pages/blog/ProjectCodeGenRe
 import ProjectCodeGenIdeaToExecution from './pages/blog/ProjectCodeGenIdeaToExecution';
 import ProjectCodeGenBeyondHackathons from './pages/blog/ProjectCodeGenBeyondHackathons';
 
+// Partnership Blog Posts
+import MastersUnionPartnership from './pages/blog/MastersUnionPartnership';
+
 
 const queryClient = new QueryClient();
 
@@ -145,6 +148,9 @@ const App = () => {
             {/* Team route removed */}
 
             <Route path="/blog" element={<Blog />} />
+
+            {/* Partnership Blog Posts */}
+            <Route path="/blog/masters-union-partnership" element={<MastersUnionPartnership />} />
 
             {/* AI Shipathon Blog Posts */}
             <Route path="/blog/maximally-ai-shipathon-guide" element={<MaximallyAIShipathonGuide />} />
