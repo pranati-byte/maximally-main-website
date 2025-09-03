@@ -82,6 +82,7 @@ import CodeHypothesis from './pages/CodeHypothesis';
 import Protocol404 from './pages/Protocol404';
 import ProjectCodeGen from './pages/ProjectCodeGen';
 import Hacktober from './pages/Hacktober';
+import PromptStorm from './pages/PromptStorm';
 
 // Code Hypothesis Blog Posts
 import WhyHackathonsGotBoring from './pages/blog/WhyHackathonsGotBoring';
@@ -221,6 +222,7 @@ const App = () => {
           <Route path="/codehypothesis" element={<CodeHypothesis />} />
           <Route path="/protocol-404" element={<Protocol404 />} />
           <Route path="/project-codegen" element={<ProjectCodeGen />} />
+          <Route path="/promptstorm" element={<PromptStorm />} />
           <Route path="/hacktober" element={<Hacktober />} />
           
           {/* Code Hypothesis Blog Posts */}
