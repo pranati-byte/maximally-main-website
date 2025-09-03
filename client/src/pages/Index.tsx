@@ -164,19 +164,7 @@ const Index = () => {
 
               {/* CTAs */}
               <div className="relative max-w-2xl mx-auto space-y-6">
-                {/* Featured Shipathon CTA */}
-                <div className="w-full">
-                  <Link
-                    to="/shipathon"
-                    className="pixel-button bg-gradient-to-r from-black via-red-600 to-black text-white group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red h-18 px-8 font-press-start text-sm w-full border-4 border-red-600"
-                  >
-                    <span>🚢</span>
-                    <span>Register for AI Shipathon</span>
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-
-                {/* Secondary CTAs */}
+                {/* Primary CTAs */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <Link
                     to="/events"
@@ -199,87 +187,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* AI Shipathon CTA Section */}
-        <section className="py-20 px-4 bg-black relative overflow-hidden">
-          {/* Pixel stars background */}
-          <div className="absolute inset-0">
-            {[...Array(20)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 bg-red-500 animate-pulse"
-                style={{
-                  top: `${Math.random() * 100}%`,
-                  left: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 3}s`,
-                }}
-              />
-            ))}
-          </div>
-
-          <div className="container mx-auto text-center relative z-10">
-            {/* Pixel Ship */}
-            <div className="mb-8 flex justify-center">
-              <div className="relative">
-                <div
-                  className="w-24 h-12 bg-red-600 relative"
-                  style={{
-                    clipPath:
-                      "polygon(10% 100%, 0% 70%, 20% 0%, 80% 0%, 100% 70%, 90% 100%)",
-                  }}
-                >
-                  <div className="absolute top-4 left-2 w-2 h-2 bg-black"></div>
-                  <div className="absolute top-4 left-6 w-2 h-2 bg-black"></div>
-                  <div className="absolute top-4 left-10 w-2 h-2 bg-black"></div>
-                </div>
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-1 h-8 bg-red-500"></div>
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 translate-x-2 w-8 h-6 bg-red-500 border-2 border-red-700">
-                  <div className="text-xs text-black font-bold">AI</div>
-                </div>
-              </div>
-            </div>
-
-            <h2 className="font-press-start text-3xl md:text-5xl text-red-500 mb-6">
-              AI SHIPATHON
-            </h2>
-
-            <div className="bg-red-600 border-4 border-red-800 p-6 max-w-4xl mx-auto mb-8">
-              <p className="font-press-start text-lg md:text-xl text-white leading-relaxed">
-                48 HOURS. BUILD WITH AI. SHIP YOUR FIRST PROJECT. MEET BUILDERS
-                LIKE YOU.
-              </p>
-            </div>
-
-            <div className="text-center mb-8">
-              <div className="bg-black border-4 border-red-600 px-6 py-3 inline-block mb-4">
-                <p className="font-press-start text-red-500 text-lg">
-                  AUG 30 - SEP 1, 2025
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/shipathon"
-                className="bg-red-600 hover:bg-red-700 text-white font-black py-4 px-8 text-lg border-4 border-red-800 shadow-2xl transform hover:scale-105 transition-all inline-flex items-center gap-2"
-                style={{ fontFamily: "Press Start 2P, monospace" }}
-              >
-                <span>⚡</span>
-                LEARN MORE
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <a
-                href="https://maximally-ai-shipathon-2025.devpost.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black hover:bg-gray-900 text-red-500 font-black py-4 px-8 text-lg border-4 border-red-600 shadow-2xl transform hover:scale-105 transition-all inline-flex items-center gap-2"
-                style={{ fontFamily: "Press Start 2P, monospace" }}
-              >
-                <span>🚢</span>
-                REGISTER NOW
-              </a>
-            </div>
-          </div>
-        </section>
 
         {/* What We Do Section */}
         <section className="py-20 px-4 bg-gray-50 relative overflow-hidden">

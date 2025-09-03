@@ -338,24 +338,28 @@ export default function Shipathon() {
                 </div>
               </div>
 
-              {/* Mobile-Optimized CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+              {/* Event Ended Message */}
+              <div className="text-center space-y-6">
                 <div className="relative group">
                   {!isMobile && <div className="absolute inset-0 bg-red-600 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>}
-                  <Button 
-                    onClick={() => window.open('https://maximally-ai-shipathon-2025.devpost.com/', '_blank')}
-                    className="relative w-full sm:w-auto pixel-button bg-gradient-to-r from-red-600 to-red-700 text-white font-press-start py-3 md:py-4 px-6 md:px-8 text-sm md:text-lg hover:scale-105 md:hover:scale-110 transition-all duration-300 border-2 border-red-400 shadow-xl"
-                  >
-                    🚀 REGISTER NOW
-                  </Button>
+                  <div className="relative minecraft-block bg-gradient-to-r from-red-600 to-red-700 text-white font-press-start py-6 px-8 text-sm md:text-lg border-2 border-red-400 shadow-xl max-w-2xl mx-auto">
+                    <div className="text-center">
+                      <div className="text-2xl mb-4">🎉</div>
+                      <p className="leading-relaxed">
+                        THE MAXIMALLY AI SHIPATHON HAS ENDED.
+                        <br className="hidden sm:block" />
+                        THANK YOU TO EVERYONE WHO PARTICIPATED!
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <div className="relative group">
                   {!isMobile && <div className="absolute inset-0 bg-purple-600 rounded-lg blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>}
                   <Button 
-                    onClick={() => window.open('https://discord.gg/S2YyGtBWKa', '_blank')}
+                    onClick={() => window.open('/shipathon-report', '_self')}
                     className="relative w-full sm:w-auto pixel-button bg-gradient-to-r from-gray-900 to-black text-white font-press-start py-3 md:py-4 px-6 md:px-8 text-sm md:text-lg hover:scale-105 md:hover:scale-110 transition-all duration-300 border-2 border-red-600 shadow-xl"
                   >
-                    💬 JOIN DISCORD
+                    📊 READ THE POST-EVENT IMPACT REPORT
                   </Button>
                 </div>
               </div>
