@@ -62,69 +62,154 @@ const Featured = () => {
 
   const industryJudges = [
     {
+      name: "Rishul Chanana",
+      role: "Founder",
+      company: "Maximally",
+      quote: "Building is the only currency that matters in the new economy."
+    },
+    {
+      name: "Nikita Klimov",
+      role: "Sr. Software QA Engineer",
+      company: "ADP, Inc",
+      quote: "Quality isn't just about testing code - it's about shipping products that change lives."
+    },
+    {
+      name: "Nishanth Prakash",
+      role: "Senior Software Engineer",
+      company: "Oracle",
+      quote: "The best engineers don't just solve problems - they anticipate them before they exist."
+    },
+    {
+      name: "Tanmay Kejriwal",
+      role: "Founder",
+      company: "MakeX",
+      quote: "Every breakthrough starts with someone crazy enough to believe it's possible."
+    },
+    {
+      name: "Raja Sekhar Rao Dheekonda",
+      role: "Distinguished Engineer",
+      company: "Dreadnode",
+      quote: "Architecture isn't about perfection - it's about building systems that survive chaos."
+    },
+    {
+      name: "Senthilkumaran Rajagopalan",
+      role: "Tech Lead Manager, Video Recommendations",
+      company: "Meta",
+      quote: "Scale isn't just about handling more users - it's about amplifying human connection."
+    },
+    {
+      name: "Sahil Deshpande",
+      role: "Software Engineer",
+      company: "Meta",
+      quote: "The code that changes the world is written by those who refuse to accept the status quo."
+    },
+    {
+      name: "Karthik Ramamurthy",
+      role: "Engineering Lead",
+      company: "Mercury Financial",
+      quote: "Fintech isn't about moving money faster - it's about democratizing opportunity."
+    },
+    {
+      name: "Venkataram Poosapati",
+      role: "Senior Data Engineer",
+      company: "Atlassian",
+      quote: "Data without action is just expensive storage. Transform insights into impact."
+    },
+    {
+      name: "Shreesh Agarwal",
+      role: "Sr Business Analyst",
+      company: "McKinsey and Company",
+      quote: "Strategy without execution is hallucination. Execution without strategy is chaos."
+    },
+    {
+      name: "Rakesh Pullayikodi",
+      role: "Staff Software Engineer",
+      company: "Graphite Health",
+      quote: "Healthcare tech isn't just about efficiency - it's about saving lives through code."
+    },
+    {
+      name: "Ashwini Joshi",
+      role: "Senior Machine Learning Engineer",
+      company: "Warner Bros. Discovery",
+      quote: "AI that doesn't enhance human creativity is just computational waste."
+    },
+    {
+      name: "Vikranth Kumar Shivaa",
+      role: "Founding Engineer",
+      company: "Fig",
+      quote: "Developer tools should feel like magic, not bureaucracy."
+    },
+    {
       name: "Rahul Chandra",
       role: "Software Engineer",
-      company: "Deepmind"
+      company: "Deepmind",
+      quote: "Intelligence amplification beats artificial intelligence every time."
     },
     {
       name: "Krishna Ganeriwal",
       role: "Senior Software Engineer",
-      company: "Meta Platforms Inc"
+      company: "Meta Platforms Inc",
+      quote: "The future belongs to builders who think in systems, not features."
     },
     {
       name: "Harpreet Kaur Chawla",
       role: "Senior Software Engineer",
-      company: "Amazon"
+      company: "Amazon",
+      quote: "Customer obsession isn't a buzzword - it's the only way to build products that matter."
     },
     {
       name: "Nancy Al Kalach",
       role: "Senior Salesforce Developer",
-      company: "Technology Professional"
+      company: "Technology Professional",
+      quote: "Enterprise software should empower users, not imprison them in complexity."
     },
     {
       name: "Prashanthi Matam",
       role: "Senior MLOPS Engineer",
-      company: "Enterprise Technology"
+      company: "Enterprise Technology",
+      quote: "MLOps is where theoretical AI meets real-world impact."
     },
     {
       name: "Nidhi Mahajan",
       role: "Director of Business Strategy and Operations",
-      company: "Visa"
+      company: "Visa",
+      quote: "Strategy is about making the impossible inevitable through relentless execution."
     },
     {
       name: "Rama Mallika Kadali",
       role: "Lead QA Engineer",
-      company: "Quality Engineering"
+      company: "Quality Engineering",
+      quote: "Quality engineering is the bridge between ambitious vision and reliable execution."
     },
     {
       name: "Harshith Vaddiparthy",
       role: "AI Product Engineer & Head of Growth",
-      company: "JustPaid.ai (YCW23)"
+      company: "JustPaid.ai (YCW23)",
+      quote: "Growth happens when product excellence meets relentless customer obsession."
     },
     {
       name: "Hassan Rehan",
       role: "Senior IT Systems Engineer",
-      company: "General Motors"
+      company: "General Motors",
+      quote: "Infrastructure is invisible until it fails - excellence is building systems that never do."
     },
     {
       name: "Kostyantyn Bondar",
       role: "Founder & CEO",
-      company: "DarinX"
+      company: "DarinX",
+      quote: "Entrepreneurship is turning vision into velocity, ideas into impact."
     },
     {
       name: "Louis Demeslay",
       role: "CTO",
-      company: "Zealy.io"
+      company: "Zealy.io",
+      quote: "Technology leadership means building the future while everyone else debates it."
     },
     {
       name: "Saket Ozarkar",
       role: "Software Engineer",
-      company: "Replit"
-    },
-    {
-      name: "Nishanth Prakash",
-      role: "Senior Member of Technical Staff",
-      company: "Oracle Inc"
+      company: "Replit",
+      quote: "Developer experience isn't just about tools - it's about unleashing human potential."
     }
   ];
 
