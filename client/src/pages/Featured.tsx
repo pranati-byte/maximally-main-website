@@ -258,38 +258,19 @@ const Featured = () => {
               <Star className="h-8 w-8 text-[#FFD700]" />
               <h2 className="font-press-start text-2xl">Industry Expert Judges and Core Advisors</h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {coreAdvisors.map((advisor) => (
-                <div key={advisor.name} className="pixel-border p-6 bg-gradient-to-br from-yellow-50 to-orange-50 hover:transform hover:scale-105 transition-all">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[...coreAdvisors, ...industryJudges].map((expert) => (
+                <div key={expert.name} className="pixel-border p-6 bg-gradient-to-br from-yellow-50 to-orange-50 hover:transform hover:scale-105 transition-all">
                   <div className="flex justify-between items-start mb-3">
-                    <h3 className="font-press-start text-lg mb-2">{advisor.name}</h3>
+                    <h3 className="font-press-start text-base mb-2">{expert.name}</h3>
                   </div>
-                  <p className="font-jetbrains text-maximally-black/70">{advisor.role}</p>
-                  <p className="font-jetbrains text-maximally-black/90 font-bold mb-3">{advisor.company}</p>
-                  {advisor.quote && (
-                    <blockquote className="font-jetbrains text-sm italic text-maximally-black/80 border-l-4 border-yellow-400 pl-3">
-                      "{advisor.quote}"
+                  <p className="font-jetbrains text-maximally-black/70 text-sm mb-1">{expert.role}</p>
+                  <p className="font-jetbrains text-maximally-black/90 font-bold text-sm mb-3">{expert.company}</p>
+                  {expert.quote && (
+                    <blockquote className="font-jetbrains text-xs italic text-maximally-black/80 border-l-4 border-yellow-400 pl-3">
+                      "{expert.quote}"
                     </blockquote>
                   )}
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Competition Mentors and Judges Section */}
-          <section>
-            <div className="flex items-center gap-3 mb-8">
-              <Award className="h-8 w-8 text-[#FF5F5F]" />
-              <h2 className="font-press-start text-2xl">Competition Mentors and Judges</h2>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {industryJudges.map((judge) => (
-                <div key={judge.name} className="pixel-border p-6 bg-gradient-to-br from-blue-50 to-purple-50 hover:transform hover:scale-105 transition-all">
-                  <div className="flex justify-between items-start mb-3">
-                    <h3 className="font-press-start text-base mb-2">{judge.name}</h3>
-                  </div>
-                  <p className="font-jetbrains text-maximally-black/70 text-sm mb-1">{judge.role}</p>
-                  <p className="font-jetbrains text-maximally-black/90 font-bold text-sm">{judge.company}</p>
                 </div>
               ))}
             </div>
