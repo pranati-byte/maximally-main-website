@@ -85,6 +85,7 @@ import Hacktober from './pages/Hacktober';
 import PromptStorm from './pages/PromptStorm';
 import StealAThon from './pages/StealAThon';
 import Codepocalypse from './pages/Codepocalypse';
+import GrandTechAssembly from './pages/GrandTechAssembly';
 
 // Code Hypothesis Blog Posts
 import WhyHackathonsGotBoring from './pages/blog/WhyHackathonsGotBoring';
@@ -227,6 +228,7 @@ const App = () => {
           <Route path="/promptstorm" element={<PromptStorm />} />
           <Route path="/steal-a-thon" element={<StealAThon />} />
           <Route path="/codepocalypse" element={<Codepocalypse />} />
+          <Route path="/grand-tech-assembly" element={<GrandTechAssembly />} />
           <Route path="/hacktober" element={<Hacktober />} />
           
           {/* Code Hypothesis Blog Posts */}

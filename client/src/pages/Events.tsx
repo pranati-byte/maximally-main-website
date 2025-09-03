@@ -56,6 +56,13 @@ const Events = () => {
       description: "What would you build if the internet had 48 hours left? Chaotic 48-hour hackathon.",
       registerUrl: "/codepocalypse",
       detailsUrl: "/codepocalypse"
+    },
+    {
+      name: "Grand Tech Assembly",
+      dates: "Nov 1-7, 2025",
+      description: "Pick your mission, build your city, earn respect. 7-day GTA-themed hackathon.",
+      registerUrl: "/grand-tech-assembly",
+      detailsUrl: "/grand-tech-assembly"
     }
   ];
 
