@@ -1,87 +1,142 @@
-
-import { ArrowRight, Mail, Zap, Rocket, Users, Target, Globe, Trophy, Code, Lightbulb, Star, Shield, Megaphone } from "lucide-react";
+import { ArrowRight, Mail, Calendar, ExternalLink, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 
 const Events = () => {
-  const flagshipEvents = [
+  const upcomingEvents = [
     {
-      name: "Startup Makeathon",
-      description: "7-day sprint from idea to MVP to public pitch. Real teams, real mentors, real pressure.",
-      icon: "🚀"
+      name: "Code Hypothesis",
+      dates: "September 2025",
+      description: "Test your coding theories in the ultimate development challenge",
+      registerUrl: "/code-hypothesis",
+      detailsUrl: "/code-hypothesis"
     },
     {
-      name: "Stealth Hackathon", 
-      description: "You don't know the prompt until the timer starts. 48hr to build something wild.",
-      icon: "🥷"
+      name: "Protocol 404",
+      dates: "October 2025", 
+      description: "When the system is broken, build anyway",
+      registerUrl: "/protocol-404",
+      detailsUrl: "/protocol-404"
     },
     {
-      name: "Brand-a-thon",
-      description: "Flip iconic brands into new verticals. You get ₹15K, 3 days, and full creative freedom.",
-      icon: "🎨"
-    },
-    
-    
-  ];
-
-  const chaosFormats = [
-    {
-      name: "Scrapyard Showdown",
-      description: "Use discarded ideas, rogue APIs, weird UIs — just make something work and ship it.",
-      icon: "🔧"
+      name: "Project CodeGen",
+      dates: "October 2025",
+      description: "Beyond hackathons - real project generation",
+      registerUrl: "/project-codegen", 
+      detailsUrl: "/project-codegen"
     },
     {
-      name: "Shipwreck",
-      description: "Build something broken, weird, or ugly — but make it functional. Glitches welcome.",
-      icon: "🚢"
+      name: "Maximally Hacktober",
+      dates: "October 2025",
+      description: "October's biggest hackathon celebration",
+      registerUrl: "/hacktober",
+      detailsUrl: "/hacktober"
     },
     {
-      name: "Viral or Die",
-      description: "Keep posting until one piece of content hits a goal (e.g. 10K views). Prove your virality.",
-      icon: "📈"
-    },
-    {
-      name: "CTRL + ALT + BUILD",
-      description: "Restart a dead project. Rebuild it cleaner, stronger, faster — within 72 hours.",
-      icon: "⌨️"
+      name: "Codepocalypse",
+      dates: "November 2025",
+      description: "The ultimate coding showdown",
+      registerUrl: "#",
+      detailsUrl: "#"
     }
   ];
 
-  
+  const pastEvents = [
+    {
+      name: "Maximally Startup Makeathon",
+      dates: "July 2025",
+      description: "7-day sprint from idea to MVP to public pitch",
+      reportUrl: "/makeathon-report"
+    },
+    {
+      name: "Maximally AI Shipathon", 
+      dates: "August 2025",
+      description: "48-hour global AI hackathon for builders and creators",
+      reportUrl: "/shipathon-report"
+    }
+  ];
 
-  interface EventType {
-    name: string;
-    description: string;
-    icon: string;
-  }
-
-  const EventCard = ({ event, bgColor = "bg-white", textColor = "text-black" }: { event: EventType, bgColor?: string, textColor?: string }) => (
+  const UpcomingEventCard = ({ event }: { event: typeof upcomingEvents[0] }) => (
     <motion.div
-      className={`pixel-border p-4 sm:p-6 ${bgColor} ${textColor} hover:transform hover:scale-105 transition-all duration-300 group cursor-pointer`}
-      whileHover={{ scale: 1.05 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
+      className="group"
     >
-      <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{event.icon}</div>
-      <h3 className="font-press-start text-sm sm:text-lg mb-2 sm:mb-3 group-hover:text-[#E50914] transition-colors leading-tight">
-        {event.name}
-      </h3>
-      <p className="font-jetbrains text-xs sm:text-sm opacity-80 leading-relaxed">
-        {event.description}
-      </p>
+      <Card className="minecraft-block bg-white hover:scale-105 transition-all duration-300 border-2 border-gray-200 hover:border-red-500 shadow-lg hover:shadow-xl">
+        <CardContent className="p-6">
+          <div className="flex items-center gap-2 mb-3">
+            <Calendar className="h-5 w-5 text-red-600" />
+            <span className="font-jetbrains text-sm text-gray-600">{event.dates}</span>
+          </div>
+          <h3 className="font-press-start text-lg mb-3 text-black group-hover:text-red-600 transition-colors leading-tight">
+            {event.name}
+          </h3>
+          <p className="font-jetbrains text-gray-700 mb-6 text-sm leading-relaxed">
+            {event.description}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              to={event.registerUrl}
+              className="pixel-button bg-red-600 text-white font-press-start text-xs px-4 py-2 hover:scale-105 transition-all flex items-center gap-2 justify-center"
+            >
+              <span>Register Now</span>
+              <ExternalLink className="h-3 w-3" />
+            </Link>
+            <Link
+              to={event.detailsUrl}
+              className="pixel-button bg-gray-900 text-white font-press-start text-xs px-4 py-2 hover:scale-105 transition-all flex items-center gap-2 justify-center"
+            >
+              <span>View Details</span>
+              <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+
+  const PastEventCard = ({ event }: { event: typeof pastEvents[0] }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="group"
+    >
+      <Card className="minecraft-block bg-gray-50 hover:scale-105 transition-all duration-300 border-2 border-gray-300 hover:border-blue-500 shadow-lg">
+        <CardContent className="p-6">
+          <div className="flex items-center gap-2 mb-3">
+            <Calendar className="h-5 w-5 text-blue-600" />
+            <span className="font-jetbrains text-sm text-gray-600">{event.dates}</span>
+          </div>
+          <h3 className="font-press-start text-lg mb-3 text-black group-hover:text-blue-600 transition-colors leading-tight">
+            {event.name}
+          </h3>
+          <p className="font-jetbrains text-gray-700 mb-6 text-sm leading-relaxed">
+            {event.description}
+          </p>
+          <Link
+            to={event.reportUrl}
+            className="pixel-button bg-blue-600 text-white font-press-start text-xs px-4 py-2 hover:scale-105 transition-all flex items-center gap-2 justify-center w-fit"
+          >
+            <FileText className="h-3 w-3" />
+            <span>View Report</span>
+          </Link>
+        </CardContent>
+      </Card>
     </motion.div>
   );
 
   return (
     <>
       <SEO
-        title="Maximally Events | High-Energy Innovation Battles"
-        description="We don't run events. We throw startup wars, code battles, and creator faceoffs for ambitious builders worldwide. Join the chaos."
-        keywords="hackathons, startup makeathons, innovation battles, builder events, chaos formats, wildcard sprints"
+        title="Events | The Grand Indian Hackathon Season | Maximally"
+        description="Join the Grand Indian Hackathon Season - 10 hackathons from September to November. Experience the biggest innovation challenge series in India."
+        keywords="hackathons India, Grand Indian Hackathon Season, coding competitions, innovation challenges, tech events India, student hackathons"
       />
       <div className="min-h-screen bg-white overflow-hidden relative">
         {/* Animated Background */}
@@ -90,7 +145,7 @@ const Events = () => {
           {[...Array(12)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-3 h-3 bg-[#E50914]/30 pixel-border animate-float"
+              className="absolute w-3 h-3 bg-red-600/30 pixel-border animate-float"
               style={{
                 top: `${Math.random() * 90}%`,
                 left: `${Math.random() * 90}%`,
@@ -101,86 +156,89 @@ const Events = () => {
           ))}
         </div>
 
-        <div className="container mx-auto px-4 pt-16 sm:pt-20 md:pt-24 lg:pt-32 pb-16 relative z-10">
-          {/* Hero Section */}
-          <motion.div 
-            className="max-w-5xl mx-auto text-center mb-12 sm:mb-16 lg:mb-20"
+        <div className="container mx-auto px-4 pt-24 pb-16 relative z-10">
+          {/* Top Banner */}
+          <motion.section 
+            className="text-center mb-20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-press-start text-2xl sm:text-3xl md:text-5xl lg:text-7xl mb-4 sm:mb-6 lg:mb-8 text-[#E50914] leading-tight px-2">
-              We don't run events.
+            <h1 className="font-press-start text-3xl md:text-5xl lg:text-6xl mb-6 text-red-600 leading-tight">
+              The Grand Indian Hackathon Season
             </h1>
-            <h2 className="font-press-start text-lg sm:text-xl md:text-2xl lg:text-4xl mb-4 sm:mb-6 lg:mb-8 text-black leading-tight px-2">
-              We throw startup wars, code battles, and creator faceoffs for ambitious builders across all disciplines.
-            </h2>
-            <p className="font-jetbrains text-base sm:text-lg md:text-xl text-black/80 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
-              From virtual hackathons to physical startup makeathons, Maximally is the fastest-growing global ecosystem for emerging builders and innovators.
+            <p className="font-jetbrains text-lg md:text-xl text-black/80 max-w-4xl mx-auto mb-8 leading-relaxed">
+              From September to November, we're hosting 10 hackathons back to back. Be a part of it.
             </p>
-          </motion.div>
+            <Button 
+              onClick={() => window.open('mailto:hello@maximally.in?subject=Join Mailing List', '_blank')}
+              className="pixel-button bg-gradient-to-r from-red-600 to-red-700 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-red-400 shadow-xl"
+            >
+              <Mail className="h-5 w-5 mr-2" />
+              Join our mailing list
+            </Button>
+          </motion.section>
 
-          {/* Flagships Section */}
+          {/* Upcoming Events Section */}
           <motion.section 
-            className="mb-12 sm:mb-16 lg:mb-20"
+            className="mb-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 text-[#E50914] px-2">🧱 FLAGSHIPS</h2>
-              <p className="font-jetbrains text-sm sm:text-base md:text-lg text-black/80 px-2">The main events. The big leagues. Where legends are born.</p>
+            <div className="text-center mb-12">
+              <h2 className="font-press-start text-3xl md:text-4xl mb-4 text-black">
+                Upcoming Events
+              </h2>
+              <div className="w-24 h-1 bg-red-600 mx-auto"></div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {flagshipEvents.map((event, index) => (
-                <EventCard key={index} event={event} />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {upcomingEvents.map((event, index) => (
+                <UpcomingEventCard key={index} event={event} />
               ))}
             </div>
           </motion.section>
 
-          {/* Chaos Formats Section */}
+          {/* Past Events Section */}
           <motion.section 
-            className="mb-12 sm:mb-16 lg:mb-20"
+            className="mb-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4 text-[#FFD700] px-2">⚔️ CHAOS FORMATS</h2>
-              <p className="font-jetbrains text-sm sm:text-base md:text-lg text-black/80 px-2">Unhinged. Unpredictable. Unforgettable.</p>
+            <div className="text-center mb-12">
+              <h2 className="font-press-start text-3xl md:text-4xl mb-4 text-black">
+                Past Events
+              </h2>
+              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {chaosFormats.map((event, index) => (
-                <EventCard 
-                  key={index} 
-                  event={event} 
-                  bgColor="bg-black" 
-                  textColor="text-white" 
-                />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {pastEvents.map((event, index) => (
+                <PastEventCard key={index} event={event} />
               ))}
             </div>
           </motion.section>
 
-          
-
           {/* CTA Section */}
           <motion.section 
-            className="text-center pixel-border p-6 sm:p-8 md:p-12 bg-gradient-to-r from-[#E50914]/10 via-black/5 to-[#FFD700]/10"
+            className="text-center pixel-border p-8 md:p-12 bg-gradient-to-r from-red-600/10 via-black/5 to-blue-600/10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 0.6 }}
           >
-            <h2 className="font-press-start text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6 text-[#E50914] leading-tight px-2">
-              Want to host an event with us?
+            <h2 className="font-press-start text-2xl md:text-3xl mb-6 text-red-600 leading-tight">
+              Want to partner with us?
             </h2>
-            <p className="font-jetbrains text-base sm:text-lg md:text-xl text-black/80 mb-6 sm:mb-8 max-w-3xl mx-auto px-2">
-              Partner with Maximally, or let us run the whole thing for you.
+            <p className="font-jetbrains text-lg md:text-xl text-black/80 mb-8 max-w-3xl mx-auto">
+              Join the Grand Indian Hackathon Season as a sponsor, mentor, or collaborator.
             </p>
-            <a href="mailto:hello@maximally.in" className="pixel-button bg-[#E50914] text-white inline-flex items-center gap-2 sm:gap-3 hover:scale-105 transform transition-all text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 min-h-[48px]">
-              <Mail className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
-              <span className="font-press-start">hello@maximally.in</span>
-              <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-            </a>
+            <Link 
+              to="/collaborate" 
+              className="pixel-button bg-red-600 text-white inline-flex items-center gap-3 hover:scale-105 transform transition-all text-lg px-8 py-4"
+            >
+              <span className="font-press-start">Partner With Us</span>
+              <ArrowRight className="h-5 w-5" />
+            </Link>
           </motion.section>
         </div>
         
