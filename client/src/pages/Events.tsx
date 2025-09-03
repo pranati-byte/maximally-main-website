@@ -51,11 +51,11 @@ const Events = () => {
       detailsUrl: "/steal-a-thon"
     },
     {
-      name: "Codepocalypse",
-      dates: "November 2025",
-      description: "The ultimate coding showdown",
-      registerUrl: "#",
-      detailsUrl: "#"
+      name: "Maximally Codepocalypse",
+      dates: "Oct 18-19, 2025",
+      description: "What would you build if the internet had 48 hours left? Chaotic 48-hour hackathon.",
+      registerUrl: "/codepocalypse",
+      detailsUrl: "/codepocalypse"
     }
   ];
 
