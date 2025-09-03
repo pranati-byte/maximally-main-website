@@ -85,13 +85,13 @@ export default function PromptStorm() {
         keywords="AI hackathon, prompt engineering, AI tools, ChatGPT, Claude, Midjourney, prompt competition, AI creativity"
       />
 
-      {/* Electric Background Effects */}
+      {/* Electric Background Effects - reduced clutter, lower opacity */}
       <div className="fixed inset-0 z-0">
-        {/* Lightning bolts */}
-        {[...Array(6)].map((_, i) => (
+        {/* Lightning bolts - reduced count, lower opacity */}
+        {[...Array(3)].map((_, i) => (
           <div
             key={`lightning-${i}`}
-            className="absolute opacity-20"
+            className="absolute opacity-5"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -103,12 +103,11 @@ export default function PromptStorm() {
             <Zap className="h-8 w-8 text-blue-400" />
           </div>
         ))}
-        
-        {/* Sparkles */}
-        {[...Array(10)].map((_, i) => (
+        {/* Sparkles - reduced count, lower opacity */}
+        {[...Array(5)].map((_, i) => (
           <div
             key={`sparkle-${i}`}
-            className="absolute opacity-30"
+            className="absolute opacity-5"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -128,14 +127,14 @@ export default function PromptStorm() {
         <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-20">
           {/* Badge */}
           <div className={`mb-6 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-full border-2 border-yellow-400">
-              <span className="font-press-start text-xs">⚡ GRAND INDIAN HACKATHON SEASON ⚡</span>
+            <div className="bg-gradient-to-r from-blue-500 to-yellow-400 text-white px-6 py-2 rounded-full border-2 border-yellow-400">
+              <span className="font-press-start text-xs"> GRAND INDIAN HACKATHON SEASON </span>
             </div>
           </div>
 
-          {/* Title */}
+          {/* Title - simplified gradient */}
           <div className={`text-center mb-8 transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <h1 className="font-press-start text-4xl md:text-6xl lg:text-7xl mb-6 bg-gradient-to-r from-blue-400 via-yellow-400 to-red-500 bg-clip-text text-transparent leading-tight">
+            <h1 className="font-press-start text-4xl md:text-6xl lg:text-7xl mb-6 bg-gradient-to-r from-blue-400 to-yellow-400 bg-clip-text text-transparent leading-tight">
               MAXIMALLY
               <br />
               PROMPTSTORM
@@ -260,18 +259,18 @@ export default function PromptStorm() {
         </section>
 
         {/* Rules */}
-        <section id="rules" className="py-20 px-4 bg-gradient-to-b from-black via-red-900/10 to-black">
+        <section id="rules" className="py-20 px-4 bg-gradient-to-b from-blue-600/10 via-yellow-400/10 to-black">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="font-press-start text-3xl md:text-4xl mb-12 text-red-500 text-center flex items-center justify-center gap-3">
+            <h2 className="font-press-start text-3xl md:text-4xl mb-12 text-blue-400 text-center flex items-center justify-center gap-3">
               <FileText className="h-8 w-8 text-yellow-400" />
               RULES
               <FileText className="h-8 w-8 text-yellow-400" />
             </h2>
             <div className="grid gap-4">
               {rules.map((rule, index) => (
-                <div key={index} className="bg-gradient-to-r from-red-900/30 to-black p-4 rounded-lg border border-red-500 hover:border-yellow-400 transition-colors duration-300">
+                <div key={index} className="bg-gradient-to-r from-blue-600/20 to-yellow-400/20 p-4 rounded-lg border border-blue-400 hover:border-yellow-400 transition-colors duration-300">
                   <div className="flex items-center gap-3">
-                    <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white font-press-start text-xs">
+                    <div className="w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center text-white font-press-start text-xs">
                       {index + 1}
                     </div>
                     <span className="font-jetbrains text-white">{rule}</span>

@@ -59,13 +59,13 @@ export default function Codepocalypse() {
         keywords="hackathon, chaos coding, apocalypse theme, 48 hour hackathon, broken prototypes, cursed ideas, code competition"
       />
 
-      {/* Apocalyptic Background Effects */}
+      {/* Apocalyptic Background Effects - reduced clutter, lower opacity */}
       <div className="fixed inset-0 z-0">
-        {/* Glitch sparks */}
-        {[...Array(12)].map((_, i) => (
+        {/* Glitch sparks - reduced count */}
+        {[...Array(6)].map((_, i) => (
           <div
             key={`spark-${i}`}
-            className="absolute opacity-30"
+            className="absolute opacity-10"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -76,12 +76,11 @@ export default function Codepocalypse() {
             <Zap className="h-4 w-4 text-red-500" />
           </div>
         ))}
-        
-        {/* Scattered arrows */}
-        {[...Array(8)].map((_, i) => (
+        {/* Scattered arrows - reduced count, lower opacity */}
+        {[...Array(4)].map((_, i) => (
           <div
             key={`arrow-${i}`}
-            className="absolute opacity-20"
+            className="absolute opacity-5"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -95,15 +94,13 @@ export default function Codepocalypse() {
             </div>
           </div>
         ))}
-
-        {/* Distressed texture overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900 opacity-90"></div>
-        
-        {/* Nuclear warning symbols */}
-        {[...Array(6)].map((_, i) => (
+        {/* Distressed texture overlay - lower opacity */}
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900 opacity-5"></div>
+        {/* Nuclear warning symbols - reduced count, lower opacity */}
+        {[...Array(3)].map((_, i) => (
           <div
             key={`warning-${i}`}
-            className="absolute opacity-10"
+            className="absolute opacity-5"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -254,7 +251,7 @@ export default function Codepocalypse() {
                   <div className="absolute top-0 right-0 w-3 h-3 bg-yellow-400"></div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-red-500"></div>
-                    <span className="font-jetbrains text-gray-300 font-medium">{person}</span>
+                    <span className="font-jetbrains text-gray-100 font-medium">{person}</span>
                   </div>
                 </div>
               ))}
@@ -272,10 +269,10 @@ export default function Codepocalypse() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {techRules.map((rule, index) => (
-                <div key={index} className="bg-black border-l-4 border-yellow-400 p-4 hover:bg-gray-900 transition-colors duration-300">
+                <div key={index} className="bg-black border-l-2 border-yellow-400 p-4 hover:bg-gray-900 transition-colors duration-300">
                   <div className="flex items-center gap-3">
                     <div className="w-4 h-4 bg-red-500 rotate-45"></div>
-                    <span className="font-jetbrains text-gray-300">{rule}</span>
+                    <span className="font-jetbrains text-gray-100">{rule}</span>
                   </div>
                 </div>
               ))}
@@ -303,7 +300,7 @@ export default function Codepocalypse() {
 
             {/* Perks */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="bg-black border-4 border-yellow-400">
+              <Card className="bg-black border-2 border-yellow-400">
                 <CardContent className="p-6">
                   <h3 className="font-press-start text-xl text-yellow-400 mb-4">PERKS</h3>
                   <ul className="space-y-2">
@@ -327,7 +324,7 @@ export default function Codepocalypse() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-red-900 border-4 border-yellow-400">
+              <Card className="bg-red-900 border-2 border-yellow-400">
                 <CardContent className="p-6">
                   <h3 className="font-press-start text-xl text-yellow-400 mb-4">FUN AWARDS</h3>
                   <ul className="space-y-2">
@@ -352,7 +349,7 @@ export default function Codepocalypse() {
               JUDGING
               <Shield className="h-8 w-8 text-red-500" />
             </h2>
-            <div className="bg-black border-4 border-red-500 p-8 relative">
+            <div className="bg-black border-2 border-red-500 p-8 relative">
               <div className="absolute -top-1 left-4 right-4 h-2 bg-yellow-400"></div>
               <div className="mb-6">
                 <h3 className="font-press-start text-lg text-yellow-400 mb-4">REVIEWERS</h3>
@@ -381,7 +378,7 @@ export default function Codepocalypse() {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-red-900 border-4 border-yellow-400 p-6 relative">
+              <div className="bg-red-900 border-2 border-yellow-400 p-6 relative">
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 flex items-center justify-center">
                   <span className="font-press-start text-xs text-black">!</span>
                 </div>
@@ -405,7 +402,7 @@ export default function Codepocalypse() {
                 </ul>
               </div>
 
-              <div className="bg-black border-4 border-red-500 p-6 relative">
+              <div className="bg-black border-2 border-red-500 p-6 relative">
                 <div className="absolute -top-2 -left-2 w-8 h-8 bg-red-500 flex items-center justify-center">
                   <span className="font-press-start text-xs text-white">?</span>
                 </div>
@@ -440,7 +437,7 @@ export default function Codepocalypse() {
                   onClick={() => window.open('#register', '_self')}
                   className="bg-yellow-400 text-black font-press-start py-6 px-12 text-xl hover:scale-105 transition-all duration-300 border-4 border-red-500 shadow-2xl relative overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-red-500 transform skew-x-12 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
+                  <div className="absolute inset-0 bg-red-500 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
                   <span className="relative z-10 flex items-center text-black">
                     <Flame className="h-6 w-6 mr-3" />
                     ENTER THE APOCALYPSE

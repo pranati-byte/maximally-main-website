@@ -12,8 +12,8 @@ const Events = () => {
       name: "Code Hypothesis",
       dates: "September 2025",
       description: "Test your coding theories in the ultimate development challenge",
-      registerUrl: "/code-hypothesis",
-      detailsUrl: "/code-hypothesis"
+      registerUrl: "/codehypothesis",
+      detailsUrl: "/codehypothesis"
     },
     {
       name: "Protocol 404",
