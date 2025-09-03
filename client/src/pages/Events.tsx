@@ -10,38 +10,24 @@ const Events = () => {
   const upcomingEvents = [
     {
       name: "Code Hypothesis",
-      dates: "Sep 14-15, 2025",
+      dates: "September 2025",
       description: "Test your coding theories in the ultimate development challenge",
       registerUrl: "/code-hypothesis",
       detailsUrl: "/code-hypothesis"
     },
     {
       name: "Protocol 404",
-      dates: "Sep 21-22, 2025", 
+      dates: "October 2025", 
       description: "When the system is broken, build anyway",
       registerUrl: "/protocol-404",
       detailsUrl: "/protocol-404"
     },
     {
       name: "Project CodeGen",
-      dates: "Sep 28-29, 2025",
+      dates: "October 2025",
       description: "Beyond hackathons - real project generation",
       registerUrl: "/project-codegen", 
       detailsUrl: "/project-codegen"
-    },
-    {
-      name: "Maximally Hacktober",
-      dates: "Oct 5-6, 2025",
-      description: "October's biggest hackathon celebration",
-      registerUrl: "/hacktober",
-      detailsUrl: "/hacktober"
-    },
-    {
-      name: "Maximally Codepocalypse",
-      dates: "Oct 18-19, 2025",
-      description: "What would you build if the internet had 48 hours left? Chaotic 48-hour hackathon.",
-      registerUrl: "/codepocalypse",
-      detailsUrl: "/codepocalypse"
     },
     {
       name: "Maximally PromptStorm",
@@ -51,11 +37,11 @@ const Events = () => {
       detailsUrl: "/promptstorm"
     },
     {
-      name: "Grand Tech Assembly",
-      dates: "Nov 1-7, 2025",
-      description: "Pick your mission, build your city, earn respect. 7-day GTA-themed hackathon.",
-      registerUrl: "/grand-tech-assembly",
-      detailsUrl: "/grand-tech-assembly"
+      name: "Maximally Hacktober",
+      dates: "October 2025",
+      description: "October's biggest hackathon celebration",
+      registerUrl: "/hacktober",
+      detailsUrl: "/hacktober"
     },
     {
       name: "Maximally Steal-A-Thon",
@@ -63,19 +49,33 @@ const Events = () => {
       description: "The only hackathon where original ideas are banned. If it ain't broke... steal it.",
       registerUrl: "/steal-a-thon",
       detailsUrl: "/steal-a-thon"
+    },
+    {
+      name: "Maximally Codepocalypse",
+      dates: "Oct 18-19, 2025",
+      description: "What would you build if the internet had 48 hours left? Chaotic 48-hour hackathon.",
+      registerUrl: "/codepocalypse",
+      detailsUrl: "/codepocalypse"
+    },
+    {
+      name: "Grand Tech Assembly",
+      dates: "Nov 1-7, 2025",
+      description: "Pick your mission, build your city, earn respect. 7-day GTA-themed hackathon.",
+      registerUrl: "/grand-tech-assembly",
+      detailsUrl: "/grand-tech-assembly"
     }
   ];
 
   const pastEvents = [
     {
       name: "Maximally Startup Makeathon",
-      dates: "Jul 10-17, 2025",
+      dates: "July 2025",
       description: "7-day sprint from idea to MVP to public pitch",
       reportUrl: "/makeathon-report"
     },
     {
       name: "Maximally AI Shipathon", 
-      dates: "Aug 30 - Sep 1, 2025",
+      dates: "August 2025",
       description: "48-hour global AI hackathon for builders and creators",
       reportUrl: "/shipathon-report"
     }
