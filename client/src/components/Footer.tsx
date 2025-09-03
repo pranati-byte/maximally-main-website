@@ -58,9 +58,9 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3 font-jetbrains text-black text-sm">
               <li><Link to="/blog" className="hover:text-green-400 transition-colors block retro-underline">Blog</Link></li>
-              <li><Link to="/blog/maximally-ai-shipathon-guide" className="hover:text-green-400 transition-colors block retro-underline">AI Shipathon Guide</Link></li>
-              <li><Link to="/blog/top-ai-hackathons-students-2025" className="hover:text-green-400 transition-colors block retro-underline">Top AI Hackathons</Link></li>
-              <li><Link to="/blog/no-code-ai-shipathon" className="hover:text-green-400 transition-colors block retro-underline">No-Code Guide</Link></li>
+              <li><Link to="/featured" className="hover:text-green-400 transition-colors block retro-underline">Featured Heroes</Link></li>
+              <li><Link to="/community" className="hover:text-green-400 transition-colors block retro-underline">Success Stories</Link></li>
+              <li><Link to="/wall-of-progressive-schools" className="hover:text-green-400 transition-colors block retro-underline">Progressive Schools</Link></li>
             </ul>
           </div>
 
@@ -73,7 +73,7 @@ const Footer = () => {
               <li><Link to="/about" className="hover:text-blue-400 transition-colors block retro-underline">About</Link></li>
               <li><Link to="/story" className="hover:text-blue-400 transition-colors block retro-underline">Our Story</Link></li>
               <li><Link to="/contact" className="hover:text-blue-400 transition-colors block retro-underline">Contact</Link></li>
-              <li><Link to="/bootcamps" className="hover:text-blue-400 transition-colors block retro-underline">Bootcamps</Link></li>
+              <li><Link to="/collaborate" className="hover:text-blue-400 transition-colors block retro-underline">Partners</Link></li>
             </ul>
           </div>
 
@@ -96,20 +96,12 @@ const Footer = () => {
           <h3 className="font-press-start text-lg mb-6 text-white">
             GRAND INDIAN HACKATHON SEASON 2025
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
-            <Link to="/hacktober" className="group">
-              <div className="pixel-card bg-gradient-to-br from-orange-600/20 to-red-800/20 border-orange-400 hover:scale-105 transition-transform p-4">
-                <div className="text-2xl mb-2">🍂</div>
-                <div className="font-press-start text-xs text-black group-hover:text-orange-400 transition-colors">HACKTOBER</div>
-                <div className="font-jetbrains text-xs text-black mt-1">Oct 1-31</div>
-              </div>
-            </Link>
-            
-            <Link to="/project-codegen" className="group">
-              <div className="pixel-card bg-gradient-to-br from-blue-600/20 to-cyan-800/20 border-blue-400 hover:scale-105 transition-transform p-4">
-                <div className="text-2xl mb-2">📝</div>
-                <div className="font-press-start text-xs text-black group-hover:text-blue-400 transition-colors">CODEGEN</div>
-                <div className="font-jetbrains text-xs text-black mt-1">Code + Create</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto mb-12">
+            <Link to="/codehypothesis" className="group">
+              <div className="pixel-card bg-gradient-to-br from-purple-600/20 to-pink-800/20 border-purple-400 hover:scale-105 transition-transform p-4">
+                <div className="text-2xl mb-2">🧪</div>
+                <div className="font-press-start text-xs text-black group-hover:text-purple-400 transition-colors">CODE HYPOTHESIS</div>
+                <div className="font-jetbrains text-xs text-black mt-1">September 2025</div>
               </div>
             </Link>
             
@@ -117,15 +109,55 @@ const Footer = () => {
               <div className="pixel-card bg-gradient-to-br from-red-600/20 to-yellow-800/20 border-red-400 hover:scale-105 transition-transform p-4">
                 <div className="text-2xl mb-2">⚡</div>
                 <div className="font-press-start text-xs text-black group-hover:text-red-400 transition-colors">PROTOCOL 404</div>
-                <div className="font-jetbrains text-xs text-black mt-1">Error = Innovation</div>
+                <div className="font-jetbrains text-xs text-black mt-1">October 2025</div>
               </div>
             </Link>
             
-            <Link to="/codehypothesis" className="group">
-              <div className="pixel-card bg-gradient-to-br from-purple-600/20 to-pink-800/20 border-purple-400 hover:scale-105 transition-transform p-4">
-                <div className="text-2xl mb-2">🧪</div>
-                <div className="font-press-start text-xs text-black group-hover:text-purple-400 transition-colors">CODE HYPOTHESIS</div>
-                <div className="font-jetbrains text-xs text-black mt-1">Test Ideas</div>
+            <Link to="/project-codegen" className="group">
+              <div className="pixel-card bg-gradient-to-br from-blue-600/20 to-cyan-800/20 border-blue-400 hover:scale-105 transition-transform p-4">
+                <div className="text-2xl mb-2">📝</div>
+                <div className="font-press-start text-xs text-black group-hover:text-blue-400 transition-colors">CODEGEN</div>
+                <div className="font-jetbrains text-xs text-black mt-1">October 2025</div>
+              </div>
+            </Link>
+            
+            <Link to="/codepocalypse" className="group">
+              <div className="pixel-card bg-gradient-to-br from-gray-600/20 to-black/20 border-gray-400 hover:scale-105 transition-transform p-4">
+                <div className="text-2xl mb-2">☢️</div>
+                <div className="font-press-start text-xs text-black group-hover:text-gray-400 transition-colors">CODEPOCALYPSE</div>
+                <div className="font-jetbrains text-xs text-black mt-1">Oct 18-19, 2025</div>
+              </div>
+            </Link>
+            
+            <Link to="/hacktober" className="group">
+              <div className="pixel-card bg-gradient-to-br from-orange-600/20 to-red-800/20 border-orange-400 hover:scale-105 transition-transform p-4">
+                <div className="text-2xl mb-2">🍂</div>
+                <div className="font-press-start text-xs text-black group-hover:text-orange-400 transition-colors">HACKTOBER</div>
+                <div className="font-jetbrains text-xs text-black mt-1">October 2025</div>
+              </div>
+            </Link>
+            
+            <Link to="/promptstorm" className="group">
+              <div className="pixel-card bg-gradient-to-br from-blue-500/20 to-yellow-500/20 border-blue-400 hover:scale-105 transition-transform p-4">
+                <div className="text-2xl mb-2">⚡</div>
+                <div className="font-press-start text-xs text-black group-hover:text-blue-400 transition-colors">PROMPTSTORM</div>
+                <div className="font-jetbrains text-xs text-black mt-1">Oct 25-26, 2025</div>
+              </div>
+            </Link>
+            
+            <Link to="/grand-tech-assembly" className="group">
+              <div className="pixel-card bg-gradient-to-br from-green-600/20 to-purple-600/20 border-green-400 hover:scale-105 transition-transform p-4">
+                <div className="text-2xl mb-2">🎮</div>
+                <div className="font-press-start text-xs text-black group-hover:text-green-400 transition-colors">TECH ASSEMBLY</div>
+                <div className="font-jetbrains text-xs text-black mt-1">Nov 1-7, 2025</div>
+              </div>
+            </Link>
+            
+            <Link to="/steal-a-thon" className="group">
+              <div className="pixel-card bg-gradient-to-br from-black/20 to-red-600/20 border-white hover:scale-105 transition-transform p-4">
+                <div className="text-2xl mb-2">🔥</div>
+                <div className="font-press-start text-xs text-black group-hover:text-white transition-colors">STEAL-A-THON</div>
+                <div className="font-jetbrains text-xs text-black mt-1">Nov 9-10, 2025</div>
               </div>
             </Link>
           </div>
