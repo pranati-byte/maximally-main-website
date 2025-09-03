@@ -30,6 +30,13 @@ const Events = () => {
       detailsUrl: "/project-codegen"
     },
     {
+      name: "Maximally PromptStorm",
+      dates: "Oct 25-26, 2025",
+      description: "24-hour AI prompt-engineering hackathon. When in doubt, prompt harder.",
+      registerUrl: "/promptstorm",
+      detailsUrl: "/promptstorm"
+    },
+    {
       name: "Maximally Hacktober",
       dates: "October 2025",
       description: "October's biggest hackathon celebration",
