@@ -9,7 +9,8 @@ const Featured = () => {
       tier: "Education Partners",
       companies: [
         { name: "Masters Union", role: "Education Partner" },
-        { name: "NexFellow", role: "Fellowship Partner" }
+        { name: "NexFellow", role: "Fellowship Partner" },
+        { name: "Young Researchers Institute", role: "Research Partner" }
       ]
     },
     {
