@@ -44,6 +44,13 @@ const Events = () => {
       detailsUrl: "/hacktober"
     },
     {
+      name: "Maximally Steal-A-Thon",
+      dates: "Nov 9-10, 2025",
+      description: "The only hackathon where original ideas are banned. If it ain't broke... steal it.",
+      registerUrl: "/steal-a-thon",
+      detailsUrl: "/steal-a-thon"
+    },
+    {
       name: "Codepocalypse",
       dates: "November 2025",
       description: "The ultimate coding showdown",
