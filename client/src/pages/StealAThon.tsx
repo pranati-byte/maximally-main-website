@@ -66,17 +66,23 @@ export default function StealAThon() {
     { 
       title: "Grand Theft Project", 
       prize: "₹3000 + LOR + social feature",
-      icon: <Trophy className="h-8 w-8 text-yellow-400" />
+      icon: <Trophy className="h-8 w-8 text-yellow-400" />,
+      bgColor: "bg-red-500",
+      textColor: "text-black"
     },
     { 
       title: "Best Makeover", 
       prize: "₹2000",
-      icon: <Copy className="h-8 w-8 text-red-500" />
+      icon: <Copy className="h-8 w-8 text-red-500" />,
+      bgColor: "bg-yellow-400",
+      textColor: "text-black"
     },
     { 
       title: "Petty Theft Mentions", 
       prize: "season zine feature + shoutouts",
-      icon: <Star className="h-8 w-8 text-white" />
+      icon: <Star className="h-8 w-8 text-yellow-400" />,
+      bgColor: "bg-red-500",
+      textColor: "text-black"
     }
   ];
 
@@ -88,13 +94,13 @@ export default function StealAThon() {
         keywords="hackathon, remix culture, steal like artist, project improvement, indie hackers, coding competition"
       />
 
-      {/* Ransom Note Background Effects */}
+      {/* Ransom Note Background Effects - reduced stickers, lower opacity */}
       <div className="fixed inset-0 z-0">
-        {/* Floating stickers */}
-        {[...Array(8)].map((_, i) => (
+        {/* Floating stickers - reduced count, lower opacity */}
+        {[...Array(4)].map((_, i) => (
           <div
             key={`sticker-${i}`}
-            className="absolute opacity-20"
+            className="absolute opacity-5"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -103,28 +109,24 @@ export default function StealAThon() {
               animationDelay: `${Math.random() * 2}s`
             }}
           >
-            {i % 4 === 0 && <Copy className="h-6 w-6 text-red-500" />}
-            {i % 4 === 1 && <Lock className="h-6 w-6 text-yellow-400" />}
-            {i % 4 === 2 && <Key className="h-6 w-6 text-white" />}
-            {i % 4 === 3 && <Zap className="h-6 w-6 text-red-500" />}
+            {i % 2 === 0 ? <Copy className="h-6 w-6 text-red-500" /> : <Lock className="h-6 w-6 text-yellow-400" />}
           </div>
         ))}
-        
-        {/* Random typography elements */}
-        {[...Array(6)].map((_, i) => (
+        {/* Random typography elements - reduced count, lower opacity */}
+        {[...Array(3)].map((_, i) => (
           <div
             key={`text-${i}`}
-            className="absolute opacity-10 font-press-start text-white select-none"
+            className="absolute opacity-5 font-press-start text-white select-none"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              fontSize: `${12 + Math.random() * 8}px`,
-              transform: `rotate(${-15 + Math.random() * 30}deg)`,
+              fontSize: `${14 + Math.random() * 6}px`,
+              transform: `rotate(${-10 + Math.random() * 20}deg)`,
               animation: `pulse ${4 + Math.random() * 2}s infinite`,
               animationDelay: `${Math.random() * 3}s`
             }}
           >
-            {['STEAL', 'COPY', 'REMIX', 'UPGRADE', 'SHIP', 'CHAOS'][i]}
+            {['STEAL', 'COPY', 'REMIX'][i]}
           </div>
         ))}
       </div>
@@ -164,14 +166,14 @@ export default function StealAThon() {
           <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
             <Button 
               onClick={() => window.open('#register', '_self')}
-              className="bg-red-500 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-4 border-black shadow-xl transform hover:-rotate-1"
+              className="bg-red-500 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-4 border-white shadow-xl transform"
             >
               <Copy className="h-5 w-5 mr-2" />
               REGISTER NOW
             </Button>
             <Button 
               onClick={() => document.getElementById('rules')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white text-black font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-4 border-red-500 shadow-xl transform hover:rotate-1"
+              className="bg-white text-red-500 font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-4 border-red-500 shadow-xl transform hover:text-white"
             >
               <FileText className="h-5 w-5 mr-2" />
               READ RULES
@@ -219,7 +221,7 @@ export default function StealAThon() {
               WHAT IT IS
               <Copy className="h-8 w-8 text-yellow-400 transform -rotate-12" />
             </h2>
-            <div className="bg-white text-black p-8 border-4 border-red-500 transform -rotate-1 shadow-xl">
+            <div className="bg-white text-black p-8 border-4 border-red-500 shadow-xl -rotate-1">
               <p className="font-jetbrains text-lg md:text-xl leading-relaxed">
                 The only hackathon where original ideas are banned. Find a project, make it better, rename it, and ship. 
                 Remix culture. Speed upgrades. Shameless claims. Steal like an artist.
@@ -237,16 +239,26 @@ export default function StealAThon() {
               <Users className="h-8 w-8 text-red-500 transform -rotate-6" />
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {whoJoins.map((person, index) => (
-                <div key={index} className={`bg-${index % 3 === 0 ? 'red' : index % 3 === 1 ? 'yellow' : 'white'}-${index % 3 === 0 ? '500' : index % 3 === 1 ? '400' : 'white'} text-${index % 3 === 2 ? 'black' : 'white'} p-4 border-2 border-black hover:scale-105 transition-all duration-300 transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
-                  <div className="flex items-center gap-3">
-                    <div className={`w-6 h-6 bg-black rounded-full flex items-center justify-center`}>
-                      <span className="text-white text-xs">✓</span>
+              {whoJoins.map((person, index) => {
+                let checkColor = 'text-white';
+                let checkSize = 'text-xs';
+                let circleBg = 'bg-red-500';
+                if (person === 'Anyone who believes good artists copy and great artists steal') {
+                  checkColor = 'text-white'; // Make check mark white
+                  checkSize = 'text-lg'; // Make the check mark larger
+                  circleBg = 'bg-red-500'; // Keep circle red for emphasis
+                }
+                return (
+                  <div key={index} className={`bg-black text-white p-4 border-2 border-red-500 hover:scale-105 transition-all duration-300 ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
+                    <div className="flex items-center gap-3">
+                      <div className={`w-7 h-7 ${circleBg} rounded-full flex items-center justify-center`}>
+                        <span className={`${checkSize} ${checkColor}`}>✓</span>
+                      </div>
+                      <span className="font-jetbrains font-medium">{person}</span>
                     </div>
-                    <span className="font-jetbrains font-medium">{person}</span>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -261,14 +273,14 @@ export default function StealAThon() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {howItWorksSteps.map((step, index) => (
-                <Card key={index} className={`bg-${index % 2 === 0 ? 'white' : 'black'} text-${index % 2 === 0 ? 'black' : 'white'} border-4 border-${index % 2 === 0 ? 'black' : 'white'} hover:scale-105 transition-all duration-300 transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
+                <Card key={index} className={`bg-black text-white border-2 border-red-500 hover:scale-105 transition-all duration-300 transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className={`bg-${index % 2 === 0 ? 'red' : 'yellow'}-${index % 2 === 0 ? '500' : '400'} text-${index % 2 === 0 ? 'white' : 'black'} w-12 h-12 border-2 border-black flex items-center justify-center font-press-start text-lg flex-shrink-0 transform rotate-12`}>
+                      <div className="bg-red-500 text-white w-12 h-12 border-2 border-black flex items-center justify-center font-press-start text-lg flex-shrink-0 transform rotate-12 ">
                         {step.step}
                       </div>
                       <div>
-                        <div className={`text-${index % 2 === 0 ? 'red' : 'yellow'}-${index % 2 === 0 ? '500' : '400'} mb-2`}>{step.icon}</div>
+                        <div className="text-red-500 mb-2">{step.icon}</div>
                         <p className="font-jetbrains leading-relaxed">{step.title}</p>
                       </div>
                     </div>
@@ -289,9 +301,9 @@ export default function StealAThon() {
             </h2>
             <div className="grid gap-4">
               {rules.map((rule, index) => (
-                <div key={index} className={`bg-${index % 2 === 0 ? 'black' : 'white'} text-${index % 2 === 0 ? 'white' : 'black'} p-4 border-4 border-black hover:scale-105 transition-all duration-300 transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
+                <div key={index} className={`bg-black text-white p-4 border-2 border-red-500 hover:scale-105 transition-all duration-300 transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
                   <div className="flex items-center gap-3">
-                    <div className={`w-8 h-8 bg-red-500 border-2 border-black flex items-center justify-center text-white font-press-start text-sm transform rotate-45`}>
+                    <div className="w-8 h-8 bg-red-500 border-2 border-black flex items-center justify-center text-white font-press-start text-sm transform rotate-45">
                       {index + 1}
                     </div>
                     <span className="font-jetbrains font-medium">{rule}</span>
@@ -311,16 +323,25 @@ export default function StealAThon() {
               <Clock className="h-8 w-8 text-red-500 transform -rotate-12" />
             </h2>
             <div className="space-y-6">
-              {timeline.map((item, index) => (
-                <div key={index} className={`flex items-center gap-6 bg-${index % 3 === 0 ? 'red' : index % 3 === 1 ? 'yellow' : 'white'}-${index % 3 === 0 ? '500' : index % 3 === 1 ? '400' : 'white'} text-${index % 3 === 2 ? 'black' : index % 3 === 1 ? 'black' : 'white'} p-6 border-4 border-black transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
-                  <div className="text-center flex-shrink-0">
-                    <div className="font-press-start text-lg">{item.date}</div>
-                    <div className="font-jetbrains text-sm opacity-80">{item.time}</div>
+              {timeline.map((item, index) => {
+                let borderColor = 'border-black';
+                let hover = 'hover:scale-105 transition-all duration-300';
+                if (index === 0) borderColor = 'border-yellow-400';
+                if (index === 1) borderColor = 'border-red-500';
+                return (
+                  <div
+                    key={index}
+                    className={`flex items-center gap-6 bg-${index % 3 === 0 ? 'red' : index % 3 === 1 ? 'yellow' : 'white'}-${index % 3 === 0 ? '500' : index % 3 === 1 ? '400' : 'white'} text-${index % 3 === 2 ? 'black' : index % 3 === 1 ? 'black' : 'white'} p-6 border-4 ${borderColor} transform ${hover} ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}
+                  >
+                    <div className="text-center flex-shrink-0">
+                      <div className="font-press-start text-lg">{item.date}</div>
+                      <div className="font-jetbrains text-sm opacity-80">{item.time}</div>
+                    </div>
+                    <div className="w-px h-12 bg-black"></div>
+                    <div className="font-jetbrains text-lg font-bold">{item.event}</div>
                   </div>
-                  <div className="w-px h-12 bg-black"></div>
-                  <div className="font-jetbrains text-lg font-bold">{item.event}</div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -369,7 +390,7 @@ export default function StealAThon() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {prizes.map((prize, index) => (
-                <Card key={index} className={`bg-${index % 3 === 0 ? 'red' : index % 3 === 1 ? 'yellow' : 'white'}-${index % 3 === 0 ? '500' : index % 3 === 1 ? '400' : 'white'} text-${index % 3 === 2 ? 'black' : index % 3 === 1 ? 'black' : 'white'} border-4 border-black hover:scale-105 transition-all duration-300 transform ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}>
+                <Card key={index} className={`${prize.bgColor} ${prize.textColor} border-4 border-yellow-400 hover:scale-105 transition-all duration-300 transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
                   <CardContent className="p-6 text-center">
                     <div className="mb-4 flex justify-center">{prize.icon}</div>
                     <h3 className="font-press-start text-lg mb-3 leading-tight">{prize.title}</h3>
@@ -412,7 +433,7 @@ export default function StealAThon() {
                 </ul>
               </div>
 
-              <div className="bg-white text-black p-6 border-4 border-black transform -rotate-1">
+              <div className="bg-white text-black p-6 border-4 border-black transform rotate-1">
                 <h3 className="font-press-start text-xl text-red-500 mb-6 flex items-center gap-2">
                   <Video className="h-5 w-5" />
                   OPTIONAL
@@ -437,7 +458,7 @@ export default function StealAThon() {
               </h2>
               <Button 
                 onClick={() => window.open('#register', '_self')}
-                className="bg-red-500 text-white font-press-start py-6 px-12 text-xl hover:scale-105 transition-all duration-300 border-4 border-black shadow-xl transform hover:-rotate-2"
+                className="bg-red-500 text-white font-press-start py-6 px-12 text-xl hover:scale-105 transition-all duration-300 border-4 border-black shadow-xl transform"
               >
                 <Copy className="h-6 w-6 mr-3" />
                 REGISTER NOW

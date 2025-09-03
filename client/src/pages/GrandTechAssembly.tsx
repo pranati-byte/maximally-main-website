@@ -116,22 +116,21 @@ export default function GrandTechAssembly() {
         keywords="GTA hackathon, mission tracks, 7 day hackathon, Grand Tech Assembly, coding missions, tech competition"
       />
 
-      {/* GTA Background Effects */}
+      {/* GTA Background Effects - reduced clutter, faded elements */}
       <div className="fixed inset-0 z-0">
-        {/* City grid pattern */}
-        <div className="absolute inset-0 opacity-10">
+        {/* City grid pattern - faded */}
+        <div className="absolute inset-0 opacity-5">
           <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
-            {[...Array(144)].map((_, i) => (
-              <div key={i} className="border border-green-400 border-opacity-20"></div>
+            {[...Array(72)].map((_, i) => (
+              <div key={i} className="border border-green-400 border-opacity-10"></div>
             ))}
           </div>
         </div>
-        
-        {/* Wanted stars */}
-        {[...Array(8)].map((_, i) => (
+        {/* Wanted stars - reduced count, faded */}
+        {[...Array(4)].map((_, i) => (
           <div
             key={`star-${i}`}
-            className="absolute opacity-20"
+            className="absolute opacity-5"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -139,32 +138,30 @@ export default function GrandTechAssembly() {
               animationDelay: `${Math.random() * 2}s`
             }}
           >
-            <Star className="h-6 w-6 text-yellow-400" fill="currentColor" />
+            <Star className="h-6 w-6 text-purple-400" fill="currentColor" />
           </div>
         ))}
-        
-        {/* Graffiti-style elements */}
-        {[...Array(6)].map((_, i) => (
+        {/* Graffiti-style elements - reduced count, faded */}
+        {[...Array(3)].map((_, i) => (
           <div
             key={`graffiti-${i}`}
-            className="absolute opacity-10 font-press-start text-purple-400 select-none transform rotate-12"
+            className="absolute opacity-5 font-press-start text-purple-400 select-none transform rotate-12"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
-              fontSize: `${10 + Math.random() * 6}px`,
+              fontSize: `${12 + Math.random() * 6}px`,
               animation: `float ${4 + Math.random() * 2}s infinite`,
               animationDelay: `${Math.random() * 3}s`
             }}
           >
-            {['GTA', 'HACK', 'CITY', 'MISSION', 'RESPECT', 'BUILD'][i]}
+            {['GTA', 'HACK', 'CITY'][i]}
           </div>
         ))}
-
-        {/* Loading bar decorations */}
-        {[...Array(4)].map((_, i) => (
+        {/* Loading bar decorations - faded */}
+        {[...Array(2)].map((_, i) => (
           <div
             key={`loading-${i}`}
-            className="absolute opacity-30"
+            className="absolute opacity-5"
             style={{
               top: `${20 + Math.random() * 60}%`,
               left: `${Math.random() * 100}%`,
@@ -348,15 +345,15 @@ export default function GrandTechAssembly() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {missionTracks.map((track, index) => (
-                <Card key={index} className="bg-gray-800 border-2 border-gray-600 hover:border-green-400 hover:scale-105 transition-all duration-300 relative">
+                <Card key={index} className="bg-gray-800 border-2 border-green-400 hover:border-purple-400 hover:scale-105 transition-all duration-300 relative">
                   <CardContent className="p-6 text-center">
-                    <div className={`${track.color} text-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 border-2 border-gray-700`}>
+                    <div className={`${track.color} text-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 border-2 border-green-400`}>
                       {track.icon}
                     </div>
                     <h3 className={`font-press-start text-lg ${track.textColor} mb-3 leading-tight`}>{track.name}</h3>
                     <p className="font-jetbrains text-gray-300 text-sm">{track.description}</p>
                     <div className="absolute top-2 right-2">
-                      <Star className="h-4 w-4 text-yellow-400" fill="currentColor" />
+                      <Star className="h-4 w-4 text-purple-400" fill="currentColor" />
                     </div>
                   </CardContent>
                 </Card>
