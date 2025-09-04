@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "py-3 sm:py-2 bg-white shadow-md" : "py-4 sm:py-4 bg-white/95 backdrop-blur-sm"
+      isScrolled ? "py-3 sm:py-2 bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20" : "py-4 sm:py-4 bg-white/60 backdrop-blur-lg border-b border-white/10"
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
@@ -79,22 +79,29 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-white/95 backdrop-blur-sm transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        <div className={`md:hidden fixed inset-0 top-[72px] bg-black/40 backdrop-blur-sm transition-all duration-300 ease-in-out ${
+          isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}>
-          <div className="container mx-auto px-4 py-4">
-            <div className="grid grid-cols-2 gap-3">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="font-jetbrains text-white py-3 px-4 text-center rounded-lg text-sm transition-transform active:scale-95 hover:scale-105"
-                  style={{ backgroundColor: item.color }}
-                >
-                  {item.label}
-                </Link>
-              ))}
+          <div className={`w-full bg-white/90 backdrop-blur-lg border-b border-white/20 shadow-2xl transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          }`}>
+            <div className="container mx-auto px-4 py-6">
+              <div className="flex flex-col gap-4">
+                {menuItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="font-jetbrains text-white py-4 px-6 text-center rounded-lg text-sm transition-all duration-200 hover:scale-105 active:scale-95 backdrop-blur-sm border border-white/20 shadow-lg"
+                    style={{ 
+                      background: `linear-gradient(135deg, ${item.color}90, ${item.color}50)`,
+                      boxShadow: `0 8px 32px ${item.color}30`
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>

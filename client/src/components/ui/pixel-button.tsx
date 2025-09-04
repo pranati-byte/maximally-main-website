@@ -8,10 +8,11 @@ const pixelButtonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-maximally-red text-white hover:bg-maximally-yellow hover:text-black hover:shadow-[3px_3px_8px_rgba(255,215,0,0.3)]",
-        secondary: "bg-maximally-blue text-white hover:bg-maximally-blue/80 hover:shadow-[3px_3px_8px_rgba(60,158,231,0.3)]",
-        outline: "bg-white text-maximally-black hover:bg-gray-50 hover:shadow-[3px_3px_8px_rgba(0,0,0,0.2)]",
-        yellow: "bg-maximally-yellow text-black hover:bg-maximally-red hover:text-white hover:shadow-[3px_3px_8px_rgba(229,9,20,0.3)]",
+        default: "bg-gradient-to-br from-maximally-red/90 to-maximally-red backdrop-blur-sm border-maximally-red/50 text-white hover:from-maximally-yellow/90 hover:to-maximally-yellow hover:text-black hover:shadow-[3px_3px_8px_rgba(255,215,0,0.4)] hover:border-maximally-yellow/60",
+        secondary: "bg-gradient-to-br from-maximally-blue/90 to-maximally-blue backdrop-blur-sm border-maximally-blue/50 text-white hover:from-maximally-blue/80 hover:to-maximally-blue/70 hover:shadow-[3px_3px_8px_rgba(60,158,231,0.4)]",
+        outline: "bg-white/80 backdrop-blur-md border-white/60 text-maximally-black hover:bg-white/90 hover:shadow-[3px_3px_8px_rgba(0,0,0,0.2)]",
+        yellow: "bg-gradient-to-br from-maximally-yellow/90 to-maximally-yellow backdrop-blur-sm border-maximally-yellow/50 text-black hover:from-maximally-red/90 hover:to-maximally-red hover:text-white hover:shadow-[3px_3px_8px_rgba(229,9,20,0.4)] hover:border-maximally-red/60",
+        glass: "bg-white/20 backdrop-blur-lg border-white/30 text-maximally-black hover:bg-white/30 hover:shadow-[3px_3px_12px_rgba(255,255,255,0.3)]",
       },
       size: {
         default: "h-12 px-6 py-3 text-sm shadow-[3px_3px_0_0_#000000] gap-2",

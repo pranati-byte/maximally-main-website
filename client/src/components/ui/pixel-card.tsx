@@ -4,12 +4,13 @@ import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const pixelCardVariants = cva(
-  "bg-white border-2 border-black transition-all duration-300",
+  "bg-white/80 backdrop-blur-md border-2 border-white/40 transition-all duration-300",
   {
     variants: {
       variant: {
-        default: "shadow-[8px_8px_0_0_#1A1A1A] hover:shadow-[12px_12px_0_0_#1A1A1A] hover:-translate-y-2",
-        flat: "shadow-[4px_4px_0_0_#1A1A1A] hover:shadow-[6px_6px_0_0_#1A1A1A] hover:-translate-y-1",
+        default: "shadow-[8px_8px_0_0_rgba(26,26,26,0.3)] hover:shadow-[12px_12px_0_0_rgba(26,26,26,0.4)] hover:-translate-y-2 hover:bg-white/90",
+        flat: "shadow-[4px_4px_0_0_rgba(26,26,26,0.3)] hover:shadow-[6px_6px_0_0_rgba(26,26,26,0.4)] hover:-translate-y-1 hover:bg-white/90",
+        glass: "bg-white/25 backdrop-blur-lg border-white/50 shadow-[8px_8px_0_0_rgba(255,255,255,0.2)] hover:shadow-[12px_12px_0_0_rgba(255,255,255,0.3)] hover:-translate-y-2 hover:bg-white/35",
       },
       padding: {
         none: "",
