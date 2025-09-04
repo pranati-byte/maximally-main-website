@@ -93,20 +93,35 @@ const Index = () => {
           <div className="absolute inset-0 pixel-grid opacity-30" />
 
           {/* Floating Pixels */}
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-4 h-4 bg-maximally-red/20 pixel-border animate-float"
-              style={{
-                top: `${Math.random() * 90}%`,
-                left: `${Math.random() * 90}%`,
-                animationDelay: `${i * 0.5}s`,
-                animationDuration: `${4 + i}s`,
-              }}
-            />
-          ))}
+          {[...Array(8)].map((_, i) => {
+            // Generate positions that avoid the center content area
+            const isLeftSide = Math.random() > 0.5;
+            const topPosition = Math.random() * 100;
+            let leftPosition;
+            
+            if (isLeftSide) {
+              // Left side: 0-25% of screen width
+              leftPosition = Math.random() * 25;
+            } else {
+              // Right side: 75-100% of screen width  
+              leftPosition = 75 + Math.random() * 25;
+            }
 
-          <div className="relative container mx-auto px-4 pt-32 pb-20">
+            return (
+              <div
+                key={i}
+                className="absolute w-4 h-4 bg-maximally-red/20 pixel-border animate-float pointer-events-none z-0"
+                style={{
+                  top: `${topPosition}%`,
+                  left: `${leftPosition}%`,
+                  animationDelay: `${i * 0.5}s`,
+                  animationDuration: `${4 + i}s`,
+                }}
+              />
+            );
+          })}
+
+          <div className="relative container mx-auto px-4 pt-32 pb-20 z-10">
             <div className="max-w-4xl mx-auto text-center relative">
               <div className="absolute inset-0 pixel-grid-bg opacity-20"></div>
 
