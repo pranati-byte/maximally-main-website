@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Terminal } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +18,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   const menuItems = [
     { path: "/", label: "Home", color: "#E50914" },
     { path: "/events", label: "Events", color: "#E50914" },
@@ -34,36 +45,36 @@ const Navbar = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center group">
+          <a href="/" className="flex items-center group">
             <Terminal className="h-8 w-8 text-maximally-red mr-2 group-hover:text-maximally-yellow transition-colors" />
             <span className="font-press-start text-maximally-black text-lg group-hover:text-maximally-red transition-colors">Maximally</span>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex space-x-6">
             {menuItems.slice(0, 7).map((item) => (
-              <Link
+              <a
                 key={item.path}
-                to={item.path}
+                href={item.path}
                 className="font-jetbrains text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-maximally-yellow transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              </a>
             ))}
           </div>
 
           {/* Tablet Navigation */}
           <div className="hidden md:flex lg:hidden space-x-4">
             {menuItems.slice(0, 5).map((item) => (
-              <Link
+              <a
                 key={item.path}
-                to={item.path}
+                href={item.path}
                 className="font-jetbrains text-sm text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-maximally-yellow transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -79,25 +90,25 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden fixed top-[60px] left-0 right-0 bottom-0 bg-white/95 backdrop-blur-sm transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}>
-          <div className="container mx-auto px-4 py-4">
-            <div className="grid grid-cols-2 gap-3">
-              {menuItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="font-jetbrains text-white py-3 px-4 text-center rounded-lg text-sm transition-transform active:scale-95 hover:scale-105"
-                  style={{ backgroundColor: item.color }}
-                >
-                  {item.label}
-                </Link>
-              ))}
+        {isMenuOpen && (
+          <div className="md:hidden fixed inset-0 top-[60px] bg-white z-40 animate-in slide-in-from-right duration-300">
+            <div className="container mx-auto px-4 py-4">
+              <div className="grid grid-cols-2 gap-3">
+                {menuItems.map((item) => (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="font-jetbrains text-white py-3 px-4 text-center rounded-lg text-sm transition-transform active:scale-95 hover:scale-105"
+                    style={{ backgroundColor: item.color }}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </nav>
   );
