@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import TallyFormDialog from "@/components/TallyFormDialog";
 import { useState } from "react";
+import { Users, MapPin, Mail, HelpCircle, Building, Target } from "lucide-react";
 
 const About = () => {
   const [isTallyFormOpen, setIsTallyFormOpen] = useState(false);
@@ -18,28 +19,42 @@ const About = () => {
       <section className="py-20 bg-maximally-black relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
         <div className="container mx-auto px-4 text-center relative">
-          <h1 className="font-press-start text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-            <span className="bg-[#39FF14]/20 px-2">Maximally:</span> Where Global{" "}
-            <span className="bg-[#FF5F5F]/20 px-2">Innovators</span> Are Born
+          <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+            About Maximally
           </h1>
-          <p className="font-jetbrains text-white/80 text-xl md:text-2xl mb-8">
-            Ready to change the world?
+          <p className="font-body text-white/80 text-xl md:text-2xl mb-8">
+            We're building the world's most powerful network for teen builders, creators, and founders.
           </p>
-          <TallyFormDialog open={isTallyFormOpen} onOpenChange={setIsTallyFormOpen} />
         </div>
       </section>
 
       {/* Mission Statement */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-press-start text-3xl mb-8">Our Mission</h2>
-          <p className="font-jetbrains text-xl max-w-3xl mx-auto">
-            Maximally isn't just an{" "}
-            <span className="bg-[#39FF14]/20 px-2">educational platform</span>;
-            it's a{" "}
-            <span className="bg-[#FF5F5F]/20 px-2">launchpad</span> for global
-            innovators and leaders.
-          </p>
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* What is Maximally */}
+            <div className="glass-card rounded-card p-8">
+              <Target className="h-12 w-12 text-maximally-red mb-4" />
+              <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">What is Maximally</h3>
+              <p className="font-body text-maximally-gray mb-4">
+                The boldest hackathon ecosystem for teen founders, coders, and creators worldwide. Born in India but built for the world.
+              </p>
+              <p className="font-body text-maximally-gray">
+                We host high-stakes innovation events, chaos sprints, and public launch challenges designed for ambitious teenagers aged 13-19.
+              </p>
+            </div>
+
+            {/* Our Story */}
+            <Link to="/story">
+              <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300">
+                <Building className="h-12 w-12 text-maximally-yellow mb-4 group-hover:text-maximally-red transition-colors" />
+                <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">Our Story</h3>
+                <p className="font-body text-maximally-gray">
+                  Read how Maximally started and our vision for empowering the next generation of builders.
+                </p>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -47,27 +62,28 @@ const About = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="font-press-start text-3xl mb-12 text-center">The Hackathon Experience</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
-              <div className="text-4xl mb-4">🎓</div>
-              <h3 className="font-press-start text-lg mb-3">Expert-Led Sessions</h3>
-              <p className="font-jetbrains">Learn from industry leaders and successful founders</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
-              <div className="text-4xl mb-4">🤝</div>
-              <h3 className="font-press-start text-lg mb-3">IRL Meetups</h3>
-              <p className="font-jetbrains">Connect with peers in exclusive networking events</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="font-press-start text-lg mb-3">1:1 Mentorship</h3>
-              <p className="font-jetbrains">Personal guidance from industry veterans</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="font-press-start text-lg mb-3">Project Building</h3>
-              <p className="font-jetbrains">Create real products with cutting-edge tech</p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Team & Judges */}
+            <Link to="/featured">
+              <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300">
+                <Users className="h-12 w-12 text-maximally-blue mb-4 group-hover:text-maximally-yellow transition-colors" />
+                <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">Team & Judges</h3>
+                <p className="font-body text-maximally-gray">
+                  Meet the industry leaders, mentors, and builders who make our events world-class.
+                </p>
+              </div>
+            </Link>
+
+            {/* Partners */}
+            <Link to="/collaborate">
+              <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300">
+                <MapPin className="h-12 w-12 text-maximally-green mb-4 group-hover:text-maximally-yellow transition-colors" />
+                <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">Partners</h3>
+                <p className="font-body text-maximally-gray">
+                  Discover the organizations and companies supporting our global hackathon league.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -141,21 +157,26 @@ const About = () => {
         </div>
       </section>
 
-      {/* Progressive Schools Section */}
+      {/* Contact and Support */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-press-start text-3xl mb-8">🏫 Progressive Schools Wall</h2>
-          <p className="font-jetbrains text-xl mb-8">
-            Discover India's most innovative schools that are reshaping education.
-            These institutions share our vision for future-ready learning.
-          </p>
-          <Link
-            to="/wall-of-progressive-schools"
-            className="pixel-button bg-maximally-blue text-white inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
-          >
-            <span>View Progressive Schools</span>
-            <ArrowRight className="h-5 w-5" />
-          </Link>
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Link to="/contact">
+              <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300 text-center">
+                <Mail className="h-12 w-12 text-maximally-red mb-4 mx-auto group-hover:text-maximally-yellow transition-colors" />
+                <h3 className="font-display font-semibold text-xl text-maximally-black mb-2">Contact</h3>
+                <p className="font-body text-maximally-gray">Get in touch with questions, partnerships, or collaboration ideas</p>
+              </div>
+            </Link>
+
+            <Link to="/support">
+              <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300 text-center">
+                <HelpCircle className="h-12 w-12 text-maximally-blue mb-4 mx-auto group-hover:text-maximally-yellow transition-colors" />
+                <h3 className="font-display font-semibold text-xl text-maximally-black mb-2">Help Center</h3>
+                <p className="font-body text-maximally-gray">Find answers to common questions and get support</p>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

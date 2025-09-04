@@ -20,32 +20,31 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { path: "/", label: "Home", color: "#E50914" },
     { path: "/events", label: "Events", color: "#E50914" },
-    { path: "/community", label: "Community", color: "#FF2B2B" },
-    { path: "/blog", label: "Blog", color: "#FFCB47" },
-    { path: "/collaborate", label: "Collaborate", color: "#E50914" },
-    { path: "/contact", label: "Contact", color: "#FF2B2B" }
+    { path: "/media", label: "Media", color: "#FFD700" },
+    { path: "/impact", label: "Impact", color: "#3C9EE7" },
+    { path: "/about", label: "About", color: "#9CA3AF" },
+    { path: "/join", label: "Join", color: "#E50914" }
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "py-3 sm:py-2 bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20" : "py-4 sm:py-4 bg-white/60 backdrop-blur-lg border-b border-white/10"
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 h-[68px] flex items-center ${
+      isScrolled ? "bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20" : "bg-white/60 backdrop-blur-lg border-b border-white/10"
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center group">
-            <Terminal className="h-8 w-8 text-maximally-red mr-2 group-hover:text-maximally-yellow transition-colors" />
-            <span className="font-press-start text-maximally-black text-lg group-hover:text-maximally-red transition-colors">Maximally</span>
+            <Terminal className="h-6 w-6 text-maximally-red mr-2 group-hover:text-maximally-yellow transition-colors" />
+            <span className="font-display font-bold text-maximally-black text-xl group-hover:text-maximally-red transition-colors">Maximally</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-6">
-            {menuItems.slice(0, 7).map((item) => (
+          {/* Center Navigation */}
+          <div className="hidden lg:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
+            {menuItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className="font-jetbrains text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
+                className="font-body text-sm font-medium text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-maximally-yellow transition-all duration-300 group-hover:w-full"></span>
@@ -53,13 +52,26 @@ const Navbar = () => {
             ))}
           </div>
 
+          {/* Desktop CTAs */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link to="/events" className="font-body text-sm font-medium text-maximally-black hover:text-maximally-red transition-colors">
+              Explore events
+            </Link>
+            <Link 
+              to="/join" 
+              className="bg-maximally-red text-white px-4 py-2 rounded-hero-cta font-body font-medium text-sm hover:bg-maximally-yellow hover:text-maximally-black transition-all duration-200 glass-button"
+            >
+              Join the league
+            </Link>
+          </div>
+
           {/* Tablet Navigation */}
-          <div className="hidden md:flex lg:hidden space-x-4">
-            {menuItems.slice(0, 5).map((item) => (
+          <div className="hidden md:flex lg:hidden space-x-6">
+            {menuItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className="font-jetbrains text-sm text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
+                className="font-body text-sm font-medium text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-maximally-yellow transition-all duration-300 group-hover:w-full"></span>
@@ -92,7 +104,7 @@ const Navbar = () => {
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsMenuOpen(false)}
-                    className="font-jetbrains text-white py-4 px-6 text-center rounded-lg text-sm transition-all duration-200 hover:scale-105 active:scale-95 backdrop-blur-sm border border-white/20 shadow-lg"
+                    className="font-body font-medium text-white py-4 px-6 text-center rounded-card text-sm transition-all duration-200 hover:scale-105 active:scale-95 backdrop-blur-sm border border-white/20 shadow-lg"
                     style={{ 
                       background: `linear-gradient(135deg, ${item.color}90, ${item.color}50)`,
                       boxShadow: `0 8px 32px ${item.color}30`

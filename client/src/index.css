@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 /* Enhanced pixel animations for Shipathon */
 @keyframes pixel-glow {
@@ -339,6 +339,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Maximally Brand Design System */
+:root {
+  --maximally-red: #E50914;
+  --maximally-yellow: #FFD700;
+  --maximally-black: #0A0A0A;
+  --maximally-white: #FFFFFF;
+  --maximally-gray: #9CA3AF;
+  
+  /* Spacing scale */
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  
+  /* Radius tokens */
+  --radius-card: 16px;
+  --radius-hero-cta: 24px;
+  
+  /* Header height */
+  --header-height: 68px;
+}
 
 @layer utilities {
   /* Glassmorphism utilities */

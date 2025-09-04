@@ -51,6 +51,11 @@ import YoutubeVsStartup from "@/pages/BlogPost/YoutubeVsStartup";
 import TopCareersForTeens from "@/pages/BlogPost/TopCareersForTeens";
 import WallOfProgressiveSchools from "@/pages/WallOfProgressiveSchools";
 import Events from "./pages/Events";
+import EventsHub from "./pages/EventsHub";
+import Media from "./pages/Media";
+import Impact from "./pages/Impact";
+import Join from "./pages/Join";
+import About from "./pages/About";
 import MakeathonForFuture from './pages/BlogPost/MakeathonForFuture';
 import StartupsThroughMaximally from './pages/BlogPost/StartupsThroughMaximally';
 import MaximallyMakeathonsForTeachers from './pages/BlogPost/MaximallyMakeathonsForTeachers';
@@ -149,6 +154,12 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/bootcamps" element={<Navigate to="/" replace />} />
             <Route path="/makeathon" element={<Makeathon />} />
+            
+            {/* New Hub Pages */}
+            <Route path="/media" element={<Media />} />
+            <Route path="/impact" element={<Impact />} />
+            <Route path="/join" element={<Join />} />
+            <Route path="/about" element={<About />} />
             {/* Team route removed */}
 
             <Route path="/blog" element={<Blog />} />
@@ -201,7 +212,8 @@ const App = () => {
 
             <Route path="/featured" element={<Featured />} />
 
-            <Route path="/events" element={<Events />} />
+            <Route path="/events" element={<EventsHub />} />
+            <Route path="/events/past" element={<Events />} />
           <Route path="/blog/makeathon-for-future" element={<MakeathonForFuture />} />
           <Route path="/blog/startups-through-maximally" element={<StartupsThroughMaximally />} />
           <Route path="/blog/maximally-makeathons-for-teachers" element={<MaximallyMakeathonsForTeachers />} />
@@ -221,15 +233,29 @@ const App = () => {
           <Route path="/blog/parents-support-makeathon" element={<ParentsSupport />} />
           <Route path="/blog/makeathon-faq-maximally" element={<MakeathonFAQ />} />
           <Route path="/blog/teamwork-leadership-maximally" element={<BuildingTeamworkLeadership />} />
-          <Route path="/shipathon" element={<Shipathon />} />
-          <Route path="/codehypothesis" element={<CodeHypothesis />} />
-          <Route path="/protocol-404" element={<Protocol404 />} />
-          <Route path="/project-codegen" element={<ProjectCodeGen />} />
-          <Route path="/promptstorm" element={<PromptStorm />} />
-          <Route path="/steal-a-thon" element={<StealAThon />} />
-          <Route path="/codepocalypse" element={<Codepocalypse />} />
-          <Route path="/grand-tech-assembly" element={<GrandTechAssembly />} />
-          <Route path="/hacktober" element={<Hacktober />} />
+          {/* New Events Structure - /events/[slug] */}
+          <Route path="/events/ai-shipathon" element={<Shipathon />} />
+          <Route path="/events/code-hypothesis" element={<CodeHypothesis />} />
+          <Route path="/events/protocol-404" element={<Protocol404 />} />
+          <Route path="/events/codegen" element={<ProjectCodeGen />} />
+          <Route path="/events/promptstorm" element={<PromptStorm />} />
+          <Route path="/events/steal-a-thon" element={<StealAThon />} />
+          <Route path="/events/codepocalypse" element={<Codepocalypse />} />
+          <Route path="/events/tech-assembly-2025" element={<GrandTechAssembly />} />
+          <Route path="/events/hacktober-2025" element={<Hacktober />} />
+          <Route path="/events/summer-2025-makeathon" element={<Makeathon />} />
+          
+          {/* Redirects from old event URLs */}
+          <Route path="/shipathon" element={<Navigate to="/events/ai-shipathon" replace />} />
+          <Route path="/codehypothesis" element={<Navigate to="/events/code-hypothesis" replace />} />
+          <Route path="/protocol-404" element={<Navigate to="/events/protocol-404" replace />} />
+          <Route path="/project-codegen" element={<Navigate to="/events/codegen" replace />} />
+          <Route path="/promptstorm" element={<Navigate to="/events/promptstorm" replace />} />
+          <Route path="/steal-a-thon" element={<Navigate to="/events/steal-a-thon" replace />} />
+          <Route path="/codepocalypse" element={<Navigate to="/events/codepocalypse" replace />} />
+          <Route path="/grand-tech-assembly" element={<Navigate to="/events/tech-assembly-2025" replace />} />
+          <Route path="/hacktober" element={<Navigate to="/events/hacktober-2025" replace />} />
+          <Route path="/makeathon" element={<Navigate to="/events/summer-2025-makeathon" replace />} />
           
           {/* Code Hypothesis Blog Posts */}
           <Route path="/blog/why-hackathons-got-boring-code-hypothesis" element={<WhyHackathonsGotBoring />} />

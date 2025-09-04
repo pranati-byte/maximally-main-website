@@ -1,0 +1,298 @@
+MASTER PROMPT — REFACTOR MAXIMALLY WEBSITE
+You are updating the Maximally website. Apply these changes across the codebase. Keep the code clean, type-safe, accessible, fast.
+
+SITE WIDE
+
+Brand tokens
+
+Colors: red #E50914, yellow #FFD700, black #0A0A0A, white #FFFFFF, gray #9CA3AF.
+
+Radius: 16px on cards, 24px on hero CTAs.
+
+Spacing scale: 8, 12, 16, 24, 32, 48, 64.
+
+Typography
+
+Display: Monument Extended or Outfit as fallback. Body: Inter or system.
+
+Weight: 800 for hero title, 600 for section titles, 400 for body.
+
+Header
+
+Sticky header height 68px, left logo, center menu, right CTAs.
+
+CTAs: “Explore events”, “Join the league”.
+
+Utility icons: search, Discord.
+
+Footer
+
+Columns: Events, Media, Impact, About, Legal.
+
+Social: Discord, YouTube, Instagram, LinkedIn.
+
+MENU — REDUCE AND GROUP
+Replace the current menu with 5 items:
+
+Events → /events
+
+Media → /media
+
+Impact → /impact
+
+About → /about
+
+Join → /join
+
+Move or merge:
+
+Blog, Press, Videos, Success Stories → under Media.
+
+Reports, Goals, Open data → under Impact.
+
+Story, Partners, Contact, Help → under About.
+
+Community, Volunteers, Judges, Sponsors → under Join.
+
+Keep Privacy and Terms under /legal/privacy and /legal/terms.
+
+URLS AND ROUTING
+
+All event pages must live under /events/[slug].
+
+Create 301 redirects from any old event paths to the new format.
+
+Implement these slugs now, case-safe, kebab-case:
+
+Code Hypothesis → /events/code-hypothesis
+
+Protocol 404 → /events/protocol-404
+
+CodeGen → /events/codegen
+
+Codepocalypse → /events/codepocalypse
+
+Hacktober → /events/hacktober-2025
+
+Promptstorm → /events/promptstorm
+
+Tech Assembly → /events/tech-assembly-2025
+
+Steal-a-thon → /events/steal-a-thon
+
+AI Shipathon → /events/ai-shipathon
+
+Summer 2025 Makeathon → /events/summer-2025-makeathon
+
+Create /events hub with filters: Time (upcoming, past), Month, Format (online, hybrid, offline), Track (AI, startup, creative), Duration.
+
+Child routes:
+
+/events/past – past events list view.
+
+/events/[slug]/register, /events/[slug]/judges, /events/[slug]/faq as anchors or sections on the same page.
+
+HOMEPAGE LAYOUT — EXACT ORDER
+Order the sections exactly like this:
+
+HERO
+
+H1: “We host hackathons, not the boring ones.”
+
+Sub: “High-stakes sprints for builders worldwide.”
+
+Buttons: “Explore events” /events, “Join the league” /join.
+
+Visual: bold red and yellow pixel accents, light glitch lines, no heavy effects, fast to load.
+
+Add small trust row: “Global, Digital, Fast”.
+
+FEATURED EVENT
+
+Single large card for the event we choose as featured.
+
+Props: title, date, duration, short pitch, CTA “Register” linking to /events/[slug].
+
+Show “View all events” secondary link to /events.
+
+MOST RECENT PAST EVENT
+
+Card highlighting the event that just ended.
+
+Include: winners link, recap, gallery, key stats.
+
+CTA: “See recap” linking to /events/[slug]#recap.
+
+METRICS STRIP
+
+Headline: “Proof of work at Maximally.”
+
+KPIs live from a simple config or CMS:
+
+Total participants
+
+Projects shipped
+
+Judges and partners
+
+Countries reached
+
+Add small note: “Updated monthly.”
+
+TESTIMONIAL STORIES
+
+3 cards with quotes and faces, link to /media/stories.
+
+Each card: quote, name, role, event tag.
+
+PARTNERS
+
+Logo grid with simple hover titles.
+
+CTA: “Partner with us” → /about/partners or /join#sponsors.
+
+JOIN
+
+Discord join, newsletter, volunteers.
+
+Small grid of 4 cards:
+
+Join community → /join
+
+Volunteer roles → /join#volunteer
+
+Judge interest → /join#judges
+
+Sponsor interest → /join#sponsors
+
+HOMEPAGE CONTENT STRINGS — USE THESE
+
+Hero H1: We host hackathons, not the boring ones.
+
+Hero sub: A global league for builders. Internet-native events for real proof of work.
+
+Featured label: Featured event
+
+Recent label: Just wrapped
+
+Metrics title: Proof of work at Maximally
+
+Stories title: What builders say
+
+Partners title: Partners and allies
+
+Join title: Join the league
+
+MEDIA HUB
+
+/media with sections:
+
+Press features
+
+Blog index
+
+Videos
+
+Stories
+
+Brand kit download
+
+Child: /blog and /blog/[slug] remain.
+
+IMPACT HUB
+
+/impact with:
+
+Top metrics row
+
+Latest event report card with link to a deep dive
+
+Quarterly targets
+
+Open data link to sheet or PDF
+
+Partner quotes
+
+Optional child: /impact/reports/[yyyy-mm].
+
+ABOUT
+
+/about with:
+
+What is Maximally
+
+Our story
+
+Team and judges highlight
+
+Partners
+
+Contact and Help
+
+Move Contact here: /about/contact
+
+Move Help Center here: /about/help
+
+JOIN
+
+/join with:
+
+Community join options
+
+Volunteer roles and form
+
+Judge interest form
+
+Sponsor interest form
+
+Keep forms short and mobile-first.
+
+ACCESSIBILITY AND SPEED
+
+All images responsive, loading="lazy", descriptive alt.
+
+Color contrast AA or better.
+
+Keyboard focus visible on all links and buttons.
+
+Ship a prefetch for /events from the hero buttons.
+
+SEO
+
+Update title and meta for each page.
+
+Add structured data for events under /events/[slug].
+
+Canonicals on blog posts and events.
+
+301 all old event URLs to the new /events/[slug] paths.
+
+ANALYTICS
+
+Track views and CTA clicks on hero, featured event, recent past event, metrics, stories, partners, join.
+
+Track filter use on /events.
+
+ACCEPTANCE CRITERIA — CHECKLIST
+
+Header shows: Events, Media, Impact, About, Join. Right side CTAs present.
+
+Homepage follows exact section order, mobile and desktop.
+
+Every event URL now lives under /events/[slug], old paths 301 to new.
+
+/events hub has working filters and proper empty states.
+
+Media, Impact, About, Join pages exist with sections above.
+
+Lighthouse score 90+ for performance and accessibility on homepage and one event page.
+
+TEST DATA HOOKS
+
+Featured event default: AI Shipathon → /events/ai-shipathon.
+
+Most recent past event default: AI Shipathon once it’s marked completed, else last ending by date.
+
+Metrics mock config in one JSON file or CMS fields.
+
+END OF PROMPT
