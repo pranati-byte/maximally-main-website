@@ -121,10 +121,9 @@ const Index = () => {
                 </div>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-black mb-6 sm:mb-8 relative minecraft-text">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-press-start text-maximally-black mb-6 sm:mb-8 relative">
                 {text}
                 <span className="inline-block w-[3px] h-[1em] bg-maximally-red ml-1 animate-[cursor-blink_1s_infinite]" />
-                <div className="absolute inset-0 minecraft-glow"></div>
               </h1>
 
               {/* Floating Subtext with Twist */}
@@ -168,7 +167,7 @@ const Index = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <Link
                     to="/events"
-                    className="pixel-button bg-maximally-red text-white group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red h-16 px-6 font-press-start text-sm"
+                    className="bg-maximally-red text-white group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:bg-maximally-red-dark h-16 px-6 font-press-start text-sm rounded-hero-cta glass-button border border-maximally-red backdrop-blur-sm"
                   >
                     <span>Explore Events</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -176,7 +175,7 @@ const Index = () => {
 
                   <Link
                     to="/join"
-                    className="bg-maximally-yellow text-maximally-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:bg-maximally-red hover:text-white h-16 px-6 font-body font-medium rounded-hero-cta"
+                    className="bg-maximally-yellow text-maximally-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:bg-maximally-red hover:text-white h-16 px-6 font-press-start text-sm rounded-hero-cta glass-button border border-maximally-yellow backdrop-blur-sm"
                   >
                     <Users className="h-4 w-4" />
                     <span>Join the League</span>
@@ -238,10 +237,10 @@ const Index = () => {
                   <div className="text-center md:text-right">
                     <Link
                       to="/events/ai-shipathon"
-                      className="bg-maximally-red text-white px-8 py-4 rounded-hero-cta font-body font-medium hover:bg-maximally-yellow hover:text-maximally-black transition-all duration-200 inline-flex items-center gap-2"
+                      className="pixel-glass-button border-maximally-red bg-maximally-red/90 text-white hover:bg-maximally-yellow hover:text-maximally-black hover:border-maximally-yellow px-8 py-4 rounded-hero-cta font-press-start text-xs transition-all duration-200 inline-flex items-center gap-2"
                     >
                       <span>Register Now</span>
-                      <ArrowRight className="h-5 w-5" />
+                      <ArrowRight className="h-4 w-4" />
                     </Link>
                     <p className="font-body text-xs text-maximally-gray mt-2">Registration closes Feb 10</p>
                   </div>
@@ -300,10 +299,10 @@ const Index = () => {
                   <div className="text-center md:text-right">
                     <Link
                       to="/events/protocol-404"
-                      className="glass-button px-6 py-3 rounded-hero-cta font-body font-medium text-maximally-black hover:bg-white/30 transition-all duration-200 inline-flex items-center gap-2"
+                      className="pixel-glass-button border-maximally-gray bg-white/20 text-maximally-black hover:bg-white/40 px-6 py-3 rounded-hero-cta font-press-start text-xs transition-all duration-200 inline-flex items-center gap-2"
                     >
                       <span>View Results</span>
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-3 w-3" />
                     </Link>
                   </div>
                 </div>
@@ -469,7 +468,7 @@ const Index = () => {
             </div>
 
             <div className="text-center">
-              <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">
+              <h3 className="font-press-start text-lg text-maximally-black mb-4">
                 Want to Partner With Us?
               </h3>
               <p className="font-body text-maximally-gray mb-8 max-w-2xl mx-auto">
@@ -477,11 +476,11 @@ const Index = () => {
               </p>
               <Link
                 to="/collaborate"
-                className="bg-maximally-yellow text-maximally-black px-8 py-4 rounded-hero-cta font-body font-medium hover:bg-maximally-red hover:text-white transition-all duration-200 inline-flex items-center gap-2"
+                className="pixel-glass-button border-maximally-yellow bg-maximally-yellow/90 text-maximally-black hover:bg-maximally-red hover:text-white hover:border-maximally-red px-8 py-4 rounded-hero-cta font-press-start text-xs transition-all duration-200 inline-flex items-center gap-2"
               >
-                <Users className="h-5 w-5" />
+                <Users className="h-4 w-4" />
                 <span>Partner With Us</span>
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -501,17 +500,17 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
               <Link
                 to="/events"
-                className="glass-button border border-white/20 text-white px-8 py-4 rounded-hero-cta font-body font-medium hover:bg-white/10 transition-all duration-200 inline-flex items-center justify-center gap-2"
+                className="pixel-glass-button border-white/40 bg-white/10 text-white hover:bg-white/20 px-8 py-4 rounded-hero-cta font-press-start text-xs transition-all duration-200 inline-flex items-center justify-center gap-2"
               >
-                <Trophy className="h-5 w-5" />
+                <Trophy className="h-4 w-4" />
                 <span>Explore Events</span>
               </Link>
               
               <Link
                 to="/join"
-                className="bg-maximally-red text-white px-8 py-4 rounded-hero-cta font-body font-medium hover:bg-maximally-yellow hover:text-maximally-black transition-all duration-200 inline-flex items-center justify-center gap-2"
+                className="pixel-glass-button border-maximally-red bg-maximally-red/90 text-white hover:bg-maximally-yellow hover:text-maximally-black hover:border-maximally-yellow px-8 py-4 rounded-hero-cta font-press-start text-xs transition-all duration-200 inline-flex items-center justify-center gap-2"
               >
-                <Users className="h-5 w-5" />
+                <Users className="h-4 w-4" />
                 <span>Join Community</span>
               </Link>
             </div>

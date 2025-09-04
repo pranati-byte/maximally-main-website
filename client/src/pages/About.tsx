@@ -19,7 +19,7 @@ const About = () => {
       <section className="py-20 bg-maximally-black relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-white/10 animate-grid-flow" />
         <div className="container mx-auto px-4 text-center relative">
-          <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+          <h1 className="font-press-start text-2xl md:text-3xl lg:text-4xl text-white mb-6">
             About Maximally
           </h1>
           <p className="font-body text-white/80 text-xl md:text-2xl mb-8">
@@ -35,7 +35,7 @@ const About = () => {
             {/* What is Maximally */}
             <div className="glass-card rounded-card p-8">
               <Target className="h-12 w-12 text-maximally-red mb-4" />
-              <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">What is Maximally</h3>
+              <h3 className="font-press-start text-sm text-maximally-black mb-4">What is Maximally</h3>
               <p className="font-body text-maximally-gray mb-4">
                 The boldest hackathon ecosystem for teen founders, coders, and creators worldwide. Born in India but built for the world.
               </p>
@@ -48,7 +48,7 @@ const About = () => {
             <Link to="/story">
               <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300">
                 <Building className="h-12 w-12 text-maximally-yellow mb-4 group-hover:text-maximally-red transition-colors" />
-                <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">Our Story</h3>
+                <h3 className="font-press-start text-sm text-maximally-black mb-4">Our Story</h3>
                 <p className="font-body text-maximally-gray">
                   Read how Maximally started and our vision for empowering the next generation of builders.
                 </p>
@@ -67,7 +67,7 @@ const About = () => {
             <Link to="/featured">
               <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300">
                 <Users className="h-12 w-12 text-maximally-blue mb-4 group-hover:text-maximally-yellow transition-colors" />
-                <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">Team & Judges</h3>
+                <h3 className="font-press-start text-sm text-maximally-black mb-4">Team & Judges</h3>
                 <p className="font-body text-maximally-gray">
                   Meet the industry leaders, mentors, and builders who make our events world-class.
                 </p>
@@ -78,7 +78,7 @@ const About = () => {
             <Link to="/collaborate">
               <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300">
                 <MapPin className="h-12 w-12 text-maximally-green mb-4 group-hover:text-maximally-yellow transition-colors" />
-                <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">Partners</h3>
+                <h3 className="font-press-start text-sm text-maximally-black mb-4">Partners</h3>
                 <p className="font-body text-maximally-gray">
                   Discover the organizations and companies supporting our global hackathon league.
                 </p>
@@ -164,7 +164,7 @@ const About = () => {
             <Link to="/contact">
               <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300 text-center">
                 <Mail className="h-12 w-12 text-maximally-red mb-4 mx-auto group-hover:text-maximally-yellow transition-colors" />
-                <h3 className="font-display font-semibold text-xl text-maximally-black mb-2">Contact</h3>
+                <h3 className="font-press-start text-sm text-maximally-black mb-2">Contact</h3>
                 <p className="font-body text-maximally-gray">Get in touch with questions, partnerships, or collaboration ideas</p>
               </div>
             </Link>
@@ -172,7 +172,7 @@ const About = () => {
             <Link to="/support">
               <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300 text-center">
                 <HelpCircle className="h-12 w-12 text-maximally-blue mb-4 mx-auto group-hover:text-maximally-yellow transition-colors" />
-                <h3 className="font-display font-semibold text-xl text-maximally-black mb-2">Help Center</h3>
+                <h3 className="font-press-start text-sm text-maximally-black mb-2">Help Center</h3>
                 <p className="font-body text-maximally-gray">Find answers to common questions and get support</p>
               </div>
             </Link>

@@ -49,7 +49,7 @@ const Join = () => {
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="font-display font-bold text-4xl md:text-5xl text-maximally-black mb-4">
+            <h1 className="font-press-start text-2xl md:text-3xl text-maximally-black mb-4">
               Join the League
             </h1>
             <p className="font-body text-lg text-maximally-gray max-w-2xl mx-auto">
@@ -80,14 +80,14 @@ const Join = () => {
           {/* Newsletter Signup */}
           <div className="mt-16 max-w-md mx-auto">
             <div className="glass-card rounded-card p-8 text-center">
-              <h3 className="font-display font-semibold text-xl text-maximally-black mb-4">
+              <h3 className="font-press-start text-sm text-maximally-black mb-4">
                 Stay Updated
               </h3>
               <p className="font-body text-maximally-gray mb-6">
                 Get notified about new events and opportunities.
               </p>
               <Link to="/newsletter">
-                <button className="w-full bg-maximally-red text-white px-6 py-3 rounded-hero-cta font-body font-medium hover:bg-maximally-yellow hover:text-maximally-black transition-all duration-200">
+                <button className="w-full pixel-glass-button border-maximally-red bg-maximally-red/90 text-white hover:bg-maximally-yellow hover:text-maximally-black hover:border-maximally-yellow px-6 py-3 rounded-hero-cta font-press-start text-xs transition-all duration-200">
                   Join Newsletter
                 </button>
               </Link>

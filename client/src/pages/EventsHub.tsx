@@ -34,7 +34,7 @@ const EventsHub = () => {
       duration: "24 hours",
       format: "Hybrid",
       track: "Creative",
-      status: "past",
+      status: "upcoming",
       description: "Chaos sprints for wild ideas and experimental builds.",
       participants: "300+"
     },
@@ -59,6 +59,72 @@ const EventsHub = () => {
       status: "past",
       description: "Beyond hackathons - ship real products.",
       participants: "200+"
+    },
+    {
+      slug: "promptstorm",
+      title: "PromptStorm",
+      date: "Oct 10-12, 2024",
+      duration: "48 hours",
+      format: "Online",
+      track: "AI",
+      status: "past",
+      description: "Master the art of AI prompting and LLM orchestration.",
+      participants: "380+"
+    },
+    {
+      slug: "steal-a-thon",
+      title: "Steal-a-Thon",
+      date: "Sep 20-22, 2024",
+      duration: "48 hours",
+      format: "Online",
+      track: "Creative",
+      status: "past",
+      description: "Take existing ideas and make them 10x better.",
+      participants: "250+"
+    },
+    {
+      slug: "codepocalypse",
+      title: "Codepocalypse",
+      date: "Aug 15-17, 2024",
+      duration: "48 hours",
+      format: "Hybrid",
+      track: "Startup",
+      status: "past",
+      description: "End-times coding challenge for ultimate survival builds.",
+      participants: "320+"
+    },
+    {
+      slug: "tech-assembly-2025",
+      title: "Grand Tech Assembly 2025",
+      date: "Jul 25-28, 2024",
+      duration: "72 hours",
+      format: "Offline",
+      track: "Startup",
+      status: "past",
+      description: "Our flagship annual gathering of global builders.",
+      participants: "600+"
+    },
+    {
+      slug: "hacktober-2025",
+      title: "Hacktober 2025",
+      date: "Oct 31 - Nov 2, 2024",
+      duration: "48 hours",
+      format: "Online",
+      track: "Creative",
+      status: "past",
+      description: "Halloween-themed chaos coding for spooky season.",
+      participants: "400+"
+    },
+    {
+      slug: "summer-2025-makeathon",
+      title: "Summer 2025 Makeathon",
+      date: "Jun 10-12, 2024",
+      duration: "48 hours",
+      format: "Hybrid",
+      track: "Startup",
+      status: "past",
+      description: "Premier startup simulation for ambitious builders.",
+      participants: "550+"
     }
   ];
 
@@ -80,7 +146,7 @@ const EventsHub = () => {
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="font-display font-bold text-4xl md:text-5xl text-maximally-black mb-4">
+            <h1 className="font-press-start text-2xl md:text-3xl text-maximally-black mb-4">
               Events Hub
             </h1>
             <p className="font-body text-lg text-maximally-gray max-w-2xl mx-auto">
@@ -94,10 +160,10 @@ const EventsHub = () => {
               <button
                 key={filter.id}
                 onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 rounded-hero-cta font-body font-medium transition-all duration-200 ${
+                className={`px-6 py-3 rounded-hero-cta font-press-start text-xs transition-all duration-200 backdrop-blur-sm border ${
                   activeFilter === filter.id
-                    ? "bg-maximally-red text-white shadow-lg"
-                    : "glass-button text-maximally-black hover:bg-white/30"
+                    ? "bg-maximally-red text-white border-maximally-red shadow-lg"
+                    : "bg-white/20 text-maximally-black border-white/30 hover:bg-white/40"
                 }`}
               >
                 {filter.label}
@@ -135,7 +201,7 @@ const EventsHub = () => {
                     </div>
                   </div>
 
-                  <h3 className="font-display font-semibold text-xl text-maximally-black mb-3 group-hover:text-maximally-red transition-colors">
+                  <h3 className="font-press-start text-sm text-maximally-black mb-3 group-hover:text-maximally-red transition-colors">
                     {event.title}
                   </h3>
                   
@@ -169,7 +235,7 @@ const EventsHub = () => {
           {filteredEvents.length === 0 && (
             <div className="text-center py-16">
               <Filter className="h-16 w-16 text-maximally-gray mx-auto mb-4 opacity-50" />
-              <h3 className="font-display font-semibold text-xl text-maximally-black mb-2">No events found</h3>
+              <h3 className="font-press-start text-sm text-maximally-black mb-2">No events found</h3>
               <p className="font-body text-maximally-gray">Try adjusting your filters to see more events.</p>
             </div>
           )}
@@ -177,7 +243,7 @@ const EventsHub = () => {
           {/* Past Events Link */}
           <div className="text-center mt-12">
             <Link to="/events/past">
-              <button className="glass-button px-8 py-4 rounded-hero-cta font-body font-medium text-maximally-black hover:bg-white/30 transition-all duration-200">
+              <button className="pixel-glass-button border-maximally-gray bg-white/20 text-maximally-black hover:bg-white/40 px-8 py-4 rounded-hero-cta font-press-start text-xs transition-all duration-200">
                 View All Past Events
               </button>
             </Link>

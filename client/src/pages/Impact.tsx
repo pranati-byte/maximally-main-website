@@ -21,7 +21,7 @@ const Impact = () => {
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="font-display font-bold text-4xl md:text-5xl text-maximally-black mb-4">
+            <h1 className="font-press-start text-2xl md:text-3xl text-maximally-black mb-4">
               Proof of work at Maximally
             </h1>
             <p className="font-body text-lg text-maximally-gray max-w-2xl mx-auto">
@@ -50,7 +50,7 @@ const Impact = () => {
             <Link to="/impact/reports/2025-01">
               <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300">
                 <FileBarChart className="h-12 w-12 text-maximally-red mb-4 group-hover:text-maximally-yellow transition-colors" />
-                <h3 className="font-display font-semibold text-xl text-maximally-black mb-2">Latest Event Report</h3>
+                <h3 className="font-press-start text-sm text-maximally-black mb-2">Latest Event Report</h3>
                 <p className="font-body text-maximally-gray">Deep dive into our most recent hackathon outcomes</p>
               </div>
             </Link>
@@ -58,7 +58,7 @@ const Impact = () => {
             {/* Quarterly Targets */}
             <div className="glass-card rounded-card p-8">
               <Target className="h-12 w-12 text-maximally-blue mb-4" />
-              <h3 className="font-display font-semibold text-xl text-maximally-black mb-2">Quarterly Targets</h3>
+              <h3 className="font-press-start text-sm text-maximally-black mb-2">Quarterly Targets</h3>
               <p className="font-body text-maximally-gray mb-4">Q1 2025 goals and progress tracking</p>
               <div className="space-y-2">
                 <div className="flex justify-between font-body text-sm">
@@ -75,7 +75,7 @@ const Impact = () => {
             <Link to="/data">
               <div className="glass-card rounded-card p-8 group cursor-pointer hover:scale-105 transition-all duration-300">
                 <Database className="h-12 w-12 text-maximally-yellow mb-4 group-hover:text-maximally-red transition-colors" />
-                <h3 className="font-display font-semibold text-xl text-maximally-black mb-2">Open Data</h3>
+                <h3 className="font-press-start text-sm text-maximally-black mb-2">Open Data</h3>
                 <p className="font-body text-maximally-gray">Access our full dataset and analytics</p>
               </div>
             </Link>
@@ -83,7 +83,7 @@ const Impact = () => {
             {/* Partner Quotes */}
             <div className="glass-card rounded-card p-8">
               <Quote className="h-12 w-12 text-maximally-purple mb-4" />
-              <h3 className="font-display font-semibold text-xl text-maximally-black mb-2">Partner Feedback</h3>
+              <h3 className="font-press-start text-sm text-maximally-black mb-2">Partner Feedback</h3>
               <blockquote className="font-body italic text-maximally-gray">
                 "Maximally delivers the highest quality hackathon experience we've seen globally."
               </blockquote>
