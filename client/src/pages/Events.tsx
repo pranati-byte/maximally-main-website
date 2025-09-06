@@ -104,16 +104,16 @@ const Events = () => {
 
   const getColorClasses = (color: string, isHover = false) => {
     const colors = {
-      red: isHover ? 'border-red-500 shadow-red-500/20' : 'border-red-200',
-      orange: isHover ? 'border-orange-500 shadow-orange-500/20' : 'border-orange-200',
-      yellow: isHover ? 'border-yellow-500 shadow-yellow-500/20' : 'border-yellow-200',
-      green: isHover ? 'border-green-500 shadow-green-500/20' : 'border-green-200',
-      blue: isHover ? 'border-blue-500 shadow-blue-500/20' : 'border-blue-200',
-      purple: isHover ? 'border-purple-500 shadow-purple-500/20' : 'border-purple-200',
-      pink: isHover ? 'border-pink-500 shadow-pink-500/20' : 'border-pink-200',
-      indigo: isHover ? 'border-indigo-500 shadow-indigo-500/20' : 'border-indigo-200',
-      gray: isHover ? 'border-gray-500 shadow-gray-500/20' : 'border-gray-200',
-      slate: isHover ? 'border-slate-500 shadow-slate-500/20' : 'border-slate-200',
+      red: isHover ? 'border-red-600 shadow-red-500/30' : 'border-red-400',
+      orange: isHover ? 'border-orange-600 shadow-orange-500/30' : 'border-orange-400',
+      yellow: isHover ? 'border-yellow-600 shadow-yellow-500/30' : 'border-yellow-500',
+      green: isHover ? 'border-green-600 shadow-green-500/30' : 'border-green-400',
+      blue: isHover ? 'border-blue-600 shadow-blue-500/30' : 'border-blue-400',
+      purple: isHover ? 'border-purple-600 shadow-purple-500/30' : 'border-purple-400',
+      pink: isHover ? 'border-pink-600 shadow-pink-500/30' : 'border-pink-400',
+      indigo: isHover ? 'border-indigo-600 shadow-indigo-500/30' : 'border-indigo-400',
+      gray: isHover ? 'border-gray-600 shadow-gray-500/30' : 'border-gray-400',
+      slate: isHover ? 'border-slate-600 shadow-slate-500/30' : 'border-slate-400',
     };
     return colors[color as keyof typeof colors] || colors.red;
   };
@@ -174,7 +174,7 @@ const Events = () => {
           <div className="flex flex-col sm:flex-row gap-3 mt-auto">
             <Link
               to={event.registerUrl}
-              className={`pixel-button bg-gradient-to-r from-${event.color}-600 to-${event.color}-700 text-white font-press-start text-xs px-6 py-3 hover:scale-105 hover:shadow-lg transition-all flex items-center gap-2 justify-center border-2 border-${event.color}-800 hover:border-${event.color}-900`}
+              className="pixel-button bg-gradient-to-r from-red-600 to-red-700 text-white font-press-start text-xs px-6 py-3 hover:scale-105 hover:shadow-lg transition-all flex items-center gap-2 justify-center border-2 border-red-800 hover:border-red-900 hover:from-red-700 hover:to-red-800"
             >
               <span>Register Now</span>
               <ExternalLink className="h-3 w-3" />
@@ -206,12 +206,16 @@ const Events = () => {
       whileTap={{ scale: 0.98 }}
     >
       <Card className={`minecraft-block bg-gradient-to-br from-gray-50 to-gray-100/50 transition-all duration-500 border-4 ${getColorClasses(event.color)} hover:${getColorClasses(event.color, true)} shadow-lg hover:shadow-2xl h-full relative overflow-hidden`}>
+        {/* Pixelated corner decoration */}
+        <div className={`absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-${event.color}-500 to-${event.color}-600 pixel-corner opacity-20 group-hover:opacity-40 transition-opacity`}></div>
+        <div className={`absolute bottom-0 left-0 w-6 h-6 bg-gradient-to-tr from-${event.color}-400 to-${event.color}-500 pixel-corner opacity-10 group-hover:opacity-30 transition-opacity`}></div>
+        
         {/* Vintage badge */}
         <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-400 to-amber-500 text-amber-900 font-press-start text-xs px-3 py-1 pixel-border transform rotate-12">
           PAST
         </div>
         
-        <CardContent className="p-8 h-full flex flex-col">
+        <CardContent className="p-8 h-full flex flex-col relative z-10">
           <div className="flex items-center gap-2 mb-3">
             <div className={`p-2 rounded-lg bg-${event.color}-100 pixel-border opacity-70`}>
               <Calendar className={`h-4 w-4 ${getAccentColor(event.color)}`} />
@@ -229,7 +233,7 @@ const Events = () => {
           <div className="mt-auto">
             <Link
               to={event.reportUrl}
-              className={`pixel-button bg-gradient-to-r from-${event.color}-600 to-${event.color}-700 text-white font-press-start text-xs px-6 py-3 hover:scale-105 hover:shadow-lg transition-all flex items-center gap-2 justify-center w-fit border-2 border-${event.color}-800`}
+              className="pixel-button bg-gradient-to-r from-gray-600 to-gray-700 text-white font-press-start text-xs px-6 py-3 hover:scale-105 hover:shadow-lg transition-all flex items-center gap-2 justify-center w-fit border-2 border-gray-800 hover:from-gray-700 hover:to-gray-800"
             >
               <FileText className="h-3 w-3" />
               <span>View Report</span>
