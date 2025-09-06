@@ -4,7 +4,26 @@ import { Card, CardContent } from '@/components/ui/card';
 import SEO from '@/components/SEO';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Target, Clock, Globe, Users, Code, Star, Trophy, Zap, Gamepad2, Map, Shield, Crown, MessageSquare, ExternalLink, FileText, Video, Flame, Bot } from 'lucide-react';
+import {
+  Target,
+  Clock,
+  Globe,
+  Users,
+  Code,
+  Star,
+  Trophy,
+  Zap,
+  Gamepad2,
+  Map,
+  Shield,
+  Crown,
+  MessageSquare,
+  ExternalLink,
+  FileText,
+  Video,
+  Flame,
+  Bot,
+} from 'lucide-react';
 
 export default function GrandTechAssembly() {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,103 +33,160 @@ export default function GrandTechAssembly() {
   }, []);
 
   const fastFacts = [
-    { icon: <Clock className="h-5 w-5" />, label: "Date", value: "Nov 1–7, 2025" },
-    { icon: <Clock className="h-5 w-5" />, label: "Duration", value: "7 days" },
-    { icon: <Globe className="h-5 w-5" />, label: "Format", value: "Online, Devpost submissions" },
-    { icon: <Users className="h-5 w-5" />, label: "Team size", value: "Solo or up to 4" },
-    { icon: <Globe className="h-5 w-5" />, label: "Region", value: "Global" },
-    { icon: <MessageSquare className="h-5 w-5" />, label: "Comms", value: "Discord" }
+    {
+      icon: <Clock className="h-5 w-5" />,
+      label: 'Date',
+      value: 'Nov 1–7, 2025',
+    },
+    { icon: <Clock className="h-5 w-5" />, label: 'Duration', value: '7 days' },
+    {
+      icon: <Globe className="h-5 w-5" />,
+      label: 'Format',
+      value: 'Online, Devpost submissions',
+    },
+    {
+      icon: <Users className="h-5 w-5" />,
+      label: 'Team size',
+      value: 'Solo or up to 4',
+    },
+    { icon: <Globe className="h-5 w-5" />, label: 'Region', value: 'Global' },
+    {
+      icon: <MessageSquare className="h-5 w-5" />,
+      label: 'Comms',
+      value: 'Discord',
+    },
   ];
 
   const whoJoins = [
-    "Anyone anywhere",
-    "Beginners and no-coders",
-    "Designers",
-    "Hackers",
-    "Indie makers",
-    "No prep needed",
-    "Any stack works"
+    'Anyone anywhere',
+    'Beginners and no-coders',
+    'Designers',
+    'Hackers',
+    'Indie makers',
+    'No prep needed',
+    'Any stack works',
   ];
 
   const howItWorksSteps = [
-    { step: 1, title: "Pick a mission track, then add side quests if you like.", icon: <Target className="h-6 w-6" /> },
-    { step: 2, title: "Build your \"city\" project during the week.", icon: <Map className="h-6 w-6" /> },
-    { step: 3, title: "Submit on Devpost with links and a short writeup.", icon: <FileText className="h-6 w-6" /> },
-    { step: 4, title: "Optional 60s video pitch.", icon: <Video className="h-6 w-6" /> }
+    {
+      step: 1,
+      title: 'Pick a mission track, then add side quests if you like.',
+      icon: <Target className="h-6 w-6" />,
+    },
+    {
+      step: 2,
+      title: 'Build your "city" project during the week.',
+      icon: <Map className="h-6 w-6" />,
+    },
+    {
+      step: 3,
+      title: 'Submit on Devpost with links and a short writeup.',
+      icon: <FileText className="h-6 w-6" />,
+    },
+    {
+      step: 4,
+      title: 'Optional 60s video pitch.',
+      icon: <Video className="h-6 w-6" />,
+    },
   ];
 
   const missionTracks = [
     {
-      name: "The Heist",
-      description: "Automation, AI, time or resource saving",
+      name: 'The Heist',
+      description: 'Automation, AI, time or resource saving',
       icon: <Bot className="h-8 w-8" />,
-      color: "bg-green-500",
-      textColor: "text-green-400"
+      color: 'bg-green-500',
+      textColor: 'text-green-400',
     },
     {
-      name: "Street Hustle", 
-      description: "Scrappy fast MVPs, memes, tools",
+      name: 'Street Hustle',
+      description: 'Scrappy fast MVPs, memes, tools',
       icon: <Zap className="h-8 w-8" />,
-      color: "bg-yellow-500",
-      textColor: "text-yellow-400"
+      color: 'bg-yellow-500',
+      textColor: 'text-yellow-400',
     },
     {
-      name: "Chaos Mode",
-      description: "Cursed, weird, experimental, art-tech",
+      name: 'Chaos Mode',
+      description: 'Cursed, weird, experimental, art-tech',
       icon: <Flame className="h-8 w-8" />,
-      color: "bg-purple-500",
-      textColor: "text-purple-400"
+      color: 'bg-purple-500',
+      textColor: 'text-purple-400',
     },
     {
-      name: "Rise to Power",
-      description: "Ambitious, startup-scale builds",
+      name: 'Rise to Power',
+      description: 'Ambitious, startup-scale builds',
       icon: <Crown className="h-8 w-8" />,
-      color: "bg-red-500",
-      textColor: "text-red-400"
+      color: 'bg-red-500',
+      textColor: 'text-red-400',
     },
     {
-      name: "Vice Streets",
-      description: "Beginner lane, no-code and first projects",
+      name: 'Vice Streets',
+      description: 'Beginner lane, no-code and first projects',
       icon: <Shield className="h-8 w-8" />,
-      color: "bg-blue-500",
-      textColor: "text-blue-400"
-    }
+      color: 'bg-blue-500',
+      textColor: 'text-blue-400',
+    },
   ];
 
   const sideQuests = [
-    "Meme contest",
-    "3 hour speed build", 
-    "Chaos drop",
-    "Funniest demo"
+    'Meme contest',
+    '3 hour speed build',
+    'Chaos drop',
+    'Funniest demo',
   ];
 
   const timeline = [
-    { date: "Nov 1", time: "12:00 AM IST", event: "Start", icon: <Star className="h-5 w-5" /> },
-    { date: "Nov 3", time: "TBD", event: "Side quest drops", icon: <Target className="h-5 w-5" /> },
-    { date: "Nov 5", time: "TBD", event: "Side quest drops", icon: <Target className="h-5 w-5" /> },
-    { date: "Nov 7", time: "11:59 PM IST", event: "Submissions close", icon: <Clock className="h-5 w-5" /> },
-    { date: "Mid Nov", time: "TBD", event: "Winners at Grand Ceremony", icon: <Trophy className="h-5 w-5" /> }
+    {
+      date: 'Nov 1',
+      time: '12:00 AM IST',
+      event: 'Start',
+      icon: <Star className="h-5 w-5" />,
+    },
+    {
+      date: 'Nov 3',
+      time: 'TBD',
+      event: 'Side quest drops',
+      icon: <Target className="h-5 w-5" />,
+    },
+    {
+      date: 'Nov 5',
+      time: 'TBD',
+      event: 'Side quest drops',
+      icon: <Target className="h-5 w-5" />,
+    },
+    {
+      date: 'Nov 7',
+      time: '11:59 PM IST',
+      event: 'Submissions close',
+      icon: <Clock className="h-5 w-5" />,
+    },
+    {
+      date: 'Mid Nov',
+      time: 'TBD',
+      event: 'Winners at Grand Ceremony',
+      icon: <Trophy className="h-5 w-5" />,
+    },
   ];
 
   const trackAwards = [
-    "Respect the Hustle",
-    "Side Quest Kingpin",
-    "Most Cursed Build", 
-    "The Kingpin Award",
-    "First Blood"
+    'Respect the Hustle',
+    'Side Quest Kingpin',
+    'Most Cursed Build',
+    'The Kingpin Award',
+    'First Blood',
   ];
 
   const sideQuestAwards = [
-    "Meme Lord",
-    "Nitro Coder",
-    "Chaos Dropper",
-    "Comedian Coder",
-    "Sleepless but Shipping"
+    'Meme Lord',
+    'Nitro Coder',
+    'Chaos Dropper',
+    'Comedian Coder',
+    'Sleepless but Shipping',
   ];
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
-      <SEO 
+      <SEO
         title="Grand Tech Assembly 2025 - GTA-Themed 7-Day Hackathon"
         description="Pick your mission, build your city, earn respect. 7-day GTA-themed hackathon. Nov 1-7, 2025. Grand Indian Hackathon Season."
         keywords="GTA hackathon, mission tracks, 7 day hackathon, Grand Tech Assembly, coding missions, tech competition"
@@ -122,80 +198,45 @@ export default function GrandTechAssembly() {
         <div className="absolute inset-0 opacity-10">
           <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
             {[...Array(144)].map((_, i) => (
-              <div key={i} className="border border-green-400 border-opacity-20"></div>
+              <div
+                key={i}
+                className="border border-green-400 border-opacity-20"
+              ></div>
             ))}
           </div>
         </div>
-        
-        {/* Wanted stars */}
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={`star-${i}`}
-            className="absolute opacity-20"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animation: `pulse ${2 + Math.random() * 3}s infinite`,
-              animationDelay: `${Math.random() * 2}s`
-            }}
-          >
-            <Star className="h-6 w-6 text-yellow-400" fill="currentColor" />
-          </div>
-        ))}
-        
-        {/* Graffiti-style elements */}
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={`graffiti-${i}`}
-            className="absolute opacity-10 font-press-start text-purple-400 select-none transform rotate-12"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              fontSize: `${10 + Math.random() * 6}px`,
-              animation: `float ${4 + Math.random() * 2}s infinite`,
-              animationDelay: `${Math.random() * 3}s`
-            }}
-          >
-            {['GTA', 'HACK', 'CITY', 'MISSION', 'RESPECT', 'BUILD'][i]}
-          </div>
-        ))}
-
-        {/* Loading bar decorations */}
-        {[...Array(4)].map((_, i) => (
-          <div
-            key={`loading-${i}`}
-            className="absolute opacity-30"
-            style={{
-              top: `${20 + Math.random() * 60}%`,
-              left: `${Math.random() * 100}%`,
-              width: '150px',
-              animation: `drift ${5 + Math.random() * 3}s infinite`,
-              animationDelay: `${Math.random() * 3}s`
-            }}
-          >
-            <div className="h-2 bg-gray-800 border border-green-400">
-              <div className="h-full bg-gradient-to-r from-green-400 to-purple-400" style={{ width: `${30 + Math.random() * 70}%` }}></div>
-            </div>
-          </div>
-        ))}
       </div>
 
       <div className="relative z-10">
         <Navbar />
-        
+
         {/* Hero Section */}
         <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-20">
           {/* Badge */}
-          <div className={`mb-6 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+          <div
+            className={`mb-6 transform transition-all duration-1000 ${
+              isVisible
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-4 opacity-0'
+            }`}
+          >
             <div className="bg-red-600 text-yellow-400 px-6 py-2 border-2 border-green-400 relative">
-              <span className="font-press-start text-xs">🎮 GRAND INDIAN HACKATHON SEASON 🎮</span>
+              <span className="font-press-start text-xs">
+                🎮 GRAND INDIAN HACKATHON SEASON 🎮
+              </span>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-purple-400"></div>
               <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-green-400"></div>
             </div>
           </div>
 
           {/* Title with GTA styling */}
-          <div className={`text-center mb-8 transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+          <div
+            className={`text-center mb-8 transform transition-all duration-1000 delay-200 ${
+              isVisible
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-4 opacity-0'
+            }`}
+          >
             <h1 className="font-press-start text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
               <span className="text-red-500 drop-shadow-2xl">GRAND</span>
               <br />
@@ -212,30 +253,6 @@ export default function GrandTechAssembly() {
             </div>
           </div>
 
-          {/* CTAs with mission-style design */}
-          <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <Button 
-              onClick={() => window.open('#register', '_self')}
-              className="bg-green-500 text-black font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-purple-400 shadow-xl relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-green-600 transform skew-x-6 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
-              <span className="relative z-10 flex items-center">
-                <Gamepad2 className="h-5 w-5 mr-2" />
-                REGISTER NOW
-              </span>
-            </Button>
-            <Button 
-              onClick={() => window.open('#discord', '_self')}
-              className="bg-purple-500 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-green-400 shadow-xl relative overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-purple-600 transform skew-x-6 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
-              <span className="relative z-10 flex items-center">
-                <MessageSquare className="h-5 w-5 mr-2" />
-                JOIN DISCORD
-              </span>
-            </Button>
-          </div>
-
           {/* Mission icons decoration */}
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
             <div className="flex space-x-6 opacity-60">
@@ -250,6 +267,38 @@ export default function GrandTechAssembly() {
               </div>
             </div>
           </div>
+
+          {/* CTAs with mission-style design */}
+          <div
+            className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-400 ${
+              isVisible
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-4 opacity-0'
+            }`}
+          >
+            <Button
+              onClick={() => window.open('#register', '_self')}
+              className="bg-green-500 text-black font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-purple-400 shadow-xl relative overflow-hidden z-50"
+            >
+              <div className="absolute inset-0 bg-green-600 transform skew-x-6 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
+              <span className="relative z-10 flex items-center">
+                <Gamepad2 className="h-5 w-5 mr-2" />
+                REGISTER NOW
+              </span>
+            </Button>
+            <Button
+              onClick={() =>
+                window.open('https://discord.gg/WmSXVzDYuq', '_self')
+              }
+              className="bg-purple-500 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-green-400 shadow-xl relative overflow-hidden z-50"
+            >
+              <div className="absolute inset-0 bg-purple-600 transform skew-x-6 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
+              <span className="relative z-10 flex items-center">
+                <MessageSquare className="h-5 w-5 mr-2" />
+                JOIN DISCORD
+              </span>
+            </Button>
+          </div>
         </section>
 
         {/* Fast Facts Bar */}
@@ -262,8 +311,12 @@ export default function GrandTechAssembly() {
                   <div className="flex items-center justify-center mb-2 text-green-400 group-hover:text-purple-400 transition-colors">
                     {fact.icon}
                   </div>
-                  <div className="font-press-start text-xs text-gray-300 mb-1">{fact.label}</div>
-                  <div className="font-jetbrains text-sm text-green-400 font-bold">{fact.value}</div>
+                  <div className="font-press-start text-xs text-gray-300 mb-1">
+                    {fact.label}
+                  </div>
+                  <div className="font-jetbrains text-sm text-green-400 font-bold">
+                    {fact.value}
+                  </div>
                 </div>
               ))}
             </div>
@@ -281,8 +334,9 @@ export default function GrandTechAssembly() {
             <div className="bg-gray-900 border-2 border-green-400 p-8 relative">
               <div className="absolute -top-1 left-0 right-0 h-1 bg-gradient-to-r from-green-400 via-purple-400 to-green-400"></div>
               <p className="font-jetbrains text-lg md:text-xl text-gray-300 leading-relaxed">
-                A 7 day global online hackathon styled after Grand Theft Auto. Not crime, just missions, respect, and chaos. 
-                Open world vibe. You choose your path.
+                A 7 day global online hackathon styled after Grand Theft Auto.
+                Not crime, just missions, respect, and chaos. Open world vibe.
+                You choose your path.
               </p>
             </div>
           </div>
@@ -298,11 +352,19 @@ export default function GrandTechAssembly() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {whoJoins.map((person, index) => (
-                <div key={index} className="bg-gray-800 border border-purple-400 p-4 hover:border-green-400 hover:scale-105 transition-all duration-300 relative">
+                <div
+                  key={index}
+                  className="bg-gray-800 border border-purple-400 p-4 hover:border-green-400 hover:scale-105 transition-all duration-300 relative"
+                >
                   <div className="absolute top-0 right-0 w-2 h-2 bg-green-400"></div>
                   <div className="flex items-center gap-3">
-                    <Star className="h-4 w-4 text-yellow-400" fill="currentColor" />
-                    <span className="font-jetbrains text-gray-300 font-medium">{person}</span>
+                    <Star
+                      className="h-4 w-4 text-yellow-400"
+                      fill="currentColor"
+                    />
+                    <span className="font-jetbrains text-gray-300 font-medium">
+                      {person}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -320,7 +382,10 @@ export default function GrandTechAssembly() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {howItWorksSteps.map((step, index) => (
-                <Card key={index} className="bg-gray-900 border-2 border-green-400 hover:border-purple-400 hover:scale-105 transition-all duration-300">
+                <Card
+                  key={index}
+                  className="bg-gray-900 border-2 border-green-400 hover:border-purple-400 hover:scale-105 transition-all duration-300"
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="bg-green-500 text-black w-12 h-12 border border-purple-400 flex items-center justify-center font-press-start text-lg flex-shrink-0">
@@ -328,7 +393,9 @@ export default function GrandTechAssembly() {
                       </div>
                       <div>
                         <div className="text-purple-400 mb-2">{step.icon}</div>
-                        <p className="font-jetbrains text-gray-300 leading-relaxed">{step.title}</p>
+                        <p className="font-jetbrains text-gray-300 leading-relaxed">
+                          {step.title}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -348,15 +415,29 @@ export default function GrandTechAssembly() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {missionTracks.map((track, index) => (
-                <Card key={index} className="bg-gray-800 border-2 border-gray-600 hover:border-green-400 hover:scale-105 transition-all duration-300 relative">
+                <Card
+                  key={index}
+                  className="bg-gray-800 border-2 border-gray-600 hover:border-green-400 hover:scale-105 transition-all duration-300 relative"
+                >
                   <CardContent className="p-6 text-center">
-                    <div className={`${track.color} text-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 border-2 border-gray-700`}>
+                    <div
+                      className={`${track.color} text-white w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 border-2 border-gray-700`}
+                    >
                       {track.icon}
                     </div>
-                    <h3 className={`font-press-start text-lg ${track.textColor} mb-3 leading-tight`}>{track.name}</h3>
-                    <p className="font-jetbrains text-gray-300 text-sm">{track.description}</p>
+                    <h3
+                      className={`font-press-start text-lg ${track.textColor} mb-3 leading-tight`}
+                    >
+                      {track.name}
+                    </h3>
+                    <p className="font-jetbrains text-gray-300 text-sm">
+                      {track.description}
+                    </p>
                     <div className="absolute top-2 right-2">
-                      <Star className="h-4 w-4 text-yellow-400" fill="currentColor" />
+                      <Star
+                        className="h-4 w-4 text-yellow-400"
+                        fill="currentColor"
+                      />
                     </div>
                   </CardContent>
                 </Card>
@@ -375,13 +456,20 @@ export default function GrandTechAssembly() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {sideQuests.map((quest, index) => (
-                <div key={index} className="bg-purple-900 border border-purple-400 p-4 hover:bg-purple-800 transition-colors duration-300 relative">
+                <div
+                  key={index}
+                  className="bg-purple-900 border border-purple-400 p-4 hover:bg-purple-800 transition-colors duration-300 relative"
+                >
                   <div className="absolute -top-1 -left-1 w-4 h-4 bg-green-400"></div>
                   <div className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-yellow-400 flex items-center justify-center">
-                      <span className="font-press-start text-xs text-black">?</span>
+                      <span className="font-press-start text-xs text-black">
+                        ?
+                      </span>
                     </div>
-                    <span className="font-jetbrains text-gray-300 font-medium">{quest}</span>
+                    <span className="font-jetbrains text-gray-300 font-medium">
+                      {quest}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -399,14 +487,23 @@ export default function GrandTechAssembly() {
             </h2>
             <div className="space-y-6">
               {timeline.map((item, index) => (
-                <div key={index} className="flex items-center gap-6 bg-gray-800 border border-green-400 p-6 hover:border-purple-400 transition-colors duration-300">
+                <div
+                  key={index}
+                  className="flex items-center gap-6 bg-gray-800 border border-green-400 p-6 hover:border-purple-400 transition-colors duration-300"
+                >
                   <div className="text-center flex-shrink-0">
-                    <div className="font-press-start text-lg text-green-400">{item.date}</div>
-                    <div className="font-jetbrains text-sm text-gray-400">{item.time}</div>
+                    <div className="font-press-start text-lg text-green-400">
+                      {item.date}
+                    </div>
+                    <div className="font-jetbrains text-sm text-gray-400">
+                      {item.time}
+                    </div>
                   </div>
                   <div className="text-purple-400">{item.icon}</div>
                   <div className="w-px h-12 bg-gradient-to-b from-green-400 to-purple-400"></div>
-                  <div className="font-jetbrains text-gray-300 text-lg">{item.event}</div>
+                  <div className="font-jetbrains text-gray-300 text-lg">
+                    {item.event}
+                  </div>
                 </div>
               ))}
             </div>
@@ -424,19 +521,26 @@ export default function GrandTechAssembly() {
             <div className="bg-gray-800 border-2 border-purple-400 p-8 relative">
               <div className="absolute -top-1 left-4 right-4 h-2 bg-gradient-to-r from-green-400 to-purple-400"></div>
               <div className="mb-6">
-                <h3 className="font-press-start text-lg text-green-400 mb-4">MODE</h3>
+                <h3 className="font-press-start text-lg text-green-400 mb-4">
+                  MODE
+                </h3>
                 <p className="font-jetbrains text-gray-300">
                   Async on Devpost, judges are City Kingpins
                 </p>
               </div>
               <div className="mb-6">
-                <h3 className="font-press-start text-lg text-green-400 mb-4">CRITERIA</h3>
+                <h3 className="font-press-start text-lg text-green-400 mb-4">
+                  CRITERIA
+                </h3>
                 <p className="font-jetbrains text-gray-300">
-                  Originality, execution, creativity (including no-code), gut feel that it screams GTA chaos
+                  Originality, execution, creativity (including no-code), gut
+                  feel that it screams GTA chaos
                 </p>
               </div>
               <div>
-                <h3 className="font-press-start text-lg text-green-400 mb-4">FEEDBACK</h3>
+                <h3 className="font-press-start text-lg text-green-400 mb-4">
+                  FEEDBACK
+                </h3>
                 <p className="font-jetbrains text-gray-300">
                   Short written notes for teams
                 </p>
@@ -453,13 +557,15 @@ export default function GrandTechAssembly() {
               PRIZES & AWARDS
               <Trophy className="h-8 w-8 text-green-400" />
             </h2>
-            
+
             {/* Cash Pool */}
             <div className="text-center mb-8">
               <div className="bg-green-500 text-black px-8 py-4 border-2 border-purple-400 inline-block relative">
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-purple-400"></div>
                 <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-yellow-400"></div>
-                <span className="font-press-start text-xl">CASH POOL: ₹5000</span>
+                <span className="font-press-start text-xl">
+                  CASH POOL: ₹5000
+                </span>
               </div>
             </div>
 
@@ -467,10 +573,15 @@ export default function GrandTechAssembly() {
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="bg-gray-800 border-2 border-green-400">
                 <CardContent className="p-6">
-                  <h3 className="font-press-start text-xl text-green-400 mb-4">TRACK AWARDS</h3>
+                  <h3 className="font-press-start text-xl text-green-400 mb-4">
+                    TRACK AWARDS
+                  </h3>
                   <ul className="space-y-2">
                     {trackAwards.map((award, index) => (
-                      <li key={index} className="font-jetbrains text-gray-300 flex items-center gap-2">
+                      <li
+                        key={index}
+                        className="font-jetbrains text-gray-300 flex items-center gap-2"
+                      >
                         <Crown className="h-4 w-4 text-yellow-400" />
                         {award}
                       </li>
@@ -481,11 +592,19 @@ export default function GrandTechAssembly() {
 
               <Card className="bg-gray-800 border-2 border-purple-400">
                 <CardContent className="p-6">
-                  <h3 className="font-press-start text-xl text-purple-400 mb-4">SIDE QUEST AWARDS</h3>
+                  <h3 className="font-press-start text-xl text-purple-400 mb-4">
+                    SIDE QUEST AWARDS
+                  </h3>
                   <ul className="space-y-2">
                     {sideQuestAwards.map((award, index) => (
-                      <li key={index} className="font-jetbrains text-gray-300 flex items-center gap-2">
-                        <Star className="h-4 w-4 text-yellow-400" fill="currentColor" />
+                      <li
+                        key={index}
+                        className="font-jetbrains text-gray-300 flex items-center gap-2"
+                      >
+                        <Star
+                          className="h-4 w-4 text-yellow-400"
+                          fill="currentColor"
+                        />
                         {award}
                       </li>
                     ))}
@@ -504,7 +623,7 @@ export default function GrandTechAssembly() {
               SUBMISSION
               <FileText className="h-8 w-8 text-purple-400" />
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-green-900 border-2 border-green-400 p-6 relative">
                 <div className="absolute -top-1 -right-1 w-6 h-6 bg-purple-400 flex items-center justify-center">
@@ -545,7 +664,9 @@ export default function GrandTechAssembly() {
 
             <div className="mt-8 bg-gray-800 border border-yellow-400 p-4">
               <p className="font-jetbrains text-gray-300 text-sm">
-                <span className="text-yellow-400 font-bold">Note:</span> Plagiarism without change is not allowed, credit sources when used
+                <span className="text-yellow-400 font-bold">Note:</span>{' '}
+                Plagiarism without change is not allowed, credit sources when
+                used
               </p>
             </div>
           </div>
@@ -561,17 +682,18 @@ export default function GrandTechAssembly() {
                   READY TO RUN THE CITY?
                 </h2>
                 <p className="font-jetbrains text-gray-300 mb-8">
-                  Choose your mission. Build your empire. Earn respect in the streets.
+                  Choose your mission. Build your empire. Earn respect in the
+                  streets.
                 </p>
-                <Button 
+                <Button
                   onClick={() => window.open('#register', '_self')}
-                  className="bg-purple-500 text-white font-press-start py-6 px-12 text-xl hover:scale-105 transition-all duration-300 border-2 border-green-400 shadow-xl relative overflow-hidden"
+                  className="bg-purple-500 text-white font-press-start py-4 px-6 md:py-6 md:px-12 text-sm md:text-xl hover:scale-105 transition-all duration-300 border-2 border-green-400 shadow-xl relative overflow-hidden z-50 w-full max-w-sm mx-auto"
                 >
                   <div className="absolute inset-0 bg-green-500 transform skew-x-6 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
-                  <span className="relative z-10 flex items-center text-white">
-                    <Gamepad2 className="h-6 w-6 mr-3" />
+                  <span className="relative z-10 flex items-center justify-center text-white">
+                    <Gamepad2 className="h-4 w-4 md:h-6 md:w-6 mr-2 md:mr-3" />
                     START YOUR MISSION
-                    <ExternalLink className="h-6 w-6 ml-3" />
+                    <ExternalLink className="h-4 w-4 md:h-6 md:w-6 ml-2 md:ml-3" />
                   </span>
                 </Button>
               </div>
