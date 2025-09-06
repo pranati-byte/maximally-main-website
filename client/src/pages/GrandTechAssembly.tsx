@@ -277,7 +277,7 @@ export default function GrandTechAssembly() {
             }`}
           >
             <Button
-              onClick={() => window.open('#register', '_self')}
+              onClick={() => window.open('https://gta-maximally.devpost.com/', '_self')}
               className="bg-green-500 text-black font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-purple-400 shadow-xl relative overflow-hidden z-50"
             >
               <div className="absolute inset-0 bg-green-600 transform skew-x-6 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
@@ -686,7 +686,7 @@ export default function GrandTechAssembly() {
                   streets.
                 </p>
                 <Button
-                  onClick={() => window.open('#register', '_self')}
+                  onClick={() => window.open('https://gta-maximally.devpost.com/', '_self')}
                   className="bg-purple-500 text-white font-press-start py-4 px-6 md:py-6 md:px-12 text-sm md:text-xl hover:scale-105 transition-all duration-300 border-2 border-green-400 shadow-xl relative overflow-hidden z-50 w-full max-w-sm mx-auto"
                 >
                   <div className="absolute inset-0 bg-green-500 transform skew-x-6 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
