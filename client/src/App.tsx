@@ -93,6 +93,10 @@ import StealAThon from './pages/StealAThon';
 import Codepocalypse from './pages/Codepocalypse';
 import GrandTechAssembly from './pages/GrandTechAssembly';
 
+// Event Reports
+import MakeathonReport from './pages/MakeathonReport';
+import ShipathonReport from './pages/ShipathonReport';
+
 // Code Hypothesis Blog Posts
 import WhyHackathonsGotBoring from './pages/blog/WhyHackathonsGotBoring';
 import ScienceWildIdeas from './pages/blog/ScienceWildIdeas';
@@ -398,8 +402,10 @@ const App = () => {
               element={<GrandTechAssembly />}
             />
             <Route path="/hacktober" element={<Hacktober />} />
-            <Route path="/makeathon-report" element={<makeathon-report />} />
-            <Route path="/shipathon-report" element={<shipathon-report />} />
+
+            {/* Event Reports */}
+            <Route path="/makeathon-report" element={<MakeathonReport />} />
+            <Route path="/shipathon-report" element={<ShipathonReport />} />
 
             {/* Code Hypothesis Blog Posts */}
             <Route
