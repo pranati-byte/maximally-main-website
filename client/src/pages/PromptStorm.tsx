@@ -210,7 +210,7 @@ export default function PromptStorm() {
             }`}
           >
             <Button
-              onClick={() => window.open('#register', '_self')}
+              onClick={() => window.open('https://maximally-promptstorm.devpost.com/', '_self')}
               className="pixel-button bg-gradient-to-r from-blue-500 to-blue-600 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-yellow-400 shadow-xl"
             >
               <Zap className="h-5 w-5 mr-2" />
@@ -536,7 +536,7 @@ export default function PromptStorm() {
               </h2>
               <div className="flex justify-center">
                 <Button
-                  onClick={() => window.open('#register', '_self')}
+                  onClick={() => window.open('https://maximally-promptstorm.devpost.com/', '_self')}
                   className="pixel-button bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-press-start py-5 px-6 sm:py-6 sm:px-8 md:py-6 md:px-12 text-sm sm:text-base md:text-xl hover:scale-105 transition-all duration-300 border-2 border-blue-400 shadow-xl min-h-[64px] sm:min-h-[72px] w-auto flex items-center justify-center gap-2 sm:gap-3"
                 >
                   <Zap className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 flex-shrink-0" />
