@@ -1,87 +1,102 @@
-import { ArrowRight, Mail, Calendar, ExternalLink, FileText } from "lucide-react";
-import { Link } from "react-router-dom";
-import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import Footer from "@/components/Footer";
+import {
+  ArrowRight,
+  Mail,
+  Calendar,
+  ExternalLink,
+  FileText,
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import SEO from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { motion } from 'framer-motion';
+import Footer from '@/components/Footer';
 
 const Events = () => {
   const upcomingEvents = [
     {
-      name: "Code Hypothesis",
-      dates: "September 2025",
-      description: "Test your coding theories in the ultimate development challenge",
-      registerUrl: "/code-hypothesis",
-      detailsUrl: "/code-hypothesis"
+      name: 'Code Hypothesis',
+      dates: 'September 2025',
+      description:
+        'Test your coding theories in the ultimate development challenge',
+      registerUrl: '/CodeHypothesis',
+      detailsUrl: '/CodeHypothesis',
     },
     {
-      name: "Protocol 404",
-      dates: "October 2025", 
-      description: "When the system is broken, build anyway",
-      registerUrl: "/protocol-404",
-      detailsUrl: "/protocol-404"
+      name: 'Protocol 404',
+      dates: 'October 2025',
+      description: 'When the system is broken, build anyway',
+      registerUrl: '/protocol-404',
+      detailsUrl: '/protocol-404',
     },
     {
-      name: "Project CodeGen",
-      dates: "October 2025",
-      description: "Beyond hackathons - real project generation",
-      registerUrl: "/project-codegen", 
-      detailsUrl: "/project-codegen"
+      name: 'Project CodeGen',
+      dates: 'October 2025',
+      description: 'Beyond hackathons - real project generation',
+      registerUrl: '/project-codegen',
+      detailsUrl: '/project-codegen',
     },
     {
-      name: "Maximally PromptStorm",
-      dates: "Oct 25-26, 2025",
-      description: "24-hour AI prompt-engineering hackathon. When in doubt, prompt harder.",
-      registerUrl: "/promptstorm",
-      detailsUrl: "/promptstorm"
+      name: 'Maximally PromptStorm',
+      dates: 'Oct 25-26, 2025',
+      description:
+        '24-hour AI prompt-engineering hackathon. When in doubt, prompt harder.',
+      registerUrl: '/promptstorm',
+      detailsUrl: '/promptstorm',
     },
     {
-      name: "Maximally Hacktober",
-      dates: "October 2025",
+      name: 'Maximally Hacktober',
+      dates: 'October 2025',
       description: "October's biggest hackathon celebration",
-      registerUrl: "/hacktober",
-      detailsUrl: "/hacktober"
+      registerUrl: '/hacktober',
+      detailsUrl: '/hacktober',
     },
     {
-      name: "Maximally Steal-A-Thon",
-      dates: "Nov 9-10, 2025",
-      description: "The only hackathon where original ideas are banned. If it ain't broke... steal it.",
-      registerUrl: "/steal-a-thon",
-      detailsUrl: "/steal-a-thon"
+      name: 'Maximally Steal-A-Thon',
+      dates: 'Nov 9-10, 2025',
+      description:
+        "The only hackathon where original ideas are banned. If it ain't broke... steal it.",
+      registerUrl: '/steal-a-thon',
+      detailsUrl: '/steal-a-thon',
     },
     {
-      name: "Maximally Codepocalypse",
-      dates: "Oct 18-19, 2025",
-      description: "What would you build if the internet had 48 hours left? Chaotic 48-hour hackathon.",
-      registerUrl: "/codepocalypse",
-      detailsUrl: "/codepocalypse"
+      name: 'Maximally Codepocalypse',
+      dates: 'Oct 18-19, 2025',
+      description:
+        'What would you build if the internet had 48 hours left? Chaotic 48-hour hackathon.',
+      registerUrl: '/codepocalypse',
+      detailsUrl: '/codepocalypse',
     },
     {
-      name: "Grand Tech Assembly",
-      dates: "Nov 1-7, 2025",
-      description: "Pick your mission, build your city, earn respect. 7-day GTA-themed hackathon.",
-      registerUrl: "/grand-tech-assembly",
-      detailsUrl: "/grand-tech-assembly"
-    }
+      name: 'Grand Tech Assembly',
+      dates: 'Nov 1-7, 2025',
+      description:
+        'Pick your mission, build your city, earn respect. 7-day GTA-themed hackathon.',
+      registerUrl: '/grand-tech-assembly',
+      detailsUrl: '/grand-tech-assembly',
+    },
   ];
 
   const pastEvents = [
     {
-      name: "Maximally Startup Makeathon",
-      dates: "July 2025",
-      description: "7-day sprint from idea to MVP to public pitch",
-      reportUrl: "/makeathon-report"
+      name: 'Maximally Startup Makeathon',
+      dates: 'July 2025',
+      description: '7-day sprint from idea to MVP to public pitch',
+      reportUrl: '/makeathon-report',
     },
     {
-      name: "Maximally AI Shipathon", 
-      dates: "August 2025",
-      description: "48-hour global AI hackathon for builders and creators",
-      reportUrl: "/shipathon-report"
-    }
+      name: 'Maximally AI Shipathon',
+      dates: 'August 2025',
+      description: '48-hour global AI hackathon for builders and creators',
+      reportUrl: '/shipathon-report',
+    },
   ];
 
-  const UpcomingEventCard = ({ event }: { event: typeof upcomingEvents[0] }) => (
+  const UpcomingEventCard = ({
+    event,
+  }: {
+    event: (typeof upcomingEvents)[0];
+  }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -92,7 +107,9 @@ const Events = () => {
         <CardContent className="p-6">
           <div className="flex items-center gap-2 mb-3">
             <Calendar className="h-5 w-5 text-red-600" />
-            <span className="font-jetbrains text-sm text-gray-600">{event.dates}</span>
+            <span className="font-jetbrains text-sm text-gray-600">
+              {event.dates}
+            </span>
           </div>
           <h3 className="font-press-start text-lg mb-3 text-black group-hover:text-red-600 transition-colors leading-tight">
             {event.name}
@@ -121,7 +138,7 @@ const Events = () => {
     </motion.div>
   );
 
-  const PastEventCard = ({ event }: { event: typeof pastEvents[0] }) => (
+  const PastEventCard = ({ event }: { event: (typeof pastEvents)[0] }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -132,7 +149,9 @@ const Events = () => {
         <CardContent className="p-6">
           <div className="flex items-center gap-2 mb-3">
             <Calendar className="h-5 w-5 text-blue-600" />
-            <span className="font-jetbrains text-sm text-gray-600">{event.dates}</span>
+            <span className="font-jetbrains text-sm text-gray-600">
+              {event.dates}
+            </span>
           </div>
           <h3 className="font-press-start text-lg mb-3 text-black group-hover:text-blue-600 transition-colors leading-tight">
             {event.name}
@@ -171,7 +190,7 @@ const Events = () => {
                 top: `${Math.random() * 90}%`,
                 left: `${Math.random() * 90}%`,
                 animationDelay: `${i * 0.3}s`,
-                animationDuration: `${3 + i * 0.5}s`
+                animationDuration: `${3 + i * 0.5}s`,
               }}
             />
           ))}
@@ -179,7 +198,7 @@ const Events = () => {
 
         <div className="container mx-auto px-4 pt-24 pb-16 relative z-10">
           {/* Top Banner */}
-          <motion.section 
+          <motion.section
             className="text-center mb-20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -189,10 +208,16 @@ const Events = () => {
               The Grand Indian Hackathon Season
             </h1>
             <p className="font-jetbrains text-lg md:text-xl text-black/80 max-w-4xl mx-auto mb-8 leading-relaxed">
-              From September to November, we're hosting 10 hackathons back to back. Be a part of it.
+              From September to November, we're hosting 10 hackathons back to
+              back. Be a part of it.
             </p>
-            <Button 
-              onClick={() => window.open('mailto:hello@maximally.in?subject=Join Mailing List', '_blank')}
+            <Button
+              onClick={() =>
+                window.open(
+                  'mailto:hello@maximally.in?subject=Join Mailing List',
+                  '_blank'
+                )
+              }
               className="pixel-button bg-gradient-to-r from-red-600 to-red-700 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-2 border-red-400 shadow-xl"
             >
               <Mail className="h-5 w-5 mr-2" />
@@ -201,7 +226,7 @@ const Events = () => {
           </motion.section>
 
           {/* Upcoming Events Section */}
-          <motion.section 
+          <motion.section
             className="mb-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -221,7 +246,7 @@ const Events = () => {
           </motion.section>
 
           {/* Past Events Section */}
-          <motion.section 
+          <motion.section
             className="mb-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -241,7 +266,7 @@ const Events = () => {
           </motion.section>
 
           {/* CTA Section */}
-          <motion.section 
+          <motion.section
             className="text-center pixel-border p-8 md:p-12 bg-gradient-to-r from-red-600/10 via-black/5 to-blue-600/10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -251,10 +276,11 @@ const Events = () => {
               Want to partner with us?
             </h2>
             <p className="font-jetbrains text-lg md:text-xl text-black/80 mb-8 max-w-3xl mx-auto">
-              Join the Grand Indian Hackathon Season as a sponsor, mentor, or collaborator.
+              Join the Grand Indian Hackathon Season as a sponsor, mentor, or
+              collaborator.
             </p>
-            <Link 
-              to="/collaborate" 
+            <Link
+              to="/collaborate"
               className="pixel-button bg-red-600 text-white inline-flex items-center gap-3 hover:scale-105 transform transition-all text-lg px-8 py-4"
             >
               <span className="font-press-start">Partner With Us</span>
@@ -262,7 +288,7 @@ const Events = () => {
             </Link>
           </motion.section>
         </div>
-        
+
         <Footer />
       </div>
     </>
