@@ -4,7 +4,23 @@ import { Card, CardContent } from '@/components/ui/card';
 import SEO from '@/components/SEO';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Zap, Clock, Globe, Users, Code, Skull, AlertTriangle, Target, Trophy, Star, ExternalLink, FileText, Video, Flame, Shield } from 'lucide-react';
+import {
+  Zap,
+  Clock,
+  Globe,
+  Users,
+  Code,
+  Skull,
+  AlertTriangle,
+  Target,
+  Trophy,
+  Star,
+  ExternalLink,
+  FileText,
+  Video,
+  Flame,
+  Shield,
+} from 'lucide-react';
 
 export default function Codepocalypse() {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,46 +30,66 @@ export default function Codepocalypse() {
   }, []);
 
   const fastFacts = [
-    { icon: <Clock className="h-5 w-5" />, label: "Date", value: "Oct 18–19, 2025" },
-    { icon: <Clock className="h-5 w-5" />, label: "Duration", value: "48 hours" },
-    { icon: <Globe className="h-5 w-5" />, label: "Format", value: "Online" },
-    { icon: <Users className="h-5 w-5" />, label: "Team size", value: "Solo or up to 4" },
-    { icon: <Target className="h-5 w-5" />, label: "Judging", value: "Async with optional pitch" },
-    { icon: <Trophy className="h-5 w-5" />, label: "Results", value: "Mid-November ceremony" }
+    {
+      icon: <Clock className="h-5 w-5" />,
+      label: 'Date',
+      value: 'Oct 18–19, 2025',
+    },
+    {
+      icon: <Clock className="h-5 w-5" />,
+      label: 'Duration',
+      value: '48 hours',
+    },
+    { icon: <Globe className="h-5 w-5" />, label: 'Format', value: 'Online' },
+    {
+      icon: <Users className="h-5 w-5" />,
+      label: 'Team size',
+      value: 'Solo or up to 4',
+    },
+    {
+      icon: <Target className="h-5 w-5" />,
+      label: 'Judging',
+      value: 'Async with optional pitch',
+    },
+    {
+      icon: <Trophy className="h-5 w-5" />,
+      label: 'Results',
+      value: 'Mid-November ceremony',
+    },
   ];
 
   const whoJoins = [
-    "Anyone, anywhere",
-    "No age, no filters",
-    "Teams up to 4 or solo",
-    "Beginners welcome",
-    "No-coders welcome",
-    "Designers welcome",
-    "Tinkerers welcome",
-    "No prep, no pressure"
+    'Anyone, anywhere',
+    'No age, no filters',
+    'Teams up to 4 or solo',
+    'Beginners welcome',
+    'No-coders welcome',
+    'Designers welcome',
+    'Tinkerers welcome',
+    'No prep, no pressure',
   ];
 
   const techRules = [
-    "Any stack, any tool",
-    "AI tools allowed",
-    "No-code allowed",
-    "Cursed workflows encouraged",
-    "Plagiarism = disqualification",
-    "Must include code or files",
-    "Short readme required",
-    "Optional 60s video"
+    'Any stack, any tool',
+    'AI tools allowed',
+    'No-code allowed',
+    'Cursed workflows encouraged',
+    'Plagiarism = disqualification',
+    'Must include code or files',
+    'Short readme required',
+    'Optional 60s video',
   ];
 
   const funAwards = [
-    "Most cursed build",
+    'Most cursed build',
     "Shouldn't have worked but did",
-    "Built while sleep-deprived",
-    "Best bug that became a feature"
+    'Built while sleep-deprived',
+    'Best bug that became a feature',
   ];
 
   return (
     <div className="min-h-screen bg-gray-900 relative overflow-hidden">
-      <SEO 
+      <SEO
         title="Maximally Codepocalypse 2025 - 48 Hour Chaos Hackathon"
         description="What would you build if the internet had 48 hours left? 48-hour chaotic hackathon. Oct 18-19, 2025. Grand Indian Hackathon Season."
         keywords="hackathon, chaos coding, apocalypse theme, 48 hour hackathon, broken prototypes, cursed ideas, code competition"
@@ -70,13 +106,13 @@ export default function Codepocalypse() {
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
               animation: `glitch ${1 + Math.random() * 2}s infinite`,
-              animationDelay: `${Math.random() * 2}s`
+              animationDelay: `${Math.random() * 2}s`,
             }}
           >
             <Zap className="h-4 w-4 text-red-500" />
           </div>
         ))}
-        
+
         {/* Scattered arrows */}
         {[...Array(8)].map((_, i) => (
           <div
@@ -87,7 +123,7 @@ export default function Codepocalypse() {
               left: `${Math.random() * 100}%`,
               transform: `rotate(${Math.random() * 360}deg)`,
               animation: `drift ${4 + Math.random() * 3}s infinite`,
-              animationDelay: `${Math.random() * 3}s`
+              animationDelay: `${Math.random() * 3}s`,
             }}
           >
             <div className="w-8 h-1 bg-yellow-400 relative">
@@ -98,7 +134,7 @@ export default function Codepocalypse() {
 
         {/* Distressed texture overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900 opacity-90"></div>
-        
+
         {/* Nuclear warning symbols */}
         {[...Array(6)].map((_, i) => (
           <div
@@ -108,7 +144,7 @@ export default function Codepocalypse() {
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
               animation: `pulse ${3 + Math.random() * 2}s infinite`,
-              animationDelay: `${Math.random() * 3}s`
+              animationDelay: `${Math.random() * 3}s`,
             }}
           >
             <AlertTriangle className="h-12 w-12 text-red-500" />
@@ -118,26 +154,44 @@ export default function Codepocalypse() {
 
       <div className="relative z-10">
         <Navbar />
-        
+
         {/* Hero Section */}
         <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-20">
           {/* Badge */}
-          <div className={`mb-6 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+          <div
+            className={`mb-6 transform transition-all duration-1000 ${
+              isVisible
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-4 opacity-0'
+            }`}
+          >
             <div className="bg-red-600 text-yellow-400 px-6 py-2 border-4 border-yellow-400 shadow-2xl relative">
-              <span className="font-press-start text-xs">☢ GRAND INDIAN HACKATHON SEASON ☢</span>
+              <span className="font-press-start text-xs">
+                ☢ GRAND INDIAN HACKATHON SEASON ☢
+              </span>
               <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400"></div>
               <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-red-600"></div>
             </div>
           </div>
 
           {/* Title with apocalyptic styling */}
-          <div className={`text-center mb-8 transform transition-all duration-1000 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+          <div
+            className={`text-center mb-8 transform transition-all duration-1000 delay-200 ${
+              isVisible
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-4 opacity-0'
+            }`}
+          >
             <h1 className="font-press-start text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
-              <span className="text-red-500 drop-shadow-2xl filter brightness-110">MAXIMALLY</span>
+              <span className="text-red-500 drop-shadow-2xl filter brightness-110">
+                MAXIMALLY
+              </span>
               <br />
               <span className="text-yellow-400 drop-shadow-2xl relative">
                 CODEPOCALYPSE
-                <div className="absolute -top-2 -right-2 text-red-500 text-xs opacity-70">⚡</div>
+                <div className="absolute -top-2 -right-2 text-red-500 text-xs opacity-70">
+                  ⚡
+                </div>
               </span>
             </h1>
             <h2 className="font-jetbrains text-xl md:text-2xl text-gray-300 mb-4 font-bold">
@@ -151,9 +205,15 @@ export default function Codepocalypse() {
           </div>
 
           {/* CTAs with brutal styling */}
-          <div className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
-            <Button 
-              onClick={() => window.open('#register', '_self')}
+          <div
+            className={`flex flex-col sm:flex-row gap-4 transform transition-all duration-1000 delay-400 ${
+              isVisible
+                ? 'translate-y-0 opacity-100'
+                : 'translate-y-4 opacity-0'
+            }`}
+          >
+            <Button
+              onClick={() => window.open('https://codepocalypse.devpost.com/', '_self')}
               className="bg-red-600 text-white font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-4 border-yellow-400 shadow-2xl relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-red-700 transform skew-x-12 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
@@ -162,8 +222,12 @@ export default function Codepocalypse() {
                 REGISTER NOW
               </span>
             </Button>
-            <Button 
-              onClick={() => document.getElementById('prizes')?.scrollIntoView({ behavior: 'smooth' })}
+            <Button
+              onClick={() =>
+                document
+                  .getElementById('prizes')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
               className="bg-black text-yellow-400 font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 border-4 border-red-500 shadow-2xl relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gray-900 transform skew-x-12 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
@@ -194,8 +258,12 @@ export default function Codepocalypse() {
                   <div className="flex items-center justify-center mb-2 text-yellow-400 group-hover:text-white transition-colors">
                     {fact.icon}
                   </div>
-                  <div className="font-press-start text-xs text-white mb-1">{fact.label}</div>
-                  <div className="font-jetbrains text-sm text-yellow-400 font-bold">{fact.value}</div>
+                  <div className="font-press-start text-xs text-white mb-1">
+                    {fact.label}
+                  </div>
+                  <div className="font-jetbrains text-sm text-yellow-400 font-bold">
+                    {fact.value}
+                  </div>
                 </div>
               ))}
             </div>
@@ -214,8 +282,10 @@ export default function Codepocalypse() {
               <div className="absolute -top-2 -left-2 w-6 h-6 bg-yellow-400"></div>
               <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-red-500"></div>
               <p className="font-jetbrains text-lg md:text-xl text-gray-300 leading-relaxed">
-                A chaotic 48-hour hackathon where the only rule is to ship something wild. Broken prototypes, cursed ideas, 
-                internet-core genius — all collide here. No themes, no prep. Just code, crash, and deploy.
+                A chaotic 48-hour hackathon where the only rule is to ship
+                something wild. Broken prototypes, cursed ideas, internet-core
+                genius — all collide here. No themes, no prep. Just code, crash,
+                and deploy.
               </p>
             </div>
           </div>
@@ -232,9 +302,10 @@ export default function Codepocalypse() {
             <div className="bg-red-900 border-4 border-yellow-400 p-8 relative">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-red-500 to-yellow-400"></div>
               <p className="font-jetbrains text-lg md:text-xl text-gray-200 leading-relaxed">
-                This event asks one question — what would you build if you had 48 hours before the internet exploded? 
-                Codepocalypse is a love letter to bizarre, ambitious, half-baked builds. No neat slides. No neat stacks. 
-                Just mayhem and maybe magic.
+                This event asks one question — what would you build if you had
+                48 hours before the internet exploded? Codepocalypse is a love
+                letter to bizarre, ambitious, half-baked builds. No neat slides.
+                No neat stacks. Just mayhem and maybe magic.
               </p>
             </div>
           </div>
@@ -250,11 +321,16 @@ export default function Codepocalypse() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {whoJoins.map((person, index) => (
-                <div key={index} className="bg-black border-2 border-red-500 p-4 hover:border-yellow-400 transition-all duration-300 hover:scale-105 relative">
+                <div
+                  key={index}
+                  className="bg-black border-2 border-red-500 p-4 hover:border-yellow-400 transition-all duration-300 hover:scale-105 relative"
+                >
                   <div className="absolute top-0 right-0 w-3 h-3 bg-yellow-400"></div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-red-500"></div>
-                    <span className="font-jetbrains text-gray-300 font-medium">{person}</span>
+                    <span className="font-jetbrains text-gray-300 font-medium">
+                      {person}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -272,7 +348,10 @@ export default function Codepocalypse() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {techRules.map((rule, index) => (
-                <div key={index} className="bg-black border-l-4 border-yellow-400 p-4 hover:bg-gray-900 transition-colors duration-300">
+                <div
+                  key={index}
+                  className="bg-black border-l-4 border-yellow-400 p-4 hover:bg-gray-900 transition-colors duration-300"
+                >
                   <div className="flex items-center gap-3">
                     <div className="w-4 h-4 bg-red-500 rotate-45"></div>
                     <span className="font-jetbrains text-gray-300">{rule}</span>
@@ -291,13 +370,15 @@ export default function Codepocalypse() {
               PRIZES & PERKS
               <Trophy className="h-8 w-8 text-yellow-400" />
             </h2>
-            
+
             {/* Cash Pool */}
             <div className="text-center mb-8">
               <div className="bg-yellow-400 text-black px-8 py-4 border-4 border-red-500 inline-block relative">
                 <div className="absolute -top-2 -left-2 w-6 h-6 bg-red-500"></div>
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-black"></div>
-                <span className="font-press-start text-xl">CASH POOL: ₹5000</span>
+                <span className="font-press-start text-xl">
+                  CASH POOL: ₹5000
+                </span>
               </div>
             </div>
 
@@ -305,7 +386,9 @@ export default function Codepocalypse() {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="bg-black border-4 border-yellow-400">
                 <CardContent className="p-6">
-                  <h3 className="font-press-start text-xl text-yellow-400 mb-4">PERKS</h3>
+                  <h3 className="font-press-start text-xl text-yellow-400 mb-4">
+                    PERKS
+                  </h3>
                   <ul className="space-y-2">
                     <li className="font-jetbrains text-gray-300 flex items-center gap-2">
                       <Star className="h-4 w-4 text-red-500" />
@@ -329,10 +412,15 @@ export default function Codepocalypse() {
 
               <Card className="bg-red-900 border-4 border-yellow-400">
                 <CardContent className="p-6">
-                  <h3 className="font-press-start text-xl text-yellow-400 mb-4">FUN AWARDS</h3>
+                  <h3 className="font-press-start text-xl text-yellow-400 mb-4">
+                    FUN AWARDS
+                  </h3>
                   <ul className="space-y-2">
                     {funAwards.map((award, index) => (
-                      <li key={index} className="font-jetbrains text-gray-200 flex items-center gap-2">
+                      <li
+                        key={index}
+                        className="font-jetbrains text-gray-200 flex items-center gap-2"
+                      >
                         <Skull className="h-4 w-4 text-yellow-400" />
                         {award}
                       </li>
@@ -355,16 +443,24 @@ export default function Codepocalypse() {
             <div className="bg-black border-4 border-red-500 p-8 relative">
               <div className="absolute -top-1 left-4 right-4 h-2 bg-yellow-400"></div>
               <div className="mb-6">
-                <h3 className="font-press-start text-lg text-yellow-400 mb-4">REVIEWERS</h3>
+                <h3 className="font-press-start text-lg text-yellow-400 mb-4">
+                  REVIEWERS
+                </h3>
                 <p className="font-jetbrains text-gray-300">
-                  Async judging by external reviewers from top companies (OpenAI, Meta, etc.)
+                  Async judging by external reviewers from top companies
+                  (OpenAI, Meta, etc.)
                 </p>
               </div>
               <div>
-                <h3 className="font-press-start text-lg text-yellow-400 mb-4">CRITERIA</h3>
+                <h3 className="font-press-start text-lg text-yellow-400 mb-4">
+                  CRITERIA
+                </h3>
                 <p className="font-jetbrains text-gray-300">
-                  Scored on originality, execution, technical complexity (or no-code creativity), 
-                  and gut reaction — <span className="text-yellow-400 font-bold">is this insane and awesome?</span>
+                  Scored on originality, execution, technical complexity (or
+                  no-code creativity), and gut reaction —{' '}
+                  <span className="text-yellow-400 font-bold">
+                    is this insane and awesome?
+                  </span>
                 </p>
               </div>
             </div>
@@ -379,7 +475,7 @@ export default function Codepocalypse() {
               SUBMISSION
               <FileText className="h-8 w-8 text-yellow-400" />
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-red-900 border-4 border-yellow-400 p-6 relative">
                 <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 flex items-center justify-center">
@@ -434,19 +530,20 @@ export default function Codepocalypse() {
                   READY FOR THE CODEPOCALYPSE?
                 </h2>
                 <p className="font-jetbrains text-gray-300 mb-8">
-                  Join the chaos. Build something wild. Ship before the world ends.
+                  Join the chaos. Build something wild. Ship before the world
+                  ends.
                 </p>
-                <Button 
-                  onClick={() => window.open('#register', '_self')}
-                  className="bg-yellow-400 text-black font-press-start py-6 px-12 text-xl hover:scale-105 transition-all duration-300 border-4 border-red-500 shadow-2xl relative overflow-hidden"
+                <button
+                  onClick={() => window.open('https://codepocalypse.devpost.com/', '_self')}
+                  className="bg-yellow-400 text-black font-bold py-3 px-4 sm:py-6 sm:px-12 text-xs sm:text-base md:text-lg lg:text-xl hover:scale-105 transition-all duration-300 border-2 sm:border-4 border-red-500 shadow-2xl relative overflow-hidden w-full sm:w-auto max-w-sm sm:max-w-none"
                 >
                   <div className="absolute inset-0 bg-red-500 transform skew-x-12 -translate-x-full hover:translate-x-0 transition-transform duration-300"></div>
-                  <span className="relative z-10 flex items-center text-black">
-                    <Flame className="h-6 w-6 mr-3" />
+                  <span className="relative z-10 flex items-center justify-center text-black">
+                    <Flame className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 mr-2 flex-shrink-0" />
                     ENTER THE APOCALYPSE
-                    <ExternalLink className="h-6 w-6 ml-3" />
+                    <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 ml-2 flex-shrink-0" />
                   </span>
-                </Button>
+                </button>
               </div>
             </div>
           </div>
