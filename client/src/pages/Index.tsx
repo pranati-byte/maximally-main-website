@@ -60,14 +60,14 @@ const Index = () => {
     <>
       <SEO
         title="Maximally - Global Teen Hackathon Platform"
-        description="Join the world's premier teen hackathon platform. AI shipathons, startup makeathons & Gen Z builder challenges. Global innovation league for ambitious teens."
-        keywords="teen hackathons, global hackathons, startup makeathons, AI shipathon, Gen Z builders, teen innovation, global tech"
+        description="Join the world's premier teen hackathon platform. Global innovation league for ambitious teen builders & creators."
+        keywords="teen hackathons, global hackathons, Gen Z builders, teen innovation, global tech"
         canonicalUrl="https://maximally.in"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Event",
-          "name": "Maximally AI Shipathon",
-          "description": "The world's premier teen hackathon platform for AI projects and startup makeathons",
+          "name": "Maximally Global Innovation League",
+          "description": "The world's premier teen hackathon platform for global builders and creators",
           "organizer": {
             "@type": "Organization",
             "name": "Maximally",
@@ -189,13 +189,15 @@ const Index = () => {
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
 
-                  <Link
-                    to="/community"
+                  <a
+                    href="https://discord.gg/MpBnYk8qMX"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="pixel-button bg-maximally-yellow text-maximally-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-16 px-6 font-press-start text-sm"
                   >
                     <Users className="h-4 w-4" />
-                    <span>Join the League</span>
-                  </Link>
+                    <span>Join Discord</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -307,16 +309,16 @@ const Index = () => {
                 </p>
                 <p className="font-jetbrains text-lg md:text-xl text-maximally-black/70">
                   Ready to host a hackathon that empowers the next generation of
-                  builders? Let's collaborate.
+                  builders? Contact us to learn more.
                 </p>
               </div>
 
               <Link
-                to="/collaborate"
+                to="/contact"
                 className="pixel-button bg-maximally-yellow text-maximally-black inline-flex items-center gap-2 px-8 py-4 text-lg hover:scale-105 transform transition-all"
               >
                 <Users className="h-5 w-5" />
-                <span>Partner With Us</span>
+                <span>Contact Us</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </div>
