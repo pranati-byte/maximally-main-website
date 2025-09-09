@@ -1,5 +1,5 @@
 
-import { Mail, Phone, Instagram, Terminal, MessageCircle } from "lucide-react";
+import { Mail, Phone, Instagram, Terminal, MessageCircle, Users, Briefcase, Newspaper, HelpCircle, Linkedin } from "lucide-react";
 import { useEffect } from "react";
 import Footer from "@/components/Footer";
 
@@ -44,70 +44,166 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="pixel-card bg-black border-2 border-maximally-red p-8 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow">
-            <div className="flex items-center space-x-6">
-              <div className="minecraft-block bg-maximally-red w-12 h-12 flex items-center justify-center">
-                <Phone className="h-6 w-6 text-black" />
+        <div className="max-w-6xl mx-auto space-y-12">
+          {/* Phone Numbers Section */}
+          <section>
+            <div className="text-center mb-8">
+              <div className="minecraft-block bg-maximally-red text-black px-6 py-3 inline-block mb-6">
+                <span className="font-press-start text-sm">📞 GET IN TOUCH</span>
               </div>
-              <div>
-                <h3 className="font-press-start text-sm mb-2 text-maximally-red">PHONE</h3>
-                <a href="tel:+919041260790" className="font-jetbrains text-white hover:text-maximally-red transition-colors text-lg">
-                  +91 9041260790
-                </a>
-              </div>
+              <h2 className="font-press-start text-2xl md:text-3xl mb-4 text-maximally-red">
+                PHONE NUMBERS
+              </h2>
             </div>
-          </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                "+91 90412 60790",
+                "+91 88375 12713", 
+                "+91 76784 66133"
+              ].map((phone, index) => (
+                <div key={index} className="pixel-card bg-black border-2 border-maximally-red p-6 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow">
+                  <div className="text-center">
+                    <div className="minecraft-block bg-maximally-red w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                      <Phone className="h-6 w-6 text-black" />
+                    </div>
+                    <a href={`tel:${phone.replace(/\s/g, '')}`} className="font-jetbrains text-white hover:text-maximally-red transition-colors text-lg block">
+                      {phone}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
-          <div className="pixel-card bg-black border-2 border-maximally-yellow p-8 hover:scale-105 transition-all duration-300 hover:border-maximally-red">
-            <div className="flex items-start space-x-6">
-              <div className="minecraft-block bg-maximally-yellow w-12 h-12 flex items-center justify-center">
-                <Mail className="h-6 w-6 text-black" />
+          {/* Email Section */}
+          <section>
+            <div className="text-center mb-8">
+              <div className="minecraft-block bg-maximally-yellow text-black px-6 py-3 inline-block mb-6">
+                <span className="font-press-start text-sm">📧 EMAIL SUPPORT</span>
               </div>
-              <div>
-                <h3 className="font-press-start text-sm mb-4 text-maximally-yellow">EMAIL</h3>
-                <div className="space-y-3 font-jetbrains">
-                  <a href="mailto:hello@maximally.in" className="block text-white hover:text-maximally-yellow transition-colors text-lg">
-                    hello@maximally.in
-                  </a>
-                  <a href="mailto:contact.maximally@gmail.com" className="block text-white hover:text-maximally-yellow transition-colors text-lg">
-                    contact.maximally@gmail.com
+              <h2 className="font-press-start text-2xl md:text-3xl mb-4 text-maximally-yellow">
+                SPECIALIZED CONTACTS
+              </h2>
+              <p className="font-jetbrains text-gray-300 max-w-3xl mx-auto">
+                All emails are redirected to our central inbox. Depending on the topic, you'll receive replies from the relevant Maximally team member or agent.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { 
+                  type: "General Inquiries", 
+                  email: "hello@maximally.in", 
+                  icon: Mail, 
+                  color: "maximally-yellow",
+                  bgColor: "bg-maximally-yellow"
+                },
+                { 
+                  type: "Partnerships", 
+                  email: "partners@maximally.in", 
+                  icon: Briefcase, 
+                  color: "green-400",
+                  bgColor: "bg-green-500"
+                },
+                { 
+                  type: "Judging & Mentorship", 
+                  email: "judges@maximally.in", 
+                  icon: Users, 
+                  color: "blue-400",
+                  bgColor: "bg-blue-500"
+                },
+                { 
+                  type: "Press & Media", 
+                  email: "press@maximally.in", 
+                  icon: Newspaper, 
+                  color: "purple-400",
+                  bgColor: "bg-purple-500"
+                },
+                { 
+                  type: "Support", 
+                  email: "support@maximally.in", 
+                  icon: HelpCircle, 
+                  color: "maximally-red",
+                  bgColor: "bg-maximally-red"
+                }
+              ].map((contact, index) => (
+                <div key={index} className={`pixel-card bg-black border-2 border-${contact.color} p-6 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow`}>
+                  <div className={`minecraft-block ${contact.bgColor} w-12 h-12 mx-auto mb-4 flex items-center justify-center`}>
+                    <contact.icon className="h-6 w-6 text-black" />
+                  </div>
+                  <h3 className={`font-press-start text-xs mb-3 text-${contact.color} text-center`}>
+                    {contact.type.toUpperCase()}
+                  </h3>
+                  <a 
+                    href={`mailto:${contact.email}`} 
+                    className={`font-jetbrains text-white hover:text-${contact.color} transition-colors text-sm block text-center`}
+                  >
+                    {contact.email}
                   </a>
                 </div>
-              </div>
+              ))}
             </div>
-          </div>
+          </section>
 
-          {/* Social Media Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="pixel-card bg-black border-2 border-purple-500 p-8 hover:scale-105 transition-all duration-300 hover:border-maximally-red">
-              <div className="flex items-center space-x-6">
-                <div className="minecraft-block bg-purple-500 w-12 h-12 flex items-center justify-center">
-                  <Instagram className="h-6 w-6 text-black" />
-                </div>
-                <div>
-                  <h3 className="font-press-start text-sm mb-2 text-purple-400">INSTAGRAM</h3>
-                  <a href="https://instagram.com/maximally.in" target="_blank" rel="noopener noreferrer" className="font-jetbrains text-white hover:text-purple-400 transition-colors text-lg">
-                    @maximally.in
+          {/* Official Channels Section */}
+          <section>
+            <div className="text-center mb-8">
+              <div className="minecraft-block bg-cyan-400 text-black px-6 py-3 inline-block mb-6">
+                <span className="font-press-start text-sm">🌐 OFFICIAL CHANNELS</span>
+              </div>
+              <h2 className="font-press-start text-2xl md:text-3xl mb-4 text-cyan-400">
+                FIND US ONLINE
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  name: "Instagram",
+                  url: "https://instagram.com/maximally.in",
+                  handle: "@maximally.in",
+                  icon: Instagram,
+                  color: "pink-500"
+                },
+                {
+                  name: "LinkedIn", 
+                  url: "https://linkedin.com/company/maximallyedu",
+                  handle: "Maximally",
+                  icon: Linkedin,
+                  color: "blue-600"
+                },
+                {
+                  name: "Discord",
+                  url: "https://discord.gg/MpBnYk8qMX",
+                  handle: "Join Community",
+                  icon: MessageCircle,
+                  color: "indigo-500"
+                },
+                {
+                  name: "Website",
+                  url: "https://maximally.in",
+                  handle: "maximally.in",
+                  icon: Terminal,
+                  color: "maximally-red"
+                }
+              ].map((channel, index) => (
+                <div key={index} className={`pixel-card bg-black border-2 border-${channel.color} p-6 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow`}>
+                  <div className={`minecraft-block bg-${channel.color} w-12 h-12 mx-auto mb-4 flex items-center justify-center`}>
+                    <channel.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className={`font-press-start text-xs mb-2 text-${channel.color} text-center`}>
+                    {channel.name.toUpperCase()}
+                  </h3>
+                  <a 
+                    href={channel.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={`font-jetbrains text-white hover:text-${channel.color} transition-colors text-sm block text-center`}
+                  >
+                    {channel.handle}
                   </a>
                 </div>
-              </div>
+              ))}
             </div>
-            
-            <div className="pixel-card bg-black border-2 border-blue-500 p-8 hover:scale-105 transition-all duration-300 hover:border-maximally-red">
-              <div className="flex items-center space-x-6">
-                <div className="minecraft-block bg-blue-500 w-12 h-12 flex items-center justify-center">
-                  <MessageCircle className="h-6 w-6 text-black" />
-                </div>
-                <div>
-                  <h3 className="font-press-start text-sm mb-2 text-blue-400">DISCORD</h3>
-                  <a href="https://discord.gg/MpBnYk8qMX" target="_blank" rel="noopener noreferrer" className="font-jetbrains text-white hover:text-blue-400 transition-colors text-lg">
-                    Join Our Community
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
       </div>
       <Footer />

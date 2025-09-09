@@ -1,6 +1,6 @@
 import {
   ArrowRight,
-  Mail,
+  MessageCircle,
   Calendar,
   ExternalLink,
   FileText,
@@ -131,20 +131,17 @@ const Events = () => {
               10 HACKATHONS
             </h1>
             <p className="font-jetbrains text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              From September to November, we're hosting 10 hackathons back to back. Be a part of it.
+              From September to November, we're hosting 10 hackathons back to back. Be a part of it. Join our Discord for all updates and community access.
             </p>
-            <button
-              onClick={() =>
-                window.open(
-                  'mailto:hello@maximally.in?subject=Join Mailing List',
-                  '_blank'
-                )
-              }
+            <a
+              href="https://discord.gg/MpBnYk8qMX"
+              target="_blank"
+              rel="noopener noreferrer"
               className="pixel-button bg-maximally-red text-black font-press-start py-4 px-8 text-lg hover:scale-105 transition-all duration-300 hover:bg-maximally-yellow flex items-center gap-2 mx-auto"
             >
-              <Mail className="h-5 w-5" />
-              JOIN_MAILING_LIST
-            </button>
+              <MessageCircle className="h-5 w-5" />
+              JOIN_DISCORD
+            </a>
           </section>
 
           {/* Upcoming Events Section */}
