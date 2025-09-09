@@ -139,6 +139,57 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Trusted by Engineers Section */}
+        <section className="py-16 relative bg-black border-y-2 border-maximally-red">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
+              <h3 className="font-press-start text-sm sm:text-base md:text-lg text-gray-400 mb-4">
+                TRUSTED BY ENGINEERS FROM
+              </h3>
+            </div>
+            
+            {/* Desktop Marquee */}
+            <div className="hidden md:block overflow-hidden">
+              <div className="flex animate-marquee hover:pause-marquee whitespace-nowrap">
+                <div className="flex items-center space-x-8 text-white font-jetbrains text-lg">
+                  {[
+                    "OpenAI", "Meta", "Amazon", "Google", "DeepMind", "Intuit", "Visa", "Salesforce", 
+                    "FedEx", "Atlassian", "McKinsey", "Replit", "General Motors", "Warner Bros. Discovery", 
+                    "Oracle", "ADP", "Graphite Health", "Mercury Financial", "Y Combinator", "JustPaid.ai", 
+                    "Zealy.io", "Fig", "MakeX", "DarinX"
+                  ].concat([
+                    "OpenAI", "Meta", "Amazon", "Google", "DeepMind", "Intuit", "Visa", "Salesforce", 
+                    "FedEx", "Atlassian", "McKinsey", "Replit", "General Motors", "Warner Bros. Discovery", 
+                    "Oracle", "ADP", "Graphite Health", "Mercury Financial", "Y Combinator", "JustPaid.ai", 
+                    "Zealy.io", "Fig", "MakeX", "DarinX"
+                  ]).map((company, index) => (
+                    <span key={index} className="flex items-center space-x-8">
+                      <span className="hover:text-maximally-red transition-colors duration-300">{company}</span>
+                      <span className="text-maximally-red">•</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            {/* Mobile Grid */}
+            <div className="md:hidden">
+              <div className="grid grid-cols-3 gap-4 text-center">
+                {[
+                  "OpenAI", "Meta", "Amazon", "Google", "DeepMind", "Intuit", "Visa", "Salesforce", 
+                  "FedEx", "Atlassian", "McKinsey", "Replit", "General Motors", "Warner Bros. Discovery", 
+                  "Oracle", "ADP", "Graphite Health", "Mercury Financial", "Y Combinator", "JustPaid.ai", 
+                  "Zealy.io", "Fig", "MakeX", "DarinX"
+                ].slice(0, 12).map((company, index) => (
+                  <span key={index} className="text-white font-jetbrains text-xs sm:text-sm hover:text-maximally-red transition-colors duration-300">
+                    {company}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Grand Indian Hackathon Season Section */}
         <section className="py-20 relative">
           <div className="container mx-auto px-4">
