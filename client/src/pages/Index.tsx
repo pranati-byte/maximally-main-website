@@ -105,41 +105,43 @@ const Index = () => {
               </div>
 
               {/* Main Title */}
-              <h1 className="font-press-start text-4xl md:text-7xl lg:text-8xl font-bold mb-8 minecraft-text">
-                <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+              <h1 className="font-press-start text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-bold mb-6 minecraft-text leading-tight">
+                <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                   {text}
                 </span>
-                <span className="inline-block w-2 h-16 bg-maximally-red ml-2 animate-[cursor-blink_1s_infinite]" />
+                <span className="inline-block w-1 h-8 sm:w-2 sm:h-12 md:h-16 bg-maximally-red ml-1 sm:ml-2 animate-[cursor-blink_1s_infinite]" />
               </h1>
 
-              <div className="text-xl md:text-2xl font-press-start text-gray-300 mb-4">
+              <div className="text-sm sm:text-lg md:text-xl lg:text-2xl font-press-start text-gray-300 mb-4 px-2">
                 <span className="text-maximally-red">but not the boring ones</span> ⚡
               </div>
 
-              <p className="text-gray-400 text-lg max-w-3xl mx-auto font-jetbrains leading-relaxed mb-12">
+              <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-jetbrains leading-relaxed mb-8 sm:mb-12 px-4">
                 A global innovation league that hosts high-stakes hackathons for
                 ambitious builders. Built by hackers, for hackers.
               </p>
 
               {/* Primary CTAs */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16 px-4">
                 <Link
                   to="/events"
-                  className="pixel-button bg-maximally-red text-white group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red h-16 px-8 font-press-start text-sm"
+                  className="pixel-button bg-maximally-red text-white group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red h-12 sm:h-16 px-6 sm:px-8 font-press-start text-xs sm:text-sm"
                 >
-                  <Terminal className="h-5 w-5" />
-                  <span>EXPLORE_EVENTS</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <Terminal className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="hidden sm:inline">EXPLORE_EVENTS</span>
+                  <span className="sm:hidden">EVENTS</span>
+                  <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
                 <a
                   href="https://discord.gg/MpBnYk8qMX"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="pixel-button bg-maximally-yellow text-maximally-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-16 px-8 font-press-start text-sm"
+                  className="pixel-button bg-maximally-yellow text-maximally-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-12 sm:h-16 px-6 sm:px-8 font-press-start text-xs sm:text-sm"
                 >
-                  <Users className="h-5 w-5" />
-                  <span>JOIN_DISCORD</span>
+                  <Users className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <span className="hidden sm:inline">JOIN_DISCORD</span>
+                  <span className="sm:hidden">DISCORD</span>
                 </a>
               </div>
             </div>
@@ -155,18 +157,18 @@ const Index = () => {
                 <div className="minecraft-block bg-gradient-to-r from-orange-500 to-red-500 text-black px-6 py-3 inline-block mb-6">
                   <span className="font-press-start text-sm">🇮🇳 GRAND INDIAN HACKATHON SEASON 2025</span>
                 </div>
-                <h2 className="font-press-start text-4xl md:text-6xl font-bold mb-6 minecraft-text">
-                  <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 minecraft-text">
+                  <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                     10 HACKATHONS
                   </span>
                 </h2>
-                <p className="text-gray-300 text-xl font-press-start">
+                <p className="text-gray-300 text-sm sm:text-lg md:text-xl font-press-start px-4">
                   September → November • India's Biggest Hackathon Season
                 </p>
               </div>
 
               {/* Event Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-8 sm:mb-12">
                 {[
                   { name: "CODE HYPOTHESIS", date: "SEP 2025", icon: "🧪" },
                   { name: "PROTOCOL 404", date: "OCT 2025", icon: "⚡" },
@@ -179,13 +181,13 @@ const Index = () => {
                 ].slice(0, 10).map((event, i) => (
                   <div
                     key={i}
-                    className="pixel-card bg-gray-900 border-2 border-maximally-red hover:border-maximally-yellow transition-all duration-300 hover:scale-105 p-4"
+                    className="pixel-card bg-gray-900 border-2 border-maximally-red hover:border-maximally-yellow transition-all duration-300 hover:scale-105 p-2 sm:p-3 lg:p-4"
                   >
-                    <div className="text-2xl mb-2 text-center">{event.icon}</div>
-                    <div className="font-press-start text-xs text-maximally-red text-center mb-1">
+                    <div className="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2 text-center">{event.icon}</div>
+                    <div className="font-press-start text-[8px] sm:text-[10px] lg:text-xs text-maximally-red text-center mb-1 leading-tight">
                       {event.name}
                     </div>
-                    <div className="font-press-start text-xs text-gray-400 text-center">
+                    <div className="font-press-start text-[7px] sm:text-[9px] lg:text-xs text-gray-400 text-center leading-tight">
                       {event.date}
                     </div>
                   </div>
@@ -215,21 +217,21 @@ const Index = () => {
                 <div className="minecraft-block bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 py-3 inline-block mb-6">
                   <span className="font-press-start text-sm">🚀 WE'RE BUILDING</span>
                 </div>
-                <h2 className="font-press-start text-4xl md:text-6xl font-bold mb-6 minecraft-text">
-                  <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 minecraft-text">
+                  <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                     MAXIMALLY HACK
                   </span>
                 </h2>
-                <p className="text-2xl md:text-3xl font-press-start text-gray-300 mb-6">
+                <p className="text-sm sm:text-lg md:text-2xl lg:text-3xl font-press-start text-gray-300 mb-4 sm:mb-6 px-4">
                   the world's first ai-native hackathon platform ⚡
                 </p>
-                <p className="text-xl font-press-start text-maximally-red">
+                <p className="text-xs sm:text-base md:text-xl font-press-start text-maximally-red px-4">
                   not another devpost clone — built by hackers, for hackers.
                 </p>
               </div>
 
               {/* Features Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
                 <div className="pixel-card bg-black border-2 border-maximally-red p-6 hover:border-maximally-yellow transition-all duration-300">
                   <div className="minecraft-block bg-maximally-red w-12 h-12 mx-auto mb-4 flex items-center justify-center">
                     <Zap className="h-6 w-6 text-black" />
@@ -277,18 +279,18 @@ const Index = () => {
                 <div className="minecraft-block bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-3 inline-block mb-6">
                   <span className="font-press-start text-sm">👩‍💻 WE NEED CONTRIBUTORS</span>
                 </div>
-                <h2 className="font-press-start text-4xl md:text-5xl font-bold mb-6 minecraft-text">
-                  <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 minecraft-text">
+                  <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                     JOIN THE BUILD
                   </span>
                 </h2>
-                <p className="text-gray-300 text-xl font-jetbrains mb-8">
+                <p className="text-gray-300 text-sm sm:text-base md:text-xl font-jetbrains mb-6 sm:mb-8 px-4">
                   Help us revolutionize how hackathons work. Open source, community-driven.
                 </p>
               </div>
 
               {/* Roles Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4 mb-8 sm:mb-12">
                 {[
                   { role: "FRONTEND", icon: <Code className="h-6 w-6" />, color: "bg-blue-600" },
                   { role: "BACKEND", icon: <Database className="h-6 w-6" />, color: "bg-green-600" },
@@ -299,12 +301,12 @@ const Index = () => {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="pixel-card bg-black border-2 border-maximally-red p-4 text-center hover:border-maximally-yellow transition-all duration-300 hover:scale-105"
+                    className="pixel-card bg-black border-2 border-maximally-red p-2 sm:p-3 lg:p-4 text-center hover:border-maximally-yellow transition-all duration-300 hover:scale-105"
                   >
-                    <div className={`minecraft-block ${item.color} w-10 h-10 mx-auto mb-2 flex items-center justify-center text-white`}>
-                      {item.icon}
+                    <div className={`minecraft-block ${item.color} w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-1 sm:mb-2 flex items-center justify-center text-white`}>
+                      <div className="scale-75 sm:scale-90 lg:scale-100">{item.icon}</div>
                     </div>
-                    <div className="font-press-start text-xs text-maximally-red">
+                    <div className="font-press-start text-[8px] sm:text-[10px] lg:text-xs text-maximally-red leading-tight">
                       {item.role}
                     </div>
                   </div>
@@ -312,7 +314,7 @@ const Index = () => {
               </div>
 
               {/* Links */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                 <a
                   href="https://www.notion.so/Maximally-Hack-Contributor-Handbook-264ecfba8afb807aa9cbeef6e8d294c1"
                   target="_blank"
@@ -375,13 +377,13 @@ const Index = () => {
         <section className="py-20 bg-gradient-to-b from-black via-gray-900 to-black relative">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="font-press-start text-3xl md:text-4xl font-bold text-center mb-16 minecraft-text">
-                <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+              <h2 className="font-press-start text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 sm:mb-16 minecraft-text px-4">
+                <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                   BUILT GLOBAL. MADE FOR BUILDERS.
                 </span>
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                 <div className="text-center">
                   <div className="pixel-card bg-black border-2 border-maximally-red p-8 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow">
                     <div className="minecraft-block bg-maximally-red w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -426,7 +428,7 @@ const Index = () => {
               </div>
 
               <div className="text-center mt-16">
-                <p className="font-jetbrains text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                <p className="font-jetbrains text-sm sm:text-base md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
                   At Maximally, we believe innovation has no borders — and no traditional limits. 
                   Whether you're from a major city or a small town, if you're building bold things, 
                   <span className="text-maximally-red"> you belong here</span>.
