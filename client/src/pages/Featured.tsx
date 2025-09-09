@@ -8,15 +8,17 @@ const Featured = () => {
     {
       tier: "Education Partners",
       companies: [
-        { name: "Masters Union", role: "Education Partner" },
-        { name: "NexFellow", role: "Fellowship Partner" }
+        { name: "Masters' Union", role: "Official partner for Startup Makeathon" },
+        { name: "Young Researchers Institute (YRI)", role: "Research and content partner" },
+        { name: "NexFellow", role: "Community partner, helping expand our reach into Gen-Z networks" }
       ]
     },
     {
-      tier: "Technology Partners",
+      tier: "Technology Partners", 
       companies: [
-        { name: "XYZ Domains", role: "Domain Partner" },
-        { name: "CertifyMe", role: "Certification Partner" }
+        { name: "MakeX", role: "Official partner for the AI Shipathon" },
+        { name: "XYZ Domains", role: "Domain partner for projects and participants" },
+        { name: "Student clubs, indie founders, and educational groups", role: "Across India and beyond" }
       ]
     }
   ];
@@ -218,7 +220,7 @@ const Featured = () => {
               </div>
               <h1 className="font-press-start text-4xl md:text-6xl lg:text-8xl mb-8 minecraft-text">
                 <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
-                  FEATURED HEROES
+                  FEATURED
                 </span>
               </h1>
               <p className="text-gray-300 text-lg md:text-xl font-jetbrains max-w-4xl mx-auto leading-relaxed mb-12">

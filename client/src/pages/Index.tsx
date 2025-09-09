@@ -151,7 +151,7 @@ const Index = () => {
             {/* Desktop Marquee */}
             <div className="hidden md:block overflow-hidden">
               <div className="flex animate-marquee hover:pause-marquee whitespace-nowrap">
-                <div className="flex items-center space-x-8 text-white font-jetbrains text-lg">
+                <div className="flex items-center space-x-8 text-white font-press-start text-sm">
                   {[
                     "OpenAI", "Meta", "Amazon", "Google", "DeepMind", "Intuit", "Visa", "Salesforce", 
                     "FedEx", "Atlassian", "McKinsey", "Replit", "General Motors", "Warner Bros. Discovery", 
@@ -181,7 +181,7 @@ const Index = () => {
                   "Oracle", "ADP", "Graphite Health", "Mercury Financial", "Y Combinator", "JustPaid.ai", 
                   "Zealy.io", "Fig", "MakeX", "DarinX"
                 ].slice(0, 12).map((company, index) => (
-                  <span key={index} className="text-white font-jetbrains text-xs sm:text-sm hover:text-maximally-red transition-colors duration-300">
+                  <span key={index} className="text-white font-press-start text-xs hover:text-maximally-red transition-colors duration-300">
                     {company}
                   </span>
                 ))}

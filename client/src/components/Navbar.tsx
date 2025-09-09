@@ -33,6 +33,7 @@ const Navbar = () => {
   const menuItems = [
     { path: "/", label: "HOME", color: "#E50914" },
     { path: "/events", label: "EVENTS", color: "#E50914" },
+    { path: "/featured", label: "FEATURED", color: "#FFCB47" },
     { path: "https://discord.gg/MpBnYk8qMX", label: "DISCORD", color: "#FF2B2B", external: true },
     { path: "/blog", label: "BLOG", color: "#FFCB47" },
     { path: "/contact", label: "CONTACT", color: "#FF2B2B" }
@@ -40,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "py-2 sm:py-2 bg-black/95 backdrop-blur-sm border-b-2 border-maximally-red" : "py-3 sm:py-3 bg-black/90 backdrop-blur-sm"
+      isScrolled ? "py-2 sm:py-2 bg-black/95 backdrop-blur-md border-b-2 border-maximally-red shadow-lg" : "py-3 sm:py-3 bg-black/80 backdrop-blur-xl shadow-lg lg:shadow-none lg:backdrop-blur-sm lg:bg-black/90"
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
