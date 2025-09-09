@@ -26,21 +26,18 @@ import SEO from "@/components/SEO";
 
 const Index = () => {
   const [text, setText] = useState("");
-  const fullText = "WE BUILD HACKATHONS";
-  const [matrixRain, setMatrixRain] = useState<Array<{ id: number; delay: number; duration: number; left: number }>>([]);
+  const fullText = "WE HOST HACKATHONS";
+  const [floatingPixels, setFloatingPixels] = useState<Array<{ id: number; x: number; y: number; delay: number }>>([]);
 
   useEffect(() => {
-    // Matrix rain effect
-    const generateMatrixRain = () => {
-      const rain = Array.from({ length: 20 }, (_, i) => ({
-        id: i,
-        delay: Math.random() * 5,
-        duration: 3 + Math.random() * 4,
-        left: Math.random() * 100,
-      }));
-      setMatrixRain(rain);
-    };
-    generateMatrixRain();
+    // Generate floating pixels
+    const pixels = Array.from({ length: 15 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      delay: Math.random() * 2,
+    }));
+    setFloatingPixels(pixels);
 
     // Typing effect
     let index = 0;
@@ -51,7 +48,7 @@ const Index = () => {
       } else {
         clearInterval(timer);
       }
-    }, 80);
+    }, 100);
 
     return () => {
       clearInterval(timer);
@@ -75,75 +72,63 @@ const Index = () => {
       />
 
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        {/* Matrix Rain Background */}
-        <div className="fixed inset-0 pointer-events-none z-0">
-          {matrixRain.map((drop) => (
-            <div
-              key={drop.id}
-              className="absolute top-0 text-green-400 opacity-20 font-mono text-sm"
-              style={{
-                left: `${drop.left}%`,
-                animation: `matrix-fall ${drop.duration}s linear ${drop.delay}s infinite`,
-              }}
-            >
-              {Array.from({ length: 20 }, (_, i) => (
-                <div key={i} className="block">
-                  {Math.random() > 0.5 ? '1' : '0'}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-
-        {/* Animated Grid Background */}
-        <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
-        <div className="fixed inset-0 bg-[linear-gradient(rgba(0,255,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,0,0.03)_1px,transparent_1px)] bg-[size:20px_20px] animate-pulse" />
+        {/* Pixel Grid Background */}
+        <div className="fixed inset-0 bg-black" />
+        <div className="fixed inset-0 bg-[linear-gradient(rgba(255,0,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,0,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        
+        {/* Floating Pixels */}
+        {floatingPixels.map((pixel) => (
+          <div
+            key={pixel.id}
+            className="fixed w-2 h-2 bg-maximally-red pixel-border animate-float pointer-events-none"
+            style={{
+              left: `${pixel.x}%`,
+              top: `${pixel.y}%`,
+              animationDelay: `${pixel.delay}s`,
+              animationDuration: `${4 + pixel.delay}s`,
+            }}
+          />
+        ))}
 
         {/* Hero Section */}
         <section className="min-h-screen relative flex items-center">
           <div className="container mx-auto px-4 z-10">
-            <div className="max-w-6xl mx-auto">
-              {/* Glitch Alert */}
-              <div className="mb-8 text-center">
-                <div className="inline-block bg-red-500/20 border border-red-500 px-4 py-2 rounded-lg">
-                  <span className="font-mono text-red-400 text-sm animate-pulse">
-                    {">>> SYSTEM.STATUS: DISRUPTING_HACKATHON_INDUSTRY"}
-                  </span>
+            <div className="max-w-6xl mx-auto text-center">
+              {/* System Alert */}
+              <div className="mb-8">
+                <div className="inline-block minecraft-block bg-maximally-red p-3">
+                  <div className="flex items-center gap-2 text-white font-press-start text-xs">
+                    <Terminal className="h-4 w-4 animate-pulse" />
+                    <span>SYSTEM.STATUS: DISRUPTING_HACKATHON_INDUSTRY</span>
+                  </div>
                 </div>
               </div>
 
               {/* Main Title */}
-              <div className="text-center mb-12">
-                <h1 className="font-mono text-3xl md:text-6xl lg:text-7xl font-bold mb-6 relative">
-                  <span className="bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                    {text}
-                  </span>
-                  <span className="inline-block w-1 h-16 bg-green-400 ml-2 animate-pulse" />
-                  
-                  {/* Glitch effect */}
-                  <div className="absolute inset-0 text-red-500 opacity-50 animate-ping" style={{ animationDuration: '3s' }}>
-                    {text}
-                  </div>
-                </h1>
+              <h1 className="font-press-start text-4xl md:text-7xl lg:text-8xl font-bold mb-8 minecraft-text">
+                <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                  {text}
+                </span>
+                <span className="inline-block w-2 h-16 bg-maximally-red ml-2 animate-[cursor-blink_1s_infinite]" />
+              </h1>
 
-                <div className="text-xl md:text-2xl font-mono text-gray-300 mb-4">
-                  <span className="text-red-400">but not the boring ones</span> ⚡
-                </div>
-
-                <p className="text-gray-400 text-lg max-w-3xl mx-auto font-mono leading-relaxed">
-                  A global innovation league that hosts high-stakes hackathons for
-                  ambitious builders. Built by hackers, for hackers.
-                </p>
+              <div className="text-xl md:text-2xl font-press-start text-gray-300 mb-4">
+                <span className="text-maximally-red">but not the boring ones</span> ⚡
               </div>
+
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto font-jetbrains leading-relaxed mb-12">
+                A global innovation league that hosts high-stakes hackathons for
+                ambitious builders. Built by hackers, for hackers.
+              </p>
 
               {/* Primary CTAs */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
                 <Link
                   to="/events"
-                  className="group bg-gradient-to-r from-green-500 to-cyan-500 text-black px-8 py-4 rounded-lg font-mono font-bold hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] flex items-center justify-center gap-2"
+                  className="pixel-button bg-maximally-red text-white group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-red h-16 px-8 font-press-start text-sm"
                 >
                   <Terminal className="h-5 w-5" />
-                  EXPLORE_EVENTS.exe
+                  <span>EXPLORE_EVENTS</span>
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
 
@@ -151,10 +136,10 @@ const Index = () => {
                   href="https://discord.gg/MpBnYk8qMX"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-mono font-bold hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.5)] flex items-center justify-center gap-2"
+                  className="pixel-button bg-maximally-yellow text-maximally-black group flex items-center justify-center gap-2 hover:scale-105 transform transition-all hover:shadow-glow-yellow h-16 px-8 font-press-start text-sm"
                 >
                   <Users className="h-5 w-5" />
-                  JOIN_DISCORD.sh
+                  <span>JOIN_DISCORD</span>
                 </a>
               </div>
             </div>
@@ -167,21 +152,21 @@ const Index = () => {
             <div className="max-w-6xl mx-auto">
               {/* Section Header */}
               <div className="text-center mb-16">
-                <div className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-black px-6 py-2 rounded-full font-mono font-bold mb-4">
-                  🇮🇳 GRAND INDIAN HACKATHON SEASON 2025
+                <div className="minecraft-block bg-gradient-to-r from-orange-500 to-red-500 text-black px-6 py-3 inline-block mb-6">
+                  <span className="font-press-start text-sm">🇮🇳 GRAND INDIAN HACKATHON SEASON 2025</span>
                 </div>
-                <h2 className="font-mono text-4xl md:text-5xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                <h2 className="font-press-start text-4xl md:text-6xl font-bold mb-6 minecraft-text">
+                  <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                     10 HACKATHONS
                   </span>
                 </h2>
-                <p className="text-gray-300 text-xl font-mono">
+                <p className="text-gray-300 text-xl font-press-start">
                   September → November • India's Biggest Hackathon Season
                 </p>
               </div>
 
               {/* Event Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
                 {[
                   { name: "CODE HYPOTHESIS", date: "SEP 2025", icon: "🧪" },
                   { name: "PROTOCOL 404", date: "OCT 2025", icon: "⚡" },
@@ -194,13 +179,13 @@ const Index = () => {
                 ].slice(0, 10).map((event, i) => (
                   <div
                     key={i}
-                    className="bg-gray-900/50 border border-gray-700 rounded-lg p-4 hover:border-orange-500 transition-all duration-300 hover:scale-105"
+                    className="pixel-card bg-gray-900 border-2 border-maximally-red hover:border-maximally-yellow transition-all duration-300 hover:scale-105 p-4"
                   >
-                    <div className="text-2xl mb-2">{event.icon}</div>
-                    <div className="font-mono text-sm font-bold text-orange-400">
+                    <div className="text-2xl mb-2 text-center">{event.icon}</div>
+                    <div className="font-press-start text-xs text-maximally-red text-center mb-1">
                       {event.name}
                     </div>
-                    <div className="font-mono text-xs text-gray-400">
+                    <div className="font-press-start text-xs text-gray-400 text-center">
                       {event.date}
                     </div>
                   </div>
@@ -210,10 +195,10 @@ const Index = () => {
               <div className="text-center">
                 <Link
                   to="/events"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-black px-8 py-4 rounded-lg font-mono font-bold hover:scale-105 transition-all duration-300"
+                  className="pixel-button bg-maximally-red text-white inline-flex items-center gap-2 px-8 py-4 font-press-start hover:scale-105 transition-all duration-300"
                 >
                   <Calendar className="h-5 w-5" />
-                  VIEW_ALL_EVENTS.json
+                  <span>VIEW_ALL_EVENTS</span>
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </div>
@@ -227,48 +212,54 @@ const Index = () => {
             <div className="max-w-6xl mx-auto text-center">
               {/* Header */}
               <div className="mb-16">
-                <div className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 py-2 rounded-full font-mono font-bold mb-4">
-                  🚀 WE'RE BUILDING
+                <div className="minecraft-block bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 py-3 inline-block mb-6">
+                  <span className="font-press-start text-sm">🚀 WE'RE BUILDING</span>
                 </div>
-                <h2 className="font-mono text-4xl md:text-6xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                <h2 className="font-press-start text-4xl md:text-6xl font-bold mb-6 minecraft-text">
+                  <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                     MAXIMALLY HACK
                   </span>
                 </h2>
-                <p className="text-2xl md:text-3xl font-mono text-gray-300 mb-6">
+                <p className="text-2xl md:text-3xl font-press-start text-gray-300 mb-6">
                   the world's first ai-native hackathon platform ⚡
                 </p>
-                <p className="text-xl font-mono text-red-400">
+                <p className="text-xl font-press-start text-maximally-red">
                   not another devpost clone — built by hackers, for hackers.
                 </p>
               </div>
 
               {/* Features Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <div className="bg-gray-800/30 border border-gray-600 rounded-lg p-6">
-                  <Zap className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
-                  <h3 className="font-mono text-lg font-bold text-yellow-400 mb-2">
+                <div className="pixel-card bg-black border-2 border-maximally-red p-6 hover:border-maximally-yellow transition-all duration-300">
+                  <div className="minecraft-block bg-maximally-red w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                    <Zap className="h-6 w-6 text-black" />
+                  </div>
+                  <h3 className="font-press-start text-sm text-maximally-red mb-2">
                     AI-POWERED
                   </h3>
-                  <p className="font-mono text-gray-300 text-sm">
+                  <p className="font-jetbrains text-gray-300 text-sm">
                     Smart project matching, automated judging, real-time insights
                   </p>
                 </div>
-                <div className="bg-gray-800/30 border border-gray-600 rounded-lg p-6">
-                  <Terminal className="h-12 w-12 text-green-400 mx-auto mb-4" />
-                  <h3 className="font-mono text-lg font-bold text-green-400 mb-2">
+                <div className="pixel-card bg-black border-2 border-maximally-red p-6 hover:border-maximally-yellow transition-all duration-300">
+                  <div className="minecraft-block bg-maximally-red w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                    <Terminal className="h-6 w-6 text-black" />
+                  </div>
+                  <h3 className="font-press-start text-sm text-maximally-red mb-2">
                     HACKER-FIRST
                   </h3>
-                  <p className="font-mono text-gray-300 text-sm">
+                  <p className="font-jetbrains text-gray-300 text-sm">
                     Built for the community, by the community. Zero corporate BS.
                   </p>
                 </div>
-                <div className="bg-gray-800/30 border border-gray-600 rounded-lg p-6">
-                  <Globe className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                  <h3 className="font-mono text-lg font-bold text-blue-400 mb-2">
+                <div className="pixel-card bg-black border-2 border-maximally-red p-6 hover:border-maximally-yellow transition-all duration-300">
+                  <div className="minecraft-block bg-maximally-red w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                    <Globe className="h-6 w-6 text-black" />
+                  </div>
+                  <h3 className="font-press-start text-sm text-maximally-red mb-2">
                     GLOBAL SCALE
                   </h3>
-                  <p className="font-mono text-gray-300 text-sm">
+                  <p className="font-jetbrains text-gray-300 text-sm">
                     Connect builders worldwide. Break geographical barriers.
                   </p>
                 </div>
@@ -283,15 +274,15 @@ const Index = () => {
             <div className="max-w-6xl mx-auto">
               {/* Header */}
               <div className="text-center mb-16">
-                <div className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-2 rounded-full font-mono font-bold mb-4">
-                  👩‍💻 WE NEED CONTRIBUTORS
+                <div className="minecraft-block bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-3 inline-block mb-6">
+                  <span className="font-press-start text-sm">👩‍💻 WE NEED CONTRIBUTORS</span>
                 </div>
-                <h2 className="font-mono text-4xl md:text-5xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                <h2 className="font-press-start text-4xl md:text-5xl font-bold mb-6 minecraft-text">
+                  <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                     JOIN THE BUILD
                   </span>
                 </h2>
-                <p className="text-gray-300 text-xl font-mono mb-8">
+                <p className="text-gray-300 text-xl font-jetbrains mb-8">
                   Help us revolutionize how hackathons work. Open source, community-driven.
                 </p>
               </div>
@@ -299,21 +290,21 @@ const Index = () => {
               {/* Roles Grid */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
                 {[
-                  { role: "FRONTEND", icon: <Code className="h-6 w-6" />, color: "text-blue-400" },
-                  { role: "BACKEND", icon: <Database className="h-6 w-6" />, color: "text-green-400" },
-                  { role: "DESIGN", icon: <Palette className="h-6 w-6" />, color: "text-purple-400" },
-                  { role: "TESTING", icon: <TestTube className="h-6 w-6" />, color: "text-yellow-400" },
-                  { role: "DEVOPS", icon: <Settings className="h-6 w-6" />, color: "text-red-400" },
-                  { role: "AI/ML", icon: <Cpu className="h-6 w-6" />, color: "text-cyan-400" },
+                  { role: "FRONTEND", icon: <Code className="h-6 w-6" />, color: "bg-blue-600" },
+                  { role: "BACKEND", icon: <Database className="h-6 w-6" />, color: "bg-green-600" },
+                  { role: "DESIGN", icon: <Palette className="h-6 w-6" />, color: "bg-purple-600" },
+                  { role: "TESTING", icon: <TestTube className="h-6 w-6" />, color: "bg-yellow-600" },
+                  { role: "DEVOPS", icon: <Settings className="h-6 w-6" />, color: "bg-red-600" },
+                  { role: "AI/ML", icon: <Cpu className="h-6 w-6" />, color: "bg-cyan-600" },
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="bg-gray-900/50 border border-gray-700 rounded-lg p-4 text-center hover:border-green-500 transition-all duration-300 hover:scale-105"
+                    className="pixel-card bg-black border-2 border-maximally-red p-4 text-center hover:border-maximally-yellow transition-all duration-300 hover:scale-105"
                   >
-                    <div className={`${item.color} mb-2 flex justify-center`}>
+                    <div className={`minecraft-block ${item.color} w-10 h-10 mx-auto mb-2 flex items-center justify-center text-white`}>
                       {item.icon}
                     </div>
-                    <div className={`font-mono text-sm font-bold ${item.color}`}>
+                    <div className="font-press-start text-xs text-maximally-red">
                       {item.role}
                     </div>
                   </div>
@@ -326,14 +317,16 @@ const Index = () => {
                   href="https://www.notion.so/Maximally-Hack-Contributor-Handbook-264ecfba8afb807aa9cbeef6e8d294c1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-gradient-to-r from-blue-600 to-blue-700 border border-blue-500 rounded-lg p-6 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]"
+                  className="pixel-card bg-black border-2 border-blue-500 p-6 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow group"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <FileText className="h-6 w-6 text-blue-300" />
-                    <span className="font-mono font-bold text-blue-300">HANDBOOK</span>
+                    <div className="minecraft-block bg-blue-500 w-8 h-8 flex items-center justify-center">
+                      <FileText className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="font-press-start text-sm text-blue-400">HANDBOOK</span>
                     <ExternalLink className="h-4 w-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <p className="font-mono text-sm text-blue-200">
+                  <p className="font-jetbrains text-sm text-gray-300">
                     Complete contributor guide with setup instructions and project roadmap
                   </p>
                 </a>
@@ -342,14 +335,16 @@ const Index = () => {
                   href="https://forms.gle/yk5twiS5HX189JiR8"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-gradient-to-r from-green-600 to-green-700 border border-green-500 rounded-lg p-6 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)]"
+                  className="pixel-card bg-black border-2 border-green-500 p-6 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow group"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <FileText className="h-6 w-6 text-green-300" />
-                    <span className="font-mono font-bold text-green-300">APPLICATION</span>
+                    <div className="minecraft-block bg-green-500 w-8 h-8 flex items-center justify-center">
+                      <FileText className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="font-press-start text-sm text-green-400">APPLICATION</span>
                     <ExternalLink className="h-4 w-4 text-green-400 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <p className="font-mono text-sm text-green-200">
+                  <p className="font-jetbrains text-sm text-gray-300">
                     Apply to join our core contributor team and help shape the future
                   </p>
                 </a>
@@ -358,14 +353,16 @@ const Index = () => {
                   href="https://www.youtube.com/watch?v=qBvCwtzUjdE"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group bg-gradient-to-r from-red-600 to-red-700 border border-red-500 rounded-lg p-6 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]"
+                  className="pixel-card bg-black border-2 border-red-500 p-6 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow group"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <Play className="h-6 w-6 text-red-300" />
-                    <span className="font-mono font-bold text-red-300">EXPLAINER</span>
+                    <div className="minecraft-block bg-red-500 w-8 h-8 flex items-center justify-center">
+                      <Play className="h-4 w-4 text-white" />
+                    </div>
+                    <span className="font-press-start text-sm text-red-400">EXPLAINER</span>
                     <ExternalLink className="h-4 w-4 text-red-400 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <p className="font-mono text-sm text-red-200">
+                  <p className="font-jetbrains text-sm text-gray-300">
                     Watch our vision video to understand what we're building
                   </p>
                 </a>
@@ -378,44 +375,50 @@ const Index = () => {
         <section className="py-20 bg-gradient-to-b from-black via-gray-900 to-black relative">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="font-mono text-3xl md:text-4xl font-bold text-center mb-16">
-                <span className="bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <h2 className="font-press-start text-3xl md:text-4xl font-bold text-center mb-16 minecraft-text">
+                <span className="text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                   BUILT GLOBAL. MADE FOR BUILDERS.
                 </span>
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="bg-gray-900/50 border-2 border-green-500 rounded-lg p-8 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.2)]">
-                    <Globe className="h-16 w-16 text-green-400 mx-auto mb-4" />
-                    <h3 className="font-mono text-2xl font-bold text-white mb-2">
+                  <div className="pixel-card bg-black border-2 border-maximally-red p-8 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow">
+                    <div className="minecraft-block bg-maximally-red w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                      <Globe className="h-8 w-8 text-black" />
+                    </div>
+                    <h3 className="font-press-start text-lg text-maximally-red mb-2">
                       GLOBAL
                     </h3>
-                    <p className="font-mono text-gray-300">
+                    <p className="font-jetbrains text-gray-300">
                       Borderless innovation for builders worldwide
                     </p>
                   </div>
                 </div>
 
                 <div className="text-center">
-                  <div className="bg-gray-900/50 border-2 border-cyan-500 rounded-lg p-8 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,182,212,0.2)]">
-                    <Terminal className="h-16 w-16 text-cyan-400 mx-auto mb-4" />
-                    <h3 className="font-mono text-2xl font-bold text-white mb-2">
+                  <div className="pixel-card bg-black border-2 border-maximally-red p-8 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow">
+                    <div className="minecraft-block bg-maximally-red w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                      <Terminal className="h-8 w-8 text-black" />
+                    </div>
+                    <h3 className="font-press-start text-lg text-maximally-red mb-2">
                       DIGITAL
                     </h3>
-                    <p className="font-mono text-gray-300">
+                    <p className="font-jetbrains text-gray-300">
                       Internet-native events for digital builders
                     </p>
                   </div>
                 </div>
 
                 <div className="text-center">
-                  <div className="bg-gray-900/50 border-2 border-blue-500 rounded-lg p-8 hover:scale-105 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]">
-                    <Zap className="h-16 w-16 text-blue-400 mx-auto mb-4" />
-                    <h3 className="font-mono text-2xl font-bold text-white mb-2">
+                  <div className="pixel-card bg-black border-2 border-maximally-red p-8 hover:scale-105 transition-all duration-300 hover:border-maximally-yellow">
+                    <div className="minecraft-block bg-maximally-red w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                      <Zap className="h-8 w-8 text-black" />
+                    </div>
+                    <h3 className="font-press-start text-lg text-maximally-red mb-2">
                       FAST
                     </h3>
-                    <p className="font-mono text-gray-300">
+                    <p className="font-jetbrains text-gray-300">
                       High-pressure sprints for real proof of work
                     </p>
                   </div>
@@ -423,10 +426,10 @@ const Index = () => {
               </div>
 
               <div className="text-center mt-16">
-                <p className="font-mono text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                <p className="font-jetbrains text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   At Maximally, we believe innovation has no borders — and no traditional limits. 
                   Whether you're from a major city or a small town, if you're building bold things, 
-                  <span className="text-green-400"> you belong here</span>.
+                  <span className="text-maximally-red"> you belong here</span>.
                 </p>
               </div>
             </div>
@@ -435,17 +438,6 @@ const Index = () => {
 
         <Footer />
       </div>
-
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes matrix-fall {
-          0% {
-            transform: translateY(-100vh);
-          }
-          100% {
-            transform: translateY(100vh);
-          }
-        }
-      `}} />
     </>
   );
 };
