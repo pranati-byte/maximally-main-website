@@ -129,7 +129,7 @@ const Index = () => {
                 <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                   {text}
                 </span>
-                <span className="inline-block w-1 h-8 sm:w-2 sm:h-12 md:h-16 bg-maximally-red ml-1 sm:ml-2 animate-[cursor-blink_1s_infinite]" />
+                <span className="inline-block w-1 h-6 sm:w-1.5 sm:h-8 md:w-2 md:h-12 lg:w-3 lg:h-16 xl:w-4 xl:h-20 bg-maximally-red ml-1 sm:ml-1.5 md:ml-2 lg:ml-3 xl:ml-4 animate-[cursor-blink_1s_infinite]" />
               </h1>
 
               <div className="text-sm sm:text-lg md:text-xl lg:text-2xl font-press-start text-gray-300 mb-4 px-2">
@@ -225,7 +225,7 @@ const Index = () => {
               </div>
 
               {/* Event Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-8 sm:mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-4 lg:gap-6 mb-8 sm:mb-12">
                 {[
                   { name: 'CODE HYPOTHESIS', date: 'SEP 2025', icon: '🧪' },
                   { name: 'PROTOCOL 404', date: 'OCT 2025', icon: '⚡' },
@@ -240,15 +240,15 @@ const Index = () => {
                   .map((event, i) => (
                     <div
                       key={i}
-                      className="pixel-card bg-gray-900 border-2 border-maximally-red hover:border-maximally-yellow transition-all duration-300 hover:scale-105 p-2 sm:p-3 lg:p-4"
+                      className="pixel-card bg-gray-900 border-2 border-maximally-red hover:border-maximally-yellow transition-all duration-300 hover:scale-105 p-4 sm:p-3 lg:p-4 min-h-[120px] sm:min-h-[100px] flex flex-col justify-center"
                     >
-                      <div className="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2 text-center">
+                      <div className="text-2xl sm:text-xl lg:text-2xl mb-3 sm:mb-2 text-center">
                         {event.icon}
                       </div>
-                      <div className="font-press-start text-[8px] sm:text-[10px] lg:text-xs text-maximally-red text-center mb-1 leading-tight">
+                      <div className="font-press-start text-xs sm:text-[10px] lg:text-xs text-maximally-red text-center mb-2 sm:mb-1 leading-tight">
                         {event.name}
                       </div>
-                      <div className="font-press-start text-[7px] sm:text-[9px] lg:text-xs text-gray-400 text-center leading-tight">
+                      <div className="font-press-start text-[10px] sm:text-[9px] lg:text-xs text-gray-400 text-center leading-tight">
                         {event.date}
                       </div>
                     </div>
@@ -358,7 +358,7 @@ const Index = () => {
               </div>
 
               {/* Roles Grid */}
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4 mb-8 sm:mb-12">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 mb-8 sm:mb-12">
                 {[
                   {
                     role: 'FRONTEND',
@@ -393,16 +393,16 @@ const Index = () => {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="pixel-card bg-black border-2 border-maximally-red p-2 sm:p-3 lg:p-4 text-center hover:border-maximally-yellow transition-all duration-300 hover:scale-105"
+                    className="pixel-card bg-black border-2 border-maximally-red p-3 sm:p-3 lg:p-4 text-center hover:border-maximally-yellow transition-all duration-300 hover:scale-105"
                   >
                     <div
-                      className={`minecraft-block ${item.color} w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-1 sm:mb-2 flex items-center justify-center text-white`}
+                      className={`minecraft-block ${item.color} w-8 h-8 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 sm:mb-2 flex items-center justify-center text-white`}
                     >
-                      <div className="scale-75 sm:scale-90 lg:scale-100">
+                      <div className="scale-90 sm:scale-90 lg:scale-100">
                         {item.icon}
                       </div>
                     </div>
-                    <div className="font-press-start text-[8px] sm:text-[10px] lg:text-xs text-maximally-red leading-tight">
+                    <div className="font-press-start text-[10px] sm:text-[10px] lg:text-xs text-maximally-red leading-tight">
                       {item.role}
                     </div>
                   </div>
