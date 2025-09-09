@@ -245,10 +245,10 @@ const Index = () => {
                       <div className="text-2xl sm:text-xl lg:text-2xl mb-3 sm:mb-2 text-center">
                         {event.icon}
                       </div>
-                      <div className="font-press-start text-xs sm:text-[10px] lg:text-xs text-maximally-red text-center mb-2 sm:mb-1 leading-tight">
+                      <div className="font-press-start text-sm sm:text-xs lg:text-sm text-maximally-red text-center mb-2 sm:mb-1 leading-tight">
                         {event.name}
                       </div>
-                      <div className="font-press-start text-[10px] sm:text-[9px] lg:text-xs text-gray-400 text-center leading-tight">
+                      <div className="font-press-start text-xs sm:text-[10px] lg:text-xs text-gray-400 text-center leading-tight">
                         {event.date}
                       </div>
                     </div>
