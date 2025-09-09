@@ -94,15 +94,6 @@ const Index = () => {
         <section className="min-h-screen relative flex items-center">
           <div className="container mx-auto px-4 z-10">
             <div className="max-w-6xl mx-auto text-center">
-              {/* System Alert */}
-              <div className="mb-8">
-                <div className="inline-block minecraft-block bg-maximally-red p-3">
-                  <div className="flex items-center gap-2 text-white font-press-start text-xs">
-                    <Terminal className="h-4 w-4 animate-pulse" />
-                    <span>SYSTEM.STATUS: DISRUPTING_HACKATHON_INDUSTRY</span>
-                  </div>
-                </div>
-              </div>
 
               {/* Main Title */}
               <h1 className="font-press-start text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-bold mb-6 minecraft-text leading-tight">

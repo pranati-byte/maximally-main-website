@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Instagram, Linkedin, Twitter, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -133,17 +134,15 @@ const Footer = () => {
           </h3>
           <div className="flex justify-center space-x-6">
             {[
-              { name: "Instagram", url: "https://www.instagram.com/maximally.in/", color: "bg-gradient-to-br from-pink-500 to-purple-600" },
-              { name: "LinkedIn", url: "https://www.linkedin.com/company/maximallyedu", color: "bg-gradient-to-br from-blue-500 to-blue-700" },
-              { name: "Twitter", url: "https://twitter.com/maximally_in", color: "bg-gradient-to-br from-black to-gray-800" },
-              { name: "Discord", url: "https://discord.gg/WmSXVzDYuq", color: "bg-gradient-to-br from-indigo-500 to-purple-600" },
+              { name: "Instagram", url: "https://www.instagram.com/maximally.in/", color: "bg-gradient-to-br from-pink-500 to-purple-600", icon: Instagram },
+              { name: "LinkedIn", url: "https://www.linkedin.com/company/maximallyedu", color: "bg-gradient-to-br from-blue-500 to-blue-700", icon: Linkedin },
+              { name: "X", url: "https://twitter.com/maximally_in", color: "bg-gradient-to-br from-black to-gray-800", icon: Twitter },
+              { name: "Discord", url: "https://discord.gg/WmSXVzDYuq", color: "bg-gradient-to-br from-indigo-500 to-purple-600", icon: MessageCircle },
             ].map((social, i) => (
               <a key={i} href={social.url} className="group" target="_blank" rel="noopener noreferrer">
-                <div className={`pixel-card ${social.color} hover:scale-110 transition-transform p-3`}>
-                  <div className="minecraft-block bg-white w-8 h-8 flex items-center justify-center">
-                    <span className="font-press-start text-xs text-black">
-                      {social.name.slice(0, 1)}
-                    </span>
+                <div className={`pixel-card ${social.color} hover:scale-110 transition-transform p-4`}>
+                  <div className="minecraft-block bg-white w-10 h-10 flex items-center justify-center">
+                    <social.icon className="h-5 w-5 text-black" />
                   </div>
                 </div>
               </a>
