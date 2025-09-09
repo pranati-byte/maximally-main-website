@@ -57,6 +57,33 @@ const Index = () => {
     };
   }, []);
 
+  const companies = [
+    'OpenAI',
+    'Meta',
+    'Amazon',
+    'Google',
+    'DeepMind',
+    'Intuit',
+    'Visa',
+    'Salesforce',
+    'FedEx',
+    'Atlassian',
+    'McKinsey',
+    'Replit',
+    'General Motors',
+    'Warner Bros. Discovery',
+    'Oracle',
+    'ADP',
+    'Graphite Health',
+    'Mercury Financial',
+    'Y Combinator',
+    'JustPaid.ai',
+    'Zealy.io',
+    'Fig',
+    'MakeX',
+    'DarinX',
+  ];
+
   return (
     <>
       <SEO
@@ -153,112 +180,24 @@ const Index = () => {
               </h3>
             </div>
 
-            {/* Desktop Marquee */}
-            <div className="hidden md:block overflow-hidden">
+            {/* Marquee for all screen sizes */}
+            <div className="overflow-hidden">
               <div className="flex animate-marquee hover:pause-marquee whitespace-nowrap">
-                <div className="flex items-center space-x-8 text-white font-press-start text-sm">
-                  {[
-                    'OpenAI',
-                    'Meta',
-                    'Amazon',
-                    'Google',
-                    'DeepMind',
-                    'Intuit',
-                    'Visa',
-                    'Salesforce',
-                    'FedEx',
-                    'Atlassian',
-                    'McKinsey',
-                    'Replit',
-                    'General Motors',
-                    'Warner Bros. Discovery',
-                    'Oracle',
-                    'ADP',
-                    'Graphite Health',
-                    'Mercury Financial',
-                    'Y Combinator',
-                    'JustPaid.ai',
-                    'Zealy.io',
-                    'Fig',
-                    'MakeX',
-                    'DarinX',
-                  ]
-                    .concat([
-                      'OpenAI',
-                      'Meta',
-                      'Amazon',
-                      'Google',
-                      'DeepMind',
-                      'Intuit',
-                      'Visa',
-                      'Salesforce',
-                      'FedEx',
-                      'Atlassian',
-                      'McKinsey',
-                      'Replit',
-                      'General Motors',
-                      'Warner Bros. Discovery',
-                      'Oracle',
-                      'ADP',
-                      'Graphite Health',
-                      'Mercury Financial',
-                      'Y Combinator',
-                      'JustPaid.ai',
-                      'Zealy.io',
-                      'Fig',
-                      'MakeX',
-                      'DarinX',
-                    ])
+                <div className="flex items-center space-x-4 sm:space-x-6 md:space-x-8 text-white font-press-start text-xs sm:text-sm">
+                  {companies
+                    .concat(companies) // Duplicate array for seamless loop
                     .map((company, index) => (
-                      <span key={index} className="flex items-center space-x-8">
-                        <span className="hover:text-maximally-red transition-colors duration-300">
+                      <span
+                        key={index}
+                        className="flex items-center space-x-4 sm:space-x-6 md:space-x-8"
+                      >
+                        <span className="hover:text-maximally-red transition-colors duration-300 whitespace-nowrap">
                           {company}
                         </span>
                         <span className="text-maximally-red">•</span>
                       </span>
                     ))}
                 </div>
-              </div>
-            </div>
-
-            {/* Mobile Grid */}
-            <div className="md:hidden">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                {[
-                  'OpenAI',
-                  'Meta',
-                  'Amazon',
-                  'Google',
-                  'DeepMind',
-                  'Intuit',
-                  'Visa',
-                  'Salesforce',
-                  'FedEx',
-                  'Atlassian',
-                  'McKinsey',
-                  'Replit',
-                  'General Motors',
-                  'Warner Bros. Discovery',
-                  'Oracle',
-                  'ADP',
-                  'Graphite Health',
-                  'Mercury Financial',
-                  'Y Combinator',
-                  'JustPaid.ai',
-                  'Zealy.io',
-                  'Fig',
-                  'MakeX',
-                  'DarinX',
-                ]
-                  .slice(0, 12)
-                  .map((company, index) => (
-                    <span
-                      key={index}
-                      className="text-white font-press-start text-xs hover:text-maximally-red transition-colors duration-300"
-                    >
-                      {company}
-                    </span>
-                  ))}
               </div>
             </div>
           </div>
