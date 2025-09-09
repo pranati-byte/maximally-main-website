@@ -24,9 +24,8 @@ import ThankYou from './pages/ThankYou';
 import Featured from './pages/Featured';
 import Bootcamps from '@/pages/Bootcamps';
 import Blog from './pages/Blog';
-import Community from './pages/Community';
-
-import Collaborate from './pages/Collaborate';
+// Removed Community and Collaborate imports
+import CommunityRedirect from '@/components/CommunityRedirect';
 import SummerPrograms2025 from './pages/BlogPost/SummerPrograms2025';
 import MaximallyLeangap2025 from './pages/BlogPost/MaximallyLeangap2025';
 import SummerBreak2025 from './pages/BlogPost/SummerBreak2025';
@@ -55,7 +54,7 @@ import OnlineBrandingTips from '@/pages/BlogPost/OnlineBrandingTips';
 import TeenEntrepreneursIndia from '@/pages/BlogPost/TeenEntrepreneursIndia';
 import YoutubeVsStartup from '@/pages/BlogPost/YoutubeVsStartup';
 import TopCareersForTeens from '@/pages/BlogPost/TopCareersForTeens';
-import WallOfProgressiveSchools from '@/pages/WallOfProgressiveSchools';
+// Removed WallOfProgressiveSchools import
 import Events from './pages/Events';
 import MakeathonForFuture from './pages/BlogPost/MakeathonForFuture';
 import StartupsThroughMaximally from './pages/BlogPost/StartupsThroughMaximally';
@@ -77,7 +76,7 @@ import ParentsSupport from './pages/BlogPost/ParentsSupport';
 import MakeathonFAQ from './pages/BlogPost/MakeathonFAQ';
 import BuildingTeamworkLeadership from './pages/BlogPost/BuildingTeamworkLeadership';
 
-import Shipathon from './pages/Shipathon';
+// Removed Shipathon import
 
 // AI Shipathon Blog Posts
 import MaximallyAIShipathonGuide from './pages/blog/MaximallyAIShipathonGuide';
@@ -297,10 +296,7 @@ const App = () => {
               path="/blog/top-careers-for-teen-innovators"
               element={<TopCareersForTeens />}
             />
-            <Route
-              path="/wall-of-progressive-schools"
-              element={<WallOfProgressiveSchools />}
-            />
+            {/* Removed wall-of-progressive-schools route */}
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/story" element={<Story />} />
@@ -308,8 +304,8 @@ const App = () => {
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
 
-            <Route path="/community" element={<Community />} />
-            <Route path="/collaborate" element={<Collaborate />} />
+            {/* Community redirect to Discord */}
+            <Route path="/community" element={<CommunityRedirect />} />
 
             <Route path="/featured" element={<Featured />} />
 
@@ -390,7 +386,7 @@ const App = () => {
               path="/blog/teamwork-leadership-maximally"
               element={<BuildingTeamworkLeadership />}
             />
-            <Route path="/shipathon" element={<Shipathon />} />
+            {/* Removed shipathon route */}
             <Route path="/codehypothesis" element={<CodeHypothesis />} />
             <Route path="/protocol-404" element={<Protocol404 />} />
             <Route path="/project-codegen" element={<ProjectCodeGen />} />

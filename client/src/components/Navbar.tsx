@@ -33,9 +33,8 @@ const Navbar = () => {
   const menuItems = [
     { path: "/", label: "Home", color: "#E50914" },
     { path: "/events", label: "Events", color: "#E50914" },
-    { path: "/community", label: "Community", color: "#FF2B2B" },
+    { path: "https://discord.gg/MpBnYk8qMX", label: "Community", color: "#FF2B2B", external: true },
     { path: "/blog", label: "Blog", color: "#FFCB47" },
-    { path: "/collaborate", label: "Collaborate", color: "#E50914" },
     { path: "/contact", label: "Contact", color: "#FF2B2B" }
   ];
 
@@ -56,6 +55,7 @@ const Navbar = () => {
               <a
                 key={item.path}
                 href={item.path}
+                {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="font-jetbrains text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
               >
                 {item.label}
@@ -70,6 +70,7 @@ const Navbar = () => {
               <a
                 key={item.path}
                 href={item.path}
+                {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="font-jetbrains text-sm text-maximally-black hover:text-maximally-red transition-colors duration-200 relative group"
               >
                 {item.label}
@@ -98,6 +99,7 @@ const Navbar = () => {
                   <a
                     key={item.path}
                     href={item.path}
+                    {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     onClick={() => setIsMenuOpen(false)}
                     className="font-jetbrains text-white py-3 px-4 text-center rounded-lg text-sm transition-transform active:scale-95 hover:scale-105"
                     style={{ backgroundColor: item.color }}

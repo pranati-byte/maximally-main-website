@@ -31,9 +31,7 @@ const Footer = () => {
               <span>🚀</span> EVENTS
             </h3>
             <ul className="space-y-3 font-jetbrains text-black text-sm">
-              <li><Link to="/shipathon" className="hover:text-red-400 transition-colors block retro-underline">AI Shipathon</Link></li>
               <li><Link to="/events" className="hover:text-red-400 transition-colors block retro-underline">All Events</Link></li>
-              <li><Link to="/makeathon" className="hover:text-red-400 transition-colors block retro-underline">Summer 2025 Makeathon</Link></li>
               <li><Link to="/featured" className="hover:text-red-400 transition-colors block retro-underline">Featured Heroes</Link></li>
             </ul>
           </div>
@@ -44,8 +42,7 @@ const Footer = () => {
               <span>🤝</span> COMMUNITY
             </h3>
             <ul className="space-y-3 font-jetbrains text-black text-sm">
-              <li><Link to="/community" className="hover:text-yellow-400 transition-colors block retro-underline">Join League</Link></li>
-              <li><Link to="/collaborate" className="hover:text-yellow-400 transition-colors block retro-underline">Collaborate</Link></li>
+              <li><a href="https://discord.gg/MpBnYk8qMX" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors block retro-underline">Join Discord</a></li>
               <li><Link to="/partnership" className="hover:text-yellow-400 transition-colors block retro-underline">Partners</Link></li>
               <li><Link to="/allies" className="hover:text-yellow-400 transition-colors block retro-underline">Allies</Link></li>
             </ul>
@@ -59,8 +56,6 @@ const Footer = () => {
             <ul className="space-y-3 font-jetbrains text-black text-sm">
               <li><Link to="/blog" className="hover:text-green-400 transition-colors block retro-underline">Blog</Link></li>
               <li><Link to="/featured" className="hover:text-green-400 transition-colors block retro-underline">Featured Heroes</Link></li>
-              <li><Link to="/community" className="hover:text-green-400 transition-colors block retro-underline">Success Stories</Link></li>
-              <li><Link to="/wall-of-progressive-schools" className="hover:text-green-400 transition-colors block retro-underline">Progressive Schools</Link></li>
             </ul>
           </div>
 
@@ -73,7 +68,6 @@ const Footer = () => {
               <li><Link to="/about" className="hover:text-blue-400 transition-colors block retro-underline">About</Link></li>
               <li><Link to="/story" className="hover:text-blue-400 transition-colors block retro-underline">Our Story</Link></li>
               <li><Link to="/contact" className="hover:text-blue-400 transition-colors block retro-underline">Contact</Link></li>
-              <li><Link to="/collaborate" className="hover:text-blue-400 transition-colors block retro-underline">Partners</Link></li>
             </ul>
           </div>
 
