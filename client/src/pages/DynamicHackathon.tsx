@@ -50,6 +50,13 @@ interface HackathonData {
   judging_criteria: string;
   required_submissions: string[];
   optional_submissions?: string[];
+  // New text content fields
+  announcements?: string;
+  event_highlights?: string;
+  sponsor_message?: string;
+  faq_content?: string;
+  timeline_details?: string;
+  special_instructions?: string;
   theme_color_primary: string;
   theme_color_secondary: string;
   theme_color_accent: string;
@@ -936,6 +943,212 @@ export default function DynamicHackathon() {
             </div>
           </div>
         </section>
+
+        {/* Announcements */}
+        {hackathon.announcements && (
+          <section className="py-20 px-4 bg-gradient-to-b from-gray-900 via-black to-gray-900">
+            <div className="container mx-auto max-w-4xl text-center">
+              <h2 
+                className="font-press-start text-3xl md:text-4xl mb-8 flex items-center justify-center gap-3"
+                style={{ color: hackathon.theme_color_primary }}
+              >
+                <AlertTriangle className="h-8 w-8" style={{ color: hackathon.theme_color_accent }} />
+                ANNOUNCEMENTS
+                <AlertTriangle className="h-8 w-8" style={{ color: hackathon.theme_color_accent }} />
+              </h2>
+              <div 
+                className="border-4 p-8 relative"
+                style={{
+                  backgroundColor: hackathon.theme_color_accent,
+                  borderColor: hackathon.theme_color_primary
+                }}
+              >
+                <div 
+                  className="absolute -top-2 -left-2 w-6 h-6"
+                  style={{ backgroundColor: hackathon.theme_color_primary }}
+                ></div>
+                <div 
+                  className="absolute -bottom-2 -right-2 w-6 h-6"
+                  style={{ backgroundColor: hackathon.theme_color_primary }}
+                ></div>
+                <p className="font-jetbrains text-lg md:text-xl text-black leading-relaxed">
+                  {hackathon.announcements}
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Event Highlights */}
+        {hackathon.event_highlights && (
+          <section className="py-20 px-4">
+            <div className="container mx-auto max-w-4xl text-center">
+              <h2 
+                className="font-press-start text-3xl md:text-4xl mb-8 flex items-center justify-center gap-3"
+                style={{ color: hackathon.theme_color_accent }}
+              >
+                <Star className="h-8 w-8" style={{ color: hackathon.theme_color_primary }} />
+                EVENT HIGHLIGHTS
+                <Star className="h-8 w-8" style={{ color: hackathon.theme_color_primary }} />
+              </h2>
+              <div 
+                className="border-4 p-8 relative"
+                style={{
+                  backgroundColor: 'black',
+                  borderColor: hackathon.theme_color_accent
+                }}
+              >
+                <div 
+                  className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r"
+                  style={{
+                    background: `linear-gradient(to right, ${hackathon.theme_color_primary}, ${hackathon.theme_color_accent}, ${hackathon.theme_color_primary})`
+                  }}
+                ></div>
+                <p className="font-jetbrains text-lg md:text-xl text-gray-200 leading-relaxed">
+                  {hackathon.event_highlights}
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Sponsor Message */}
+        {hackathon.sponsor_message && (
+          <section className="py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
+            <div className="container mx-auto max-w-4xl text-center">
+              <h2 
+                className="font-press-start text-3xl md:text-4xl mb-8 flex items-center justify-center gap-3"
+                style={{ color: hackathon.theme_color_primary }}
+              >
+                <Shield className="h-8 w-8" style={{ color: hackathon.theme_color_accent }} />
+                FROM OUR SPONSORS
+                <Shield className="h-8 w-8" style={{ color: hackathon.theme_color_accent }} />
+              </h2>
+              <div 
+                className="border-4 p-8 relative"
+                style={{
+                  backgroundColor: hackathon.theme_color_primary,
+                  borderColor: hackathon.theme_color_accent
+                }}
+              >
+                <div 
+                  className="absolute -top-1 left-4 right-4 h-2"
+                  style={{ backgroundColor: hackathon.theme_color_accent }}
+                ></div>
+                <p className="font-jetbrains text-lg md:text-xl text-gray-200 leading-relaxed">
+                  {hackathon.sponsor_message}
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* FAQ Content */}
+        {hackathon.faq_content && (
+          <section className="py-20 px-4">
+            <div className="container mx-auto max-w-4xl text-center">
+              <h2 
+                className="font-press-start text-3xl md:text-4xl mb-8 flex items-center justify-center gap-3"
+                style={{ color: hackathon.theme_color_accent }}
+              >
+                <FileText className="h-8 w-8" style={{ color: hackathon.theme_color_primary }} />
+                FAQ
+                <FileText className="h-8 w-8" style={{ color: hackathon.theme_color_primary }} />
+              </h2>
+              <div 
+                className="border-4 p-8 relative"
+                style={{
+                  backgroundColor: 'black',
+                  borderColor: hackathon.theme_color_primary
+                }}
+              >
+                <div 
+                  className="absolute -top-2 -right-2 w-6 h-6"
+                  style={{ backgroundColor: hackathon.theme_color_accent }}
+                ></div>
+                <div 
+                  className="absolute -bottom-2 -left-2 w-6 h-6"
+                  style={{ backgroundColor: hackathon.theme_color_primary }}
+                ></div>
+                <div className="font-jetbrains text-lg md:text-xl text-gray-300 leading-relaxed text-left">
+                  {hackathon.faq_content.split('\n').map((line, index) => (
+                    <p key={index} className="mb-4 last:mb-0">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Timeline Details */}
+        {hackathon.timeline_details && (
+          <section className="py-20 px-4 bg-gradient-to-b from-gray-900 via-black to-gray-900">
+            <div className="container mx-auto max-w-4xl text-center">
+              <h2 
+                className="font-press-start text-3xl md:text-4xl mb-8 flex items-center justify-center gap-3"
+                style={{ color: hackathon.theme_color_primary }}
+              >
+                <Clock className="h-8 w-8" style={{ color: hackathon.theme_color_accent }} />
+                TIMELINE
+                <Clock className="h-8 w-8" style={{ color: hackathon.theme_color_accent }} />
+              </h2>
+              <div 
+                className="border-4 p-8 relative"
+                style={{
+                  backgroundColor: 'black',
+                  borderColor: hackathon.theme_color_accent
+                }}
+              >
+                <div className="font-jetbrains text-lg md:text-xl text-gray-300 leading-relaxed text-left">
+                  {hackathon.timeline_details.split('\n').map((line, index) => (
+                    <p key={index} className="mb-4 last:mb-0">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Special Instructions */}
+        {hackathon.special_instructions && (
+          <section className="py-20 px-4">
+            <div className="container mx-auto max-w-4xl text-center">
+              <h2 
+                className="font-press-start text-3xl md:text-4xl mb-8 flex items-center justify-center gap-3"
+                style={{ color: hackathon.theme_color_accent }}
+              >
+                <Target className="h-8 w-8" style={{ color: hackathon.theme_color_primary }} />
+                SPECIAL INSTRUCTIONS
+                <Target className="h-8 w-8" style={{ color: hackathon.theme_color_primary }} />
+              </h2>
+              <div 
+                className="border-4 p-8 relative"
+                style={{
+                  backgroundColor: hackathon.theme_color_primary,
+                  borderColor: hackathon.theme_color_accent
+                }}
+              >
+                <div 
+                  className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r"
+                  style={{
+                    background: `linear-gradient(to right, ${hackathon.theme_color_accent}, ${hackathon.theme_color_primary}, ${hackathon.theme_color_accent})`
+                  }}
+                ></div>
+                <div className="font-jetbrains text-lg md:text-xl text-gray-200 leading-relaxed text-left">
+                  {hackathon.special_instructions.split('\n').map((line, index) => (
+                    <p key={index} className="mb-4 last:mb-0">
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Final CTA */}
         <section className="py-20 px-4">

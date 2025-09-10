@@ -192,6 +192,13 @@ export default function AdminHackathons() {
       judging_criteria: '',
       required_submissions: [],
       optional_submissions: [],
+      // New text content fields
+      announcements: undefined,
+      event_highlights: undefined,
+      sponsor_message: undefined,
+      faq_content: undefined,
+      timeline_details: undefined,
+      special_instructions: undefined,
       theme_color_primary: '#dc2626',
       theme_color_secondary: '#fbbf24',
       theme_color_accent: '#10b981',
@@ -605,6 +612,138 @@ export default function AdminHackathons() {
                             </FormItem>
                           )}
                         />
+                      </div>
+
+                      {/* Additional text content fields */}
+                      <Separator />
+                      <div className="space-y-4">
+                        <h3 className="font-press-start text-lg text-red-500">Additional Content</h3>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <FormField
+                            control={form.control}
+                            name="announcements"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Announcements (optional)</FormLabel>
+                                <FormControl>
+                                  <Textarea
+                                    placeholder="Important updates, deadlines, or news about the hackathon..."
+                                    className="min-h-[100px]"
+                                    data-testid="textarea-announcements"
+                                    {...field}
+                                    value={field.value || ''}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="event_highlights"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Event Highlights (optional)</FormLabel>
+                                <FormControl>
+                                  <Textarea
+                                    placeholder="Key features, unique aspects, or selling points of this hackathon..."
+                                    className="min-h-[100px]"
+                                    data-testid="textarea-event-highlights"
+                                    {...field}
+                                    value={field.value || ''}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <FormField
+                            control={form.control}
+                            name="sponsor_message"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Sponsor Message (optional)</FormLabel>
+                                <FormControl>
+                                  <Textarea
+                                    placeholder="Message from event sponsors, acknowledgments, or partnership details..."
+                                    className="min-h-[100px]"
+                                    data-testid="textarea-sponsor-message"
+                                    {...field}
+                                    value={field.value || ''}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="faq_content"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>FAQ Content (optional)</FormLabel>
+                                <FormControl>
+                                  <Textarea
+                                    placeholder="Frequently asked questions and answers..."
+                                    className="min-h-[100px]"
+                                    data-testid="textarea-faq-content"
+                                    {...field}
+                                    value={field.value || ''}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                          <FormField
+                            control={form.control}
+                            name="timeline_details"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Timeline Details (optional)</FormLabel>
+                                <FormControl>
+                                  <Textarea
+                                    placeholder="Detailed schedule, milestones, or timeline information..."
+                                    className="min-h-[100px]"
+                                    data-testid="textarea-timeline-details"
+                                    {...field}
+                                    value={field.value || ''}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <FormField
+                            control={form.control}
+                            name="special_instructions"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Special Instructions (optional)</FormLabel>
+                                <FormControl>
+                                  <Textarea
+                                    placeholder="Any special notes, requirements, or instructions for participants..."
+                                    className="min-h-[100px]"
+                                    data-testid="textarea-special-instructions"
+                                    {...field}
+                                    value={field.value || ''}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+                        </div>
                       </div>
                     </TabsContent>
 
