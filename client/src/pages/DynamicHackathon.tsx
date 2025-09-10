@@ -53,6 +53,53 @@ interface HackathonData {
   theme_color_primary: string;
   theme_color_secondary: string;
   theme_color_accent: string;
+  theme_config?: {
+    fonts?: {
+      primary?: string;
+      secondary?: string;
+      accent?: string;
+      body?: string;
+    };
+    colors?: {
+      primary?: string;
+      secondary?: string;
+      accent?: string;
+      background?: string;
+      surface?: string;
+      text?: string;
+      textSecondary?: string;
+      border?: string;
+      success?: string;
+      warning?: string;
+      error?: string;
+    };
+    spacing?: {
+      section?: string;
+      container?: string;
+      element?: string;
+    };
+    animations?: {
+      enabled?: boolean;
+      speed?: string;
+      effects?: string[];
+    };
+    layout?: {
+      heroStyle?: string;
+      gridCols?: number;
+      borderRadius?: string;
+      shadows?: boolean;
+    };
+    svgElements?: {
+      heroIcon?: string;
+      decorativePattern?: string;
+      sectionDivider?: string;
+    };
+    customCSS?: {
+      heroBackgroundPattern?: string;
+      glowEffect?: string;
+      textGradient?: string;
+    };
+  };
   is_active: boolean;
   created_at: string;
   updated_at: string;
@@ -64,6 +111,43 @@ export default function DynamicHackathon() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+
+  // Helper function to safely render SVG elements from theme config
+  const renderSVG = (svgString: string, className?: string) => {
+    if (!svgString) return null;
+    
+    // Basic SVG validation - only allow safe SVG content
+    const isSafeSVG = svgString.trim().startsWith('<svg') && 
+                      svgString.trim().endsWith('</svg>') &&
+                      !svgString.includes('javascript:') &&
+                      !svgString.includes('on') && // Prevent event handlers
+                      !svgString.includes('<script');
+    
+    if (!isSafeSVG) {
+      console.warn('Invalid or potentially unsafe SVG content detected');
+      return null;
+    }
+    
+    return (
+      <div 
+        className={className}
+        dangerouslySetInnerHTML={{ __html: svgString }} 
+      />
+    );
+  };
+
+  // Helper function to apply font styling
+  const getFontStyle = (fontType: 'primary' | 'secondary' | 'accent' | 'body') => {
+    const theme = hackathon?.theme_config || {};
+    const fonts = theme.fonts || {};
+    const fallbacks = {
+      primary: 'VT323, monospace',
+      secondary: 'Press Start 2P, monospace',
+      accent: 'JetBrains Mono, monospace',
+      body: 'Inter, sans-serif'
+    };
+    return { fontFamily: fonts[fontType] || fallbacks[fontType] };
+  };
 
   useEffect(() => {
     const fetchHackathon = async () => {
@@ -86,6 +170,58 @@ export default function DynamicHackathon() {
 
     fetchHackathon();
   }, [slug]);
+
+  // Apply theme CSS variables to document root when hackathon data loads
+  useEffect(() => {
+    if (!hackathon) return;
+
+    const theme = hackathon.theme_config || {};
+    const colors = theme.colors || {};
+    const fonts = theme.fonts || {};
+    const spacing = theme.spacing || {};
+    const customCSS = theme.customCSS || {};
+
+    // Apply CSS variables to document root
+    const root = document.documentElement;
+    
+    // Enhanced theme colors
+    root.style.setProperty('--color-primary', colors.primary || hackathon.theme_color_primary);
+    root.style.setProperty('--color-secondary', colors.secondary || hackathon.theme_color_secondary);
+    root.style.setProperty('--color-accent', colors.accent || hackathon.theme_color_accent);
+    root.style.setProperty('--color-background', colors.background || '#0f0f23');
+    root.style.setProperty('--color-surface', colors.surface || '#1a1a2e');
+    root.style.setProperty('--color-text', colors.text || '#ffffff');
+    root.style.setProperty('--color-text-secondary', colors.textSecondary || '#cccccc');
+    root.style.setProperty('--color-border', colors.border || '#333333');
+    
+    // Fonts
+    root.style.setProperty('--font-primary', fonts.primary || 'VT323, monospace');
+    root.style.setProperty('--font-secondary', fonts.secondary || 'Press Start 2P, monospace');
+    root.style.setProperty('--font-accent', fonts.accent || 'JetBrains Mono, monospace');
+    root.style.setProperty('--font-body', fonts.body || 'Inter, sans-serif');
+    
+    // Spacing
+    root.style.setProperty('--spacing-section', spacing.section || '4rem');
+    root.style.setProperty('--spacing-container', spacing.container || '2rem');
+    root.style.setProperty('--spacing-element', spacing.element || '1rem');
+    
+    // Custom CSS effects
+    root.style.setProperty('--glow-effect', customCSS.glowEffect || '0 0 20px rgba(220, 38, 38, 0.5)');
+    root.style.setProperty('--text-gradient', customCSS.textGradient || 'linear-gradient(45deg, #dc2626, #fbbf24)');
+    root.style.setProperty('--hero-background-pattern', customCSS.heroBackgroundPattern || 'none');
+    
+    // Cleanup function to remove CSS variables when component unmounts
+    return () => {
+      const variables = [
+        '--color-primary', '--color-secondary', '--color-accent', '--color-background',
+        '--color-surface', '--color-text', '--color-text-secondary', '--color-border',
+        '--font-primary', '--font-secondary', '--font-accent', '--font-body',
+        '--spacing-section', '--spacing-container', '--spacing-element',
+        '--glow-effect', '--text-gradient', '--hero-background-pattern'
+      ];
+      variables.forEach(variable => root.style.removeProperty(variable));
+    };
+  }, [hackathon]);
 
   if (loading) {
     return (
@@ -135,15 +271,55 @@ export default function DynamicHackathon() {
     },
   ];
 
-  // Convert hex colors to CSS custom properties for dynamic theming
+  // Convert theme config to CSS custom properties for dynamic theming
+  const theme = hackathon.theme_config || {};
+  const colors = theme.colors || {};
+  const fonts = theme.fonts || {};
+  const spacing = theme.spacing || {};
+  const customCSS = theme.customCSS || {};
+
   const themeStyle = {
+    // Backward compatibility colors
     '--theme-primary': hackathon.theme_color_primary,
     '--theme-secondary': hackathon.theme_color_secondary,
     '--theme-accent': hackathon.theme_color_accent,
+    // Enhanced theme colors
+    '--color-primary': colors.primary || hackathon.theme_color_primary,
+    '--color-secondary': colors.secondary || hackathon.theme_color_secondary,
+    '--color-accent': colors.accent || hackathon.theme_color_accent,
+    '--color-background': colors.background || '#0f0f23',
+    '--color-surface': colors.surface || '#1a1a2e',
+    '--color-text': colors.text || '#ffffff',
+    '--color-text-secondary': colors.textSecondary || '#cccccc',
+    '--color-border': colors.border || '#333333',
+    '--color-success': colors.success || '#10b981',
+    '--color-warning': colors.warning || '#fbbf24',
+    '--color-error': colors.error || '#dc2626',
+    // Fonts
+    '--font-primary': fonts.primary || 'VT323, monospace',
+    '--font-secondary': fonts.secondary || 'Press Start 2P, monospace',
+    '--font-accent': fonts.accent || 'JetBrains Mono, monospace',
+    '--font-body': fonts.body || 'Inter, sans-serif',
+    // Spacing
+    '--spacing-section': spacing.section || '4rem',
+    '--spacing-container': spacing.container || '2rem',
+    '--spacing-element': spacing.element || '1rem',
+    // Custom CSS effects
+    '--hero-background-pattern': customCSS.heroBackgroundPattern || 'none',
+    '--glow-effect': customCSS.glowEffect || '0 0 20px rgba(220, 38, 38, 0.5)',
+    '--text-gradient': customCSS.textGradient || 'linear-gradient(45deg, #dc2626, #fbbf24)',
   } as React.CSSProperties;
 
   return (
-    <div className="min-h-screen bg-gray-900 relative overflow-hidden" style={themeStyle}>
+    <div 
+      className="min-h-screen relative overflow-hidden" 
+      style={{
+        ...themeStyle,
+        backgroundColor: 'var(--color-background)',
+        backgroundImage: 'var(--hero-background-pattern)',
+        fontFamily: 'var(--font-body)'
+      }}
+    >
       <SEO
         title={`${hackathon.title} - ${hackathon.tagline}`}
         description={hackathon.description}
@@ -258,34 +434,60 @@ export default function DynamicHackathon() {
                 : 'translate-y-4 opacity-0'
             }`}
           >
-            <h1 className="font-press-start text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+            <h1 
+              className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight"
+              style={{
+                fontFamily: 'var(--font-secondary)',
+                filter: 'drop-shadow(var(--glow-effect))'
+              }}
+            >
               <span 
                 className="drop-shadow-2xl filter brightness-110"
-                style={{ color: hackathon.theme_color_primary }}
+                style={{ color: 'var(--color-primary)' }}
               >
                 {hackathon.title.split(' ')[0]}
               </span>
               <br />
               <span 
                 className="drop-shadow-2xl relative"
-                style={{ color: hackathon.theme_color_accent }}
+                style={{ 
+                  background: 'var(--text-gradient)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
               >
                 {hackathon.title.split(' ').slice(1).join(' ')}
               </span>
             </h1>
-            <h2 className="font-jetbrains text-xl md:text-2xl text-gray-300 mb-4 font-bold">
+            <h2 
+              className="text-xl md:text-2xl mb-4 font-bold"
+              style={{
+                fontFamily: 'var(--font-accent)',
+                color: 'var(--color-text-secondary)'
+              }}
+            >
               {hackathon.tagline}
             </h2>
             <div 
-              className="border-4 p-4 inline-block max-w-2xl"
+              className="border-4 p-4 inline-block max-w-2xl relative"
               style={{
-                backgroundColor: 'black',
-                borderColor: hackathon.theme_color_primary
+                backgroundColor: 'var(--color-surface)',
+                borderColor: 'var(--color-primary)',
+                borderRadius: 'var(--spacing-element)'
               }}
             >
+              {theme.svgElements?.heroIcon && (
+                <div className="absolute -top-3 -right-3 w-8 h-8 text-2xl">
+                  {renderSVG(theme.svgElements.heroIcon, 'w-full h-full text-accent')}
+                </div>
+              )}
               <p 
-                className="font-press-start text-base md:text-lg leading-relaxed"
-                style={{ color: hackathon.theme_color_accent }}
+                className="text-base md:text-lg leading-relaxed"
+                style={{
+                  ...getFontStyle('secondary'),
+                  color: 'var(--color-accent)'
+                }}
               >
                 "{hackathon.description}"
               </p>

@@ -50,8 +50,9 @@ export const hackathons = pgTable("hackathons", {
   required_submissions: jsonb("required_submissions").notNull(), // Array of strings
   optional_submissions: jsonb("optional_submissions"), // Array of strings
   
-  // Theme and styling
-  theme_color_primary: text("theme_color_primary").notNull(),
+  // Theme and styling - comprehensive theming system
+  theme_config: jsonb("theme_config"), // Complete theme configuration
+  theme_color_primary: text("theme_color_primary").notNull(), // Backward compatibility
   theme_color_secondary: text("theme_color_secondary").notNull(),
   theme_color_accent: text("theme_color_accent").notNull(),
   
