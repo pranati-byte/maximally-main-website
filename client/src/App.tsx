@@ -75,6 +75,7 @@ import MaximallyTeachesTools from './pages/BlogPost/MaximallyTeachesTools';
 import ParentsSupport from './pages/BlogPost/ParentsSupport';
 import MakeathonFAQ from './pages/BlogPost/MakeathonFAQ';
 import BuildingTeamworkLeadership from './pages/BlogPost/BuildingTeamworkLeadership';
+import BlogRouter from './pages/BlogRouter';
 
 // Removed Shipathon import
 
@@ -456,6 +457,9 @@ const App = () => {
               path="/blog/project-codegen-beyond-hackathons"
               element={<ProjectCodeGenBeyondHackathons />}
             />
+
+            {/* Dynamic blog route - must be after all static routes */}
+            <Route path="/blog/:slug" element={<BlogRouter />} />
 
             {/* Catch all route for 404 */}
             <Route path="*" element={<NotFound />} />

@@ -1,8 +1,28 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
 import { Input } from '@/components/ui/input';
-import { Search, Calendar, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Search, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
 import Footer from '@/components/Footer';
+import BlogCard, { BlogCardProps } from '@/components/BlogCard';
+import { useBlogs, generateExcerpt, calculateReadTime } from '@/hooks/useBlog';
+import { format } from 'date-fns';
+
+// Debounce hook
+function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+}
 
 const blogPosts = [
   {
@@ -563,110 +583,281 @@ const blogPosts = [
     link: '/blog/internships-2025',
   },
 ];
+const POSTS_PER_PAGE = 10;
+
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+  const { data: dynamicBlogData, isLoading: dynamicLoading } = useBlogs(1, 1000, '');
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  useEffect(() => {
-    const filtered = blogPosts.filter(
-      (post) =>
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.category.toLowerCase().includes(searchTerm.toLowerCase())
+  const allPosts = useMemo(() => {
+    const staticPosts: BlogCardProps[] = blogPosts.map(post => ({
+      title: post.title,
+      excerpt: post.excerpt,
+      date: format(new Date(post.date), 'MMMM d, yyyy'),
+      readTime: post.readTime,
+      category: post.category,
+      link: post.link,
+      coverImage: undefined, // Static posts don't have cover images in the current data
+      authorName: undefined, // Static posts don't have author names in the current data
+    }));
+
+    const dynamicPosts: BlogCardProps[] = (dynamicBlogData?.data || []).map(post => ({
+      title: post.title,
+      excerpt: generateExcerpt(post.content),
+      date: format(new Date(post.created_at), 'MMMM d, yyyy'),
+      readTime: calculateReadTime(post.content),
+      category: post.category || 'Dynamic',
+      link: `/blog/${post.slug}`,
+      coverImage: post.cover_image,
+      authorName: post.author_name,
+    }));
+
+    // Combine and sort by date (most recent first)
+    const combined = [...dynamicPosts, ...staticPosts];
+    return combined.sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return dateB - dateA;
+    });
+  }, [dynamicBlogData]);
+
+  const filteredPosts = useMemo(() => {
+    if (!debouncedSearchTerm.trim()) return allPosts;
+    
+    const searchLower = debouncedSearchTerm.toLowerCase();
+    return allPosts.filter(post => 
+      post.title.toLowerCase().includes(searchLower) ||
+      post.excerpt.toLowerCase().includes(searchLower) ||
+      post.category.toLowerCase().includes(searchLower)
     );
-    setFilteredPosts(filtered);
-  }, [searchTerm]);
+  }, [allPosts, debouncedSearchTerm]);
+
+  // Pagination logic
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = useMemo(() => {
+    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+    return filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+  }, [filteredPosts, currentPage]);
+
+  // Reset to page 1 when search term changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [debouncedSearchTerm]);
+
+  // Handle pagination
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  const handleFirstPage = useCallback(() => {
+    setCurrentPage(1);
+    scrollToTop();
+  }, [scrollToTop]);
+
+  const handlePrevPage = useCallback(() => {
+    setCurrentPage(prev => Math.max(1, prev - 1));
+    scrollToTop();
+  }, [scrollToTop]);
+
+  const handleNextPage = useCallback(() => {
+    setCurrentPage(prev => Math.min(totalPages, prev + 1));
+    scrollToTop();
+  }, [totalPages, scrollToTop]);
+
+  const handleLastPage = useCallback(() => {
+    setCurrentPage(totalPages);
+    scrollToTop();
+  }, [totalPages, scrollToTop]);
+
+  const handlePageClick = useCallback((page: number) => {
+    setCurrentPage(page);
+    scrollToTop();
+  }, [scrollToTop]);
 
   return (
-    <div className="container mx-auto px-4 py-24">
-      <h1 className="font-press-start text-3xl text-maximally-black mb-6 text-center">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24">
+      <h1 className="font-press-start text-xl sm:text-2xl md:text-3xl text-maximally-black mb-6 sm:mb-8 text-center leading-tight">
         &gt;&gt; Maximally Blog_
       </h1>
 
       <div className="max-w-4xl mx-auto">
-        <div className="relative mb-12">
+        <div className="relative mb-8 sm:mb-12">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-maximally-black/50 h-5 w-5" />
           <Input
             type="search"
             placeholder="Search posts..."
-            className="font-jetbrains pl-12"
+            className="font-jetbrains pl-12 h-12 sm:h-10 text-base sm:text-sm"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
 
-        <div className="space-y-6 md:space-y-8">
-          {filteredPosts.map((post, index) => (
-            <Link
-              to={
-                post.link ||
-                (post.title ===
-                "Why School Doesn't Teach You Real Life (And What We're Doing About It)"
-                  ? '/blog/school-vs-life-2025'
-                  : post.title ===
-                    'How Maximally is Building the Leangap of India'
-                  ? '/blog/maximally-leangap-2025'
-                  : post.title ===
-                    'Top 10 Summer Programs for Teens in India (2025 Edition)'
-                  ? '/blog/summer-programs-2025'
-                  : post.title ===
-                    'How to Make the Most of Your Summer Break (For Students Ages 13–20)'
-                  ? '/blog/summer-break-2025'
-                  : post.title ===
-                    'Why Real-World Skills Matter More Than Marks in 2025'
-                  ? '/blog/real-world-skills-2025'
-                  : post.title ===
-                    'Best Online Courses for Teenagers in India (Free + Paid)'
-                  ? '/blog/online-courses-2025'
-                  : post.title ===
-                    'How to Get Internships in High School (Ultimate Guide)'
-                  ? '/blog/internships-2025'
-                  : post.title ===
-                    "How to Build Your Teen's Confidence Without Tutors or Tuitions"
-                  ? '/blog/build-teen-confidence'
-                  : post.title ===
-                    'How to Start a Business Before You Turn 18 (No Code, No Problem!)'
-                  ? '/blog/teen-business'
-                  : '#')
-              }
-              key={index}
-              className="block"
-            >
-              <article className="pixel-border bg-white p-4 md:p-6 lg:p-8 shadow-md hover:shadow-xl md:hover:shadow-2xl hover:transform hover:scale-[1.01] md:hover:scale-[1.02] hover:-translate-y-0.5 md:hover:-translate-y-1 transition-all duration-300 cursor-pointer overflow-hidden">
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
-                  <span className="text-xs font-press-start text-maximally-blue bg-maximally-blue/10 px-3 py-1 rounded">
-                    {post.category}
-                  </span>
-                  <div className="flex items-center text-maximally-black/60 text-xs sm:text-sm font-jetbrains">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {post.date}
+        {/* Loading State */}
+        {dynamicLoading && (
+          <div className="space-y-6 md:space-y-8 mb-8">
+            {[...Array(3)].map((_, index) => (
+              <div key={index} className="pixel-border bg-white p-4 md:p-6 lg:p-8 shadow-md">
+                <div className="animate-pulse">
+                  {/* Cover image placeholder for some cards */}
+                  {index === 0 && (
+                    <div className="mb-4">
+                      <div className="relative w-full pixel-border bg-gray-200" style={{ aspectRatio: '16/9' }}></div>
+                    </div>
+                  )}
+                  
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
+                    <div className="pixel-border bg-gray-200 h-6 w-20"></div>
+                    <div className="pixel-border bg-gray-200 h-4 w-24"></div>
+                    <div className="pixel-border bg-gray-200 h-4 w-16"></div>
                   </div>
-                  <span className="text-maximally-black/60 text-xs sm:text-sm font-jetbrains">
-                    {post.readTime}
-                  </span>
+                  
+                  <div className="pixel-border bg-gray-200 h-6 w-3/4 mb-3"></div>
+                  
+                  <div className="space-y-2 mb-4">
+                    <div className="pixel-border bg-gray-200 h-4 w-full"></div>
+                    <div className="pixel-border bg-gray-200 h-4 w-2/3"></div>
+                    <div className="pixel-border bg-gray-200 h-4 w-1/2"></div>
+                  </div>
+                  
+                  <div className="pixel-border bg-gray-200 h-6 w-24"></div>
                 </div>
+              </div>
+            ))}
+          </div>
+        )}
 
-                <h2 className="font-press-start text-lg md:text-xl mb-3 text-maximally-black leading-tight">
-                  {post.title}
-                </h2>
+        {/* Results count */}
+        {!dynamicLoading && (
+          <div className="mb-6 font-jetbrains text-sm sm:text-base text-maximally-black/60">
+            {filteredPosts.length > 0 ? (
+              <>
+                Showing {((currentPage - 1) * POSTS_PER_PAGE) + 1}-{Math.min(currentPage * POSTS_PER_PAGE, filteredPosts.length)} of {filteredPosts.length} posts
+                {debouncedSearchTerm && ` for "${debouncedSearchTerm}"`}
+              </>
+            ) : (
+              <>No posts found{debouncedSearchTerm && ` for "${debouncedSearchTerm}"`}</>
+            )}
+          </div>
+        )}
 
-                <p className="font-jetbrains text-sm md:text-base text-maximally-black/70 mb-4 leading-relaxed">
-                  {post.excerpt}
-                </p>
-
-                <button className="flex items-center gap-2 text-maximally-blue font-press-start text-sm group">
-                  Read More
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </article>
-            </Link>
+        {/* Blog Posts Grid */}
+        <div className="space-y-6 md:space-y-8">
+          {paginatedPosts.map((post, index) => (
+            <BlogCard
+              key={`${post.title}-${index}`}
+              title={post.title}
+              excerpt={post.excerpt}
+              date={post.date}
+              readTime={post.readTime}
+              category={post.category}
+              link={post.link}
+              coverImage={post.coverImage}
+              authorName={post.authorName}
+            />
           ))}
         </div>
+
+        {/* No results message */}
+        {!dynamicLoading && paginatedPosts.length === 0 && (
+          <div className="text-center py-12">
+            <h3 className="font-press-start text-xl text-maximally-black mb-4">
+              No posts found
+            </h3>
+            <p className="font-jetbrains text-maximally-black/70 mb-6">
+              {debouncedSearchTerm 
+                ? `No posts match your search for "${debouncedSearchTerm}"`
+                : "No posts available at the moment"}
+            </p>
+            {debouncedSearchTerm && (
+              <Button
+                onClick={() => setSearchTerm('')}
+                variant="outline"
+                className="font-press-start"
+              >
+                Clear Search
+              </Button>
+            )}
+          </div>
+        )}
+
+        {/* Pagination */}
+        {!dynamicLoading && totalPages > 1 && (
+          <div className="flex flex-col items-center gap-4 sm:gap-6 mt-12 mb-8 pt-8 border-t border-maximally-black/10">
+            
+            <div className="flex items-center justify-center gap-1 sm:gap-2 order-1 sm:order-2 w-full sm:w-auto">
+              {/* First Page Button */}
+              <Button
+                onClick={handleFirstPage}
+                disabled={currentPage === 1}
+                variant="outline"
+                size="sm"
+                className="font-press-start min-h-[44px] px-3 sm:px-4 text-xs sm:text-sm flex-shrink-0 hover:bg-maximally-blue hover:text-white hover:border-maximally-blue transition-colors duration-200"
+                title="First page"
+              >
+                <ChevronsLeft className="h-4 w-4" />
+                <span className="hidden sm:inline ml-1">First</span>
+              </Button>
+              
+              {/* Previous Page Button */}
+              <Button
+                onClick={handlePrevPage}
+                disabled={currentPage === 1}
+                variant="outline"
+                size="sm"
+                className="font-press-start min-h-[44px] px-3 sm:px-4 text-xs sm:text-sm flex-shrink-0 hover:bg-maximally-blue hover:text-white hover:border-maximally-blue transition-colors duration-200"
+                title="Previous page"
+              >
+                <ChevronLeft className="h-4 w-4" />
+                <span className="hidden sm:inline ml-1">Prev</span>
+              </Button>
+              
+              {/* Current Page Indicator */}
+              <div className="pixel-border bg-maximally-red text-white px-3 sm:px-4 py-2 font-press-start text-xs sm:text-sm min-h-[44px] flex items-center shadow-lg">
+                <span className="hidden sm:inline">Page </span>
+                <span className="mx-1 font-bold">{currentPage}</span>
+                <span className="hidden sm:inline">of {totalPages}</span>
+                <span className="sm:hidden">/{totalPages}</span>
+              </div>
+              
+              {/* Next Page Button */}
+              <Button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                variant="outline"
+                size="sm"
+                className="font-press-start min-h-[44px] px-3 sm:px-4 text-xs sm:text-sm flex-shrink-0 hover:bg-maximally-blue hover:text-white hover:border-maximally-blue transition-colors duration-200"
+                title="Next page"
+              >
+                <span className="hidden sm:inline mr-1">Next</span>
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+              
+              {/* Last Page Button */}
+              <Button
+                onClick={handleLastPage}
+                disabled={currentPage === totalPages}
+                variant="outline"
+                size="sm"
+                className="font-press-start min-h-[44px] px-3 sm:px-4 text-xs sm:text-sm flex-shrink-0 hover:bg-maximally-blue hover:text-white hover:border-maximally-blue transition-colors duration-200"
+                title="Last page"
+              >
+                <span className="hidden sm:inline mr-1">Last</span>
+                <ChevronsRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
+      
+      {/* Spacer before footer */}
+      <div className="mt-16 sm:mt-20 md:mt-24"></div>
+      
       <Footer />
     </div>
   );

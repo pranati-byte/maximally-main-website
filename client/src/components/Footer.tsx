@@ -3,7 +3,7 @@ import { Instagram, Linkedin, Twitter, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-16 px-4 relative overflow-hidden">
+    <footer className="bg-black text-white py-12 sm:py-16 relative overflow-hidden">
       {/* Pixel Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,0,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,0,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
       
@@ -21,9 +21,9 @@ const Footer = () => {
         />
       ))}
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <h2 className="font-press-start text-2xl md:text-3xl mb-4 text-maximally-red drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
             MAXIMALLY
           </h2>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         {/* Pixel Divider */}
-        <div className="w-full h-2 bg-maximally-red mb-12 pixel-border"></div>
+        <div className="w-full h-2 bg-maximally-red mb-8 sm:mb-12 pixel-border"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Events Section */}
@@ -97,11 +97,11 @@ const Footer = () => {
         </div>
 
         {/* Grand Indian Hackathon Season 2025 */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 sm:mt-16 text-center">
           <h3 className="font-press-start text-lg mb-6 text-white">
             GRAND INDIAN HACKATHON SEASON 2025
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto mb-8 sm:mb-12">
             {[
               { name: "CODE HYPOTHESIS", date: "SEP", icon: "🧪", path: "/codehypothesis" },
               { name: "PROTOCOL 404", date: "OCT", icon: "⚡", path: "/protocol-404" },
@@ -128,7 +128,7 @@ const Footer = () => {
         </div>
 
         {/* Social Media Section */}
-        <div className="mt-8 text-center">
+        <div className="mt-6 sm:mt-8 text-center">
           <h3 className="font-press-start text-lg mb-6 text-white">
             STAY CONNECTED
           </h3>

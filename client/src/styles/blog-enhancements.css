@@ -1,0 +1,175 @@
+/* Enhanced Blog Post Styling */
+
+.pixel-border-bottom {
+  position: relative;
+}
+
+.pixel-border-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #E50914 0%, #E50914 50%, transparent 50%);
+  background-size: 8px 2px;
+}
+
+.pixel-border-sm {
+  border: 1px solid #000;
+  box-shadow: 
+    1px 1px 0 #000,
+    2px 2px 0 #E50914;
+}
+
+.pixel-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.pixel-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #0066cc 0%, #0066cc 50%, transparent 50%);
+  background-size: 4px 2px;
+  transition: width 0.3s ease;
+}
+
+.pixel-underline:hover::after {
+  width: 100%;
+}
+
+/* First letter styling for better typography */
+.prose p:first-of-type::first-letter {
+  font-size: 3rem;
+  line-height: 1;
+  float: left;
+  margin-right: 0.5rem;
+  margin-top: 0.1rem;
+  font-family: 'Press Start 2P', monospace;
+  color: #E50914;
+}
+
+/* Enhanced code blocks */
+.code-block-enhanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.code-block-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #E50914 0%, transparent 100%);
+}
+
+/* Table enhancements */
+.pixel-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.pixel-table th,
+.pixel-table td {
+  border: 1px solid #000;
+  position: relative;
+}
+
+.pixel-table th {
+  background: #E50914;
+  color: white;
+}
+
+/* List item custom bullets */
+.custom-list-item {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.custom-list-item::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #E50914;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  top: 0.1rem;
+}
+
+/* Blockquote enhancements */
+.enhanced-blockquote {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 102, 204, 0.1) 100%);
+  border-left: 4px solid #0066cc;
+}
+
+/* Image hover effects */
+.image-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Reading progress indicator */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #E50914, #0066cc);
+  z-index: 1000;
+  transition: width 0.25s ease;
+}
+
+/* Smooth animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Enhanced scrollbar for code blocks */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #E50914;
+  border-radius: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #cc0812;
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 640px) {
+  .prose p:first-of-type::first-letter {
+    font-size: 2.5rem;
+    margin-right: 0.25rem;
+  }
+}
