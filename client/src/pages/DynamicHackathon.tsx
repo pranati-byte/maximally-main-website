@@ -400,7 +400,7 @@ export default function DynamicHackathon() {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-20">
+        <section className="min-h-screen flex flex-col items-center justify-center relative px-4 pt-32">
           {/* Badge */}
           {hackathon.badge_text && (
             <div
