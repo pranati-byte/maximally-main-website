@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import {
   ArrowRight,
   Users,
@@ -18,16 +18,18 @@ import {
   Palette,
   TestTube,
   Settings,
-} from "lucide-react";
-import { Link } from "react-router-dom";
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
+import Footer from '@/components/Footer';
+import SEO from '@/components/SEO';
 
 const Index = () => {
-  const [text, setText] = useState("");
-  const fullText = "WE HOST HACKATHONS";
-  const [floatingPixels, setFloatingPixels] = useState<Array<{ id: number; x: number; y: number; delay: number }>>([]);
+  const [text, setText] = useState('');
+  const fullText = 'WE HOST HACKATHONS';
+  const [floatingPixels, setFloatingPixels] = useState<
+    Array<{ id: number; x: number; y: number; delay: number }>
+  >([]);
 
   useEffect(() => {
     // Generate floating pixels
@@ -55,6 +57,33 @@ const Index = () => {
     };
   }, []);
 
+  const companies = [
+    'OpenAI',
+    'Meta',
+    'Amazon',
+    'Google',
+    'DeepMind',
+    'Intuit',
+    'Visa',
+    'Salesforce',
+    'FedEx',
+    'Atlassian',
+    'McKinsey',
+    'Replit',
+    'General Motors',
+    'Warner Bros. Discovery',
+    'Oracle',
+    'ADP',
+    'Graphite Health',
+    'Mercury Financial',
+    'Y Combinator',
+    'JustPaid.ai',
+    'Zealy.io',
+    'Fig',
+    'MakeX',
+    'DarinX',
+  ];
+
   return (
     <>
       <SEO
@@ -63,11 +92,12 @@ const Index = () => {
         keywords="hackathon platform, AI-native, hacker culture, Grand Indian Hackathon Season, developer tools"
         canonicalUrl="https://maximally.in"
         structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Maximally",
-          "description": "World's first AI-native hackathon platform built by hackers, for hackers",
-          "url": "https://maximally.in"
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Maximally',
+          description:
+            "World's first AI-native hackathon platform built by hackers, for hackers",
+          url: 'https://maximally.in',
         }}
       />
 
@@ -75,7 +105,7 @@ const Index = () => {
         {/* Pixel Grid Background */}
         <div className="fixed inset-0 bg-black" />
         <div className="fixed inset-0 bg-[linear-gradient(rgba(255,0,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,0,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
-        
+
         {/* Floating Pixels */}
         {floatingPixels.map((pixel) => (
           <div
@@ -91,20 +121,22 @@ const Index = () => {
         ))}
 
         {/* Hero Section */}
-        <section className="min-h-screen relative flex items-center">
+        <section className="min-h-screen relative flex items-center pt-32">
           <div className="container mx-auto px-4 z-10">
             <div className="max-w-6xl mx-auto text-center">
-
               {/* Main Title */}
               <h1 className="font-press-start text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-bold mb-6 minecraft-text leading-tight">
                 <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                   {text}
                 </span>
-                <span className="inline-block w-1 h-8 sm:w-2 sm:h-12 md:h-16 bg-maximally-red ml-1 sm:ml-2 animate-[cursor-blink_1s_infinite]" />
+                <span className="inline-block w-1 h-6 sm:w-1.5 sm:h-8 md:w-2 md:h-12 lg:w-3 lg:h-16 xl:w-4 xl:h-20 bg-maximally-red ml-1 sm:ml-1.5 md:ml-2 lg:ml-3 xl:ml-4 animate-[cursor-blink_1s_infinite]" />
               </h1>
 
               <div className="text-sm sm:text-lg md:text-xl lg:text-2xl font-press-start text-gray-300 mb-4 px-2">
-                <span className="text-maximally-red">but not the boring ones</span> ⚡
+                <span className="text-maximally-red">
+                  but not the boring ones
+                </span>{' '}
+                ⚡
               </div>
 
               <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-3xl mx-auto font-jetbrains leading-relaxed mb-8 sm:mb-12 px-4">
@@ -147,44 +179,25 @@ const Index = () => {
                 TRUSTED BY ENGINEERS FROM
               </h3>
             </div>
-            
-            {/* Desktop Marquee */}
-            <div className="hidden md:block overflow-hidden">
+
+            {/* Marquee for all screen sizes */}
+            <div className="overflow-hidden">
               <div className="flex animate-marquee hover:pause-marquee whitespace-nowrap">
-                <div className="flex items-center space-x-8 text-white font-press-start text-sm">
-                  {[
-                    "OpenAI", "Meta", "Amazon", "Google", "DeepMind", "Intuit", "Visa", "Salesforce", 
-                    "FedEx", "Atlassian", "McKinsey", "Replit", "General Motors", "Warner Bros. Discovery", 
-                    "Oracle", "ADP", "Graphite Health", "Mercury Financial", "Y Combinator", "JustPaid.ai", 
-                    "Zealy.io", "Fig", "MakeX", "DarinX"
-                  ].concat([
-                    "OpenAI", "Meta", "Amazon", "Google", "DeepMind", "Intuit", "Visa", "Salesforce", 
-                    "FedEx", "Atlassian", "McKinsey", "Replit", "General Motors", "Warner Bros. Discovery", 
-                    "Oracle", "ADP", "Graphite Health", "Mercury Financial", "Y Combinator", "JustPaid.ai", 
-                    "Zealy.io", "Fig", "MakeX", "DarinX"
-                  ]).map((company, index) => (
-                    <span key={index} className="flex items-center space-x-8">
-                      <span className="hover:text-maximally-red transition-colors duration-300">{company}</span>
-                      <span className="text-maximally-red">•</span>
-                    </span>
-                  ))}
+                <div className="flex items-center space-x-4 sm:space-x-6 md:space-x-8 text-white font-press-start text-xs sm:text-sm">
+                  {companies
+                    .concat(companies) // Duplicate array for seamless loop
+                    .map((company, index) => (
+                      <span
+                        key={index}
+                        className="flex items-center space-x-4 sm:space-x-6 md:space-x-8"
+                      >
+                        <span className="hover:text-maximally-red transition-colors duration-300 whitespace-nowrap">
+                          {company}
+                        </span>
+                        <span className="text-maximally-red">•</span>
+                      </span>
+                    ))}
                 </div>
-              </div>
-            </div>
-            
-            {/* Mobile Grid */}
-            <div className="md:hidden">
-              <div className="grid grid-cols-3 gap-4 text-center">
-                {[
-                  "OpenAI", "Meta", "Amazon", "Google", "DeepMind", "Intuit", "Visa", "Salesforce", 
-                  "FedEx", "Atlassian", "McKinsey", "Replit", "General Motors", "Warner Bros. Discovery", 
-                  "Oracle", "ADP", "Graphite Health", "Mercury Financial", "Y Combinator", "JustPaid.ai", 
-                  "Zealy.io", "Fig", "MakeX", "DarinX"
-                ].slice(0, 12).map((company, index) => (
-                  <span key={index} className="text-white font-press-start text-xs hover:text-maximally-red transition-colors duration-300">
-                    {company}
-                  </span>
-                ))}
               </div>
             </div>
           </div>
@@ -197,7 +210,9 @@ const Index = () => {
               {/* Section Header */}
               <div className="text-center mb-16">
                 <div className="minecraft-block bg-gradient-to-r from-orange-500 to-red-500 text-black px-6 py-3 inline-block mb-6">
-                  <span className="font-press-start text-sm">🇮🇳 GRAND INDIAN HACKATHON SEASON 2025</span>
+                  <span className="font-press-start text-sm">
+                    🇮🇳 GRAND INDIAN HACKATHON SEASON 2025
+                  </span>
                 </div>
                 <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 minecraft-text">
                   <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
@@ -210,30 +225,34 @@ const Index = () => {
               </div>
 
               {/* Event Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-8 sm:mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-4 lg:gap-6 mb-8 sm:mb-12">
                 {[
-                  { name: "CODE HYPOTHESIS", date: "SEP 2025", icon: "🧪" },
-                  { name: "PROTOCOL 404", date: "OCT 2025", icon: "⚡" },
-                  { name: "PROJECT CODEGEN", date: "OCT 2025", icon: "📝" },
-                  { name: "HACKTOBER", date: "OCT 2025", icon: "🍂" },
-                  { name: "PROMPTSTORM", date: "OCT 25-26", icon: "⚡" },
-                  { name: "TECH ASSEMBLY", date: "NOV 1-7", icon: "🎮" },
-                  { name: "STEAL-A-THON", date: "NOV 9-10", icon: "🔥" },
-                  { name: "CODEPOCALYPSE", date: "OCT 18-19", icon: "☢️" },
-                ].slice(0, 10).map((event, i) => (
-                  <div
-                    key={i}
-                    className="pixel-card bg-gray-900 border-2 border-maximally-red hover:border-maximally-yellow transition-all duration-300 hover:scale-105 p-2 sm:p-3 lg:p-4"
-                  >
-                    <div className="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2 text-center">{event.icon}</div>
-                    <div className="font-press-start text-[8px] sm:text-[10px] lg:text-xs text-maximally-red text-center mb-1 leading-tight">
-                      {event.name}
+                  { name: 'CODE HYPOTHESIS', date: 'SEP 2025', icon: '🧪' },
+                  { name: 'PROTOCOL 404', date: 'OCT 2025', icon: '⚡' },
+                  { name: 'PROJECT CODEGEN', date: 'OCT 2025', icon: '📝' },
+                  { name: 'HACKTOBER', date: 'OCT 2025', icon: '🍂' },
+                  { name: 'PROMPTSTORM', date: 'OCT 25-26', icon: '⚡' },
+                  { name: 'TECH ASSEMBLY', date: 'NOV 1-7', icon: '🎮' },
+                  { name: 'STEAL-A-THON', date: 'NOV 9-10', icon: '🔥' },
+                  { name: 'CODEPOCALYPSE', date: 'OCT 18-19', icon: '☢️' },
+                ]
+                  .slice(0, 10)
+                  .map((event, i) => (
+                    <div
+                      key={i}
+                      className="pixel-card bg-gray-900 border-2 border-maximally-red hover:border-maximally-yellow transition-all duration-300 hover:scale-105 p-4 sm:p-3 lg:p-4 min-h-[120px] sm:min-h-[100px] flex flex-col justify-center"
+                    >
+                      <div className="text-2xl sm:text-xl lg:text-2xl mb-3 sm:mb-2 text-center">
+                        {event.icon}
+                      </div>
+                      <div className="font-press-start text-sm sm:text-xs lg:text-sm text-maximally-red text-center mb-2 sm:mb-1 leading-tight">
+                        {event.name}
+                      </div>
+                      <div className="font-press-start text-xs sm:text-[10px] lg:text-xs text-gray-400 text-center leading-tight">
+                        {event.date}
+                      </div>
                     </div>
-                    <div className="font-press-start text-[7px] sm:text-[9px] lg:text-xs text-gray-400 text-center leading-tight">
-                      {event.date}
-                    </div>
-                  </div>
-                ))}
+                  ))}
               </div>
 
               <div className="text-center">
@@ -257,7 +276,9 @@ const Index = () => {
               {/* Header */}
               <div className="mb-16">
                 <div className="minecraft-block bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 py-3 inline-block mb-6">
-                  <span className="font-press-start text-sm">🚀 WE'RE BUILDING</span>
+                  <span className="font-press-start text-sm">
+                    🚀 WE'RE BUILDING
+                  </span>
                 </div>
                 <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6 minecraft-text">
                   <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
@@ -282,7 +303,8 @@ const Index = () => {
                     AI-POWERED
                   </h3>
                   <p className="font-jetbrains text-gray-300 text-sm">
-                    Smart project matching, automated judging, real-time insights
+                    Smart project matching, automated judging, real-time
+                    insights
                   </p>
                 </div>
                 <div className="pixel-card bg-black border-2 border-maximally-red p-6 hover:border-maximally-yellow transition-all duration-300">
@@ -293,7 +315,8 @@ const Index = () => {
                     HACKER-FIRST
                   </h3>
                   <p className="font-jetbrains text-gray-300 text-sm">
-                    Built for the community, by the community. Zero corporate BS.
+                    Built for the community, by the community. Zero corporate
+                    BS.
                   </p>
                 </div>
                 <div className="pixel-card bg-black border-2 border-maximally-red p-6 hover:border-maximally-yellow transition-all duration-300">
@@ -319,7 +342,9 @@ const Index = () => {
               {/* Header */}
               <div className="text-center mb-16">
                 <div className="minecraft-block bg-gradient-to-r from-green-500 to-emerald-500 text-black px-6 py-3 inline-block mb-6">
-                  <span className="font-press-start text-sm">👩‍💻 WE NEED CONTRIBUTORS</span>
+                  <span className="font-press-start text-sm">
+                    👩‍💻 WE NEED CONTRIBUTORS
+                  </span>
                 </div>
                 <h2 className="font-press-start text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 minecraft-text">
                   <span className="text-maximally-red drop-shadow-[2px_2px_0px_rgba(0,0,0,1)] sm:drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">
@@ -327,28 +352,57 @@ const Index = () => {
                   </span>
                 </h2>
                 <p className="text-gray-300 text-sm sm:text-base md:text-xl font-jetbrains mb-6 sm:mb-8 px-4">
-                  Help us revolutionize how hackathons work. Open source, community-driven.
+                  Help us revolutionize how hackathons work. Open source,
+                  community-driven.
                 </p>
               </div>
 
               {/* Roles Grid */}
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4 mb-8 sm:mb-12">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 mb-8 sm:mb-12">
                 {[
-                  { role: "FRONTEND", icon: <Code className="h-6 w-6" />, color: "bg-blue-600" },
-                  { role: "BACKEND", icon: <Database className="h-6 w-6" />, color: "bg-green-600" },
-                  { role: "DESIGN", icon: <Palette className="h-6 w-6" />, color: "bg-purple-600" },
-                  { role: "TESTING", icon: <TestTube className="h-6 w-6" />, color: "bg-yellow-600" },
-                  { role: "DEVOPS", icon: <Settings className="h-6 w-6" />, color: "bg-red-600" },
-                  { role: "AI/ML", icon: <Cpu className="h-6 w-6" />, color: "bg-cyan-600" },
+                  {
+                    role: 'FRONTEND',
+                    icon: <Code className="h-6 w-6" />,
+                    color: 'bg-blue-600',
+                  },
+                  {
+                    role: 'BACKEND',
+                    icon: <Database className="h-6 w-6" />,
+                    color: 'bg-green-600',
+                  },
+                  {
+                    role: 'DESIGN',
+                    icon: <Palette className="h-6 w-6" />,
+                    color: 'bg-purple-600',
+                  },
+                  {
+                    role: 'TESTING',
+                    icon: <TestTube className="h-6 w-6" />,
+                    color: 'bg-yellow-600',
+                  },
+                  {
+                    role: 'DEVOPS',
+                    icon: <Settings className="h-6 w-6" />,
+                    color: 'bg-red-600',
+                  },
+                  {
+                    role: 'AI/ML',
+                    icon: <Cpu className="h-6 w-6" />,
+                    color: 'bg-cyan-600',
+                  },
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="pixel-card bg-black border-2 border-maximally-red p-2 sm:p-3 lg:p-4 text-center hover:border-maximally-yellow transition-all duration-300 hover:scale-105"
+                    className="pixel-card bg-black border-2 border-maximally-red p-3 sm:p-3 lg:p-4 text-center hover:border-maximally-yellow transition-all duration-300 hover:scale-105"
                   >
-                    <div className={`minecraft-block ${item.color} w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-1 sm:mb-2 flex items-center justify-center text-white`}>
-                      <div className="scale-75 sm:scale-90 lg:scale-100">{item.icon}</div>
+                    <div
+                      className={`minecraft-block ${item.color} w-8 h-8 sm:w-8 sm:h-8 lg:w-10 lg:h-10 mx-auto mb-2 sm:mb-2 flex items-center justify-center text-white`}
+                    >
+                      <div className="scale-90 sm:scale-90 lg:scale-100">
+                        {item.icon}
+                      </div>
                     </div>
-                    <div className="font-press-start text-[8px] sm:text-[10px] lg:text-xs text-maximally-red leading-tight">
+                    <div className="font-press-start text-[10px] sm:text-[10px] lg:text-xs text-maximally-red leading-tight">
                       {item.role}
                     </div>
                   </div>
@@ -367,11 +421,14 @@ const Index = () => {
                     <div className="minecraft-block bg-blue-500 w-8 h-8 flex items-center justify-center">
                       <FileText className="h-4 w-4 text-white" />
                     </div>
-                    <span className="font-press-start text-sm text-blue-400">HANDBOOK</span>
+                    <span className="font-press-start text-sm text-blue-400">
+                      HANDBOOK
+                    </span>
                     <ExternalLink className="h-4 w-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
                   </div>
                   <p className="font-jetbrains text-sm text-gray-300">
-                    Complete contributor guide with setup instructions and project roadmap
+                    Complete contributor guide with setup instructions and
+                    project roadmap
                   </p>
                 </a>
 
@@ -385,11 +442,14 @@ const Index = () => {
                     <div className="minecraft-block bg-green-500 w-8 h-8 flex items-center justify-center">
                       <FileText className="h-4 w-4 text-white" />
                     </div>
-                    <span className="font-press-start text-sm text-green-400">APPLICATION</span>
+                    <span className="font-press-start text-sm text-green-400">
+                      APPLICATION
+                    </span>
                     <ExternalLink className="h-4 w-4 text-green-400 group-hover:translate-x-1 transition-transform" />
                   </div>
                   <p className="font-jetbrains text-sm text-gray-300">
-                    Apply to join our core contributor team and help shape the future
+                    Apply to join our core contributor team and help shape the
+                    future
                   </p>
                 </a>
 
@@ -403,7 +463,9 @@ const Index = () => {
                     <div className="minecraft-block bg-red-500 w-8 h-8 flex items-center justify-center">
                       <Play className="h-4 w-4 text-white" />
                     </div>
-                    <span className="font-press-start text-sm text-red-400">EXPLAINER</span>
+                    <span className="font-press-start text-sm text-red-400">
+                      EXPLAINER
+                    </span>
                     <ExternalLink className="h-4 w-4 text-red-400 group-hover:translate-x-1 transition-transform" />
                   </div>
                   <p className="font-jetbrains text-sm text-gray-300">
@@ -471,8 +533,9 @@ const Index = () => {
 
               <div className="text-center mt-16">
                 <p className="font-jetbrains text-sm sm:text-base md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
-                  At Maximally, we believe innovation has no borders — and no traditional limits. 
-                  Whether you're from a major city or a small town, if you're building bold things, 
+                  At Maximally, we believe innovation has no borders — and no
+                  traditional limits. Whether you're from a major city or a
+                  small town, if you're building bold things,
                   <span className="text-maximally-red"> you belong here</span>.
                 </p>
               </div>
