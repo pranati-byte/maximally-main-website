@@ -92,6 +92,7 @@ import PromptStorm from './pages/PromptStorm';
 import StealAThon from './pages/StealAThon';
 import Codepocalypse from './pages/Codepocalypse';
 import GrandTechAssembly from './pages/GrandTechAssembly';
+import DynamicHackathon from './pages/DynamicHackathon';
 
 // Event Reports
 import MakeathonReport from './pages/MakeathonReport';
@@ -457,6 +458,9 @@ const App = () => {
               path="/blog/project-codegen-beyond-hackathons"
               element={<ProjectCodeGenBeyondHackathons />}
             />
+
+            {/* Dynamic hackathon route - for database-driven hackathons */}
+            <Route path="/hackathon/:slug" element={<DynamicHackathon />} />
 
             {/* Dynamic blog route - must be after all static routes */}
             <Route path="/blog/:slug" element={<BlogRouter />} />
