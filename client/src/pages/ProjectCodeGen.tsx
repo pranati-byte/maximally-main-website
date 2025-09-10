@@ -104,7 +104,7 @@ const ProjectCodeGen = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="relative z-20 min-h-screen flex items-center justify-center px-6 pt-20">
+        <section className="relative z-20 min-h-screen flex items-center justify-center px-6 pt-32">
           <div className="text-center max-w-6xl mx-auto">
             {/* Main Title with Crayon Style */}
             <h1 className="mb-6">

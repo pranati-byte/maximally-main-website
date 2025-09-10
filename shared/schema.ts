@@ -50,6 +50,14 @@ export const hackathons = pgTable("hackathons", {
   required_submissions: jsonb("required_submissions").notNull(), // Array of strings
   optional_submissions: jsonb("optional_submissions"), // Array of strings
   
+  // Additional text content fields for enhanced content management
+  announcements: text("announcements"), // Important updates and news
+  event_highlights: text("event_highlights"), // Key features and selling points
+  sponsor_message: text("sponsor_message"), // Message from sponsors
+  faq_content: text("faq_content"), // Frequently asked questions
+  timeline_details: text("timeline_details"), // Detailed timeline information
+  special_instructions: text("special_instructions"), // Any special notes or instructions
+  
   // Theme and styling - comprehensive theming system
   theme_config: jsonb("theme_config"), // Complete theme configuration
   theme_color_primary: text("theme_color_primary").notNull(), // Backward compatibility
@@ -93,10 +101,17 @@ export const insertHackathonSchema = createInsertSchema(hackathons).extend({
   theme_color_secondary: z.string().trim().min(1, 'Secondary color is required'),
   theme_color_accent: z.string().trim().min(1, 'Accent color is required'),
   // Optional fields that can be empty
-  subtitle: z.string().optional(),
-  badge_text: z.string().optional(),
-  registration_url: z.union([z.string().url(), z.literal('')]).optional(),
-  cash_pool: z.string().optional(),
+  subtitle: z.string().transform(v => v?.trim() || undefined).optional(),
+  badge_text: z.string().transform(v => v?.trim() || undefined).optional(),
+  registration_url: z.union([z.string().url(), z.literal('')]).transform(v => v?.trim() || undefined).optional(),
+  cash_pool: z.string().transform(v => v?.trim() || undefined).optional(),
+  // New optional text content fields
+  announcements: z.string().transform(v => v?.trim() || undefined).optional(),
+  event_highlights: z.string().transform(v => v?.trim() || undefined).optional(),
+  sponsor_message: z.string().transform(v => v?.trim() || undefined).optional(),
+  faq_content: z.string().transform(v => v?.trim() || undefined).optional(),
+  timeline_details: z.string().transform(v => v?.trim() || undefined).optional(),
+  special_instructions: z.string().transform(v => v?.trim() || undefined).optional(),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;

@@ -90,7 +90,7 @@ const Protocol404 = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="relative z-20 min-h-screen flex items-center justify-center px-6">
+        <section className="relative z-20 min-h-screen flex items-center justify-center px-6 pt-32">
           <div className="text-center max-w-6xl mx-auto">
             {/* Main Title */}
             <h1 className="mb-6">
