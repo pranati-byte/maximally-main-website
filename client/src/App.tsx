@@ -93,6 +93,7 @@ import StealAThon from './pages/StealAThon';
 import Codepocalypse from './pages/Codepocalypse';
 import GrandTechAssembly from './pages/GrandTechAssembly';
 import DynamicHackathon from './pages/DynamicHackathon';
+import AdminHackathons from './pages/AdminHackathons';
 
 // Event Reports
 import MakeathonReport from './pages/MakeathonReport';
@@ -458,6 +459,9 @@ const App = () => {
               path="/blog/project-codegen-beyond-hackathons"
               element={<ProjectCodeGenBeyondHackathons />}
             />
+
+            {/* Admin routes */}
+            <Route path="/admin/hackathons" element={<AdminHackathons />} />
 
             {/* Dynamic hackathon route - for database-driven hackathons */}
             <Route path="/hackathon/:slug" element={<DynamicHackathon />} />

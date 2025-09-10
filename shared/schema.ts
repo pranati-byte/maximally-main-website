@@ -67,7 +67,37 @@ export const insertUserSchema = createInsertSchema(users).pick({
   password: true,
 });
 
-export const insertHackathonSchema = createInsertSchema(hackathons);
+export const insertHackathonSchema = createInsertSchema(hackathons).extend({
+  slug: z.string().trim().min(1, 'Slug is required').regex(/^[a-z0-9-]+$/, 'Slug must contain only lowercase letters, numbers, and dashes'),
+  title: z.string().trim().min(1, 'Title is required'),
+  tagline: z.string().trim().min(1, 'Tagline is required'),
+  description: z.string().trim().min(1, 'Description is required'),
+  start_date: z.string().trim().min(1, 'Start date is required'),
+  end_date: z.string().trim().min(1, 'End date is required'),
+  duration: z.string().trim().min(1, 'Duration is required'),
+  format: z.string().trim().min(1, 'Format is required'),
+  team_size: z.string().trim().min(1, 'Team size is required'),
+  judging_type: z.string().trim().min(1, 'Judging type is required'),
+  results_date: z.string().trim().min(1, 'Results date is required'),
+  what_it_is: z.string().trim().min(1, 'What it is description is required'),
+  the_idea: z.string().trim().min(1, 'The idea description is required'),
+  judging_description: z.string().trim().min(1, 'Judging description is required'),
+  judging_criteria: z.string().trim().min(1, 'Judging criteria is required'),
+  who_joins: z.array(z.string().trim().min(1, 'Each participant type must be non-empty')).min(1, 'At least one participant type is required'),
+  tech_rules: z.array(z.string().trim().min(1, 'Each tech rule must be non-empty')).min(1, 'At least one tech rule is required'),
+  fun_awards: z.array(z.string().trim().min(1, 'Each fun award must be non-empty')).min(1, 'At least one fun award is required'),
+  perks: z.array(z.string().trim().min(1, 'Each perk must be non-empty')).min(1, 'At least one perk is required'),
+  required_submissions: z.array(z.string().trim().min(1, 'Each required submission must be non-empty')).min(1, 'At least one required submission is required'),
+  optional_submissions: z.array(z.string().trim().min(1, 'Each optional submission must be non-empty')).optional().default([]),
+  theme_color_primary: z.string().trim().min(1, 'Primary color is required'),
+  theme_color_secondary: z.string().trim().min(1, 'Secondary color is required'),
+  theme_color_accent: z.string().trim().min(1, 'Accent color is required'),
+  // Optional fields that can be empty
+  subtitle: z.string().optional(),
+  badge_text: z.string().optional(),
+  registration_url: z.union([z.string().url(), z.literal('')]).optional(),
+  cash_pool: z.string().optional(),
+});
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
